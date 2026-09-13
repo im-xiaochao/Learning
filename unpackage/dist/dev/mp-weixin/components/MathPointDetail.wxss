@@ -130,6 +130,11 @@
   color: var(--muted);
   font-size: 10px;
 }
+.detail-tags .detail-tag-source.data-v-e824a561 {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
 .detail-section.data-v-e824a561 {
   margin-top: 13px;
   padding: 17px 15px;

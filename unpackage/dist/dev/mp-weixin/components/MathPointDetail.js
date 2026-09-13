@@ -74,25 +74,29 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         i: common_vendor.t(detail.value.summary),
         j: common_vendor.t(detail.value.tag),
         k: common_vendor.t(visualLabel.value),
-        l: common_vendor.t(detail.value.summary),
-        m: common_vendor.t(detail.value.explanation || detail.value.summary),
-        n: detail.value.keyPoints && detail.value.keyPoints.length
+        l: detail.value.source
+      }, detail.value.source ? {
+        m: common_vendor.t(detail.value.source)
+      } : {}, {
+        n: common_vendor.t(detail.value.summary),
+        o: common_vendor.t(detail.value.explanation || detail.value.summary),
+        p: detail.value.keyPoints && detail.value.keyPoints.length
       }, detail.value.keyPoints && detail.value.keyPoints.length ? {
-        o: common_vendor.f(detail.value.keyPoints, (item, index, i0) => {
+        q: common_vendor.f(detail.value.keyPoints, (item, index, i0) => {
           return {
             a: common_vendor.t(item),
             b: index
           };
         })
       } : {}, {
-        p: detail.value.formula
+        r: detail.value.formula
       }, detail.value.formula ? {
-        q: common_vendor.t(detail.value.formula)
+        s: common_vendor.t(detail.value.formula)
       } : {}, {
-        r: detail.value.visualUseful
+        t: detail.value.visualUseful
       }, detail.value.visualUseful ? common_vendor.e({
-        s: common_vendor.t(visualTitle.value),
-        t: common_vendor.p({
+        v: common_vendor.t(visualTitle.value),
+        w: common_vendor.p({
           kind: detail.value.visual,
           title: common_vendor.unref(data_mathDetail.cleanTitle)(props.point.title),
           section: common_vendor.unref(data_mathDetail.cleanTitle)(props.section.title),
@@ -104,13 +108,13 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
           content: visualContent.value,
           label: "当前知识点"
         }),
-        v: hints.value.length
+        x: hints.value.length
       }, hints.value.length ? {
-        w: common_vendor.t(hints.value.join(" "))
+        y: common_vendor.t(hints.value.join(" "))
       } : {}) : {}, {
-        x: steps.value.length
+        z: steps.value.length
       }, steps.value.length ? {
-        y: common_vendor.f(steps.value, (step, index, i0) => {
+        A: common_vendor.f(steps.value, (step, index, i0) => {
           return {
             a: common_vendor.t(index + 1),
             b: common_vendor.t(common_vendor.unref(data_mathDetail.cleanLine)(step)),
@@ -118,19 +122,19 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
           };
         })
       } : {}, {
-        z: detail.value.example || detail.value.trap
+        B: detail.value.example || detail.value.trap
       }, detail.value.example || detail.value.trap ? common_vendor.e({
-        A: detail.value.example
+        C: detail.value.example
       }, detail.value.example ? {
-        B: common_vendor.t(detail.value.example)
+        D: common_vendor.t(detail.value.example)
       } : {}, {
-        C: detail.value.trap
+        E: detail.value.trap
       }, detail.value.trap ? {
-        D: common_vendor.t(detail.value.trap)
+        F: common_vendor.t(detail.value.trap)
       } : {}) : {}, {
-        E: blocks.value.length
+        G: blocks.value.length
       }, blocks.value.length ? {
-        F: common_vendor.f(blocks.value, (block, blockIndex, i0) => {
+        H: common_vendor.f(blocks.value, (block, blockIndex, i0) => {
           return common_vendor.e({
             a: block.label
           }, block.label ? {
@@ -146,22 +150,22 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
           });
         })
       } : {}, {
-        G: noteEditing.value
+        I: noteEditing.value
       }, noteEditing.value ? {
-        H: noteDraft.value,
-        I: common_vendor.o(onNoteInput, "39"),
-        J: common_vendor.o(cancelEditNote, "60"),
-        K: common_vendor.o(saveNote, "39")
+        J: noteDraft.value,
+        K: common_vendor.o(onNoteInput, "2a"),
+        L: common_vendor.o(cancelEditNote, "b0"),
+        M: common_vendor.o(saveNote, "15")
       } : common_vendor.e({
-        L: note.value
+        N: note.value
       }, note.value ? {
-        M: common_vendor.t(note.value)
+        O: common_vendor.t(note.value)
       } : {}, {
-        N: common_vendor.t(note.value ? "编辑我的笔记" : "+ 添加我的笔记"),
-        O: note.value ? "编辑我的笔记" : "添加我的笔记",
-        P: common_vendor.o(startEditNote, "75")
+        P: common_vendor.t(note.value ? "编辑我的笔记" : "+ 添加我的笔记"),
+        Q: note.value ? "编辑我的笔记" : "添加我的笔记",
+        R: common_vendor.o(startEditNote, "bc")
       }), {
-        Q: common_vendor.o(($event) => emit("back"), "15")
+        S: common_vendor.o(($event) => emit("back"), "30")
       });
     };
   }

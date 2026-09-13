@@ -130,6 +130,7 @@ export function pointDetail(point: MathPoint, section: MathSection): MathEnhance
       example: enhanced.example || lecture.example,
       trap: enhanced.trap || lecture.trap,
       steps: enhanced.steps?.length ? enhanced.steps : lecture.steps,
+      source: lecture.source,
     }
   }
 
@@ -147,6 +148,7 @@ export function pointDetail(point: MathPoint, section: MathSection): MathEnhance
     visual,
     visualUseful,
     steps: lecture.steps,
+    source: lecture.source,
   }
 }
 

@@ -99,6 +99,7 @@ function onNoteInput(e: { detail: { value: string } }): void {
       <view class="detail-tags">
         <text>{{ detail.tag }}</text>
         <text>{{ visualLabel }}</text>
+        <text v-if="detail.source" class="detail-tag-source">{{ detail.source }}</text>
         <text>返回地图可继续浏览</text>
       </view>
     </view>
@@ -375,6 +376,12 @@ function onNoteInput(e: { detail: { value: string } }): void {
   background: var(--card-soft);
   color: var(--muted);
   font-size: 10px;
+}
+
+.detail-tags .detail-tag-source {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-weight: 700;
 }
 
 .detail-section {

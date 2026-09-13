@@ -79,7 +79,8 @@ function pointDetail(point, section) {
       formula: enhanced.formula || lecture.formula,
       example: enhanced.example || lecture.example,
       trap: enhanced.trap || lecture.trap,
-      steps: ((_a = enhanced.steps) == null ? void 0 : _a.length) ? enhanced.steps : lecture.steps
+      steps: ((_a = enhanced.steps) == null ? void 0 : _a.length) ? enhanced.steps : lecture.steps,
+      source: lecture.source
     };
   }
   const firstLine = (_b = point.blocks.find((block) => block.lines.length)) == null ? void 0 : _b.lines[0];
@@ -93,7 +94,8 @@ function pointDetail(point, section) {
     trap: lecture.trap,
     visual,
     visualUseful,
-    steps: lecture.steps
+    steps: lecture.steps,
+    source: lecture.source
   };
 }
 function sectionLessons(section) {

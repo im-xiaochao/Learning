@@ -42,6 +42,8 @@ export interface MathEnhancement {
    * 只有拿到专属讲解（而不是通用兜底模板）时才为 true，避免为凑版面硬画一张图。
    */
   visualUseful?: boolean
+  /** 内容出处（对应张宇基础30讲的讲次），详情页标签区展示。 */
+  source?: string
 }
 
 export interface MathSectionGuide {
