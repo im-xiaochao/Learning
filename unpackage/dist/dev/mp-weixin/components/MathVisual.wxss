@@ -1,0 +1,197 @@
+.visual-card.data-v-914378c7 {
+  width: 100%;
+  padding: 12px 12px 11px;
+  border-radius: 15px;
+  background: var(--card-soft);
+  box-sizing: border-box;
+}
+.visual-heading.data-v-914378c7 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.visual-kicker.data-v-914378c7 {
+  color: var(--accent-strong);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.visual-label.data-v-914378c7 {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.visual-caption.data-v-914378c7 {
+  display: block;
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.visual-relation.data-v-914378c7 {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.visual-evidence.data-v-914378c7 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+  min-height: 16px;
+  margin-top: 2px;
+  color: var(--text);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.visual-evidence-label.data-v-914378c7 {
+  flex: 0 0 auto;
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+.visual-evidence-text.data-v-914378c7 {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+/* 高度由模型给出：不同骨架的节点数量不同，固定高度会压坏图形。 */
+.visual-map.data-v-914378c7 {
+  position: relative;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--card);
+}
+.visual-takeaway.data-v-914378c7 {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.visual-edge.data-v-914378c7 {
+  position: absolute;
+  z-index: 1;
+  height: 0;
+  border-top: 2px dashed var(--accent);
+  transform-origin: left center;
+}
+.visual-edge.data-v-914378c7::after {
+  position: absolute;
+  top: -5px;
+  right: -1px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid var(--accent);
+  content: '';
+}
+.visual-edge-core.data-v-914378c7 {
+  border-top-color: var(--accent-strong);
+}
+.visual-edge-core.data-v-914378c7::after {
+  border-left-color: var(--accent-strong);
+}
+.visual-edge-soft.data-v-914378c7 {
+  border-top-color: var(--success);
+}
+.visual-edge-soft.data-v-914378c7::after {
+  border-left-color: var(--success);
+}
+.visual-edge-muted.data-v-914378c7 {
+  border-top-color: var(--muted);
+}
+.visual-edge-muted.data-v-914378c7::after {
+  border-left-color: var(--muted);
+}
+.visual-node.data-v-914378c7 {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 13px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.visual-node-soft.data-v-914378c7 {
+  background: var(--card);
+  border-color: var(--border);
+}
+.visual-node-accent.data-v-914378c7 {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.visual-node-core.data-v-914378c7 {
+  background: var(--accent-soft);
+  border-color: var(--accent-strong);
+  border-width: 2px;
+}
+.visual-node-muted.data-v-914378c7 {
+  background: var(--card-soft);
+  border-color: var(--muted);
+}
+
+/* 数轴一类的辅助线：只是一个细条，不参与文字排版。 */
+.visual-node-line.data-v-914378c7 {
+  z-index: 1;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: var(--accent);
+  opacity: 0.35;
+}
+.visual-node-dot.data-v-914378c7 {
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-strong);
+}
+.visual-node-soft .visual-node-dot.data-v-914378c7 {
+  background: var(--muted);
+}
+.visual-node-accent .visual-node-dot.data-v-914378c7 {
+  background: var(--accent);
+}
+.visual-node-core .visual-node-dot.data-v-914378c7 {
+  background: var(--success);
+}
+.visual-node-label.data-v-914378c7,
+.visual-node-detail.data-v-914378c7 {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+.visual-node-label.data-v-914378c7 {
+  overflow: hidden;
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.visual-node-detail.data-v-914378c7 {
+  margin-top: 3px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

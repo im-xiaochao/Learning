@@ -1,0 +1,121 @@
+.wb.data-v-520e5184 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.wb-header.data-v-520e5184 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: calc(env(safe-area-inset-top, 0px) + var(--status-bar-height, 0px) + 10px) 16px 12px;
+  background: var(--bg);
+}
+.wb-list.data-v-520e5184 {
+  flex: 1;
+  padding: calc(var(--status-bar-height, 0px) + env(safe-area-inset-top, 0px) + 70px) 20px 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.empty.data-v-520e5184 {
+  padding: 40px 20px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+}
+.empty-icon.data-v-520e5184 {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  border-radius: 50%;
+  background: var(--success-soft);
+  color: var(--success);
+  font-size: 24px;
+  font-weight: 800;
+}
+.empty-text.data-v-520e5184 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.empty-sub.data-v-520e5184 {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+.empty-action.data-v-520e5184 {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 14px;
+  font-weight: 700;
+}
+.wb-item.data-v-520e5184 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 16px;
+}
+.wb-left.data-v-520e5184 {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.wb-word.data-v-520e5184 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text);
+}
+.wb-phonetic.data-v-520e5184 {
+  font-size: 13px;
+  color: var(--accent);
+}
+.wb-meaning.data-v-520e5184 {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text);
+}
+.wb-remove.data-v-520e5184 {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  color: var(--success);
+  background: var(--success-soft);
+}
+.wb-remove-text.data-v-520e5184 {
+  color: var(--success);
+  font-size: 12px;
+  font-weight: 700;
+}
+.wb-footer.data-v-520e5184 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  padding: 12px 20px calc(env(safe-area-inset-bottom, 0px) + 16px);
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/math/math",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/learn/learn",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/wrong/wrong",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/stats/stats",
+      "style": { "navigationStyle": "custom" }
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#f5f7fb"
+  },
+  "tabBar": {
+    "color": "#5c6879",
+    "selectedColor": "#2c42b5",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "英语",
+        "iconPath": "static/tabbar/english.png",
+        "selectedIconPath": "static/tabbar/english-on.png"
+      },
+      {
+        "pagePath": "pages/math/math",
+        "text": "数学",
+        "iconPath": "static/tabbar/math.png",
+        "selectedIconPath": "static/tabbar/math-on.png"
+      }
+    ]
+  }
+}
