@@ -24,6 +24,7 @@ import { pinyin } from 'pinyin-pro'
 import { MATH_MODULES } from '../data/math-data'
 import { getMathLecture } from '../data/math-lectures'
 import { words as RAW_WORDS } from '../data/words'
+import { POLITICS_COURSE, POLITICS_SUBJECT, POLITICS_CHAPTERS } from '../data/politics-data'
 
 const DRY_RUN = process.argv.includes('--dry-run')
 const ROOT = path.resolve(__dirname, '..')
@@ -183,19 +184,29 @@ interface SubjectDef {
   match: RegExp
 }
 
-const SUBJECTS: SubjectDef[] = [
+const MATH_SUBJECTS: SubjectDef[] = [
   { id: 'calculus', name: '高等数学', shortName: '高数', sortOrder: 10, courseId: 'math', match: /高等数学/ },
   { id: 'algebra', name: '线性代数', shortName: '线代', sortOrder: 20, courseId: 'math', match: /线性代数/ },
   { id: 'probability', name: '概率统计', shortName: '概率', sortOrder: 30, courseId: 'math', match: /概率/ },
 ]
 
+/** 政治不从 math-data 派生，来自手工编写的 data/politics-data.ts */
+const POLITICS_SUBJECT_DEF: SubjectDef = {
+  ...POLITICS_SUBJECT,
+  match: /政治/,
+}
+
+/** 全部学科（数学 3 个 + 政治），用于目录与运行数据输出 */
+const SUBJECTS: SubjectDef[] = [...MATH_SUBJECTS, POLITICS_SUBJECT_DEF]
+
 const COURSES = [
   { id: 'english', name: '考研英语', sortOrder: 10 },
   { id: 'math', name: '考研数学', sortOrder: 20 },
+  POLITICS_COURSE,
 ]
 
 function subjectOf(partTitle: string): SubjectDef {
-  const hit = SUBJECTS.find((s) => s.match.test(partTitle))
+  const hit = MATH_SUBJECTS.find((s) => s.match.test(partTitle))
   if (!hit) throw new Error(`无法识别的部分标题：${partTitle}`)
   return hit
 }
@@ -440,6 +451,75 @@ function buildCatalog() {
     }
   }
 
+  // ── 政治：没有数学那样的知识树与讲义源，直接来自 data/politics-data.ts ──
+  // 每章只有 1 个知识点，给每章建一个同名小节，保持「章节 → 小节 → 知识点」结构统一。
+  for (const ch of POLITICS_CHAPTERS) {
+    const subject = POLITICS_SUBJECT_DEF
+    const chapterId = ch.id
+    const sectionId = `${chapterId}-s1`
+    usedChapterIds.add(chapterId)
+
+    const knowledge = ch.points.map((p, i) => {
+      const kpUsed = new Set<string>()
+      const exampleUsed = new Set<string>()
+      const body = [
+        plain(p.summary),
+        `### 理解要点\n\n${p.keyPoints.map((k, n) => `${n + 1}. ${plain(k)}`).join('\n')}`,
+        `### 放进例子里理解\n\n${plain(p.example)}`,
+      ].join('\n\n')
+      return {
+        schemaVersion: SCHEMA_VERSION,
+        id: uniquify(`kp-${chapterId}-${slug(p.title, 40)}`, usedKeyPointIds),
+        contentVersion: 1,
+        subjectId: subject.id,
+        chapterId,
+        sectionId,
+        sectionTitle: ch.title,
+        title: p.title,
+        summary: p.summary,
+        tags: p.tags,
+        sortOrder: (i + 1) * 10,
+        estimatedMinutes: Math.max(3, Math.min(10, Math.round(body.length / 60))),
+        anchor: p.anchor,
+        keyPoints: p.keyPoints.map((k) => ({
+          id: uniquify(slug(k, 40), kpUsed),
+          title: shortTitle(k),
+          bodyMarkdown: plain(k),
+        })),
+        examples: [
+          { id: uniquify(slug(p.example, 24), exampleUsed), title: '讲解例子', bodyMarkdown: plain(p.example) },
+        ],
+        relatedKnowledgeIds: [],
+        sources: [],
+        status: 'published',
+        updatedAt: knowledgeUpdatedAt,
+        bodyMarkdown: body,
+      }
+    })
+
+    totalKnowledge += knowledge.length
+    stats.structuredPoints += knowledge.length
+    for (const kp of knowledge) stats.keyPointCounts.set(kp.keyPoints.length, (stats.keyPointCounts.get(kp.keyPoints.length) || 0) + 1)
+
+    chapters.push({
+      id: chapterId,
+      subjectId: subject.id,
+      title: ch.title,
+      summary: ch.summary,
+      sortOrder: ch.sortOrder,
+      module: POLITICS_SUBJECT.name,
+    })
+    bundles.push({
+      schemaVersion: SCHEMA_VERSION,
+      chapterId,
+      subjectId: subject.id,
+      module: POLITICS_SUBJECT.name,
+      title: ch.title,
+      sortOrder: ch.sortOrder,
+      knowledge,
+    })
+  }
+
   return { chapters, bundles, totalKnowledge, stats, knowledgeUpdatedAt }
 }
 
@@ -621,14 +701,16 @@ function buildAppBundle(bundles: ChapterBundle[], vocab: ReturnType<typeof build
   }))
 
   // 只保留详情页真正渲染的字段：
-  //   anchor.caption 与 summary 首句重复 → 前端从 summary 派生
-  //   anchor.type / format 全库恒为 formula / text → 前端不需要
+  //   anchor.type / format 全库恒定（formula|concept / text）→ 前端可判定，不必存
   //   keyPoints[].title 页面不渲染 → 只留 body，退化成字符串数组
+  // anchor.caption 必须保留：它与 summary 首句并不总是一致（960 条里有 61 条不同），
+  // 早先试图「从 summary 派生 caption」的裁剪是错的，会显示成别的内容。
   const content: Record<string, unknown> = {}
   for (const b of bundles) {
     for (const kp of b.knowledge) {
       content[kp.id] = {
         anchor: kp.anchor.content,
+        caption: kp.anchor.caption,
         keyPoints: kp.keyPoints.map((k) => k.bodyMarkdown),
         example: kp.examples[0]?.bodyMarkdown || '',
       }
@@ -798,7 +880,7 @@ function main() {
   fs.mkdirSync(subPackageDir, { recursive: true })
   write(
     path.join(subPackageDir, 'content.ts'),
-    `${banner}export interface AppKnowledgeContent { anchor: string; keyPoints: string[]; example: string }\n\nexport const appKnowledgeContent: Record<string, AppKnowledgeContent> = ${serializeMap(Object.entries(app.content))}\n`,
+    `${banner}export interface AppKnowledgeContent { anchor: string; caption: string; keyPoints: string[]; example: string }\n\nexport const appKnowledgeContent: Record<string, AppKnowledgeContent> = ${serializeMap(Object.entries(app.content))}\n`,
   )
 
   console.log(`\n已写入 ${knowledgeFiles + 9} 个文件：`)

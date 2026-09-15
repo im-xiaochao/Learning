@@ -10,13 +10,15 @@ export interface AppChapter { id: string; subjectId: string; module: string; tit
 
 export const appCourses: AppCourse[] = [
   {"id":"english","name":"考研英语","sortOrder":10},
-  {"id":"math","name":"考研数学","sortOrder":20}
+  {"id":"math","name":"考研数学","sortOrder":20},
+  {"id":"politics","name":"考研政治","sortOrder":30}
 ]
 
 export const appSubjects: AppSubject[] = [
   {"id":"calculus","courseId":"math","name":"高等数学","shortName":"高数","sortOrder":10},
   {"id":"algebra","courseId":"math","name":"线性代数","shortName":"线代","sortOrder":20},
-  {"id":"probability","courseId":"math","name":"概率统计","shortName":"概率","sortOrder":30}
+  {"id":"probability","courseId":"math","name":"概率统计","shortName":"概率","sortOrder":30},
+  {"id":"politics","courseId":"politics","name":"思想政治理论","shortName":"政治","sortOrder":40}
 ]
 
 export const appChapters: AppChapter[] = [
@@ -54,5 +56,8 @@ export const appChapters: AppChapter[] = [
   {"id":"m2-p2-c3","subjectId":"algebra","title":"向量","summary":"本章共 8 节：n 维向量、线性组合与线性表示、线性相关与线性无关、极大线性无关组 等。","sortOrder":90,"module":"数学二"},
   {"id":"m2-p2-c4","subjectId":"algebra","title":"线性方程组","summary":"本章共 5 节：克拉默法则、齐次线性方程组、非齐次线性方程组、解的结构、初等行变换求解。","sortOrder":100,"module":"数学二"},
   {"id":"m2-p2-c5","subjectId":"algebra","title":"特征值与特征向量","summary":"本章共 7 节：特征值、特征向量、特征值计算、特征向量计算、特征值性质、相似矩阵、相似对角化 等。","sortOrder":110,"module":"数学二"},
-  {"id":"m2-p2-c6","subjectId":"algebra","title":"二次型","summary":"本章共 7 节：二次型、合同变换、二次型的秩、标准形与规范形、惯性定理、化标准形、正定二次型与正定矩阵。","sortOrder":120,"module":"数学二"}
+  {"id":"m2-p2-c6","subjectId":"algebra","title":"二次型","summary":"本章共 7 节：二次型、合同变换、二次型的秩、标准形与规范形、惯性定理、化标准形、正定二次型与正定矩阵。","sortOrder":120,"module":"数学二"},
+  {"id":"ch-politics-marxism","subjectId":"politics","title":"马克思主义基本原理","summary":"理解实践、认识及其相互关系。","sortOrder":10,"module":"思想政治理论"},
+  {"id":"ch-politics-theory","subjectId":"politics","title":"毛泽东思想和中国特色社会主义理论体系","summary":"结合历史与实践理解理论的发展。","sortOrder":20,"module":"思想政治理论"},
+  {"id":"ch-politics-ethics-law","subjectId":"politics","title":"思想道德与法治","summary":"理解理想信念、道德实践与法治意识。","sortOrder":30,"module":"思想政治理论"}
 ]

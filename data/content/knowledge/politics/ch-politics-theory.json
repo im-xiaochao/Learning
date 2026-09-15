@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "ch-politics-theory",
+  "subjectId": "politics",
+  "module": "思想政治理论",
+  "title": "毛泽东思想和中国特色社会主义理论体系",
+  "sortOrder": 20,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-ch-politics-theory-li-lun-lian-xi-shi-ji",
+      "contentVersion": 1,
+      "subjectId": "politics",
+      "chapterId": "ch-politics-theory",
+      "sectionId": "ch-politics-theory-s1",
+      "sectionTitle": "毛泽东思想和中国特色社会主义理论体系",
+      "title": "理论联系实际",
+      "summary": "从中国实践出发，理解理论如何回应道路与制度选择。理论来自实践，也要回应现实中的问题与需要。",
+      "tags": [
+        "中国特色社会主义",
+        "理论联系实际"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "concept",
+        "format": "text",
+        "content": "理论联系实际",
+        "caption": "用中国具体实践理解中国特色社会主义理论体系"
+      },
+      "keyPoints": [
+        {
+          "id": "li-lun-lai-zi-shi-jian-ye-yao-hui-ying-10rxqt",
+          "title": "理论来自实践",
+          "bodyMarkdown": "理论来自实践，也要回应现实中的问题与需要。"
+        },
+        {
+          "id": "zhong-guo-te-se-she-hui-zhu-yi-dao-lu-1b15ng",
+          "title": "中国特色社会主义道路、理论、制度、文化相互联系、",
+          "bodyMarkdown": "中国特色社会主义道路、理论、制度、文化相互联系、相互支撑。"
+        },
+        {
+          "id": "li-jie-wei-shen-me-yao-ba-li-shi-xuan-03tpmf",
+          "title": "理解「为什么」",
+          "bodyMarkdown": "理解「为什么」，要把历史选择、现实条件与发展目标放在一起看。"
+        }
+      ],
+      "examples": [
+        {
+          "id": "bi-ru-she-qu-tui-jin-030238",
+          "title": "讲解例子",
+          "bodyMarkdown": "比如社区推进数字化服务，不只是换一套工具，还要结合居民需求、公共资源和治理目标持续调整。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "从中国实践出发，理解理论如何回应道路与制度选择。理论来自实践，也要回应现实中的问题与需要。\n\n### 理解要点\n\n1. 理论来自实践，也要回应现实中的问题与需要。\n2. 中国特色社会主义道路、理论、制度、文化相互联系、相互支撑。\n3. 理解「为什么」，要把历史选择、现实条件与发展目标放在一起看。\n\n### 放进例子里理解\n\n比如社区推进数字化服务，不只是换一套工具，还要结合居民需求、公共资源和治理目标持续调整。"
+    }
+  ]
+}

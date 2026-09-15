@@ -28,18 +28,8 @@ const reading = computed(() => (entry.value ? getReading(entry.value.point.id) :
 const read = computed(() => reading.value?.status === 'completed')
 const planned = computed(() => (entry.value ? isPlanned(entry.value.point.id) : false))
 
-/** 公式说明：正文数据里没存 caption，从 summary 取首句（生成时 caption 就是这么来的） */
-const caption = computed(() => {
-  const s = entry.value?.point.summary || ''
-  const end = s.indexOf('。')
-  return end > 0 ? s.slice(0, end + 1) : s
-})
-
-/** 抓手标签：含等号或数学符号的当公式，否则当概念文字 */
-const anchorLabel = computed(() => {
-  const a = content.value?.anchor || ''
-  return /[=≤≥∑∫√≈]/.test(a) ? '关键公式' : '概念抓手'
-})
+/** 抓手标签：设计稿按学科区分（政治用「概念抓手」，数学用「关键公式」） */
+const anchorLabel = computed(() => (entry.value?.subjectId === 'politics' ? '概念抓手' : '关键公式'))
 
 const indexInSection = computed(() => {
   const e = entry.value
@@ -86,7 +76,7 @@ function pad(n: number): string {
         <view v-if="content" class="formula-box">
           <text class="knowledge-anchor">{{ anchorLabel }}</text>
           <text class="formula-text">{{ content.anchor }}</text>
-          <text class="formula-caption">{{ caption }}</text>
+          <text class="formula-caption">{{ content.caption }}</text>
           <view class="pill" :class="{ orange: !read }">
             <text>{{ read ? '已读知识点' : '正在阅读' }}</text>
           </view>
