@@ -9,15 +9,19 @@
       "style": { "navigationStyle": "custom" }
     },
     {
+      "path": "pages/math/math",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
       "path": "pages/library/library",
       "style": { "navigationStyle": "custom" }
     },
     {
-      "path": "pages/plan/plan",
+      "path": "pages/my/my",
       "style": { "navigationStyle": "custom" }
     },
     {
-      "path": "pages/my/my",
+      "path": "pages/plan/plan",
       "style": { "navigationStyle": "custom" }
     },
     {
@@ -58,6 +62,10 @@
     }
   ],
   "preloadRule": {
+    "pages/math/math": {
+      "network": "all",
+      "packages": ["pages-knowledge"]
+    },
     "pages/library/library": {
       "network": "all",
       "packages": ["pages-knowledge"]
@@ -90,16 +98,16 @@
         "selectedIconPath": "static/tabbar/book-on.png"
       },
       {
-        "pagePath": "pages/library/library",
-        "text": "资料库",
+        "pagePath": "pages/math/math",
+        "text": "数学",
         "iconPath": "static/tabbar/math.png",
         "selectedIconPath": "static/tabbar/math-on.png"
       },
       {
-        "pagePath": "pages/plan/plan",
-        "text": "计划",
-        "iconPath": "static/tabbar/plan.png",
-        "selectedIconPath": "static/tabbar/plan-on.png"
+        "pagePath": "pages/library/library",
+        "text": "资料库",
+        "iconPath": "static/tabbar/library.png",
+        "selectedIconPath": "static/tabbar/library-on.png"
       },
       {
         "pagePath": "pages/my/my",

@@ -54,6 +54,7 @@ const PATHS = {
   home: '<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/>',
   book: '<path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v14M6 9h3M6 12h3M15 9h3M15 12h3"/>',
   math: '<rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 7h8M8 12h2m-1-1v2M14 12h2M8 17h2M14 16l2 2m0-2-2 2"/>',
+  library: '<path d="m12 3.2 8.4 4.6-8.4 4.6-8.4-4.6 8.4-4.6Z"/><path d="m4.6 13 7.4 4.1L19.4 13"/>',
   plan: '<rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4m8-4v4M4 11h16m-11 5h6"/>',
   user: '<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
   back: '<path d="m15 5-7 7 7 7"/>',
@@ -75,7 +76,8 @@ const PATHS = {
   logo: '<path d="M3 5c4-1 7 1 9 3 2-2 5-4 9-3v13c-4-1-7 1-9 3-2-2-5-4-9-3Z"/><path d="M12 8v13M6 10c1 0 2 1 3 2m6 0c1-1 2-2 3-2"/>',
 }
 
-const TABS = ['home', 'book', 'math', 'plan', 'user']
+/** tabBar 图标：学习 / 单词 / 数学 / 资料库 / 我的 */
+const TABS = ['home', 'book', 'math', 'library', 'user']
 
 function svg(pathData, color, size, strokeWidth) {
   const body = pathData.replaceAll('COLOR', color)
@@ -115,6 +117,7 @@ function cleanPng(dir) {
   }
 }
 cleanPng(iconDir)
+cleanPng(tabDir)
 
 let count = 0
 

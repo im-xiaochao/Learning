@@ -23,7 +23,7 @@ function pad(n: number): string {
 
 <template>
   <view class="page">
-    <AppHeader />
+    <AppHeader title="学习计划" />
 
     <view class="viewport fade-in">
       <template v-if="items.length">

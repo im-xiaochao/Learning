@@ -640,11 +640,15 @@ scroll-view {
 
 .subject-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 14px;
 }
+/* 学科数量不定（数学 3 个、资料库 5 个起），按内容宽度排布、放不下就换行 */
 .subject-tab {
-  flex: 1;
+  flex: 0 1 auto;
+  min-width: 68px;
+  padding: 0 12px;
   min-height: 38px;
   display: flex;
   align-items: center;

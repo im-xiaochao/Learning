@@ -15,6 +15,11 @@
       "id": "politics",
       "name": "考研政治",
       "sortOrder": 30
+    },
+    {
+      "id": "cs",
+      "name": "计算机专业课",
+      "sortOrder": 40
     }
   ],
   "subjects": [
@@ -45,6 +50,34 @@
       "name": "思想政治理论",
       "shortName": "政治",
       "sortOrder": 40
+    },
+    {
+      "id": "cs-coa",
+      "courseId": "cs",
+      "name": "计算机组成原理",
+      "shortName": "组成原理",
+      "sortOrder": 50
+    },
+    {
+      "id": "cs-os",
+      "courseId": "cs",
+      "name": "操作系统",
+      "shortName": "操作系统",
+      "sortOrder": 60
+    },
+    {
+      "id": "cs-ds",
+      "courseId": "cs",
+      "name": "数据结构",
+      "shortName": "数据结构",
+      "sortOrder": 70
+    },
+    {
+      "id": "cs-net",
+      "courseId": "cs",
+      "name": "计算机网络",
+      "shortName": "计算机网络",
+      "sortOrder": 80
     }
   ],
   "chapters": [

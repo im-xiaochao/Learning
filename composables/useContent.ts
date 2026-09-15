@@ -26,6 +26,15 @@ export const courses: AppCourse[] = [...appCourses].sort((a, b) => a.sortOrder -
 /** 章节：按 sortOrder 稳定排序 */
 export const chapters: AppChapter[] = [...appChapters].sort((a, b) => a.sortOrder - b.sortOrder)
 
+/**
+ * tab 分组的学科清单。按 courseId 派生而不是写死 id——
+ * 以后往资料库加专业课，只要数据里有对应学科就会自动出现。
+ *   数学 tab   ← courseId = math
+ *   资料库 tab ← 其余（政治、计算机专业课…）
+ */
+export const MATH_SUBJECT_IDS: string[] = subjects.filter((s) => s.courseId === 'math').map((s) => s.id)
+export const LIBRARY_SUBJECT_IDS: string[] = subjects.filter((s) => s.courseId !== 'math').map((s) => s.id)
+
 const chapterById = new Map(appChapters.map((c) => [c.id, c]))
 const knowledgeByChapter = new Map(appKnowledge.map((k) => [k.id, k]))
 

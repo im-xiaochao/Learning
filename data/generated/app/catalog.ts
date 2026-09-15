@@ -11,14 +11,19 @@ export interface AppChapter { id: string; subjectId: string; module: string; tit
 export const appCourses: AppCourse[] = [
   {"id":"english","name":"考研英语","sortOrder":10},
   {"id":"math","name":"考研数学","sortOrder":20},
-  {"id":"politics","name":"考研政治","sortOrder":30}
+  {"id":"politics","name":"考研政治","sortOrder":30},
+  {"id":"cs","name":"计算机专业课","sortOrder":40}
 ]
 
 export const appSubjects: AppSubject[] = [
   {"id":"calculus","courseId":"math","name":"高等数学","shortName":"高数","sortOrder":10},
   {"id":"algebra","courseId":"math","name":"线性代数","shortName":"线代","sortOrder":20},
   {"id":"probability","courseId":"math","name":"概率统计","shortName":"概率","sortOrder":30},
-  {"id":"politics","courseId":"politics","name":"思想政治理论","shortName":"政治","sortOrder":40}
+  {"id":"politics","courseId":"politics","name":"思想政治理论","shortName":"政治","sortOrder":40},
+  {"id":"cs-coa","courseId":"cs","name":"计算机组成原理","shortName":"组成原理","sortOrder":50},
+  {"id":"cs-os","courseId":"cs","name":"操作系统","shortName":"操作系统","sortOrder":60},
+  {"id":"cs-ds","courseId":"cs","name":"数据结构","shortName":"数据结构","sortOrder":70},
+  {"id":"cs-net","courseId":"cs","name":"计算机网络","shortName":"计算机网络","sortOrder":80}
 ]
 
 export const appChapters: AppChapter[] = [

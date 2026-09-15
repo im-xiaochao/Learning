@@ -52,7 +52,8 @@ function onMarkRead() {
 }
 
 function goPlan() {
-  uni.switchTab({ url: '/pages/plan/plan' })
+  /* 计划已不是 tab，改用 navigateTo */
+  uni.navigateTo({ url: '/pages/plan/plan' })
 }
 
 function pad(n: number): string {

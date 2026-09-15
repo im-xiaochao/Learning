@@ -25,6 +25,7 @@ import { MATH_MODULES } from '../data/math-data'
 import { getMathLecture } from '../data/math-lectures'
 import { words as RAW_WORDS } from '../data/words'
 import { POLITICS_COURSE, POLITICS_SUBJECT, POLITICS_CHAPTERS } from '../data/politics-data'
+import { MAJOR_COURSE, MAJOR_SUBJECTS } from '../data/major-data'
 
 const DRY_RUN = process.argv.includes('--dry-run')
 const ROOT = path.resolve(__dirname, '..')
@@ -181,7 +182,8 @@ interface SubjectDef {
   shortName: string
   sortOrder: number
   courseId: string
-  match: RegExp
+  /** 只有数学学科需要它来匹配「第一部分 高等数学」这类标题 */
+  match?: RegExp
 }
 
 const MATH_SUBJECTS: SubjectDef[] = [
@@ -191,22 +193,24 @@ const MATH_SUBJECTS: SubjectDef[] = [
 ]
 
 /** 政治不从 math-data 派生，来自手工编写的 data/politics-data.ts */
-const POLITICS_SUBJECT_DEF: SubjectDef = {
-  ...POLITICS_SUBJECT,
-  match: /政治/,
-}
+const POLITICS_SUBJECT_DEF: SubjectDef = { ...POLITICS_SUBJECT }
 
-/** 全部学科（数学 3 个 + 政治），用于目录与运行数据输出 */
-const SUBJECTS: SubjectDef[] = [...MATH_SUBJECTS, POLITICS_SUBJECT_DEF]
+/**
+ * 全部学科。用于目录与运行数据输出。
+ * 顺序：数学 3 个 → 政治 → 计算机专业课 4 个。
+ * 资料库 tab 展示 courseId !== 'math' 的那些（见 composables/useContent.ts）。
+ */
+const SUBJECTS: SubjectDef[] = [...MATH_SUBJECTS, POLITICS_SUBJECT_DEF, ...MAJOR_SUBJECTS]
 
 const COURSES = [
   { id: 'english', name: '考研英语', sortOrder: 10 },
   { id: 'math', name: '考研数学', sortOrder: 20 },
   POLITICS_COURSE,
+  MAJOR_COURSE,
 ]
 
 function subjectOf(partTitle: string): SubjectDef {
-  const hit = MATH_SUBJECTS.find((s) => s.match.test(partTitle))
+  const hit = MATH_SUBJECTS.find((s) => s.match?.test(partTitle))
   if (!hit) throw new Error(`无法识别的部分标题：${partTitle}`)
   return hit
 }
