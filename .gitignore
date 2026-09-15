@@ -20,7 +20,14 @@ tools/node_modules/
 # tools/pages：pdf-render.js 从《张宇基础30讲》扫描件渲染出的页面图（80 张 / 68 MB），
 # 用途是「用眼睛读扫描页」来撰写 math-lectures.ts，属于一次性参考资料。
 # 源 PDF 仍在 ~/.trae-cn/attachments/，随时可重渲染，不必入库。
+# 页码索引留在 tools/pages-index.md（那个是入库的）。
 tools/pages/
+
+# ── 编辑器 Agent 的工作区 ──
+# 这里放的是 Agent 的记忆（memory/ 每次会话都会追加）与技能，属于本机会话状态，
+# 不是项目源码。项目真正需要长期留存的约定已经写在 data/content/README.md 与
+# tools/pages-index.md 里。若想连记忆一起入库，删掉这一行即可。
+.workbuddy-ai/
 
 # ── 日志与临时文件 ──
 *.log
@@ -46,5 +53,4 @@ desktop.ini
 #                        且没有 CI 会自动跑生成脚本，忽略它会导致新克隆无法编译
 #   static/icons/**      build-icons.mjs 的产物，但属于应用资源，必须随包提交
 #   static/tabbar/**
-#   .workbuddy-ai/**     本项目的记忆与技能目录（memory/、skills/），按项目数据对待
 # ══════════════════════════════════════════════════════════
