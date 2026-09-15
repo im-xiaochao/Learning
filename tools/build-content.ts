@@ -591,14 +591,13 @@ function buildVocabularyIndex(items: ReturnType<typeof buildVocabulary>['items']
 /**
  * data/content 是给人看、给脚本维护的规范数据（3.4 MB）。
  * 微信小程序主包上限 2 MB，装不下全量，因此再投影一份「只含界面实际渲染字段」的
- * 运行数据到 data/generated/app/，并按「列表 / 详情」拆开：
+ * 运行数据。关键约束：**分包里的数据文件必须物理放在分包目录内**，
+ * 否则 uni-app 会把它当公共模块丢回主包（实测踩过）。
  *
- *   catalog.json            课程 · 学科 · 章节            主包
- *   knowledge.json          知识点列表（标题 + 摘要）      主包  ← 资料库、计划页只需这些
- *   words.json              词库                          主包
- *   knowledge-content.json  公式 · 要点 · 例题            分包  ← 只有知识点详情页需要
- *
- * 拆分的目的是把大块正文挪出主包；两者都以知识点 id 关联，同源同版本。
+ *   data/generated/app/catalog.ts            课程 · 学科 · 章节        主包
+ *   data/generated/app/knowledge.ts          知识点列表（标题+摘要）   主包
+ *   data/generated/app/words.ts              词库                      主包
+ *   pages-knowledge/content.ts               公式 · 要点 · 例题        分包 ← 必须放这里
  */
 function buildAppBundle(bundles: ChapterBundle[], vocab: ReturnType<typeof buildVocabulary>) {
   const chapters = bundles.map((b) => ({
@@ -611,12 +610,16 @@ function buildAppBundle(bundles: ChapterBundle[], vocab: ReturnType<typeof build
     sections: groupBySection(b.knowledge),
   }))
 
+  // 只保留详情页真正渲染的字段：
+  //   anchor.caption 与 summary 首句重复 → 前端从 summary 派生
+  //   anchor.type / format 全库恒为 formula / text → 前端不需要
+  //   keyPoints[].title 页面不渲染 → 只留 body，退化成字符串数组
   const content: Record<string, unknown> = {}
   for (const b of bundles) {
     for (const kp of b.knowledge) {
       content[kp.id] = {
-        anchor: kp.anchor,
-        keyPoints: kp.keyPoints.map((k) => ({ title: k.title, body: k.bodyMarkdown })),
+        anchor: kp.anchor.content,
+        keyPoints: kp.keyPoints.map((k) => k.bodyMarkdown),
         example: kp.examples[0]?.bodyMarkdown || '',
       }
     }
@@ -766,13 +769,18 @@ function main() {
   )
 
   write(
-    path.join(appDir, 'knowledge-content.ts'),
-    `${banner}export interface AppAnchor { type: string; format: string; content: string; caption: string }\nexport interface AppKeyPoint { title: string; body: string }\nexport interface AppKnowledgeContent { anchor: AppAnchor; keyPoints: AppKeyPoint[]; example: string }\n\nexport const appKnowledgeContent: Record<string, AppKnowledgeContent> = ${serializeMap(Object.entries(app.content))}\n`,
-  )
-
-  write(
     path.join(appDir, 'words.ts'),
     `${banner}export interface AppWord { id: string; word: string; ipa: string; pos: string; meaning: string }\n\nexport const appWords: AppWord[] = ${serializeRecords(app.words)}\n`,
+  )
+
+  // 知识点正文必须写进分包目录【内部】。
+  // 实测：放在 data/generated/app/ 下时，uni-app 把它当公共模块打回了主包，
+  // 分包里只剩一个光秃秃的页面，主包因此涨到 2 MB 以上。
+  const subPackageDir = path.join(ROOT, 'pages-knowledge')
+  fs.mkdirSync(subPackageDir, { recursive: true })
+  write(
+    path.join(subPackageDir, 'content.ts'),
+    `${banner}export interface AppKnowledgeContent { anchor: string; keyPoints: string[]; example: string }\n\nexport const appKnowledgeContent: Record<string, AppKnowledgeContent> = ${serializeMap(Object.entries(app.content))}\n`,
   )
 
   console.log(`\n已写入 ${knowledgeFiles + 8} 个文件：`)
@@ -781,7 +789,8 @@ function main() {
   console.log(`  data/content/vocabulary/words.json`)
   console.log(`  data/generated/knowledge-index.json`)
   console.log(`  data/generated/vocabulary-index.json`)
-  console.log(`  data/generated/app/catalog.ts | knowledge.ts | knowledge-content.ts | words.ts`)
+  console.log(`  data/generated/app/catalog.ts | knowledge.ts | words.ts`)
+  console.log(`  pages-knowledge/content.ts                (分包内，勿移到 data/ 下)`)
 }
 
 main()

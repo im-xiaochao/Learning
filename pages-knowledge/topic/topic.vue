@@ -2,15 +2,15 @@
 /**
  * 知识点讲解。
  *
- * 这个页面在分包 pages-knowledge 里，正文数据 knowledge-content.ts 只被它引用，
- * 因此会被打进分包——主包只保留「标题 + 摘要」的列表数据，避免顶到微信 2MB 主包上限。
+ * 这个页面在分包 pages-knowledge 里，正文数据放在**同目录**的 content.ts——
+ * 必须物理放在分包内部，否则 uni-app 会把它当公共模块打回主包（实测踩过）。
  */
 import { computed, ref } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
 import { getEntry } from '../../composables/useContent'
-import { appKnowledgeContent } from '../../data/generated/app/knowledge-content'
+import { appKnowledgeContent } from '../content'
 
 const { getReading, isPlanned, togglePlan, openKnowledge, completeKnowledge } = useLearning()
 
@@ -28,7 +28,19 @@ const reading = computed(() => (entry.value ? getReading(entry.value.point.id) :
 const read = computed(() => reading.value?.status === 'completed')
 const planned = computed(() => (entry.value ? isPlanned(entry.value.point.id) : false))
 
-const anchorLabel = computed(() => (content.value?.anchor.type === 'formula' ? '关键公式' : '概念抓手'))
+/** 公式说明：正文数据里没存 caption，从 summary 取首句（生成时 caption 就是这么来的） */
+const caption = computed(() => {
+  const s = entry.value?.point.summary || ''
+  const end = s.indexOf('。')
+  return end > 0 ? s.slice(0, end + 1) : s
+})
+
+/** 抓手标签：含等号或数学符号的当公式，否则当概念文字 */
+const anchorLabel = computed(() => {
+  const a = content.value?.anchor || ''
+  return /[=≤≥∑∫√≈]/.test(a) ? '关键公式' : '概念抓手'
+})
+
 const indexInSection = computed(() => {
   const e = entry.value
   if (!e) return 1
@@ -73,18 +85,18 @@ function pad(n: number): string {
 
         <view v-if="content" class="formula-box">
           <text class="knowledge-anchor">{{ anchorLabel }}</text>
-          <text class="formula-text">{{ content.anchor.content }}</text>
-          <text class="formula-caption">{{ content.anchor.caption }}</text>
+          <text class="formula-text">{{ content.anchor }}</text>
+          <text class="formula-caption">{{ caption }}</text>
           <view class="pill" :class="{ orange: !read }">
             <text>{{ read ? '已读知识点' : '正在阅读' }}</text>
           </view>
         </view>
 
-        <view v-if="content" class="detail-section">
+        <view v-if="content && content.keyPoints.length" class="detail-section">
           <text class="section-title">抓住这三个要点</text>
-          <view v-for="(k, i) in content.keyPoints" :key="i" class="concept-step">
+          <view v-for="(kp, i) in content.keyPoints" :key="i" class="concept-step">
             <view class="step-no"><text>{{ i + 1 }}</text></view>
-            <text class="step-text">{{ k.body }}</text>
+            <text class="step-text">{{ kp }}</text>
           </view>
         </view>
 
