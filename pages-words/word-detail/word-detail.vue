@@ -8,7 +8,7 @@ import { computed, ref } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
-import { appWords } from '../../data/generated/app/words'
+import { appWords } from '../words'
 
 const { isFavorite, toggleFavorite, getFamiliarity } = useLearning()
 

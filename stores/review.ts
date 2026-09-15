@@ -1,9 +1,12 @@
 /**
  * 复习会话状态（模块级单例，跨页面共享）。
- * 队列只存单词 id，避免把整个词库对象塞进响应式状态。
+ *
+ * 队列只存单词 id，而且这里【不引用词库正文】——词库全量在 pages-words 分包里，
+ * 主包的「单词」tab 要调用 startReview，一旦这里 import 词库就会把 687 KB 拉回主包。
+ * 主包只需要 id 清单（data/generated/app/word-ids），词条正文由分包内的复习页自己解析。
  */
 import { computed, ref } from 'vue'
-import { appWords } from '../data/generated/app/words'
+import { appWordIds } from '../data/generated/app/word-ids'
 import { useLearning } from './learning'
 import type { Familiarity } from './learning'
 
@@ -27,11 +30,11 @@ function pickIds(ids: string[], limit: number): string[] {
 
 /** 组装复习队列；返回是否真的排上了内容 */
 export function startReview(next: ReviewMode = 'today'): boolean {
-  const { currentGoal, getFamiliarity, favoriteWords, state } = useLearning()
+  const { currentGoal, getFamiliarity, favoriteWordIds, state } = useLearning()
   mode.value = next
 
   if (next === 'favorites') {
-    const ids = favoriteWords.value.map((w) => w.id)
+    const ids = [...favoriteWordIds.value]
     if (!ids.length) return false
     queue.value = pickIds(ids, ids.length)
   } else if (next === 'weak') {
@@ -45,7 +48,7 @@ export function startReview(next: ReviewMode = 'today'): boolean {
     const weak = state.value.wordProgress
       .filter((w) => w.familiarity === 'unknown' || w.familiarity === 'fuzzy')
       .map((w) => w.wordId)
-    const untouched = appWords.map((w) => w.id).filter((id) => getFamiliarity(id) === undefined)
+    const untouched = appWordIds.filter((id) => getFamiliarity(id) === undefined)
     const pool = [...pickIds(weak, currentGoal.value.dailyWords), ...pickIds(untouched, currentGoal.value.dailyWords)]
     const uniq = [...new Set(pool)].slice(0, currentGoal.value.dailyWords)
     if (!uniq.length) return false
@@ -60,7 +63,6 @@ export function startReview(next: ReviewMode = 'today'): boolean {
 
 export function useReview() {
   const currentId = computed(() => queue.value[cursor.value] || '')
-  const currentWord = computed(() => appWords.find((w) => w.id === currentId.value))
   const isLast = computed(() => cursor.value >= queue.value.length - 1)
   const total = computed(() => queue.value.length)
   const position = computed(() => cursor.value + 1)
@@ -82,5 +84,5 @@ export function useReview() {
     grade.value = null
   }
 
-  return { queue, cursor, grade, reveal, mode, currentId, currentWord, isLast, total, position, setGrade, toggleReveal, next, reset }
+  return { queue, cursor, grade, reveal, mode, currentId, isLast, total, position, setGrade, toggleReveal, next, reset }
 }

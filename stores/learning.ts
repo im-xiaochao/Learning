@@ -7,7 +7,6 @@
  */
 import { computed, ref, watch } from 'vue'
 import { storageGet, storageSet } from '../utils/storage'
-import { appWords } from '../data/generated/app/words'
 import { knowledgeEntries } from '../composables/useContent'
 
 const KEY = 'cishu:user:local:v1'
@@ -241,10 +240,11 @@ export const planEntries = computed(() =>
     .filter((x) => x.entry),
 )
 
-/** 收藏单词 */
-export const favoriteWords = computed(() =>
-  state.value.favoriteWordIds.map((id) => appWords.find((w) => w.id === id)).filter((w): w is (typeof appWords)[number] => Boolean(w)),
-)
+/**
+ * 收藏单词的 id 清单。
+ * 只暴露 id——词条正文在 pages-words 分包里，主包不能引用它，否则分包失效。
+ */
+export const favoriteWordIds = computed(() => state.value.favoriteWordIds)
 
 /** 接着上次学：最近打开的阅读记录 */
 export const lastReading = computed<ReadingProgress | undefined>(() => {
@@ -373,7 +373,7 @@ export function useLearning() {
     streakDays,
     weeklyValues,
     planEntries,
-    favoriteWords,
+    favoriteWordIds,
     lastReading,
     getReading,
     getFamiliarity,

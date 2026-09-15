@@ -4,12 +4,17 @@ import { computed } from 'vue'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
 import { startReview } from '../../stores/review'
+import { appWords } from '../words'
 
-const { favoriteWords } = useLearning()
-const items = computed(() => favoriteWords.value)
+const { favoriteWordIds } = useLearning()
+const items = computed(() =>
+  favoriteWordIds.value
+    .map((id) => appWords.find((w) => w.id === id))
+    .filter((w): w is (typeof appWords)[number] => Boolean(w)),
+)
 
 function openDetail(id: string) {
-  uni.navigateTo({ url: `/pages/word-detail/word-detail?id=${id}` })
+  uni.navigateTo({ url: `/pages-words/word-detail/word-detail?id=${id}` })
 }
 
 function goReview() {
@@ -17,7 +22,7 @@ function goReview() {
     uni.showToast({ title: '还没有收藏的单词', icon: 'none' })
     return
   }
-  uni.navigateTo({ url: '/pages/review/review' })
+  uni.navigateTo({ url: '/pages-words/review/review' })
 }
 </script>
 

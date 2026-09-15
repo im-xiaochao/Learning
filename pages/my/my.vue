@@ -4,7 +4,7 @@ import { computed, ref } from 'vue'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
 
-const { state, currentGoal, totalWords, totalKnowledge, favoriteWords, planEntries, streakDays, weeklyValues } = useLearning()
+const { state, currentGoal, totalWords, totalKnowledge, favoriteWordIds, planEntries, streakDays, weeklyValues } = useLearning()
 
 const chartMode = ref<'words' | 'knowledge'>('words')
 const values = computed(() => weeklyValues(chartMode.value))
@@ -103,10 +103,10 @@ function goPlan() {
       </view>
 
       <view class="menu-list">
-        <button class="menu-row" hover-class="hover-press" @tap="goPage('/pages/favorites/favorites')">
+        <button class="menu-row" hover-class="hover-press" @tap="goPage('/pages-words/favorites/favorites')">
           <image class="menu-icon" src="/static/icons/star.png" mode="aspectFit" />
           <text class="menu-label">收藏单词</text>
-          <text class="menu-value">{{ favoriteWords.length }} 个单词</text>
+          <text class="menu-value">{{ favoriteWordIds.length }} 个单词</text>
           <image class="chev" src="/static/icons/chevron.png" mode="aspectFit" />
         </button>
         <button class="menu-row" hover-class="hover-press" @tap="goPlan">

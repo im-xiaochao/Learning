@@ -10,9 +10,10 @@ import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
 import { useReview } from '../../stores/review'
 import type { Familiarity } from '../../stores/learning'
+import { appWords } from '../words'
 
 const { reviewWord, isFavorite, toggleFavorite } = useLearning()
-const { grade, reveal, currentWord, isLast, total, position, setGrade, toggleReveal, next, reset } = useReview()
+const { grade, reveal, currentId, isLast, total, position, setGrade, toggleReveal, next, reset } = useReview()
 
 const feedbackText: Record<Familiarity, [string, string]> = {
   familiar: ['记住了，继续保持。', '本次已标记为熟悉，可以在复习结果中回看。'],
@@ -20,7 +21,7 @@ const feedbackText: Record<Familiarity, [string, string]> = {
   unknown: ['没关系，再认识一次。', '先读一遍释义，再试着用自己的话记住它。'],
 }
 
-const word = computed(() => currentWord.value)
+const word = computed(() => appWords.find((w) => w.id === currentId.value))
 const saved = computed(() => (word.value ? isFavorite(word.value.id) : false))
 const progress = computed(() => (total.value ? Math.round(((position.value - 1 + (grade.value ? 1 : 0)) / total.value) * 100) : 0))
 
@@ -61,13 +62,13 @@ function rate(value: Familiarity) {
 function toDetail() {
   const w = word.value
   if (!w) return
-  uni.navigateTo({ url: `/pages/word-detail/word-detail?id=${w.id}` })
+  uni.navigateTo({ url: `/pages-words/word-detail/word-detail?id=${w.id}` })
 }
 
 function goNext() {
   if (!grade.value) return
   if (isLast.value) {
-    uni.redirectTo({ url: '/pages/result/result' })
+    uni.redirectTo({ url: '/pages-words/result/result' })
     return
   }
   next()

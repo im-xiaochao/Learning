@@ -4,7 +4,7 @@ import { computed } from 'vue'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
 import { useReview, startReview } from '../../stores/review'
-import { appWords } from '../../data/generated/app/words'
+import { appWords } from '../words'
 import type { Familiarity } from '../../stores/learning'
 
 const { todayWords, currentGoal, getFamiliarity } = useLearning()
@@ -32,7 +32,7 @@ function practiceWeak() {
     uni.showToast({ title: '暂时没有薄弱单词', icon: 'none' })
     return
   }
-  uni.redirectTo({ url: '/pages/review/review' })
+  uni.redirectTo({ url: '/pages-words/review/review' })
 }
 
 function goHome() {
@@ -40,7 +40,7 @@ function goHome() {
 }
 
 function openDetail(id: string) {
-  uni.navigateTo({ url: `/pages/word-detail/word-detail?id=${id}` })
+  uni.navigateTo({ url: `/pages-words/word-detail/word-detail?id=${id}` })
 }
 </script>
 

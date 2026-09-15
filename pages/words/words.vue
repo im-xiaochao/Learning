@@ -4,9 +4,9 @@ import { computed } from 'vue'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
 import { startReview } from '../../stores/review'
-import { words } from '../../composables/useContent'
+import { appWordIds } from '../../data/generated/app/word-ids'
 
-const { currentGoal, todayWords, favoriteWords, getFamiliarity } = useLearning()
+const { currentGoal, todayWords, favoriteWordIds, getFamiliarity } = useLearning()
 
 const goal = computed(() => currentGoal.value.dailyWords)
 const done = computed(() => todayWords.value >= goal.value)
@@ -14,7 +14,7 @@ const left = computed(() => Math.max(0, goal.value - todayWords.value))
 const percent = computed(() => Math.min(100, Math.round((todayWords.value / goal.value) * 100)))
 
 /** 新词初识：今日新词额度（上限 20）是否已认完 */
-const freshCount = computed(() => words.filter((w) => getFamiliarity(w.id) === undefined).length)
+const freshCount = computed(() => appWordIds.filter((id) => getFamiliarity(id) === undefined).length)
 const newQuota = computed(() => Math.min(20, goal.value))
 const newDone = computed(() => todayWords.value >= newQuota.value)
 const reviewedToday = computed(() => Math.max(0, todayWords.value - Math.min(newQuota.value, todayWords.value)))
@@ -24,11 +24,11 @@ function goReview() {
     uni.showToast({ title: '暂时没有需要复习的单词', icon: 'none' })
     return
   }
-  uni.navigateTo({ url: '/pages/review/review' })
+  uni.navigateTo({ url: '/pages-words/review/review' })
 }
 
 function goFavorites() {
-  uni.navigateTo({ url: '/pages/favorites/favorites' })
+  uni.navigateTo({ url: '/pages-words/favorites/favorites' })
 }
 </script>
 
@@ -100,7 +100,7 @@ function goFavorites() {
         <button class="menu-row" hover-class="hover-press" @tap="goFavorites">
           <image class="menu-icon" src="/static/icons/star.png" mode="aspectFit" />
           <text class="menu-label">我的收藏</text>
-          <text class="menu-value">{{ favoriteWords.length }} 个单词</text>
+          <text class="menu-value">{{ favoriteWordIds.length }} 个单词</text>
           <image class="chev" src="/static/icons/chevron.png" mode="aspectFit" />
         </button>
       </view>

@@ -156,6 +156,16 @@ function serializeRecords(records: unknown[], indent = '  '): string {
   return `[\n${records.map((r) => indent + JSON.stringify(r)).join(',\n')}\n]`
 }
 
+/** 字符串数组序列化：每行若干个，避免出现一条 100 KB 的长行 */
+function serializeStrings(items: string[], perLine = 12, indent = '  '): string {
+  if (items.length === 0) return '[]'
+  const lines: string[] = []
+  for (let i = 0; i < items.length; i += perLine) {
+    lines.push(indent + items.slice(i, i + perLine).map((s) => JSON.stringify(s)).join(', '))
+  }
+  return `[\n${lines.join(',\n')}\n]`
+}
+
 /** 对象字典序列化：每个键独占一行 */
 function serializeMap(entries: [string, unknown][], indent = '  '): string {
   if (entries.length === 0) return '{}'
@@ -768,9 +778,17 @@ function main() {
     `${banner}export interface AppKnowledgePoint { id: string; title: string; summary: string; minutes: number }\nexport interface AppKnowledgeSection { id: string; title: string; points: AppKnowledgePoint[] }\nexport interface AppKnowledgeChapter { id: string; subjectId: string; module: string; title: string; summary: string; sortOrder: number; sections: AppKnowledgeSection[] }\n\nexport const appKnowledge: AppKnowledgeChapter[] = ${serializeRecords(app.chapters)}\n`,
   )
 
+  // 词库全量只被分包页面用到（复习 / 结果 / 单词详情 / 收藏），放进 pages-words 分包内部。
+  // 主包只需要一份「id 清单」来选取复习队列——约 100 KB，远小于全量 687 KB。
+  const wordsPackageDir = path.join(ROOT, 'pages-words')
+  fs.mkdirSync(wordsPackageDir, { recursive: true })
   write(
-    path.join(appDir, 'words.ts'),
+    path.join(wordsPackageDir, 'words.ts'),
     `${banner}export interface AppWord { id: string; word: string; ipa: string; pos: string; meaning: string }\n\nexport const appWords: AppWord[] = ${serializeRecords(app.words)}\n`,
+  )
+  write(
+    path.join(appDir, 'word-ids.ts'),
+    `${banner}/** 只含 id，供主包选取复习队列用；词条正文在 pages-words/words.ts */\nexport const appWordIds: string[] = ${serializeStrings(app.words.map((w) => w.id))}\n`,
   )
 
   // 知识点正文必须写进分包目录【内部】。
@@ -783,14 +801,15 @@ function main() {
     `${banner}export interface AppKnowledgeContent { anchor: string; keyPoints: string[]; example: string }\n\nexport const appKnowledgeContent: Record<string, AppKnowledgeContent> = ${serializeMap(Object.entries(app.content))}\n`,
   )
 
-  console.log(`\n已写入 ${knowledgeFiles + 8} 个文件：`)
+  console.log(`\n已写入 ${knowledgeFiles + 9} 个文件：`)
   console.log(`  data/content/catalog.json`)
   console.log(`  data/content/knowledge/<subject>/*.json   (${knowledgeFiles})`)
   console.log(`  data/content/vocabulary/words.json`)
   console.log(`  data/generated/knowledge-index.json`)
   console.log(`  data/generated/vocabulary-index.json`)
-  console.log(`  data/generated/app/catalog.ts | knowledge.ts | words.ts`)
-  console.log(`  pages-knowledge/content.ts                (分包内，勿移到 data/ 下)`)
+  console.log(`  data/generated/app/catalog.ts | knowledge.ts | word-ids.ts   (主包)`)
+  console.log(`  pages-knowledge/content.ts                                   (分包内)`)
+  console.log(`  pages-words/words.ts                                         (分包内)`)
 }
 
 main()

@@ -20,20 +20,32 @@ data/
 ### generated/app —— 小程序运行数据
 
 `data/content` 是给人看、给脚本维护的规范数据（3.4 MB），微信小程序主包上限 2 MB 装不下。
-所以 `build-content.ts` 会再投影一份「只含界面实际渲染字段」的运行数据：
+所以 `build-content.ts` 会再投影一份「只含界面实际渲染字段」的运行数据，并按分包边界摆放：
 
 | 文件 | 内容 | 归属 | 体积 |
 | --- | --- | --- | --- |
-| `app/catalog.ts` | 课程 · 学科 · 章节 | 主包 | 10 KB |
-| `app/knowledge.ts` | 知识点列表（标题 + 摘要 + 时长） | 主包 | 254 KB |
-| `app/words.ts` | 词库 | 主包 | 629 KB |
-| `app/knowledge-content.ts` | 公式 · 要点 · 例题 | **分包** | 595 KB |
+| `app/catalog.ts` | 课程 · 学科 · 章节 | 主包 | 9 KB |
+| `app/knowledge.ts` | 知识点列表（标题 + 摘要 + 时长） | 主包 | 253 KB |
+| `app/word-ids.ts` | 单词 id 清单（复习队列选取用） | 主包 | 84 KB |
+| `pages-knowledge/content.ts` | 公式 · 要点 · 例题 | 分包 | 305 KB |
+| `pages-words/words.ts` | 词库全量 | 分包 | 628 KB |
 
-拆分的用意：正文（`knowledge-content`）只被分包里的知识点详情页引用，因此会被打进
-`pages-knowledge` 分包；主包只留列表数据。应用侧统一从 `composables/useContent.ts` 读，
-换存储方式只需改那一个文件。
+**⚠️ 分包数据必须物理放在分包目录内部。** 这是踩过的坑：正文原先放在
+`data/generated/app/` 下时，uni-app 把它当公共模块**打回了主包**，分包里只剩一个
+6 KB 的空页面，主包涨到 2103 KB（超限）。同时 `manifest.json` 里必须开
+`mp-weixin.optimization.subPackages: true`。
 
-> 这两层数据同源同版本，`app/` 由脚本生成，不要手改。
+**主包不能引用分包数据。** 所以：
+
+- `composables/useContent.ts` 只导出「课程 / 学科 / 章节 / 知识点」，**不导出词库**；
+- `stores/learning.ts` 只暴露 `favoriteWordIds`（id 清单），不解析词条；
+- `stores/review.ts` 用 `appWordIds` 组队列，词条正文由分包内的复习页自己解析。
+
+只要主包任意一个文件 import 了分包数据，那个数据就会被拉回主包，分包就白拆了。
+`pages.json` 里配了 `preloadRule`：进资料库页预下载 `pages-knowledge`，
+进单词页预下载 `pages-words`。
+
+> 这些运行数据都由脚本生成，同源同版本，不要手改。
 
 | 项 | 数量 |
 | --- | --- |

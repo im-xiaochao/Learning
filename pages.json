@@ -21,22 +21,6 @@
       "style": { "navigationStyle": "custom" }
     },
     {
-      "path": "pages/review/review",
-      "style": { "navigationStyle": "custom" }
-    },
-    {
-      "path": "pages/result/result",
-      "style": { "navigationStyle": "custom" }
-    },
-    {
-      "path": "pages/word-detail/word-detail",
-      "style": { "navigationStyle": "custom" }
-    },
-    {
-      "path": "pages/favorites/favorites",
-      "style": { "navigationStyle": "custom" }
-    },
-    {
       "path": "pages/goals/goals",
       "style": { "navigationStyle": "custom" }
     }
@@ -50,12 +34,37 @@
           "style": { "navigationStyle": "custom" }
         }
       ]
+    },
+    {
+      "root": "pages-words",
+      "pages": [
+        {
+          "path": "review/review",
+          "style": { "navigationStyle": "custom" }
+        },
+        {
+          "path": "result/result",
+          "style": { "navigationStyle": "custom" }
+        },
+        {
+          "path": "word-detail/word-detail",
+          "style": { "navigationStyle": "custom" }
+        },
+        {
+          "path": "favorites/favorites",
+          "style": { "navigationStyle": "custom" }
+        }
+      ]
     }
   ],
   "preloadRule": {
     "pages/library/library": {
       "network": "all",
       "packages": ["pages-knowledge"]
+    },
+    "pages/words/words": {
+      "network": "all",
+      "packages": ["pages-words"]
     }
   },
   "globalStyle": {

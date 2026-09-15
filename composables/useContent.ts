@@ -1,20 +1,21 @@
 /**
- * 内容数据访问层：页面只从这里读内容，不直接碰生成物。
+ * 内容数据访问层：页面只从这里读「课程 / 学科 / 章节 / 知识点」，不直接碰生成物。
  *
  * 数据来自 data/content（规范数据）→ tools/build-content.ts 投影 → data/generated/app（运行数据）。
- * 页面依赖这一层的导出与查询函数，将来换存储（接口 / 分包 / 数据库）只需改本文件。
+ *
+ * 注意：**这里不导出词库**。词库全量（687 KB）放在 pages-words 分包内部，
+ * 只被该分包的页面引用；主包若在这里 import 它，就会把它拉回主包，分包就白拆了。
+ * 主包需要词库 id 清单时用 data/generated/app/word-ids。
  */
 import { appCourses, appSubjects, appChapters } from '../data/generated/app/catalog'
 import { appKnowledge } from '../data/generated/app/knowledge'
-import { appWords } from '../data/generated/app/words'
 
 import type { AppCourse, AppSubject, AppChapter } from '../data/generated/app/catalog'
 import type { AppKnowledgeChapter, AppKnowledgeSection, AppKnowledgePoint } from '../data/generated/app/knowledge'
-import type { AppWord } from '../data/generated/app/words'
 
-export type { AppCourse, AppSubject, AppChapter, AppKnowledgeChapter, AppKnowledgeSection, AppKnowledgePoint, AppWord }
+export type { AppCourse, AppSubject, AppChapter, AppKnowledgeChapter, AppKnowledgeSection, AppKnowledgePoint }
 
-export { appCourses, appSubjects, appChapters, appKnowledge, appWords }
+export { appCourses, appSubjects, appChapters, appKnowledge }
 
 /** 学科：只保留有内容的（政治暂无数据） */
 export const subjects: AppSubject[] = [...appSubjects].sort((a, b) => a.sortOrder - b.sortOrder)
@@ -25,13 +26,8 @@ export const courses: AppCourse[] = [...appCourses].sort((a, b) => a.sortOrder -
 /** 章节：按 sortOrder 稳定排序 */
 export const chapters: AppChapter[] = [...appChapters].sort((a, b) => a.sortOrder - b.sortOrder)
 
-/** 词库 */
-export const words: AppWord[] = appWords
-
 const chapterById = new Map(appChapters.map((c) => [c.id, c]))
 const knowledgeByChapter = new Map(appKnowledge.map((k) => [k.id, k]))
-const wordById = new Map(appWords.map((w) => [w.id, w]))
-const wordByText = new Map(appWords.map((w) => [w.word, w]))
 
 export function getChapter(id: string): AppChapter | undefined {
   return chapterById.get(id)
@@ -39,10 +35,6 @@ export function getChapter(id: string): AppChapter | undefined {
 
 export function getKnowledgeChapter(id: string): AppKnowledgeChapter | undefined {
   return knowledgeByChapter.get(id)
-}
-
-export function getWord(id: string): AppWord | undefined {
-  return wordById.get(id) || wordByText.get(id)
 }
 
 /** 某学科下的章节 */
