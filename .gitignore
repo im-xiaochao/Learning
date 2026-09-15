@@ -1,0 +1,50 @@
+# ══════════════════════════════════════════════════════════
+# 词数同行 · uni-app 工程
+# ══════════════════════════════════════════════════════════
+
+# ── uni-app / HBuilderX ──
+# 编译产物。HBuilderX 每次编译都会重建，且体积大、diff 噪声多。
+# 注意：unpackage/ 此前已被跟踪，需要额外执行
+#   git rm -r --cached unpackage
+# 才会真正停止跟踪（.gitignore 只对未跟踪文件生效）。
+unpackage/
+
+# HBuilderX 的工程配置（本机路径、窗口状态等）
+.hbuilderx/
+
+# ── 依赖 ──
+node_modules/
+tools/node_modules/
+
+# ── 工具中间产物 ──
+# tools/pages：pdf-render.js 从《张宇基础30讲》扫描件渲染出的页面图（80 张 / 68 MB），
+# 用途是「用眼睛读扫描页」来撰写 math-lectures.ts，属于一次性参考资料。
+# 源 PDF 仍在 ~/.trae-cn/attachments/，随时可重渲染，不必入库。
+tools/pages/
+
+# ── 日志与临时文件 ──
+*.log
+npm-debug.log*
+yarn-error.log*
+*.tmp
+*.bak
+
+# ── 系统与编辑器 ──
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ══════════════════════════════════════════════════════════
+# 以下目录【有意不忽略】，改这里前请先想清楚：
+#
+#   data/content/**      规范内容数据，是内容的唯一真源，必须入库
+#   data/generated/**    build-content.ts 的产物。虽然是生成物，但应用直接 import，
+#                        且没有 CI 会自动跑生成脚本，忽略它会导致新克隆无法编译
+#   static/icons/**      build-icons.mjs 的产物，但属于应用资源，必须随包提交
+#   static/tabbar/**
+#   .workbuddy-ai/**     本项目的记忆与技能目录（memory/、skills/），按项目数据对待
+# ══════════════════════════════════════════════════════════
