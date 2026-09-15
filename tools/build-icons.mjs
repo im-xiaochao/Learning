@@ -128,7 +128,7 @@ for (const name of TABS) {
 // 页面内图标：只生成页面真正用到的配色组合，避免 4×17 个文件白占主包
 // '' = muted（次要文字）  '-primary' = 主题色  '-on' = 主色卡片上的白  '-accent' = 强调橙
 const UI_VARIANTS = {
-  back: ['', '-primary'],
+  back: ['-primary'],
   chevron: [''],
   arrow: ['-primary', '-on'],
   check: ['-primary', '-on'],
@@ -137,15 +137,13 @@ const UI_VARIANTS = {
   sound: ['-primary'],
   search: [''],
   refresh: ['-primary'],
-  target: ['', '-primary'],
+  target: ['-primary'],
   plan: [''],
   plus: ['-primary'],
-  close: [''],
   eye: ['-primary'],
   flame: ['-accent'],
   clock: [''],
-  more: [''],
-  logo: ['-primary', '-on'],
+  logo: ['-primary'],
 }
 
 const VARIANTS = [

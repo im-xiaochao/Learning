@@ -118,27 +118,9 @@ scroll-view {
   margin-right: 3px;
 }
 
-.capsule {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.65);
-  height: 32px;
-  flex: 0 0 auto;
-}
-.capsule .cap-btn {
-  width: 44px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.capsule .divider {
-  height: 16px;
-  width: 1px;
-  background: var(--border);
-}
+/* 注意：这里【没有】.capsule 样式。
+   设计稿的右上角胶囊是原型模拟的，微信小程序会自己绘制原生胶囊，
+   页面里再画一个就会重复，所以顶栏不含胶囊。 */
 
 /* ── 内容区 ── */
 .viewport {

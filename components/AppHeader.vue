@@ -2,15 +2,15 @@
 /**
  * 顶栏：设计稿的 app-bar。
  * 首页显示品牌（logo + 词数同行），子页显示返回键 + 标题。
- * 小程序端用胶囊按钮的实际位置做下移，其他端走 --status-bar-height。
+ *
+ * 注意：**不要在这里画右上角的胶囊**。微信小程序会自己在右上角绘制原生胶囊
+ * （「···」+「⊙」），设计稿里的那个胶囊是原型模拟的，真机上重复。
+ * 顶栏只需用 useNavBarPad 把自己移到原生胶囊下方即可。
  */
 import { computed } from 'vue'
 import { useNavBarPad, padStyle } from '../composables/useNavBarPad'
 
-const props = withDefaults(defineProps<{ title?: string; showCapsule?: boolean }>(), {
-  title: '',
-  showCapsule: true,
-})
+const props = withDefaults(defineProps<{ title?: string }>(), { title: '' })
 
 const { topPad } = useNavBarPad()
 const barStyle = computed(() => padStyle(topPad.value))
@@ -33,16 +33,6 @@ function goBack() {
     <view v-else class="brand">
       <image class="brand-logo" src="/static/icons/logo-primary.png" mode="aspectFit" />
       <text>词数同行</text>
-    </view>
-
-    <view v-if="props.showCapsule" class="capsule">
-      <view class="cap-btn">
-        <image style="width: 20px; height: 20px" src="/static/icons/more.png" mode="aspectFit" />
-      </view>
-      <view class="divider" />
-      <view class="cap-btn">
-        <image style="width: 20px; height: 20px" src="/static/icons/target.png" mode="aspectFit" />
-      </view>
     </view>
   </view>
 </template>
