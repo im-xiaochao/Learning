@@ -1,0 +1,1846 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "m1-p1-c4",
+  "subjectId": "calculus",
+  "module": "数学一",
+  "title": "向量代数与空间解析几何",
+  "sortOrder": 40,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-xiang-liang-zuo-biao",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s1",
+      "sectionTitle": "空间向量",
+      "title": "向量坐标",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-mo",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s1",
+      "sectionTitle": "空间向量",
+      "title": "模",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 20,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-dan-wei-xiang-liang",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s1",
+      "sectionTitle": "空间向量",
+      "title": "单位向量",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 30,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-fang-xiang-jiao-yu-fang-xiang-yu-xian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s1",
+      "sectionTitle": "空间向量",
+      "title": "方向角与方向余弦",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 40,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-xiang-liang-jia-jian-yu-shu-cheng",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s1",
+      "sectionTitle": "空间向量",
+      "title": "向量加减与数乘",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 50,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-ding-yi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s2",
+      "sectionTitle": "数量积",
+      "title": "定义",
+      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "tags": [
+        "比较方向与分量"
+      ],
+      "sortOrder": 60,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
+        "caption": "内积把两个向量的长度和夹角联系起来。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
+          "title": "a·b=0 等价于非零向量垂直",
+          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+        },
+        {
+          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
+          "title": "内积是标量",
+          "bodyMarkdown": "内积是标量，不是向量"
+        },
+        {
+          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
+          "title": "投影要注意投到哪一个向量上",
+          "bodyMarkdown": "投影要注意投到哪一个向量上"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-zuo-biao-gong-shi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s2",
+      "sectionTitle": "数量积",
+      "title": "坐标公式",
+      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "tags": [
+        "比较方向与分量"
+      ],
+      "sortOrder": 70,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
+        "caption": "内积把两个向量的长度和夹角联系起来。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
+          "title": "a·b=0 等价于非零向量垂直",
+          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+        },
+        {
+          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
+          "title": "内积是标量",
+          "bodyMarkdown": "内积是标量，不是向量"
+        },
+        {
+          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
+          "title": "投影要注意投到哪一个向量上",
+          "bodyMarkdown": "投影要注意投到哪一个向量上"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-jia-jiao",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s2",
+      "sectionTitle": "数量积",
+      "title": "夹角",
+      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "tags": [
+        "比较方向与分量"
+      ],
+      "sortOrder": 80,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
+        "caption": "内积把两个向量的长度和夹角联系起来。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
+          "title": "a·b=0 等价于非零向量垂直",
+          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+        },
+        {
+          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
+          "title": "内积是标量",
+          "bodyMarkdown": "内积是标量，不是向量"
+        },
+        {
+          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
+          "title": "投影要注意投到哪一个向量上",
+          "bodyMarkdown": "投影要注意投到哪一个向量上"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-chui-zhi-pan-ding",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s2",
+      "sectionTitle": "数量积",
+      "title": "垂直判定",
+      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "tags": [
+        "比较方向与分量"
+      ],
+      "sortOrder": 90,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
+        "caption": "内积把两个向量的长度和夹角联系起来。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
+          "title": "a·b=0 等价于非零向量垂直",
+          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+        },
+        {
+          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
+          "title": "内积是标量",
+          "bodyMarkdown": "内积是标量，不是向量"
+        },
+        {
+          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
+          "title": "投影要注意投到哪一个向量上",
+          "bodyMarkdown": "投影要注意投到哪一个向量上"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-tou-ying",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s2",
+      "sectionTitle": "数量积",
+      "title": "投影",
+      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "tags": [
+        "比较方向与分量"
+      ],
+      "sortOrder": 100,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
+        "caption": "内积把两个向量的长度和夹角联系起来。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
+          "title": "a·b=0 等价于非零向量垂直",
+          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+        },
+        {
+          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
+          "title": "内积是标量",
+          "bodyMarkdown": "内积是标量，不是向量"
+        },
+        {
+          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
+          "title": "投影要注意投到哪一个向量上",
+          "bodyMarkdown": "投影要注意投到哪一个向量上"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-ding-yi-2",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s3",
+      "sectionTitle": "向量积",
+      "title": "定义",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 110,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-fang-xiang-yu-you-shou-fa-ze",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s3",
+      "sectionTitle": "向量积",
+      "title": "方向与右手法则",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 120,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-zuo-biao-ji-suan",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s3",
+      "sectionTitle": "向量积",
+      "title": "坐标计算",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 130,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-ping-xing-pan-ding",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s3",
+      "sectionTitle": "向量积",
+      "title": "平行判定",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 140,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-ping-xing-si-bian-xing-san-jiao-xing-0xwhg7",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s3",
+      "sectionTitle": "向量积",
+      "title": "平行四边形/三角形面积",
+      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "tags": [
+        "把几何量切成微元"
+      ],
+      "sortOrder": 150,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "总量=∫微元量",
+        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+      },
+      "keyPoints": [
+        {
+          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
+          "title": "面积用高×宽",
+          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+        },
+        {
+          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
+          "title": "质量要乘密度",
+          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+        },
+        {
+          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
+          "title": "旋转体优先判断圆盘、垫片还是柱壳",
+          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+        }
+      ],
+      "examples": [
+        {
+          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "title": "讲解例子",
+          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-dian-fa-shi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s4",
+      "sectionTitle": "平面方程",
+      "title": "点法式",
+      "summary": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。",
+      "tags": [
+        "用法向量确定平面"
+      ],
+      "sortOrder": 160,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "n·[(x,y,z)−(x₀,y₀,z₀)]=0",
+        "caption": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。"
+      },
+      "keyPoints": [
+        {
+          "id": "yi-ban-shi-ax-by-cz-d-0-de-fa-xiang-09p5nx",
+          "title": "一般式 Ax+By+Cz+D=0 的法向量是 (",
+          "bodyMarkdown": "一般式 Ax+By+Cz+D=0 的法向量是 (A,B,C)"
+        },
+        {
+          "id": "tong-yi-ping-mian-fang-cheng-zheng-ti-1yo0wh",
+          "title": "同一平面方程整体乘非零常数不变",
+          "bodyMarkdown": "同一平面方程整体乘非零常数不变"
+        },
+        {
+          "id": "xie-fang-cheng-bi-xu-tong-shi-you-yi-ge-006zyd",
+          "title": "写方程必须同时有一个平面点和一个法向方向",
+          "bodyMarkdown": "写方程必须同时有一个平面点和一个法向方向"
+        }
+      ],
+      "examples": [
+        {
+          "id": "guo-dian-1-0-0-fa-xiang-10tpcm",
+          "title": "讲解例子",
+          "bodyMarkdown": "过点 (1,0,0)、法向量 (2,−1,3) 的平面为 2(x−1)−y+3z=0。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。\n\n### 解题步骤\n\n1. 找平面上的点\n2. 找法向量\n3. 代入点法式并化成题目要求的形式\n\n### 易错点\n\n只有一个点不能确定平面；三个点还要检查是否共线。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-yi-ban-shi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s4",
+      "sectionTitle": "平面方程",
+      "title": "一般式",
+      "summary": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。",
+      "tags": [
+        "用法向量确定平面"
+      ],
+      "sortOrder": 170,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "n·[(x,y,z)−(x₀,y₀,z₀)]=0",
+        "caption": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。"
+      },
+      "keyPoints": [
+        {
+          "id": "yi-ban-shi-ax-by-cz-d-0-de-fa-xiang-09p5nx",
+          "title": "一般式 Ax+By+Cz+D=0 的法向量是 (",
+          "bodyMarkdown": "一般式 Ax+By+Cz+D=0 的法向量是 (A,B,C)"
+        },
+        {
+          "id": "tong-yi-ping-mian-fang-cheng-zheng-ti-1yo0wh",
+          "title": "同一平面方程整体乘非零常数不变",
+          "bodyMarkdown": "同一平面方程整体乘非零常数不变"
+        },
+        {
+          "id": "xie-fang-cheng-bi-xu-tong-shi-you-yi-ge-006zyd",
+          "title": "写方程必须同时有一个平面点和一个法向方向",
+          "bodyMarkdown": "写方程必须同时有一个平面点和一个法向方向"
+        }
+      ],
+      "examples": [
+        {
+          "id": "guo-dian-1-0-0-fa-xiang-10tpcm",
+          "title": "讲解例子",
+          "bodyMarkdown": "过点 (1,0,0)、法向量 (2,−1,3) 的平面为 2(x−1)−y+3z=0。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。\n\n### 解题步骤\n\n1. 找平面上的点\n2. 找法向量\n3. 代入点法式并化成题目要求的形式\n\n### 易错点\n\n只有一个点不能确定平面；三个点还要检查是否共线。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-jie-ju-shi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s4",
+      "sectionTitle": "平面方程",
+      "title": "截距式",
+      "summary": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。",
+      "tags": [
+        "用法向量确定平面"
+      ],
+      "sortOrder": 180,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "n·[(x,y,z)−(x₀,y₀,z₀)]=0",
+        "caption": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。"
+      },
+      "keyPoints": [
+        {
+          "id": "yi-ban-shi-ax-by-cz-d-0-de-fa-xiang-09p5nx",
+          "title": "一般式 Ax+By+Cz+D=0 的法向量是 (",
+          "bodyMarkdown": "一般式 Ax+By+Cz+D=0 的法向量是 (A,B,C)"
+        },
+        {
+          "id": "tong-yi-ping-mian-fang-cheng-zheng-ti-1yo0wh",
+          "title": "同一平面方程整体乘非零常数不变",
+          "bodyMarkdown": "同一平面方程整体乘非零常数不变"
+        },
+        {
+          "id": "xie-fang-cheng-bi-xu-tong-shi-you-yi-ge-006zyd",
+          "title": "写方程必须同时有一个平面点和一个法向方向",
+          "bodyMarkdown": "写方程必须同时有一个平面点和一个法向方向"
+        }
+      ],
+      "examples": [
+        {
+          "id": "guo-dian-1-0-0-fa-xiang-10tpcm",
+          "title": "讲解例子",
+          "bodyMarkdown": "过点 (1,0,0)、法向量 (2,−1,3) 的平面为 2(x−1)−y+3z=0。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。\n\n### 解题步骤\n\n1. 找平面上的点\n2. 找法向量\n3. 代入点法式并化成题目要求的形式\n\n### 易错点\n\n只有一个点不能确定平面；三个点还要检查是否共线。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-fa-xiang-liang",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s4",
+      "sectionTitle": "平面方程",
+      "title": "法向量",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 190,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-dian-xiang-shi-dui-chen-shi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s5",
+      "sectionTitle": "空间直线",
+      "title": "点向式/对称式",
+      "summary": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。",
+      "tags": [
+        "用法向量确定平面"
+      ],
+      "sortOrder": 200,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "n·[(x,y,z)−(x₀,y₀,z₀)]=0",
+        "caption": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。"
+      },
+      "keyPoints": [
+        {
+          "id": "yi-ban-shi-ax-by-cz-d-0-de-fa-xiang-09p5nx",
+          "title": "一般式 Ax+By+Cz+D=0 的法向量是 (",
+          "bodyMarkdown": "一般式 Ax+By+Cz+D=0 的法向量是 (A,B,C)"
+        },
+        {
+          "id": "tong-yi-ping-mian-fang-cheng-zheng-ti-1yo0wh",
+          "title": "同一平面方程整体乘非零常数不变",
+          "bodyMarkdown": "同一平面方程整体乘非零常数不变"
+        },
+        {
+          "id": "xie-fang-cheng-bi-xu-tong-shi-you-yi-ge-006zyd",
+          "title": "写方程必须同时有一个平面点和一个法向方向",
+          "bodyMarkdown": "写方程必须同时有一个平面点和一个法向方向"
+        }
+      ],
+      "examples": [
+        {
+          "id": "guo-dian-1-0-0-fa-xiang-10tpcm",
+          "title": "讲解例子",
+          "bodyMarkdown": "过点 (1,0,0)、法向量 (2,−1,3) 的平面为 2(x−1)−y+3z=0。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。\n\n### 解题步骤\n\n1. 找平面上的点\n2. 找法向量\n3. 代入点法式并化成题目要求的形式\n\n### 易错点\n\n只有一个点不能确定平面；三个点还要检查是否共线。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-can-shu-shi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s5",
+      "sectionTitle": "空间直线",
+      "title": "参数式",
+      "summary": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。",
+      "tags": [
+        "用法向量确定平面"
+      ],
+      "sortOrder": 210,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "n·[(x,y,z)−(x₀,y₀,z₀)]=0",
+        "caption": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。"
+      },
+      "keyPoints": [
+        {
+          "id": "yi-ban-shi-ax-by-cz-d-0-de-fa-xiang-09p5nx",
+          "title": "一般式 Ax+By+Cz+D=0 的法向量是 (",
+          "bodyMarkdown": "一般式 Ax+By+Cz+D=0 的法向量是 (A,B,C)"
+        },
+        {
+          "id": "tong-yi-ping-mian-fang-cheng-zheng-ti-1yo0wh",
+          "title": "同一平面方程整体乘非零常数不变",
+          "bodyMarkdown": "同一平面方程整体乘非零常数不变"
+        },
+        {
+          "id": "xie-fang-cheng-bi-xu-tong-shi-you-yi-ge-006zyd",
+          "title": "写方程必须同时有一个平面点和一个法向方向",
+          "bodyMarkdown": "写方程必须同时有一个平面点和一个法向方向"
+        }
+      ],
+      "examples": [
+        {
+          "id": "guo-dian-1-0-0-fa-xiang-10tpcm",
+          "title": "讲解例子",
+          "bodyMarkdown": "过点 (1,0,0)、法向量 (2,−1,3) 的平面为 2(x−1)−y+3z=0。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。\n\n### 解题步骤\n\n1. 找平面上的点\n2. 找法向量\n3. 代入点法式并化成题目要求的形式\n\n### 易错点\n\n只有一个点不能确定平面；三个点还要检查是否共线。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-liang-ping-mian-jiao-xian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s5",
+      "sectionTitle": "空间直线",
+      "title": "两平面交线",
+      "summary": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。",
+      "tags": [
+        "用法向量确定平面"
+      ],
+      "sortOrder": 220,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "n·[(x,y,z)−(x₀,y₀,z₀)]=0",
+        "caption": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。"
+      },
+      "keyPoints": [
+        {
+          "id": "yi-ban-shi-ax-by-cz-d-0-de-fa-xiang-09p5nx",
+          "title": "一般式 Ax+By+Cz+D=0 的法向量是 (",
+          "bodyMarkdown": "一般式 Ax+By+Cz+D=0 的法向量是 (A,B,C)"
+        },
+        {
+          "id": "tong-yi-ping-mian-fang-cheng-zheng-ti-1yo0wh",
+          "title": "同一平面方程整体乘非零常数不变",
+          "bodyMarkdown": "同一平面方程整体乘非零常数不变"
+        },
+        {
+          "id": "xie-fang-cheng-bi-xu-tong-shi-you-yi-ge-006zyd",
+          "title": "写方程必须同时有一个平面点和一个法向方向",
+          "bodyMarkdown": "写方程必须同时有一个平面点和一个法向方向"
+        }
+      ],
+      "examples": [
+        {
+          "id": "guo-dian-1-0-0-fa-xiang-10tpcm",
+          "title": "讲解例子",
+          "bodyMarkdown": "过点 (1,0,0)、法向量 (2,−1,3) 的平面为 2(x−1)−y+3z=0。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。\n\n### 解题步骤\n\n1. 找平面上的点\n2. 找法向量\n3. 代入点法式并化成题目要求的形式\n\n### 易错点\n\n只有一个点不能确定平面；三个点还要检查是否共线。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-fang-xiang-xiang-liang",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s5",
+      "sectionTitle": "空间直线",
+      "title": "方向向量",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 230,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-xian-xian-ping-xing-chui-zhi-yi-mian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s6",
+      "sectionTitle": "位置关系",
+      "title": "线线平行、垂直、异面",
+      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "tags": [
+        "比较方向与分量"
+      ],
+      "sortOrder": 240,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
+        "caption": "内积把两个向量的长度和夹角联系起来。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
+          "title": "a·b=0 等价于非零向量垂直",
+          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+        },
+        {
+          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
+          "title": "内积是标量",
+          "bodyMarkdown": "内积是标量，不是向量"
+        },
+        {
+          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
+          "title": "投影要注意投到哪一个向量上",
+          "bodyMarkdown": "投影要注意投到哪一个向量上"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-xian-mian-ping-xing-chui-zhi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s6",
+      "sectionTitle": "位置关系",
+      "title": "线面平行、垂直",
+      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "tags": [
+        "比较方向与分量"
+      ],
+      "sortOrder": 250,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
+        "caption": "内积把两个向量的长度和夹角联系起来。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
+          "title": "a·b=0 等价于非零向量垂直",
+          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+        },
+        {
+          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
+          "title": "内积是标量",
+          "bodyMarkdown": "内积是标量，不是向量"
+        },
+        {
+          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
+          "title": "投影要注意投到哪一个向量上",
+          "bodyMarkdown": "投影要注意投到哪一个向量上"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-mian-mian-ping-xing-chui-zhi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s6",
+      "sectionTitle": "位置关系",
+      "title": "面面平行、垂直",
+      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "tags": [
+        "比较方向与分量"
+      ],
+      "sortOrder": 260,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
+        "caption": "内积把两个向量的长度和夹角联系起来。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
+          "title": "a·b=0 等价于非零向量垂直",
+          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+        },
+        {
+          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
+          "title": "内积是标量",
+          "bodyMarkdown": "内积是标量，不是向量"
+        },
+        {
+          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
+          "title": "投影要注意投到哪一个向量上",
+          "bodyMarkdown": "投影要注意投到哪一个向量上"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-jia-jiao-2",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s6",
+      "sectionTitle": "位置关系",
+      "title": "夹角",
+      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "tags": [
+        "比较方向与分量"
+      ],
+      "sortOrder": 270,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
+        "caption": "内积把两个向量的长度和夹角联系起来。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
+          "title": "a·b=0 等价于非零向量垂直",
+          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+        },
+        {
+          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
+          "title": "内积是标量",
+          "bodyMarkdown": "内积是标量，不是向量"
+        },
+        {
+          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
+          "title": "投影要注意投到哪一个向量上",
+          "bodyMarkdown": "投影要注意投到哪一个向量上"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-dian-dao-ping-mian-ju-li",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s6",
+      "sectionTitle": "位置关系",
+      "title": "点到平面距离",
+      "summary": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。",
+      "tags": [
+        "用法向量确定平面"
+      ],
+      "sortOrder": 280,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "n·[(x,y,z)−(x₀,y₀,z₀)]=0",
+        "caption": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。"
+      },
+      "keyPoints": [
+        {
+          "id": "yi-ban-shi-ax-by-cz-d-0-de-fa-xiang-09p5nx",
+          "title": "一般式 Ax+By+Cz+D=0 的法向量是 (",
+          "bodyMarkdown": "一般式 Ax+By+Cz+D=0 的法向量是 (A,B,C)"
+        },
+        {
+          "id": "tong-yi-ping-mian-fang-cheng-zheng-ti-1yo0wh",
+          "title": "同一平面方程整体乘非零常数不变",
+          "bodyMarkdown": "同一平面方程整体乘非零常数不变"
+        },
+        {
+          "id": "xie-fang-cheng-bi-xu-tong-shi-you-yi-ge-006zyd",
+          "title": "写方程必须同时有一个平面点和一个法向方向",
+          "bodyMarkdown": "写方程必须同时有一个平面点和一个法向方向"
+        }
+      ],
+      "examples": [
+        {
+          "id": "guo-dian-1-0-0-fa-xiang-10tpcm",
+          "title": "讲解例子",
+          "bodyMarkdown": "过点 (1,0,0)、法向量 (2,−1,3) 的平面为 2(x−1)−y+3z=0。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。\n\n### 解题步骤\n\n1. 找平面上的点\n2. 找法向量\n3. 代入点法式并化成题目要求的形式\n\n### 易错点\n\n只有一个点不能确定平面；三个点还要检查是否共线。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-qiu-mian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s7",
+      "sectionTitle": "曲面与空间曲线",
+      "title": "球面",
+      "summary": "球面是空间中到某个固定点距离都相等的点的集合。固定点叫球心，固定距离叫半径；把距离公式平方后，就得到最常用的球面方程。",
+      "tags": [
+        "距离原点（或定点）相等"
+      ],
+      "sortOrder": 290,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(x−a)²+(y−b)²+(z−c)²=R²",
+        "caption": "球面是空间中到某个固定点距离都相等的点的集合。"
+      },
+      "keyPoints": [
+        {
+          "id": "qiu-xin-wei-a-b-c-ban-jing-wei-r-shi-1czqiz",
+          "title": "球心为 (a",
+          "bodyMarkdown": "球心为 (a,b,c)、半径为 R 时，方程是 (x−a)²+(y−b)²+(z−c)²=R²"
+        },
+        {
+          "id": "qiu-mian-nei-bu-shi-bu-deng-shi-r-wai-1dpxji",
+          "title": "球面内部是不等式 ≤R²",
+          "bodyMarkdown": "球面内部是不等式 ≤R²，外部是不等式 ≥R²"
+        },
+        {
+          "id": "pei-fang-ke-yi-cong-yi-ban-er-ci-fang-17yab4",
+          "title": "配方可以从一般二次方程读出球心和半径",
+          "bodyMarkdown": "配方可以从一般二次方程读出球心和半径"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-y-z-2x-4y-6z-10-0-ke-1xsmv5",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+y²+z²−2x+4y−6z+10=0 可配方为 (x−1)²+(y+2)²+(z−3)²=4，球心是 (1,−2,3)，半径为 2。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "球面是空间中到某个固定点距离都相等的点的集合。固定点叫球心，固定距离叫半径；把距离公式平方后，就得到最常用的球面方程。\n\n### 解题步骤\n\n1. 整理 x、y、z 的平方项\n2. 配方找球心和半径\n3. 根据题目判断球面、球体还是截面\n\n### 易错点\n\n等号描述球面本身；改成 ≤ 才是包含内部的球体，且半径必须为正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-zhu-mian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s7",
+      "sectionTitle": "曲面与空间曲线",
+      "title": "柱面",
+      "summary": "柱面可以看成一条平面曲线沿某个方向平移形成的曲面。方程中如果缺少某个坐标，通常表示沿该坐标轴方向没有变化，因此曲面会无限延伸。",
+      "tags": [
+        "沿一个方向无限延伸"
+      ],
+      "sortOrder": 300,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "x²+y²=R²：沿 z 轴延伸的圆柱面",
+        "caption": "柱面可以看成一条平面曲线沿某个方向平移形成的曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-y-r-yu-z-wu-guan-shi-yan-z-zhou-de-0an5ui",
+          "title": "x²+y²=R² 与 z 无关",
+          "bodyMarkdown": "x²+y²=R² 与 z 无关，是沿 z 轴的圆柱面"
+        },
+        {
+          "id": "jie-mian-qu-xian-jue-ding-zhu-mian-de-0bg96f",
+          "title": "截面曲线决定柱面的形状",
+          "bodyMarkdown": "截面曲线决定柱面的形状"
+        },
+        {
+          "id": "xian-zhao-que-shao-de-bian-liang-zai-10i6tl",
+          "title": "先找缺少的变量",
+          "bodyMarkdown": "先找缺少的变量，再判断延伸方向"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-y-1-de-ren-yi-z-jie-068efg",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+y²=1 的任意 z 截面都是单位圆，所以它是以 z 轴为中心线的圆柱面。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "柱面可以看成一条平面曲线沿某个方向平移形成的曲面。方程中如果缺少某个坐标，通常表示沿该坐标轴方向没有变化，因此曲面会无限延伸。\n\n### 解题步骤\n\n1. 找出没有出现的坐标\n2. 在垂直于延伸方向的平面内看截线\n3. 结合方程判断半径、中心和范围\n\n### 易错点\n\n把柱面误认为只在某个有限高度内存在；方程未限制的方向通常是无限延伸的。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-xuan-zhuan-qu-mian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s7",
+      "sectionTitle": "曲面与空间曲线",
+      "title": "旋转曲面",
+      "summary": "旋转曲面由一条平面曲线绕某条坐标轴旋转生成。判断题目时先确认旋转轴，再看曲线上点到旋转轴的距离，这个距离就是旋转后圆周的半径。",
+      "tags": [
+        "平面曲线绕轴旋转"
+      ],
+      "sortOrder": 310,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "绕 x 轴旋转：x 不变，y²+z²=r(x)²",
+        "caption": "旋转曲面由一条平面曲线绕某条坐标轴旋转生成。"
+      },
+      "keyPoints": [
+        {
+          "id": "rao-x-zhou-xuan-zhuan-shi-ban-jing-08h9uf",
+          "title": "绕 x 轴旋转时半径常由 |y| 给出",
+          "bodyMarkdown": "绕 x 轴旋转时半径常由 |y| 给出"
+        },
+        {
+          "id": "rao-y-zhou-xuan-zhuan-shi-ban-jing-1gl85v",
+          "title": "绕 y 轴旋转时半径常由 |x| 给出",
+          "bodyMarkdown": "绕 y 轴旋转时半径常由 |x| 给出"
+        },
+        {
+          "id": "xuan-zhuan-hou-xiao-qu-can-shu-huo-jiao-0tdr4p",
+          "title": "旋转后消去参数或角度可得到曲面方程",
+          "bodyMarkdown": "旋转后消去参数或角度可得到曲面方程"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zhi-xian-y-x-rao-x-zhou-18rmdy",
+          "title": "讲解例子",
+          "bodyMarkdown": "直线 y=x 绕 x 轴旋转，得到圆锥面 y²+z²=x²（还需按母线范围限制）。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "旋转曲面由一条平面曲线绕某条坐标轴旋转生成。判断题目时先确认旋转轴，再看曲线上点到旋转轴的距离，这个距离就是旋转后圆周的半径。\n\n### 解题步骤\n\n1. 画出母线和旋转轴\n2. 写出点到旋转轴的距离\n3. 用距离关系消去参数并检查范围\n\n### 易错点\n\n只写出代数方程却忘记题目的曲线范围，可能把旋转曲面扩大成另一整张曲面。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-tuo-qiu-mian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s7",
+      "sectionTitle": "曲面与空间曲线",
+      "title": "椭球面",
+      "summary": "椭球面、双曲面和抛物面都属于二次曲面。识别时先配方、平移坐标，再观察平方项的正负号和是否缺少某个变量；这些特征决定曲面是封闭、分成两支还是沿某方向开口。",
+      "tags": [
+        "看标准式识别曲面"
+      ],
+      "sortOrder": 320,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "椭球：x²/a²+y²/b²+z²/c²=1；单叶双曲面：x²/a²+y²/b²−z²/c²=1",
+        "caption": "椭球面、双曲面和抛物面都属于二次曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ping-fang-xiang-quan-tong-hao-qie-deng-00nocu",
+          "title": "平方项全同号且等于 1",
+          "bodyMarkdown": "平方项全同号且等于 1，通常是椭球面"
+        },
+        {
+          "id": "chu-xian-zheng-fu-hao-hun-he-tong-chang-0ropn0",
+          "title": "出现正负号混合",
+          "bodyMarkdown": "出现正负号混合，通常是双曲面"
+        },
+        {
+          "id": "que-shao-mou-ge-ping-fang-xiang-huo-mou-1g4klv",
+          "title": "缺少某个平方项或某一变量只一次",
+          "bodyMarkdown": "缺少某个平方项或某一变量只一次，常对应柱面或抛物面"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-y-z-1-shi-feng-bi-de-1i0rbl",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+y²+z²=1 是封闭的球面；x²+y²−z²=1 沿 z 方向形成腰部并向两侧延伸。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "椭球面、双曲面和抛物面都属于二次曲面。识别时先配方、平移坐标，再观察平方项的正负号和是否缺少某个变量；这些特征决定曲面是封闭、分成两支还是沿某方向开口。\n\n### 解题步骤\n\n1. 把方程配成标准形式\n2. 比较平方项符号与系数\n3. 用截面或开口方向检查判断\n\n### 易错点\n\n只凭图像名称判断而不看符号；平移后的中心也不能漏掉。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-shuang-qu-mian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s7",
+      "sectionTitle": "曲面与空间曲线",
+      "title": "双曲面",
+      "summary": "椭球面、双曲面和抛物面都属于二次曲面。识别时先配方、平移坐标，再观察平方项的正负号和是否缺少某个变量；这些特征决定曲面是封闭、分成两支还是沿某方向开口。",
+      "tags": [
+        "看标准式识别曲面"
+      ],
+      "sortOrder": 330,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "椭球：x²/a²+y²/b²+z²/c²=1；单叶双曲面：x²/a²+y²/b²−z²/c²=1",
+        "caption": "椭球面、双曲面和抛物面都属于二次曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ping-fang-xiang-quan-tong-hao-qie-deng-00nocu",
+          "title": "平方项全同号且等于 1",
+          "bodyMarkdown": "平方项全同号且等于 1，通常是椭球面"
+        },
+        {
+          "id": "chu-xian-zheng-fu-hao-hun-he-tong-chang-0ropn0",
+          "title": "出现正负号混合",
+          "bodyMarkdown": "出现正负号混合，通常是双曲面"
+        },
+        {
+          "id": "que-shao-mou-ge-ping-fang-xiang-huo-mou-1g4klv",
+          "title": "缺少某个平方项或某一变量只一次",
+          "bodyMarkdown": "缺少某个平方项或某一变量只一次，常对应柱面或抛物面"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-y-z-1-shi-feng-bi-de-1i0rbl",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+y²+z²=1 是封闭的球面；x²+y²−z²=1 沿 z 方向形成腰部并向两侧延伸。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "椭球面、双曲面和抛物面都属于二次曲面。识别时先配方、平移坐标，再观察平方项的正负号和是否缺少某个变量；这些特征决定曲面是封闭、分成两支还是沿某方向开口。\n\n### 解题步骤\n\n1. 把方程配成标准形式\n2. 比较平方项符号与系数\n3. 用截面或开口方向检查判断\n\n### 易错点\n\n只凭图像名称判断而不看符号；平移后的中心也不能漏掉。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-pao-wu-mian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s7",
+      "sectionTitle": "曲面与空间曲线",
+      "title": "抛物面",
+      "summary": "椭球面、双曲面和抛物面都属于二次曲面。识别时先配方、平移坐标，再观察平方项的正负号和是否缺少某个变量；这些特征决定曲面是封闭、分成两支还是沿某方向开口。",
+      "tags": [
+        "看标准式识别曲面"
+      ],
+      "sortOrder": 340,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "椭球：x²/a²+y²/b²+z²/c²=1；单叶双曲面：x²/a²+y²/b²−z²/c²=1",
+        "caption": "椭球面、双曲面和抛物面都属于二次曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ping-fang-xiang-quan-tong-hao-qie-deng-00nocu",
+          "title": "平方项全同号且等于 1",
+          "bodyMarkdown": "平方项全同号且等于 1，通常是椭球面"
+        },
+        {
+          "id": "chu-xian-zheng-fu-hao-hun-he-tong-chang-0ropn0",
+          "title": "出现正负号混合",
+          "bodyMarkdown": "出现正负号混合，通常是双曲面"
+        },
+        {
+          "id": "que-shao-mou-ge-ping-fang-xiang-huo-mou-1g4klv",
+          "title": "缺少某个平方项或某一变量只一次",
+          "bodyMarkdown": "缺少某个平方项或某一变量只一次，常对应柱面或抛物面"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-y-z-1-shi-feng-bi-de-1i0rbl",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+y²+z²=1 是封闭的球面；x²+y²−z²=1 沿 z 方向形成腰部并向两侧延伸。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "椭球面、双曲面和抛物面都属于二次曲面。识别时先配方、平移坐标，再观察平方项的正负号和是否缺少某个变量；这些特征决定曲面是封闭、分成两支还是沿某方向开口。\n\n### 解题步骤\n\n1. 把方程配成标准形式\n2. 比较平方项符号与系数\n3. 用截面或开口方向检查判断\n\n### 易错点\n\n只凭图像名称判断而不看符号；平移后的中心也不能漏掉。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-kong-jian-qu-xian-can-shu-fang-cheng",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s7",
+      "sectionTitle": "曲面与空间曲线",
+      "title": "空间曲线参数方程",
+      "summary": "空间曲线可以用 x(t)、y(t)、z(t) 同时描述。参数 t 改变时，点在空间中沿着曲线运动；速度向量给出切线方向，消去参数可以得到曲线与柱面或平面的关系。",
+      "tags": [
+        "用一个参数同步描述空间运动"
+      ],
+      "sortOrder": 350,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "r(t)=(x(t),y(t),z(t))；切线方向为 r′(t₀)",
+        "caption": "空间曲线可以用 x(t)、y(t)、z(t) 同时描述。"
+      },
+      "keyPoints": [
+        {
+          "id": "r-t-x-t-y-t-z-t-shi-wei-zhi-xiang-liang",
+          "title": "r(t)=(x(t)",
+          "bodyMarkdown": "r(t)=(x(t),y(t),z(t)) 是位置向量"
+        },
+        {
+          "id": "r-t-shi-qie-xiang-liang-fei-ling-shi-ke-0u7qw0",
+          "title": "r′(t) 是切向量",
+          "bodyMarkdown": "r′(t) 是切向量，非零时可确定切线方向"
+        },
+        {
+          "id": "xiao-qu-t-de-dao-de-fang-cheng-tong-1my0dk",
+          "title": "消去 t 得到的方程通常只是包含该曲线的曲面",
+          "bodyMarkdown": "消去 t 得到的方程通常只是包含该曲线的曲面，需结合参数范围"
+        }
+      ],
+      "examples": [
+        {
+          "id": "r-t-cos-t-sin-t-t-shi-14inup",
+          "title": "讲解例子",
+          "bodyMarkdown": "r(t)=(cos t,sin t,t) 是绕 z 轴上升的螺旋线，且 x²+y²=1。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "空间曲线可以用 x(t)、y(t)、z(t) 同时描述。参数 t 改变时，点在空间中沿着曲线运动；速度向量给出切线方向，消去参数可以得到曲线与柱面或平面的关系。\n\n### 解题步骤\n\n1. 写出位置向量 r(t)\n2. 求 r′(t) 得切向量\n3. 结合参数范围判断曲线的实际部分\n\n### 易错点\n\n把包含曲线的曲面当成曲线本身，或在 r′(t₀)=0 时直接把它当作普通切线。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c4-tou-ying-qu-xian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c4",
+      "sectionId": "m1-p1-c4-s7",
+      "sectionTitle": "曲面与空间曲线",
+      "title": "投影曲线",
+      "summary": "投影曲线是空间曲线在某个坐标平面上的影子。做法通常是消去被投影方向的坐标，得到 x、y 或 x、z 的关系；投影可能重叠不同空间点，因此它不一定保留全部空间信息。",
+      "tags": [
+        "把空间曲线压到坐标平面"
+      ],
+      "sortOrder": 360,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "投影到 xy 平面：保留 x、y，消去 z",
+        "caption": "投影曲线是空间曲线在某个坐标平面上的影子。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-xy-ping-mian-tou-ying-jiu-xiao-qu-10qt77",
+          "title": "向 xy 平面投影就消去 z",
+          "bodyMarkdown": "向 xy 平面投影就消去 z"
+        },
+        {
+          "id": "tou-ying-hou-ke-neng-chu-xian-duo-ge-0ebznq",
+          "title": "投影后可能出现多个空间点对应同一个平面点",
+          "bodyMarkdown": "投影后可能出现多个空间点对应同一个平面点"
+        },
+        {
+          "id": "tou-ying-fan-wei-yao-jie-he-yuan-qu-1xqx7o",
+          "title": "投影范围要结合原曲线或参数范围确定",
+          "bodyMarkdown": "投影范围要结合原曲线或参数范围确定"
+        }
+      ],
+      "examples": [
+        {
+          "id": "luo-xuan-xian-x-cos-t-y-0vrw93",
+          "title": "讲解例子",
+          "bodyMarkdown": "螺旋线 x=cos t，y=sin t，z=t 投影到 xy 平面后是单位圆 x²+y²=1。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "投影曲线是空间曲线在某个坐标平面上的影子。做法通常是消去被投影方向的坐标，得到 x、y 或 x、z 的关系；投影可能重叠不同空间点，因此它不一定保留全部空间信息。\n\n### 解题步骤\n\n1. 确定投影到哪个平面\n2. 消去对应坐标\n3. 检查投影区域和参数范围\n\n### 易错点\n\n只消元不检查范围，容易把投影曲线的实际弧段误写成整条曲线。"
+    }
+  ]
+}

@@ -1,0 +1,1132 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "m1-p3-c2",
+  "subjectId": "probability",
+  "module": "数学一",
+  "title": "一维随机变量及其分布",
+  "sortOrder": 20,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-ding-yi",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s1",
+      "sectionTitle": "随机变量",
+      "title": "定义",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-li-san-xing-lian-xu-xing",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s1",
+      "sectionTitle": "随机变量",
+      "title": "离散型/连续型",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 20,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-f-x-p-x-x",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s2",
+      "sectionTitle": "分布函数",
+      "title": "F(x)=P(X≤x)",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 30,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-dan-diao-bu-jian",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s2",
+      "sectionTitle": "分布函数",
+      "title": "单调不减",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 40,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-you-lian-xu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s2",
+      "sectionTitle": "分布函数",
+      "title": "右连续",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 50,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-ji-xian-xing-zhi",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s2",
+      "sectionTitle": "分布函数",
+      "title": "极限性质",
+      "summary": "求极限没有唯一固定动作。先直接代入判断是否为定式，再按代数结构选择因式分解、有理化、等价无穷小、夹逼、洛必达或泰勒；每一步都要保留原来的趋近条件。",
+      "tags": [
+        "按结构选工具"
+      ],
+      "sortOrder": 60,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "0/0：因式分解、等价替换、洛必达、泰勒；∞/∞：比较最高阶或洛必达",
+        "caption": "求极限没有唯一固定动作。"
+      },
+      "keyPoints": [
+        {
+          "id": "xian-dai-ru-bu-yao-yi-shang-lai-jiu-luo-00bp04",
+          "title": "先代入，不要一上来就洛必达",
+          "bodyMarkdown": "先代入，不要一上来就洛必达"
+        },
+        {
+          "id": "di-xiao-hou-kan-shou-ge-fei-ling-jie",
+          "title": "抵消后看首个非零阶",
+          "bodyMarkdown": "抵消后看首个非零阶"
+        },
+        {
+          "id": "jia-bi-he-deng-jia-ti-huan-dou-yao-he-1modh7",
+          "title": "夹逼和等价替换都要核对适用结构",
+          "bodyMarkdown": "夹逼和等价替换都要核对适用结构"
+        }
+      ],
+      "examples": [
+        {
+          "id": "fen-zi-fen-mu-dou-han-1-0r5aiq",
+          "title": "讲解例子",
+          "bodyMarkdown": "分子分母都含 √(1+x)−1 时，先有理化通常比洛必达更短。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "求极限没有唯一固定动作。先直接代入判断是否为定式，再按代数结构选择因式分解、有理化、等价无穷小、夹逼、洛必达或泰勒；每一步都要保留原来的趋近条件。\n\n### 解题步骤\n\n1. 代入识别型别\n2. 按结构选择最短方法\n3. 复核结果的数量级和符号\n\n### 易错点\n\n方法越复杂不代表越正确；先找能暴露抵消结构的变形。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-fen-bu-l",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s3",
+      "sectionTitle": "离散型随机变量",
+      "title": "分布律",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 70,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-gai-l-zhi-liang-han-shu-si-xiang",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s3",
+      "sectionTitle": "离散型随机变量",
+      "title": "概率质量函数思想",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 80,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-0-1-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s4",
+      "sectionTitle": "常见离散分布",
+      "title": "0-1 分布",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 90,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-er-xiang-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s4",
+      "sectionTitle": "常见离散分布",
+      "title": "二项分布",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 100,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-bo-song-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s4",
+      "sectionTitle": "常见离散分布",
+      "title": "泊松分布",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 110,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-chang-jian-mo-xing-shi-bie-yu-can-shu-15mdgo",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s4",
+      "sectionTitle": "常见离散分布",
+      "title": "常见模型识别与参数含义",
+      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "tags": [
+        "用坐标描述方向"
+      ],
+      "sortOrder": 120,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
+        "caption": "向量同时包含大小和方向。"
+      },
+      "keyPoints": [
+        {
+          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
+          "title": "向量相等要求对应分量都相等",
+          "bodyMarkdown": "向量相等要求对应分量都相等"
+        },
+        {
+          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
+          "title": "模为零的向量没有方向",
+          "bodyMarkdown": "模为零的向量没有方向"
+        },
+        {
+          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
+          "title": "单位化要除以非零向量的模",
+          "bodyMarkdown": "单位化要除以非零向量的模"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-gai-l-mi-du",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s5",
+      "sectionTitle": "连续型随机变量",
+      "title": "概率密度",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 130,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-mi-du-yu-fen-bu-han-shu-guan-xi",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s5",
+      "sectionTitle": "连续型随机变量",
+      "title": "密度与分布函数关系",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 140,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-qu-jian-gai-l",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s5",
+      "sectionTitle": "连续型随机变量",
+      "title": "区间概率",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 150,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-jun-yun-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s6",
+      "sectionTitle": "常见连续分布",
+      "title": "均匀分布",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 160,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-zhi-shu-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s6",
+      "sectionTitle": "常见连续分布",
+      "title": "指数分布",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 170,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-zheng-tai-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s6",
+      "sectionTitle": "常见连续分布",
+      "title": "正态分布",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 180,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-biao-zhun-zheng-tai-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s6",
+      "sectionTitle": "常见连续分布",
+      "title": "标准正态分布",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 190,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-biao-zhun-hua",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s6",
+      "sectionTitle": "常见连续分布",
+      "title": "标准化",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 200,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-fen-bu-han-shu-fa",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s7",
+      "sectionTitle": "随机变量函数的分布",
+      "title": "分布函数法",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 210,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c2-dan-diao-bian-huan-gong-shi-si-xiang",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c2",
+      "sectionId": "m1-p3-c2-s7",
+      "sectionTitle": "随机变量函数的分布",
+      "title": "单调变换公式思想",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 220,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    }
+  ]
+}

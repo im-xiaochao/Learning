@@ -5,43 +5,92 @@
       "style": { "navigationStyle": "custom" }
     },
     {
-      "path": "pages/math/math",
+      "path": "pages/words/words",
       "style": { "navigationStyle": "custom" }
     },
     {
-      "path": "pages/learn/learn",
+      "path": "pages/library/library",
       "style": { "navigationStyle": "custom" }
     },
     {
-      "path": "pages/wrong/wrong",
+      "path": "pages/plan/plan",
       "style": { "navigationStyle": "custom" }
     },
     {
-      "path": "pages/stats/stats",
+      "path": "pages/my/my",
       "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/review/review",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/result/result",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/word-detail/word-detail",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/favorites/favorites",
+      "style": { "navigationStyle": "custom" }
+    },
+    {
+      "path": "pages/goals/goals",
+      "style": { "navigationStyle": "custom" }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages-knowledge",
+      "pages": [
+        {
+          "path": "topic/topic",
+          "style": { "navigationStyle": "custom" }
+        }
+      ]
     }
   ],
   "globalStyle": {
     "navigationStyle": "custom",
-    "backgroundColor": "#f5f7fb"
+    "backgroundColor": "#f9f7f3"
   },
   "tabBar": {
-    "color": "#5c6879",
-    "selectedColor": "#2c42b5",
+    "color": "#506260",
+    "selectedColor": "#005d55",
     "backgroundColor": "#ffffff",
-    "borderStyle": "black",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "英语",
-        "iconPath": "static/tabbar/english.png",
-        "selectedIconPath": "static/tabbar/english-on.png"
+        "text": "学习",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home-on.png"
       },
       {
-        "pagePath": "pages/math/math",
-        "text": "数学",
+        "pagePath": "pages/words/words",
+        "text": "单词",
+        "iconPath": "static/tabbar/book.png",
+        "selectedIconPath": "static/tabbar/book-on.png"
+      },
+      {
+        "pagePath": "pages/library/library",
+        "text": "资料库",
         "iconPath": "static/tabbar/math.png",
         "selectedIconPath": "static/tabbar/math-on.png"
+      },
+      {
+        "pagePath": "pages/plan/plan",
+        "text": "计划",
+        "iconPath": "static/tabbar/plan.png",
+        "selectedIconPath": "static/tabbar/plan-on.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tabbar/user.png",
+        "selectedIconPath": "static/tabbar/user-on.png"
       }
     ]
   }

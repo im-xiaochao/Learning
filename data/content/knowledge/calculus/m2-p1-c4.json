@@ -1,0 +1,1438 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "m2-p1-c4",
+  "subjectId": "calculus",
+  "module": "数学二",
+  "title": "多元函数微积分学",
+  "sortOrder": 130,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-duo-yuan-han-shu-gai-nian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s1",
+      "sectionTitle": "多元函数",
+      "title": "多元函数概念",
+      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "tags": [
+        "从数轴到平面"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
+        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
+          "title": "定义域由根号、分母和对数条件共同决定",
+          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+        },
+        {
+          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
+          "title": "z=f(x",
+          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+        },
+        {
+          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
+          "title": "闭有界区域上的连续函数能取到最值",
+          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "title": "讲解例子",
+          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-er-yuan-han-shu-ding-yi-yu",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s1",
+      "sectionTitle": "多元函数",
+      "title": "二元函数定义域",
+      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "tags": [
+        "从数轴到平面"
+      ],
+      "sortOrder": 20,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
+        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
+          "title": "定义域由根号、分母和对数条件共同决定",
+          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+        },
+        {
+          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
+          "title": "z=f(x",
+          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+        },
+        {
+          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
+          "title": "闭有界区域上的连续函数能取到最值",
+          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "title": "讲解例子",
+          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-er-yuan-han-shu-ji-he-yi-yi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s1",
+      "sectionTitle": "多元函数",
+      "title": "二元函数几何意义",
+      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "tags": [
+        "从数轴到平面"
+      ],
+      "sortOrder": 30,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
+        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
+          "title": "定义域由根号、分母和对数条件共同决定",
+          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+        },
+        {
+          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
+          "title": "z=f(x",
+          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+        },
+        {
+          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
+          "title": "闭有界区域上的连续函数能取到最值",
+          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "title": "讲解例子",
+          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-you-jie-bi-qu-yu-shang-lian-xu-han-shu-1ejfup",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s1",
+      "sectionTitle": "多元函数",
+      "title": "有界闭区域上连续函数性质",
+      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "tags": [
+        "从数轴到平面"
+      ],
+      "sortOrder": 40,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
+        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
+          "title": "定义域由根号、分母和对数条件共同决定",
+          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+        },
+        {
+          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
+          "title": "z=f(x",
+          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+        },
+        {
+          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
+          "title": "闭有界区域上的连续函数能取到最值",
+          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "title": "讲解例子",
+          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-er-chong-ji-xian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s2",
+      "sectionTitle": "二元函数极限",
+      "title": "二重极限",
+      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "tags": [
+        "逼近而非代入"
+      ],
+      "sortOrder": 50,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
+        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+      },
+      "keyPoints": [
+        {
+          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
+          "title": "左、右极限必须分别看",
+          "bodyMarkdown": "左、右极限必须分别看"
+        },
+        {
+          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
+          "title": "极限值不要求等于函数值",
+          "bodyMarkdown": "极限值不要求等于函数值"
+        },
+        {
+          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
+          "title": "∞ 不是一个可直接代入的数",
+          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+        }
+      ],
+      "examples": [
+        {
+          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "title": "讲解例子",
+          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-duo-lu-jing-bi-jin",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s2",
+      "sectionTitle": "二元函数极限",
+      "title": "多路径逼近",
+      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "tags": [
+        "逼近而非代入"
+      ],
+      "sortOrder": 60,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
+        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+      },
+      "keyPoints": [
+        {
+          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
+          "title": "左、右极限必须分别看",
+          "bodyMarkdown": "左、右极限必须分别看"
+        },
+        {
+          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
+          "title": "极限值不要求等于函数值",
+          "bodyMarkdown": "极限值不要求等于函数值"
+        },
+        {
+          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
+          "title": "∞ 不是一个可直接代入的数",
+          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+        }
+      ],
+      "examples": [
+        {
+          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "title": "讲解例子",
+          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-yong-lu-jing-zheng-ming-ji-xian-bu-cun-0o8ubh",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s2",
+      "sectionTitle": "二元函数极限",
+      "title": "用路径证明极限不存在",
+      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "tags": [
+        "逼近而非代入"
+      ],
+      "sortOrder": 70,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
+        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+      },
+      "keyPoints": [
+        {
+          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
+          "title": "左、右极限必须分别看",
+          "bodyMarkdown": "左、右极限必须分别看"
+        },
+        {
+          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
+          "title": "极限值不要求等于函数值",
+          "bodyMarkdown": "极限值不要求等于函数值"
+        },
+        {
+          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
+          "title": "∞ 不是一个可直接代入的数",
+          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+        }
+      ],
+      "examples": [
+        {
+          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "title": "讲解例子",
+          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-ji-zuo-biao-si-xiang",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s2",
+      "sectionTitle": "二元函数极限",
+      "title": "极坐标思想",
+      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "tags": [
+        "逼近而非代入"
+      ],
+      "sortOrder": 80,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
+        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+      },
+      "keyPoints": [
+        {
+          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
+          "title": "左、右极限必须分别看",
+          "bodyMarkdown": "左、右极限必须分别看"
+        },
+        {
+          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
+          "title": "极限值不要求等于函数值",
+          "bodyMarkdown": "极限值不要求等于函数值"
+        },
+        {
+          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
+          "title": "∞ 不是一个可直接代入的数",
+          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+        }
+      ],
+      "examples": [
+        {
+          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "title": "讲解例子",
+          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-dian-lian-xu",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s3",
+      "sectionTitle": "二元函数连续",
+      "title": "点连续",
+      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "tags": [
+        "从数轴到平面"
+      ],
+      "sortOrder": 90,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
+        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
+          "title": "定义域由根号、分母和对数条件共同决定",
+          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+        },
+        {
+          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
+          "title": "z=f(x",
+          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+        },
+        {
+          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
+          "title": "闭有界区域上的连续函数能取到最值",
+          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "title": "讲解例子",
+          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-qu-yu-lian-xu",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s3",
+      "sectionTitle": "二元函数连续",
+      "title": "区域连续",
+      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "tags": [
+        "从数轴到平面"
+      ],
+      "sortOrder": 100,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
+        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
+          "title": "定义域由根号、分母和对数条件共同决定",
+          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+        },
+        {
+          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
+          "title": "z=f(x",
+          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+        },
+        {
+          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
+          "title": "闭有界区域上的连续函数能取到最值",
+          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "title": "讲解例子",
+          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-yi-jie-pian-dao",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s4",
+      "sectionTitle": "偏导数",
+      "title": "一阶偏导",
+      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "tags": [
+        "局部线性化"
+      ],
+      "sortOrder": 110,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
+        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+      },
+      "keyPoints": [
+        {
+          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
+          "title": "偏导是坐标方向的变化率",
+          "bodyMarkdown": "偏导是坐标方向的变化率"
+        },
+        {
+          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
+          "title": "全微分是所有一阶变化的线性合成",
+          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+        },
+        {
+          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
+          "title": "可微 ⇒ 连续",
+          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "title": "讲解例子",
+          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-er-jie-pian-dao",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s4",
+      "sectionTitle": "偏导数",
+      "title": "二阶偏导",
+      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "tags": [
+        "局部线性化"
+      ],
+      "sortOrder": 120,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
+        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+      },
+      "keyPoints": [
+        {
+          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
+          "title": "偏导是坐标方向的变化率",
+          "bodyMarkdown": "偏导是坐标方向的变化率"
+        },
+        {
+          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
+          "title": "全微分是所有一阶变化的线性合成",
+          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+        },
+        {
+          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
+          "title": "可微 ⇒ 连续",
+          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "title": "讲解例子",
+          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-hun-he-pian-dao",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s4",
+      "sectionTitle": "偏导数",
+      "title": "混合偏导",
+      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "tags": [
+        "局部线性化"
+      ],
+      "sortOrder": 130,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
+        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+      },
+      "keyPoints": [
+        {
+          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
+          "title": "偏导是坐标方向的变化率",
+          "bodyMarkdown": "偏导是坐标方向的变化率"
+        },
+        {
+          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
+          "title": "全微分是所有一阶变化的线性合成",
+          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+        },
+        {
+          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
+          "title": "可微 ⇒ 连续",
+          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "title": "讲解例子",
+          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-ke-wei-ding-yi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s5",
+      "sectionTitle": "全微分",
+      "title": "可微定义",
+      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "tags": [
+        "局部线性化"
+      ],
+      "sortOrder": 140,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
+        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+      },
+      "keyPoints": [
+        {
+          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
+          "title": "偏导是坐标方向的变化率",
+          "bodyMarkdown": "偏导是坐标方向的变化率"
+        },
+        {
+          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
+          "title": "全微分是所有一阶变化的线性合成",
+          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+        },
+        {
+          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
+          "title": "可微 ⇒ 连续",
+          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "title": "讲解例子",
+          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-dz-f-x-dx-f-y-dy",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s5",
+      "sectionTitle": "全微分",
+      "title": "dz=f_x dx+f_y dy",
+      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "tags": [
+        "局部线性化"
+      ],
+      "sortOrder": 150,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
+        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+      },
+      "keyPoints": [
+        {
+          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
+          "title": "偏导是坐标方向的变化率",
+          "bodyMarkdown": "偏导是坐标方向的变化率"
+        },
+        {
+          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
+          "title": "全微分是所有一阶变化的线性合成",
+          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+        },
+        {
+          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
+          "title": "可微 ⇒ 连续",
+          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "title": "讲解例子",
+          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-pian-dao-cun-zai-lian-xu-ke-wei-zhi-0cc19h",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s5",
+      "sectionTitle": "全微分",
+      "title": "偏导存在、连续、可微之间的关系",
+      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "tags": [
+        "局部线性化"
+      ],
+      "sortOrder": 160,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
+        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+      },
+      "keyPoints": [
+        {
+          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
+          "title": "偏导是坐标方向的变化率",
+          "bodyMarkdown": "偏导是坐标方向的变化率"
+        },
+        {
+          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
+          "title": "全微分是所有一阶变化的线性合成",
+          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+        },
+        {
+          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
+          "title": "可微 ⇒ 连续",
+          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "title": "讲解例子",
+          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-yi-jie-pian-dao-lian-shi-fa-ze",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s6",
+      "sectionTitle": "多元复合函数求导",
+      "title": "一阶偏导链式法则",
+      "summary": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。",
+      "tags": [
+        "链式法则"
+      ],
+      "sortOrder": 170,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "d[f(g(x))]/dx=f′(g(x))g′(x)",
+        "caption": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。"
+      },
+      "keyPoints": [
+        {
+          "id": "xian-bian-ren-zui-wai-ceng",
+          "title": "先辨认最外层",
+          "bodyMarkdown": "先辨认最外层"
+        },
+        {
+          "id": "mei-yi-ceng-dou-yao-cheng-xia-yi-ceng-092wo7",
+          "title": "每一层都要乘下一层导数",
+          "bodyMarkdown": "每一层都要乘下一层导数"
+        },
+        {
+          "id": "zui-hou-zai-an-xu-yao-zhan-kai",
+          "title": "最后再按需要展开",
+          "bodyMarkdown": "最后再按需要展开"
+        }
+      ],
+      "examples": [
+        {
+          "id": "y-sin-x-1-shi-y-cos-x-1-1553wz",
+          "title": "讲解例子",
+          "bodyMarkdown": "y=sin(x²+1) 时，y′=cos(x²+1)·2x。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。外层导数先保留内层整体，再乘以内层导数；多层复合就继续沿路径相乘。\n\n### 解题步骤\n\n1. 标出内外层\n2. 由外向内求导\n3. 乘上所有中间导数\n\n### 易错点\n\n只求外层导数不乘内层导数，是链式法则最典型的漏项。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-er-jie-pian-dao-2",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s6",
+      "sectionTitle": "多元复合函数求导",
+      "title": "二阶偏导",
+      "summary": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。",
+      "tags": [
+        "链式法则"
+      ],
+      "sortOrder": 180,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "d[f(g(x))]/dx=f′(g(x))g′(x)",
+        "caption": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。"
+      },
+      "keyPoints": [
+        {
+          "id": "xian-bian-ren-zui-wai-ceng",
+          "title": "先辨认最外层",
+          "bodyMarkdown": "先辨认最外层"
+        },
+        {
+          "id": "mei-yi-ceng-dou-yao-cheng-xia-yi-ceng-092wo7",
+          "title": "每一层都要乘下一层导数",
+          "bodyMarkdown": "每一层都要乘下一层导数"
+        },
+        {
+          "id": "zui-hou-zai-an-xu-yao-zhan-kai",
+          "title": "最后再按需要展开",
+          "bodyMarkdown": "最后再按需要展开"
+        }
+      ],
+      "examples": [
+        {
+          "id": "y-sin-x-1-shi-y-cos-x-1-1553wz",
+          "title": "讲解例子",
+          "bodyMarkdown": "y=sin(x²+1) 时，y′=cos(x²+1)·2x。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。外层导数先保留内层整体，再乘以内层导数；多层复合就继续沿路径相乘。\n\n### 解题步骤\n\n1. 标出内外层\n2. 由外向内求导\n3. 乘上所有中间导数\n\n### 易错点\n\n只求外层导数不乘内层导数，是链式法则最典型的漏项。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-yi-lai-guan-xi-tu",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s6",
+      "sectionTitle": "多元复合函数求导",
+      "title": "依赖关系图",
+      "summary": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。",
+      "tags": [
+        "链式法则"
+      ],
+      "sortOrder": 190,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "d[f(g(x))]/dx=f′(g(x))g′(x)",
+        "caption": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。"
+      },
+      "keyPoints": [
+        {
+          "id": "xian-bian-ren-zui-wai-ceng",
+          "title": "先辨认最外层",
+          "bodyMarkdown": "先辨认最外层"
+        },
+        {
+          "id": "mei-yi-ceng-dou-yao-cheng-xia-yi-ceng-092wo7",
+          "title": "每一层都要乘下一层导数",
+          "bodyMarkdown": "每一层都要乘下一层导数"
+        },
+        {
+          "id": "zui-hou-zai-an-xu-yao-zhan-kai",
+          "title": "最后再按需要展开",
+          "bodyMarkdown": "最后再按需要展开"
+        }
+      ],
+      "examples": [
+        {
+          "id": "y-sin-x-1-shi-y-cos-x-1-1553wz",
+          "title": "讲解例子",
+          "bodyMarkdown": "y=sin(x²+1) 时，y′=cos(x²+1)·2x。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。外层导数先保留内层整体，再乘以内层导数；多层复合就继续沿路径相乘。\n\n### 解题步骤\n\n1. 标出内外层\n2. 由外向内求导\n3. 乘上所有中间导数\n\n### 易错点\n\n只求外层导数不乘内层导数，是链式法则最典型的漏项。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-yi-ge-fang-cheng-que-ding-de-yin-han-shu",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s7",
+      "sectionTitle": "隐函数求导",
+      "title": "一个方程确定的隐函数",
+      "summary": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。",
+      "tags": [
+        "方程约束下求变化"
+      ],
+      "sortOrder": 200,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "Fₓ+Fᵧy′=0；y′=−Fₓ/Fᵧ（Fᵧ≠0）",
+        "caption": "隐函数由方程约束而不是显式公式给出。"
+      },
+      "keyPoints": [
+        {
+          "id": "yi-yuan-yin-han-shu-qiu-dao-yao-ba-y-1u40t8",
+          "title": "一元隐函数求导要把 y 当成 y(x)",
+          "bodyMarkdown": "一元隐函数求导要把 y 当成 y(x)"
+        },
+        {
+          "id": "duo-yuan-yin-han-shu-yao-jian-cha-ya-ke-13r7bo",
+          "title": "多元隐函数要检查雅可比条件",
+          "bodyMarkdown": "多元隐函数要检查雅可比条件"
+        },
+        {
+          "id": "jie-guo-bao-liu-y-huo-qi-ta-bian-liang-0udoyb",
+          "title": "结果保留 y 或其他变量是正常的",
+          "bodyMarkdown": "结果保留 y 或其他变量是正常的"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-y-1-gei-chu-y-x-y-zai-08jt6k",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+y²=1 给出 y′=−x/y；在上半圆上 y>0。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。\n\n### 解题步骤\n\n1. 写出约束方程\n2. 对所有项求全导数\n3. 整理目标导数并代入点\n\n### 易错点\n\n忘记含 y 的项要乘 y′，或在 Fᵧ=0 处强行套公式。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-yin-han-shu-cun-zai-ding-li-de-li-jie",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s7",
+      "sectionTitle": "隐函数求导",
+      "title": "隐函数存在定理的理解",
+      "summary": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。",
+      "tags": [
+        "方程约束下求变化"
+      ],
+      "sortOrder": 210,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "Fₓ+Fᵧy′=0；y′=−Fₓ/Fᵧ（Fᵧ≠0）",
+        "caption": "隐函数由方程约束而不是显式公式给出。"
+      },
+      "keyPoints": [
+        {
+          "id": "yi-yuan-yin-han-shu-qiu-dao-yao-ba-y-1u40t8",
+          "title": "一元隐函数求导要把 y 当成 y(x)",
+          "bodyMarkdown": "一元隐函数求导要把 y 当成 y(x)"
+        },
+        {
+          "id": "duo-yuan-yin-han-shu-yao-jian-cha-ya-ke-13r7bo",
+          "title": "多元隐函数要检查雅可比条件",
+          "bodyMarkdown": "多元隐函数要检查雅可比条件"
+        },
+        {
+          "id": "jie-guo-bao-liu-y-huo-qi-ta-bian-liang-0udoyb",
+          "title": "结果保留 y 或其他变量是正常的",
+          "bodyMarkdown": "结果保留 y 或其他变量是正常的"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-y-1-gei-chu-y-x-y-zai-08jt6k",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+y²=1 给出 y′=−x/y；在上半圆上 y>0。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。\n\n### 解题步骤\n\n1. 写出约束方程\n2. 对所有项求全导数\n3. 整理目标导数并代入点\n\n### 易错点\n\n忘记含 y 的项要乘 y′，或在 Fᵧ=0 处强行套公式。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-duo-yuan-yin-han-shu-pian-dao",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s7",
+      "sectionTitle": "隐函数求导",
+      "title": "多元隐函数偏导",
+      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "tags": [
+        "局部线性化"
+      ],
+      "sortOrder": 220,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
+        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+      },
+      "keyPoints": [
+        {
+          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
+          "title": "偏导是坐标方向的变化率",
+          "bodyMarkdown": "偏导是坐标方向的变化率"
+        },
+        {
+          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
+          "title": "全微分是所有一阶变化的线性合成",
+          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+        },
+        {
+          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
+          "title": "可微 ⇒ 连续",
+          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "title": "讲解例子",
+          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-zhu-dian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s8",
+      "sectionTitle": "多元函数极值",
+      "title": "驻点",
+      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "tags": [
+        "从数轴到平面"
+      ],
+      "sortOrder": 230,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
+        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
+          "title": "定义域由根号、分母和对数条件共同决定",
+          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+        },
+        {
+          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
+          "title": "z=f(x",
+          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+        },
+        {
+          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
+          "title": "闭有界区域上的连续函数能取到最值",
+          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "title": "讲解例子",
+          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-bi-yao-tiao-jian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s8",
+      "sectionTitle": "多元函数极值",
+      "title": "必要条件",
+      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "tags": [
+        "从数轴到平面"
+      ],
+      "sortOrder": 240,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
+        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
+          "title": "定义域由根号、分母和对数条件共同决定",
+          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+        },
+        {
+          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
+          "title": "z=f(x",
+          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+        },
+        {
+          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
+          "title": "闭有界区域上的连续函数能取到最值",
+          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "title": "讲解例子",
+          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-er-jie-chong-fen-tiao-jian",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s8",
+      "sectionTitle": "多元函数极值",
+      "title": "二阶充分条件",
+      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "tags": [
+        "从数轴到平面"
+      ],
+      "sortOrder": 250,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
+        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
+          "title": "定义域由根号、分母和对数条件共同决定",
+          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+        },
+        {
+          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
+          "title": "z=f(x",
+          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+        },
+        {
+          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
+          "title": "闭有界区域上的连续函数能取到最值",
+          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "title": "讲解例子",
+          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-ji-da-ji-xiao",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s8",
+      "sectionTitle": "多元函数极值",
+      "title": "极大/极小",
+      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "tags": [
+        "从数轴到平面"
+      ],
+      "sortOrder": 260,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
+        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+      },
+      "keyPoints": [
+        {
+          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
+          "title": "定义域由根号、分母和对数条件共同决定",
+          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+        },
+        {
+          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
+          "title": "z=f(x",
+          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+        },
+        {
+          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
+          "title": "闭有界区域上的连续函数能取到最值",
+          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+        }
+      ],
+      "examples": [
+        {
+          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "title": "讲解例子",
+          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-la-ge-lang-ri-cheng-shu-fa",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s9",
+      "sectionTitle": "条件极值",
+      "title": "拉格朗日乘数法",
+      "summary": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。",
+      "tags": [
+        "多元极值判定"
+      ],
+      "sortOrder": 270,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "∇f=λ∇g；H=fₓₓfᵧᵧ−fₓᵧ²",
+        "caption": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。"
+      },
+      "keyPoints": [
+        {
+          "id": "zhu-dian-shi-bi-yao-hou-xuan-bu-shi-jie-1btpd1",
+          "title": "驻点是必要候选",
+          "bodyMarkdown": "驻点是必要候选，不是结论"
+        },
+        {
+          "id": "er-jie-pan-bie-yao-kan-hessian-hang-lie-18oig9",
+          "title": "二阶判别要看 Hessian 行列式和主元",
+          "bodyMarkdown": "二阶判别要看 Hessian 行列式和主元"
+        },
+        {
+          "id": "yue-shu-ji-zhi-bi-xu-tong-shi-man-zu-03oa0m",
+          "title": "约束极值必须同时满足约束方程",
+          "bodyMarkdown": "约束极值必须同时满足约束方程"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zai-x-y-1-shang-qiu-xy-08461j",
+          "title": "讲解例子",
+          "bodyMarkdown": "在 x²+y²=1 上求 xy 的极值，可令 ∇(xy)=λ∇(x²+y²)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。无约束问题看局部二次型，约束问题把约束曲线上的变化压缩到可行方向，拉格朗日乘数把两者的梯度联系起来。\n\n### 解题步骤\n\n1. 求一阶偏导并解驻点\n2. 计算二阶信息或列拉格朗日方程\n3. 比较候选点和边界值\n\n### 易错点\n\n只求偏导为零而忽略边界/约束，会漏掉真正的最值。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p1-c4-zui-da-zhi-zui-xiao-zhi-ying-yong",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m2-p1-c4",
+      "sectionId": "m2-p1-c4-s9",
+      "sectionTitle": "条件极值",
+      "title": "最大值最小值应用",
+      "summary": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。",
+      "tags": [
+        "多元极值判定"
+      ],
+      "sortOrder": 280,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "∇f=λ∇g；H=fₓₓfᵧᵧ−fₓᵧ²",
+        "caption": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。"
+      },
+      "keyPoints": [
+        {
+          "id": "zhu-dian-shi-bi-yao-hou-xuan-bu-shi-jie-1btpd1",
+          "title": "驻点是必要候选",
+          "bodyMarkdown": "驻点是必要候选，不是结论"
+        },
+        {
+          "id": "er-jie-pan-bie-yao-kan-hessian-hang-lie-18oig9",
+          "title": "二阶判别要看 Hessian 行列式和主元",
+          "bodyMarkdown": "二阶判别要看 Hessian 行列式和主元"
+        },
+        {
+          "id": "yue-shu-ji-zhi-bi-xu-tong-shi-man-zu-03oa0m",
+          "title": "约束极值必须同时满足约束方程",
+          "bodyMarkdown": "约束极值必须同时满足约束方程"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zai-x-y-1-shang-qiu-xy-08461j",
+          "title": "讲解例子",
+          "bodyMarkdown": "在 x²+y²=1 上求 xy 的极值，可令 ∇(xy)=λ∇(x²+y²)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。无约束问题看局部二次型，约束问题把约束曲线上的变化压缩到可行方向，拉格朗日乘数把两者的梯度联系起来。\n\n### 解题步骤\n\n1. 求一阶偏导并解驻点\n2. 计算二阶信息或列拉格朗日方程\n3. 比较候选点和边界值\n\n### 易错点\n\n只求偏导为零而忽略边界/约束，会漏掉真正的最值。"
+    }
+  ]
+}

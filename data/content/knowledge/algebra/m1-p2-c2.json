@@ -1,0 +1,2113 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "m1-p2-c2",
+  "subjectId": "algebra",
+  "module": "数学一",
+  "title": "矩阵",
+  "sortOrder": 20,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-ju-zhen-gai-nian",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s1",
+      "sectionTitle": "矩阵与特殊矩阵",
+      "title": "矩阵概念",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-ling-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s1",
+      "sectionTitle": "矩阵与特殊矩阵",
+      "title": "零矩阵",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 20,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-dan-wei-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s1",
+      "sectionTitle": "矩阵与特殊矩阵",
+      "title": "单位矩阵",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 30,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-shu-liang-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s1",
+      "sectionTitle": "矩阵与特殊矩阵",
+      "title": "数量矩阵",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 40,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-dui-jiao-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s1",
+      "sectionTitle": "矩阵与特殊矩阵",
+      "title": "对角矩阵",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 50,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-shang-xia-san-jiao-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s1",
+      "sectionTitle": "矩阵与特殊矩阵",
+      "title": "上/下三角矩阵",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 60,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-dui-chen-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s1",
+      "sectionTitle": "矩阵与特殊矩阵",
+      "title": "对称矩阵",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 70,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-fan-dui-chen-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s1",
+      "sectionTitle": "矩阵与特殊矩阵",
+      "title": "反对称矩阵",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 80,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-zheng-jiao-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s1",
+      "sectionTitle": "矩阵与特殊矩阵",
+      "title": "正交矩阵",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 90,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-jia-jian",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s2",
+      "sectionTitle": "矩阵运算",
+      "title": "加减",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 100,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-shu-cheng",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s2",
+      "sectionTitle": "矩阵运算",
+      "title": "数乘",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 110,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-ju-zhen-cheng-fa",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s2",
+      "sectionTitle": "矩阵运算",
+      "title": "矩阵乘法",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 120,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-fang-zhen-de-mi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s2",
+      "sectionTitle": "矩阵运算",
+      "title": "方阵的幂",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 130,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-zhuan-zhi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s2",
+      "sectionTitle": "矩阵运算",
+      "title": "转置",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 140,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-yun-suan-gui-l",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s2",
+      "sectionTitle": "矩阵运算",
+      "title": "运算规律",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 150,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-qiang-diao-yi-ban-ab-ba",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s2",
+      "sectionTitle": "矩阵运算",
+      "title": "强调一般 AB≠BA",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 160,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-ab-a-b",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s3",
+      "sectionTitle": "方阵行列式",
+      "title": "|AB|=|A||B|",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 170,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-zhuan-zhi-de-hang-lie-shi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s3",
+      "sectionTitle": "方阵行列式",
+      "title": "转置的行列式",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 180,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-mi-de-hang-lie-shi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s3",
+      "sectionTitle": "方阵行列式",
+      "title": "幂的行列式",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 190,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-ding-yi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s4",
+      "sectionTitle": "逆矩阵",
+      "title": "定义",
+      "summary": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。",
+      "tags": [
+        "撤销变换"
+      ],
+      "sortOrder": 200,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "A⁻¹=adj(A)/|A|（|A|≠0）",
+        "caption": "逆矩阵把矩阵造成的线性变换撤销。"
+      },
+      "keyPoints": [
+        {
+          "id": "aa-i",
+          "title": "AA⁻¹=I",
+          "bodyMarkdown": "AA⁻¹=I"
+        },
+        {
+          "id": "ke-ni-a-0-r-a-n",
+          "title": "可逆 ⇔ |A|≠0 ⇔ r(A)=n",
+          "bodyMarkdown": "可逆 ⇔ |A|≠0 ⇔ r(A)=n"
+        },
+        {
+          "id": "qiu-ni-ke-yong-ban-sui-ju-zhen-huo-zeng-1il6ce",
+          "title": "求逆可用伴随矩阵或增广矩阵消元",
+          "bodyMarkdown": "求逆可用伴随矩阵或增广矩阵消元"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-a-i-xing-bian-huan-05mydu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把 [A|I] 行变换为 [I|A⁻¹]，右半部分就是逆矩阵。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。\n\n### 解题步骤\n\n1. 先判可逆性\n2. 选择伴随或初等变换\n3. 用乘积验证结果\n\n### 易错点\n\n行列式为零时不存在逆矩阵，不能用除法“形式求逆”。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-wei-yi-xing",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s4",
+      "sectionTitle": "逆矩阵",
+      "title": "唯一性",
+      "summary": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。",
+      "tags": [
+        "撤销变换"
+      ],
+      "sortOrder": 210,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "A⁻¹=adj(A)/|A|（|A|≠0）",
+        "caption": "逆矩阵把矩阵造成的线性变换撤销。"
+      },
+      "keyPoints": [
+        {
+          "id": "aa-i",
+          "title": "AA⁻¹=I",
+          "bodyMarkdown": "AA⁻¹=I"
+        },
+        {
+          "id": "ke-ni-a-0-r-a-n",
+          "title": "可逆 ⇔ |A|≠0 ⇔ r(A)=n",
+          "bodyMarkdown": "可逆 ⇔ |A|≠0 ⇔ r(A)=n"
+        },
+        {
+          "id": "qiu-ni-ke-yong-ban-sui-ju-zhen-huo-zeng-1il6ce",
+          "title": "求逆可用伴随矩阵或增广矩阵消元",
+          "bodyMarkdown": "求逆可用伴随矩阵或增广矩阵消元"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-a-i-xing-bian-huan-05mydu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把 [A|I] 行变换为 [I|A⁻¹]，右半部分就是逆矩阵。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。\n\n### 解题步骤\n\n1. 先判可逆性\n2. 选择伴随或初等变换\n3. 用乘积验证结果\n\n### 易错点\n\n行列式为零时不存在逆矩阵，不能用除法“形式求逆”。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-yun-suan-xing-zhi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s4",
+      "sectionTitle": "逆矩阵",
+      "title": "运算性质",
+      "summary": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。",
+      "tags": [
+        "撤销变换"
+      ],
+      "sortOrder": 220,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "A⁻¹=adj(A)/|A|（|A|≠0）",
+        "caption": "逆矩阵把矩阵造成的线性变换撤销。"
+      },
+      "keyPoints": [
+        {
+          "id": "aa-i",
+          "title": "AA⁻¹=I",
+          "bodyMarkdown": "AA⁻¹=I"
+        },
+        {
+          "id": "ke-ni-a-0-r-a-n",
+          "title": "可逆 ⇔ |A|≠0 ⇔ r(A)=n",
+          "bodyMarkdown": "可逆 ⇔ |A|≠0 ⇔ r(A)=n"
+        },
+        {
+          "id": "qiu-ni-ke-yong-ban-sui-ju-zhen-huo-zeng-1il6ce",
+          "title": "求逆可用伴随矩阵或增广矩阵消元",
+          "bodyMarkdown": "求逆可用伴随矩阵或增广矩阵消元"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-a-i-xing-bian-huan-05mydu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把 [A|I] 行变换为 [I|A⁻¹]，右半部分就是逆矩阵。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。\n\n### 解题步骤\n\n1. 先判可逆性\n2. 选择伴随或初等变换\n3. 用乘积验证结果\n\n### 易错点\n\n行列式为零时不存在逆矩阵，不能用除法“形式求逆”。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-ke-ni-de-chong-fen-bi-yao-tiao-jian",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s4",
+      "sectionTitle": "逆矩阵",
+      "title": "可逆的充分必要条件",
+      "summary": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。",
+      "tags": [
+        "撤销变换"
+      ],
+      "sortOrder": 230,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "A⁻¹=adj(A)/|A|（|A|≠0）",
+        "caption": "逆矩阵把矩阵造成的线性变换撤销。"
+      },
+      "keyPoints": [
+        {
+          "id": "aa-i",
+          "title": "AA⁻¹=I",
+          "bodyMarkdown": "AA⁻¹=I"
+        },
+        {
+          "id": "ke-ni-a-0-r-a-n",
+          "title": "可逆 ⇔ |A|≠0 ⇔ r(A)=n",
+          "bodyMarkdown": "可逆 ⇔ |A|≠0 ⇔ r(A)=n"
+        },
+        {
+          "id": "qiu-ni-ke-yong-ban-sui-ju-zhen-huo-zeng-1il6ce",
+          "title": "求逆可用伴随矩阵或增广矩阵消元",
+          "bodyMarkdown": "求逆可用伴随矩阵或增广矩阵消元"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-a-i-xing-bian-huan-05mydu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把 [A|I] 行变换为 [I|A⁻¹]，右半部分就是逆矩阵。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。\n\n### 解题步骤\n\n1. 先判可逆性\n2. 选择伴随或初等变换\n3. 用乘积验证结果\n\n### 易错点\n\n行列式为零时不存在逆矩阵，不能用除法“形式求逆”。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-ban-sui-ju-zhen-qiu-ni",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s4",
+      "sectionTitle": "逆矩阵",
+      "title": "伴随矩阵求逆",
+      "summary": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。",
+      "tags": [
+        "撤销变换"
+      ],
+      "sortOrder": 240,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "A⁻¹=adj(A)/|A|（|A|≠0）",
+        "caption": "逆矩阵把矩阵造成的线性变换撤销。"
+      },
+      "keyPoints": [
+        {
+          "id": "aa-i",
+          "title": "AA⁻¹=I",
+          "bodyMarkdown": "AA⁻¹=I"
+        },
+        {
+          "id": "ke-ni-a-0-r-a-n",
+          "title": "可逆 ⇔ |A|≠0 ⇔ r(A)=n",
+          "bodyMarkdown": "可逆 ⇔ |A|≠0 ⇔ r(A)=n"
+        },
+        {
+          "id": "qiu-ni-ke-yong-ban-sui-ju-zhen-huo-zeng-1il6ce",
+          "title": "求逆可用伴随矩阵或增广矩阵消元",
+          "bodyMarkdown": "求逆可用伴随矩阵或增广矩阵消元"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-a-i-xing-bian-huan-05mydu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把 [A|I] 行变换为 [I|A⁻¹]，右半部分就是逆矩阵。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。\n\n### 解题步骤\n\n1. 先判可逆性\n2. 选择伴随或初等变换\n3. 用乘积验证结果\n\n### 易错点\n\n行列式为零时不存在逆矩阵，不能用除法“形式求逆”。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-san-lei-chu-deng-xing-bian-huan",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s5",
+      "sectionTitle": "初等变换与初等矩阵",
+      "title": "三类初等行变换",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 250,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-san-lei-chu-deng-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s5",
+      "sectionTitle": "初等变换与初等矩阵",
+      "title": "三类初等矩阵",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 260,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-zuo-cheng-chu-deng-ju-zhen-yu-xing-bian-0fqwi1",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s5",
+      "sectionTitle": "初等变换与初等矩阵",
+      "title": "左乘初等矩阵与行变换",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 270,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-yong-chu-deng-bian-huan-qiu-ni",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s5",
+      "sectionTitle": "初等变换与初等矩阵",
+      "title": "用初等变换求逆",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 280,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-zhi-de-ding-yi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s6",
+      "sectionTitle": "矩阵的秩",
+      "title": "秩的定义",
+      "summary": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。",
+      "tags": [
+        "有效独立方向数"
+      ],
+      "sortOrder": 290,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "r(A)=非零行阶梯形的行数",
+        "caption": "秩表示矩阵或向量组中真正独立的方向数。"
+      },
+      "keyPoints": [
+        {
+          "id": "zhi-deng-yu-fei-ling-xing-shu-ye-deng-0kalyu",
+          "title": "秩等于非零行数",
+          "bodyMarkdown": "秩等于非零行数，也等于最高阶非零子式阶数"
+        },
+        {
+          "id": "chu-deng-bian-huan-bu-gai-bian-zhi",
+          "title": "初等变换不改变秩",
+          "bodyMarkdown": "初等变换不改变秩"
+        },
+        {
+          "id": "r-a-min-xing-shu-lie-shu",
+          "title": "r(A)≤min(行数",
+          "bodyMarkdown": "r(A)≤min(行数,列数)"
+        }
+      ],
+      "examples": [
+        {
+          "id": "3-ge-wei-zhi-shu-de-151bbs",
+          "title": "讲解例子",
+          "bodyMarkdown": "3 个未知数的方程组若秩为 2 且有解，解集中有 1 个自由参数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。\n\n### 解题步骤\n\n1. 做初等行变换\n2. 化为阶梯形\n3. 数主元并解释自由变量\n\n### 易错点\n\n把非零元素个数当成秩；同一行有多个非零数仍只贡献一个主元方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-zui-gao-jie-fei-ling-zi-shi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s6",
+      "sectionTitle": "矩阵的秩",
+      "title": "最高阶非零子式",
+      "summary": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。",
+      "tags": [
+        "有效独立方向数"
+      ],
+      "sortOrder": 300,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "r(A)=非零行阶梯形的行数",
+        "caption": "秩表示矩阵或向量组中真正独立的方向数。"
+      },
+      "keyPoints": [
+        {
+          "id": "zhi-deng-yu-fei-ling-xing-shu-ye-deng-0kalyu",
+          "title": "秩等于非零行数",
+          "bodyMarkdown": "秩等于非零行数，也等于最高阶非零子式阶数"
+        },
+        {
+          "id": "chu-deng-bian-huan-bu-gai-bian-zhi",
+          "title": "初等变换不改变秩",
+          "bodyMarkdown": "初等变换不改变秩"
+        },
+        {
+          "id": "r-a-min-xing-shu-lie-shu",
+          "title": "r(A)≤min(行数",
+          "bodyMarkdown": "r(A)≤min(行数,列数)"
+        }
+      ],
+      "examples": [
+        {
+          "id": "3-ge-wei-zhi-shu-de-151bbs",
+          "title": "讲解例子",
+          "bodyMarkdown": "3 个未知数的方程组若秩为 2 且有解，解集中有 1 个自由参数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。\n\n### 解题步骤\n\n1. 做初等行变换\n2. 化为阶梯形\n3. 数主元并解释自由变量\n\n### 易错点\n\n把非零元素个数当成秩；同一行有多个非零数仍只贡献一个主元方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-xing-jie-ti-xing-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s6",
+      "sectionTitle": "矩阵的秩",
+      "title": "行阶梯形矩阵",
+      "summary": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。",
+      "tags": [
+        "有效独立方向数"
+      ],
+      "sortOrder": 310,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "r(A)=非零行阶梯形的行数",
+        "caption": "秩表示矩阵或向量组中真正独立的方向数。"
+      },
+      "keyPoints": [
+        {
+          "id": "zhi-deng-yu-fei-ling-xing-shu-ye-deng-0kalyu",
+          "title": "秩等于非零行数",
+          "bodyMarkdown": "秩等于非零行数，也等于最高阶非零子式阶数"
+        },
+        {
+          "id": "chu-deng-bian-huan-bu-gai-bian-zhi",
+          "title": "初等变换不改变秩",
+          "bodyMarkdown": "初等变换不改变秩"
+        },
+        {
+          "id": "r-a-min-xing-shu-lie-shu",
+          "title": "r(A)≤min(行数",
+          "bodyMarkdown": "r(A)≤min(行数,列数)"
+        }
+      ],
+      "examples": [
+        {
+          "id": "3-ge-wei-zhi-shu-de-151bbs",
+          "title": "讲解例子",
+          "bodyMarkdown": "3 个未知数的方程组若秩为 2 且有解，解集中有 1 个自由参数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。\n\n### 解题步骤\n\n1. 做初等行变换\n2. 化为阶梯形\n3. 数主元并解释自由变量\n\n### 易错点\n\n把非零元素个数当成秩；同一行有多个非零数仍只贡献一个主元方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-xing-zui-jian-xing",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s6",
+      "sectionTitle": "矩阵的秩",
+      "title": "行最简形",
+      "summary": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。",
+      "tags": [
+        "有效独立方向数"
+      ],
+      "sortOrder": 320,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "r(A)=非零行阶梯形的行数",
+        "caption": "秩表示矩阵或向量组中真正独立的方向数。"
+      },
+      "keyPoints": [
+        {
+          "id": "zhi-deng-yu-fei-ling-xing-shu-ye-deng-0kalyu",
+          "title": "秩等于非零行数",
+          "bodyMarkdown": "秩等于非零行数，也等于最高阶非零子式阶数"
+        },
+        {
+          "id": "chu-deng-bian-huan-bu-gai-bian-zhi",
+          "title": "初等变换不改变秩",
+          "bodyMarkdown": "初等变换不改变秩"
+        },
+        {
+          "id": "r-a-min-xing-shu-lie-shu",
+          "title": "r(A)≤min(行数",
+          "bodyMarkdown": "r(A)≤min(行数,列数)"
+        }
+      ],
+      "examples": [
+        {
+          "id": "3-ge-wei-zhi-shu-de-151bbs",
+          "title": "讲解例子",
+          "bodyMarkdown": "3 个未知数的方程组若秩为 2 且有解，解集中有 1 个自由参数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。\n\n### 解题步骤\n\n1. 做初等行变换\n2. 化为阶梯形\n3. 数主元并解释自由变量\n\n### 易错点\n\n把非零元素个数当成秩；同一行有多个非零数仍只贡献一个主元方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-chu-deng-bian-huan-qiu-zhi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s6",
+      "sectionTitle": "矩阵的秩",
+      "title": "初等变换求秩",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 330,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-zhi-de-chang-yong-xing-zhi-he-bu-deng-0othuy",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s6",
+      "sectionTitle": "矩阵的秩",
+      "title": "秩的常用性质和不等式",
+      "summary": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。",
+      "tags": [
+        "有效独立方向数"
+      ],
+      "sortOrder": 340,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "r(A)=非零行阶梯形的行数",
+        "caption": "秩表示矩阵或向量组中真正独立的方向数。"
+      },
+      "keyPoints": [
+        {
+          "id": "zhi-deng-yu-fei-ling-xing-shu-ye-deng-0kalyu",
+          "title": "秩等于非零行数",
+          "bodyMarkdown": "秩等于非零行数，也等于最高阶非零子式阶数"
+        },
+        {
+          "id": "chu-deng-bian-huan-bu-gai-bian-zhi",
+          "title": "初等变换不改变秩",
+          "bodyMarkdown": "初等变换不改变秩"
+        },
+        {
+          "id": "r-a-min-xing-shu-lie-shu",
+          "title": "r(A)≤min(行数",
+          "bodyMarkdown": "r(A)≤min(行数,列数)"
+        }
+      ],
+      "examples": [
+        {
+          "id": "3-ge-wei-zhi-shu-de-151bbs",
+          "title": "讲解例子",
+          "bodyMarkdown": "3 个未知数的方程组若秩为 2 且有解，解集中有 1 个自由参数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。\n\n### 解题步骤\n\n1. 做初等行变换\n2. 化为阶梯形\n3. 数主元并解释自由变量\n\n### 易错点\n\n把非零元素个数当成秩；同一行有多个非零数仍只贡献一个主元方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-deng-jia-ju-zhen-gai-nian",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s7",
+      "sectionTitle": "矩阵等价",
+      "title": "等价矩阵概念",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 350,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-yu-chu-deng-bian-huan-zhi-de-guan-xi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s7",
+      "sectionTitle": "矩阵等价",
+      "title": "与初等变换、秩的关系",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 360,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-fen-kuai-jia-jian",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s8",
+      "sectionTitle": "分块矩阵",
+      "title": "分块加减",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 370,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-fen-kuai-cheng-fa",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s8",
+      "sectionTitle": "分块矩阵",
+      "title": "分块乘法",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 380,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-fen-kuai-zhuan-zhi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s8",
+      "sectionTitle": "分块矩阵",
+      "title": "分块转置",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 390,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-fen-kuai-dui-jiao-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s8",
+      "sectionTitle": "分块矩阵",
+      "title": "分块对角矩阵",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 400,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c2-jian-dan-fen-kuai-qiu-ni",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c2",
+      "sectionId": "m1-p2-c2-s8",
+      "sectionTitle": "分块矩阵",
+      "title": "简单分块求逆",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 410,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    }
+  ]
+}

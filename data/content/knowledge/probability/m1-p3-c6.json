@@ -1,0 +1,1081 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "m1-p3-c6",
+  "subjectId": "probability",
+  "module": "数学一",
+  "title": "数理统计基本概念",
+  "sortOrder": 60,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-zong-ti",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s1",
+      "sectionTitle": "总体与样本",
+      "title": "总体",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-ge-ti",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s1",
+      "sectionTitle": "总体与样本",
+      "title": "个体",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 20,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yang-ben",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s1",
+      "sectionTitle": "总体与样本",
+      "title": "样本",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 30,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-jian-dan-sui-ji-yang-ben",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s1",
+      "sectionTitle": "总体与样本",
+      "title": "简单随机样本",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 40,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yang-ben-guan-ce-zhi",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s1",
+      "sectionTitle": "总体与样本",
+      "title": "样本观测值",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 50,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-ding-yi",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s2",
+      "sectionTitle": "统计量",
+      "title": "定义",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 60,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yang-ben-jun-zhi",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s2",
+      "sectionTitle": "统计量",
+      "title": "样本均值",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 70,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yang-ben-fang-cha",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s2",
+      "sectionTitle": "统计量",
+      "title": "样本方差",
+      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "tags": [
+        "衡量波动与联动"
+      ],
+      "sortOrder": 80,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
+        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+      },
+      "keyPoints": [
+        {
+          "id": "d-x-e-x-e-x",
+          "title": "D(X)=E(X²)−[E(X)]²",
+          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+        },
+        {
+          "id": "d-ax-b-a-d-x",
+          "title": "D(aX+b)=a²D(X)",
+          "bodyMarkdown": "D(aX+b)=a²D(X)"
+        },
+        {
+          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
+          "title": "独立且期望存在时协方差为 0",
+          "bodyMarkdown": "独立且期望存在时协方差为 0"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "title": "讲解例子",
+          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yang-ben-biao-zhun-cha",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s2",
+      "sectionTitle": "统计量",
+      "title": "样本标准差",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 90,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yang-ben-ju",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s2",
+      "sectionTitle": "统计量",
+      "title": "样本矩",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 100,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-jing-yan-fen-bu-han-shu-de-jie-ti-tu-04kuw6",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s3",
+      "sectionTitle": "经验分布函数（理解扩展）",
+      "title": "经验分布函数的阶梯图像",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 110,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yang-ben-luo-zai-qu-jian-nei-de-pin-l",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s3",
+      "sectionTitle": "经验分布函数（理解扩展）",
+      "title": "样本落在区间内的频率",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 120,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yong-yang-ben-fen-bu-jin-si-zong-ti-fen-0gcefa",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s3",
+      "sectionTitle": "经验分布函数（理解扩展）",
+      "title": "用样本分布近似总体分布",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 130,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s4",
+      "sectionTitle": "三大抽样分布",
+      "title": "χ² 分布",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 140,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-t-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s4",
+      "sectionTitle": "三大抽样分布",
+      "title": "t 分布",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 150,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-f-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s4",
+      "sectionTitle": "三大抽样分布",
+      "title": "F 分布",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 160,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-xing-zhuang-he-can-shu-bian-hua",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s4",
+      "sectionTitle": "三大抽样分布",
+      "title": "形状和参数变化",
+      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "tags": [
+        "用样本认识总体"
+      ],
+      "sortOrder": 170,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
+        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+      },
+      "keyPoints": [
+        {
+          "id": "yang-ben-yao-you-dai-biao-xing",
+          "title": "样本要有代表性",
+          "bodyMarkdown": "样本要有代表性"
+        },
+        {
+          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
+          "title": "样本均值是总体均值的自然估计量",
+          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+        },
+        {
+          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
+          "title": "正态总体下均值、方差对应不同抽样分布",
+          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+        }
+      ],
+      "examples": [
+        {
+          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "title": "讲解例子",
+          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yang-ben-jun-zhi-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s5",
+      "sectionTitle": "正态总体抽样分布",
+      "title": "样本均值分布",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 180,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yang-ben-fang-cha-fen-bu",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s5",
+      "sectionTitle": "正态总体抽样分布",
+      "title": "样本方差分布",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 190,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-yang-ben-jun-zhi-yu-yang-ben-fang-cha-1fk1at",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s5",
+      "sectionTitle": "正态总体抽样分布",
+      "title": "样本均值与样本方差独立",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 200,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c6-dan-zong-ti-yu-liang-zong-ti-chang-yong-0j6yn0",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c6",
+      "sectionId": "m1-p3-c6-s5",
+      "sectionTitle": "正态总体抽样分布",
+      "title": "单总体与两总体常用统计量",
+      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "tags": [
+        "从概率规律到曲线"
+      ],
+      "sortOrder": 210,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
+        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+      },
+      "keyPoints": [
+        {
+          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
+          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
+          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+        },
+        {
+          "id": "mi-du-ji-fen-wei-1",
+          "title": "密度积分为 1",
+          "bodyMarkdown": "密度积分为 1"
+        },
+        {
+          "id": "zheng-tai-biao-zhun-hua-z-x",
+          "title": "正态标准化 z=(x−μ)/σ",
+          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+        }
+      ],
+      "examples": [
+        {
+          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "title": "讲解例子",
+          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+    }
+  ]
+}

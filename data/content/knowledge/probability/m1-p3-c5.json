@@ -1,0 +1,469 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "m1-p3-c5",
+  "subjectId": "probability",
+  "module": "数学一",
+  "title": "大数定律与中心极限定理",
+  "sortOrder": 50,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c5-yong-fang-cha-kong-zhi-pian-li-jun-zhi-0t98sf",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c5",
+      "sectionId": "m1-p3-c5-s1",
+      "sectionTitle": "切比雪夫不等式",
+      "title": "用方差控制偏离均值的概率",
+      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "tags": [
+        "衡量波动与联动"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
+        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+      },
+      "keyPoints": [
+        {
+          "id": "d-x-e-x-e-x",
+          "title": "D(X)=E(X²)−[E(X)]²",
+          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+        },
+        {
+          "id": "d-ax-b-a-d-x",
+          "title": "D(aX+b)=a²D(X)",
+          "bodyMarkdown": "D(aX+b)=a²D(X)"
+        },
+        {
+          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
+          "title": "独立且期望存在时协方差为 0",
+          "bodyMarkdown": "独立且期望存在时协方差为 0"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "title": "讲解例子",
+          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c5-qie-bi-xue-fu-da-shu-ding-l",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c5",
+      "sectionId": "m1-p3-c5-s2",
+      "sectionTitle": "大数定律",
+      "title": "切比雪夫大数定律",
+      "summary": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。",
+      "tags": [
+        "从随机到稳定"
+      ],
+      "sortOrder": 20,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(|X−EX|≥ε)≤D(X)/ε²；(ΣXᵢ−nμ)/(σ√n)→N(0,1)",
+        "caption": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。"
+      },
+      "keyPoints": [
+        {
+          "id": "qie-bi-xue-fu-bu-deng-shi-yong-fang-cha-05y8ju",
+          "title": "切比雪夫不等式用方差控制偏离概率",
+          "bodyMarkdown": "切比雪夫不等式用方差控制偏离概率"
+        },
+        {
+          "id": "da-shu-ding-l-guan-zhu-n-qu-yu-wu-qiong-0t2fh8",
+          "title": "大数定律关注 n 趋于无穷的平均行为",
+          "bodyMarkdown": "大数定律关注 n 趋于无穷的平均行为"
+        },
+        {
+          "id": "zhong-xin-ji-xian-ding-li-xu-yao-biao-05kxev",
+          "title": "中心极限定理需要标准化并关注误差尺度",
+          "bodyMarkdown": "中心极限定理需要标准化并关注误差尺度"
+        }
+      ],
+      "examples": [
+        {
+          "id": "yang-ben-liang-zeng-da-1b9dpi",
+          "title": "讲解例子",
+          "bodyMarkdown": "样本量增大时，抛硬币正面频率趋近 1/2；大量重复测量的均值近似正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。前者讲稳定，后者讲波动形状。\n\n### 解题步骤\n\n1. 确认独立同分布或矩条件\n2. 写出平均量/标准化量\n3. 选择定律并说明收敛含义\n\n### 易错点\n\n把“样本平均接近均值”理解为每次都接近，忽略概率和波动尺度。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c5-bo-nu-li-da-shu-ding-l",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c5",
+      "sectionId": "m1-p3-c5-s2",
+      "sectionTitle": "大数定律",
+      "title": "伯努利大数定律",
+      "summary": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。",
+      "tags": [
+        "从随机到稳定"
+      ],
+      "sortOrder": 30,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(|X−EX|≥ε)≤D(X)/ε²；(ΣXᵢ−nμ)/(σ√n)→N(0,1)",
+        "caption": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。"
+      },
+      "keyPoints": [
+        {
+          "id": "qie-bi-xue-fu-bu-deng-shi-yong-fang-cha-05y8ju",
+          "title": "切比雪夫不等式用方差控制偏离概率",
+          "bodyMarkdown": "切比雪夫不等式用方差控制偏离概率"
+        },
+        {
+          "id": "da-shu-ding-l-guan-zhu-n-qu-yu-wu-qiong-0t2fh8",
+          "title": "大数定律关注 n 趋于无穷的平均行为",
+          "bodyMarkdown": "大数定律关注 n 趋于无穷的平均行为"
+        },
+        {
+          "id": "zhong-xin-ji-xian-ding-li-xu-yao-biao-05kxev",
+          "title": "中心极限定理需要标准化并关注误差尺度",
+          "bodyMarkdown": "中心极限定理需要标准化并关注误差尺度"
+        }
+      ],
+      "examples": [
+        {
+          "id": "yang-ben-liang-zeng-da-1b9dpi",
+          "title": "讲解例子",
+          "bodyMarkdown": "样本量增大时，抛硬币正面频率趋近 1/2；大量重复测量的均值近似正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。前者讲稳定，后者讲波动形状。\n\n### 解题步骤\n\n1. 确认独立同分布或矩条件\n2. 写出平均量/标准化量\n3. 选择定律并说明收敛含义\n\n### 易错点\n\n把“样本平均接近均值”理解为每次都接近，忽略概率和波动尺度。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c5-xin-qin-da-shu-ding-l",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c5",
+      "sectionId": "m1-p3-c5-s2",
+      "sectionTitle": "大数定律",
+      "title": "辛钦大数定律",
+      "summary": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。",
+      "tags": [
+        "从随机到稳定"
+      ],
+      "sortOrder": 40,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(|X−EX|≥ε)≤D(X)/ε²；(ΣXᵢ−nμ)/(σ√n)→N(0,1)",
+        "caption": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。"
+      },
+      "keyPoints": [
+        {
+          "id": "qie-bi-xue-fu-bu-deng-shi-yong-fang-cha-05y8ju",
+          "title": "切比雪夫不等式用方差控制偏离概率",
+          "bodyMarkdown": "切比雪夫不等式用方差控制偏离概率"
+        },
+        {
+          "id": "da-shu-ding-l-guan-zhu-n-qu-yu-wu-qiong-0t2fh8",
+          "title": "大数定律关注 n 趋于无穷的平均行为",
+          "bodyMarkdown": "大数定律关注 n 趋于无穷的平均行为"
+        },
+        {
+          "id": "zhong-xin-ji-xian-ding-li-xu-yao-biao-05kxev",
+          "title": "中心极限定理需要标准化并关注误差尺度",
+          "bodyMarkdown": "中心极限定理需要标准化并关注误差尺度"
+        }
+      ],
+      "examples": [
+        {
+          "id": "yang-ben-liang-zeng-da-1b9dpi",
+          "title": "讲解例子",
+          "bodyMarkdown": "样本量增大时，抛硬币正面频率趋近 1/2；大量重复测量的均值近似正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。前者讲稳定，后者讲波动形状。\n\n### 解题步骤\n\n1. 确认独立同分布或矩条件\n2. 写出平均量/标准化量\n3. 选择定律并说明收敛含义\n\n### 易错点\n\n把“样本平均接近均值”理解为每次都接近，忽略概率和波动尺度。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c5-pin-l-wen-ding-dao-gai-l-de-si-xiang",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c5",
+      "sectionId": "m1-p3-c5-s2",
+      "sectionTitle": "大数定律",
+      "title": "频率稳定到概率的思想",
+      "summary": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。",
+      "tags": [
+        "从随机到稳定"
+      ],
+      "sortOrder": 50,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "P(|X−EX|≥ε)≤D(X)/ε²；(ΣXᵢ−nμ)/(σ√n)→N(0,1)",
+        "caption": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。"
+      },
+      "keyPoints": [
+        {
+          "id": "qie-bi-xue-fu-bu-deng-shi-yong-fang-cha-05y8ju",
+          "title": "切比雪夫不等式用方差控制偏离概率",
+          "bodyMarkdown": "切比雪夫不等式用方差控制偏离概率"
+        },
+        {
+          "id": "da-shu-ding-l-guan-zhu-n-qu-yu-wu-qiong-0t2fh8",
+          "title": "大数定律关注 n 趋于无穷的平均行为",
+          "bodyMarkdown": "大数定律关注 n 趋于无穷的平均行为"
+        },
+        {
+          "id": "zhong-xin-ji-xian-ding-li-xu-yao-biao-05kxev",
+          "title": "中心极限定理需要标准化并关注误差尺度",
+          "bodyMarkdown": "中心极限定理需要标准化并关注误差尺度"
+        }
+      ],
+      "examples": [
+        {
+          "id": "yang-ben-liang-zeng-da-1b9dpi",
+          "title": "讲解例子",
+          "bodyMarkdown": "样本量增大时，抛硬币正面频率趋近 1/2；大量重复测量的均值近似正态。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。前者讲稳定，后者讲波动形状。\n\n### 解题步骤\n\n1. 确认独立同分布或矩条件\n2. 写出平均量/标准化量\n3. 选择定律并说明收敛含义\n\n### 易错点\n\n把“样本平均接近均值”理解为每次都接近，忽略概率和波动尺度。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c5-du-li-tong-fen-bu-zhong-xin-ji-xian-1b8ul5",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c5",
+      "sectionId": "m1-p3-c5-s3",
+      "sectionTitle": "中心极限定理",
+      "title": "独立同分布中心极限定理",
+      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "tags": [
+        "逼近而非代入"
+      ],
+      "sortOrder": 60,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
+        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+      },
+      "keyPoints": [
+        {
+          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
+          "title": "左、右极限必须分别看",
+          "bodyMarkdown": "左、右极限必须分别看"
+        },
+        {
+          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
+          "title": "极限值不要求等于函数值",
+          "bodyMarkdown": "极限值不要求等于函数值"
+        },
+        {
+          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
+          "title": "∞ 不是一个可直接代入的数",
+          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+        }
+      ],
+      "examples": [
+        {
+          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "title": "讲解例子",
+          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c5-di-mo-fu-la-pu-la-si-ding-li",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c5",
+      "sectionId": "m1-p3-c5-s3",
+      "sectionTitle": "中心极限定理",
+      "title": "棣莫弗—拉普拉斯定理",
+      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "tags": [
+        "逼近而非代入"
+      ],
+      "sortOrder": 70,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
+        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+      },
+      "keyPoints": [
+        {
+          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
+          "title": "左、右极限必须分别看",
+          "bodyMarkdown": "左、右极限必须分别看"
+        },
+        {
+          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
+          "title": "极限值不要求等于函数值",
+          "bodyMarkdown": "极限值不要求等于函数值"
+        },
+        {
+          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
+          "title": "∞ 不是一个可直接代入的数",
+          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+        }
+      ],
+      "examples": [
+        {
+          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "title": "讲解例子",
+          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c5-biao-zhun-hua",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c5",
+      "sectionId": "m1-p3-c5-s3",
+      "sectionTitle": "中心极限定理",
+      "title": "标准化",
+      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "tags": [
+        "逼近而非代入"
+      ],
+      "sortOrder": 80,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
+        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+      },
+      "keyPoints": [
+        {
+          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
+          "title": "左、右极限必须分别看",
+          "bodyMarkdown": "左、右极限必须分别看"
+        },
+        {
+          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
+          "title": "极限值不要求等于函数值",
+          "bodyMarkdown": "极限值不要求等于函数值"
+        },
+        {
+          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
+          "title": "∞ 不是一个可直接代入的数",
+          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+        }
+      ],
+      "examples": [
+        {
+          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "title": "讲解例子",
+          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p3-c5-er-xiang-fen-bu-zheng-tai-jin-si",
+      "contentVersion": 1,
+      "subjectId": "probability",
+      "chapterId": "m1-p3-c5",
+      "sectionId": "m1-p3-c5-s3",
+      "sectionTitle": "中心极限定理",
+      "title": "二项分布正态近似",
+      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "tags": [
+        "逼近而非代入"
+      ],
+      "sortOrder": 90,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
+        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+      },
+      "keyPoints": [
+        {
+          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
+          "title": "左、右极限必须分别看",
+          "bodyMarkdown": "左、右极限必须分别看"
+        },
+        {
+          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
+          "title": "极限值不要求等于函数值",
+          "bodyMarkdown": "极限值不要求等于函数值"
+        },
+        {
+          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
+          "title": "∞ 不是一个可直接代入的数",
+          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+        }
+      ],
+      "examples": [
+        {
+          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "title": "讲解例子",
+          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+    }
+  ]
+}

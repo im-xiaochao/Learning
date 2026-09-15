@@ -1,0 +1,1183 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "m1-p1-c6",
+  "subjectId": "calculus",
+  "module": "数学一",
+  "title": "多重积分",
+  "sortOrder": 60,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-ding-yi-yu-ji-he-yi-yi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s1",
+      "sectionTitle": "二重积分",
+      "title": "定义与几何意义",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-ji-ben-xing-zhi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s1",
+      "sectionTitle": "二重积分",
+      "title": "基本性质",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 20,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-zhi-jiao-zuo-biao-ji-suan",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s1",
+      "sectionTitle": "二重积分",
+      "title": "直角坐标计算",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 30,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-x-xing-qu-yu",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s1",
+      "sectionTitle": "二重积分",
+      "title": "X 型区域",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 40,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-y-xing-qu-yu",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s1",
+      "sectionTitle": "二重积分",
+      "title": "Y 型区域",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 50,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-jiao-huan-ji-fen-ci-xu",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s1",
+      "sectionTitle": "二重积分",
+      "title": "交换积分次序",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 60,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-dui-chen-xing",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s1",
+      "sectionTitle": "二重积分",
+      "title": "对称性",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 70,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-x-r-cos-y-r-sin",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s2",
+      "sectionTitle": "极坐标二重积分",
+      "title": "x=r cosθ, y=r sinθ",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 80,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-mian-ji-yuan-da-r-dr-d",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s2",
+      "sectionTitle": "极坐标二重积分",
+      "title": "面积元 dA=r dr dθ",
+      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "tags": [
+        "把几何量切成微元"
+      ],
+      "sortOrder": 90,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "总量=∫微元量",
+        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+      },
+      "keyPoints": [
+        {
+          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
+          "title": "面积用高×宽",
+          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+        },
+        {
+          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
+          "title": "质量要乘密度",
+          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+        },
+        {
+          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
+          "title": "旋转体优先判断圆盘、垫片还是柱壳",
+          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+        }
+      ],
+      "examples": [
+        {
+          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "title": "讲解例子",
+          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-yuan-shan-xing-huan-xing-qu-yu",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s2",
+      "sectionTitle": "极坐标二重积分",
+      "title": "圆、扇形、环形区域",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 100,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-zuo-biao-xuan-ze-yuan-ze",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s2",
+      "sectionTitle": "极坐标二重积分",
+      "title": "坐标选择原则",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 110,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-ti-ji",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s3",
+      "sectionTitle": "二重积分应用",
+      "title": "体积",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 120,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-qu-mian-mian-ji-de-xiang-guan-zhun-bei",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s3",
+      "sectionTitle": "二重积分应用",
+      "title": "曲面面积的相关准备",
+      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "tags": [
+        "把几何量切成微元"
+      ],
+      "sortOrder": 130,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "总量=∫微元量",
+        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+      },
+      "keyPoints": [
+        {
+          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
+          "title": "面积用高×宽",
+          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+        },
+        {
+          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
+          "title": "质量要乘密度",
+          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+        },
+        {
+          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
+          "title": "旋转体优先判断圆盘、垫片还是柱壳",
+          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+        }
+      ],
+      "examples": [
+        {
+          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "title": "讲解例子",
+          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-zhi-liang",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s3",
+      "sectionTitle": "二重积分应用",
+      "title": "质量",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 140,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-zhi-xin",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s3",
+      "sectionTitle": "二重积分应用",
+      "title": "质心",
+      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "tags": [
+        "把几何量切成微元"
+      ],
+      "sortOrder": 150,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "总量=∫微元量",
+        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+      },
+      "keyPoints": [
+        {
+          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
+          "title": "面积用高×宽",
+          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+        },
+        {
+          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
+          "title": "质量要乘密度",
+          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+        },
+        {
+          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
+          "title": "旋转体优先判断圆盘、垫片还是柱壳",
+          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+        }
+      ],
+      "examples": [
+        {
+          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "title": "讲解例子",
+          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-zhuan-dong-guan-liang",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s3",
+      "sectionTitle": "二重积分应用",
+      "title": "转动惯量",
+      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "tags": [
+        "把几何量切成微元"
+      ],
+      "sortOrder": 160,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "总量=∫微元量",
+        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+      },
+      "keyPoints": [
+        {
+          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
+          "title": "面积用高×宽",
+          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+        },
+        {
+          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
+          "title": "质量要乘密度",
+          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+        },
+        {
+          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
+          "title": "旋转体优先判断圆盘、垫片还是柱壳",
+          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+        }
+      ],
+      "examples": [
+        {
+          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "title": "讲解例子",
+          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-ding-yi",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s4",
+      "sectionTitle": "三重积分",
+      "title": "定义",
+      "summary": "三重积分把体积、质量等空间总量拆成小体积元。直角、柱面和球面坐标各自适合不同边界，选择坐标的原则是让区域和被积函数尽量简单。",
+      "tags": [
+        "空间微元累加"
+      ],
+      "sortOrder": 170,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "M=∭ᴰρ(x,y,z)dV",
+        "caption": "三重积分把体积、质量等空间总量拆成小体积元。"
+      },
+      "keyPoints": [
+        {
+          "id": "ti-ji-wei-yuan-shi-dv",
+          "title": "体积微元是 dV",
+          "bodyMarkdown": "体积微元是 dV"
+        },
+        {
+          "id": "zhi-liang-hai-yao-cheng-mi-du",
+          "title": "质量还要乘密度 ρ",
+          "bodyMarkdown": "质量还要乘密度 ρ"
+        },
+        {
+          "id": "huan-zuo-biao-yao-cheng-dui-ying-de-0nzmyw",
+          "title": "换坐标要乘对应的 Jacobian",
+          "bodyMarkdown": "换坐标要乘对应的 Jacobian"
+        }
+      ],
+      "examples": [
+        {
+          "id": "qiu-zuo-biao-zhong-dv-r-08ia57",
+          "title": "讲解例子",
+          "bodyMarkdown": "球坐标中 dV=r²sinφ dr dφ dθ；球体边界只需限制 r。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "三重积分把体积、质量等空间总量拆成小体积元。直角、柱面和球面坐标各自适合不同边界，选择坐标的原则是让区域和被积函数尽量简单。\n\n### 解题步骤\n\n1. 画出立体区域\n2. 选择坐标系和投影/截面\n3. 写 dV 与积分范围\n\n### 易错点\n\n把二维面积元直接当三维体积元，或漏掉 Jacobian 因子。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-zhi-jiao-zuo-biao",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s4",
+      "sectionTitle": "三重积分",
+      "title": "直角坐标",
+      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "tags": [
+        "按面积元累加"
+      ],
+      "sortOrder": 180,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "latex",
+        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
+        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
+          "title": "X 型区域先写 y 的上下限",
+          "bodyMarkdown": "X 型区域先写 y 的上下限"
+        },
+        {
+          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
+          "title": "Y 型区域先写 x 的左右限",
+          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+        },
+        {
+          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
+          "title": "交换次序前要重新画边界",
+          "bodyMarkdown": "交换次序前要重新画边界"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "title": "讲解例子",
+          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-zhu-zuo-biao",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s4",
+      "sectionTitle": "三重积分",
+      "title": "柱坐标",
+      "summary": "极坐标用半径 r 和方向 θ 描述点，圆和扇形边界因此变得简单。",
+      "tags": [
+        "让坐标贴合边界"
+      ],
+      "sortOrder": 190,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "x=r cosθ，y=r sinθ，dA=r dr dθ",
+        "caption": "极坐标用半径 r 和方向 θ 描述点，圆和扇形边界因此变得简单。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-r-cos-y-r-sin",
+          "title": "x=r cosθ",
+          "bodyMarkdown": "x=r cosθ，y=r sinθ"
+        },
+        {
+          "id": "da-r-dr-d",
+          "title": "dA=r dr dθ",
+          "bodyMarkdown": "dA=r dr dθ"
+        },
+        {
+          "id": "xian-hua-jiao-du-fan-wei-zai-xie-ban-0br80v",
+          "title": "先画角度范围",
+          "bodyMarkdown": "先画角度范围，再写半径范围"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ban-jing-r-de-yuan-mian-0fg1dc",
+          "title": "讲解例子",
+          "bodyMarkdown": "半径 R 的圆面积为 ∫₀²π∫₀ᴿr drdθ=πR²。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "极坐标用半径 r 和方向 θ 描述点，圆和扇形边界因此变得简单。面积元不是 drdθ，而是半径方向的小长条与弧长共同形成的扇形小块，所以多出一个 r。\n\n### 解题步骤\n\n1. 画区域和原点\n2. 确定 θ 的扫描范围\n3. 确定每条射线上的 r 范围并补 Jacobian\n\n### 易错点\n\n忘记面积元中的 r，或角度范围覆盖多次/不完整。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-qiu-zuo-biao",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s4",
+      "sectionTitle": "三重积分",
+      "title": "球坐标",
+      "summary": "极坐标用半径 r 和方向 θ 描述点，圆和扇形边界因此变得简单。",
+      "tags": [
+        "让坐标贴合边界"
+      ],
+      "sortOrder": 200,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "x=r cosθ，y=r sinθ，dA=r dr dθ",
+        "caption": "极坐标用半径 r 和方向 θ 描述点，圆和扇形边界因此变得简单。"
+      },
+      "keyPoints": [
+        {
+          "id": "x-r-cos-y-r-sin",
+          "title": "x=r cosθ",
+          "bodyMarkdown": "x=r cosθ，y=r sinθ"
+        },
+        {
+          "id": "da-r-dr-d",
+          "title": "dA=r dr dθ",
+          "bodyMarkdown": "dA=r dr dθ"
+        },
+        {
+          "id": "xian-hua-jiao-du-fan-wei-zai-xie-ban-0br80v",
+          "title": "先画角度范围",
+          "bodyMarkdown": "先画角度范围，再写半径范围"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ban-jing-r-de-yuan-mian-0fg1dc",
+          "title": "讲解例子",
+          "bodyMarkdown": "半径 R 的圆面积为 ∫₀²π∫₀ᴿr drdθ=πR²。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "极坐标用半径 r 和方向 θ 描述点，圆和扇形边界因此变得简单。面积元不是 drdθ，而是半径方向的小长条与弧长共同形成的扇形小块，所以多出一个 r。\n\n### 解题步骤\n\n1. 画区域和原点\n2. 确定 θ 的扫描范围\n3. 确定每条射线上的 r 范围并补 Jacobian\n\n### 易错点\n\n忘记面积元中的 r，或角度范围覆盖多次/不完整。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-tou-ying-fa",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s4",
+      "sectionTitle": "三重积分",
+      "title": "投影法",
+      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "tags": [
+        "比较方向与分量"
+      ],
+      "sortOrder": 210,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
+        "caption": "内积把两个向量的长度和夹角联系起来。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
+          "title": "a·b=0 等价于非零向量垂直",
+          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+        },
+        {
+          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
+          "title": "内积是标量",
+          "bodyMarkdown": "内积是标量，不是向量"
+        },
+        {
+          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
+          "title": "投影要注意投到哪一个向量上",
+          "bodyMarkdown": "投影要注意投到哪一个向量上"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "title": "讲解例子",
+          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-jie-mian-fa",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s4",
+      "sectionTitle": "三重积分",
+      "title": "截面法",
+      "summary": "三重积分把体积、质量等空间总量拆成小体积元。直角、柱面和球面坐标各自适合不同边界，选择坐标的原则是让区域和被积函数尽量简单。",
+      "tags": [
+        "空间微元累加"
+      ],
+      "sortOrder": 220,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "M=∭ᴰρ(x,y,z)dV",
+        "caption": "三重积分把体积、质量等空间总量拆成小体积元。"
+      },
+      "keyPoints": [
+        {
+          "id": "ti-ji-wei-yuan-shi-dv",
+          "title": "体积微元是 dV",
+          "bodyMarkdown": "体积微元是 dV"
+        },
+        {
+          "id": "zhi-liang-hai-yao-cheng-mi-du",
+          "title": "质量还要乘密度 ρ",
+          "bodyMarkdown": "质量还要乘密度 ρ"
+        },
+        {
+          "id": "huan-zuo-biao-yao-cheng-dui-ying-de-0nzmyw",
+          "title": "换坐标要乘对应的 Jacobian",
+          "bodyMarkdown": "换坐标要乘对应的 Jacobian"
+        }
+      ],
+      "examples": [
+        {
+          "id": "qiu-zuo-biao-zhong-dv-r-08ia57",
+          "title": "讲解例子",
+          "bodyMarkdown": "球坐标中 dV=r²sinφ dr dφ dθ；球体边界只需限制 r。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "三重积分把体积、质量等空间总量拆成小体积元。直角、柱面和球面坐标各自适合不同边界，选择坐标的原则是让区域和被积函数尽量简单。\n\n### 解题步骤\n\n1. 画出立体区域\n2. 选择坐标系和投影/截面\n3. 写 dV 与积分范围\n\n### 易错点\n\n把二维面积元直接当三维体积元，或漏掉 Jacobian 因子。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p1-c6-dui-chen-xing-2",
+      "contentVersion": 1,
+      "subjectId": "calculus",
+      "chapterId": "m1-p1-c6",
+      "sectionId": "m1-p1-c6-s4",
+      "sectionTitle": "三重积分",
+      "title": "对称性",
+      "summary": "三重积分把体积、质量等空间总量拆成小体积元。直角、柱面和球面坐标各自适合不同边界，选择坐标的原则是让区域和被积函数尽量简单。",
+      "tags": [
+        "空间微元累加"
+      ],
+      "sortOrder": 230,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "M=∭ᴰρ(x,y,z)dV",
+        "caption": "三重积分把体积、质量等空间总量拆成小体积元。"
+      },
+      "keyPoints": [
+        {
+          "id": "ti-ji-wei-yuan-shi-dv",
+          "title": "体积微元是 dV",
+          "bodyMarkdown": "体积微元是 dV"
+        },
+        {
+          "id": "zhi-liang-hai-yao-cheng-mi-du",
+          "title": "质量还要乘密度 ρ",
+          "bodyMarkdown": "质量还要乘密度 ρ"
+        },
+        {
+          "id": "huan-zuo-biao-yao-cheng-dui-ying-de-0nzmyw",
+          "title": "换坐标要乘对应的 Jacobian",
+          "bodyMarkdown": "换坐标要乘对应的 Jacobian"
+        }
+      ],
+      "examples": [
+        {
+          "id": "qiu-zuo-biao-zhong-dv-r-08ia57",
+          "title": "讲解例子",
+          "bodyMarkdown": "球坐标中 dV=r²sinφ dr dφ dθ；球体边界只需限制 r。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "三重积分把体积、质量等空间总量拆成小体积元。直角、柱面和球面坐标各自适合不同边界，选择坐标的原则是让区域和被积函数尽量简单。\n\n### 解题步骤\n\n1. 画出立体区域\n2. 选择坐标系和投影/截面\n3. 写 dV 与积分范围\n\n### 易错点\n\n把二维面积元直接当三维体积元，或漏掉 Jacobian 因子。"
+    }
+  ]
+}

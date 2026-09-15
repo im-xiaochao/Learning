@@ -1,0 +1,1051 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "m1-p2-c1",
+  "subjectId": "algebra",
+  "module": "数学一",
+  "title": "行列式",
+  "sortOrder": 10,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-er-jie-san-jie-n-jie-hang-lie-shi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s1",
+      "sectionTitle": "行列式概念",
+      "title": "二阶、三阶、n 阶行列式",
+      "summary": "高阶导数继续描述前一阶变化率如何变化。面对多次求导，先找周期、递推和乘积结构，再决定直接求导还是使用莱布尼茨公式，重点是保持结构而不是展开所有项。",
+      "tags": [
+        "变化率的变化率"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(uv)⁽ⁿ⁾=Σₖ₌₀ⁿ Cₙᵏu⁽ᵏ⁾v⁽ⁿ⁻ᵏ⁾",
+        "caption": "高阶导数继续描述前一阶变化率如何变化。"
+      },
+      "keyPoints": [
+        {
+          "id": "er-jie-dao-shu-chang-yong-yu-pan-duan-0c2zb4",
+          "title": "二阶导数常用于判断凹凸和极值",
+          "bodyMarkdown": "二阶导数常用于判断凹凸和极值"
+        },
+        {
+          "id": "zhou-qi-han-shu-de-gao-jie-dao-shu-ke-1sekdi",
+          "title": "周期函数的高阶导数可能循环出现",
+          "bodyMarkdown": "周期函数的高阶导数可能循环出现"
+        },
+        {
+          "id": "cheng-ji-de-n-jie-dao-shu-xu-yao-er-0s7sq1",
+          "title": "乘积的 n 阶导数需要二项式系数",
+          "bodyMarkdown": "乘积的 n 阶导数需要二项式系数"
+        }
+      ],
+      "examples": [
+        {
+          "id": "y-e-sin-x-ke-li-yong-1epqql",
+          "title": "讲解例子",
+          "bodyMarkdown": "y=eˣsin x 可利用 sin、cos 的导数循环，按周期整理 y⁽ⁿ⁾。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "高阶导数继续描述前一阶变化率如何变化。面对多次求导，先找周期、递推和乘积结构，再决定直接求导还是使用莱布尼茨公式，重点是保持结构而不是展开所有项。\n\n### 解题步骤\n\n1. 识别函数结构\n2. 写出导数循环或递推\n3. 用公式整理并检查阶数\n\n### 易错点\n\n把 n 阶导数误写成只保留首尾两项，或漏掉组合数。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-pai-lie-yu-ni-xu-shu",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s1",
+      "sectionTitle": "行列式概念",
+      "title": "排列与逆序数",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 20,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-hang-lie-shi-zhan-kai-ding-yi-de-ji-ben-0r1i4g",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s1",
+      "sectionTitle": "行列式概念",
+      "title": "行列式展开定义的基本思想",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 30,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-zhuan-zhi-hou-zhi-bu-bian",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s2",
+      "sectionTitle": "行列式性质",
+      "title": "转置后值不变",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 40,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-jiao-huan-liang-hang-lie-bian-hao",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s2",
+      "sectionTitle": "行列式性质",
+      "title": "交换两行/列变号",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 50,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-mou-xing-lie-you-gong-yin-zi-ke-ti-chu",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s2",
+      "sectionTitle": "行列式性质",
+      "title": "某行/列有公因子可提出",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 60,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-liang-hang-lie-xiang-tong-huo-cheng-bi-10bb5d",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s2",
+      "sectionTitle": "行列式性质",
+      "title": "两行/列相同或成比例则为 0",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 70,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-yi-hang-lie-de-bei-shu-jia-dao-ling-yi-1ofvvo",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s2",
+      "sectionTitle": "行列式性质",
+      "title": "一行/列的倍数加到另一行/列值不变",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 80,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-hang-lie-shi-dui-mou-xing-lie-de-xian-1m8vqx",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s2",
+      "sectionTitle": "行列式性质",
+      "title": "行列式对某行/列的线性性质",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 90,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-yu-zi-shi-m-ij",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s3",
+      "sectionTitle": "余子式与代数余子式",
+      "title": "余子式 M_ij",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 100,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-dai-shu-yu-zi-shi-a-ij-1-i-j-m-ij",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s3",
+      "sectionTitle": "余子式与代数余子式",
+      "title": "代数余子式 A_ij=(-1)^(i+j)M_ij",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 110,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-la-pu-la-si-zhan-kai",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s4",
+      "sectionTitle": "按行/列展开",
+      "title": "拉普拉斯展开",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 120,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-xuan-ze-ling-jiao-duo-de-xing-lie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s4",
+      "sectionTitle": "按行/列展开",
+      "title": "选择零较多的行/列",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 130,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-hua-san-jiao-xing",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s5",
+      "sectionTitle": "常见计算技巧",
+      "title": "化三角形",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 140,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-zhan-kai",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s5",
+      "sectionTitle": "常见计算技巧",
+      "title": "展开",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 150,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-jia-bian",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s5",
+      "sectionTitle": "常见计算技巧",
+      "title": "加边",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 160,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-di-tui",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s5",
+      "sectionTitle": "常见计算技巧",
+      "title": "递推",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 170,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-chai-fen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s5",
+      "sectionTitle": "常见计算技巧",
+      "title": "拆分",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 180,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m1-p2-c1-fan-de-meng-de-hang-lie-shi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m1-p2-c1",
+      "sectionId": "m1-p2-c1-s5",
+      "sectionTitle": "常见计算技巧",
+      "title": "范德蒙德行列式",
+      "summary": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数",
+      "tags": [
+        "有向面积的缩放"
+      ],
+      "sortOrder": 190,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
+        "caption": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+      },
+      "keyPoints": [
+        {
+          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
+          "title": "几何本质",
+          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+        },
+        {
+          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
+          "title": "交换两行变号",
+          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+        },
+        {
+          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
+          "title": "三角矩阵行列式等于对角线乘积",
+          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [
+        {
+          "title": "张宇基础30讲·线代第1讲"
+        }
+      ],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "张宇从几何本质讲行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。\n\n> 来源：张宇基础30讲·线代第1讲"
+    }
+  ]
+}

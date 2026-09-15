@@ -1,0 +1,979 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "m2-p2-c6",
+  "subjectId": "algebra",
+  "module": "数学二",
+  "title": "二次型",
+  "sortOrder": 120,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-ding-yi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s1",
+      "sectionTitle": "二次型",
+      "title": "定义",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-ju-zhen-biao-shi-x-tax",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s1",
+      "sectionTitle": "二次型",
+      "title": "矩阵表示 x^TAx",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 20,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-dui-chen-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s1",
+      "sectionTitle": "二次型",
+      "title": "对称矩阵",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 30,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-b-c-tac",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s2",
+      "sectionTitle": "合同变换",
+      "title": "B=C^TAC",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 40,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-he-tong-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s2",
+      "sectionTitle": "合同变换",
+      "title": "合同矩阵",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 50,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-er-ci-xing-de-zhi-deng-yu-qi-dui-chen-0hic6u",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s3",
+      "sectionTitle": "二次型的秩",
+      "title": "二次型的秩等于其对称矩阵的秩",
+      "summary": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。",
+      "tags": [
+        "有效独立方向数"
+      ],
+      "sortOrder": 60,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "r(A)=非零行阶梯形的行数",
+        "caption": "秩表示矩阵或向量组中真正独立的方向数。"
+      },
+      "keyPoints": [
+        {
+          "id": "zhi-deng-yu-fei-ling-xing-shu-ye-deng-0kalyu",
+          "title": "秩等于非零行数",
+          "bodyMarkdown": "秩等于非零行数，也等于最高阶非零子式阶数"
+        },
+        {
+          "id": "chu-deng-bian-huan-bu-gai-bian-zhi",
+          "title": "初等变换不改变秩",
+          "bodyMarkdown": "初等变换不改变秩"
+        },
+        {
+          "id": "r-a-min-xing-shu-lie-shu",
+          "title": "r(A)≤min(行数",
+          "bodyMarkdown": "r(A)≤min(行数,列数)"
+        }
+      ],
+      "examples": [
+        {
+          "id": "3-ge-wei-zhi-shu-de-151bbs",
+          "title": "讲解例子",
+          "bodyMarkdown": "3 个未知数的方程组若秩为 2 且有解，解集中有 1 个自由参数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。\n\n### 解题步骤\n\n1. 做初等行变换\n2. 化为阶梯形\n3. 数主元并解释自由变量\n\n### 易错点\n\n把非零元素个数当成秩；同一行有多个非零数仍只贡献一个主元方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-yong-chu-deng-bian-huan-huo-fei-ling-zi-0hxv1t",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s3",
+      "sectionTitle": "二次型的秩",
+      "title": "用初等变换或非零子式判断秩",
+      "summary": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。",
+      "tags": [
+        "线性变换的记法"
+      ],
+      "sortOrder": 70,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "(AB)ᵀ=BᵀAᵀ；I A=A I=A",
+        "caption": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。"
+      },
+      "keyPoints": [
+        {
+          "id": "cheng-fa-yao-qiu-qian-yi-ju-zhen-lie-10bmu5",
+          "title": "乘法要求前一矩阵列数等于后一矩阵行数",
+          "bodyMarkdown": "乘法要求前一矩阵列数等于后一矩阵行数"
+        },
+        {
+          "id": "ab-tong-chang-bu-deng-yu-ba",
+          "title": "AB 通常不等于 BA",
+          "bodyMarkdown": "AB 通常不等于 BA"
+        },
+        {
+          "id": "zhuan-zhi-hui-fan-zhuan-cheng-fa-shun-xu",
+          "title": "转置会反转乘法顺序",
+          "bodyMarkdown": "转置会反转乘法顺序"
+        }
+      ],
+      "examples": [
+        {
+          "id": "dui-jiao-ju-zhen-xiang-0sjlxq",
+          "title": "讲解例子",
+          "bodyMarkdown": "对角矩阵相乘只需对应对角线相乘；这解释了它适合表示独立方向缩放。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵是按规则排列的数表，既可表示线性方程组，也可表示坐标变换。矩阵乘法表示变换的复合，因此一般不满足交换律；特殊矩阵则把某类变换的结构直接写出来。\n\n### 解题步骤\n\n1. 确认矩阵尺寸\n2. 按行乘列计算或用结构化性质\n3. 检查结果尺寸和顺序\n\n### 易错点\n\n把矩阵乘法当成元素对应相乘，或忘记乘法顺序。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-zhi-biao-shi-er-ci-xing-zhong-zhen-1e6ub9",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s3",
+      "sectionTitle": "二次型的秩",
+      "title": "秩表示二次型中真正独立的平方方向数",
+      "summary": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。",
+      "tags": [
+        "有效独立方向数"
+      ],
+      "sortOrder": 80,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "r(A)=非零行阶梯形的行数",
+        "caption": "秩表示矩阵或向量组中真正独立的方向数。"
+      },
+      "keyPoints": [
+        {
+          "id": "zhi-deng-yu-fei-ling-xing-shu-ye-deng-0kalyu",
+          "title": "秩等于非零行数",
+          "bodyMarkdown": "秩等于非零行数，也等于最高阶非零子式阶数"
+        },
+        {
+          "id": "chu-deng-bian-huan-bu-gai-bian-zhi",
+          "title": "初等变换不改变秩",
+          "bodyMarkdown": "初等变换不改变秩"
+        },
+        {
+          "id": "r-a-min-xing-shu-lie-shu",
+          "title": "r(A)≤min(行数",
+          "bodyMarkdown": "r(A)≤min(行数,列数)"
+        }
+      ],
+      "examples": [
+        {
+          "id": "3-ge-wei-zhi-shu-de-151bbs",
+          "title": "讲解例子",
+          "bodyMarkdown": "3 个未知数的方程组若秩为 2 且有解，解集中有 1 个自由参数。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。\n\n### 解题步骤\n\n1. 做初等行变换\n2. 化为阶梯形\n3. 数主元并解释自由变量\n\n### 易错点\n\n把非零元素个数当成秩；同一行有多个非零数仍只贡献一个主元方向。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-biao-zhun-xing",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s4",
+      "sectionTitle": "标准形与规范形",
+      "title": "标准形",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 90,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-gui-fan-xing",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s4",
+      "sectionTitle": "标准形与规范形",
+      "title": "规范形",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 100,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-zheng-fu-guan-xing-zhi-shu",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s4",
+      "sectionTitle": "标准形与规范形",
+      "title": "正/负惯性指数",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 110,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-ke-ni-xian-xing-bian-huan-bu-gai-bian-0gbrh4",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s5",
+      "sectionTitle": "惯性定理",
+      "title": "可逆线性变换不改变正、负惯性指数",
+      "summary": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。",
+      "tags": [
+        "撤销变换"
+      ],
+      "sortOrder": 120,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "A⁻¹=adj(A)/|A|（|A|≠0）",
+        "caption": "逆矩阵把矩阵造成的线性变换撤销。"
+      },
+      "keyPoints": [
+        {
+          "id": "aa-i",
+          "title": "AA⁻¹=I",
+          "bodyMarkdown": "AA⁻¹=I"
+        },
+        {
+          "id": "ke-ni-a-0-r-a-n",
+          "title": "可逆 ⇔ |A|≠0 ⇔ r(A)=n",
+          "bodyMarkdown": "可逆 ⇔ |A|≠0 ⇔ r(A)=n"
+        },
+        {
+          "id": "qiu-ni-ke-yong-ban-sui-ju-zhen-huo-zeng-1il6ce",
+          "title": "求逆可用伴随矩阵或增广矩阵消元",
+          "bodyMarkdown": "求逆可用伴随矩阵或增广矩阵消元"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba-a-i-xing-bian-huan-05mydu",
+          "title": "讲解例子",
+          "bodyMarkdown": "把 [A|I] 行变换为 [I|A⁻¹]，右半部分就是逆矩阵。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。\n\n### 解题步骤\n\n1. 先判可逆性\n2. 选择伴随或初等变换\n3. 用乘积验证结果\n\n### 易错点\n\n行列式为零时不存在逆矩阵，不能用除法“形式求逆”。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-gui-fan-xing-zhong-de-zheng-xiang-shu-0fb51n",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s5",
+      "sectionTitle": "惯性定理",
+      "title": "规范形中的正项数、负项数和零项数是稳定不变量",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 130,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-yong-guan-xing-zhi-shu-pan-duan-er-ci-05vhle",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s5",
+      "sectionTitle": "惯性定理",
+      "title": "用惯性指数判断二次型的符号结构",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 140,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-pei-fang-fa",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s6",
+      "sectionTitle": "化标准形",
+      "title": "配方法",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 150,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-zheng-jiao-bian-huan-fa",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s6",
+      "sectionTitle": "化标准形",
+      "title": "正交变换法",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 160,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-zheng-ding-ding-yi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s7",
+      "sectionTitle": "正定二次型与正定矩阵",
+      "title": "正定定义",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 170,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-te-zheng-zhi-pan-bie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s7",
+      "sectionTitle": "正定二次型与正定矩阵",
+      "title": "特征值判别",
+      "summary": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。",
+      "tags": [
+        "保持方向的变换"
+      ],
+      "sortOrder": 180,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "Aα=λα，α≠0；det(λI−A)=0",
+        "caption": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。"
+      },
+      "keyPoints": [
+        {
+          "id": "te-zheng-xiang-liang-bu-neng-shi-ling-1p3i1t",
+          "title": "特征向量不能是零向量",
+          "bodyMarkdown": "特征向量不能是零向量"
+        },
+        {
+          "id": "bu-tong-te-zheng-zhi-dui-ying-de-te-03qxom",
+          "title": "不同特征值对应的特征向量线性无关",
+          "bodyMarkdown": "不同特征值对应的特征向量线性无关"
+        },
+        {
+          "id": "ji-shi-te-zheng-zhi-zhi-he-hang-lie-shi-15y31n",
+          "title": "迹是特征值之和",
+          "bodyMarkdown": "迹是特征值之和，行列式是特征值之积"
+        }
+      ],
+      "examples": [
+        {
+          "id": "a-diag-2-3-shi-1-0-he-0-1ft0xk",
+          "title": "讲解例子",
+          "bodyMarkdown": "A=diag(2,3) 时，(1,0) 和 (0,1) 分别是特征值 2、3 的特征向量。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。求解时先求特征方程，再对每个特征值解对应齐次方程。\n\n### 解题步骤\n\n1. 解 det(λI−A)=0\n2. 对每个 λ 解 (A−λI)x=0\n3. 检查重根对应的独立向量数量\n\n### 易错点\n\n把零向量当特征向量，或只求出特征值却没有求特征向量。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c6-shun-xu-zhu-zi-shi-pan-bie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c6",
+      "sectionId": "m2-p2-c6-s7",
+      "sectionTitle": "正定二次型与正定矩阵",
+      "title": "顺序主子式判别",
+      "summary": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。",
+      "tags": [
+        "把二次型化标准"
+      ],
+      "sortOrder": 190,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）",
+        "caption": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。"
+      },
+      "keyPoints": [
+        {
+          "id": "jiao-cha-xiang-xi-shu-yao-fen-pei-dao-13l49o",
+          "title": "交叉项系数要分配到对称矩阵的两个对称位置",
+          "bodyMarkdown": "交叉项系数要分配到对称矩阵的两个对称位置"
+        },
+        {
+          "id": "zheng-ding-ju-zhen-de-quan-bu-te-zheng-04twji",
+          "title": "正定矩阵的全部特征值为正",
+          "bodyMarkdown": "正定矩阵的全部特征值为正"
+        },
+        {
+          "id": "zheng-ding-hai-ke-yong-shun-xu-zhu-zi-18qhan",
+          "title": "正定还可用顺序主子式判别",
+          "bodyMarkdown": "正定还可用顺序主子式判别"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-de-ju-zhen-diag-1-0t7kt3",
+          "title": "讲解例子",
+          "bodyMarkdown": "x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。合同变换改变坐标但保留正负惯性指数；正定时除零向量外函数值始终为正，几何上对应向上开的椭圆型碗面。\n\n### 解题步骤\n\n1. 写出对称矩阵 A\n2. 用配方或正交变换消交叉项\n3. 根据符号/特征值判定类型\n\n### 易错点\n\n只看主对角线为正不能充分推出正定，必须检查整体结构。"
+    }
+  ]
+}

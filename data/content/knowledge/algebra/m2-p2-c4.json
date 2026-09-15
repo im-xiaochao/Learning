@@ -1,0 +1,928 @@
+{
+  "schemaVersion": "1.0",
+  "chapterId": "m2-p2-c4",
+  "subjectId": "algebra",
+  "module": "数学二",
+  "title": "线性方程组",
+  "sortOrder": 100,
+  "knowledge": [
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-shi-yong-tiao-jian",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s1",
+      "sectionTitle": "克拉默法则",
+      "title": "使用条件",
+      "summary": "克拉默法则专门处理 n 元一次方程组。把方程组写成 Ax=b 后，只要系数矩阵 A 是方阵且 det(A)≠0，方程组就有唯一解；每个未知量都可以用“替换一列后的行列式 ÷ 原行列式”求出。",
+      "tags": [
+        "用行列式直接求解"
+      ],
+      "sortOrder": 10,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "Δ=det(A)，xᵢ=Δᵢ/Δ（Δ≠0）",
+        "caption": "克拉默法则专门处理 n 元一次方程组。"
+      },
+      "keyPoints": [
+        {
+          "id": "bi-xu-shi-fang-cheng-shu-deng-yu-wei-1pr1yr",
+          "title": "必须是方程数等于未知数个数的方阵",
+          "bodyMarkdown": "必须是方程数等于未知数个数的方阵"
+        },
+        {
+          "id": "det-a-0-deng-jia-yu-fang-cheng-zu-you-0ovx1y",
+          "title": "det(A)≠0 等价于方程组有唯一解",
+          "bodyMarkdown": "det(A)≠0 等价于方程组有唯一解"
+        },
+        {
+          "id": "ti-huan-di-i-lie-shi-zhi-ba-zhe-yi-lie-0wenhp",
+          "title": "替换第 i 列时只把这一列换成常数列 b",
+          "bodyMarkdown": "替换第 i 列时只把这一列换成常数列 b，其他列不动"
+        }
+      ],
+      "examples": [
+        {
+          "id": "2x-y-5-x-y-1-shi-3-6-3-1r0lgr",
+          "title": "讲解例子",
+          "bodyMarkdown": "2x+y=5，x−y=1 时，Δ=−3，Δₓ=−6，Δᵧ=−3，所以 x=2，y=1。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "克拉默法则专门处理 n 元一次方程组。把方程组写成 Ax=b 后，只要系数矩阵 A 是方阵且 det(A)≠0，方程组就有唯一解；每个未知量都可以用“替换一列后的行列式 ÷ 原行列式”求出。\n\n### 解题步骤\n\n1. 确认 A 是方阵且 det(A)≠0\n2. 按未知量替换对应列并计算行列式\n3. 用 Δᵢ/Δ 写出解并代回检查\n\n### 易错点\n\n把克拉默法则用于非方阵或 det(A)=0 的情形；行列式为零时不能用分母相除。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-gong-shi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s1",
+      "sectionTitle": "克拉默法则",
+      "title": "公式",
+      "summary": "克拉默法则专门处理 n 元一次方程组。把方程组写成 Ax=b 后，只要系数矩阵 A 是方阵且 det(A)≠0，方程组就有唯一解；每个未知量都可以用“替换一列后的行列式 ÷ 原行列式”求出。",
+      "tags": [
+        "用行列式直接求解"
+      ],
+      "sortOrder": 20,
+      "estimatedMinutes": 5,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "Δ=det(A)，xᵢ=Δᵢ/Δ（Δ≠0）",
+        "caption": "克拉默法则专门处理 n 元一次方程组。"
+      },
+      "keyPoints": [
+        {
+          "id": "bi-xu-shi-fang-cheng-shu-deng-yu-wei-1pr1yr",
+          "title": "必须是方程数等于未知数个数的方阵",
+          "bodyMarkdown": "必须是方程数等于未知数个数的方阵"
+        },
+        {
+          "id": "det-a-0-deng-jia-yu-fang-cheng-zu-you-0ovx1y",
+          "title": "det(A)≠0 等价于方程组有唯一解",
+          "bodyMarkdown": "det(A)≠0 等价于方程组有唯一解"
+        },
+        {
+          "id": "ti-huan-di-i-lie-shi-zhi-ba-zhe-yi-lie-0wenhp",
+          "title": "替换第 i 列时只把这一列换成常数列 b",
+          "bodyMarkdown": "替换第 i 列时只把这一列换成常数列 b，其他列不动"
+        }
+      ],
+      "examples": [
+        {
+          "id": "2x-y-5-x-y-1-shi-3-6-3-1r0lgr",
+          "title": "讲解例子",
+          "bodyMarkdown": "2x+y=5，x−y=1 时，Δ=−3，Δₓ=−6，Δᵧ=−3，所以 x=2，y=1。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "克拉默法则专门处理 n 元一次方程组。把方程组写成 Ax=b 后，只要系数矩阵 A 是方阵且 det(A)≠0，方程组就有唯一解；每个未知量都可以用“替换一列后的行列式 ÷ 原行列式”求出。\n\n### 解题步骤\n\n1. 确认 A 是方阵且 det(A)≠0\n2. 按未知量替换对应列并计算行列式\n3. 用 Δᵢ/Δ 写出解并代回检查\n\n### 易错点\n\n把克拉默法则用于非方阵或 det(A)=0 的情形；行列式为零时不能用分母相除。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-ax-0",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s2",
+      "sectionTitle": "齐次线性方程组",
+      "title": "Ax=0",
+      "summary": "线性方程组的解集由主元变量和自由变量共同构成。先用高斯消元比较系数矩阵与增广矩阵的秩，判定有无解；有解后再用未知数个数判断唯一解还是无穷多解。",
+      "tags": [
+        "秩决定解的自由度"
+      ],
+      "sortOrder": 30,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "有解 ⇔ r(A)=r(A|b)；齐次非零解 ⇔ r(A)<n",
+        "caption": "线性方程组的解集由主元变量和自由变量共同构成。"
+      },
+      "keyPoints": [
+        {
+          "id": "you-jie-r-a-r-a-b",
+          "title": "有解 ⇔ r(A)=r(A|b)",
+          "bodyMarkdown": "有解 ⇔ r(A)=r(A|b)"
+        },
+        {
+          "id": "wei-yi-jie-r-a-r-a-b-n",
+          "title": "唯一解 ⇔ r(A)=r(A|b)=n",
+          "bodyMarkdown": "唯一解 ⇔ r(A)=r(A|b)=n"
+        },
+        {
+          "id": "fei-qi-ci-tong-jie-yi-ge-te-jie-qi-ci-0462sj",
+          "title": "非齐次通解 = 一个特解 + 齐次通解",
+          "bodyMarkdown": "非齐次通解 = 一个特解 + 齐次通解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ruo-n-3-zhi-wei-2-qie-0bqihq",
+          "title": "讲解例子",
+          "bodyMarkdown": "若 n=3、秩为 2 且有解，则有 1 个自由参数，解集通常是一条直线。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "线性方程组的解集由主元变量和自由变量共同构成。先用高斯消元比较系数矩阵与增广矩阵的秩，判定有无解；有解后再用未知数个数判断唯一解还是无穷多解。\n\n### 解题步骤\n\n1. 写增广矩阵\n2. 化阶梯形并比较秩\n3. 选自由变量并参数化\n\n### 易错点\n\n看到“方程数少于未知数”就直接判无穷解，仍要排除无解情况。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-fei-ling-jie-cun-zai-tiao-jian",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s2",
+      "sectionTitle": "齐次线性方程组",
+      "title": "非零解存在条件",
+      "summary": "线性方程组的解集由主元变量和自由变量共同构成。先用高斯消元比较系数矩阵与增广矩阵的秩，判定有无解；有解后再用未知数个数判断唯一解还是无穷多解。",
+      "tags": [
+        "秩决定解的自由度"
+      ],
+      "sortOrder": 40,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "有解 ⇔ r(A)=r(A|b)；齐次非零解 ⇔ r(A)<n",
+        "caption": "线性方程组的解集由主元变量和自由变量共同构成。"
+      },
+      "keyPoints": [
+        {
+          "id": "you-jie-r-a-r-a-b",
+          "title": "有解 ⇔ r(A)=r(A|b)",
+          "bodyMarkdown": "有解 ⇔ r(A)=r(A|b)"
+        },
+        {
+          "id": "wei-yi-jie-r-a-r-a-b-n",
+          "title": "唯一解 ⇔ r(A)=r(A|b)=n",
+          "bodyMarkdown": "唯一解 ⇔ r(A)=r(A|b)=n"
+        },
+        {
+          "id": "fei-qi-ci-tong-jie-yi-ge-te-jie-qi-ci-0462sj",
+          "title": "非齐次通解 = 一个特解 + 齐次通解",
+          "bodyMarkdown": "非齐次通解 = 一个特解 + 齐次通解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ruo-n-3-zhi-wei-2-qie-0bqihq",
+          "title": "讲解例子",
+          "bodyMarkdown": "若 n=3、秩为 2 且有解，则有 1 个自由参数，解集通常是一条直线。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "线性方程组的解集由主元变量和自由变量共同构成。先用高斯消元比较系数矩阵与增广矩阵的秩，判定有无解；有解后再用未知数个数判断唯一解还是无穷多解。\n\n### 解题步骤\n\n1. 写增广矩阵\n2. 化阶梯形并比较秩\n3. 选自由变量并参数化\n\n### 易错点\n\n看到“方程数少于未知数”就直接判无穷解，仍要排除无解情况。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-r-a-n",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s2",
+      "sectionTitle": "齐次线性方程组",
+      "title": "r(A)<n",
+      "summary": "线性方程组的解集由主元变量和自由变量共同构成。先用高斯消元比较系数矩阵与增广矩阵的秩，判定有无解；有解后再用未知数个数判断唯一解还是无穷多解。",
+      "tags": [
+        "秩决定解的自由度"
+      ],
+      "sortOrder": 50,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "有解 ⇔ r(A)=r(A|b)；齐次非零解 ⇔ r(A)<n",
+        "caption": "线性方程组的解集由主元变量和自由变量共同构成。"
+      },
+      "keyPoints": [
+        {
+          "id": "you-jie-r-a-r-a-b",
+          "title": "有解 ⇔ r(A)=r(A|b)",
+          "bodyMarkdown": "有解 ⇔ r(A)=r(A|b)"
+        },
+        {
+          "id": "wei-yi-jie-r-a-r-a-b-n",
+          "title": "唯一解 ⇔ r(A)=r(A|b)=n",
+          "bodyMarkdown": "唯一解 ⇔ r(A)=r(A|b)=n"
+        },
+        {
+          "id": "fei-qi-ci-tong-jie-yi-ge-te-jie-qi-ci-0462sj",
+          "title": "非齐次通解 = 一个特解 + 齐次通解",
+          "bodyMarkdown": "非齐次通解 = 一个特解 + 齐次通解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ruo-n-3-zhi-wei-2-qie-0bqihq",
+          "title": "讲解例子",
+          "bodyMarkdown": "若 n=3、秩为 2 且有解，则有 1 个自由参数，解集通常是一条直线。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "线性方程组的解集由主元变量和自由变量共同构成。先用高斯消元比较系数矩阵与增广矩阵的秩，判定有无解；有解后再用未知数个数判断唯一解还是无穷多解。\n\n### 解题步骤\n\n1. 写增广矩阵\n2. 化阶梯形并比较秩\n3. 选自由变量并参数化\n\n### 易错点\n\n看到“方程数少于未知数”就直接判无穷解，仍要排除无解情况。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-ji-chu-jie-xi",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s2",
+      "sectionTitle": "齐次线性方程组",
+      "title": "基础解系",
+      "summary": "线性方程组的解集由主元变量和自由变量共同构成。先用高斯消元比较系数矩阵与增广矩阵的秩，判定有无解；有解后再用未知数个数判断唯一解还是无穷多解。",
+      "tags": [
+        "秩决定解的自由度"
+      ],
+      "sortOrder": 60,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "有解 ⇔ r(A)=r(A|b)；齐次非零解 ⇔ r(A)<n",
+        "caption": "线性方程组的解集由主元变量和自由变量共同构成。"
+      },
+      "keyPoints": [
+        {
+          "id": "you-jie-r-a-r-a-b",
+          "title": "有解 ⇔ r(A)=r(A|b)",
+          "bodyMarkdown": "有解 ⇔ r(A)=r(A|b)"
+        },
+        {
+          "id": "wei-yi-jie-r-a-r-a-b-n",
+          "title": "唯一解 ⇔ r(A)=r(A|b)=n",
+          "bodyMarkdown": "唯一解 ⇔ r(A)=r(A|b)=n"
+        },
+        {
+          "id": "fei-qi-ci-tong-jie-yi-ge-te-jie-qi-ci-0462sj",
+          "title": "非齐次通解 = 一个特解 + 齐次通解",
+          "bodyMarkdown": "非齐次通解 = 一个特解 + 齐次通解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ruo-n-3-zhi-wei-2-qie-0bqihq",
+          "title": "讲解例子",
+          "bodyMarkdown": "若 n=3、秩为 2 且有解，则有 1 个自由参数，解集通常是一条直线。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "线性方程组的解集由主元变量和自由变量共同构成。先用高斯消元比较系数矩阵与增广矩阵的秩，判定有无解；有解后再用未知数个数判断唯一解还是无穷多解。\n\n### 解题步骤\n\n1. 写增广矩阵\n2. 化阶梯形并比较秩\n3. 选自由变量并参数化\n\n### 易错点\n\n看到“方程数少于未知数”就直接判无穷解，仍要排除无解情况。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-tong-jie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s2",
+      "sectionTitle": "齐次线性方程组",
+      "title": "通解",
+      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "tags": [
+        "用变化率建模"
+      ],
+      "sortOrder": 70,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
+        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+      },
+      "keyPoints": [
+        {
+          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
+          "title": "阶数由最高阶导数决定",
+          "bodyMarkdown": "阶数由最高阶导数决定"
+        },
+        {
+          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
+          "title": "通解含任意常数",
+          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+        },
+        {
+          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
+          "title": "分离变量时要注意丢失的常数解",
+          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "title": "讲解例子",
+          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-zeng-guang-ju-zhen",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s3",
+      "sectionTitle": "非齐次线性方程组",
+      "title": "增广矩阵",
+      "summary": "矩阵形式把每个未知数的系数按列排成 A，把未知数写成列向量 x，把常数写成 b，于是整组方程可以压缩成 Ax=b。",
+      "tags": [
+        "把方程组排成矩阵"
+      ],
+      "sortOrder": 80,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "Ax=b；(A|b)=[a₁ … aₙ | b]",
+        "caption": "矩阵形式把每个未知数的系数按列排成 A，把未知数写成列向量 x，把常数写成 b，于是整组方程可以压缩成 Ax=b。"
+      },
+      "keyPoints": [
+        {
+          "id": "a-de-lie-shu-deng-yu-wei-zhi-shu-ge-shu",
+          "title": "A 的列数等于未知数个数",
+          "bodyMarkdown": "A 的列数等于未知数个数"
+        },
+        {
+          "id": "zeng-guang-ju-zhen-zui-hou-yi-lie-lai-1lmnbj",
+          "title": "增广矩阵最后一列来自常数项",
+          "bodyMarkdown": "增广矩阵最后一列来自常数项"
+        },
+        {
+          "id": "xing-bian-huan-gai-bian-fang-cheng-xie-0o8z4d",
+          "title": "行变换改变方程写法但不改变解集",
+          "bodyMarkdown": "行变换改变方程写法但不改变解集"
+        }
+      ],
+      "examples": [
+        {
+          "id": "x-2y-3-3x-y-1-ke-xie-10f9by",
+          "title": "讲解例子",
+          "bodyMarkdown": "x+2y=3，3x−y=1 可写成 [[1,2],[3,−1]][x,y]ᵀ=[3,1]ᵀ。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "矩阵形式把每个未知数的系数按列排成 A，把未知数写成列向量 x，把常数写成 b，于是整组方程可以压缩成 Ax=b。增广矩阵 (A|b) 则把系数与常数并排放在一起，便于做高斯消元。\n\n### 解题步骤\n\n1. 按未知数顺序写出 A、x、b\n2. 组成 Ax=b 或 (A|b)\n3. 用行变换化成阶梯形再判断解\n\n### 易错点\n\n列顺序前后不一致，或把常数列漏进系数矩阵，会让后续秩判断全部失效。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-r-a-r-a-b-you-jie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s3",
+      "sectionTitle": "非齐次线性方程组",
+      "title": "r(A)=r(A|b) 有解",
+      "summary": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。",
+      "tags": [
+        "先判有无解，再数自由度"
+      ],
+      "sortOrder": 90,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "有解 ⇔ r(A)=r(A|b)；自由度=n−r(A)",
+        "caption": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。"
+      },
+      "keyPoints": [
+        {
+          "id": "you-jie-r-a-r-a-b",
+          "title": "有解 ⇔ r(A)=r(A|b)",
+          "bodyMarkdown": "有解 ⇔ r(A)=r(A|b)"
+        },
+        {
+          "id": "wei-yi-jie-r-a-r-a-b-n",
+          "title": "唯一解 ⇔ r(A)=r(A|b)=n",
+          "bodyMarkdown": "唯一解 ⇔ r(A)=r(A|b)=n"
+        },
+        {
+          "id": "you-jie-qie-r-a-n-shi-cun-zai-zi-you-0lyrqc",
+          "title": "有解且 r(A)<n 时存在自由变量",
+          "bodyMarkdown": "有解且 r(A)<n 时存在自由变量，因此有无穷多解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "san-ge-wei-zhi-shu-de-026swu",
+          "title": "讲解例子",
+          "bodyMarkdown": "三个未知数的方程组若两个秩都为 2，则有解时有 1 个自由变量，解集通常是一条直线。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。秩不同意味着常数项与系数关系冲突、无解；秩相同才有解，再用未知数个数判断是唯一解还是无穷多解。\n\n### 解题步骤\n\n1. 写出 A 与 (A|b)\n2. 消元并比较两个秩\n3. 有解后用 n−r(A) 数自由变量\n\n### 易错点\n\n只根据方程数少于未知数就断言有无穷多解；仍要先排除增广矩阵多出矛盾行的情况。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-wei-yi-jie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s3",
+      "sectionTitle": "非齐次线性方程组",
+      "title": "唯一解",
+      "summary": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。",
+      "tags": [
+        "先判有无解，再数自由度"
+      ],
+      "sortOrder": 100,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "有解 ⇔ r(A)=r(A|b)；自由度=n−r(A)",
+        "caption": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。"
+      },
+      "keyPoints": [
+        {
+          "id": "you-jie-r-a-r-a-b",
+          "title": "有解 ⇔ r(A)=r(A|b)",
+          "bodyMarkdown": "有解 ⇔ r(A)=r(A|b)"
+        },
+        {
+          "id": "wei-yi-jie-r-a-r-a-b-n",
+          "title": "唯一解 ⇔ r(A)=r(A|b)=n",
+          "bodyMarkdown": "唯一解 ⇔ r(A)=r(A|b)=n"
+        },
+        {
+          "id": "you-jie-qie-r-a-n-shi-cun-zai-zi-you-0lyrqc",
+          "title": "有解且 r(A)<n 时存在自由变量",
+          "bodyMarkdown": "有解且 r(A)<n 时存在自由变量，因此有无穷多解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "san-ge-wei-zhi-shu-de-026swu",
+          "title": "讲解例子",
+          "bodyMarkdown": "三个未知数的方程组若两个秩都为 2，则有解时有 1 个自由变量，解集通常是一条直线。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。秩不同意味着常数项与系数关系冲突、无解；秩相同才有解，再用未知数个数判断是唯一解还是无穷多解。\n\n### 解题步骤\n\n1. 写出 A 与 (A|b)\n2. 消元并比较两个秩\n3. 有解后用 n−r(A) 数自由变量\n\n### 易错点\n\n只根据方程数少于未知数就断言有无穷多解；仍要先排除增广矩阵多出矛盾行的情况。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-wu-qiong-duo-jie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s3",
+      "sectionTitle": "非齐次线性方程组",
+      "title": "无穷多解",
+      "summary": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。",
+      "tags": [
+        "先判有无解，再数自由度"
+      ],
+      "sortOrder": 110,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "有解 ⇔ r(A)=r(A|b)；自由度=n−r(A)",
+        "caption": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。"
+      },
+      "keyPoints": [
+        {
+          "id": "you-jie-r-a-r-a-b",
+          "title": "有解 ⇔ r(A)=r(A|b)",
+          "bodyMarkdown": "有解 ⇔ r(A)=r(A|b)"
+        },
+        {
+          "id": "wei-yi-jie-r-a-r-a-b-n",
+          "title": "唯一解 ⇔ r(A)=r(A|b)=n",
+          "bodyMarkdown": "唯一解 ⇔ r(A)=r(A|b)=n"
+        },
+        {
+          "id": "you-jie-qie-r-a-n-shi-cun-zai-zi-you-0lyrqc",
+          "title": "有解且 r(A)<n 时存在自由变量",
+          "bodyMarkdown": "有解且 r(A)<n 时存在自由变量，因此有无穷多解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "san-ge-wei-zhi-shu-de-026swu",
+          "title": "讲解例子",
+          "bodyMarkdown": "三个未知数的方程组若两个秩都为 2，则有解时有 1 个自由变量，解集通常是一条直线。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。秩不同意味着常数项与系数关系冲突、无解；秩相同才有解，再用未知数个数判断是唯一解还是无穷多解。\n\n### 解题步骤\n\n1. 写出 A 与 (A|b)\n2. 消元并比较两个秩\n3. 有解后用 n−r(A) 数自由变量\n\n### 易错点\n\n只根据方程数少于未知数就断言有无穷多解；仍要先排除增广矩阵多出矛盾行的情况。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-wu-jie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s3",
+      "sectionTitle": "非齐次线性方程组",
+      "title": "无解",
+      "summary": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。",
+      "tags": [
+        "先判有无解，再数自由度"
+      ],
+      "sortOrder": 120,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "有解 ⇔ r(A)=r(A|b)；自由度=n−r(A)",
+        "caption": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。"
+      },
+      "keyPoints": [
+        {
+          "id": "you-jie-r-a-r-a-b",
+          "title": "有解 ⇔ r(A)=r(A|b)",
+          "bodyMarkdown": "有解 ⇔ r(A)=r(A|b)"
+        },
+        {
+          "id": "wei-yi-jie-r-a-r-a-b-n",
+          "title": "唯一解 ⇔ r(A)=r(A|b)=n",
+          "bodyMarkdown": "唯一解 ⇔ r(A)=r(A|b)=n"
+        },
+        {
+          "id": "you-jie-qie-r-a-n-shi-cun-zai-zi-you-0lyrqc",
+          "title": "有解且 r(A)<n 时存在自由变量",
+          "bodyMarkdown": "有解且 r(A)<n 时存在自由变量，因此有无穷多解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "san-ge-wei-zhi-shu-de-026swu",
+          "title": "讲解例子",
+          "bodyMarkdown": "三个未知数的方程组若两个秩都为 2，则有解时有 1 个自由变量，解集通常是一条直线。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "非齐次方程组 Ax=b 的第一关是比较系数矩阵 A 与增广矩阵 (A|b) 的秩。秩不同意味着常数项与系数关系冲突、无解；秩相同才有解，再用未知数个数判断是唯一解还是无穷多解。\n\n### 解题步骤\n\n1. 写出 A 与 (A|b)\n2. 消元并比较两个秩\n3. 有解后用 n−r(A) 数自由变量\n\n### 易错点\n\n只根据方程数少于未知数就断言有无穷多解；仍要先排除增广矩阵多出矛盾行的情况。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-qi-ci-jie-kong-jian",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s4",
+      "sectionTitle": "解的结构",
+      "title": "齐次解空间",
+      "summary": "非齐次方程组的所有解可以拆成两部分：一个固定的特解负责满足右端常数，齐次方程 Ax=0 的通解负责沿着解集的自由方向移动。",
+      "tags": [
+        "特解加齐次解"
+      ],
+      "sortOrder": 130,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "x=x₀+xₕ；Ax₀=b，Axₕ=0",
+        "caption": "非齐次方程组的所有解可以拆成两部分：一个固定的特解负责满足右端常数，齐次方程 Ax=0 的通解负责沿着解集的自由方向移动。"
+      },
+      "keyPoints": [
+        {
+          "id": "qi-ci-jie-de-xian-xing-zu-he-reng-shi-1wlg2a",
+          "title": "齐次解的线性组合仍是齐次解",
+          "bodyMarkdown": "齐次解的线性组合仍是齐次解"
+        },
+        {
+          "id": "fei-qi-ci-tong-jie-yi-ge-te-jie-qi-ci-0z9nff",
+          "title": "非齐次通解=一个特解+齐次通解",
+          "bodyMarkdown": "非齐次通解=一个特解+齐次通解"
+        },
+        {
+          "id": "liang-ge-fei-qi-ci-jie-zhi-cha-hui-xiao-18gfuc",
+          "title": "两个非齐次解之差会消掉右端 b",
+          "bodyMarkdown": "两个非齐次解之差会消掉右端 b"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ruo-x-shi-ax-b-de-yi-ge-17b5ps",
+          "title": "讲解例子",
+          "bodyMarkdown": "若 x₀ 是 Ax=b 的一个解、xₕ 是 Ax=0 的任意解，则 A(x₀+xₕ)=b，所以它仍是非齐次方程组的解。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "非齐次方程组的所有解可以拆成两部分：一个固定的特解负责满足右端常数，齐次方程 Ax=0 的通解负责沿着解集的自由方向移动。因此任意两个非齐次解的差，一定是对应齐次方程的解。\n\n### 解题步骤\n\n1. 先求一个非齐次特解\n2. 再求 Ax=0 的基础解系\n3. 把特解与齐次通解相加并验证\n\n### 易错点\n\n把齐次通解直接当成非齐次通解，或漏掉特解这一部分。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-fei-qi-ci-te-jie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s4",
+      "sectionTitle": "解的结构",
+      "title": "非齐次特解",
+      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "tags": [
+        "用变化率建模"
+      ],
+      "sortOrder": 140,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
+        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+      },
+      "keyPoints": [
+        {
+          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
+          "title": "阶数由最高阶导数决定",
+          "bodyMarkdown": "阶数由最高阶导数决定"
+        },
+        {
+          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
+          "title": "通解含任意常数",
+          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+        },
+        {
+          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
+          "title": "分离变量时要注意丢失的常数解",
+          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "title": "讲解例子",
+          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-fei-qi-ci-tong-jie-te-jie-qi-ci-tong-jie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s4",
+      "sectionTitle": "解的结构",
+      "title": "非齐次通解 = 特解 + 齐次通解",
+      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "tags": [
+        "用变化率建模"
+      ],
+      "sortOrder": 150,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
+        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+      },
+      "keyPoints": [
+        {
+          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
+          "title": "阶数由最高阶导数决定",
+          "bodyMarkdown": "阶数由最高阶导数决定"
+        },
+        {
+          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
+          "title": "通解含任意常数",
+          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+        },
+        {
+          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
+          "title": "分离变量时要注意丢失的常数解",
+          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+        }
+      ],
+      "examples": [
+        {
+          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "title": "讲解例子",
+          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-gao-si-xiao-yuan",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s5",
+      "sectionTitle": "初等行变换求解",
+      "title": "高斯消元",
+      "summary": "高斯消元通过交换行、倍乘行、行相加逐步消去未知数，把方程组化成阶梯形。",
+      "tags": [
+        "消元找到主元与自由变量"
+      ],
+      "sortOrder": 160,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "自由变量个数=n−r(A)",
+        "caption": "高斯消元通过交换行、倍乘行、行相加逐步消去未知数，把方程组化成阶梯形。"
+      },
+      "keyPoints": [
+        {
+          "id": "san-lei-chu-deng-xing-bian-huan-bu-gai-1920kg",
+          "title": "三类初等行变换不改变方程组的解集",
+          "bodyMarkdown": "三类初等行变换不改变方程组的解集"
+        },
+        {
+          "id": "mao-dun-xing-0-0-c-c-0-biao-shi-wu-jie",
+          "title": "矛盾行 [0 … 0 | c]（c≠0）表示无解",
+          "bodyMarkdown": "矛盾行 [0 … 0 | c]（c≠0）表示无解"
+        },
+        {
+          "id": "zi-you-bian-liang-ge-shu-tong-chang-shi-03bc3m",
+          "title": "自由变量个数通常是未知数个数减秩",
+          "bodyMarkdown": "自由变量个数通常是未知数个数减秩"
+        }
+      ],
+      "examples": [
+        {
+          "id": "1-1-3-2-3-8-xiao-yuan-0q7mqy",
+          "title": "讲解例子",
+          "bodyMarkdown": "[1 1 | 3；2 3 | 8] 消元得 y=2、x=1，因此解为 (1,2)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "高斯消元通过交换行、倍乘行、行相加逐步消去未知数，把方程组化成阶梯形。主元列对应的变量可以由其他变量表示；没有主元的变量就是自由变量，用参数表示后即可写出通解。\n\n### 解题步骤\n\n1. 写增广矩阵并做消元\n2. 识别矛盾行、主元列和自由列\n3. 回代并用参数写出通解\n\n### 易错点\n\n消元时忘记同步操作常数列，或回代时把自由变量误当成固定数。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-zi-you-wei-zhi-liang",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s5",
+      "sectionTitle": "初等行变换求解",
+      "title": "自由未知量",
+      "summary": "高斯消元通过交换行、倍乘行、行相加逐步消去未知数，把方程组化成阶梯形。",
+      "tags": [
+        "消元找到主元与自由变量"
+      ],
+      "sortOrder": 170,
+      "estimatedMinutes": 4,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "自由变量个数=n−r(A)",
+        "caption": "高斯消元通过交换行、倍乘行、行相加逐步消去未知数，把方程组化成阶梯形。"
+      },
+      "keyPoints": [
+        {
+          "id": "san-lei-chu-deng-xing-bian-huan-bu-gai-1920kg",
+          "title": "三类初等行变换不改变方程组的解集",
+          "bodyMarkdown": "三类初等行变换不改变方程组的解集"
+        },
+        {
+          "id": "mao-dun-xing-0-0-c-c-0-biao-shi-wu-jie",
+          "title": "矛盾行 [0 … 0 | c]（c≠0）表示无解",
+          "bodyMarkdown": "矛盾行 [0 … 0 | c]（c≠0）表示无解"
+        },
+        {
+          "id": "zi-you-bian-liang-ge-shu-tong-chang-shi-03bc3m",
+          "title": "自由变量个数通常是未知数个数减秩",
+          "bodyMarkdown": "自由变量个数通常是未知数个数减秩"
+        }
+      ],
+      "examples": [
+        {
+          "id": "1-1-3-2-3-8-xiao-yuan-0q7mqy",
+          "title": "讲解例子",
+          "bodyMarkdown": "[1 1 | 3；2 3 | 8] 消元得 y=2、x=1，因此解为 (1,2)。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "高斯消元通过交换行、倍乘行、行相加逐步消去未知数，把方程组化成阶梯形。主元列对应的变量可以由其他变量表示；没有主元的变量就是自由变量，用参数表示后即可写出通解。\n\n### 解题步骤\n\n1. 写增广矩阵并做消元\n2. 识别矛盾行、主元列和自由列\n3. 回代并用参数写出通解\n\n### 易错点\n\n消元时忘记同步操作常数列，或回代时把自由变量误当成固定数。"
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "kp-m2-p2-c4-can-shu-jie",
+      "contentVersion": 1,
+      "subjectId": "algebra",
+      "chapterId": "m2-p2-c4",
+      "sectionId": "m2-p2-c4-s5",
+      "sectionTitle": "初等行变换求解",
+      "title": "参数解",
+      "summary": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。",
+      "tags": [
+        "从数据估计未知量"
+      ],
+      "sortOrder": 180,
+      "estimatedMinutes": 3,
+      "anchor": {
+        "type": "formula",
+        "format": "text",
+        "content": "E(θ^) = θ（无偏）；θ^ₙ→θ（相合/一致）",
+        "caption": "参数估计用样本信息推断总体参数。"
+      },
+      "keyPoints": [
+        {
+          "id": "gu-ji-liang-zai-chou-yang-qian-shi-sui-1tp91w",
+          "title": "估计量在抽样前是随机的",
+          "bodyMarkdown": "估计量在抽样前是随机的"
+        },
+        {
+          "id": "wu-pian-bu-deng-yu-mei-ci-dou-zhun-que",
+          "title": "无偏不等于每次都准确",
+          "bodyMarkdown": "无偏不等于每次都准确"
+        },
+        {
+          "id": "ju-gu-ji-yong-yang-ben-ju-pi-pei-zong-15brv9",
+          "title": "矩估计用样本矩匹配总体矩",
+          "bodyMarkdown": "矩估计用样本矩匹配总体矩"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ruo-x-x-de-jun-zhi-wei-1vv0ps",
+          "title": "讲解例子",
+          "bodyMarkdown": "若 X₁,…,Xₙ 的均值为 μ 的无偏估计，样本均值就是 μ 的一个自然估计量。"
+        }
+      ],
+      "relatedKnowledgeIds": [],
+      "sources": [],
+      "status": "published",
+      "updatedAt": "2026-09-13T10:54:33Z",
+      "bodyMarkdown": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。\n\n### 解题步骤\n\n1. 选估计方法\n2. 写估计量并代入样本\n3. 检查无偏、方差或一致性\n\n### 易错点\n\n把估计值和估计量混为一谈，或只看无偏性不看方差。"
+    }
+  ]
+}

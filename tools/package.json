@@ -1,0 +1,23 @@
+{
+  "name": "tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:content": "tsx build-content.ts",
+    "build:content:dry": "tsx build-content.ts --dry-run",
+    "validate:content": "tsx validate-content.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.9",
+    "pdfjs-dist": "^6.3.289",
+    "pinyin-pro": "^3.29.4",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}
