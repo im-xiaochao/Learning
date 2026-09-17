@@ -3,8 +3,12 @@
  *
  * 「对照原型把政治模块样式对齐」这件事靠肉眼比对是守不住的——改一次就飘一点。
  * 这个脚本**直接解析原型 `_od_tmp/proto/ci-shu-tong-xing.html` 的 <style>**，
- * 把政治刷题相关的选择器逐条抽出来，再和实现里那两个文件的 <style> 对账
- * （`components/PoliticsQuiz.vue`、`pages-politics/paper/paper.vue`，映射关系见 MAP）。
+ * 把政治刷题相关的选择器逐条抽出来，再和实现里的 <style> 对账
+ * （`App.vue`、`components/PoliticsQuiz.vue`、`pages-politics/paper/paper.vue`，映射关系见 MAP）。
+ *
+ * 注意 App.vue 也在被审之列：`.src-switch` / `.src-chip` 这套胶囊控件是**两个地方共用**的
+ * （政治的来源切换 + 数学 tab 的学科切换），所以定义放在全局 App.vue 而不是某个组件里。
+ * 原型里它同样只有一条定义。
  *
  * 为什么以原型为准而不是手抄一份期望值：手抄那份会跟着实现一起漂，等于自己给自己判卷。
  *
@@ -53,7 +57,8 @@ const WHITELIST = new Set([...GEOM, ...COLOR])
  * 选择器映射表：**按文件**分组。
  *
  * 政治视图拆成两层之后样式也分了家，「某条规则该在哪个文件里」由这张表说了算：
- *   components/PoliticsQuiz.vue     —— 资料库内嵌那一屏（来源切换 + 套卷卡）
+ *   App.vue                         —— 全局共用控件：胶囊切换器（政治来源切换 + 数学学科切换）
+ *   components/PoliticsQuiz.vue     —— 资料库内嵌那一屏（来源切换里的小字 + 套卷卡）
  *   pages-politics/paper/paper.vue  —— 卷详情页（进度卡 + 题目列表，题干在这里）
  *
  * 反过来也管：「原型里还有、两个文件里都没有」会被报出来，逼着人把死规则删干净
@@ -63,10 +68,13 @@ const WHITELIST = new Set([...GEOM, ...COLOR])
  * 所以语义上同一个盒子会换名字。换名字可以，但必须在这里登记，不能悄悄多出来。
  */
 const MAP = {
-  'components/PoliticsQuiz.vue': [
+  'App.vue': [
+    // 胶囊切换器：两个宿主共用（政治来源切换 / 数学学科切换），所以定义在全局
     ['.src-switch', '.src-switch'],
     ['.src-chip', '.src-chip'],
     ['.src-chip.active', '.src-chip.active'],
+  ],
+  'components/PoliticsQuiz.vue': [
     ['.paper-grid', '.paper-grid'],
     ['.paper-card', '.paper-card'],
     ['.paper-card::after', '.paper-card::after'],
@@ -371,10 +379,19 @@ const MUTATIONS = [
     to: 'border-color: #abcdef;',
     expect: ['.quiz-row.ok border-color'],
   },
-  // ── 资料库内嵌那一屏（components/PoliticsQuiz.vue）──
-  { file: 'components/PoliticsQuiz.vue', find: 'padding: 3px;', to: 'padding: 5px;', expect: ['.src-switch padding'] },
-  // 关键负例：把已换算对的值再偏移 5 个通道，容差 1 不该放过
-  { file: 'components/PoliticsQuiz.vue', find: 'color: #ffffff;', to: 'color: #fafafa;', expect: ['color'], nth: 1 },
+  // ── 全局共用的胶囊切换器（App.vue）──
+  // 这两个用例原来指向 components/PoliticsQuiz.vue，那边改成共用 App.vue 的定义后
+  // 就地失效了——自检当场报「用例无效」，正是它该干的事。
+  { file: 'App.vue', find: 'padding: 3px;', to: 'padding: 5px;', expect: ['.src-switch padding'] },
+  // 关键负例：把已换算对的值再偏移 5 个通道，容差 1 不该放过。
+  // 锚点必须连选择器一起写：App.vue 里 `color: #ffffff;` 有 9 处（还都在别的规则里），
+  // 只按属性串取第 1 个会改到 .daily-card 上，用例就变成假绿。
+  {
+    file: 'App.vue',
+    find: '.src-chip.active {\n  background: var(--primary);\n  color: #ffffff;',
+    to: '.src-chip.active {\n  background: var(--primary);\n  color: #fafafa;',
+    expect: ['color'],
+  },
   // 关键负例：白名单外的属性漂移不该被误报（防「什么都报」的假阳性）
   {
     file: 'pages-politics/paper/paper.vue',

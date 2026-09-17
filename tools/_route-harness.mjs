@@ -6,6 +6,8 @@
  *      「进入刷题」的入口卡片；四门计算机专业课仍走原来的「空状态」——【3】【5】。
  *   2. 政治是**两级**：学科 tab 下只画套卷卡，一套卷里的题目在分包详情页
  *      `pages-politics/paper/paper.vue`。题干一旦画在主包那一屏，就会被拉回主包把体积顶爆——【6】。
+ *   3. 学科切换器有**两套外观**：数学走胶囊 tab（全称标签）、资料库走下划线 tab（简称标签）。
+ *      两套外观互斥挂 class，共用的样式只放在 App.vue 里一份——【7】。
  *
  * 所以拿真实的生成数据与真实源码跑一遍，而不是只看代码。
  *
@@ -182,6 +184,43 @@ check('卷详情页在分包里取题库并渲染题干，且已注册路由', (
   const routes = JSON.parse(readSrc('pages.json'))
   const pkg = (routes.subPackages || []).find((p) => p.root === 'pages-politics')
   ok(pkg && pkg.pages.some((p) => p.path === 'paper/paper'), 'pages.json 没注册 paper/paper')
+})
+
+console.log('\n【7】学科切换器：数学走胶囊 tab、资料库走下划线 tab')
+check('数学页显式声明胶囊外观，资料库页用默认值', () => {
+  const math = stripComments(readSrc('pages/math/math.vue'))
+  ok(/switch-style="pill"/.test(math), '数学页没传 switch-style="pill"')
+  const library = stripComments(readSrc('pages/library/library.vue'))
+  ok(!/switch-style/.test(library), '资料库页不该传 switch-style——下划线本来就是默认值')
+})
+check('两套外观由 switchStyle 二选一，标签随外观换（全称 / 简称）', () => {
+  const src = stripComments(readSrc('components/KnowledgeLibrary.vue'))
+  ok(/\? 'src-switch' : `subject-tabs/.test(src), "容器 class 不是按 switchStyle 二选一（胶囊 'src-switch' / 下划线 'subject-tabs'）")
+  ok(/\? 'src-chip' : 'subject-tab'/.test(src), "按钮 class 不是按 switchStyle 二选一")
+  ok(/\? s\.name : s\.shortName/.test(src), '标签没按外观取 name / shortName')
+  // uni-app 侧没有渲染测试（tools/ 里没有 vue 运行时），所以模板只允许**纯字符串** class 绑定：
+  // 数组 / 嵌套三元在 mp 编译器上真出岔子的话，这些静态断言一个都发现不了。
+  ok(/:class="switchClass"/.test(src), '模板没用 switchClass（容器 class 应该先算好）')
+  ok(/:class="tabClass\(i\)"/.test(src), '模板没用 tabClass(i)（按钮 class 应该先算好）')
+  ok(!/:class="\[/.test(src), '模板里又出现数组式 class 绑定')
+  // 静态 class 必须让位：.subject-tab 与 .src-chip 都设了 min-height / border-radius /
+  // font-size，同时挂上就靠源码顺序决胜——改个声明顺序外观就变了。
+  ok(!/class="subject-tabs"/.test(src) && !/class="subject-tab"/.test(src), '还留着静态的 .subject-tab* class')
+})
+check('胶囊控件样式只定义一次（App.vue 全局），组件里不许再抄一份', () => {
+  const app = readSrc('App.vue')
+  for (const sel of ['.src-switch', '.src-chip', '.src-chip.active']) {
+    ok(new RegExp(`^\\${sel}\\s*\\{`, 'm').test(app), `App.vue 缺 ${sel}`)
+  }
+  for (const f of ['components/PoliticsQuiz.vue', 'components/KnowledgeLibrary.vue']) {
+    ok(!/^\.src-(switch|chip)\s*\{/m.test(stripComments(readSrc(f))), `${f} 里又抄了一份胶囊样式`)
+  }
+})
+check('数学三科的学科名与设计稿一字不差，简称不动', () => {
+  eq(C.MATH_SUBJECT_IDS.length, 3, '数学学科数（多于 3 个就该重新想外观了）')
+  const names = C.MATH_SUBJECT_IDS.map((id) => C.getSubject(id)?.name)
+  ok(names.join('|') === '高等数学|线性代数|概率论', `学科全称实际是 ${names.join('|')}`)
+  eq(C.getSubject('probability')?.shortName, '概率', 'shortName 不该跟着改名')
 })
 
 console.log(`\n────────────────────────────`)
