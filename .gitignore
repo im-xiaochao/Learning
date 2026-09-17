@@ -62,8 +62,13 @@ desktop.ini
 # ══════════════════════════════════════════════════════════
 # 以下目录【有意不忽略】，改这里前请先想清楚：
 #
-#   data/content/**      规范内容数据，是内容的唯一真源，必须入库
-#   data/generated/**    build-content.ts 的产物。虽然是生成物，但应用直接 import，
+#   data/content/**      规范内容数据。**它也是 build-content.ts 的产物**（源是 data/*.ts：
+#                        data/math/tree.ts + lectures.ts 等，见 data/content/README.md），
+#                        但应用与脚本都直接读它，必须入库。
+#                        ⚠️ 生成方式是「先 resetDir 整个删掉、再逐个写回」——中途被中断
+#                        （Ctrl-C、超时、进程被杀）会留下**内容缺失**的目录树。真发生了就重跑
+#                        一次构建即可恢复（源数据没动）；长时间跑这个脚本请放后台别掐它。
+#   data/generated/**    build-content.ts 的产物。同样是生成物，但应用直接 import，
 #                        且没有 CI 会自动跑生成脚本，忽略它会导致新克隆无法编译
 #   static/icons/**      build-icons.mjs 的产物，但属于应用资源，必须随包提交
 #   static/tabbar/**
