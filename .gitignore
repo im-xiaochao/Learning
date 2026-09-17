@@ -27,11 +27,21 @@ tools/pages/
 # 和 tools/pages/ 同理——随时能用 tools/_extract-od.js 重新生成，不必入库。
 .tmp-od/
 
+# _od_tmp：设计稿改版时的一次性产物——从 PDF 解析出的题库 JSON（约 1.5 MB）、
+# 解析与调试脚本。属于「这批题录完了就用不上」的中间态，不入库。
+# ★ 例外：proto/ 下的设计稿要入库——tools/check-politics-style.mjs 直接拿它当保真基准，
+#   不入库的话新克隆跑不了那个检查。同目录的 .bak-* 是回滚副本，不入库。
+_od_tmp/*
+!_od_tmp/proto/
+_od_tmp/proto/*.bak-*
+
 # ── 编辑器 Agent 的工作区 ──
 # 这里放的是 Agent 的记忆（memory/ 每次会话都会追加）与技能，属于本机会话状态，
 # 不是项目源码。项目真正需要长期留存的约定已经写在 data/content/README.md 与
-# tools/pages-index.md 里。若想连记忆一起入库，删掉这一行即可。
+# tools/pages-index.md 里。若想连记忆一起入库，删掉这两行即可。
+# （.workbuddy-ai 是旧名，.workbuddy 是现名；两个都留着，换编辑器版本时不会漏。）
 .workbuddy-ai/
+.workbuddy/
 
 # ── 日志与临时文件 ──
 *.log
