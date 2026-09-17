@@ -222,10 +222,18 @@ interface SubjectDef {
   match?: RegExp
 }
 
+/**
+ * 数学三科。
+ *
+ * `name` 是**学科切换器上的标签**（数学 tab 用胶囊 tab，只有三项、放得下全称），
+ * 所以它必须和设计稿一字不差：高等数学 / 线性代数 / 概率论。
+ * `shortName` 留给塞得下简称的地方（资料库的下划线 tab、首页卡片标题）。
+ */
 const MATH_SUBJECTS: SubjectDef[] = [
   { id: 'calculus', name: '高等数学', shortName: '高数', sortOrder: 10, courseId: 'math', kind: 'math', match: /高等数学/ },
   { id: 'algebra', name: '线性代数', shortName: '线代', sortOrder: 20, courseId: 'math', kind: 'math', match: /线性代数/ },
-  { id: 'probability', name: '概率统计', shortName: '概率', sortOrder: 30, courseId: 'math', kind: 'math', match: /概率/ },
+  // name 是「概率论」而不是「概率统计」：设计稿 v1.6 起统一用「概率论」（学科切换器上显示的就是 name）
+  { id: 'probability', name: '概率论', shortName: '概率', sortOrder: 30, courseId: 'math', kind: 'math', match: /概率/ },
 ]
 
 /** 政治不从 math-data 派生，来自手工编写的 data/politics/chapters.ts */

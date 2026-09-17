@@ -18,7 +18,7 @@ export const appCourses: AppCourse[] = [
 export const appSubjects: AppSubject[] = [
   {"id":"calculus","courseId":"math","kind":"math","name":"高等数学","shortName":"高数","sortOrder":10},
   {"id":"algebra","courseId":"math","kind":"math","name":"线性代数","shortName":"线代","sortOrder":20},
-  {"id":"probability","courseId":"math","kind":"math","name":"概率统计","shortName":"概率","sortOrder":30},
+  {"id":"probability","courseId":"math","kind":"math","name":"概率论","shortName":"概率","sortOrder":30},
   {"id":"politics","courseId":"politics","kind":"politics","name":"思想政治理论","shortName":"政治","sortOrder":40},
   {"id":"cs-coa","courseId":"cs","kind":"cs","name":"计算机组成原理","shortName":"组成原理","sortOrder":50},
   {"id":"cs-os","courseId":"cs","kind":"cs","name":"操作系统","shortName":"操作系统","sortOrder":60},

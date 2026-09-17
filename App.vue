@@ -651,6 +651,43 @@ scroll-view {
   background: transparent;
 }
 
+/* ── 胶囊切换器（segmented control） ──────────────────────────────────
+   两个地方共用同一套，所以定义放在全局，不在各自组件里复制两份：
+     1. 政治刷题首页的来源切换「4套卷 / 8套卷」——按钮里还带一行题量小字（.src-count）
+     2. 数学 tab 的学科切换「高等数学 / 线性代数 / 概率论」
+   对齐设计稿 v1.6 的 .src-switch（一条底槽：--bg 底色 + 描边 + 内边距）与
+   .src-chip（选中项整块填 primary）。tools/check-politics-style.mjs 会拿原型
+   里那一条定义逐属性对账，所以这里不要写「看起来差不多」的近似值。 */
+.src-switch {
+  display: flex;
+  gap: 5px;
+  margin-top: 13px;
+  padding: 3px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+}
+.src-chip {
+  flex: 1;
+  min-width: 0;
+  min-height: 42px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  line-height: 1.3;
+  text-align: center;
+}
+.src-chip.active {
+  background: var(--primary);
+  color: #ffffff;
+}
+
 .subject-tabs {
   display: flex;
   flex-wrap: wrap;

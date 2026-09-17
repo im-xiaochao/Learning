@@ -7,7 +7,13 @@
  * 层级改成「学科 → 章节（可展开）→ 小节 → 知识点」。
  *
  * 抽成组件是因为要支撑两个 tab：数学（高数/线代/概率）与资料库（政治/计算机专业课）。
- * 两个页面只是传入不同的学科清单与文案。
+ * 两个页面只是传入不同的学科清单、文案与**学科切换器外观**。
+ *
+ * 学科切换器有两套外观（设计稿 v1.6 按 tab 分流，见 `switchStyle` prop）：
+ *   - 数学 tab     → 胶囊 tab（`.src-switch` / `.src-chip`，与政治卷「4套卷 / 8套卷」同款），
+ *                    标签用学科**全称**（高等数学 / 线性代数 / 概率论）
+ *   - 资料库 tab   → 下划线 tab（`.subject-tabs` / `.subject-tab`），标签用**简称**
+ *                    （政治 / 计组 / 系统 / 数据结构 / 计网）——五个学科塞胶囊会挤成碎块
  *
  * **政治分支不跳页**：设计稿的 knowledgePage 在选中政治时直接把 politicsQuizBody()
  * 渲染在学科 tab 下面（政治没有知识点讲解，只有题）。这里同样内嵌 `PoliticsQuiz`，
@@ -40,6 +46,13 @@ const props = withDefaults(
     searchPlaceholder?: string
     /** 学科暂无内容时的提示 */
     emptyHint?: string
+    /**
+     * 学科切换器外观（设计稿 v1.6 的两种），由页面显式传入——
+     * **不按学科个数猜**：「为什么长这样」是页面的设计决定，不是数据的性质。
+     *   'underline'（默认）→ 下划线 tab，标签取 `shortName` 简称；学科多、名字长时用它
+     *   'pill'            → 胶囊 tab，标签取 `name` 全称；只有三项、横向放得下时用它
+     */
+    switchStyle?: 'pill' | 'underline'
   }>(),
   {
     eyebrow: '考研知识库',
@@ -47,6 +60,7 @@ const props = withDefaults(
     quizTitle: '先刷题，再回头看理论。',
     searchPlaceholder: '搜索知识点',
     emptyHint: '这个学科的内容还在整理中。',
+    switchStyle: 'underline',
   },
 )
 
@@ -56,10 +70,32 @@ const { getReading, lastReading, isPlanned } = useLearning()
 const subjects = computed(() => props.subjectIds.map((id) => allSubjects.find((s) => s.id === id)).filter((s): s is (typeof allSubjects)[number] => Boolean(s)))
 
 /**
- * 学科 ≥5 个时切换器要挤进一行：短名/长名按内容比例分摊宽度，
+ * 下划线外观下，学科 ≥5 个时切换器要挤进一行：短名/长名按内容比例分摊宽度，
  * 否则「组成原理」「计算机网络」这类长名会把整行撑到换行。
+ * （胶囊外观不管这个——它只有三项，芯片是 `flex: 1` 等分。）
  */
 const denseTabs = computed(() => subjects.value.length >= 5)
+
+/** 学科切换器走胶囊外观（数学 tab）：同时把标签换成学科全称 */
+const pillSwitch = computed(() => props.switchStyle === 'pill')
+
+/**
+ * 切换器容器的 class：两套外观二选一。
+ *
+ * 为什么用字符串而不是模板里的 `:class="[a, { b }]"`：本项目在 uni-app 侧**没有渲染测试**
+ * （没有 vue 运行时，见 tools/ 的依赖），数组 / 嵌套三元一旦在 mp 编译器上出岔子，
+ * 静态检查是发现不了的。字符串绑定是最朴素的形式，这里也不需要更多表达力。
+ */
+const switchClass = computed(() => (pillSwitch.value ? 'src-switch' : `subject-tabs${denseTabs.value ? ' dense' : ''}`))
+
+/**
+ * 单个学科按钮的 class。
+ * 注意 `subject-tab` 与 `src-chip` 是**互斥**的：两者都设了 min-height / border-radius /
+ * font-size，同时挂上就靠源码顺序决胜，改一行声明顺序外观就变了。
+ */
+function tabClass(i: number): string {
+  return `${pillSwitch.value ? 'src-chip' : 'subject-tab'}${i === subjectIndex.value ? ' active' : ''}`
+}
 
 const subjectIndex = ref(0)
 const keyword = ref('')
@@ -182,16 +218,20 @@ function pad(n: number): string {
       />
     </view>
 
-    <view v-if="subjects.length > 1" class="subject-tabs" :class="{ dense: denseTabs }">
+    <!--
+      学科切换器：两套外观由 switchStyle 决定（见 props 说明）。
+      class 由 switchClass / tabClass 算好再挂上，模板里不做数组或嵌套三元——
+      理由见 switchClass 的注释。
+    -->
+    <view v-if="subjects.length > 1" :class="switchClass">
       <button
         v-for="(s, i) in subjects"
         :key="s.id"
-        class="subject-tab"
-        :class="{ active: i === subjectIndex }"
+        :class="tabClass(i)"
         hover-class="hover-press"
         @tap="selectSubject(i)"
       >
-        <text>{{ s.shortName }}</text>
+        <text>{{ pillSwitch ? s.name : s.shortName }}</text>
       </button>
     </view>
 

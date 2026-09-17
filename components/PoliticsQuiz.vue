@@ -130,40 +130,14 @@ function openPaper(book: BookKey, set: number) {
 </template>
 
 <style scoped>
-/* ── 来源切换（对齐原型 .src-switch：底色用 --bg，只有描边；选中项走 primary） ── */
-.src-switch {
-  display: flex;
-  gap: 5px;
-  margin-top: 13px;
-  padding: 3px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 13px;
-}
-.src-chip {
-  flex: 1;
-  min-width: 0;
-  min-height: 42px;
-  border-radius: 10px;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--muted);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-  line-height: 1.3;
-  text-align: center;
-}
+/* ── 来源切换 ──
+   .src-switch / .src-chip 定义在 App.vue 全局：数学 tab 的学科切换要用同一套，
+   复制两份迟早会飘（样式检查脚本也是按原型那一条定义来对账的）。
+   这里只放来源切换**独有**的那一行小字：芯片里多一行「75 题」。 */
 .src-count {
   font-size: 9px;
   font-weight: 400;
   opacity: 0.85;
-}
-.src-chip.active {
-  background: var(--primary);
-  color: #ffffff;
 }
 .src-chip.active .src-count {
   opacity: 0.8;
