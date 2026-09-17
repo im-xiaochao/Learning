@@ -69,4 +69,4 @@ export const appChapters: AppChapter[] = [
  * 题库正文在 pages-politics 分包内，主包不能 import 它；但首页的「政治刷题」卡片
  * 要显示「已练 M / 共 T 题」，所以这里只把总数投影到主包。
  */
-export const appPoliticsQuestionTotal = 158
+export const appPoliticsQuestionTotal = 462

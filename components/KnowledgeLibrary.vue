@@ -8,8 +8,13 @@
  *
  * 抽成组件是因为要支撑两个 tab：数学（高数/线代/概率）与资料库（政治/计算机专业课）。
  * 两个页面只是传入不同的学科清单与文案。
+ *
+ * **政治分支不跳页**：设计稿的 knowledgePage 在选中政治时直接把 politicsQuizBody()
+ * 渲染在学科 tab 下面（政治没有知识点讲解，只有题）。这里同样内嵌 `PoliticsQuiz`，
+ * 不再放「进入政治刷题」的入口卡——刷题内容本身就是政治模块的内容。
  */
 import { computed, ref, watch } from 'vue'
+import PoliticsQuiz from './PoliticsQuiz.vue'
 import { useLearning } from '../stores/learning'
 import {
   chaptersOfSubject,
@@ -30,6 +35,8 @@ const props = withDefaults(
     subjectIds: string[]
     eyebrow?: string
     title?: string
+    /** 刷题学科（政治）的页面标题：政治没有知识点讲解，标题按设计稿换一句 */
+    quizTitle?: string
     searchPlaceholder?: string
     /** 学科暂无内容时的提示 */
     emptyHint?: string
@@ -37,6 +44,7 @@ const props = withDefaults(
   {
     eyebrow: '考研知识库',
     title: '把知识点，讲明白。',
+    quizTitle: '先刷题，再回头看理论。',
     searchPlaceholder: '搜索知识点',
     emptyHint: '这个学科的内容还在整理中。',
   },
@@ -84,24 +92,12 @@ const results = computed<KnowledgeEntry[]>(() => (searching.value ? searchKnowle
 
 /**
  * 当前学科是否以「刷题」呈现（政治）。
- * 政治没有可发布的知识点讲解，只有题目，所以在资料库里落到刷题入口而不是知识点列表。
+ * 政治没有可发布的知识点讲解，只有题目，所以这个学科的内容**就是**刷题内容
+ * （下面内嵌 PoliticsQuiz），不再放一张入口卡把人领到另一个页面。
  * 判据在 useContent.isQuizSubject：kind === 'politics' 且没有章节——
  * 补上真实讲解稿后自动回到知识点列表。
  */
 const quiz = computed(() => isQuizSubject(subject.value?.id || ''))
-
-/** 刷题入口卡片的文案（与设计稿 politicsQuizPage 一致） */
-const quizCopy = computed(() => ({
-  eyebrow: '考研政治 · 刷题',
-  title: '先把题做对，再回头看理论。',
-  note: '政治的知识点讲解还在整理，这里先放题目：选择题做完立刻判对错、给解析；材料题读材料再看采分点。',
-  cta: '进入政治刷题',
-  empty: '题库还在整理中，之后会陆续补上。',
-}))
-
-function openQuiz() {
-  uni.navigateTo({ url: '/pages-politics/list/list' })
-}
 
 /** 学科清单变化时重置选中项 */
 watch(
@@ -170,10 +166,12 @@ function pad(n: number): string {
 
 <template>
   <view class="viewport fade-in">
-    <text class="eyebrow">{{ props.eyebrow }} · {{ subject?.name || '' }}</text>
-    <text class="page-title">{{ props.title }}</text>
+    <!-- 政治是题库学科：eyebrow 落到「政治 · 题库」，标题换成刷题口径（与设计稿 knowledgePage 一致） -->
+    <text class="eyebrow">{{ props.eyebrow }} · {{ quiz ? `${subject?.shortName} · 题库` : subject?.name || '' }}</text>
+    <text class="page-title">{{ quiz ? props.quizTitle : props.title }}</text>
 
-    <view class="search-box">
+    <!-- 政治没有知识点可搜，搜索框只在知识点学科出现 -->
+    <view v-if="!quiz" class="search-box">
       <image src="/static/icons/search.png" mode="aspectFit" />
       <input
         v-model="keyword"
@@ -219,35 +217,13 @@ function pad(n: number): string {
       </button>
     </view>
 
-    <!-- 政治：没有知识点讲解，只有题目 → 落到刷题入口 -->
-    <template v-if="quiz">
-      <button class="knowledge-feature quiz-feature" hover-class="hover-press" @tap="openQuiz">
-        <view class="feature-text">
-          <text class="eyebrow">{{ quizCopy.eyebrow }}</text>
-          <text class="feature-title quiz-title">{{ quizCopy.title }}</text>
-          <text class="subtext">{{ quizCopy.note }}</text>
-          <view class="approach-note">
-            <image src="/static/icons/target-primary.png" mode="aspectFit" />
-            <text>选择 + 材料，写完就判</text>
-          </view>
-        </view>
-        <view class="feature-arrow">
-          <image style="width: 18px; height: 18px" src="/static/icons/arrow-primary.png" mode="aspectFit" />
-        </view>
-      </button>
-
-      <button class="primary-button mt16" hover-class="hover-press" @tap="openQuiz">
-        <text>{{ quizCopy.cta }}</text>
-        <image src="/static/icons/arrow-on.png" mode="aspectFit" />
-      </button>
-
-      <view class="panel mt20">
-        <text class="panel-title">政治先做刷题</text>
-        <text class="subtext mt12">
-          这个学科暂时没有可发布的知识点讲解，手上只有题。知识点讲解整理好之后，这里会变回列表。
-        </text>
-      </view>
-    </template>
+    <!--
+      政治：没有知识点讲解，只有题目 → 刷题内容**直接渲染在学科 tab 下面**。
+      设计稿就是这么做的（knowledgePage 里 `isQuiz ? politicsQuizBody() : knowledgeResults()`），
+      所以这里不能再放「进入政治刷题」的入口卡——那等于把政治模块藏到二级页面里。
+      数据在主包（politics-index），题库正文仍在分包，由 PoliticsQuiz 负责跳转。
+    -->
+    <PoliticsQuiz v-if="quiz" />
 
     <!-- 搜索结果 -->
     <template v-else-if="searching">
@@ -366,23 +342,12 @@ function pad(n: number): string {
       </view>
     </template>
 
+    <!-- 政治走刷题，底部说明由 PoliticsQuiz 自己给（与设计稿一致） -->
     <text v-if="!quiz" class="quiet-note">内容来自 data/content · 共 {{ totalOfSubject }} 个知识点</text>
-    <text v-else class="quiet-note">题目来自 data/politics/questions.ts</text>
   </view>
 </template>
 
 <style scoped>
-/* 刷题入口：政治没知识点讲解，用一张卡片把人引到 pages-politics */
-.quiz-feature {
-  margin-top: 18px;
-}
-.quiz-title {
-  font-size: 20px;
-}
-.quiz-feature .approach-note {
-  margin-top: 10px;
-}
-
 /* 考试模块筛选：数学一 / 数学二 共用章节数据，这里做视图过滤 */
 .module-filter {
   display: flex;

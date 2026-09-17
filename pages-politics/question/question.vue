@@ -12,6 +12,7 @@ import { computed, ref } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
+import { isObjective } from '../../utils/politics'
 import { usePoliticsQuiz, startQuiz, normalizeKeys } from '../usePoliticsQuiz'
 
 const { getQuizAnswer, answerQuiz } = useLearning()
@@ -30,18 +31,33 @@ function resetOptionState() {
 }
 
 onLoad((options) => {
+  // 队列在**这一页**建，不在列表页建：题库正文只在分包内，主包里的套卷卡
+  // （资料库内嵌的那份）拿不到它，所以套卷卡只把**卷号**带过来：
+  //   pool=x4-1 … x8-8
+  const pool = options?.pool ? decodeURIComponent(options.pool) : ''
   const startId = options?.start ? decodeURIComponent(options.start) : ''
-  if (startId) {
-    // 从清单点某一题进来：以该题开一轮，题库其余题目排在后面
-    startQuiz('all', [startId])
-    return
+
+  if (pool) {
+    // 整卷按卷面顺序作答。卷号认不出来时 startQuiz 会建不出队列（返回 false），
+    // 这时退回开一轮全部，别把用户停在空队列上。
+    if (!startQuiz(pool, undefined, false, true)) startQuiz('all')
+  } else if (!quiz.total.value) {
+    // 没有 pool 且队列为空（刷新 / 从结果页「再练一遍」前队列被清）→ 兜底开一轮全部
+    startQuiz('all')
   }
-  // 直接从按钮进来且队列为空（例如刷新）→ 兜底开一轮全部
-  if (!quiz.total.value) startQuiz('all')
+
+  if (startId) {
+    // 从清单点某一题进来：以该题开一轮，队列其余题目（保持原顺序）排在后面。
+    const rest = quiz.queue.value.filter((id) => id !== startId)
+    quiz.queue.value = [startId, ...rest]
+    quiz.cursor.value = 0
+    quiz.pickedKeys.value = []
+    quiz.revealed.value = false
+  }
 })
 
 /** 是不是选择题（单选 / 多选）。两者共用选项交互，区别只是多选可选中多个 */
-const isChoiceLike = computed(() => question.value?.type === 'choice' || question.value?.type === 'multi')
+const isChoiceLike = computed(() => isObjective(question.value?.type || ''))
 const isMulti = computed(() => question.value?.type === 'multi')
 
 /** 本题的正确选项 key 列表：单选取 answerKey，多选取 answerKeys */

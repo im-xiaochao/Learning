@@ -68,6 +68,10 @@
           "style": { "navigationStyle": "custom" }
         },
         {
+          "path": "paper/paper",
+          "style": { "navigationStyle": "custom" }
+        },
+        {
           "path": "question/question",
           "style": { "navigationStyle": "custom" }
         },

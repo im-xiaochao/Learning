@@ -5,6 +5,7 @@
 import { computed } from 'vue'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
+import { isObjective } from '../../utils/politics'
 import { usePoliticsQuiz, startQuiz } from '../usePoliticsQuiz'
 import { appPoliticsQuestions } from '../questions'
 
@@ -16,8 +17,8 @@ const reviewed = computed(() =>
   quiz.queue.value.map((id) => ({ question: appPoliticsQuestions.find((q) => q.id === id), rec: getQuizAnswer(id) })).filter((x) => x.question),
 )
 
-/** 客观题 = 单选 + 多选，两者都判对错；材料题只看参考答案、不计分 */
-const objectiveItems = computed(() => reviewed.value.filter((x) => x.question?.type === 'choice' || x.question?.type === 'multi'))
+/** 客观题 = 单选 + 多选，两者都判对错；材料题只看参考答案、不计分。判据在 utils/politics */
+const objectiveItems = computed(() => reviewed.value.filter((x) => isObjective(x.question?.type || '')))
 const counts = computed(() => {
   let correct = 0
   let wrong = 0
@@ -31,6 +32,17 @@ const counts = computed(() => {
 const wrongItems = computed(() => objectiveItems.value.filter((x) => x.rec && !x.rec.correct))
 const accuracy = computed(() => (objectiveItems.value.length ? Math.round((counts.value.correct / objectiveItems.value.length) * 100) : 0))
 const perfect = computed(() => objectiveItems.value.length > 0 && counts.value.wrong === 0)
+
+/** 本轮范围文案：整卷练习显示「4套卷第N套」等 */
+const scopeLabel = computed(() => {
+  const f = quiz.moduleFilter.value
+  if (/^x[48]-\d+$/.test(f)) {
+    const [book, set] = f.split('-')
+    return `2026 肖秀荣《${book === 'x4' ? '4套卷' : '8套卷'}》第${set}套`
+  }
+  if (f && f !== 'all') return f
+  return quiz.fromWeak.value ? '错题重练' : '全部题目'
+})
 
 function retryWrong() {
   if (!wrongItems.value.length) return
@@ -58,7 +70,7 @@ function goHome() {
         </view>
         <text class="result-title">{{ perfect ? '这一组，拿下了。' : wrongItems.length ? '再练一遍，就稳了。' : '这一组做完了。' }}</text>
         <text class="subtext mt12">
-          本轮 {{ reviewed.length }} 题{{ counts.material ? `（含材料题 ${counts.material} 道）` : ''
+          {{ scopeLabel }} · 本轮 {{ reviewed.length }} 题{{ counts.material ? `（含材料题 ${counts.material} 道）` : ''
           }}。{{ wrongItems.length ? `有 ${wrongItems.length} 道选错了，回头重练一遍。` : '选择题全部答对，继续保持。' }}
         </text>
       </view>

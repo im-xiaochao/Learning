@@ -871,6 +871,16 @@ function groupBySection(knowledge: ReturnType<typeof toKnowledgePoint>[]) {
  * 刷题页显示空态，不伪造数量。
  */
 function buildPoliticsQuestions() {
+  /** 来源：tags 里的「肖四 / 肖八」→ book；「第N套」→ set */
+  const bookOf = (tags: string[]): 'x4' | 'x8' | undefined => (tags.includes('肖八') ? 'x8' : tags.includes('肖四') ? 'x4' : undefined)
+  const setOf = (tags: string[]): number | undefined => {
+    const t = tags.find((x) => /^第\d+套$/.test(x))
+    return t ? Number(t.replace(/[^\d]/g, '')) : undefined
+  }
+  const srcOf = (tags: string[]) => {
+    const book = bookOf(tags)
+    return book ? { book, set: setOf(tags) } : {}
+  }
   const questions = POLITICS_QUESTIONS.map((q) => {
     if (q.type === 'choice') {
       return {
@@ -883,6 +893,7 @@ function buildPoliticsQuestions() {
         answerKey: q.answerKey,
         explanation: q.explanation,
         tags: q.tags,
+        ...srcOf(q.tags),
       }
     }
     if (q.type === 'multi') {
@@ -896,6 +907,7 @@ function buildPoliticsQuestions() {
         answerKeys: [...q.answerKeys],
         explanation: q.explanation,
         tags: q.tags,
+        ...srcOf(q.tags),
       }
     }
     return {
@@ -908,6 +920,7 @@ function buildPoliticsQuestions() {
       answerPoints: q.answerPoints,
       explanation: q.explanation,
       tags: q.tags,
+      ...srcOf(q.tags),
     }
   })
 
@@ -918,8 +931,29 @@ function buildPoliticsQuestions() {
     count: questions.filter((q) => q.module === m).length,
   }))
 
+  // 「套卷投影」：资料库要把政治**直接渲染在政治学科下面**（对齐设计稿
+  // knowledgePage 的 `isQuiz ? politicsQuizBody() : knowledgeResults()`），
+  // 而资料库在**主包**里，主包不能 import 分包题库（见 check-bundles.mjs 的落位断言）。
+  //
+  // 资料库那一屏只画「来源切换 + 每套卷的进度卡」，卡片上只有两个数字：
+  // 「已练 M / 共 N 题」。N 是这一套的题数（= ids.length），M 靠 ids 逐条查同学的作答记录。
+  // 所以主包需要的**只有每套卷的题目 id**：
+  //   - 不投影题干：卡片上不显示题干，题干只在卷详情页（分包）出现；
+  //   - 不投影 type / module / difficulty：这三个字段曾是「考纲模块筛选 + 行副标题」用的，
+  //     那套视图已经按设计稿去掉（只剩 4套卷 / 8套卷）。
+  // 只带 id 之后主包这份文件从 202 KB 降到约 11 KB，且不随题库正文长度增长。
+  const paperSets = (['x4', 'x8'] as const).flatMap((book) => {
+    const setNos = [...new Set(questions.filter((q) => q.book === book).map((q) => q.set!))].sort((a, b) => a - b)
+    return setNos.map((set) => ({
+      book,
+      set,
+      ids: questions.filter((q) => q.book === book && q.set === set).map((q) => q.id),
+    }))
+  })
+
   return {
     questions,
+    paperSets,
     modules,
     choiceCount: questions.filter((q) => q.type === 'choice').length,
     multiCount: questions.filter((q) => q.type === 'multi').length,
@@ -949,11 +983,35 @@ const POLITICS_INTERFACE = [
   '  /** type === "material" */',
   '  material?: AppPoliticsMaterial',
   '  answerPoints?: string[]',
+  '  /** 来源：x4 = 2026 肖秀荣《4套卷》，x8 = 《8套卷》；示意题缺省（属「考纲模块」来源） */',
+  "  book?: 'x4' | 'x8'",
+  '  /** 卷号（book 存在时）：4套卷 1~4，8套卷 1~8 */',
+  '  set?: number',
   '  /** 三种题型都有：答案解析 / 答题思路 */',
   '  explanation: string',
   '}',
   '',
   'export interface AppPoliticsModule { name: string; count: number }',
+].join('\n')
+
+/** data/generated/app/politics-index.ts 里 AppPoliticsPaperSet 的接口声明 */
+const POLITICS_INDEX_INTERFACE = [
+  '/**',
+  ' * 政治套卷投影：**主包**的资料库渲染政治学科时要画的东西——只有每套卷的题目 id。',
+  ' * 题干 / 选项 / 答案 / 解析 / 材料段落全部不在这里，它们在 pages-politics 分包内。',
+  ' *',
+  ' * 为什么连题干都不给：那一屏只画「来源切换 + 每套卷的进度卡」，卡上的两个数字是',
+  ' * 「已练 M / 共 N 题」——N = ids.length，M = 逐条查同学作答记录。题干在主包里没有任何',
+  ' * 用处，留着只是让主包白涨（题干一度进过主包，光这一项就是 202 KB）。',
+  ' */',
+  'export interface AppPoliticsPaperSet {',
+  "  book: 'x4' | 'x8'",
+  '  /** 卷内第几套：4套卷 1~4，8套卷 1~8 */',
+  '  set: number',
+  '  /** 这一套的题目 id，按卷面顺序 */',
+  '  ids: string[]',
+  '}',
+  '',
 ].join('\n')
 
 /** 清空并重建目录；删不掉时退化为直接覆盖写，不让构建中断 */
@@ -1090,6 +1148,14 @@ function main() {
     `${banner}/** 只含 id，供主包选取复习队列用；词条正文在 pages-words/words.ts */\nexport const appWordIds: string[] = ${serializeStrings(app.words.map((w) => w.id))}\n`,
   )
 
+  // 政治套卷投影：资料库要在**主包**里把政治渲染在学科下面（设计稿 knowledgePage 就是这么做的），
+  // 但题库正文 868 KB 在分包内、主包不能 import。所以这里只投影「每套卷的题目 id」——
+  // 和 word-ids 是同一个套路（id 清单在数据层仍然算轻，题干才是重的那部分）。
+  write(
+    path.join(appDir, 'politics-index.ts'),
+    `${banner}${POLITICS_INDEX_INTERFACE}\n\nexport const appPoliticsPaperSets: AppPoliticsPaperSet[] = ${serializeRecords(politics.paperSets)}\n`,
+  )
+
   // 知识点正文必须写进分包目录【内部】。
   // 实测：放在 data/generated/app/ 下时，uni-app 把它当公共模块打回了主包，
   // 分包里只剩一个光秃秃的页面，主包因此涨到 2 MB 以上。
@@ -1101,8 +1167,9 @@ function main() {
   )
 
   // 6) 政治题库：规范数据 + 运行数据。
-  // 题库只被刷题页用到，主包不需要它，所以运行数据同样写进分包目录【内部】，
-  // 否则 uni-app 会把 30 KB 的题库拉回主包（和知识点正文一个道理）。
+  // 题库正文只被答题 / 结果页用到，主包不需要它，所以运行数据写进分包目录【内部】，
+  // 否则 uni-app 会把题库整个拉回主包（和知识点正文一个道理）。
+  // 主包的资料库要渲染刷题清单，走的是上面第 5 步投影的 politics-index.ts（轻量清单）。
   const politicsDir = path.join(CONTENT_DIR, 'politics')
   resetDir(politicsDir)
   const politicsUpdatedAt = fileUpdatedAt('politics/questions.ts')
@@ -1118,17 +1185,17 @@ function main() {
     `${banner}${POLITICS_INTERFACE}\n\nexport const appPoliticsQuestions: AppPoliticsQuestion[] = ${serializeRecords(politics.questions)}\n\nexport const appPoliticsModules: AppPoliticsModule[] = ${serializeRecords(politics.modules)}\n`,
   )
 
-  console.log(`\n已写入 ${knowledgeFiles + 11} 个文件：`)
+  console.log(`\n已写入 ${knowledgeFiles + 12} 个文件：`)
   console.log(`  data/content/catalog.json`)
   console.log(`  data/content/knowledge/<subject>/*.json   (${knowledgeFiles})`)
   console.log(`  data/content/vocabulary/words.json`)
   console.log(`  data/content/politics/questions.json`)
   console.log(`  data/generated/knowledge-index.json`)
   console.log(`  data/generated/vocabulary-index.json`)
-  console.log(`  data/generated/app/catalog.ts | knowledge.ts | word-ids.ts   (主包)`)
+  console.log(`  data/generated/app/catalog.ts | knowledge.ts | word-ids.ts | politics-index.ts   (主包)`)
   console.log(`  pages-knowledge/content.ts                                   (分包内)`)
   console.log(`  pages-words/words.ts                                         (分包内)`)
-  console.log(`  pages-politics/questions.ts                                  (分包内)`)
+  console.log(`  pages-politics/questions.ts                                  (分包内，题库正文)`)
 }
 
 main()
