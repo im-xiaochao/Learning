@@ -48,9 +48,27 @@ export interface PlanItem {
   completedAt: string | null
 }
 
+/**
+ * 政治刷题的作答记录。
+ *
+ * `questionId` 是题库里的稳定 ID（`data/politics/questions.ts` 手工指定），
+ * 不要用数组下标——题库增删后下标会变，用户的对错记录就对不上了。
+ * 材料题没有「对错」，答过即记 `correct: false` + `selfRated`，只用于标记「已作答」。
+ */
+export interface QuizProgress {
+  questionId: string
+  /**
+   * 所选选项的 key。单选如 `"B"`；多选是所选 key **排序后拼接**（选 A、C 存 `"AC"`）；
+   * 材料题为空串。
+   */
+  picked: string
+  correct: boolean
+  answeredAt: string
+}
+
 export interface LearningEvent {
   id: string
-  type: 'word_reviewed' | 'knowledge_completed'
+  type: 'word_reviewed' | 'knowledge_completed' | 'quiz_answered'
   contentId: string
   contentVersion: number
   occurredAt: string
@@ -69,6 +87,8 @@ export interface LearningState {
   wordProgress: WordProgress[]
   favoriteWordIds: string[]
   planItems: PlanItem[]
+  /** 政治刷题作答记录（题库改版后旧 id 会变成孤儿记录，不影响新题） */
+  quizProgress: QuizProgress[]
   learningEvents: LearningEvent[]
   updatedAt: string
 }
@@ -106,6 +126,7 @@ function defaultState(): LearningState {
     wordProgress: [],
     favoriteWordIds: [],
     planItems: [],
+    quizProgress: [],
     learningEvents: [],
     updatedAt: isoNow(),
   }
@@ -124,6 +145,7 @@ function load(): LearningState {
     wordProgress: Array.isArray(raw.wordProgress) ? raw.wordProgress : [],
     favoriteWordIds: Array.isArray(raw.favoriteWordIds) ? raw.favoriteWordIds : [],
     planItems: Array.isArray(raw.planItems) ? raw.planItems : [],
+    quizProgress: Array.isArray(raw.quizProgress) ? raw.quizProgress : [],
     learningEvents: Array.isArray(raw.learningEvents) ? raw.learningEvents : [],
   }
 }
@@ -148,6 +170,7 @@ export const currentGoal = computed<GoalEntry>(() => {
 
 const readingById = computed(() => new Map(state.value.readingProgress.map((r) => [r.knowledgeId, r])))
 const wordProgressById = computed(() => new Map(state.value.wordProgress.map((w) => [w.wordId, w])))
+const quizById = computed(() => new Map(state.value.quizProgress.map((q) => [q.questionId, q])))
 
 export function getReading(knowledgeId: string): ReadingProgress | undefined {
   return readingById.value.get(knowledgeId)
@@ -155,6 +178,11 @@ export function getReading(knowledgeId: string): ReadingProgress | undefined {
 
 export function getFamiliarity(wordId: string): Familiarity | undefined {
   return wordProgressById.value.get(wordId)?.familiarity
+}
+
+/** 政治刷题：某题的作答记录（未答过返回 undefined） */
+export function getQuizAnswer(questionId: string): QuizProgress | undefined {
+  return quizById.value.get(questionId)
 }
 
 export function isFavorite(wordId: string): boolean {
@@ -177,12 +205,14 @@ function todayDistinct(type: LearningEvent['type']): number {
 
 export const todayWords = computed(() => todayDistinct('word_reviewed'))
 export const todayKnowledge = computed(() => todayDistinct('knowledge_completed'))
+export const todayQuiz = computed(() => todayDistinct('quiz_answered'))
 
 /** 累计学习量：全部历史事件按内容 ID 去重 */
 export const totalWords = computed(() => new Set(state.value.learningEvents.filter((e) => e.type === 'word_reviewed').map((e) => e.contentId)).size)
 export const totalKnowledge = computed(
   () => new Set(state.value.learningEvents.filter((e) => e.type === 'knowledge_completed').map((e) => e.contentId)).size,
 )
+export const totalQuiz = computed(() => new Set(state.value.learningEvents.filter((e) => e.type === 'quiz_answered').map((e) => e.contentId)).size)
 
 /** 已读知识点数（含进行中） */
 export const readKnowledgeCount = computed(() => state.value.readingProgress.length)
@@ -201,8 +231,8 @@ export const streakDays = computed(() => {
 })
 
 /** 最近 7 天每日去重内容数（无事件补 0），最后一项是今天 */
-export function weeklyValues(mode: 'words' | 'knowledge'): number[] {
-  const type = mode === 'words' ? 'word_reviewed' : 'knowledge_completed'
+export function weeklyValues(mode: 'words' | 'knowledge' | 'quiz'): number[] {
+  const type = mode === 'words' ? 'word_reviewed' : mode === 'knowledge' ? 'knowledge_completed' : 'quiz_answered'
   const out: number[] = []
   for (let i = 6; i >= 0; i--) {
     const d = new Date()
@@ -321,6 +351,34 @@ export function completeKnowledge(knowledgeId: string, contentVersion = 1): void
   touch()
 }
 
+/**
+ * 记录一次政治刷题作答。
+ *
+ * 同一题重复作答时**覆盖**旧记录（保留最近一次的对错），
+ * 但事件只在当天首次作答时写一条 —— 与 completeKnowledge 的口径一致，
+ * 避免反复刷同一题把「今日完成题数」刷上去。
+ *
+ * @param questionId 题库稳定 ID
+ * @param picked     选择题所选选项 key；材料题传空串
+ * @param correct    选择题是否答对；材料题传 false（无对错）
+ */
+export function answerQuiz(questionId: string, picked: string, correct: boolean): void {
+  const now = isoNow()
+  const rest = state.value.quizProgress.filter((q) => q.questionId !== questionId)
+  state.value.quizProgress = [...rest, { questionId, picked, correct, answeredAt: now }]
+
+  const alreadyToday = state.value.learningEvents.some(
+    (e) => e.type === 'quiz_answered' && e.contentId === questionId && e.localDate === localDate(),
+  )
+  if (!alreadyToday) {
+    state.value.learningEvents = [
+      ...state.value.learningEvents,
+      { id: eventId(), type: 'quiz_answered', contentId: questionId, contentVersion: 1, occurredAt: now, localDate: localDate(), timezone: TIMEZONE },
+    ]
+  }
+  touch()
+}
+
 export function toggleFavorite(wordId: string): boolean {
   const exists = state.value.favoriteWordIds.includes(wordId)
   state.value.favoriteWordIds = exists
@@ -365,10 +423,12 @@ export function useLearning() {
     currentGoal,
     todayWords,
     todayKnowledge,
+    todayQuiz,
     todayPending,
     todayPercent,
     totalWords,
     totalKnowledge,
+    totalQuiz,
     readKnowledgeCount,
     streakDays,
     weeklyValues,
@@ -377,11 +437,13 @@ export function useLearning() {
     lastReading,
     getReading,
     getFamiliarity,
+    getQuizAnswer,
     isFavorite,
     isPlanned,
     reviewWord,
     openKnowledge,
     completeKnowledge,
+    answerQuiz,
     toggleFavorite,
     togglePlan,
     saveGoals,

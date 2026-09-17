@@ -14,7 +14,10 @@ import { useLearning } from '../stores/learning'
 import {
   chaptersOfSubject,
   entriesOfChapter,
+  filterChaptersByModule,
   getEntry,
+  isQuizSubject,
+  modulesOfSubject,
   searchKnowledge,
   subjects as allSubjects,
   knowledgeCountOfSubject,
@@ -44,16 +47,61 @@ const { getReading, lastReading, isPlanned } = useLearning()
 /** 本页的学科清单 */
 const subjects = computed(() => props.subjectIds.map((id) => allSubjects.find((s) => s.id === id)).filter((s): s is (typeof allSubjects)[number] => Boolean(s)))
 
+/**
+ * 学科 ≥5 个时切换器要挤进一行：短名/长名按内容比例分摊宽度，
+ * 否则「组成原理」「计算机网络」这类长名会把整行撑到换行。
+ */
+const denseTabs = computed(() => subjects.value.length >= 5)
+
 const subjectIndex = ref(0)
 const keyword = ref('')
 const expanded = ref('')
 
 const subject = computed(() => subjects.value[subjectIndex.value] || subjects.value[0])
-const chapterList = computed(() => chaptersOfSubject(subject.value?.id || ''))
+const allChapters = computed(() => chaptersOfSubject(subject.value?.id || ''))
+
+/**
+ * 考试模块筛选（数学一 / 数学二）。数学一和数学二共用同一份章节，
+ * 章上有 modules 标注；默认「全部」，用户也可以只看自己考的那一档。
+ */
+const moduleOptions = computed(() => modulesOfSubject(subject.value?.id || ''))
+const activeModule = ref('all')
+const chapterList = computed(() => filterChaptersByModule(allChapters.value, activeModule.value))
+const showModuleFilter = computed(() => moduleOptions.value.length > 1)
 const totalOfSubject = computed(() => knowledgeCountOfSubject(subject.value?.id || ''))
+
+/** 切换学科时重置模块筛选，避免带着上一个学科的选择 */
+watch(
+  () => subject.value?.id,
+  () => {
+    activeModule.value = 'all'
+    expanded.value = ''
+  },
+)
 
 const searching = computed(() => keyword.value.trim().length > 0)
 const results = computed<KnowledgeEntry[]>(() => (searching.value ? searchKnowledge(keyword.value, subject.value?.id) : []))
+
+/**
+ * 当前学科是否以「刷题」呈现（政治）。
+ * 政治没有可发布的知识点讲解，只有题目，所以在资料库里落到刷题入口而不是知识点列表。
+ * 判据在 useContent.isQuizSubject：kind === 'politics' 且没有章节——
+ * 补上真实讲解稿后自动回到知识点列表。
+ */
+const quiz = computed(() => isQuizSubject(subject.value?.id || ''))
+
+/** 刷题入口卡片的文案（与设计稿 politicsQuizPage 一致） */
+const quizCopy = computed(() => ({
+  eyebrow: '考研政治 · 刷题',
+  title: '先把题做对，再回头看理论。',
+  note: '政治的知识点讲解还在整理，这里先放题目：选择题做完立刻判对错、给解析；材料题读材料再看采分点。',
+  cta: '进入政治刷题',
+  empty: '题库还在整理中，之后会陆续补上。',
+}))
+
+function openQuiz() {
+  uni.navigateTo({ url: '/pages-politics/list/list' })
+}
 
 /** 学科清单变化时重置选中项 */
 watch(
@@ -98,6 +146,11 @@ function selectSubject(i: number) {
   keyword.value = ''
 }
 
+function selectModule(m: string) {
+  activeModule.value = m
+  expanded.value = ''
+}
+
 function toggleChapter(id: string) {
   expanded.value = expanded.value === id ? '' : id
 }
@@ -131,7 +184,7 @@ function pad(n: number): string {
       />
     </view>
 
-    <view v-if="subjects.length > 1" class="subject-tabs">
+    <view v-if="subjects.length > 1" class="subject-tabs" :class="{ dense: denseTabs }">
       <button
         v-for="(s, i) in subjects"
         :key="s.id"
@@ -144,8 +197,60 @@ function pad(n: number): string {
       </button>
     </view>
 
+    <!-- 考试模块筛选：数学一 / 数学二 共用同一份章节，按需过滤 -->
+    <view v-if="showModuleFilter" class="module-filter">
+      <button
+        class="module-chip"
+        :class="{ active: activeModule === 'all' }"
+        hover-class="hover-press"
+        @tap="selectModule('all')"
+      >
+        <text>全部</text>
+      </button>
+      <button
+        v-for="m in moduleOptions"
+        :key="m"
+        class="module-chip"
+        :class="{ active: activeModule === m }"
+        hover-class="hover-press"
+        @tap="selectModule(m)"
+      >
+        <text>{{ m }}</text>
+      </button>
+    </view>
+
+    <!-- 政治：没有知识点讲解，只有题目 → 落到刷题入口 -->
+    <template v-if="quiz">
+      <button class="knowledge-feature quiz-feature" hover-class="hover-press" @tap="openQuiz">
+        <view class="feature-text">
+          <text class="eyebrow">{{ quizCopy.eyebrow }}</text>
+          <text class="feature-title quiz-title">{{ quizCopy.title }}</text>
+          <text class="subtext">{{ quizCopy.note }}</text>
+          <view class="approach-note">
+            <image src="/static/icons/target-primary.png" mode="aspectFit" />
+            <text>选择 + 材料，写完就判</text>
+          </view>
+        </view>
+        <view class="feature-arrow">
+          <image style="width: 18px; height: 18px" src="/static/icons/arrow-primary.png" mode="aspectFit" />
+        </view>
+      </button>
+
+      <button class="primary-button mt16" hover-class="hover-press" @tap="openQuiz">
+        <text>{{ quizCopy.cta }}</text>
+        <image src="/static/icons/arrow-on.png" mode="aspectFit" />
+      </button>
+
+      <view class="panel mt20">
+        <text class="panel-title">政治先做刷题</text>
+        <text class="subtext mt12">
+          这个学科暂时没有可发布的知识点讲解，手上只有题。知识点讲解整理好之后，这里会变回列表。
+        </text>
+      </view>
+    </template>
+
     <!-- 搜索结果 -->
-    <template v-if="searching">
+    <template v-else-if="searching">
       <view class="section-head">
         <text class="head-title">搜索结果</text>
         <text class="head-note">{{ results.length }} 个知识点</text>
@@ -261,11 +366,46 @@ function pad(n: number): string {
       </view>
     </template>
 
-    <text class="quiet-note">内容来自 data/content · 共 {{ totalOfSubject }} 个知识点</text>
+    <text v-if="!quiz" class="quiet-note">内容来自 data/content · 共 {{ totalOfSubject }} 个知识点</text>
+    <text v-else class="quiet-note">题目来自 data/politics/questions.ts</text>
   </view>
 </template>
 
 <style scoped>
+/* 刷题入口：政治没知识点讲解，用一张卡片把人引到 pages-politics */
+.quiz-feature {
+  margin-top: 18px;
+}
+.quiz-title {
+  font-size: 20px;
+}
+.quiz-feature .approach-note {
+  margin-top: 10px;
+}
+
+/* 考试模块筛选：数学一 / 数学二 共用章节数据，这里做视图过滤 */
+.module-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 2px;
+}
+.module-chip {
+  padding: 0 14px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  font-size: 12.5px;
+  color: var(--muted);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+.module-chip.active {
+  color: #ffffff;
+  background: var(--primary);
+  border-color: var(--primary);
+}
 .chapter-body {
   margin: -4px 0 6px;
   padding: 14px 16px;

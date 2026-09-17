@@ -1,12 +1,12 @@
 /**
  * 由 tools/build-content.ts 从 data/content 生成，请勿手改。
  * 重新生成：cd tools && npm run build:content
- * 数据来源时间：2026-09-13T10:54:33Z
+ * 数据来源时间：2026-09-16T04:02:20Z
  */
 
 export interface AppCourse { id: string; name: string; sortOrder: number }
-export interface AppSubject { id: string; courseId: string; name: string; shortName: string; sortOrder: number }
-export interface AppChapter { id: string; subjectId: string; module: string; title: string; summary: string; sortOrder: number }
+export interface AppSubject { id: string; courseId: string; kind: 'math' | 'politics' | 'cs'; name: string; shortName: string; sortOrder: number }
+export interface AppChapter { id: string; subjectId: string; module: string; modules?: string[]; title: string; summary: string; sortOrder: number }
 
 export const appCourses: AppCourse[] = [
   {"id":"english","name":"考研英语","sortOrder":10},
@@ -16,14 +16,14 @@ export const appCourses: AppCourse[] = [
 ]
 
 export const appSubjects: AppSubject[] = [
-  {"id":"calculus","courseId":"math","name":"高等数学","shortName":"高数","sortOrder":10},
-  {"id":"algebra","courseId":"math","name":"线性代数","shortName":"线代","sortOrder":20},
-  {"id":"probability","courseId":"math","name":"概率统计","shortName":"概率","sortOrder":30},
-  {"id":"politics","courseId":"politics","name":"思想政治理论","shortName":"政治","sortOrder":40},
-  {"id":"cs-coa","courseId":"cs","name":"计算机组成原理","shortName":"组成原理","sortOrder":50},
-  {"id":"cs-os","courseId":"cs","name":"操作系统","shortName":"操作系统","sortOrder":60},
-  {"id":"cs-ds","courseId":"cs","name":"数据结构","shortName":"数据结构","sortOrder":70},
-  {"id":"cs-net","courseId":"cs","name":"计算机网络","shortName":"计算机网络","sortOrder":80}
+  {"id":"calculus","courseId":"math","kind":"math","name":"高等数学","shortName":"高数","sortOrder":10},
+  {"id":"algebra","courseId":"math","kind":"math","name":"线性代数","shortName":"线代","sortOrder":20},
+  {"id":"probability","courseId":"math","kind":"math","name":"概率统计","shortName":"概率","sortOrder":30},
+  {"id":"politics","courseId":"politics","kind":"politics","name":"思想政治理论","shortName":"政治","sortOrder":40},
+  {"id":"cs-coa","courseId":"cs","kind":"cs","name":"计算机组成原理","shortName":"组成原理","sortOrder":50},
+  {"id":"cs-os","courseId":"cs","kind":"cs","name":"操作系统","shortName":"操作系统","sortOrder":60},
+  {"id":"cs-ds","courseId":"cs","kind":"cs","name":"数据结构","shortName":"数据结构","sortOrder":70},
+  {"id":"cs-net","courseId":"cs","kind":"cs","name":"计算机网络","shortName":"计算机网络","sortOrder":80}
 ]
 
 export const appChapters: AppChapter[] = [
@@ -61,8 +61,12 @@ export const appChapters: AppChapter[] = [
   {"id":"m2-p2-c3","subjectId":"algebra","title":"向量","summary":"本章共 8 节：n 维向量、线性组合与线性表示、线性相关与线性无关、极大线性无关组 等。","sortOrder":90,"module":"数学二"},
   {"id":"m2-p2-c4","subjectId":"algebra","title":"线性方程组","summary":"本章共 5 节：克拉默法则、齐次线性方程组、非齐次线性方程组、解的结构、初等行变换求解。","sortOrder":100,"module":"数学二"},
   {"id":"m2-p2-c5","subjectId":"algebra","title":"特征值与特征向量","summary":"本章共 7 节：特征值、特征向量、特征值计算、特征向量计算、特征值性质、相似矩阵、相似对角化 等。","sortOrder":110,"module":"数学二"},
-  {"id":"m2-p2-c6","subjectId":"algebra","title":"二次型","summary":"本章共 7 节：二次型、合同变换、二次型的秩、标准形与规范形、惯性定理、化标准形、正定二次型与正定矩阵。","sortOrder":120,"module":"数学二"},
-  {"id":"ch-politics-marxism","subjectId":"politics","title":"马克思主义基本原理","summary":"理解实践、认识及其相互关系。","sortOrder":10,"module":"思想政治理论"},
-  {"id":"ch-politics-theory","subjectId":"politics","title":"毛泽东思想和中国特色社会主义理论体系","summary":"结合历史与实践理解理论的发展。","sortOrder":20,"module":"思想政治理论"},
-  {"id":"ch-politics-ethics-law","subjectId":"politics","title":"思想道德与法治","summary":"理解理想信念、道德实践与法治意识。","sortOrder":30,"module":"思想政治理论"}
+  {"id":"m2-p2-c6","subjectId":"algebra","title":"二次型","summary":"本章共 7 节：二次型、合同变换、二次型的秩、标准形与规范形、惯性定理、化标准形、正定二次型与正定矩阵。","sortOrder":120,"module":"数学二"}
 ]
+
+/**
+ * 政治题库总题数（**只是个数字**）。
+ * 题库正文在 pages-politics 分包内，主包不能 import 它；但首页的「政治刷题」卡片
+ * 要显示「已练 M / 共 T 题」，所以这里只把总数投影到主包。
+ */
+export const appPoliticsQuestionTotal = 158

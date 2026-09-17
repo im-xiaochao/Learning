@@ -1,8 +1,12 @@
 <script setup lang="ts">
 /**
- * 单词详情：音标、各词性释义、收藏。
- * 设计稿还有「词根 / 助记 / 语境例句 / 搭配」四块，但词库当前只有
- * word / phonetic / meaning，这几块按设计稿的结构保留、内容留空态。
+ * 单词详情：音标、各词性释义、词根、助记、语境例句、搭配、收藏。
+ *
+ * 深度内容（examples / root / mnemonic / collocations）来自 data/english/word-content.ts，
+ * 经 build-content 并入 pages-words/words.ts。词库尚未覆盖全部词条，
+ * 缺哪块哪块显示空态——不要为了填满界面而编造内容。
+ *
+ * 注意：空字段在运行时投影里是**整键省略**的（undefined），不是空数组/空串。
  */
 import { computed, ref } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
@@ -36,6 +40,43 @@ const senses = computed(() => {
   const parts = w.meaning.split('；').filter(Boolean)
   return parts.map((m) => ({ pos: parts.length === 1 ? w.pos : '', meaning: m }))
 })
+
+const examples = computed(() => word.value?.examples || [])
+const root = computed(() => word.value?.root)
+const mnemonic = computed(() => word.value?.mnemonic || '')
+const collocations = computed(() => word.value?.collocations || [])
+
+/**
+ * 例句里高亮当前单词。用词边界匹配，避免 "approach" 命中 "approaches" 之外的
+ * 无关子串；大小写不敏感（句首大写、专有名词形变）。
+ * 返回分词片段供模板 v-for 渲染 —— 小程序不支持 v-html。
+ */
+const highlightRe = computed(() => {
+  const w = word.value
+  if (!w) return null
+  const escaped = w.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  // 屈折形三种情况：
+  //   1. 直接加后缀    persist → persisted / persisting
+  //   2. 以 e 结尾     achieve → achieved / achieving
+  //   3. 以 y 结尾     strategy → strategies ; apply → applied（y 变 i）
+  const stem = /y$/i.test(w.word) ? `${escaped.slice(0, -1)}(?:y|ies|ied)` : `${escaped}(?:s|es|ed|d|ing)?`
+  return new RegExp(`(${stem})\\b`, 'gi')
+})
+
+function splitParts(sentence: string): { text: string; hit: boolean }[] {
+  const re = highlightRe.value
+  if (!re) return [{ text: sentence, hit: false }]
+  const parts: { text: string; hit: boolean }[] = []
+  let last = 0
+  re.lastIndex = 0
+  for (let m = re.exec(sentence); m; m = re.exec(sentence)) {
+    if (m.index > last) parts.push({ text: sentence.slice(last, m.index), hit: false })
+    parts.push({ text: m[0], hit: true })
+    last = m.index + m[0].length
+  }
+  if (last < sentence.length) parts.push({ text: sentence.slice(last), hit: false })
+  return parts
+}
 
 function onFavorite() {
   const w = word.value
@@ -99,21 +140,49 @@ function pronounce() {
 
         <view class="detail-section">
           <text class="section-title">从词根，读懂单词</text>
-          <text class="section-body">这个词的词根与词源还没有收录。</text>
+          <template v-if="root">
+            <view class="root-parts"><text>{{ root.display }}</text></view>
+            <text class="section-body">{{ root.explanation }}</text>
+          </template>
+          <text v-else class="section-body">这个词的词根与词源还没有收录。</text>
         </view>
 
         <view class="detail-section memory-note">
           <text class="section-title">给记忆一个落脚点</text>
-          <text class="section-body">助记内容还没有收录，可以先靠音标与释义反复相遇。</text>
+          <text v-if="mnemonic" class="section-body">{{ mnemonic }}</text>
+          <text v-else class="section-body">助记内容还没有收录，可以先靠音标与释义反复相遇。</text>
         </view>
 
         <view class="detail-section">
           <text class="section-title">语境例句</text>
-          <text class="section-body">例句还没有收录。</text>
+          <template v-if="examples.length">
+            <view v-for="(ex, i) in examples" :key="i" class="example">
+              <view class="example-en">
+                <text
+                  v-for="(part, j) in splitParts(ex.sentence)"
+                  :key="j"
+                  :class="{ 'example-mark': part.hit }"
+                >{{ part.text }}</text>
+              </view>
+              <text class="example-zh">{{ ex.translation }}</text>
+            </view>
+          </template>
+          <text v-else class="section-body">例句还没有收录。</text>
+        </view>
+
+        <view class="detail-section">
+          <text class="section-title">把它放进表达里</text>
+          <template v-if="collocations.length">
+            <view v-for="(c, i) in collocations" :key="i" class="collocation-row">
+              <text class="collocation-phrase">{{ c.phrase }}</text>
+              <text class="collocation-meaning">{{ c.meaning }}</text>
+            </view>
+          </template>
+          <text v-else class="section-body">这个词的常用搭配还没有收录。</text>
         </view>
 
         <text class="quiet-note">
-          词根 / 助记 / 例句来自 data/content/vocabulary，补齐后本页会自动展示。
+          词根 / 助记 / 例句 / 搭配来自 data/english/word-content.ts，尚未覆盖全部词条。
         </text>
       </template>
 
@@ -144,5 +213,61 @@ function pronounce() {
 }
 .sense-row:last-child {
   border-bottom: none;
+}
+
+/* 词根拆解：.root-parts 的字体/配色沿用 App.vue 的全局样式，这里只微调间距 */
+.root-parts {
+  margin-bottom: 8px;
+}
+
+/* 语境例句 */
+.example {
+  margin-top: 12px;
+}
+.example-en {
+  font-family: var(--display);
+  font-size: 14.5px;
+  line-height: 1.72;
+  color: var(--fg);
+  display: block;
+}
+/* 小程序里 <text> 默认是 inline，但显式声明更稳妥：
+   分词片段必须连成一行，不能各占一行。 */
+.example-en text {
+  display: inline;
+}
+.example-mark {
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary-soft, var(--primary));
+  padding-bottom: 1px;
+}
+.example-zh {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* 搭配 */
+.collocation-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+}
+.collocation-row:last-child {
+  border-bottom: none;
+}
+.collocation-phrase {
+  font-family: var(--display);
+  font-size: 14px;
+  color: var(--fg);
+}
+.collocation-meaning {
+  font-size: 13px;
+  color: var(--muted);
 }
 </style>

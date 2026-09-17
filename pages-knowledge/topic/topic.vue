@@ -9,7 +9,7 @@ import { computed, ref } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
-import { getEntry } from '../../composables/useContent'
+import { getEntry, copyOfSubject } from '../../composables/useContent'
 import { appKnowledgeContent } from '../content'
 
 const { getReading, isPlanned, togglePlan, openKnowledge, completeKnowledge } = useLearning()
@@ -28,8 +28,13 @@ const reading = computed(() => (entry.value ? getReading(entry.value.point.id) :
 const read = computed(() => reading.value?.status === 'completed')
 const planned = computed(() => (entry.value ? isPlanned(entry.value.point.id) : false))
 
-/** 抓手标签：设计稿按学科区分（政治用「概念抓手」，数学用「关键公式」） */
-const anchorLabel = computed(() => (entry.value?.subjectId === 'politics' ? '概念抓手' : '关键公式'))
+/**
+ * 抓手标签、例子标题由学科 `kind` 决定，不再按 subjectId 硬编码——
+ * 这样以后新增学科只要在数据里给 kind，页面不用改（格式文档 v1.1 第 4 节）。
+ */
+const subjectCopy = computed(() => copyOfSubject(entry.value?.subjectId || ''))
+const anchorLabel = computed(() => subjectCopy.value.anchorLabel)
+const exampleTitle = computed(() => subjectCopy.value.exampleTitle)
 
 const indexInSection = computed(() => {
   const e = entry.value
@@ -92,7 +97,7 @@ function pad(n: number): string {
         </view>
 
         <view v-if="content && content.example" class="detail-section">
-          <text class="section-title">放进例子里理解</text>
+          <text class="section-title">{{ exampleTitle }}</text>
           <text class="section-body">{{ content.example }}</text>
         </view>
 

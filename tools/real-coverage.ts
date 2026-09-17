@@ -1,6 +1,6 @@
 // 用真实逻辑统计每个知识点的讲义来源：direct / scoped / generic
-import { MATH_MODULES } from '../data/math-data'
-import { getMathLecture } from '../data/math-lectures'
+import { MATH_MODULES } from '../data/math/tree'
+import { getMathLecture } from '../data/math/lectures'
 
 const seen = new Set<string>()
 let total = 0

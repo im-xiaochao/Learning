@@ -3,9 +3,9 @@
 import { computed } from 'vue'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
-import { getEntry, knowledgeEntries, knowledgeTotal } from '../../composables/useContent'
+import { getEntry, knowledgeEntries, knowledgeTotal, appPoliticsQuestionTotal } from '../../composables/useContent'
 
-const { currentGoal, todayWords, todayKnowledge, todayPending, todayPercent, streakDays, lastReading } = useLearning()
+const { currentGoal, todayWords, todayKnowledge, todayPending, todayPercent, streakDays, lastReading, totalQuiz } = useLearning()
 
 const todayLabel = computed(() => {
   const d = new Date()
@@ -26,6 +26,15 @@ const knowledgePercent = computed(() =>
 
 const wordsDone = computed(() => todayWords.value >= currentGoal.value.dailyWords)
 const knowledgeDone = computed(() => todayKnowledge.value >= currentGoal.value.dailyKnowledgePoints)
+
+/**
+ * 政治刷题卡片的进度：已练 / 题库总量。
+ * 注意**刷题不算「今日目标」**——进度环与「今日待办」仍是单词 + 知识点两项，
+ * 这里只是并列的第三个学习入口（与设计稿一致）。
+ */
+const quizPercent = computed(() =>
+  appPoliticsQuestionTotal ? Math.min(100, Math.round((totalQuiz.value / appPoliticsQuestionTotal) * 100)) : 0,
+)
 
 /** 接着上次学：优先最近打开的阅读记录，没有则给第一个知识点 */
 const recent = computed(() => {
@@ -116,6 +125,24 @@ function openRecent() {
           <view class="small-progress"><view class="bar" :style="`width:${knowledgePercent}%`" /></view>
           <view class="card-link">
             <text>{{ knowledgeDone ? '今天已达标' : '去读知识点' }}</text>
+            <image src="/static/icons/arrow-primary.png" mode="aspectFit" />
+          </view>
+        </button>
+
+        <!-- 政治刷题：并列的第三个入口（整行）。不计入今日目标 -->
+        <button class="study-card wide" hover-class="hover-press" @tap="goTab('/pages/library/library')">
+          <view class="row">
+            <image class="card-icon" src="/static/icons/logo-primary.png" mode="aspectFit" />
+            <text class="card-kicker">考研政治</text>
+          </view>
+          <text class="card-title">政治刷题</text>
+          <text class="study-numbers">
+            <text class="num">{{ totalQuiz }}</text>
+            / {{ appPoliticsQuestionTotal }} 题
+          </text>
+          <view class="small-progress"><view class="bar" :style="`width:${quizPercent}%`" /></view>
+          <view class="card-link">
+            <text>{{ totalQuiz ? '继续刷题' : '去刷题' }}</text>
             <image src="/static/icons/arrow-primary.png" mode="aspectFit" />
           </view>
         </button>

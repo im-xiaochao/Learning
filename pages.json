@@ -59,6 +59,23 @@
           "style": { "navigationStyle": "custom" }
         }
       ]
+    },
+    {
+      "root": "pages-politics",
+      "pages": [
+        {
+          "path": "list/list",
+          "style": { "navigationStyle": "custom" }
+        },
+        {
+          "path": "question/question",
+          "style": { "navigationStyle": "custom" }
+        },
+        {
+          "path": "result/result",
+          "style": { "navigationStyle": "custom" }
+        }
+      ]
     }
   ],
   "preloadRule": {
@@ -68,7 +85,7 @@
     },
     "pages/library/library": {
       "network": "all",
-      "packages": ["pages-knowledge"]
+      "packages": ["pages-knowledge", "pages-politics"]
     },
     "pages/words/words": {
       "network": "all",

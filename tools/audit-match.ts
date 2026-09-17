@@ -1,6 +1,6 @@
 // 审查每个知识点的讲义命中层级与出处
-import { MATH_MODULES } from '../data/math-data'
-import { getMathLecture } from '../data/math-lectures'
+import { MATH_MODULES } from '../data/math/tree'
+import { getMathLecture } from '../data/math/lectures'
 
 function clean(t: string): string {
   return t.replace(/`/g, '').replace(/^\d+(?:\.\d+)+\s*/, '').replace(/^\d+[.、]\s*/, '').trim()

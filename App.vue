@@ -85,8 +85,15 @@ scroll-view {
   padding-top: var(--status-bar-height);
   box-sizing: content-box;
   background: var(--bg);
-  position: relative;
-  z-index: 5;
+  /*
+   * 吸顶：页面整体滚动时返回键必须留在顶部。
+   * 设计稿里 app-bar 是 `.screen` 栅格的固定一行（在滚动容器 `.viewport` 之外），
+   * 本来就不会滚走；小程序页面是整体滚动，所以这里用 sticky 达到同样效果。
+   * 背景必须是不透明的（--bg），否则内容会从顶栏下面透出来。
+   */
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 .brand {
@@ -307,6 +314,7 @@ scroll-view {
 /* ── 学习入口卡片 ── */
 .learning-grid {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 .study-card {
@@ -319,6 +327,11 @@ scroll-view {
   border-radius: 19px;
   min-height: 151px;
   display: block;
+}
+/* 政治刷题：第三张卡整行（与设计稿 .study-card.wide 对应） */
+.study-card.wide {
+  flex: 1 1 100%;
+  min-height: 0;
 }
 .card-icon {
   width: 22px;
@@ -644,11 +657,16 @@ scroll-view {
   gap: 8px;
   margin-top: 14px;
 }
-/* 学科数量不定（数学 3 个、资料库 5 个起），按内容宽度排布、放不下就换行 */
+/* 学科数量不定（数学 3 个、资料库 5 个起），按内容宽度排布、放不下就换行。
+   资料库有 5 个学科，要让它们挤进一行：min-width 收到 0、横向 padding 收窄、
+   字号降到 12.5px，并把每个 tab 设为可压缩（min-width: 0 + overflow: hidden），
+   这样短名（计网）和长名（组成原理）能按内容比例分掉剩余宽度而不换行。
+   仍保留 flex-wrap —— 以后学科更多时宁可换行，也不要文字被挤成两行。 */
 .subject-tab {
   flex: 0 1 auto;
-  min-width: 68px;
-  padding: 0 12px;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0 8px;
   min-height: 38px;
   display: flex;
   align-items: center;
@@ -657,8 +675,16 @@ scroll-view {
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 600;
+  white-space: nowrap;
+}
+/* 学科多于一行的临界点：≥5 个时不换行，按内容宽度比例分摊剩余空间。
+   用 flex-basis: auto + flex-grow: 1 —— 短名（计组 / 计网）窄、长名（数据结构）宽，
+   两者共同吃满一行。不要用 flex: 1 1 0（等宽），否则「数据结构」四个字会被挤到溢出。 */
+.subject-tabs.dense .subject-tab {
+  flex: 1 1 auto;
+  padding: 0 6px;
 }
 .subject-tab.active {
   background: var(--primary);

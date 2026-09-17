@@ -1,6 +1,6 @@
 // 抽查线代/概率 section intro 主题的讲义来源
-import { MATH_MODULES } from '../data/math-data'
-import { getMathLecture } from '../data/math-lectures'
+import { MATH_MODULES } from '../data/math/tree'
+import { getMathLecture } from '../data/math/lectures'
 
 for (const mod of MATH_MODULES) {
   for (const part of mod.parts) {

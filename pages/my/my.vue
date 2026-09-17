@@ -4,12 +4,16 @@ import { computed, ref } from 'vue'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
 
-const { state, currentGoal, totalWords, totalKnowledge, favoriteWordIds, planEntries, streakDays, weeklyValues } = useLearning()
+const { state, currentGoal, totalWords, totalKnowledge, totalQuiz, favoriteWordIds, planEntries, streakDays, weeklyValues } = useLearning()
 
-const chartMode = ref<'words' | 'knowledge'>('words')
+const chartMode = ref<'words' | 'knowledge' | 'quiz'>('words')
 const values = computed(() => weeklyValues(chartMode.value))
 const maxValue = computed(() => Math.max(1, ...values.value))
 const sum = computed(() => values.value.reduce((a, b) => a + b, 0))
+
+/** 图表文案：三种模式的动词与量词 */
+const chartVerb = computed(() => (chartMode.value === 'words' ? '学习' : chartMode.value === 'knowledge' ? '阅读' : '练习'))
+const chartUnit = computed(() => (chartMode.value === 'words' ? '个单词' : chartMode.value === 'knowledge' ? '个知识点' : '道题'))
 
 /** 最近七天标签：最后一天是「今天」 */
 const dayLabels = computed(() => {
@@ -62,6 +66,10 @@ function goPlan() {
           <text class="stat-num">{{ totalKnowledge }}</text>
           <text class="stat-label">已阅读知识点</text>
         </view>
+        <view class="stat-cell">
+          <text class="stat-num">{{ totalQuiz }}</text>
+          <text class="stat-label">已练题目</text>
+        </view>
       </view>
 
       <view class="panel mt20">
@@ -87,6 +95,14 @@ function goPlan() {
             >
               <text>知识点</text>
             </button>
+            <button
+              class="cs-btn"
+              :class="{ active: chartMode === 'quiz' }"
+              hover-class="hover-press"
+              @tap="chartMode = 'quiz'"
+            >
+              <text>刷题</text>
+            </button>
           </view>
         </view>
 
@@ -99,7 +115,7 @@ function goPlan() {
         </view>
 
         <text class="chart-caption">
-          近 7 天共{{ chartMode === 'words' ? '学习' : '阅读' }} {{ sum }} 个{{ chartMode === 'words' ? '单词' : '知识点' }}，坚持正在悄悄发生。
+          近 7 天共{{ chartVerb }} {{ sum }} {{ chartUnit }}，坚持正在悄悄发生。
         </text>
       </view>
 

@@ -23,6 +23,10 @@ tools/node_modules/
 # 页码索引留在 tools/pages-index.md（那个是入库的）。
 tools/pages/
 
+# .tmp-od：改设计稿时的中间产物（线上稿快照、补丁产物、抽出的 js、桩 DOM 的调试脚本）。
+# 和 tools/pages/ 同理——随时能用 tools/_extract-od.js 重新生成，不必入库。
+.tmp-od/
+
 # ── 编辑器 Agent 的工作区 ──
 # 这里放的是 Agent 的记忆（memory/ 每次会话都会追加）与技能，属于本机会话状态，
 # 不是项目源码。项目真正需要长期留存的约定已经写在 data/content/README.md 与

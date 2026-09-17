@@ -1,7 +1,7 @@
 /**
  * 由 tools/build-content.ts 从 data/content 生成，请勿手改。
  * 重新生成：cd tools && npm run build:content
- * 数据来源时间：2026-09-13T10:54:33Z
+ * 数据来源时间：2026-09-16T04:02:20Z
  */
 
 export interface AppKnowledgeContent { anchor: string; caption: string; keyPoints: string[]; example: string }
@@ -966,8 +966,5 @@ export const appKnowledgeContent: Record<string, AppKnowledgeContent> = {
   "kp-m2-p2-c6-zheng-jiao-bian-huan-fa": {"anchor":"f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）","caption":"二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。","keyPoints":["交叉项系数要分配到对称矩阵的两个对称位置","正定矩阵的全部特征值为正","正定还可用顺序主子式判别"],"example":"x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"},
   "kp-m2-p2-c6-zheng-ding-ding-yi": {"anchor":"f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）","caption":"二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。","keyPoints":["交叉项系数要分配到对称矩阵的两个对称位置","正定矩阵的全部特征值为正","正定还可用顺序主子式判别"],"example":"x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"},
   "kp-m2-p2-c6-te-zheng-zhi-pan-bie": {"anchor":"Aα=λα，α≠0；det(λI−A)=0","caption":"一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。","keyPoints":["特征向量不能是零向量","不同特征值对应的特征向量线性无关","迹是特征值之和，行列式是特征值之积"],"example":"A=diag(2,3) 时，(1,0) 和 (0,1) 分别是特征值 2、3 的特征向量。"},
-  "kp-m2-p2-c6-shun-xu-zhu-zi-shi-pan-bie": {"anchor":"f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）","caption":"二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。","keyPoints":["交叉项系数要分配到对称矩阵的两个对称位置","正定矩阵的全部特征值为正","正定还可用顺序主子式判别"],"example":"x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"},
-  "kp-ch-politics-marxism-shi-jian-yu-ren-shi-de-guan-xi": {"anchor":"实践 → 认识 → 再实践 → 再认识","caption":"这一过程不是简单重复，而是在实践中不断深化和发展。","keyPoints":["实践是认识的来源、发展的动力和目的，也是检验认识真理性的唯一标准。","认识能够指导实践。正确的认识有助于实践取得预期效果，错误的认识则可能使实践走弯路。","面对复杂情况，需要在实践与认识的相互作用中检验判断、修正理解。"],"example":"先记录一周的学习情况，发现自己在晚间阅读时更容易分心；据此调整阅读时间，再观察下一周的实际效果。这个例子帮助理解从实践中形成认识、再通过实践检验认识的过程。"},
-  "kp-ch-politics-theory-li-lun-lian-xi-shi-ji": {"anchor":"理论联系实际","caption":"用中国具体实践理解中国特色社会主义理论体系","keyPoints":["理论来自实践，也要回应现实中的问题与需要。","中国特色社会主义道路、理论、制度、文化相互联系、相互支撑。","理解「为什么」，要把历史选择、现实条件与发展目标放在一起看。"],"example":"比如社区推进数字化服务，不只是换一套工具，还要结合居民需求、公共资源和治理目标持续调整。"},
-  "kp-ch-politics-ethics-law-li-xiang-xin-nian-dao-de-shi-jian-yu-fa-01w6ps": {"anchor":"理想信念 + 道德实践 + 法治意识","caption":"思想道德与法治共同塑造日常选择","keyPoints":["理想信念提供方向，让个人选择与长期目标保持一致。","道德要求落在诚实、责任、友善等具体行动中。","法治意识提醒我们尊重规则、权利和程序，用合法方式解决分歧。"],"example":"在小组学习中按约定共享资料、如实标注来源、遇到分歧先沟通再按规则处理，就是把道德与法治落到日常。"}
+  "kp-m2-p2-c6-shun-xu-zhu-zi-shi-pan-bie": {"anchor":"f=xᵀAx；A 正定 ⇔ xᵀAx>0（x≠0）","caption":"二次型 xᵀAx 的交叉项、正负号和秩都可以通过换基重新观察。","keyPoints":["交叉项系数要分配到对称矩阵的两个对称位置","正定矩阵的全部特征值为正","正定还可用顺序主子式判别"],"example":"x²+2y² 的矩阵 diag(1,2) 正定；x²−y² 则是双曲型。"}
 }

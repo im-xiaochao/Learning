@@ -226,6 +226,140 @@ for (const w of wordsFile.words || []) {
   if ((w.senses || []).every((s: any) => !s.partOfSpeech)) wordNoPos++
 }
 
+// ---------------------------------------------------------------- 3.5 政治题库
+
+/**
+ * 政治题库：规范化数据在 `data/content/politics/questions.json`。
+ * 政治没有知识点，这份题库就是政治模块的全部内容，所以校验要严：
+ *  - id 唯一且合法（id 是用户对错记录的键，改了就对不上）
+ *  - 选择题：options 至少 2 项、key 不重复、answerKey 必须命中某一项
+ *  - 材料题：material.paragraphs 非空、answerPoints 非空
+ *  - explanation 必填
+ *  - module 合法（来自 POLITICS_MODULES）
+ *
+ * 题库为空（count === 0）是合法状态，只提示不报错。
+ */
+const politicsFile = path.join(CONTENT, 'politics/questions.json')
+const POLITICS_MODULES = new Set([
+  '马克思主义基本原理',
+  '毛泽东思想和中国特色社会主义理论体系',
+  '中国近现代史纲要',
+  '思想道德与法治',
+  '形势与政策',
+])
+let politicsTotal = 0
+let politicsChoice = 0
+let politicsMulti = 0
+let politicsMaterial = 0
+
+if (!fs.existsSync(politicsFile)) {
+  warn('politics/questions.json: 不存在（政治题库还没生成？跑一次 build:content）')
+} else {
+  const pol = readJson(politicsFile)
+  if (pol.schemaVersion !== '1.0') err('politics/questions.json: schemaVersion 应为 "1.0"')
+  if (pol.courseId !== 'politics') err(`politics/questions.json: courseId 应为 politics，实际 ${pol.courseId}`)
+  if (!subjectIds.has(pol.subjectId)) err(`politics/questions.json: subjectId "${pol.subjectId}" 在 catalog.subjects 中不存在`)
+  if (!ISO_RE.test(pol.updatedAt || '')) err('politics/questions.json: updatedAt 不是 ISO 8601 UTC')
+  if (!Array.isArray(pol.questions)) err('politics/questions.json: questions 必须是数组')
+  if (pol.count !== (pol.questions || []).length) {
+    err(`politics/questions.json: count(${pol.count}) 与实际条数(${(pol.questions || []).length}) 不一致`)
+  }
+
+  const qIds = new Set<string>()
+  for (const q of pol.questions || []) {
+    politicsTotal++
+    const where = `politics/questions.json#${q.id ?? '(无 id)'}`
+    for (const f of ['id', 'type', 'module', 'difficulty', 'stem', 'tags', 'explanation']) {
+      if (q[f] === undefined) err(`${where}: 缺少必填字段 ${f}`)
+    }
+    // 题库 id 不是文档规定的实体 id 格式（形如 q-mayuan-1），单独放宽校验
+    if (!isNonEmptyString(q.id)) err(`${where}: id 必填`)
+    else if (!/^[a-z0-9-]+$/.test(q.id)) err(`${where}: id "${q.id}" 含非法字符（只允许小写英文/数字/连字符）`)
+    if (qIds.has(q.id)) err(`${where}: 题目 id 重复`)
+    qIds.add(q.id)
+    if (!POLITICS_MODULES.has(q.module)) err(`${where}: module "${q.module}" 不在考纲模块清单中`)
+    if (![1, 2, 3].includes(q.difficulty)) err(`${where}: difficulty "${q.difficulty}" 应为 1/2/3`)
+    if (!isNonEmptyString(q.stem)) err(`${where}: stem 必填`)
+    if (!isNonEmptyString(q.explanation)) err(`${where}: explanation 必填`)
+    if (!Array.isArray(q.tags)) err(`${where}: tags 必须是数组`)
+
+    // 单选与多选共用选项结构，差别只在答案字段：
+    //   单选 answerKey  : string      多选 answerKeys : string[]（≥2）
+    // 两者互斥——单选写了 answerKeys、或多选写了 answerKey，都直接报错，
+    // 避免出现「答案存了但判分读的是另一个字段」这种静默错误。
+    if (q.type === 'choice' || q.type === 'multi') {
+      if (q.type === 'choice') politicsChoice++
+      else politicsMulti++
+      if (!Array.isArray(q.options) || q.options.length < 2) {
+        err(`${where}: options 至少 2 项，实际 ${(q.options || []).length}`)
+      }
+      const keys = new Set<string>()
+      for (const o of q.options || []) {
+        if (!isNonEmptyString(o.key)) err(`${where}: options[].key 必填`)
+        if (!isNonEmptyString(o.text)) err(`${where}: options[${o.key}].text 必填`)
+        if (keys.has(o.key)) err(`${where}: options key 重复 ${o.key}`)
+        keys.add(o.key)
+      }
+      if (q.type === 'choice') {
+        if (!isNonEmptyString(q.answerKey)) err(`${where}: 单选题 answerKey 必填`)
+        else if (!keys.has(q.answerKey)) err(`${where}: answerKey "${q.answerKey}" 没有对应的选项`)
+        if (q.answerKeys !== undefined) err(`${where}: 单选题不应有 answerKeys（那是多选题的字段）`)
+      } else {
+        if (!Array.isArray(q.answerKeys)) err(`${where}: 多选题 answerKeys 必须是数组`)
+        else {
+          if (q.answerKeys.length < 2) err(`${where}: 多选题 answerKeys 至少 2 项，实际 ${q.answerKeys.length}`)
+          const seen = new Set<string>()
+          for (const k of q.answerKeys) {
+            if (!isNonEmptyString(k)) err(`${where}: answerKeys[] 含空值`)
+            else if (!keys.has(k)) err(`${where}: answerKeys "${k}" 没有对应的选项`)
+            if (seen.has(k)) err(`${where}: answerKeys 重复 ${k}`)
+            seen.add(k)
+          }
+        }
+        if (q.answerKey !== undefined) err(`${where}: 多选题不应有 answerKey（那是单选题的字段）`)
+      }
+      if (q.material !== undefined || q.answerPoints !== undefined) {
+        warn(`${where}: 选择题带了 material / answerPoints 字段，运行数据里会被忽略`)
+      }
+    } else if (q.type === 'material') {
+      politicsMaterial++
+      const m = q.material || {}
+      if (!isNonEmptyString(m.title)) err(`${where}: material.title 必填`)
+      if (!Array.isArray(m.paragraphs) || m.paragraphs.length === 0) err(`${where}: material.paragraphs 至少 1 段`)
+      for (const [i, p] of (m.paragraphs || []).entries()) {
+        if (!isNonEmptyString(p)) err(`${where}: material.paragraphs[${i}] 为空`)
+      }
+      if (!Array.isArray(q.answerPoints) || q.answerPoints.length === 0) err(`${where}: answerPoints 至少 1 条`)
+      for (const [i, p] of (q.answerPoints || []).entries()) {
+        if (!isNonEmptyString(p)) err(`${where}: answerPoints[${i}] 为空`)
+      }
+      if (q.options !== undefined || q.answerKey !== undefined || q.answerKeys !== undefined) {
+        warn(`${where}: 材料题带了 options / answerKey / answerKeys 字段，运行数据里会被忽略`)
+      }
+    } else {
+      err(`${where}: type "${q.type}" 非法（只允许 choice / multi / material）`)
+    }
+  }
+
+  // modules 统计要与题目对得上
+  const actualModules = new Set((pol.questions || []).map((q: any) => q.module))
+  const listedModules = new Set((pol.modules || []).map((m: any) => m.name))
+  for (const m of actualModules) if (!listedModules.has(m)) err(`politics/questions.json: modules 缺少 "${m}"`)
+  for (const m of listedModules) if (!actualModules.has(m)) err(`politics/questions.json: modules 多出 "${m}"（题库里没有这个模块的题）`)
+  if ((pol.modules || []).length !== listedModules.size) err('politics/questions.json: modules 有重复项')
+
+  // 运行数据必须写进分包目录【内部】，否则会被打回主包
+  const politicsPkg = path.join(ROOT, 'pages-politics/questions.ts')
+  if (!fs.existsSync(politicsPkg)) {
+    err('pages-politics/questions.ts 不存在 —— 政治题库运行数据必须写在分包目录里')
+  } else if (politicsTotal > 0) {
+    const src = fs.readFileSync(politicsPkg, 'utf8')
+    for (const q of pol.questions || []) {
+      if (!src.includes(JSON.stringify(q.id))) err(`pages-politics/questions.ts 里找不到题目 ${q.id}`)
+    }
+  }
+}
+
 // ---------------------------------------------------------------- 4. 索引
 
 const ki = readJson(path.join(GENERATED, 'knowledge-index.json'))
@@ -256,8 +390,15 @@ for (const i of vi.items || []) if (!wordIds.has(i.id)) err(`vocabulary-index: �
 console.log('================ 校验报告 ================')
 console.log(`章节        : ${chapterIds.size}`)
 console.log(`知识点      : ${kpTotal}（索引 ${(ki.items || []).length}）`)
+console.log(`政治题库    : ${politicsTotal} 题（单选 ${politicsChoice} / 多选 ${politicsMulti} / 材料 ${politicsMaterial}）`)
 console.log(`单词        : ${(wordsFile.words || []).length}（索引 ${(vi.items || []).length}）`)
 console.log('')
+
+if (politicsTotal === 0) {
+  console.log('📌 政治题库为空：政治模块当前是刷题页，题库在 data/politics/questions.ts。')
+  console.log('   这是合法状态（页面显示空态）；补题后重跑 build:content 即可。')
+  console.log('')
+}
 
 if (warnings.length > 0) {
   console.log(`⚠️  警告 ${warnings.length} 条：`)
@@ -266,10 +407,12 @@ if (warnings.length > 0) {
   console.log('')
 }
 
-// 已知缺口：源数据没有例句，模板要求 examples 至少 1 项
+// 已知缺口：词表本身没有例句，深度内容靠 data/english/word-content.ts 人工补充，尚未覆盖全库
+const totalWords = (wordsFile.words || []).length
 console.log('📌 已知缺口（源数据本身没有，非转换错误）：')
-console.log(`   - 单词 examples 为空：${wordNoExamples} / ${(wordsFile.words || []).length} 条`)
-console.log(`     words.ts 只提供 word / phonetic / meaning，没有例句字段，模板要求「例句至少一项」。`)
+console.log(`   - 单词 examples 为空：${wordNoExamples} / ${totalWords} 条（已覆盖 ${totalWords - wordNoExamples} 条）`)
+console.log(`     data/english/words.ts 只提供 word / phonetic / meaning；例句 / 词根 / 助记 / 搭配`)
+console.log(`     由 data/english/word-content.ts 人工撰写后并入，模板要求 examples 至少一项。`)
 console.log(`   - 单词无词性标记：${wordNoPos} 条（源释义未标注词性）`)
 console.log('')
 

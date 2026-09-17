@@ -51,13 +51,13 @@ data/
 | --- | --- |
 | 课程 | 3（考研英语、考研数学、考研政治） |
 | 学科 | 4（高等数学、线性代数、概率统计、思想政治理论） |
-| 章节 | 38（数学 35 + 政治 3） |
-| 小节 | 243 |
+| 章节 | 36（数学 35 + 政治 1） |
+| 小节 | 241 |
 | 知识点 | 963 |
 | 单词 | 5493 |
 
-> 政治内容来自手工编写的 `data/politics-data.ts`（设计稿与格式文档里政治只有 3 个知识点，
-> 已全部转录）。数学来自 `data/math-data.ts` + `data/math-lectures.ts`。
+> 政治内容来自手工编写的 `data/politics/chapters.ts`（设计稿与格式文档里政治只有 3 个知识点，
+> 已全部转录）。数学来自 `data/math/tree.ts` + `data/math/lectures.ts`。
 
 ## 重新生成
 
@@ -70,9 +70,12 @@ npx tsx validate-content.ts         # 按文档第 10 节体检
 
 数据来源（只读，脚本不改动）：
 
-- `data/math-data.ts` — 知识树：模块 → 部分 → 章 → 节 → 主题
-- `data/math-lectures.ts` — 每个主题的讲义：解释 / 要点 / 步骤 / 公式 / 例题 / 易错点
-- `data/words.ts` — 考研英语词汇
+- `data/math/tree.ts` — 知识树：模块 → 部分 → 章 → 节 → 主题
+- `data/math/lectures.ts` — 每个主题的讲义：解释 / 要点 / 步骤 / 公式 / 例题 / 易错点
+- `data/english/words.ts` — 考研英语词汇
+- `data/english/word-content.ts` — 单词深度内容（人工撰写）
+- `data/politics/chapters.ts` — 政治（手工编写）
+- `data/cs/subjects.ts` — 计算机专业课（仅学科骨架）
 
 产出是**确定性**的：`updatedAt` 与 `generatedAt` 都取自源文件 mtime（而非当前时间），
 所以源文件不变时重复生成的字节完全一致，`git diff` 干净。

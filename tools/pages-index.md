@@ -3,7 +3,7 @@
 **这个文件替代了原来的 `tools/pages/` 目录**（80 张 PNG，68 MB，已于 2026-09-15 删除）。
 
 那些图是把《张宇基础30讲》三本 PDF 的指定页渲染成 PNG，用途是**用眼睛读扫描页**来撰写
-`data/math-lectures.ts`（讲义层）和 `data/math-data.ts`（知识树）。图本身可以随时重渲染，
+`data/math/lectures.ts`（讲义层）和 `data/math/tree.ts`（知识树）。图本身可以随时重渲染，
 只有「该渲染哪几页」这份决定不可再生，所以留在这里。
 
 ## 源 PDF

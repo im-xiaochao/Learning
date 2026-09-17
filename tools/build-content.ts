@@ -12,20 +12,33 @@
  *   tsx build-content.ts            正式生成
  *   tsx build-content.ts --dry-run  只做统计与体检，不写文件
  *
- * 数据来源（均为只读，脚本不改动它们）：
- *   data/math-data.ts       知识树结构（模块 → 部分 → 章 → 节 → 主题）
- *   data/math-lectures.ts   每个主题的讲义（解释 / 要点 / 步骤 / 公式 / 例题 / 易错点）
- *   data/words.ts           考研英语词汇
+ * 数据来源（均为只读，脚本不改动它们；统一从 `data/index.ts` 导入）：
+ *   data/math/tree.ts        知识树结构（模块 → 部分 → 章 → 节 → 主题）
+ *   data/math/lectures.ts    每个主题的讲义（解释 / 要点 / 步骤 / 公式 / 例题 / 易错点）
+ *   data/english/words.ts    考研英语词汇（自动生成的纯词表）
+ *   data/english/word-content.ts  单词深度内容（人工撰写）
+ *   data/politics/questions.ts    政治题库（手工编写，政治模块现在的主内容）
+ *   data/politics/chapters.ts     政治知识点（**当前为空**：改刷题了）
+ *   data/cs/subjects.ts           计算机专业课（只有学科骨架）
  */
 
 import fs from 'node:fs'
 import path from 'node:path'
 import { pinyin } from 'pinyin-pro'
-import { MATH_MODULES } from '../data/math-data'
-import { getMathLecture } from '../data/math-lectures'
-import { words as RAW_WORDS } from '../data/words'
-import { POLITICS_COURSE, POLITICS_SUBJECT, POLITICS_CHAPTERS } from '../data/politics-data'
-import { MAJOR_COURSE, MAJOR_SUBJECTS } from '../data/major-data'
+import {
+  MATH_MODULES,
+  getMathLecture,
+  RAW_WORDS,
+  WORD_CONTENT,
+  BATCHES,
+  POLITICS_COURSE,
+  POLITICS_SUBJECT,
+  POLITICS_CHAPTERS,
+  POLITICS_QUESTIONS,
+  POLITICS_MODULES,
+  MAJOR_COURSE,
+  MAJOR_SUBJECTS,
+} from '../data'
 
 const DRY_RUN = process.argv.includes('--dry-run')
 const ROOT = path.resolve(__dirname, '..')
@@ -174,6 +187,27 @@ function serializeMap(entries: [string, unknown][], indent = '  '): string {
   return `{\n${entries.map(([k, v]) => `${indent}${JSON.stringify(k)}: ${JSON.stringify(v)}`).join(',\n')}\n}`
 }
 
+/**
+ * pages-words/words.ts 里 AppWord 的接口声明。
+ * 深度内容字段全部可选——绝大多数词条还没有，构建时会整键省略。
+ */
+const WORD_INTERFACE = [
+  'export interface AppWordExample { sentence: string; translation: string }',
+  'export interface AppWordRoot { display: string; explanation: string }',
+  'export interface AppWordCollocation { phrase: string; meaning: string }',
+  'export interface AppWord {',
+  '  id: string',
+  '  word: string',
+  '  ipa: string',
+  '  pos: string',
+  '  meaning: string',
+  '  examples?: AppWordExample[]',
+  '  root?: AppWordRoot',
+  '  mnemonic?: string',
+  '  collocations?: AppWordCollocation[]',
+  '}',
+].join('\n')
+
 // ---------------------------------------------------------------- 学科映射
 
 interface SubjectDef {
@@ -182,17 +216,19 @@ interface SubjectDef {
   shortName: string
   sortOrder: number
   courseId: string
+  /** 学科类型：决定详情页的抓手标题与章节插图（格式文档 v1.1 第 4 节） */
+  kind: 'math' | 'politics' | 'cs'
   /** 只有数学学科需要它来匹配「第一部分 高等数学」这类标题 */
   match?: RegExp
 }
 
 const MATH_SUBJECTS: SubjectDef[] = [
-  { id: 'calculus', name: '高等数学', shortName: '高数', sortOrder: 10, courseId: 'math', match: /高等数学/ },
-  { id: 'algebra', name: '线性代数', shortName: '线代', sortOrder: 20, courseId: 'math', match: /线性代数/ },
-  { id: 'probability', name: '概率统计', shortName: '概率', sortOrder: 30, courseId: 'math', match: /概率/ },
+  { id: 'calculus', name: '高等数学', shortName: '高数', sortOrder: 10, courseId: 'math', kind: 'math', match: /高等数学/ },
+  { id: 'algebra', name: '线性代数', shortName: '线代', sortOrder: 20, courseId: 'math', kind: 'math', match: /线性代数/ },
+  { id: 'probability', name: '概率统计', shortName: '概率', sortOrder: 30, courseId: 'math', kind: 'math', match: /概率/ },
 ]
 
-/** 政治不从 math-data 派生，来自手工编写的 data/politics-data.ts */
+/** 政治不从 math-data 派生，来自手工编写的 data/politics/chapters.ts */
 const POLITICS_SUBJECT_DEF: SubjectDef = { ...POLITICS_SUBJECT }
 
 /**
@@ -341,7 +377,13 @@ interface CatalogChapter {
   title: string
   summary: string
   sortOrder: number
+  /** 章节主要归属的考试模块（数学一 / 数学二 / 思想政治理论） */
   module: string
+  /**
+   * 本章适用的全部考试模块。数学一、数学二共用章节时会有两个值，
+   * 前端据此做「我考数学几」筛选。非数学章节只有一个值。
+   */
+  modules?: string[]
 }
 
 interface ChapterBundle {
@@ -349,13 +391,15 @@ interface ChapterBundle {
   chapterId: string
   subjectId: string
   module: string
+  /** 本章适用的考试模块（数学一 / 数学二），用于前端的「我考数学几」筛选 */
+  modules?: string[]
   title: string
   sortOrder: number
   knowledge: ReturnType<typeof toKnowledgePoint>[]
 }
 
 function buildCatalog() {
-  const knowledgeUpdatedAt = [fileUpdatedAt('math-data.ts'), fileUpdatedAt('math-lectures.ts')].sort().pop()!
+  const knowledgeUpdatedAt = [fileUpdatedAt('math/tree.ts'), fileUpdatedAt('math/lectures.ts')].sort().pop()!
   const usedIds = new Set<string>()
   const usedChapterIds = new Set<string>()
   const usedKeyPointIds = new Set<string>()
@@ -401,7 +445,16 @@ function buildCatalog() {
         const sortOrder = (subjectOrderCounter.get(subject.id) || 0) + 10
         subjectOrderCounter.set(subject.id, sortOrder)
 
-        chapters.push({ id: chapterId, subjectId: subject.id, title: chapterTitle, summary, sortOrder, module: mod.name })
+        const chapterModules = (chapter as { modules?: string[] }).modules
+        chapters.push({
+          id: chapterId,
+          subjectId: subject.id,
+          title: chapterTitle,
+          summary,
+          sortOrder,
+          module: mod.name,
+          ...(chapterModules && chapterModules.length ? { modules: chapterModules } : {}),
+        })
 
         const knowledge: ReturnType<typeof toKnowledgePoint>[] = []
         let kpSortOrder = 0
@@ -447,6 +500,7 @@ function buildCatalog() {
           chapterId,
           subjectId: subject.id,
           module: mod.name,
+          ...(chapterModules && chapterModules.length ? { modules: chapterModules } : {}),
           title: chapterTitle,
           sortOrder,
           knowledge,
@@ -455,8 +509,13 @@ function buildCatalog() {
     }
   }
 
-  // ── 政治：没有数学那样的知识树与讲义源，直接来自 data/politics-data.ts ──
-  // 每章只有 1 个知识点，给每章建一个同名小节，保持「章节 → 小节 → 知识点」结构统一。
+  // ── 政治知识点：当前 POLITICS_CHAPTERS 为空数组 ──
+  //
+  // 政治现在改成**刷题**模块（题目见 data/politics/questions.ts，走 buildPoliticsQuestions()），
+  // 没有可发布的知识点讲解，所以这里是空循环、不产出任何章节。
+  // 保留这段是为了将来有真实讲解稿时能直接填回来，不必重写投影逻辑。
+  //
+  // 历史：原先跟随设计稿做成「1 章（政治基础框架）× 3 个平铺知识点」。
   for (const ch of POLITICS_CHAPTERS) {
     const subject = POLITICS_SUBJECT_DEF
     const chapterId = ch.id
@@ -590,12 +649,25 @@ function parseSenses(raw: string) {
 }
 
 function buildVocabulary() {
-  const updatedAt = fileUpdatedAt('words.ts')
+  const updatedAt = fileUpdatedAt('english/words.ts')
   const usedIds = new Set<string>()
   const posTagCount = new Map<string, number>()
   const noPos: string[] = []
   const renamed: string[] = []
   const emptyMeaning: string[] = []
+
+  // 深度内容（例句 / 词根 / 助记 / 搭配）按小写词形索引，构建时并入词条。
+  // 词表里没有的词 = 写了不会生效，直接报出来，避免静默漏掉。
+  const orphanContent = Object.keys(WORD_CONTENT).filter(
+    (key) => !RAW_WORDS.some((w) => w.word.toLowerCase() === key),
+  )
+  if (orphanContent.length > 0) {
+    throw new Error(
+      `data/english/word-content.ts 里有 ${orphanContent.length} 个词不在词库中：${orphanContent.join(', ')}`,
+    )
+  }
+
+  const withContent = { examples: 0, root: 0, mnemonic: 0, collocations: 0 }
 
   const items = RAW_WORDS.map((w) => {
     const id = uniquify(`word-${slug(w.word, 40)}`, usedIds)
@@ -616,6 +688,14 @@ function buildVocabulary() {
     if (senses.some((s) => !s.meaningZh)) emptyMeaning.push(`${w.word} :: ${w.meaning}`)
 
     const ipa = String(w.phonetic || '').replace(/^\/+|\/+$/g, '').trim()
+    const extra = WORD_CONTENT[w.word.toLowerCase()]
+    if (extra) {
+      if (extra.examples.length > 0) withContent.examples++
+      if (extra.root) withContent.root++
+      if (extra.mnemonic) withContent.mnemonic++
+      if (extra.collocations.length > 0) withContent.collocations++
+    }
+
     return {
       schemaVersion: SCHEMA_VERSION,
       id,
@@ -624,8 +704,17 @@ function buildVocabulary() {
       word: w.word,
       pronunciations: ipa ? [{ accent: 'uk', ipa }] : [],
       senses,
-      examples: [],
-      collocations: [],
+      examples: (extra?.examples || []).map((e) => ({
+        id: e.id,
+        sentence: e.sentence,
+        translationZh: e.translationZh,
+      })),
+      collocations: (extra?.collocations || []).map((c) => ({ phrase: c.phrase, meaningZh: c.meaningZh })),
+      // root / mnemonicMarkdown 可选：没有就不写这个键，保持产出干净
+      ...(extra?.root
+        ? { root: { display: extra.root.display, explanationMarkdown: extra.root.explanation } }
+        : {}),
+      ...(extra?.mnemonic ? { mnemonicMarkdown: extra.mnemonic } : {}),
       tags,
       sources: [],
       status: 'published',
@@ -633,7 +722,7 @@ function buildVocabulary() {
     }
   })
 
-  return { items, updatedAt, noPos, renamed, posTagCount, emptyMeaning }
+  return { items, updatedAt, noPos, renamed, posTagCount, emptyMeaning, withContent, orphanContent }
 }
 
 // ---------------------------------------------------------------- 索引
@@ -698,6 +787,7 @@ function buildAppBundle(bundles: ChapterBundle[], vocab: ReturnType<typeof build
     id: b.chapterId,
     subjectId: b.subjectId,
     module: b.module,
+    ...(b.modules && b.modules.length ? { modules: b.modules } : {}),
     title: b.title,
     summary: b.summary,
     sortOrder: b.sortOrder,
@@ -721,13 +811,31 @@ function buildAppBundle(bundles: ChapterBundle[], vocab: ReturnType<typeof build
     }
   }
 
-  const words = vocab.items.map((w) => ({
-    id: w.id,
-    word: w.word,
-    ipa: w.pronunciations[0]?.ipa || '',
-    pos: w.senses.map((s) => s.partOfSpeech).filter(Boolean).join(' / '),
-    meaning: w.senses.map((s) => s.meaningZh).join('；'),
-  }))
+  // 单词详情页渲染的深度内容。字段名与 data/english/word-content.ts 一致，只是展平（去掉 id 包装）。
+  //
+  // 关键：**空字段整键省略**，不写 `"examples":[]` / `"root":null` 这类占位。
+  // 全库 5493 个词里绝大多数还没有深度内容，逐条写空数组会白白多出约 300 KB
+  // （实测 643 KB → 968 KB，而实际只多了 18 个词的正文）。前端按 undefined 处理空态即可。
+  const words = vocab.items.map((w) => {
+    const deep: Record<string, unknown> = {}
+    if (w.examples.length > 0) {
+      deep.examples = w.examples.map((e) => ({ sentence: e.sentence, translation: e.translationZh }))
+    }
+    if (w.root) deep.root = { display: w.root.display, explanation: w.root.explanationMarkdown }
+    if (w.mnemonicMarkdown) deep.mnemonic = w.mnemonicMarkdown
+    if (w.collocations.length > 0) {
+      deep.collocations = w.collocations.map((c) => ({ phrase: c.phrase, meaning: c.meaningZh }))
+    }
+
+    return {
+      id: w.id,
+      word: w.word,
+      ipa: w.pronunciations[0]?.ipa || '',
+      pos: w.senses.map((s) => s.partOfSpeech).filter(Boolean).join(' / '),
+      meaning: w.senses.map((s) => s.meaningZh).join('；'),
+      ...deep,
+    }
+  })
 
   return { chapters, content, words }
 }
@@ -750,6 +858,104 @@ function groupBySection(knowledge: ReturnType<typeof toKnowledgePoint>[]) {
   return sections
 }
 
+// ---------------------------------------------------------------- 政治题库
+
+/**
+ * 政治题库的运行数据投影。
+ *
+ * 政治没有知识点讲解，只有题目，所以主包里的 catalog 不会有 politics 章节，
+ * 内容全在这里。字段全部是刷题页真正要渲染的：题干 / 选项 / 答案 / 解析 /
+ * 材料段落 / 采分点。扁平化后逐条记录，不做嵌套包装。
+ *
+ * **空题库是合法状态**（`POLITICS_QUESTIONS = []`）→ 产出 `[]`，
+ * 刷题页显示空态，不伪造数量。
+ */
+function buildPoliticsQuestions() {
+  const questions = POLITICS_QUESTIONS.map((q) => {
+    if (q.type === 'choice') {
+      return {
+        id: q.id,
+        type: 'choice' as const,
+        module: q.module,
+        difficulty: q.difficulty,
+        stem: q.stem,
+        options: q.options.map((o) => ({ key: o.key, text: o.text })),
+        answerKey: q.answerKey,
+        explanation: q.explanation,
+        tags: q.tags,
+      }
+    }
+    if (q.type === 'multi') {
+      return {
+        id: q.id,
+        type: 'multi' as const,
+        module: q.module,
+        difficulty: q.difficulty,
+        stem: q.stem,
+        options: q.options.map((o) => ({ key: o.key, text: o.text })),
+        answerKeys: [...q.answerKeys],
+        explanation: q.explanation,
+        tags: q.tags,
+      }
+    }
+    return {
+      id: q.id,
+      type: 'material' as const,
+      module: q.module,
+      difficulty: q.difficulty,
+      stem: q.stem,
+      material: { title: q.material.title, paragraphs: q.material.paragraphs },
+      answerPoints: q.answerPoints,
+      explanation: q.explanation,
+      tags: q.tags,
+    }
+  })
+
+  // 模块分组：只列**题库里真的有题**的模块，顺序沿用 POLITICS_MODULES 的考纲顺序。
+  // 空模块不出现，避免刷题页出现「点了没题」的筛选按钮。
+  const modules = POLITICS_MODULES.filter((m) => questions.some((q) => q.module === m)).map((m) => ({
+    name: m,
+    count: questions.filter((q) => q.module === m).length,
+  }))
+
+  return {
+    questions,
+    modules,
+    choiceCount: questions.filter((q) => q.type === 'choice').length,
+    multiCount: questions.filter((q) => q.type === 'multi').length,
+    materialCount: questions.filter((q) => q.type === 'material').length,
+  }
+}
+
+/** pages-politics/questions.ts 里 AppPoliticsQuestion 的接口声明 */
+const POLITICS_INTERFACE = [
+  'export interface AppPoliticsOption { key: string; text: string }',
+  'export interface AppPoliticsMaterial { title: string; paragraphs: string[] }',
+  '',
+  '/** 单选 / 多选 / 材料题共用一个契约，靠 type 区分；未用到的字段整键省略。 */',
+  'export interface AppPoliticsQuestion {',
+  '  id: string',
+  "  type: 'choice' | 'multi' | 'material'",
+  '  module: string',
+  '  difficulty: number',
+  '  stem: string',
+  '  tags: string[]',
+  '  /** type === "choice" | "multi" */',
+  '  options?: AppPoliticsOption[]',
+  '  /** type === "choice"：单选答案（单个 key） */',
+  '  answerKey?: string',
+  '  /** type === "multi"：多选答案（key 列表，至少 2 项） */',
+  '  answerKeys?: string[]',
+  '  /** type === "material" */',
+  '  material?: AppPoliticsMaterial',
+  '  answerPoints?: string[]',
+  '  /** 三种题型都有：答案解析 / 答题思路 */',
+  '  explanation: string',
+  '}',
+  '',
+  'export interface AppPoliticsModule { name: string; count: number }',
+].join('\n')
+
 /** 清空并重建目录；删不掉时退化为直接覆盖写，不让构建中断 */
 function resetDir(dir: string) {
   if (fs.existsSync(dir)) {
@@ -767,6 +973,7 @@ function resetDir(dir: string) {
 function main() {
   const { chapters, bundles, totalKnowledge, stats, knowledgeUpdatedAt } = buildCatalog()
   const vocab = buildVocabulary()
+  const politics = buildPoliticsQuestions()
 
   const subjectNameMap = new Map<string, string>()
   for (const s of SUBJECTS) subjectNameMap.set(s.id, s.shortName)
@@ -786,7 +993,13 @@ function main() {
   console.log(`  释义为空      : ${vocab.emptyMeaning.length} ${vocab.emptyMeaning.slice(0, 6).join(' | ')}`)
   console.log(`  ID 去重改名   : ${vocab.renamed.length} ${vocab.renamed.slice(0, 6).join(' | ')}`)
   console.log(`  词性标签分布  : ${[...vocab.posTagCount.entries()].sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k}=${v}`).join(' ')}`)
+  const totalWords = vocab.items.length
+  const pct = (n: number) => `${n} (${((n / totalWords) * 100).toFixed(1)}%)`
+  console.log(`  深度内容覆盖  : 例句 ${pct(vocab.withContent.examples)} / 词根 ${pct(vocab.withContent.root)} / 助记 ${pct(vocab.withContent.mnemonic)} / 搭配 ${pct(vocab.withContent.collocations)}`)
+  console.log(`  深度内容批次  : ${BATCHES.map((b) => `${b.label}(${b.words.length})`).join(' ')}`)
   console.log(`索引            : knowledge ${knowledgeIndex.length} / vocabulary ${vocabularyIndex.length}`)
+  console.log(`政治题库        : ${politics.questions.length} 题（单选 ${politics.choiceCount} / 多选 ${politics.multiCount} / 材料 ${politics.materialCount}）`)
+  console.log(`  模块分布      : ${politics.modules.map((m) => `${m.name}=${m.count}`).join(' ') || '(空)'}`)
   console.log(`updatedAt       : knowledge ${knowledgeUpdatedAt} / words ${vocab.updatedAt}`)
 
   if (DRY_RUN) {
@@ -814,7 +1027,7 @@ function main() {
       {
         schemaVersion: SCHEMA_VERSION,
         courses: COURSES,
-        subjects: SUBJECTS.map(({ id, name, shortName, sortOrder, courseId }) => ({ id, courseId, name, shortName, sortOrder })),
+        subjects: SUBJECTS.map(({ id, name, shortName, sortOrder, courseId, kind }) => ({ id, courseId, kind, name, shortName, sortOrder })),
         chapters,
       },
       null,
@@ -854,14 +1067,14 @@ function main() {
 
   write(
     path.join(appDir, 'catalog.ts'),
-    `${banner}export interface AppCourse { id: string; name: string; sortOrder: number }\nexport interface AppSubject { id: string; courseId: string; name: string; shortName: string; sortOrder: number }\nexport interface AppChapter { id: string; subjectId: string; module: string; title: string; summary: string; sortOrder: number }\n\nexport const appCourses: AppCourse[] = ${serializeRecords(COURSES)}\n\nexport const appSubjects: AppSubject[] = ${serializeRecords(
-      SUBJECTS.map(({ id, name, shortName, sortOrder, courseId }) => ({ id, courseId, name, shortName, sortOrder })),
-    )}\n\nexport const appChapters: AppChapter[] = ${serializeRecords(chapters)}\n`,
+    `${banner}export interface AppCourse { id: string; name: string; sortOrder: number }\nexport interface AppSubject { id: string; courseId: string; kind: 'math' | 'politics' | 'cs'; name: string; shortName: string; sortOrder: number }\nexport interface AppChapter { id: string; subjectId: string; module: string; modules?: string[]; title: string; summary: string; sortOrder: number }\n\nexport const appCourses: AppCourse[] = ${serializeRecords(COURSES)}\n\nexport const appSubjects: AppSubject[] = ${serializeRecords(
+      SUBJECTS.map(({ id, name, shortName, sortOrder, courseId, kind }) => ({ id, courseId, kind, name, shortName, sortOrder })),
+    )}\n\nexport const appChapters: AppChapter[] = ${serializeRecords(chapters)}\n\n/**\n * 政治题库总题数（**只是个数字**）。\n * 题库正文在 pages-politics 分包内，主包不能 import 它；但首页的「政治刷题」卡片\n * 要显示「已练 M / 共 T 题」，所以这里只把总数投影到主包。\n */\nexport const appPoliticsQuestionTotal = ${politics.questions.length}\n`,
   )
 
   write(
     path.join(appDir, 'knowledge.ts'),
-    `${banner}export interface AppKnowledgePoint { id: string; title: string; summary: string; minutes: number }\nexport interface AppKnowledgeSection { id: string; title: string; points: AppKnowledgePoint[] }\nexport interface AppKnowledgeChapter { id: string; subjectId: string; module: string; title: string; summary: string; sortOrder: number; sections: AppKnowledgeSection[] }\n\nexport const appKnowledge: AppKnowledgeChapter[] = ${serializeRecords(app.chapters)}\n`,
+    `${banner}export interface AppKnowledgePoint { id: string; title: string; summary: string; minutes: number }\nexport interface AppKnowledgeSection { id: string; title: string; points: AppKnowledgePoint[] }\nexport interface AppKnowledgeChapter { id: string; subjectId: string; module: string; modules?: string[]; title: string; summary: string; sortOrder: number; sections: AppKnowledgeSection[] }\n\nexport const appKnowledge: AppKnowledgeChapter[] = ${serializeRecords(app.chapters)}\n`,
   )
 
   // 词库全量只被分包页面用到（复习 / 结果 / 单词详情 / 收藏），放进 pages-words 分包内部。
@@ -870,7 +1083,7 @@ function main() {
   fs.mkdirSync(wordsPackageDir, { recursive: true })
   write(
     path.join(wordsPackageDir, 'words.ts'),
-    `${banner}export interface AppWord { id: string; word: string; ipa: string; pos: string; meaning: string }\n\nexport const appWords: AppWord[] = ${serializeRecords(app.words)}\n`,
+    `${banner}${WORD_INTERFACE}\n\nexport const appWords: AppWord[] = ${serializeRecords(app.words)}\n`,
   )
   write(
     path.join(appDir, 'word-ids.ts'),
@@ -887,15 +1100,35 @@ function main() {
     `${banner}export interface AppKnowledgeContent { anchor: string; caption: string; keyPoints: string[]; example: string }\n\nexport const appKnowledgeContent: Record<string, AppKnowledgeContent> = ${serializeMap(Object.entries(app.content))}\n`,
   )
 
-  console.log(`\n已写入 ${knowledgeFiles + 9} 个文件：`)
+  // 6) 政治题库：规范数据 + 运行数据。
+  // 题库只被刷题页用到，主包不需要它，所以运行数据同样写进分包目录【内部】，
+  // 否则 uni-app 会把 30 KB 的题库拉回主包（和知识点正文一个道理）。
+  const politicsDir = path.join(CONTENT_DIR, 'politics')
+  resetDir(politicsDir)
+  const politicsUpdatedAt = fileUpdatedAt('politics/questions.ts')
+  write(
+    path.join(politicsDir, 'questions.json'),
+    `{\n  "schemaVersion": ${JSON.stringify(SCHEMA_VERSION)},\n  "courseId": "politics",\n  "subjectId": "politics",\n  "generatedAt": ${JSON.stringify(generatedAt)},\n  "updatedAt": ${JSON.stringify(politicsUpdatedAt)},\n  "count": ${politics.questions.length},\n  "modules": ${serializeRecords(politics.modules)},\n  "questions": ${serializeRecords(politics.questions)}\n}\n`,
+  )
+
+  const politicsPackageDir = path.join(ROOT, 'pages-politics')
+  fs.mkdirSync(politicsPackageDir, { recursive: true })
+  write(
+    path.join(politicsPackageDir, 'questions.ts'),
+    `${banner}${POLITICS_INTERFACE}\n\nexport const appPoliticsQuestions: AppPoliticsQuestion[] = ${serializeRecords(politics.questions)}\n\nexport const appPoliticsModules: AppPoliticsModule[] = ${serializeRecords(politics.modules)}\n`,
+  )
+
+  console.log(`\n已写入 ${knowledgeFiles + 11} 个文件：`)
   console.log(`  data/content/catalog.json`)
   console.log(`  data/content/knowledge/<subject>/*.json   (${knowledgeFiles})`)
   console.log(`  data/content/vocabulary/words.json`)
+  console.log(`  data/content/politics/questions.json`)
   console.log(`  data/generated/knowledge-index.json`)
   console.log(`  data/generated/vocabulary-index.json`)
   console.log(`  data/generated/app/catalog.ts | knowledge.ts | word-ids.ts   (主包)`)
   console.log(`  pages-knowledge/content.ts                                   (分包内)`)
   console.log(`  pages-words/words.ts                                         (分包内)`)
+  console.log(`  pages-politics/questions.ts                                  (分包内)`)
 }
 
 main()
