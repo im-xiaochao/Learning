@@ -1,8 +1,10 @@
 /**
- * 专项验证：资料库页在选中政治时，学科 tab 必须仍在。
+ * 学科切换器专项台。
  *
- * 这是用户报的 bug：政治分支整页提前 return，把学科切换器吞掉了，
- * 导致资料库「只有政治」、切不到四门计算机课。
+ * 1) 资料库页选中政治时，学科 tab 必须仍在 —— 用户报过的 bug：政治分支整页提前
+ *    return，把切换器吞掉了，资料库「只剩政治」、切不到四门计算机课。
+ * 2) 数学页的学科切换必须是胶囊 tab（.src-switch/.src-chip），与政治卷的
+ *    「4套卷 / 8套卷」同一套控件；资料库仍用下划线 tab（.subject-tabs）。
  *
  * 用法：node tools/_library-tabs-harness.mjs <.tmp-od/xxx.js>
  */
@@ -88,6 +90,19 @@ function goLibrary(subjectId) {
   G.render()
   return main.innerHTML
 }
+function goMath(subjectId) {
+  G.navigate('math', false)
+  const i = findSubjectIndex(subjectId)
+  if (i < 0) throw new Error(`找不到学科 ${subjectId}`)
+  G.subjectIndex = i
+  G.render()
+  return main.innerHTML
+}
+/** 从渲染结果里抽出学科切换按钮：id → 按钮文字 */
+function switchButtons(h) {
+  return [...h.matchAll(/data-od-id="subject-([a-z-]+)" class="([^"]*)">([^<]*)</g)]
+    .map((m) => ({ id: m[1], cls: m[2], label: m[3] }))
+}
 
 console.log('\n=== 资料库：选政治时学科 tab 必须还在（用户报的 bug） ===')
 check('选中政治 → 学科 tab 容器仍渲染', () => {
@@ -113,8 +128,11 @@ check('选中政治 → 政治按钮是选中态', () => {
 })
 check('选中政治 → 同时渲染刷题内容', () => {
   const h = goLibrary('politics')
-  if (!h.includes('按考纲模块练习')) throw new Error('刷题内容没渲染')
-  if (!h.includes('sub-chips')) throw new Error('二级分组没渲染')
+  if (!h.includes('politics-quiz-home')) throw new Error('刷题内容没渲染')
+  if (!h.includes('选择一套卷')) throw new Error('缺「选择一套卷」标题')
+  if (!h.includes('paper-grid')) throw new Error('套卷卡片没渲染')
+  // 反向：资料库里不该出现题干行 —— 题干属于独立详情页（quiz-paper）
+  if (h.includes('data-qid=')) throw new Error('资料库里出现了题干行，题干会被迫进主包')
   return true
 })
 
@@ -157,6 +175,69 @@ check('数学 tab 高数 → 有学科 tab，无刷题内容', () => {
   G.render()
   const h = main.innerHTML
   if (h.includes('按考纲模块练习')) throw new Error('数学页混进了刷题内容')
+  return true
+})
+
+console.log('\n=== 数学学科切换：胶囊 tab（与政治 4套卷/8套卷 同款） ===')
+check('数学页用 .src-switch 容器，不再是 .subject-tabs 下划线', () => {
+  const h = goMath('calculus')
+  if (!/<div class="src-switch"[^>]*data-od-id="subject-switch"/.test(h)) {
+    throw new Error('缺胶囊 tab 容器（subject-switch）')
+  }
+  if (h.includes('subject-tabs')) throw new Error('数学页还在用下划线 tab')
+  return true
+})
+check('三个 tab 依次是 高等数学 / 线性代数 / 概率论', () => {
+  const h = goMath('calculus')
+  const got = switchButtons(h).map((b) => `${b.id}:${b.label}`)
+  const want = ['calculus:高等数学', 'algebra:线性代数', 'probability:概率论']
+  if (got.join(' | ') !== want.join(' | ')) throw new Error(`实际 ${got.join(' | ')}`)
+  return true
+})
+check('胶囊按钮只有学科名，不带题量小字（题量是政治来源切换的语义）', () => {
+  const h = goMath('calculus')
+  const chips = h.match(/<button[^>]*class="src-chip[^"]*"[^>]*>[^<]*<\/button>/g) || []
+  if (chips.length !== 3) throw new Error(`应有 3 个胶囊按钮，实际 ${chips.length}`)
+  for (const c of chips) if (c.includes('<small')) throw new Error(`胶囊里出现了 <small>：${c}`)
+  return true
+})
+check('选中态跟着当前学科走（切到概率论 → 第三个 active）', () => {
+  const h = goMath('probability')
+  const on = switchButtons(h).filter((b) => /(^|\s)active(\s|$)/.test(b.cls))
+  if (on.length !== 1) throw new Error(`应有且仅有一个选中项，实际 ${on.length}`)
+  if (on[0].id !== 'probability') throw new Error(`选中项是 ${on[0].id}`)
+  return true
+})
+check('点胶囊真的能切学科（走 handleAction，不是改 state）', () => {
+  goMath('calculus')
+  sandbox.handleAction('subject', { dataset: { value: '1' } })
+  if (G.subjectIndex !== findSubjectIndex('algebra')) throw new Error('subjectIndex 没切到线性代数')
+  const h = main.innerHTML
+  const on = switchButtons(h).filter((b) => /(^|\s)active(\s|$)/.test(b.cls))
+  if (on.length !== 1 || on[0].id !== 'algebra') throw new Error('渲染后选中态不是线性代数')
+  if (!h.includes('矩阵与线性方程组')) throw new Error('没渲染线性代数的章节内容')
+  return true
+})
+check('数学页不会混进政治的来源切换 / 套卷卡', () => {
+  const h = goMath('calculus')
+  if (h.includes('data-action="quiz-source"')) throw new Error('数学页出现了 4套卷/8套卷 来源切换')
+  if (h.includes('paper-grid')) throw new Error('数学页出现了套卷卡')
+  if (h.includes('politics-quiz-home')) throw new Error('数学页出现了刷题首页')
+  return true
+})
+check('资料库不受影响：学科切换仍是 5 个下划线 tab', () => {
+  const h = goLibrary('politics')
+  // 注意：政治页里本来就有 .src-switch —— 那是题库的「4套卷/8套卷」来源切换，
+  // 不是学科切换。所以这里锚定 subject-switch 这个 id，而不是按 class 找。
+  if (!/<div class="subject-tabs[^"]*"[^>]*data-od-id="subject-switch"/.test(h)) {
+    throw new Error('资料库的学科切换不是下划线 tab')
+  }
+  if (/<div class="src-switch"[^>]*data-od-id="subject-switch"/.test(h)) {
+    throw new Error('资料库的学科切换被换成了胶囊 tab')
+  }
+  const got = switchButtons(h).map((b) => `${b.id}:${b.label}`)
+  const want = ['politics:政治', 'cs-coa:计组', 'cs-os:系统', 'cs-ds:数据结构', 'cs-net:计网']
+  if (got.join(' | ') !== want.join(' | ')) throw new Error(`实际 ${got.join(' | ')}`)
   return true
 })
 

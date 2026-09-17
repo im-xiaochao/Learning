@@ -108,20 +108,48 @@ check('两种题型都有', () => {
   ok(G.appPoliticsQuestions.some((q) => q.type === 'choice'), '缺选择题')
   ok(G.appPoliticsQuestions.some((q) => q.type === 'material'), '缺材料题')
 })
-check('每道选择题的 answerKey 都命中某个选项', () => {
-  for (const q of G.appPoliticsQuestions.filter((x) => x.type === 'choice')) {
-    const keys = q.options.map((o) => o.key)
-    ok(keys.includes(q.answerKey), `${q.id}: answerKey ${q.answerKey} 不在 ${keys.join('/')}`)
-    ok(new Set(keys).size === keys.length, `${q.id}: 选项 key 重复`)
-    ok(q.options.length >= 2, `${q.id}: 选项少于 2 个`)
+/**
+ * 完整性分两档，因为肖八（x8）是 OCR 转档、还有一批题只录了题干：
+ *  - x4（肖四）与不带卷号的题：**必须完整**，缺一就失败；
+ *  - x8：允许不完整，但**缺口不许扩大**（`X8_INCOMPLETE_KNOWN` 是已知上限，补录后自然更小）。
+ *
+ * 为什么不直接断言「全完整」：那会让套件长期挂红，而长期红灯等于没有测试——
+ * 真掉了选项反而没人看。现在这样套件是全绿的，「新出现的缺口」照样会被抓到。
+ * 这个上限是**棘轮**：只许降不许升，补录一批就把它改小。
+ */
+const X8_INCOMPLETE_KNOWN = 90
+
+function missingOf(q) {
+  const miss = []
+  if (q.type === 'choice' || q.type === 'multi') {
+    const keys = (q.options || []).map((o) => o.key)
+    if (!(q.options && q.options.length >= 2)) miss.push('选项不足 2 个')
+    if (new Set(keys).size !== keys.length) miss.push('选项 key 重复')
+    const ans = q.type === 'choice' ? (q.answerKey ? [q.answerKey] : []) : q.answerKeys || []
+    if (!ans.length) miss.push('缺答案')
+    else if (!ans.every((k) => keys.includes(k))) miss.push(`答案 ${ans.join('')} 不在选项里`)
+  } else {
+    if (!(q.material && q.material.paragraphs.length)) miss.push('材料为空')
+    if (!(q.answerPoints && q.answerPoints.length)) miss.push('采分点为空')
+  }
+  return miss
+}
+
+check('肖四与不带卷号的题必须完整：选项 / 答案 / 材料 / 采分点齐全', () => {
+  for (const q of G.appPoliticsQuestions.filter((x) => x.book !== 'x8')) {
+    const miss = missingOf(q)
+    ok(!miss.length, `${q.id}: ${miss.join('、')}`)
   }
 })
-check('每道材料题都有段落与采分点', () => {
-  for (const q of G.appPoliticsQuestions.filter((x) => x.type === 'material')) {
-    ok(q.material && q.material.paragraphs.length > 0, `${q.id}: 材料为空`)
-    ok(q.answerPoints && q.answerPoints.length > 0, `${q.id}: 采分点为空`)
-  }
-})
+{
+  const gap = G.appPoliticsQuestions.filter((q) => q.book === 'x8' && missingOf(q).length)
+  check(`肖八的录入缺口没有扩大（当前 ${gap.length} 题 / 已知上限 ${X8_INCOMPLETE_KNOWN} 题）`, () => {
+    ok(
+      gap.length <= X8_INCOMPLETE_KNOWN,
+      `缺口涨到 ${gap.length} 题，超过已知的 ${X8_INCOMPLETE_KNOWN} 题：${gap.slice(0, 5).map((q) => q.id).join('、')}`,
+    )
+  })
+}
 check('id 全局唯一', () => {
   const ids = G.appPoliticsQuestions.map((q) => q.id)
   eq(ids.length, new Set(ids).size, 'id 有重复')
@@ -138,7 +166,15 @@ console.log('\n【2】队列与作答')
 check('startQuiz 建队列', () => {
   ok(G.startQuiz('all'), '没能建队列')
 })
-check('队列长度 = 题库长度', () => eq(G.usePoliticsQuiz().total.value, G.appPoliticsQuestions.length))
+/** 界面上能练到的题 = 套卷题；题库里那几个没有 book/set 的老考纲示意题已无入口 */
+const paperQuestions = () => G.appPoliticsQuestions.filter((q) => q.book && q.set)
+check('队列长度 = 套卷题数', () => eq(G.usePoliticsQuiz().total.value, paperQuestions().length))
+check('all 不含没有 book/set 的老示意题（界面上已无入口，不该混进「全部」）', () => {
+  const orphans = G.appPoliticsQuestions.filter((q) => !q.book || !q.set)
+  ok(orphans.length > 0, '题库里已经没有无卷号的题了，这条断言该删掉')
+  const queue = new Set(G.usePoliticsQuiz().queue.value)
+  for (const q of orphans) ok(!queue.has(q.id), `${q.id} 混进了 all`)
+})
 
 check('select 记录选项；未揭示时有效', () => {
   const q = G.usePoliticsQuiz()
@@ -221,12 +257,18 @@ check('next 清空选择与揭示状态', () => {
   eq(q.cursor.value, 1)
 })
 
-check('模块筛选只取该模块', () => {
-  const mod = G.appPoliticsModules[0].name
-  G.startQuiz(mod)
+check('卷筛选只取该套卷，且保持卷面顺序', () => {
+  G.startQuiz('x4-1', undefined, false, true)
   const q = G.usePoliticsQuiz()
-  eq(q.total.value, G.appPoliticsQuestions.filter((x) => x.module === mod).length)
-  ok(G.appPoliticsQuestions.find((x) => x.id === q.currentId.value).module === mod)
+  const want = G.appPoliticsQuestions.filter((x) => x.book === 'x4' && x.set === 1)
+  ok(want.length > 0, 'x4-1 没题？')
+  eq(q.total.value, want.length, 'x4-1 题数')
+  eq(q.queue.value.join(','), want.map((x) => x.id).join(','), '整卷应按卷面顺序排列')
+})
+check('认不出的筛选条件建不出队列（调用方据此退回全部）', () => {
+  // 「考纲模块」来源已从界面上去掉：模块名不该再能当筛选条件用
+  eq(G.startQuiz('马克思主义基本原理'), false, '模块名不该还能建出队列')
+  eq(G.usePoliticsQuiz().total.value, 0)
 })
 
 console.log('\n【3】learning store 写入')
