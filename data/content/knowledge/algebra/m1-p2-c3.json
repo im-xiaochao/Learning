@@ -15,47 +15,47 @@
       "sectionId": "m1-p2-c3-s1",
       "sectionTitle": "n 维向量",
       "title": "行向量、列向量",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "n 维行向量是 1×n 矩阵、列向量是 n×1 矩阵——向量就是特殊的矩阵；行与列通过转置互换，参与乘法时必须分清「形状」。",
       "tags": [
-        "用坐标描述方向"
+        "排成一行的数表"
       ],
       "sortOrder": 10,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "α=(a₁,…,aₙ)ᵀ，αᵀβ=Σaᵢbᵢ",
+        "caption": "n 维行向量是 1×n 矩阵、列向量是 n×1 矩阵——向量就是特殊的矩阵；行与列通过转置互换，参与乘法时必须分清「形状」。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "xing-xiang-liang-1-n-ju-zhen-lie-xiang-1guu0a",
+          "title": "行向量 = 1×n 矩阵",
+          "bodyMarkdown": "行向量 = 1×n 矩阵，列向量 = n×1 矩阵"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "zhuan-zhi-hu-huan-ba-lie-bian-xing",
+          "title": "转置互换",
+          "bodyMarkdown": "转置互换：αᵀ 把列变行"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "shi-shu-1-1-shi-ju-zhen",
+          "title": "αᵀβ 是数（1×1）",
+          "bodyMarkdown": "αᵀβ 是数（1×1），αβᵀ 是矩阵"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "3-nei-ji-shi-n-n-ju-1jgax9",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "αᵀβ=3（内积），αβᵀ 是 n×n 矩阵（秩 1）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "n 维行向量是 1×n 矩阵、列向量是 n×1 矩阵——向量就是特殊的矩阵；行与列通过转置互换，参与乘法时必须分清「形状」。\n\n### 解题步骤\n\n1. 确认向量形状\n2. 按矩阵规则运算\n3. 需要时转置对齐\n\n### 易错点\n\n行向量当列向量用——乘法尺寸立刻对不上。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p2-c3-s1",
       "sectionTitle": "n 维向量",
       "title": "零向量",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "零向量 0 是分量全为 0 的向量：任何向量组只要包含 0 就必线性相关（取 0 的系数为 1、其余为 0）；这是「判相关」的第一反应。",
       "tags": [
-        "用坐标描述方向"
+        "全零的向量"
       ],
       "sortOrder": 20,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "1·0+0·α₁+…+0·αₛ=0（系数不全为零）",
+        "caption": "零向量 0 是分量全为 0 的向量：任何向量组只要包含 0 就必线性相关（取 0 的系数为 1、其余为 0）；这是「判相关」的第一反应。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "0-fen-liang-quan-ling-de-xiang-liang",
+          "title": "0 = 分量全零的向量",
+          "bodyMarkdown": "0 = 分量全零的向量"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "han-0-de-xiang-liang-zu-bi-xian-xing-0ppmcf",
+          "title": "含 0 的向量组必线性相关",
+          "bodyMarkdown": "含 0 的向量组必线性相关"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "dan-ge-ling-xiang-liang-ye-xian-xing-1tn5wh",
+          "title": "单个零向量也线性相关",
+          "bodyMarkdown": "单个零向量也线性相关"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "zu-0-1-2-1-1-1-han-ling-1ypqu2",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "组 (0,1,2)（1,1,1)：含零向量，线性相关。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "零向量 0 是分量全为 0 的向量：任何向量组只要包含 0 就必线性相关（取 0 的系数为 1、其余为 0）；这是「判相关」的第一反应。\n\n### 解题步骤\n\n1. 扫一眼有无 0\n2. 有则直接判相关\n3. 无则继续其他判定\n\n### 易错点\n\n把零向量与「零系数」混淆——相关要求系数不全为零，零向量自己就能配出来。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p2-c3-s2",
       "sectionTitle": "线性组合与线性表示",
       "title": "β=k1α1+...+knαn",
-      "summary": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。",
+      "summary": "β=k₁α₁+…+kₙαₙ 表示 β 可由向量组线性表示：找一组系数使等式成立；「能否表示」等价于非齐次方程组 (α₁,…,αₙ)x=β 是否有解。",
       "tags": [
-        "判断方向是否冗余"
+        "线性组合的表达式"
       ],
       "sortOrder": 30,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "k₁α₁+…+kₘαₘ=0",
-        "caption": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。"
+        "content": "β 可表示 ⇔ r(A)=r(A,β)",
+        "caption": "β=k₁α₁+…+kₙαₙ 表示 β 可由向量组线性表示：找一组系数使等式成立；「能否表示」等价于非齐次方程组 (α₁,…,αₙ)x=β 是否有解。"
       },
       "keyPoints": [
         {
-          "id": "fang-cheng-zu-k-k-0-zhi-you-ling-jie-0gtzu3",
-          "title": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无",
-          "bodyMarkdown": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无关"
+          "id": "xian-xing-biao-shi-fang-cheng-zu-you-jie",
+          "title": "线性表示 ⇔ 方程组有解",
+          "bodyMarkdown": "线性表示 ⇔ 方程组有解"
         },
         {
-          "id": "xiang-liang-ge-shu-chao-guo-wei-shu-bi-1f0wsv",
-          "title": "向量个数超过维数必相关",
-          "bodyMarkdown": "向量个数超过维数必相关"
+          "id": "jie-bu-wei-yi-biao-shi-fang-shi-bu-wei-1r22ei",
+          "title": "解不唯一 ⇔ 表示方式不唯一（组相关时）",
+          "bodyMarkdown": "解不唯一 ⇔ 表示方式不唯一（组相关时）"
         },
         {
-          "id": "ji-da-wu-guan-zu-de-xiang-liang-ge-shu-1czl30",
-          "title": "极大无关组的向量个数等于秩",
-          "bodyMarkdown": "极大无关组的向量个数等于秩"
+          "id": "r-r-shi-you-jie-tiao-jian",
+          "title": "r(α₁…αₙ)=r(α₁…αₙ",
+          "bodyMarkdown": "r(α₁…αₙ)=r(α₁…αₙ,β) 是有解条件"
         }
       ],
       "examples": [
         {
-          "id": "ping-mian-zhong-san-0l8g8b",
+          "id": "3-3-1-1-1-0-2",
           "title": "讲解例子",
-          "bodyMarkdown": "平面中三条向量必相关；两条不共线向量可以张成整个平面。"
+          "bodyMarkdown": "β=(3,3)、α₁=(1,1)、α₂=(1,0)：β=2α₁+α₂。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。极大线性无关组保留了原向量组的全部张成空间。\n\n### 解题步骤\n\n1. 把向量作为列组成矩阵\n2. 解齐次方程或求秩\n3. 解释张成空间和自由方向\n\n### 易错点\n\n少于或等于维数时不能只靠“个数”判断，仍需计算。"
+      "bodyMarkdown": "β=k₁α₁+…+kₙαₙ 表示 β 可由向量组线性表示：找一组系数使等式成立；「能否表示」等价于非齐次方程组 (α₁,…,αₙ)x=β 是否有解。\n\n### 解题步骤\n\n1. 写成方程组\n2. 算增广矩阵秩\n3. 等秩则有解\n\n### 易错点\n\n表示式找到了就宣称唯一——只有向量组线性无关时表示才唯一。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p2-c3-s2",
       "sectionTitle": "线性组合与线性表示",
       "title": "一个向量能否由向量组表示",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "判断 β 能否由 α₁,…,αₛ 线性表示：对 (α₁,…,αₛ,β) 做行变换，比较系数矩阵与增广矩阵的秩；等秩可表示，秩差 1 不可表示。",
       "tags": [
-        "用坐标描述方向"
+        "增广矩阵判有解"
       ],
       "sortOrder": 40,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "可表示 ⇔ r(A)=r(A,β)",
+        "caption": "判断 β 能否由 α₁,…,αₛ 线性表示：对 (α₁,…,αₛ,β) 做行变换，比较系数矩阵与增广矩阵的秩；等秩可表示，秩差 1 不可表示。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "r-zu-r-zu-ke-biao-shi",
+          "title": "r(α 组)=r(α 组",
+          "bodyMarkdown": "r(α 组)=r(α 组,β) ⇔ 可表示"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "bu-ke-biao-shi-shi-zhi-cha-qia-wei-1",
+          "title": "不可表示时秩差恰为 1",
+          "bodyMarkdown": "不可表示时秩差恰为 1"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "xing-bian-huan-dao-xing-zui-jian-xing-1jlwup",
+          "title": "行变换到行最简形即可下结论",
+          "bodyMarkdown": "行变换到行最简形即可下结论"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "1-0-0-1-r-1-yu-2-bu-0y0d7f",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "β=(1,0)、α₁=(0,1)：r=1 与 2 不等，不可表示。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "判断 β 能否由 α₁,…,αₛ 线性表示：对 (α₁,…,αₛ,β) 做行变换，比较系数矩阵与增广矩阵的秩；等秩可表示，秩差 1 不可表示。\n\n### 解题步骤\n\n1. 拼增广矩阵\n2. 化行阶梯\n3. 比较两秩\n\n### 易错点\n\n只看「像不像」不化阶梯——表示性必须用秩严格判定。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p2-c3-s3",
       "sectionTitle": "线性相关与线性无关",
       "title": "定义",
-      "summary": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。",
+      "summary": "线性相关：存在不全为零的数 k₁,…,kₛ 使 k₁α₁+…+kₛαₛ=0；线性无关：上式成立必须所有 kᵢ=0。",
       "tags": [
-        "判断方向是否冗余"
+        "系数是否只能全零"
       ],
       "sortOrder": 50,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "k₁α₁+…+kₘαₘ=0",
-        "caption": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。"
+        "content": "r(α₁,…,αₛ)=s ⇔ 线性无关",
+        "caption": "线性相关：存在不全为零的数 k₁,…,kₛ 使 k₁α₁+…+kₛαₛ=0；线性无关：上式成立必须所有 kᵢ=0。"
       },
       "keyPoints": [
         {
-          "id": "fang-cheng-zu-k-k-0-zhi-you-ling-jie-0gtzu3",
-          "title": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无",
-          "bodyMarkdown": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无关"
+          "id": "xiang-guan-you-fei-ling-xi-shu-zu-he-0j5npz",
+          "title": "相关 ⇔ 有非零系数组合出 0",
+          "bodyMarkdown": "相关 ⇔ 有非零系数组合出 0"
         },
         {
-          "id": "xiang-liang-ge-shu-chao-guo-wei-shu-bi-1f0wsv",
-          "title": "向量个数超过维数必相关",
-          "bodyMarkdown": "向量个数超过维数必相关"
+          "id": "wu-guan-zhi-you-quan-ling-xi-shu",
+          "title": "无关 ⇔ 只有全零系数",
+          "bodyMarkdown": "无关 ⇔ 只有全零系数"
         },
         {
-          "id": "ji-da-wu-guan-zu-de-xiang-liang-ge-shu-1czl30",
-          "title": "极大无关组的向量个数等于秩",
-          "bodyMarkdown": "极大无关组的向量个数等于秩"
+          "id": "deng-jia-pan-ding-r-zu-s-xiang-guan",
+          "title": "等价判定",
+          "bodyMarkdown": "等价判定：r(组)<s ⇔ 相关"
         }
       ],
       "examples": [
         {
-          "id": "ping-mian-zhong-san-0l8g8b",
+          "id": "1-0-2-0-2-0-xiang-guan",
           "title": "讲解例子",
-          "bodyMarkdown": "平面中三条向量必相关；两条不共线向量可以张成整个平面。"
+          "bodyMarkdown": "α₁=(1,0)、α₂=(2,0)：2α₁−α₂=0，相关。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。极大线性无关组保留了原向量组的全部张成空间。\n\n### 解题步骤\n\n1. 把向量作为列组成矩阵\n2. 解齐次方程或求秩\n3. 解释张成空间和自由方向\n\n### 易错点\n\n少于或等于维数时不能只靠“个数”判断，仍需计算。"
+      "bodyMarkdown": "线性相关：存在不全为零的数 k₁,…,kₛ 使 k₁α₁+…+kₛαₛ=0；线性无关：上式成立必须所有 kᵢ=0。判断核心永远是「齐次方程组有无非零解」。\n\n### 解题步骤\n\n1. 写出 Σkᵢαᵢ=0\n2. 解齐次方程组\n3. 有非零解则相关\n\n### 易错点\n\n「不全为零」误写成「全不为零」——是「至少一个非零」。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p2-c3-s3",
       "sectionTitle": "线性相关与线性无关",
       "title": "齐次方程组判定",
-      "summary": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。",
+      "summary": "向量组 α₁,…,αₛ 线性相关 ⇔ 齐次方程组 x₁α₁+…+xₛαₛ=0 有非零解；数向量个数与秩即可判定：未知数多于秩时必有非零解。",
       "tags": [
-        "判断方向是否冗余"
+        "把相关性化成解方程"
       ],
       "sortOrder": 60,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "k₁α₁+…+kₘαₘ=0",
-        "caption": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。"
+        "content": "s>r(A) ⇔ 线性相关",
+        "caption": "向量组 α₁,…,αₛ 线性相关 ⇔ 齐次方程组 x₁α₁+…+xₛαₛ=0 有非零解；数向量个数与秩即可判定：未知数多于秩时必有非零解。"
       },
       "keyPoints": [
         {
-          "id": "fang-cheng-zu-k-k-0-zhi-you-ling-jie-0gtzu3",
-          "title": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无",
-          "bodyMarkdown": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无关"
+          "id": "xiang-guan-ax-0-you-fei-ling-jie-a-you-0kgvcz",
+          "title": "相关 ⇔ Ax=0 有非零解（A 由向量按列拼成",
+          "bodyMarkdown": "相关 ⇔ Ax=0 有非零解（A 由向量按列拼成）"
         },
         {
-          "id": "xiang-liang-ge-shu-chao-guo-wei-shu-bi-1f0wsv",
-          "title": "向量个数超过维数必相关",
-          "bodyMarkdown": "向量个数超过维数必相关"
+          "id": "s-r-a-bi-xiang-guan-jie-bi-cun-zai",
+          "title": "s>r(A) ⇒ 必相关（解必存在）",
+          "bodyMarkdown": "s>r(A) ⇒ 必相关（解必存在）"
         },
         {
-          "id": "ji-da-wu-guan-zu-de-xiang-liang-ge-shu-1czl30",
-          "title": "极大无关组的向量个数等于秩",
-          "bodyMarkdown": "极大无关组的向量个数等于秩"
+          "id": "s-r-a-wu-guan",
+          "title": "s=r(A) ⇒ 无关",
+          "bodyMarkdown": "s=r(A) ⇒ 无关"
         }
       ],
       "examples": [
         {
-          "id": "ping-mian-zhong-san-0l8g8b",
+          "id": "3-ge-2-wei-xiang-liang-10d0cl",
           "title": "讲解例子",
-          "bodyMarkdown": "平面中三条向量必相关；两条不共线向量可以张成整个平面。"
+          "bodyMarkdown": "3 个 2 维向量必相关：3>r((2×3 矩阵))≤2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。极大线性无关组保留了原向量组的全部张成空间。\n\n### 解题步骤\n\n1. 把向量作为列组成矩阵\n2. 解齐次方程或求秩\n3. 解释张成空间和自由方向\n\n### 易错点\n\n少于或等于维数时不能只靠“个数”判断，仍需计算。"
+      "bodyMarkdown": "向量组 α₁,…,αₛ 线性相关 ⇔ 齐次方程组 x₁α₁+…+xₛαₛ=0 有非零解；数向量个数与秩即可判定：未知数多于秩时必有非零解。\n\n### 解题步骤\n\n1. 拼矩阵 A\n2. 求 r(A)\n3. 与 s 比较\n\n### 易错点\n\n把 α 当行拼矩阵——按列拼（每个向量一列）才与 x₁α₁+…对应。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,51 +321,47 @@
       "sectionId": "m1-p2-c3-s3",
       "sectionTitle": "线性相关与线性无关",
       "title": "行列式判定（方阵情形）",
-      "summary": "从几何本质看行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。",
+      "summary": "n 个 n 维向量（方阵情形）：按列拼成方阵 A 后，线性无关 ⇔ |A|≠0；行列式为 0 即相关——用行列式一把判定的快捷情形。",
       "tags": [
-        "有向面积的缩放"
+        "n 个 n 维看行列式"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 5,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
-        "caption": "从几何本质看行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+        "content": "|A|≠0 ⇔ 列向量组线性无关",
+        "caption": "n 个 n 维向量（方阵情形）：按列拼成方阵 A 后，线性无关 ⇔ |A|≠0；行列式为 0 即相关——用行列式一把判定的快捷情形。"
       },
       "keyPoints": [
         {
-          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
-          "title": "几何本质",
-          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+          "id": "fang-zhen-qing-xing-a-0-wu-guan",
+          "title": "方阵情形",
+          "bodyMarkdown": "方阵情形：|A|≠0 ⇔ 无关"
         },
         {
-          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
-          "title": "交换两行变号",
-          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+          "id": "a-0-xiang-guan",
+          "title": "|A|=0 ⇔ 相关",
+          "bodyMarkdown": "|A|=0 ⇔ 相关"
         },
         {
-          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
-          "title": "三角矩阵行列式等于对角线乘积",
-          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+          "id": "zhi-shi-yong-yu-ge-shu-wei-shu",
+          "title": "只适用于「个数 = 维数」",
+          "bodyMarkdown": "只适用于「个数 = 维数」"
         }
       ],
       "examples": [
         {
-          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "id": "1-1-1-2-a-1-0-wu-guan",
           "title": "讲解例子",
-          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+          "bodyMarkdown": "α₁=(1,1)、α₂=(1,2)：|A|=1≠0，无关。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·线代第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "从几何本质看行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。"
+      "bodyMarkdown": "n 个 n 维向量（方阵情形）：按列拼成方阵 A 后，线性无关 ⇔ |A|≠0；行列式为 0 即相关——用行列式一把判定的快捷情形。\n\n### 解题步骤\n\n1. 按列拼方阵\n2. 算行列式\n3. 非零即无关\n\n### 易错点\n\n个数不等于维数时硬算行列式——那是长方阵，没有行列式。"
     },
     {
       "schemaVersion": "1.0",
@@ -376,47 +372,47 @@
       "sectionId": "m1-p2-c3-s3",
       "sectionTitle": "线性相关与线性无关",
       "title": "秩判定",
-      "summary": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。",
+      "summary": "一般情形的判定标准：向量组线性无关 ⇔ r(α₁,…,αₛ)=s（秩等于个数）；秩小于个数必相关——秩是相关性判定的「通用货币」。",
       "tags": [
-        "有效独立方向数"
+        "秩与个数比大小"
       ],
       "sortOrder": 80,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "r(A)=非零行阶梯形的行数",
-        "caption": "秩表示矩阵或向量组中真正独立的方向数。"
+        "content": "r(α₁,…,αₛ)=s ⇔ 无关",
+        "caption": "一般情形的判定标准：向量组线性无关 ⇔ r(α₁,…,αₛ)=s（秩等于个数）；秩小于个数必相关——秩是相关性判定的「通用货币」。"
       },
       "keyPoints": [
         {
-          "id": "zhi-deng-yu-fei-ling-xing-shu-ye-deng-0kalyu",
-          "title": "秩等于非零行数",
-          "bodyMarkdown": "秩等于非零行数，也等于最高阶非零子式阶数"
+          "id": "r-s-wu-guan-r-s-xiang-guan",
+          "title": "r=s ⇔ 无关",
+          "bodyMarkdown": "r=s ⇔ 无关；r<s ⇔ 相关"
         },
         {
-          "id": "chu-deng-bian-huan-bu-gai-bian-zhi",
-          "title": "初等变换不改变秩",
-          "bodyMarkdown": "初等变换不改变秩"
+          "id": "yong-xing-bian-huan-qiu-zhi-zui-zhi-jie",
+          "title": "用行变换求秩最直接",
+          "bodyMarkdown": "用行变换求秩最直接"
         },
         {
-          "id": "r-a-min-xing-shu-lie-shu",
-          "title": "r(A)≤min(行数",
-          "bodyMarkdown": "r(A)≤min(行数,列数)"
+          "id": "bu-fen-zu-zhi-zheng-zu-zhi",
+          "title": "部分组秩 ≤ 整组秩",
+          "bodyMarkdown": "部分组秩 ≤ 整组秩"
         }
       ],
       "examples": [
         {
-          "id": "3-ge-wei-zhi-shu-de-151bbs",
+          "id": "4-ge-xiang-liang-zhi-1a4ii3",
           "title": "讲解例子",
-          "bodyMarkdown": "3 个未知数的方程组若秩为 2 且有解，解集中有 1 个自由参数。"
+          "bodyMarkdown": "4 个向量秩为 3 ⇒ 相关，且至少一个可由其余表示。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "秩表示矩阵或向量组中真正独立的方向数。行变换不改变秩，所以把矩阵化成阶梯形后数非零行最方便；秩还直接控制方程组的自由度和解的几何维数。\n\n### 解题步骤\n\n1. 做初等行变换\n2. 化为阶梯形\n3. 数主元并解释自由变量\n\n### 易错点\n\n把非零元素个数当成秩；同一行有多个非零数仍只贡献一个主元方向。"
+      "bodyMarkdown": "一般情形的判定标准：向量组线性无关 ⇔ r(α₁,…,αₛ)=s（秩等于个数）；秩小于个数必相关——秩是相关性判定的「通用货币」。\n\n### 解题步骤\n\n1. 按列拼矩阵\n2. 化阶梯求秩\n3. 与个数比较\n\n### 易错点\n\n部分组无关推整组无关——方向反了：整组无关 ⇒ 部分组无关。"
     },
     {
       "schemaVersion": "1.0",
@@ -427,47 +423,47 @@
       "sectionId": "m1-p2-c3-s3",
       "sectionTitle": "线性相关与线性无关",
       "title": "常用性质",
-      "summary": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。",
+      "summary": "线性相关性常用性质：含零向量必相关；部分相关则整组相关；整组无关则部分无关；向量个数大于维数必相关；无关组添加向量后相关，则新向量可由原组唯一表示。",
       "tags": [
-        "判断方向是否冗余"
+        "相关性六条性质"
       ],
       "sortOrder": 90,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "k₁α₁+…+kₘαₘ=0",
-        "caption": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。"
+        "content": "r(部分组)≤r(整组)",
+        "caption": "线性相关性常用性质：含零向量必相关；部分相关则整组相关；整组无关则部分无关；向量个数大于维数必相关；无关组添加向量后相关，则新向量可由原组唯一表示。"
       },
       "keyPoints": [
         {
-          "id": "fang-cheng-zu-k-k-0-zhi-you-ling-jie-0gtzu3",
-          "title": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无",
-          "bodyMarkdown": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无关"
+          "id": "bu-fen-xiang-guan-zheng-zu-xiang-guan-010bd9",
+          "title": "部分相关 ⇒ 整组相关（逆否",
+          "bodyMarkdown": "部分相关 ⇒ 整组相关（逆否：整组无关 ⇒ 部分无关）"
         },
         {
-          "id": "xiang-liang-ge-shu-chao-guo-wei-shu-bi-1f0wsv",
-          "title": "向量个数超过维数必相关",
-          "bodyMarkdown": "向量个数超过维数必相关"
+          "id": "n-1-ge-n-wei-xiang-liang-bi-xiang-guan",
+          "title": "n+1 个 n 维向量必相关",
+          "bodyMarkdown": "n+1 个 n 维向量必相关"
         },
         {
-          "id": "ji-da-wu-guan-zu-de-xiang-liang-ge-shu-1czl30",
-          "title": "极大无关组的向量个数等于秩",
-          "bodyMarkdown": "极大无关组的向量个数等于秩"
+          "id": "wu-guan-zu-wai-tian-yi-ge-ke-biao-shi-0oheje",
+          "title": "无关组外添一个「可表示」向量 ⇒ 组相关",
+          "bodyMarkdown": "无关组外添一个「可表示」向量 ⇒ 组相关"
         }
       ],
       "examples": [
         {
-          "id": "ping-mian-zhong-san-0l8g8b",
+          "id": "wu-guan-er-xiang-guan-1457x6",
           "title": "讲解例子",
-          "bodyMarkdown": "平面中三条向量必相关；两条不共线向量可以张成整个平面。"
+          "bodyMarkdown": "α₁,α₂ 无关而 α₁,α₂,α₃ 相关 ⇒ α₃=λ₁α₁+λ₂α₂（表示唯一）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。极大线性无关组保留了原向量组的全部张成空间。\n\n### 解题步骤\n\n1. 把向量作为列组成矩阵\n2. 解齐次方程或求秩\n3. 解释张成空间和自由方向\n\n### 易错点\n\n少于或等于维数时不能只靠“个数”判断，仍需计算。"
+      "bodyMarkdown": "线性相关性常用性质：含零向量必相关；部分相关则整组相关；整组无关则部分无关；向量个数大于维数必相关；无关组添加向量后相关，则新向量可由原组唯一表示。\n\n### 解题步骤\n\n1. 背性质清单\n2. 按题意套用\n3. 注意推理方向\n\n### 易错点\n\n「整组相关 ⇒ 部分组相关」——这个方向不成立！"
     },
     {
       "schemaVersion": "1.0",
@@ -478,47 +474,47 @@
       "sectionId": "m1-p2-c3-s3",
       "sectionTitle": "线性相关与线性无关",
       "title": "2D：两个不共线向量可以张成整个平面",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "平面上两个不共线（不成比例）的向量线性无关，能张成整个平面：任何平面向量都是它们的线性组合；共线则只能张成一条直线。",
       "tags": [
-        "用坐标描述方向"
+        "平面基底可视化"
       ],
       "sortOrder": 100,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "(1,0)、(0,1) 是标准基底",
+        "caption": "平面上两个不共线（不成比例）的向量线性无关，能张成整个平面：任何平面向量都是它们的线性组合；共线则只能张成一条直线。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "bu-gong-xian-xian-xing-wu-guan-2-ge-0myp9v",
+          "title": "不共线 ⇔ 线性无关（2 个向量）",
+          "bodyMarkdown": "不共线 ⇔ 线性无关（2 个向量）"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "wu-guan-cheng-wei-ping-mian-de-ji-di",
+          "title": "无关 ⇒ 成为平面的基底",
+          "bodyMarkdown": "无关 ⇒ 成为平面的基底"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "gong-xian-xiang-guan-zhang-cheng-yi-wei",
+          "title": "共线 ⇔ 相关",
+          "bodyMarkdown": "共线 ⇔ 相关，张成一维"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "1-1-1-1-bu-gong-xian-0wt8sn",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "α=(1,1)、β=(1,−1) 不共线：任意 (x,y) 都可写成组合。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "平面上两个不共线（不成比例）的向量线性无关，能张成整个平面：任何平面向量都是它们的线性组合；共线则只能张成一条直线。\n\n### 解题步骤\n\n1. 画两个向量\n2. 检查是否共线\n3. 无关则作基底\n\n### 易错点\n\n两个向量「很长」就以为能张成平面——方向（比例）才是关键。"
     },
     {
       "schemaVersion": "1.0",
@@ -529,47 +525,47 @@
       "sectionId": "m1-p2-c3-s3",
       "sectionTitle": "线性相关与线性无关",
       "title": "3D：三个共面向量线性相关；拖动向量观察空间张成维数变化",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "空间中三个向量若共面（混和积为零、行列式为零）则线性相关，最多张成一张平面；三个不共面的向量才线性无关，能张成整个三维空间。",
       "tags": [
-        "用坐标描述方向"
+        "空间维数可视化"
       ],
       "sortOrder": 110,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "|α β γ|=0 ⇔ 共面（相关）",
+        "caption": "空间中三个向量若共面（混和积为零、行列式为零）则线性相关，最多张成一张平面；三个不共面的向量才线性无关，能张成整个三维空间。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "san-xiang-liang-gong-mian-xiang-guan-1c27wi",
+          "title": "三向量共面 ⇔ 相关 ⇔ 行列式为 0",
+          "bodyMarkdown": "三向量共面 ⇔ 相关 ⇔ 行列式为 0"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "bu-gong-mian-wu-guan-kong-jian-ji-di",
+          "title": "不共面 ⇒ 无关 ⇒ 空间基底",
+          "bodyMarkdown": "不共面 ⇒ 无关 ⇒ 空间基底"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "wei-shu-wu-guan-xiang-liang-de-ge-shu",
+          "title": "维数 = 无关向量的个数",
+          "bodyMarkdown": "维数 = 无关向量的个数"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "1-0-0-0-1-0-1-1-0-gong-0wwt8h",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "α=(1,0,0)、β=(0,1,0)、γ=(1,1,0)：共面（z=0 平面），相关。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "空间中三个向量若共面（混和积为零、行列式为零）则线性相关，最多张成一张平面；三个不共面的向量才线性无关，能张成整个三维空间。\n\n### 解题步骤\n\n1. 画三个向量\n2. 查是否同一平面\n3. 用行列式验证\n\n### 易错点\n\n空间中三个向量默认张成空间——还必须不共面才行。"
     },
     {
       "schemaVersion": "1.0",
@@ -580,47 +576,47 @@
       "sectionId": "m1-p2-c3-s4",
       "sectionTitle": "极大线性无关组",
       "title": "定义",
-      "summary": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。",
+      "summary": "极大线性无关组：向量组中一个线性无关的部分组，再添入任何原组向量都变相关——「无关性 + 极大性」两条件；它所含向量个数就是向量组的秩。",
       "tags": [
-        "判断方向是否冗余"
+        "最能干的无关部分组"
       ],
       "sortOrder": 120,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "k₁α₁+…+kₘαₘ=0",
-        "caption": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。"
+        "content": "极大无关组含 r 个向量，r=向量组的秩",
+        "caption": "极大线性无关组：向量组中一个线性无关的部分组，再添入任何原组向量都变相关——「无关性 + 极大性」两条件；它所含向量个数就是向量组的秩。"
       },
       "keyPoints": [
         {
-          "id": "fang-cheng-zu-k-k-0-zhi-you-ling-jie-0gtzu3",
-          "title": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无",
-          "bodyMarkdown": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无关"
+          "id": "wu-guan-zai-tian-ren-yi-yuan-zu-xiang-02roa8",
+          "title": "无关 + 再添任一原组向量变相关",
+          "bodyMarkdown": "无关 + 再添任一原组向量变相关"
         },
         {
-          "id": "xiang-liang-ge-shu-chao-guo-wei-shu-bi-1f0wsv",
-          "title": "向量个数超过维数必相关",
-          "bodyMarkdown": "向量个数超过维数必相关"
+          "id": "ji-da-wu-guan-zu-yi-ban-bu-wei-yi",
+          "title": "极大无关组一般不唯一",
+          "bodyMarkdown": "极大无关组一般不唯一"
         },
         {
-          "id": "ji-da-wu-guan-zu-de-xiang-liang-ge-shu-1czl30",
-          "title": "极大无关组的向量个数等于秩",
-          "bodyMarkdown": "极大无关组的向量个数等于秩"
+          "id": "suo-han-xiang-liang-ge-shu-xiang-liang-0sdz7i",
+          "title": "所含向量个数 = 向量组的秩",
+          "bodyMarkdown": "所含向量个数 = 向量组的秩"
         }
       ],
       "examples": [
         {
-          "id": "ping-mian-zhong-san-0l8g8b",
+          "id": "1-0-2-0-0-1-shi-ji-da-0ufr1w",
           "title": "讲解例子",
-          "bodyMarkdown": "平面中三条向量必相关；两条不共线向量可以张成整个平面。"
+          "bodyMarkdown": "α₁=(1,0)、α₂=(2,0)、α₃=(0,1)：{α₁,α₃} 是极大无关组（{α₂,α₃} 也是）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。极大线性无关组保留了原向量组的全部张成空间。\n\n### 解题步骤\n\n1. 把向量作为列组成矩阵\n2. 解齐次方程或求秩\n3. 解释张成空间和自由方向\n\n### 易错点\n\n少于或等于维数时不能只靠“个数”判断，仍需计算。"
+      "bodyMarkdown": "极大线性无关组：向量组中一个线性无关的部分组，再添入任何原组向量都变相关——「无关性 + 极大性」两条件；它所含向量个数就是向量组的秩。\n\n### 解题步骤\n\n1. 找无关部分组\n2. 验证添加任何剩余向量都相关\n3. 确认「极大」\n\n### 易错点\n\n极大无关组唯一——一般不唯一，但所含个数（秩）唯一。"
     },
     {
       "schemaVersion": "1.0",
@@ -631,47 +627,47 @@
       "sectionId": "m1-p2-c3-s4",
       "sectionTitle": "极大线性无关组",
       "title": "求法",
-      "summary": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。",
+      "summary": "求极大无关组的标准流程：向量按列拼矩阵 → 行变换化行最简形 → 主元所在列对应的「原向量」构成一个极大无关组；其余列向量由主元列线性表出。",
       "tags": [
-        "判断方向是否冗余"
+        "行变换挑主元列"
       ],
       "sortOrder": 130,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "k₁α₁+…+kₘαₘ=0",
-        "caption": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。"
+        "content": "主元列号 = 极大无关组的下标",
+        "caption": "求极大无关组的标准流程：向量按列拼矩阵 → 行变换化行最简形 → 主元所在列对应的「原向量」构成一个极大无关组；其余列向量由主元列线性表出。"
       },
       "keyPoints": [
         {
-          "id": "fang-cheng-zu-k-k-0-zhi-you-ling-jie-0gtzu3",
-          "title": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无",
-          "bodyMarkdown": "方程组 k₁α₁+…+kₘαₘ=0 只有零解才无关"
+          "id": "an-lie-pin-xing-bian-huan-ren-zhu-yuan-1e8y16",
+          "title": "按列拼、行变换、认主元列",
+          "bodyMarkdown": "按列拼、行变换、认主元列"
         },
         {
-          "id": "xiang-liang-ge-shu-chao-guo-wei-shu-bi-1f0wsv",
-          "title": "向量个数超过维数必相关",
-          "bodyMarkdown": "向量个数超过维数必相关"
+          "id": "zhu-yuan-lie-dui-ying-yuan-xiang-liang-0je0cj",
+          "title": "主元列对应原向量（不是化简后的列）",
+          "bodyMarkdown": "主元列对应原向量（不是化简后的列）"
         },
         {
-          "id": "ji-da-wu-guan-zu-de-xiang-liang-ge-shu-1czl30",
-          "title": "极大无关组的向量个数等于秩",
-          "bodyMarkdown": "极大无关组的向量个数等于秩"
+          "id": "fei-zhu-yuan-lie-de-biao-shi-xi-shu-ke-16nw7m",
+          "title": "非主元列的表示系数可从最简形读出",
+          "bodyMarkdown": "非主元列的表示系数可从最简形读出"
         }
       ],
       "examples": [
         {
-          "id": "ping-mian-zhong-san-0l8g8b",
+          "id": "zui-jian-xing-zhu-yuan-00elmq",
           "title": "讲解例子",
-          "bodyMarkdown": "平面中三条向量必相关；两条不共线向量可以张成整个平面。"
+          "bodyMarkdown": "最简形主元在第 1、3 列 ⇒ α₁、α₃ 是极大无关组，α₂ 的系数从第 2 列读出。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "线性相关意味着某个向量可以由其他向量组合出来，向量组存在冗余；线性无关意味着只有全零系数才能组合成零向量。极大线性无关组保留了原向量组的全部张成空间。\n\n### 解题步骤\n\n1. 把向量作为列组成矩阵\n2. 解齐次方程或求秩\n3. 解释张成空间和自由方向\n\n### 易错点\n\n少于或等于维数时不能只靠“个数”判断，仍需计算。"
+      "bodyMarkdown": "求极大无关组的标准流程：向量按列拼矩阵 → 行变换化行最简形 → 主元所在列对应的「原向量」构成一个极大无关组；其余列向量由主元列线性表出。\n\n### 解题步骤\n\n1. 拼矩阵\n2. 化行最简形\n3. 按主元列选组\n\n### 易错点\n\n拿化简后的列当极大无关组——必须回取原向量组的对应向量。"
     },
     {
       "schemaVersion": "1.0",
@@ -682,47 +678,47 @@
       "sectionId": "m1-p2-c3-s4",
       "sectionTitle": "极大线性无关组",
       "title": "与原向量组等价",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "极大无关组与原向量组等价：互相可以线性表示——极大组能表示全组（构造），全组显然能表示极大组（子集）；等价组秩相等由此而来。",
       "tags": [
-        "用坐标描述方向"
+        "极大组代表全组"
       ],
       "sortOrder": 140,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "{极大组} ≌ {全组}",
+        "caption": "极大无关组与原向量组等价：互相可以线性表示——极大组能表示全组（构造），全组显然能表示极大组（子集）；等价组秩相等由此而来。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "ji-da-zu-quan-zu-hu-xiang-biao-shi",
+          "title": "极大组 ↔ 全组互相表示",
+          "bodyMarkdown": "极大组 ↔ 全组互相表示"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "quan-zu-ren-he-xiang-liang-ji-da-zu-de-0zd8gv",
+          "title": "全组任何向量 = 极大组的线性组合",
+          "bodyMarkdown": "全组任何向量 = 极大组的线性组合"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "zhe-shi-zhi-ke-hua-xiang-liang-zu-de-0kdkvg",
+          "title": "这是「秩刻画向量组」的根基",
+          "bodyMarkdown": "这是「秩刻画向量组」的根基"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "1-0-2-0-0-1-2-biao-shi",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "α₁=(1,0)、α₂=(2,0)、α₃=(0,1)：α₂=2α₁，{α₁,α₃} 表示 α₂。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "极大无关组与原向量组等价：互相可以线性表示——极大组能表示全组（构造），全组显然能表示极大组（子集）；等价组秩相等由此而来。\n\n### 解题步骤\n\n1. 确认极大组\n2. 写出表示关系\n3. 下等价结论\n\n### 易错点\n\n任取的无关部分组都与全组等价——必须是「极大」的无关部分组。"
     },
     {
       "schemaVersion": "1.0",
@@ -733,47 +729,47 @@
       "sectionId": "m1-p2-c3-s5",
       "sectionTitle": "向量组的秩",
       "title": "定义",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "向量组的秩 = 极大线性无关组所含向量的个数，记 r(α₁,…,αₛ)；它是向量组「有效维数」的度量，也是判定两向量组能否互相表示的核心量。",
       "tags": [
-        "用坐标描述方向"
+        "极大无关组的大小"
       ],
       "sortOrder": 150,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "r(α₁,…,αₛ)≤s",
+        "caption": "向量组的秩 = 极大线性无关组所含向量的个数，记 r(α₁,…,αₛ)；它是向量组「有效维数」的度量，也是判定两向量组能否互相表示的核心量。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "zhi-ji-da-wu-guan-zu-de-xiang-liang-ge-0lqfma",
+          "title": "秩 = 极大无关组的向量个数",
+          "bodyMarkdown": "秩 = 极大无关组的向量个数"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "ling-xiang-liang-zu-de-zhi-wei-0",
+          "title": "零向量组的秩为 0",
+          "bodyMarkdown": "零向量组的秩为 0"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "r-zu-zu-nei-xiang-liang-ge-shu-s",
+          "title": "r 组 ≤ 组内向量个数 s",
+          "bodyMarkdown": "r 组 ≤ 组内向量个数 s"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "quan-you-1-2-de-bei-shu-0hmfqf",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "全由 (1,2) 的倍数组成的组：秩为 1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "向量组的秩 = 极大线性无关组所含向量的个数，记 r(α₁,…,αₛ)；它是向量组「有效维数」的度量，也是判定两向量组能否互相表示的核心量。\n\n### 解题步骤\n\n1. 求极大无关组\n2. 数向量个数\n3. 记为向量组的秩\n\n### 易错点\n\n把矩阵的秩与向量组的秩割裂——按列拼矩阵后是同一个数。"
     },
     {
       "schemaVersion": "1.0",
@@ -784,47 +780,47 @@
       "sectionId": "m1-p2-c3-s5",
       "sectionTitle": "向量组的秩",
       "title": "与矩阵行秩/列秩的关系",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "矩阵的行秩与列秩相等且都等于矩阵的秩：因此按列拼的向量组秩、按行拼的向量组秩、矩阵秩三者是同一个数——求哪一个都走「行变换化阶梯」。",
       "tags": [
-        "用坐标描述方向"
+        "行秩、列秩、矩阵秩合一"
       ],
       "sortOrder": 160,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "r(A)=行秩=列秩",
+        "caption": "矩阵的行秩与列秩相等且都等于矩阵的秩：因此按列拼的向量组秩、按行拼的向量组秩、矩阵秩三者是同一个数——求哪一个都走「行变换化阶梯」。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "lie-zhi-xing-zhi-r-a",
+          "title": "列秩 = 行秩 = r(A)",
+          "bodyMarkdown": "列秩 = 行秩 = r(A)"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "xiang-liang-zu-de-zhi-pin-ju-zhen-hou-1wvlcd",
+          "title": "向量组的秩 = 拼矩阵后的秩",
+          "bodyMarkdown": "向量组的秩 = 拼矩阵后的秩"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "r-a-r-a-bao-zheng-xing-zu-lie-zu-hu-tong",
+          "title": "r(A)=r(Aᵀ) 保证行组、列组互通",
+          "bodyMarkdown": "r(A)=r(Aᵀ) 保证行组、列组互通"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "3-4-ju-zhen-xing-jie-ti-0aujls",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "3×4 矩阵行阶梯有 2 个非零行：列向量组与行向量组的秩都是 2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "矩阵的行秩与列秩相等且都等于矩阵的秩：因此按列拼的向量组秩、按行拼的向量组秩、矩阵秩三者是同一个数——求哪一个都走「行变换化阶梯」。\n\n### 解题步骤\n\n1. 选拼法（列或行）\n2. 化行阶梯\n3. 读非零行数\n\n### 易错点\n\n认为行向量组必须「按行变换」求秩——列向量、行向量殊途同归。"
     },
     {
       "schemaVersion": "1.0",
@@ -835,47 +831,47 @@
       "sectionId": "m1-p2-c3-s6",
       "sectionTitle": "向量组等价",
       "title": "互相线性表示",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "两向量组等价指它们能互相线性表示：每个组都能表示出另一组的全部向量；「能表示」是单向关系，等价要求双向都通。",
       "tags": [
-        "用坐标描述方向"
+        "等价的含义"
       ],
       "sortOrder": 170,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "r(Ⅱ)=r(Ⅰ,Ⅱ) 且 r(Ⅰ)=r(Ⅰ,Ⅱ) ⇔ 等价",
+        "caption": "两向量组等价指它们能互相线性表示：每个组都能表示出另一组的全部向量；「能表示」是单向关系，等价要求双向都通。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "deng-jia-shuang-xiang-dou-neng-xian-0ynaga",
+          "title": "等价 = 双向都能线性表示",
+          "bodyMarkdown": "等价 = 双向都能线性表示"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "zi-fan-dui-chen-chuan-di-shi-deng-jia-1cps6a",
+          "title": "自反、对称、传递（是等价关系）",
+          "bodyMarkdown": "自反、对称、传递（是等价关系）"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "deng-jia-hu-xiang-biao-shi-he-qi-lai-16vx5q",
+          "title": "等价 ⇔ 互相表示 ⇔ 合起来秩不变",
+          "bodyMarkdown": "等价 ⇔ 互相表示 ⇔ 合起来秩不变"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "ji-da-wu-guan-zu-yu-1kyek3",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "极大无关组与全组等价：一个方向构造、一个方向天然。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "两向量组等价指它们能互相线性表示：每个组都能表示出另一组的全部向量；「能表示」是单向关系，等价要求双向都通。\n\n### 解题步骤\n\n1. 验证组Ⅰ→组Ⅱ\n2. 验证组Ⅱ→组Ⅰ\n3. 双向都通才等价\n\n### 易错点\n\n只验证一个方向就宣布等价——单向表示不是等价。"
     },
     {
       "schemaVersion": "1.0",
@@ -886,47 +882,47 @@
       "sectionId": "m1-p2-c3-s6",
       "sectionTitle": "向量组等价",
       "title": "等价向量组秩相等",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "等价向量组必有相等的秩；反之「秩相等」不足以等价（还要能互相表示）——秩相等是必要条件，合并组秩不变才是充要刻画。",
       "tags": [
-        "用坐标描述方向"
+        "秩是等价不变量"
       ],
       "sortOrder": 180,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "Ⅰ≌Ⅱ ⇔ r(Ⅰ)=r(Ⅱ)=r(Ⅰ,Ⅱ)",
+        "caption": "等价向量组必有相等的秩；反之「秩相等」不足以等价（还要能互相表示）——秩相等是必要条件，合并组秩不变才是充要刻画。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "deng-jia-zhi-xiang-deng",
+          "title": "等价 ⇒ 秩相等",
+          "bodyMarkdown": "等价 ⇒ 秩相等"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "zhi-xiang-deng-deng-jia-hai-yao-bi-biao-0dxhy0",
+          "title": "秩相等 ⇏ 等价（还要比表示能力）",
+          "bodyMarkdown": "秩相等 ⇏ 等价（还要比表示能力）"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "chong-yao-r-r-r",
+          "title": "充要：r(Ⅰ)=r(Ⅱ)=r(Ⅰ,Ⅱ)",
+          "bodyMarkdown": "充要：r(Ⅰ)=r(Ⅱ)=r(Ⅰ,Ⅱ)"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "1-0-yu-0-1-zhi-dou-wei-0ot0d3",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "α=(1,0) 与 β=(0,1)：秩都为 1 但互相表示不了，不等价。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "等价向量组必有相等的秩；反之「秩相等」不足以等价（还要能互相表示）——秩相等是必要条件，合并组秩不变才是充要刻画。\n\n### 解题步骤\n\n1. 先比秩\n2. 再验证互相表示\n3. 两者都过下等价\n\n### 易错点\n\n见秩相等就判等价——反例遍地都是。"
     },
     {
       "schemaVersion": "1.0",
@@ -937,47 +933,47 @@
       "sectionId": "m1-p2-c3-s7",
       "sectionTitle": "内积与正交",
       "title": "内积",
-      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "summary": "n 维向量的内积 (α,β)=αᵀβ=a₁b₁+…+aₙbₙ，结果是数；它满足交换、分配与齐次性，且 (α,α)≥0、等于 0 当且仅当 α=0——长度与正交都由它定义。",
       "tags": [
-        "比较方向与分量"
+        "对应分量乘积求和"
       ],
       "sortOrder": 190,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
-        "caption": "内积把两个向量的长度和夹角联系起来。"
+        "content": "(α,β)=αᵀβ",
+        "caption": "n 维向量的内积 (α,β)=αᵀβ=a₁b₁+…+aₙbₙ，结果是数；"
       },
       "keyPoints": [
         {
-          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
-          "title": "a·b=0 等价于非零向量垂直",
-          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+          "id": "a-b",
+          "title": "(α,β)=Σaᵢbᵢ=αᵀβ",
+          "bodyMarkdown": "(α,β)=Σaᵢbᵢ=αᵀβ"
         },
         {
-          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
-          "title": "内积是标量",
-          "bodyMarkdown": "内积是标量，不是向量"
+          "id": "0",
+          "title": "(α,α)=|α|²≥0",
+          "bodyMarkdown": "(α,α)=|α|²≥0"
         },
         {
-          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
-          "title": "投影要注意投到哪一个向量上",
-          "bodyMarkdown": "投影要注意投到哪一个向量上"
+          "id": "0-ji-zheng-jiao",
+          "title": "(α,β)=0 即正交",
+          "bodyMarkdown": "(α,β)=0 即正交"
         }
       ],
       "examples": [
         {
-          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "id": "1-2-2-1-4-4-9-3",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+          "bodyMarkdown": "α=(1,2,2)：(α,α)=1+4+4=9，|α|=3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+      "bodyMarkdown": "n 维向量的内积 (α,β)=αᵀβ=a₁b₁+…+aₙbₙ，结果是数；它满足交换、分配与齐次性，且 (α,α)≥0、等于 0 当且仅当 α=0——长度与正交都由它定义。\n\n### 解题步骤\n\n1. 对应分量相乘\n2. 求和得数\n3. 用于长度/正交\n\n### 易错点\n\n把内积写成矩阵（αβᵀ）——αᵀβ 是数，αβᵀ 是矩阵，两者都存在但含义不同。"
     },
     {
       "schemaVersion": "1.0",
@@ -988,47 +984,47 @@
       "sectionId": "m1-p2-c3-s7",
       "sectionTitle": "内积与正交",
       "title": "长度",
-      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "summary": "向量长度（模、范数）|α|=√(α,α)=√(a₁²+…+aₙ²)；长度为 1 的向量叫单位向量，|α|=0 当且仅当 α=零向量。",
       "tags": [
-        "比较方向与分量"
+        "内积开方"
       ],
       "sortOrder": 200,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
-        "caption": "内积把两个向量的长度和夹角联系起来。"
+        "content": "|α|=√Σaᵢ²",
+        "caption": "向量长度（模、范数）|α|=√(α,α)=√(a₁²+…+aₙ²)；长度为 1 的向量叫单位向量，|α|=0 当且仅当 α=零向量。"
       },
       "keyPoints": [
         {
-          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
-          "title": "a·b=0 等价于非零向量垂直",
-          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+          "id": "x-00dmqr",
+          "title": "|α|=√(α",
+          "bodyMarkdown": "|α|=√(α,α)"
         },
         {
-          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
-          "title": "内积是标量",
-          "bodyMarkdown": "内积是标量，不是向量"
+          "id": "k-k",
+          "title": "|kα|=|k|·|α|",
+          "bodyMarkdown": "|kα|=|k|·|α|"
         },
         {
-          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
-          "title": "投影要注意投到哪一个向量上",
-          "bodyMarkdown": "投影要注意投到哪一个向量上"
+          "id": "dan-wei-hua-0",
+          "title": "单位化：α/|α|（α≠0）",
+          "bodyMarkdown": "单位化：α/|α|（α≠0）"
         }
       ],
       "examples": [
         {
-          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "id": "3-4-5-dan-wei-xiang-1y2f22",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+          "bodyMarkdown": "α=(3,4)：|α|=5，单位向量 (3/5,4/5)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+      "bodyMarkdown": "向量长度（模、范数）|α|=√(α,α)=√(a₁²+…+aₙ²)；长度为 1 的向量叫单位向量，|α|=0 当且仅当 α=零向量。\n\n### 解题步骤\n\n1. 算内积 (α,α)\n2. 开方得长度\n3. 需要时单位化\n\n### 易错点\n\n单位化时除以 |α|²——除的是长度 |α|，不是长度的平方。"
     },
     {
       "schemaVersion": "1.0",
@@ -1039,47 +1035,47 @@
       "sectionId": "m1-p2-c3-s7",
       "sectionTitle": "内积与正交",
       "title": "正交",
-      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "summary": "(α,β)=0 称 α 与 β 正交（n 维空间里的「垂直」）；零向量与任何向量正交，但谈正交组时通常只考虑非零向量。",
       "tags": [
-        "比较方向与分量"
+        "内积为零"
       ],
       "sortOrder": 210,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
-        "caption": "内积把两个向量的长度和夹角联系起来。"
+        "content": "(α,β)=0 ⇔ 正交",
+        "caption": "(α,β)=0 称 α 与 β 正交（n 维空间里的「垂直」）；零向量与任何向量正交，但谈正交组时通常只考虑非零向量。"
       },
       "keyPoints": [
         {
-          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
-          "title": "a·b=0 等价于非零向量垂直",
-          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+          "id": "zheng-jiao-0",
+          "title": "正交 ⇔ (α",
+          "bodyMarkdown": "正交 ⇔ (α,β)=0"
         },
         {
-          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
-          "title": "内积是标量",
-          "bodyMarkdown": "内积是标量，不是向量"
+          "id": "ling-xiang-liang-yu-shui-dou-zheng-jiao-0izzwx",
+          "title": "零向量与谁都正交（约定排除）",
+          "bodyMarkdown": "零向量与谁都正交（约定排除）"
         },
         {
-          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
-          "title": "投影要注意投到哪一个向量上",
-          "bodyMarkdown": "投影要注意投到哪一个向量上"
+          "id": "zheng-jiao-xiang-liang-zu-fei-ling-0w6zvt",
+          "title": "正交向量组（非零、两两正交）必线性无关",
+          "bodyMarkdown": "正交向量组（非零、两两正交）必线性无关"
         }
       ],
       "examples": [
         {
-          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "id": "1-1-0-yu-1-1-0-zheng-1j1x2b",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+          "bodyMarkdown": "(1,1,0) 与 (1,−1,0) 正交。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+      "bodyMarkdown": "(α,β)=0 称 α 与 β 正交（n 维空间里的「垂直」）；零向量与任何向量正交，但谈正交组时通常只考虑非零向量。\n\n### 解题步骤\n\n1. 算内积\n2. 判零\n3. 下正交结论\n\n### 易错点\n\n正交组忘了排除零向量——含零的「正交组」无关性结论失效。"
     },
     {
       "schemaVersion": "1.0",
@@ -1090,47 +1086,47 @@
       "sectionId": "m1-p2-c3-s7",
       "sectionTitle": "内积与正交",
       "title": "单位向量",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "单位向量是长度为 1 的向量：非零向量 α 除以自身长度即得 α/|α|，方向不变；标准正交组就是「彼此正交的单位向量组」。",
       "tags": [
-        "用坐标描述方向"
+        "长度为 1 的向量"
       ],
       "sortOrder": 220,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "e=α/|α|",
+        "caption": "单位向量是长度为 1 的向量：非零向量 α 除以自身长度即得 α/|α|，方向不变；标准正交组就是「彼此正交的单位向量组」。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "e-1",
+          "title": "|e|=1",
+          "bodyMarkdown": "|e|=1"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "e-0",
+          "title": "e=α/|α|（α≠0）",
+          "bodyMarkdown": "e=α/|α|（α≠0）"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "dan-wei-hua-bao-chi-fang-xiang-suo-ding-1klp2a",
+          "title": "单位化保持方向、锁定长度",
+          "bodyMarkdown": "单位化保持方向、锁定长度"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "1-1-e-1-2-1-2",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "α=(1,1)：e=(1/√2,1/√2)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "单位向量是长度为 1 的向量：非零向量 α 除以自身长度即得 α/|α|，方向不变；标准正交组就是「彼此正交的单位向量组」。\n\n### 解题步骤\n\n1. 求长度\n2. 除以长度\n3. 验证模为 1\n\n### 易错点\n\n对零向量单位化——分母为 0 无意义。"
     },
     {
       "schemaVersion": "1.0",
@@ -1141,47 +1137,47 @@
       "sectionId": "m1-p2-c3-s7",
       "sectionTitle": "内积与正交",
       "title": "标准正交组",
-      "summary": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。",
+      "summary": "标准正交组：组内向量都是单位向量且两两正交；n 个 n 维标准正交向量拼成的矩阵是正交矩阵——它是空间里「一套标准直角坐标系」。",
       "tags": [
-        "比较方向与分量"
+        "单位 + 两两正交"
       ],
       "sortOrder": 230,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "a·b=|a||b|cosθ=a₁b₁+…+aₙbₙ",
-        "caption": "内积把两个向量的长度和夹角联系起来。"
+        "content": "(αᵢ,αⱼ)=0（i≠j），|αᵢ|=1",
+        "caption": "标准正交组：组内向量都是单位向量且两两正交；n 个 n 维标准正交向量拼成的矩阵是正交矩阵——它是空间里「一套标准直角坐标系」。"
       },
       "keyPoints": [
         {
-          "id": "a-b-0-deng-jia-yu-fei-ling-xiang-liang-17040e",
-          "title": "a·b=0 等价于非零向量垂直",
-          "bodyMarkdown": "a·b=0 等价于非零向量垂直"
+          "id": "zi-ji-1-bie-ren-0",
+          "title": "(αᵢ,αⱼ)=δᵢⱼ（自己 1、别人 0）",
+          "bodyMarkdown": "(αᵢ,αⱼ)=δᵢⱼ（自己 1、别人 0）"
         },
         {
-          "id": "nei-ji-shi-biao-liang-bu-shi-xiang-liang",
-          "title": "内积是标量",
-          "bodyMarkdown": "内积是标量，不是向量"
+          "id": "biao-zhun-zheng-jiao-zu-bi-xian-xing-wu-0mm328",
+          "title": "标准正交组必线性无关",
+          "bodyMarkdown": "标准正交组必线性无关"
         },
         {
-          "id": "tou-ying-yao-zhu-yi-tou-dao-na-yi-ge-1ityjr",
-          "title": "投影要注意投到哪一个向量上",
-          "bodyMarkdown": "投影要注意投到哪一个向量上"
+          "id": "pin-cheng-ju-zhen-q-man-zu-q-q-e",
+          "title": "拼成矩阵 Q 满足 QᵀQ=E",
+          "bodyMarkdown": "拼成矩阵 Q 满足 QᵀQ=E"
         }
       ],
       "examples": [
         {
-          "id": "a-1-2-b-2-1-shi-a-b-0-05cd1v",
+          "id": "e-1-0-e-0-1-shi-zui-1ud5ph",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(1,2)，b=(2,−1) 时 a·b=0，所以两向量垂直。"
+          "bodyMarkdown": "e₁=(1,0)、e₂=(0,1) 是最简单的标准正交组。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "内积把两个向量的长度和夹角联系起来。它为零表示正交，除以一个向量的模可以得到投影长度；空间几何中，内积是判断垂直和计算距离的核心工具。\n\n### 解题步骤\n\n1. 列出向量分量\n2. 计算内积与模\n3. 按夹角、垂直或投影要求整理\n\n### 易错点\n\n只看到分量乘积相加就忘记检查非零条件和夹角范围。"
+      "bodyMarkdown": "标准正交组：组内向量都是单位向量且两两正交；n 个 n 维标准正交向量拼成的矩阵是正交矩阵——它是空间里「一套标准直角坐标系」。\n\n### 解题步骤\n\n1. 逐对验正交\n2. 逐个验单位\n3. 必要时拼正交矩阵\n\n### 易错点\n\n正交组（两两正交）≠ 标准正交组——「标准」要求单位长度。"
     },
     {
       "schemaVersion": "1.0",
@@ -1192,47 +1188,47 @@
       "sectionId": "m1-p2-c3-s8",
       "sectionTitle": "施密特正交化",
       "title": "正交化",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "施密特正交化的核心动作：从新向量里减去它在已有正交组上的投影，剩下的部分自然与已有向量正交——β₂=α₂−[(α₂,β₁)/(β₁,β₁)]β₁。",
       "tags": [
-        "先把事件说清楚"
+        "施密特：减投影"
       ],
       "sortOrder": 240,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "β₂=α₂−[(α₂,β₁)/(β₁,β₁)]β₁",
+        "caption": "施密特正交化的核心动作：从新向量里减去它在已有正交组上的投影，剩下的部分自然与已有向量正交——β₂=α₂−[(α₂,β₁)/(β₁,β₁)]β₁。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "qi-bu",
+          "title": "β₁=α₁ 起步",
+          "bodyMarkdown": "β₁=α₁ 起步"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "x-07dqsj",
+          "title": "βₖ=αₖ−Σ(αₖ",
+          "bodyMarkdown": "βₖ=αₖ−Σ(αₖ,βᵢ)/(βᵢ,βᵢ)·βᵢ"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "zheng-jiao-hua-bu-gai-bian-zhang-cheng-133hgp",
+          "title": "正交化不改变张成的空间",
+          "bodyMarkdown": "正交化不改变张成的空间"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "1-0-1-1-1-1-1-0-0-1",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "α₁=(1,0)、α₂=(1,1)：β₂=(1,1)−(1,0)=(0,1)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "bodyMarkdown": "施密特正交化的核心动作：从新向量里减去它在已有正交组上的投影，剩下的部分自然与已有向量正交——β₂=α₂−[(α₂,β₁)/(β₁,β₁)]β₁。\n\n### 解题步骤\n\n1. 取第一个不动\n2. 逐个减投影\n3. 保持顺序处理\n\n### 易错点\n\n减投影时系数里漏了 |β₁|²——分母是 (β₁,β₁) 不是 |β₁|。"
     },
     {
       "schemaVersion": "1.0",
@@ -1243,47 +1239,47 @@
       "sectionId": "m1-p2-c3-s8",
       "sectionTitle": "施密特正交化",
       "title": "单位化",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "正交化得到的是正交组（两两垂直但长度随意），再逐个除以自身长度就升级成标准正交组——「先正交、再单位」是标准流程，顺序不能反着混。",
       "tags": [
-        "先把事件说清楚"
+        "正交化之后"
       ],
       "sortOrder": 250,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "γᵢ=βᵢ/√(βᵢ,βᵢ)",
+        "caption": "正交化得到的是正交组（两两垂直但长度随意），再逐个除以自身长度就升级成标准正交组——「先正交、再单位」是标准流程，顺序不能反着混。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "x-0rcnry",
+          "title": "γᵢ=βᵢ/|βᵢ|",
+          "bodyMarkdown": "γᵢ=βᵢ/|βᵢ|"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "xian-shi-mi-te-zheng-jiao-hua-hou-dan-02qo53",
+          "title": "先施密特正交化",
+          "bodyMarkdown": "先施密特正交化，后单位化"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "dan-wei-hua-bu-ying-xiang-zheng-jiao-0nafo0",
+          "title": "单位化不影响正交性",
+          "bodyMarkdown": "单位化不影响正交性"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "0-1-dan-wei-hua-hai-shi-18xsam",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "β=(0,1) 单位化还是 (0,1)；β=(2,2) 单位化得 (1/√2,1/√2)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "bodyMarkdown": "正交化得到的是正交组（两两垂直但长度随意），再逐个除以自身长度就升级成标准正交组——「先正交、再单位」是标准流程，顺序不能反着混。\n\n### 解题步骤\n\n1. 完成正交化\n2. 逐个除模\n3. 抽查内积为 0\n\n### 易错点\n\n单位化后又被再次正交化——流程是单向的：正交 → 单位。"
     }
   ]
 }
