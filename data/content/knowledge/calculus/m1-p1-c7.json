@@ -15,47 +15,47 @@
       "sectionId": "m1-p1-c7-s1",
       "sectionTitle": "第一类曲线积分",
       "title": "对弧长曲线积分",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "对弧长的曲线积分 ∫_L f(x,y)ds 把曲线切成小弧段、每段用「密度 f 乘弧长」累加；它与曲线方向无关——反着走每个 Δs 都不变，这是第一类的标志。",
       "tags": [
-        "把几何量切成微元"
+        "第一类：沿曲线积累 f"
       ],
       "sortOrder": 10,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "∫_L f(x,y)ds=lim Σf(ξᵢ,ηᵢ)Δsᵢ",
+        "caption": "对弧长的曲线积分 ∫_L f(x,y)ds 把曲线切成小弧段、每段用「密度 f 乘弧长」累加；"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "ji-hao-l-f-ds-ds-shi-hu-chang-wei-yuan",
+          "title": "记号 ∫_L f ds",
+          "bodyMarkdown": "记号 ∫_L f ds，ds 是弧长微元"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "yu-fang-xiang-wu-guan-l-l",
+          "title": "与方向无关",
+          "bodyMarkdown": "与方向无关：∫_L=∫_{L⁻}"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "wu-li-yuan-xing-qu-xian-xing-gou-jian-0kuxdj",
+          "title": "物理原型",
+          "bodyMarkdown": "物理原型：曲线形构件的质量"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "l-ds-l-de-hu-chang-ben-0ri37n",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "∫_L ds=L 的弧长本身；f≡1 时积分就是弧长。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "对弧长的曲线积分 ∫_L f(x,y)ds 把曲线切成小弧段、每段用「密度 f 乘弧长」累加；它与曲线方向无关——反着走每个 Δs 都不变，这是第一类的标志。\n\n### 解题步骤\n\n1. 认出 ds（第一类）\n2. 参数化曲线\n3. 代入并积分\n\n### 易错点\n\n第一类积分带方向变号——对弧长的积分永远不变号。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p1-c7-s1",
       "sectionTitle": "第一类曲线积分",
       "title": "定义",
-      "summary": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。",
+      "summary": "在曲线上依次插入分点把弧长分成 n 段，每段取一点乘以该段弧长再求和，最大弧段长趋于零时的极限即第一类曲线积分；定义与方向完全无关。",
       "tags": [
-        "沿曲线累积"
+        "分割求和取极限"
       ],
       "sortOrder": 20,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "∫_L f ds；∫_L Pdx+Qdy",
-        "caption": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。"
+        "format": "latex",
+        "content": "∫_L f ds=lim_{λ→0}Σᵢ f(ξᵢ,ηᵢ)Δsᵢ",
+        "caption": "在曲线上依次插入分点把弧长分成 n 段，每段取一点乘以该段弧长再求和，最大弧段长趋于零时的极限即第一类曲线积分；定义与方向完全无关。"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-han-ds-bu-kan-fang-xiang",
-          "title": "第一类含 ds",
-          "bodyMarkdown": "第一类含 ds，不看方向"
+          "id": "max-s-0-shi-de-he-shi-ji-xian",
+          "title": "λ=max Δsᵢ→0 时的和式极限",
+          "bodyMarkdown": "λ=max Δsᵢ→0 时的和式极限"
         },
         {
-          "id": "di-er-lei-han-dx-dy-fang-xiang-hui-gai-0jj1qp",
-          "title": "第二类含 dx、dy",
-          "bodyMarkdown": "第二类含 dx、dy，方向会改变符号"
+          "id": "qu-dian-zai-hu-duan-shang-ren-yi-lian-0pfpsz",
+          "title": "取点在弧段上任意（连续时结果一样）",
+          "bodyMarkdown": "取点在弧段上任意（连续时结果一样）"
         },
         {
-          "id": "lu-jing-wu-guan-tong-chang-yu-bao-shou-0pjnlc",
-          "title": "路径无关通常与保守场和原函数有关",
-          "bodyMarkdown": "路径无关通常与保守场和原函数有关"
+          "id": "ji-xian-cun-zai-ke-ji-lian-xu-han-shu-1ig2bv",
+          "title": "极限存在 ⇔ 可积（连续函数必可积）",
+          "bodyMarkdown": "极限存在 ⇔ 可积（连续函数必可积）"
         }
       ],
       "examples": [
         {
-          "id": "li-chang-f-p-q-yan-qu-1j651t",
+          "id": "xian-mi-du-x-y-de-qu-1r04hj",
           "title": "讲解例子",
-          "bodyMarkdown": "力场 F=(P,Q) 沿曲线的功为 ∫Pdx+Qdy；若 F=∇φ，积分只看端点。"
+          "bodyMarkdown": "线密度 ρ(x,y) 的曲线质量 m=∫_L ρ ds。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。参数化把曲线上的几何问题转成一个变量积分，路径方向会影响第二类积分。\n\n### 解题步骤\n\n1. 参数化曲线\n2. 写出 ds 或 dx、dy\n3. 代入并确定参数方向\n\n### 易错点\n\n把第一类和第二类曲线积分混用，或忽略曲线的正向。"
+      "bodyMarkdown": "在曲线上依次插入分点把弧长分成 n 段，每段取一点乘以该段弧长再求和，最大弧段长趋于零时的极限即第一类曲线积分；定义与方向完全无关。\n\n### 解题步骤\n\n1. 分割弧段\n2. 取点求和 ΣfΔsᵢ\n3. 取极限\n\n### 易错点\n\n把「分割的对象」当成坐标轴——分割的是曲线的弧长。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p1-c7-s1",
       "sectionTitle": "第一类曲线积分",
       "title": "参数化计算",
-      "summary": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。",
+      "summary": "第一类曲线积分参数化后化为定积分：∫_L f ds=∫_α^β f(x(t),y(t))√(x′²(t)+y′²(t))dt；",
       "tags": [
-        "沿曲线累积"
+        "ds 换成 dt"
       ],
       "sortOrder": 30,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫_L f ds；∫_L Pdx+Qdy",
-        "caption": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。"
+        "content": "∫_L f ds=∫_α^β f(x(t),y(t))√(x′²+y′²)dt",
+        "caption": "第一类曲线积分参数化后化为定积分：∫_L f ds=∫_α^β f(x(t),y(t))√(x′²(t)+y′²(t))"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-han-ds-bu-kan-fang-xiang",
-          "title": "第一类含 ds",
-          "bodyMarkdown": "第一类含 ds，不看方向"
+          "id": "ds-x-y-dt-ping-mian",
+          "title": "ds=√(x′²+y′²)dt（平面）",
+          "bodyMarkdown": "ds=√(x′²+y′²)dt（平面）"
         },
         {
-          "id": "di-er-lei-han-dx-dy-fang-xiang-hui-gai-0jj1qp",
-          "title": "第二类含 dx、dy",
-          "bodyMarkdown": "第二类含 dx、dy，方向会改变符号"
+          "id": "kong-jian-jia-z-ds-x-y-z-dt",
+          "title": "空间加 z′²",
+          "bodyMarkdown": "空间加 z′²：ds=√(x′²+y′²+z′²)dt"
         },
         {
-          "id": "lu-jing-wu-guan-tong-chang-yu-bao-shou-0pjnlc",
-          "title": "路径无关通常与保守场和原函数有关",
-          "bodyMarkdown": "路径无关通常与保守场和原函数有关"
+          "id": "bao-zheng-ds-0-hu-chang-bu-wei-fu",
+          "title": "α<β 保证 ds>0（弧长不为负）",
+          "bodyMarkdown": "α<β 保证 ds>0（弧长不为负）"
         }
       ],
       "examples": [
         {
-          "id": "li-chang-f-p-q-yan-qu-1j651t",
+          "id": "yuan-x-cos-t-y-sin-t-ds-0l6bgr",
           "title": "讲解例子",
-          "bodyMarkdown": "力场 F=(P,Q) 沿曲线的功为 ∫Pdx+Qdy；若 F=∇φ，积分只看端点。"
+          "bodyMarkdown": "圆 x=cos t、y=sin t：ds=dt，∫(x²+y²)ds=∫₀^{2π}dt=2π。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。参数化把曲线上的几何问题转成一个变量积分，路径方向会影响第二类积分。\n\n### 解题步骤\n\n1. 参数化曲线\n2. 写出 ds 或 dx、dy\n3. 代入并确定参数方向\n\n### 易错点\n\n把第一类和第二类曲线积分混用，或忽略曲线的正向。"
+      "bodyMarkdown": "第一类曲线积分参数化后化为定积分：∫_L f ds=∫_α^β f(x(t),y(t))√(x′²(t)+y′²(t))dt；弧长微元 ds=√(x′²+y′²)dt 是唯一要背的换算，且下限必须小于上限。\n\n### 解题步骤\n\n1. 写出参数方程\n2. 算 ds\n3. 代入化为定积分\n\n### 易错点\n\n参数化时下限大于上限——第一类必须小到大，方向由 ds 的形式吸收。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p1-c7-s1",
       "sectionTitle": "第一类曲线积分",
       "title": "几何/物理意义",
-      "summary": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。",
+      "summary": "第一类曲线积分的几何意义：以曲线为准线、母线平行 z 轴、高 f(x,y) 的柱面面积；物理意义：线密度为 f 的曲线的质量、重心、转动惯量。",
       "tags": [
-        "沿曲线累积"
+        "柱面面积与质量"
       ],
       "sortOrder": 40,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫_L f ds；∫_L Pdx+Qdy",
-        "caption": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。"
+        "content": "m=∫_L ρ(x,y)ds",
+        "caption": "第一类曲线积分的几何意义：以曲线为准线、母线平行 z 轴、高 f(x,y) 的柱面面积；物理意义：线密度为 f 的曲线的质量、重心、转动惯量。"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-han-ds-bu-kan-fang-xiang",
-          "title": "第一类含 ds",
-          "bodyMarkdown": "第一类含 ds，不看方向"
+          "id": "ji-he-f-0-shi-shi-zhu-mian-ce-mian-ji",
+          "title": "几何：f>0 时是柱面侧面积",
+          "bodyMarkdown": "几何：f>0 时是柱面侧面积"
         },
         {
-          "id": "di-er-lei-han-dx-dy-fang-xiang-hui-gai-0jj1qp",
-          "title": "第二类含 dx、dy",
-          "bodyMarkdown": "第二类含 dx、dy，方向会改变符号"
+          "id": "zhi-liang-m-ds-zhong-xin-x-x-ds-m",
+          "title": "质量 m=∫ρ ds",
+          "bodyMarkdown": "质量 m=∫ρ ds，重心 x̄=∫xρ ds/m"
         },
         {
-          "id": "lu-jing-wu-guan-tong-chang-yu-bao-shou-0pjnlc",
-          "title": "路径无关通常与保守场和原函数有关",
-          "bodyMarkdown": "路径无关通常与保守场和原函数有关"
+          "id": "f-1-shi-tui-hua-wei-hu-chang",
+          "title": "f≡1 时退化为弧长",
+          "bodyMarkdown": "f≡1 时退化为弧长"
         }
       ],
       "examples": [
         {
-          "id": "li-chang-f-p-q-yan-qu-1j651t",
+          "id": "ban-yuan-x-y-1-y-0-xian-1mvk94",
           "title": "讲解例子",
-          "bodyMarkdown": "力场 F=(P,Q) 沿曲线的功为 ∫Pdx+Qdy；若 F=∇φ，积分只看端点。"
+          "bodyMarkdown": "半圆 x²+y²=1（y≥0）线密度 ρ=y：质量 ∫y ds=∫₀^π sin t dt=2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。参数化把曲线上的几何问题转成一个变量积分，路径方向会影响第二类积分。\n\n### 解题步骤\n\n1. 参数化曲线\n2. 写出 ds 或 dx、dy\n3. 代入并确定参数方向\n\n### 易错点\n\n把第一类和第二类曲线积分混用，或忽略曲线的正向。"
+      "bodyMarkdown": "第一类曲线积分的几何意义：以曲线为准线、母线平行 z 轴、高 f(x,y) 的柱面面积；物理意义：线密度为 f 的曲线的质量、重心、转动惯量。\n\n### 解题步骤\n\n1. 识别 f 的角色（密度/高度）\n2. 按意义解释结果\n3. 必要时用对称性化简\n\n### 易错点\n\n负密度还谈「质量」——f<0 时几何解释失效，但积分照常计算。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p1-c7-s2",
       "sectionTitle": "第二类曲线积分",
       "title": "对坐标曲线积分",
-      "summary": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。",
+      "summary": "对坐标的曲线积分 ∫_L P dx+Q dy 沿有向曲线把「P 乘 dx、Q 乘 dy」累加；dx、dy 是坐标增量可正可负，因此积分与方向有关——第二类的灵魂。",
       "tags": [
-        "沿曲线累积"
+        "第二类：对坐标积累"
       ],
       "sortOrder": 50,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫_L f ds；∫_L Pdx+Qdy",
-        "caption": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。"
+        "content": "∫_L P dx+Q dy=lim Σ[P Δxᵢ+Q Δyᵢ]",
+        "caption": "对坐标的曲线积分 ∫_L P dx+Q dy 沿有向曲线把「P 乘 dx、Q 乘 dy」累加；"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-han-ds-bu-kan-fang-xiang",
-          "title": "第一类含 ds",
-          "bodyMarkdown": "第一类含 ds，不看方向"
+          "id": "ji-hao-l-p-dx-q-dy",
+          "title": "记号 ∫_L P dx+Q dy",
+          "bodyMarkdown": "记号 ∫_L P dx+Q dy"
         },
         {
-          "id": "di-er-lei-han-dx-dy-fang-xiang-hui-gai-0jj1qp",
-          "title": "第二类含 dx、dy",
-          "bodyMarkdown": "第二类含 dx、dy，方向会改变符号"
+          "id": "yu-fang-xiang-you-guan-l-l",
+          "title": "与方向有关",
+          "bodyMarkdown": "与方向有关：∫_{L⁻}=−∫_L"
         },
         {
-          "id": "lu-jing-wu-guan-tong-chang-yu-bao-shou-0pjnlc",
-          "title": "路径无关通常与保守场和原函数有关",
-          "bodyMarkdown": "路径无关通常与保守场和原函数有关"
+          "id": "zu-he-xing-shi-dui-ying-xiang-liang-1bgalu",
+          "title": "组合形式对应向量场沿曲线的积累",
+          "bodyMarkdown": "组合形式对应向量场沿曲线的积累"
         }
       ],
       "examples": [
         {
-          "id": "li-chang-f-p-q-yan-qu-1j651t",
+          "id": "l-xy-dx-yan-cong-0-0-05eqol",
           "title": "讲解例子",
-          "bodyMarkdown": "力场 F=(P,Q) 沿曲线的功为 ∫Pdx+Qdy；若 F=∇φ，积分只看端点。"
+          "bodyMarkdown": "∫_L xy dx 沿从 (0,0) 到 (1,1) 的曲线。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。参数化把曲线上的几何问题转成一个变量积分，路径方向会影响第二类积分。\n\n### 解题步骤\n\n1. 参数化曲线\n2. 写出 ds 或 dx、dy\n3. 代入并确定参数方向\n\n### 易错点\n\n把第一类和第二类曲线积分混用，或忽略曲线的正向。"
+      "bodyMarkdown": "对坐标的曲线积分 ∫_L P dx+Q dy 沿有向曲线把「P 乘 dx、Q 乘 dy」累加；dx、dy 是坐标增量可正可负，因此积分与方向有关——第二类的灵魂。\n\n### 解题步骤\n\n1. 认出 dx、dy（第二类）\n2. 注意曲线方向\n3. 参数化或用公式\n\n### 易错点\n\n第二类也用 |ds| 思路算——它的微元是带符号的 dx、dy。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p1-c7-s2",
       "sectionTitle": "第二类曲线积分",
       "title": "有向曲线",
-      "summary": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。",
+      "summary": "第二类曲线积分的积分弧段必须指明起点与终点，称为有向曲线；同一条曲线反向走积分值变号——检验计算对不对时先看方向。",
       "tags": [
-        "沿曲线累积"
+        "方向是积分的一部分"
       ],
       "sortOrder": 60,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "∫_L f ds；∫_L Pdx+Qdy",
-        "caption": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。"
+        "format": "latex",
+        "content": "∫_{AB}=−∫_{BA}",
+        "caption": "第二类曲线积分的积分弧段必须指明起点与终点，称为有向曲线；同一条曲线反向走积分值变号——检验计算对不对时先看方向。"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-han-ds-bu-kan-fang-xiang",
-          "title": "第一类含 ds",
-          "bodyMarkdown": "第一类含 ds，不看方向"
+          "id": "l-biao-shi-fan-xiang-qu-xian",
+          "title": "L⁻ 表示反向曲线",
+          "bodyMarkdown": "L⁻ 表示反向曲线"
         },
         {
-          "id": "di-er-lei-han-dx-dy-fang-xiang-hui-gai-0jj1qp",
-          "title": "第二类含 dx、dy",
-          "bodyMarkdown": "第二类含 dx、dy，方向会改变符号"
+          "id": "l-p-dx-q-dy-l-p-dx-q-dy",
+          "title": "∫_{L⁻}P dx+Q dy=−∫_L P d",
+          "bodyMarkdown": "∫_{L⁻}P dx+Q dy=−∫_L P dx+Q dy"
         },
         {
-          "id": "lu-jing-wu-guan-tong-chang-yu-bao-shou-0pjnlc",
-          "title": "路径无关通常与保守场和原函数有关",
-          "bodyMarkdown": "路径无关通常与保守场和原函数有关"
+          "id": "qi-zhong-dian-xie-fan-shi-zui-chang-0ucgt5",
+          "title": "起终点写反是最常见的错误",
+          "bodyMarkdown": "起终点写反是最常见的错误"
         }
       ],
       "examples": [
         {
-          "id": "li-chang-f-p-q-yan-qu-1j651t",
+          "id": "yan-y-x-cong-0-0-dao-1-05bfl1",
           "title": "讲解例子",
-          "bodyMarkdown": "力场 F=(P,Q) 沿曲线的功为 ∫Pdx+Qdy；若 F=∇φ，积分只看端点。"
+          "bodyMarkdown": "沿 y=x 从 (0,0) 到 (1,1) 与反向：两积分互为相反数。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。参数化把曲线上的几何问题转成一个变量积分，路径方向会影响第二类积分。\n\n### 解题步骤\n\n1. 参数化曲线\n2. 写出 ds 或 dx、dy\n3. 代入并确定参数方向\n\n### 易错点\n\n把第一类和第二类曲线积分混用，或忽略曲线的正向。"
+      "bodyMarkdown": "第二类曲线积分的积分弧段必须指明起点与终点，称为有向曲线；同一条曲线反向走积分值变号——检验计算对不对时先看方向。\n\n### 解题步骤\n\n1. 标出起点终点\n2. 按方向定参数范围\n3. 反向题直接添负号\n\n### 易错点\n\n闭曲线不标绕向——格林公式要求先说清逆/顺时针。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m1-p1-c7-s2",
       "sectionTitle": "第二类曲线积分",
       "title": "参数化计算",
-      "summary": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。",
+      "summary": "第二类曲线积分参数化：∫_L P dx+Q dy=∫_a^b[P(x(t),y(t))x′(t)+Q(x(t),y(t))y′(t)]dt；与第一类不同，积分限从起点参数到终点参数，下限不一定小。",
       "tags": [
-        "沿曲线累积"
+        "dx=x′(t)dt 代入"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫_L f ds；∫_L Pdx+Qdy",
-        "caption": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。"
+        "content": "∫_a^b[P x′(t)+Q y′(t)]dt",
+        "caption": "第二类曲线积分参数化：∫_L P dx+Q dy=∫_a^b[P(x(t),y(t))x′(t)+Q(x(t),y(t)"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-han-ds-bu-kan-fang-xiang",
-          "title": "第一类含 ds",
-          "bodyMarkdown": "第一类含 ds，不看方向"
+          "id": "dx-x-t-dt-dy-y-t-dt-zhi-jie-dai-ru",
+          "title": "dx=x′(t)dt、dy=y′(t)dt 直接",
+          "bodyMarkdown": "dx=x′(t)dt、dy=y′(t)dt 直接代入"
         },
         {
-          "id": "di-er-lei-han-dx-dy-fang-xiang-hui-gai-0jj1qp",
-          "title": "第二类含 dx、dy",
-          "bodyMarkdown": "第二类含 dx、dy，方向会改变符号"
+          "id": "xia-xian-qi-dian-can-shu-shang-xian-1qujlc",
+          "title": "下限=起点参数",
+          "bodyMarkdown": "下限=起点参数，上限=终点参数"
         },
         {
-          "id": "lu-jing-wu-guan-tong-chang-yu-bao-shou-0pjnlc",
-          "title": "路径无关通常与保守场和原函数有关",
-          "bodyMarkdown": "路径无关通常与保守场和原函数有关"
+          "id": "xia-xian-da-yu-shang-xian-shi-yun-xu-de-0jx0ea",
+          "title": "下限大于上限是允许的（方向信息）",
+          "bodyMarkdown": "下限大于上限是允许的（方向信息）"
         }
       ],
       "examples": [
         {
-          "id": "li-chang-f-p-q-yan-qu-1j651t",
+          "id": "l-x-dy-yan-y-x-cong-0-0-1y4qua",
           "title": "讲解例子",
-          "bodyMarkdown": "力场 F=(P,Q) 沿曲线的功为 ∫Pdx+Qdy；若 F=∇φ，积分只看端点。"
+          "bodyMarkdown": "∫_L x dy 沿 y=x² 从 (0,0) 到 (1,1)：∫₀¹x·2x dx=2/3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。参数化把曲线上的几何问题转成一个变量积分，路径方向会影响第二类积分。\n\n### 解题步骤\n\n1. 参数化曲线\n2. 写出 ds 或 dx、dy\n3. 代入并确定参数方向\n\n### 易错点\n\n把第一类和第二类曲线积分混用，或忽略曲线的正向。"
+      "bodyMarkdown": "第二类曲线积分参数化：∫_L P dx+Q dy=∫_a^b[P(x(t),y(t))x′(t)+Q(x(t),y(t))y′(t)]dt；与第一类不同，积分限从起点参数到终点参数，下限不一定小。\n\n### 解题步骤\n\n1. 参数化并核对起终点\n2. dx、dy 换成 dt\n3. 按起终点参数定积分限\n\n### 易错点\n\n参数化后仍把下限取小值——第二类的下限由起点决定，不是由大小决定。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m1-p1-c7-s2",
       "sectionTitle": "第二类曲线积分",
       "title": "与功的联系",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "变力 F=(P,Q) 沿曲线 L 位移 dr=(dx,dy) 所做的功 W=∫_L F·dr=∫_L P dx+Q dy；这是第二类曲线积分的物理原型，题面出现「功」时直接对号入座。",
       "tags": [
-        "把几何量切成微元"
+        "力沿路径做功"
       ],
       "sortOrder": 80,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "W=∫_L F·dr=∫_L P dx+Q dy",
+        "caption": "变力 F=(P,Q) 沿曲线 L 位移 dr=(dx,dy) 所做的功 W=∫_L F·dr=∫_L P dx+Q dy"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "w-l-p-dx-q-dy-li-wei-yi-de-ji-lei",
+          "title": "W=∫_L P dx+Q dy（力·位移的积累）",
+          "bodyMarkdown": "W=∫_L P dx+Q dy（力·位移的积累）"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "f-yu-lu-jing-chui-zhi-de-fen-duan-bu-1pq1gj",
+          "title": "F 与路径垂直的分段不做功",
+          "bodyMarkdown": "F 与路径垂直的分段不做功"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "bao-shou-li-zuo-gong-yu-lu-jing-wu-guan",
+          "title": "保守力做功与路径无关",
+          "bodyMarkdown": "保守力做功与路径无关"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "f-y-x-yan-y-x-cong-0-0-0aici7",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "F=(y,x) 沿 y=x 从 (0,0) 到 (1,1)：W=∫(x+x)dx=1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "变力 F=(P,Q) 沿曲线 L 位移 dr=(dx,dy) 所做的功 W=∫_L F·dr=∫_L P dx+Q dy；这是第二类曲线积分的物理原型，题面出现「功」时直接对号入座。\n\n### 解题步骤\n\n1. 读出力场分量\n2. 确定路径与方向\n3. 写功的积分式\n\n### 易错点\n\n把功算成 |F| 乘弧长——只有力始终沿切向时才成立，一般用点积累加。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m1-p1-c7-s3",
       "sectionTitle": "格林公式",
       "title": "正向边界",
-      "summary": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。",
+      "summary": "格林公式的正向边界指：沿边界行进时区域始终在左侧——外边界取逆时针、内边界（洞）取顺时针；方向搞反，公式差一个负号。",
       "tags": [
-        "沿曲线累积"
+        "区域在左手边"
       ],
       "sortOrder": 90,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫_L f ds；∫_L Pdx+Qdy",
-        "caption": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。"
+        "content": "∂D⁺：外逆内顺",
+        "caption": "格林公式的正向边界指：沿边界行进时区域始终在左侧——外边界取逆时针、内边界（洞）取顺时针；方向搞反，公式差一个负号。"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-han-ds-bu-kan-fang-xiang",
-          "title": "第一类含 ds",
-          "bodyMarkdown": "第一类含 ds，不看方向"
+          "id": "zheng-xiang-qu-yu-zai-hang-jin-fang-08kvif",
+          "title": "正向 = 区域在行进方向左侧",
+          "bodyMarkdown": "正向 = 区域在行进方向左侧"
         },
         {
-          "id": "di-er-lei-han-dx-dy-fang-xiang-hui-gai-0jj1qp",
-          "title": "第二类含 dx、dy",
-          "bodyMarkdown": "第二类含 dx、dy，方向会改变符号"
+          "id": "wai-bian-jie-ni-shi-zhen-dong-bian-jie-0h6nev",
+          "title": "外边界逆时针",
+          "bodyMarkdown": "外边界逆时针，洞边界顺时针"
         },
         {
-          "id": "lu-jing-wu-guan-tong-chang-yu-bao-shou-0pjnlc",
-          "title": "路径无关通常与保守场和原函数有关",
-          "bodyMarkdown": "路径无关通常与保守场和原函数有关"
+          "id": "fan-xiang-shi-yong-shi-you-duan-bian-hao",
+          "title": "反向使用时右端变号",
+          "bodyMarkdown": "反向使用时右端变号"
         }
       ],
       "examples": [
         {
-          "id": "li-chang-f-p-q-yan-qu-1j651t",
+          "id": "yuan-pan-x-y-1-de-zheng-0jcc90",
           "title": "讲解例子",
-          "bodyMarkdown": "力场 F=(P,Q) 沿曲线的功为 ∫Pdx+Qdy；若 F=∇φ，积分只看端点。"
+          "bodyMarkdown": "圆盘 x²+y²≤1 的正向边界是逆时针单位圆。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。参数化把曲线上的几何问题转成一个变量积分，路径方向会影响第二类积分。\n\n### 解题步骤\n\n1. 参数化曲线\n2. 写出 ds 或 dx、dy\n3. 代入并确定参数方向\n\n### 易错点\n\n把第一类和第二类曲线积分混用，或忽略曲线的正向。"
+      "bodyMarkdown": "格林公式的正向边界指：沿边界行进时区域始终在左侧——外边界取逆时针、内边界（洞）取顺时针；方向搞反，公式差一个负号。\n\n### 解题步骤\n\n1. 画出区域与边界\n2. 按「左手边」定绕向\n3. 非正向先添负号\n\n### 易错点\n\n复连通区域把内边界也写成逆时针——那会让区域跑到右侧。"
     },
     {
       "schemaVersion": "1.0",
@@ -474,47 +474,47 @@
       "sectionId": "m1-p1-c7-s3",
       "sectionTitle": "格林公式",
       "title": "格林公式",
-      "summary": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。",
+      "summary": "格林公式：∮_L P dx+Q dy=∬_D(∂Q/∂x−∂P/∂y)dxdy，其中 L 是 D 的正向边界，P、Q 在 D 上有一阶连续偏导；它是牛顿—莱布尼茨公式在二维的推广。",
       "tags": [
-        "沿曲线累积"
+        "闭曲线积分换二重积分"
       ],
       "sortOrder": 100,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫_L f ds；∫_L Pdx+Qdy",
-        "caption": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。"
+        "content": "∮P dx+Q dy=∬(Q_x−P_y)dxdy",
+        "caption": "格林公式：∮_L P dx+Q dy=∬_D(∂Q/∂x−∂P/∂y)dxdy，其中 L 是 D 的正向边界，P"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-han-ds-bu-kan-fang-xiang",
-          "title": "第一类含 ds",
-          "bodyMarkdown": "第一类含 ds，不看方向"
+          "id": "zuo-bi-xian-ji-fen-you-er-chong-ji-fen",
+          "title": "左闭线积分、右二重积分",
+          "bodyMarkdown": "左闭线积分、右二重积分"
         },
         {
-          "id": "di-er-lei-han-dx-dy-fang-xiang-hui-gai-0jj1qp",
-          "title": "第二类含 dx、dy",
-          "bodyMarkdown": "第二类含 dx、dy，方向会改变符号"
+          "id": "bei-ji-shi-q-x-p-y-zhu-yi-shun-xu",
+          "title": "被积式：∂Q/∂x−∂P/∂y（注意顺序）",
+          "bodyMarkdown": "被积式：∂Q/∂x−∂P/∂y（注意顺序）"
         },
         {
-          "id": "lu-jing-wu-guan-tong-chang-yu-bao-shou-0pjnlc",
-          "title": "路径无关通常与保守场和原函数有关",
-          "bodyMarkdown": "路径无关通常与保守场和原函数有关"
+          "id": "tiao-jian-p-q-pian-dao-lian-xu-l-zheng-0b5rhz",
+          "title": "条件：P、Q 偏导连续 + L 正向闭",
+          "bodyMarkdown": "条件：P、Q 偏导连续 + L 正向闭"
         }
       ],
       "examples": [
         {
-          "id": "li-chang-f-p-q-yan-qu-1j651t",
+          "id": "x-y-dx-x-y-dy-yan-dan-0q532p",
           "title": "讲解例子",
-          "bodyMarkdown": "力场 F=(P,Q) 沿曲线的功为 ∫Pdx+Qdy；若 F=∇φ，积分只看端点。"
+          "bodyMarkdown": "∮(x−y)dx+(x+y)dy 沿单位圆：Q_x−P_y=1−(−1)=2，积分=2·π=2π。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。参数化把曲线上的几何问题转成一个变量积分，路径方向会影响第二类积分。\n\n### 解题步骤\n\n1. 参数化曲线\n2. 写出 ds 或 dx、dy\n3. 代入并确定参数方向\n\n### 易错点\n\n把第一类和第二类曲线积分混用，或忽略曲线的正向。"
+      "bodyMarkdown": "格林公式：∮_L P dx+Q dy=∬_D(∂Q/∂x−∂P/∂y)dxdy，其中 L 是 D 的正向边界，P、Q 在 D 上有一阶连续偏导；它是牛顿—莱布尼茨公式在二维的推广。\n\n### 解题步骤\n\n1. 验证 P、Q 偏导连续\n2. 确认正向闭曲线\n3. 化成二重积分计算\n\n### 易错点\n\n把偏导顺序写成 ∂P/∂x−∂Q/∂y——差个符号，全盘皆错。"
     },
     {
       "schemaVersion": "1.0",
@@ -525,47 +525,47 @@
       "sectionId": "m1-p1-c7-s3",
       "sectionTitle": "格林公式",
       "title": "曲线积分转二重积分",
-      "summary": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。",
+      "summary": "非闭曲线上的第二类积分想用格林公式时，先补一段简单曲线（常取直线段）凑成闭路：原积分 = 闭路积分 − 补线积分，各自用格林与直接参数化计算。",
       "tags": [
-        "按面积元累加"
+        "补线凑闭"
       ],
       "sortOrder": 110,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "latex",
-        "content": "∬ᴰf(x,y)dA=∫ₐᵇ∫_{φ₁(x)}^{φ₂(x)}f(x,y)dydx",
-        "caption": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。"
+        "content": "∫_L=∮_{L∪L₁}−∫_{L₁}",
+        "caption": "非闭曲线上的第二类积分想用格林公式时，先补一段简单曲线（常取直线段）凑成闭路：原积分 = 闭路积分 − 补线积分，各自用格林与直接参数化计算。"
       },
       "keyPoints": [
         {
-          "id": "x-xing-qu-yu-xian-xie-y-de-shang-xia-0pd1j3",
-          "title": "X 型区域先写 y 的上下限",
-          "bodyMarkdown": "X 型区域先写 y 的上下限"
+          "id": "bu-xian-yuan-ze-yue-jian-dan-yue-hao-11aoo5",
+          "title": "补线原则",
+          "bodyMarkdown": "补线原则：越简单越好（常取坐标轴平行段）"
         },
         {
-          "id": "y-xing-qu-yu-xian-xie-x-de-zuo-you-xian",
-          "title": "Y 型区域先写 x 的左右限",
-          "bodyMarkdown": "Y 型区域先写 x 的左右限"
+          "id": "yuan-bu-hou-bu-xian",
+          "title": "∫(原)=∮(补后)−∫(补线)",
+          "bodyMarkdown": "∫(原)=∮(补后)−∫(补线)"
         },
         {
-          "id": "jiao-huan-ci-xu-qian-yao-chong-xin-hua-16s4kh",
-          "title": "交换次序前要重新画边界",
-          "bodyMarkdown": "交换次序前要重新画边界"
+          "id": "pian-dao-bu-lian-xu-de-dian-yao-wa-qu-0sq4t6",
+          "title": "偏导不连续的点要挖去（补圆挖洞）",
+          "bodyMarkdown": "偏导不连续的点要挖去（补圆挖洞）"
         }
       ],
       "examples": [
         {
-          "id": "dui-san-jiao-xing-0-x-1-1dblz9",
+          "id": "yan-pao-wu-xian-y-x-0euaym",
           "title": "讲解例子",
-          "bodyMarkdown": "对三角形 0≤x≤1，0≤y≤x，先对 y 积分最直接。"
+          "bodyMarkdown": "沿抛物线 y=x² 从 (0,0) 到 (1,1) 的积分：补 y=x 与 x=1 两段构成闭路。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "二重积分把平面区域切成小块，每一块贡献“函数值×面积元”。直角坐标的关键不是背 X 型、Y 型名称，而是画出区域后判断每条竖线或横线穿过区域的范围。\n\n### 解题步骤\n\n1. 画区域\n2. 选择切片方向\n3. 写内外层范围并积分\n\n### 易错点\n\n上下限写反会让结果带负号；区域被边界分成多块时要分区。"
+      "bodyMarkdown": "非闭曲线上的第二类积分想用格林公式时，先补一段简单曲线（常取直线段）凑成闭路：原积分 = 闭路积分 − 补线积分，各自用格林与直接参数化计算。\n\n### 解题步骤\n\n1. 检查是否闭曲线\n2. 补线成正向闭路\n3. 格林算闭路、参数化算补线\n\n### 易错点\n\n偏导在区域内有奇点（如原点）仍直接套格林——必须挖洞或换公式。"
     },
     {
       "schemaVersion": "1.0",
@@ -576,47 +576,47 @@
       "sectionId": "m1-p1-c7-s3",
       "sectionTitle": "格林公式",
       "title": "平面区域面积公式",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "取 P=−y、Q=x（或 Q=0、P=−y 等组合）使 ∂Q/∂x−∂P/∂y=1，区域面积即 A=∬1dxdy=(1/2)∮_L x dy−y dx——用边界曲线积分算面积。",
       "tags": [
-        "把几何量切成微元"
+        "格林公式的副产品"
       ],
       "sortOrder": 120,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "A=(1/2)∮_L x dy−y dx",
+        "caption": "取 P=−y、Q=x（或 Q=0、P=−y 等组合）使 ∂Q/∂x−∂P/∂y=1"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "a-1-2-x-dy-y-dx-zheng-xiang-bian-jie",
+          "title": "A=(1/2)∮x dy−y dx（正向边界）",
+          "bodyMarkdown": "A=(1/2)∮x dy−y dx（正向边界）"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "bian-ti-a-x-dy-y-dx",
+          "title": "变体：A=∮x dy=−∮y dx",
+          "bodyMarkdown": "变体：A=∮x dy=−∮y dx"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "can-shu-hua-hou-zhi-jie-ji-chu-mian-ji",
+          "title": "参数化后直接积出面积",
+          "bodyMarkdown": "参数化后直接积出面积"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "tuo-yuan-x-a-cos-t-y-b-1xaxxd",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "椭圆 x=a cos t、y=b sin t：A=(1/2)∫(ab cos²t+ab sin²t)dt=πab。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "取 P=−y、Q=x（或 Q=0、P=−y 等组合）使 ∂Q/∂x−∂P/∂y=1，区域面积即 A=∬1dxdy=(1/2)∮_L x dy−y dx——用边界曲线积分算面积。\n\n### 解题步骤\n\n1. 确认边界正向\n2. 选面积公式形式\n3. 参数化计算\n\n### 易错点\n\n边界绕向反了面积出负值——取绝对值前先检查正向。"
     },
     {
       "schemaVersion": "1.0",
@@ -627,47 +627,47 @@
       "sectionId": "m1-p1-c7-s3",
       "sectionTitle": "格林公式",
       "title": "路径无关",
-      "summary": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。",
+      "summary": "第二类曲线积分在区域内路径无关，指任意两点间的积分值只取决于起终点；单连通区域内等价条件是 ∂P/∂y=∂Q/∂x 处处成立（等价于任意闭曲线积分为零）。",
       "tags": [
-        "沿曲线累积"
+        "走哪条路都一样"
       ],
       "sortOrder": 130,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫_L f ds；∫_L Pdx+Qdy",
-        "caption": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。"
+        "content": "∂P/∂y=∂Q/∂x ⇔ 路径无关（单连通）",
+        "caption": "第二类曲线积分在区域内路径无关，指任意两点间的积分值只取决于起终点；"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-han-ds-bu-kan-fang-xiang",
-          "title": "第一类含 ds",
-          "bodyMarkdown": "第一类含 ds，不看方向"
+          "id": "lu-jing-wu-guan-bi-qu-xian-ji-fen-heng-09ec65",
+          "title": "路径无关 ⇔ 闭曲线积分恒为 0",
+          "bodyMarkdown": "路径无关 ⇔ 闭曲线积分恒为 0"
         },
         {
-          "id": "di-er-lei-han-dx-dy-fang-xiang-hui-gai-0jj1qp",
-          "title": "第二类含 dx、dy",
-          "bodyMarkdown": "第二类含 dx、dy，方向会改变符号"
+          "id": "dan-lian-tong-nei-p-y-q-x",
+          "title": "单连通内 ⇔ ∂P/∂y=∂Q/∂x",
+          "bodyMarkdown": "单连通内 ⇔ ∂P/∂y=∂Q/∂x"
         },
         {
-          "id": "lu-jing-wu-guan-tong-chang-yu-bao-shou-0pjnlc",
-          "title": "路径无关通常与保守场和原函数有关",
-          "bodyMarkdown": "路径无关通常与保守场和原函数有关"
+          "id": "fu-lian-tong-qu-yu-hai-yao-kan-dong-li-1b7u19",
+          "title": "复连通区域还要看「洞」里的奇点",
+          "bodyMarkdown": "复连通区域还要看「洞」里的奇点"
         }
       ],
       "examples": [
         {
-          "id": "li-chang-f-p-q-yan-qu-1j651t",
+          "id": "2xy-dx-x-dy-p-y-2x-q-x-0tr2y8",
           "title": "讲解例子",
-          "bodyMarkdown": "力场 F=(P,Q) 沿曲线的功为 ∫Pdx+Qdy；若 F=∇φ，积分只看端点。"
+          "bodyMarkdown": "∫2xy dx+x² dy：P_y=2x=Q_x，路径无关，沿折线算即可。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。参数化把曲线上的几何问题转成一个变量积分，路径方向会影响第二类积分。\n\n### 解题步骤\n\n1. 参数化曲线\n2. 写出 ds 或 dx、dy\n3. 代入并确定参数方向\n\n### 易错点\n\n把第一类和第二类曲线积分混用，或忽略曲线的正向。"
+      "bodyMarkdown": "第二类曲线积分在区域内路径无关，指任意两点间的积分值只取决于起终点；单连通区域内等价条件是 ∂P/∂y=∂Q/∂x 处处成立（等价于任意闭曲线积分为零）。\n\n### 解题步骤\n\n1. 验证区域单连通\n2. 检查 P_y=Q_x\n3. 成立则挑最省力路径\n\n### 易错点\n\nP_y=Q_x 在含奇点（如原点）的区域里用——条件要求处处成立，奇点必须挖掉。"
     },
     {
       "schemaVersion": "1.0",
@@ -678,47 +678,47 @@
       "sectionId": "m1-p1-c7-s3",
       "sectionTitle": "格林公式",
       "title": "与原函数存在的关系",
-      "summary": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。",
+      "summary": "单连通区域内 P dx+Q dy 是某函数 u 的全微分 ⇔ ∂P/∂y=∂Q/∂x；此时 u 称为原函数（势函数），积分可写成 u(B)−u(A)，与定积分的牛顿—莱布尼茨如出一辙。",
       "tags": [
-        "沿曲线累积"
+        "全微分方程的判据"
       ],
       "sortOrder": 140,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫_L f ds；∫_L Pdx+Qdy",
-        "caption": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。"
+        "content": "∫₍ₐ₎^₍ᵦ₎P dx+Q dy=u(B)−u(A)",
+        "caption": "单连通区域内 P dx+Q dy 是某函数 u 的全微分 ⇔ ∂P/∂y=∂Q/∂x；"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-han-ds-bu-kan-fang-xiang",
-          "title": "第一类含 ds",
-          "bodyMarkdown": "第一类含 ds，不看方向"
+          "id": "cun-zai-u-shi-du-p-dx-q-dy-p-y-q-x",
+          "title": "存在 u 使 du=P dx+Q dy ⇔ P_",
+          "bodyMarkdown": "存在 u 使 du=P dx+Q dy ⇔ P_y=Q_x"
         },
         {
-          "id": "di-er-lei-han-dx-dy-fang-xiang-hui-gai-0jj1qp",
-          "title": "第二类含 dx、dy",
-          "bodyMarkdown": "第二类含 dx、dy，方向会改变符号"
+          "id": "u-de-qiu-fa-xian-ji-p-guan-yu-x-zai-1jf8co",
+          "title": "u 的求法",
+          "bodyMarkdown": "u 的求法：先积 P 关于 x、再定 y 的函数"
         },
         {
-          "id": "lu-jing-wu-guan-tong-chang-yu-bao-shou-0pjnlc",
-          "title": "路径无关通常与保守场和原函数有关",
-          "bodyMarkdown": "路径无关通常与保守场和原函数有关"
+          "id": "u-zhong-dian-u-qi-dian",
+          "title": "∫=u(终点)−u(起点)",
+          "bodyMarkdown": "∫=u(终点)−u(起点)"
         }
       ],
       "examples": [
         {
-          "id": "li-chang-f-p-q-yan-qu-1j651t",
+          "id": "2xy-dx-x-dy-u-x-y-c-05avng",
           "title": "讲解例子",
-          "bodyMarkdown": "力场 F=(P,Q) 沿曲线的功为 ∫Pdx+Qdy；若 F=∇φ，积分只看端点。"
+          "bodyMarkdown": "2xy dx+x² dy：u=x²y+C，从 (0,0) 到 (1,2) 积分 =2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲线积分按弧长累加标量，第二类曲线积分按位移方向累加向量场做的功。参数化把曲线上的几何问题转成一个变量积分，路径方向会影响第二类积分。\n\n### 解题步骤\n\n1. 参数化曲线\n2. 写出 ds 或 dx、dy\n3. 代入并确定参数方向\n\n### 易错点\n\n把第一类和第二类曲线积分混用，或忽略曲线的正向。"
+      "bodyMarkdown": "单连通区域内 P dx+Q dy 是某函数 u 的全微分 ⇔ ∂P/∂y=∂Q/∂x；此时 u 称为原函数（势函数），积分可写成 u(B)−u(A)，与定积分的牛顿—莱布尼茨如出一辙。\n\n### 解题步骤\n\n1. 验 P_y=Q_x\n2. 由 P 对 x 积分求 u\n3. 用 Q 定常数再代端点\n\n### 易错点\n\n原函数求出后忘了代两个端点——答案应是一个数，不是函数。"
     },
     {
       "schemaVersion": "1.0",
@@ -729,47 +729,47 @@
       "sectionId": "m1-p1-c7-s4",
       "sectionTitle": "第一类曲面积分",
       "title": "对面积曲面积分",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "对面积的曲面积分 ∬_Σ f(x,y,z)dS 把曲面切成小面片按「f 乘面积」累加；与曲面朝哪一侧无关（dS 恒正），物理上是面密度求质量。",
       "tags": [
-        "把几何量切成微元"
+        "第一类：对 dS"
       ],
       "sortOrder": 150,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "∬_Σ f dS=lim Σf(ξᵢ,ηᵢ,ζᵢ)ΔSᵢ",
+        "caption": "对面积的曲面积分 ∬_Σ f(x,y,z)dS 把曲面切成小面片按「f 乘面积」累加；与曲面朝哪一侧无关（dS 恒正），物理上是面密度求质量。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "ji-hao-f-ds",
+          "title": "记号 ∬_Σ f dS",
+          "bodyMarkdown": "记号 ∬_Σ f dS"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "yu-ce-wu-guan-liang-mian-tong-zhi",
+          "title": "与侧无关",
+          "bodyMarkdown": "与侧无关：两面同值"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "f-1-shi-ji-fen-qu-mian-mian-ji",
+          "title": "f≡1 时积分 = 曲面面积",
+          "bodyMarkdown": "f≡1 时积分 = 曲面面积"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "mian-mi-du-z-de-qiu-1ubx57",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "面密度 ρ=z 的球面部分质量 m=∬_Σ z dS。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "对面积的曲面积分 ∬_Σ f(x,y,z)dS 把曲面切成小面片按「f 乘面积」累加；与曲面朝哪一侧无关（dS 恒正），物理上是面密度求质量。\n\n### 解题步骤\n\n1. 认出 dS（第一类）\n2. 写曲面方程\n3. 投影计算\n\n### 易错点\n\n第一类曲面积分带「±」——对面积的积分永远取正面积元。"
     },
     {
       "schemaVersion": "1.0",
@@ -780,47 +780,47 @@
       "sectionId": "m1-p1-c7-s4",
       "sectionTitle": "第一类曲面积分",
       "title": "曲面参数化/投影计算",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "曲面 z=z(x,y) 投影到 xy 面计算：dS=√(1+z_x²+z_y²)dxdy，积分化为投影区域上的二重积分；dS 的根号因子是「斜面比投影大」的伸缩率。",
       "tags": [
-        "把几何量切成微元"
+        "dS 折算成 dxdy"
       ],
       "sortOrder": 160,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "format": "latex",
+        "content": "∬_Σ f dS=∬_{D_xy}f(x,y,z(x,y))√(1+z_x²+z_y²)dxdy",
+        "caption": "曲面 z=z(x,y) 投影到 xy 面计算：dS=√(1+z_x²+z_y²)dxdy，积分化为投影区域上的二重积分；"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "ds-1-z-x-z-y-dxdy",
+          "title": "dS=√(1+z_x²+z_y²)dxdy",
+          "bodyMarkdown": "dS=√(1+z_x²+z_y²)dxdy"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "ji-fen-yu-huan-cheng-tou-ying-qu-yu-d-xy",
+          "title": "积分域换成投影区域 D_xy",
+          "bodyMarkdown": "积分域换成投影区域 D_xy"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "ye-ke-tou-dao-ling-liang-ge-zuo-biao-0qjzdz",
+          "title": "也可投到另两个坐标面（用 x=x(y",
+          "bodyMarkdown": "也可投到另两个坐标面（用 x=x(y,z) 等）"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "ban-qiu-z-1-x-y-z-x-x-z-0obe5o",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "半球 z=√(1−x²−y²)：z_x=−x/z，dS=1/z·dxdy。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "曲面 z=z(x,y) 投影到 xy 面计算：dS=√(1+z_x²+z_y²)dxdy，积分化为投影区域上的二重积分；dS 的根号因子是「斜面比投影大」的伸缩率。\n\n### 解题步骤\n\n1. 把曲面写成 z(x,y)\n2. 求 z_x、z_y 与 dS\n3. 换投影域算二重积分\n\n### 易错点\n\n曲面在 xy 面上的投影是一条线（如竖直柱面）还硬投 xy——要换坐标面投影。"
     },
     {
       "schemaVersion": "1.0",
@@ -831,47 +831,47 @@
       "sectionId": "m1-p1-c7-s5",
       "sectionTitle": "第二类曲面积分",
       "title": "对坐标曲面积分",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "对坐标的曲面积分 ∬_Σ P dydz+Q dzdx+R dxdy 沿指定侧把「分量乘对应坐标微元」累加；它依赖曲面的侧，是流量（通量）问题的数学形式。",
       "tags": [
-        "把几何量切成微元"
+        "第二类：对坐标"
       ],
       "sortOrder": 170,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "Φ=∬_Σ P dydz+Q dzdx+R dxdy",
+        "caption": "对坐标的曲面积分 ∬_Σ P dydz+Q dzdx+R dxdy 沿指定侧把「分量乘对应坐标微元」累加；"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "san-xiang-ge-pei-yi-dui-zuo-biao-wei-1bpljs",
+          "title": "三项各配一对坐标微元",
+          "bodyMarkdown": "三项各配一对坐标微元"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "yu-ce-you-guan-huan-ce-bian-hao",
+          "title": "与侧有关",
+          "bodyMarkdown": "与侧有关：换侧变号"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "wu-li-yuan-xing-xiang-liang-chang-chuan-1ul0jj",
+          "title": "物理原型",
+          "bodyMarkdown": "物理原型：向量场穿面的流量"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "z-dxdy-biao-shi-shu-zhi-0bhshd",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "∬_Σ z dxdy 表示竖直分量的流量贡献。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "对坐标的曲面积分 ∬_Σ P dydz+Q dzdx+R dxdy 沿指定侧把「分量乘对应坐标微元」累加；它依赖曲面的侧，是流量（通量）问题的数学形式。\n\n### 解题步骤\n\n1. 认出坐标微元组合\n2. 确定曲面侧\n3. 投影或用高斯公式\n\n### 易错点\n\n三项共用同一个「±」——每个坐标微元的符号由对应方向的侧决定，各管各的。"
     },
     {
       "schemaVersion": "1.0",
@@ -882,47 +882,47 @@
       "sectionId": "m1-p1-c7-s5",
       "sectionTitle": "第二类曲面积分",
       "title": "曲面侧",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "第二类曲面积分要在「有向曲面」上进行：光滑曲面分上下（前后、左右）两侧，选定一侧就是指定了法向量的指向；换一侧，积分值变号。",
       "tags": [
-        "把几何量切成微元"
+        "有向曲面"
       ],
       "sortOrder": 180,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "format": "latex",
+        "content": "∬_{Σ⁻}=−∬_{Σ⁺}",
+        "caption": "第二类曲面积分要在「有向曲面」上进行：光滑曲面分上下（前后、左右）两侧，选定一侧就是指定了法向量的指向；换一侧，积分值变号。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "shuang-ce-qu-mian-zhi-ding-ce-cai-you-0knbne",
+          "title": "双侧曲面指定「侧」才有积分",
+          "bodyMarkdown": "双侧曲面指定「侧」才有积分"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "huan-ce-ji-fen-bian-hao",
+          "title": "换侧 ⇒ 积分变号",
+          "bodyMarkdown": "换侧 ⇒ 积分变号"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "bi-qu-mian-mo-ren-tao-lun-wai-ce",
+          "title": "闭曲面默认讨论外侧",
+          "bodyMarkdown": "闭曲面默认讨论外侧"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "z-z-x-y-xing-qu-mian-15vgq9",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "z=z(x,y) 型曲面：上侧法向量与 z 轴正向夹角为锐角。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "第二类曲面积分要在「有向曲面」上进行：光滑曲面分上下（前后、左右）两侧，选定一侧就是指定了法向量的指向；换一侧，积分值变号。\n\n### 解题步骤\n\n1. 辨认曲面类型\n2. 按题意选侧\n3. 法向量与侧一致\n\n### 易错点\n\n忘了写「上侧/外侧」就动笔——侧不定，符号不定。"
     },
     {
       "schemaVersion": "1.0",
@@ -933,47 +933,47 @@
       "sectionId": "m1-p1-c7-s5",
       "sectionTitle": "第二类曲面积分",
       "title": "法向量方向",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "指定侧的单位法向量 n=(cos α, cos β, cos γ)；它与坐标微元的符号直接挂钩：dxdy 前的正负号就是 cos γ 的符号（上侧 +、下侧 −），另两对各看对应角。",
       "tags": [
-        "把几何量切成微元"
+        "余弦定符号"
       ],
       "sortOrder": 190,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "∬P dydz+Q dzdx+R dxdy=∬(P,Q,R)·n dS",
+        "caption": "指定侧的单位法向量 n=(cos α, cos β, cos γ)；"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "n-de-san-ge-yu-xian-fen-bie-guan-dydz-1ipmdh",
+          "title": "n 的三个余弦分别管 dydz、dzdx、dxd",
+          "bodyMarkdown": "n 的三个余弦分别管 dydz、dzdx、dxdy 的符号"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "shang-ce-cos-0-xia-ce-cos-0",
+          "title": "上侧 cos γ>0",
+          "bodyMarkdown": "上侧 cos γ>0；下侧 cos γ<0"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "di-er-lei-ji-fen-p-q-r-n-ds-dian-ji-0lzce9",
+          "title": "第二类积分=∫(P",
+          "bodyMarkdown": "第二类积分=∫(P,Q,R)·n dS（点积形式）"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "shang-ban-qiu-mian-wai-1dj1y3",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "上半球面外侧在赤道上 cos γ=0，dxdy 项贡献为零。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "指定侧的单位法向量 n=(cos α, cos β, cos γ)；它与坐标微元的符号直接挂钩：dxdy 前的正负号就是 cos γ 的符号（上侧 +、下侧 −），另两对各看对应角。\n\n### 解题步骤\n\n1. 求指定侧的单位法向量\n2. 读三个余弦符号\n3. 决定各投影项的正负\n\n### 易错点\n\n三项都按 cos γ 定号——每一项对应自己的方向余弦。"
     },
     {
       "schemaVersion": "1.0",
@@ -984,47 +984,47 @@
       "sectionId": "m1-p1-c7-s5",
       "sectionTitle": "第二类曲面积分",
       "title": "投影计算",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "计算 ∬_Σ R dxdy：把曲面写成 z=z(x,y) 后化为 ±∬_{D_xy}R(x,y,z(x,y))dxdy，上侧取正、下侧取负；dydz、dzdx 两项则分别投到 yz、zx 面。",
       "tags": [
-        "把几何量切成微元"
+        "压回坐标面"
       ],
       "sortOrder": 200,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "format": "latex",
+        "content": "∬_Σ R dxdy=±∬_{D_xy}R(x,y,z(x,y))dxdy",
+        "caption": "计算 ∬_Σ R dxdy：把曲面写成 z=z(x,y) 后化为 ±∬_{D_xy}R(x,y,z(x,y))dxdy"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "r-dxdy-d-xy-r-x-y-z-x-y-dxdy",
+          "title": "∬R dxdy=±∬_{D_xy}R(x",
+          "bodyMarkdown": "∬R dxdy=±∬_{D_xy}R(x,y,z(x,y))dxdy"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "shang-ce-xia-ce",
+          "title": "上侧 +",
+          "bodyMarkdown": "上侧 +，下侧 −"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "shu-zhi-zhu-mian-zai-xy-mian-tou-ying-0yp1q4",
+          "title": "竖直柱面在 xy 面投影为零",
+          "bodyMarkdown": "竖直柱面在 xy 面投影为零，dxdy 项为零"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "ping-mian-shang-ce-z-1-1mujrr",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "平面上侧 z=1−x−y（第一卦限）的 ∬z dxdy=∫∫(1−x−y)dxdy。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "计算 ∬_Σ R dxdy：把曲面写成 z=z(x,y) 后化为 ±∬_{D_xy}R(x,y,z(x,y))dxdy，上侧取正、下侧取负；dydz、dzdx 两项则分别投到 yz、zx 面。\n\n### 解题步骤\n\n1. 曲面化 z(x,y)\n2. 定侧取符号\n3. 换投影域算二重积分\n\n### 易错点\n\n下侧也取正号——符号与侧绑定，是最常见的丢分点。"
     },
     {
       "schemaVersion": "1.0",
@@ -1035,47 +1035,47 @@
       "sectionId": "m1-p1-c7-s6",
       "sectionTitle": "高斯公式",
       "title": "闭曲面外侧",
-      "summary": "第一类曲面积分累加曲面上的标量，第二类曲面积分则计算向量场穿过带方向曲面的通量。",
+      "summary": "闭曲面（围成空间区域）的外侧指法向量指向区域外部；高斯公式正是在外侧成立——内侧用公式要添负号，开曲面要先补面凑闭。",
       "tags": [
-        "穿过曲面的总量"
+        "高斯公式的标准侧"
       ],
       "sortOrder": 210,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∯ₛF·n dS=∭ᵥdiv F dV；∮∂S F·dr=∬ₛcurl F·n dS",
-        "caption": "第一类曲面积分累加曲面上的标量，第二类曲面积分则计算向量场穿过带方向曲面的通量。"
+        "content": "∮ 外侧 = ∭(散度)dV",
+        "caption": "闭曲面（围成空间区域）的外侧指法向量指向区域外部；高斯公式正是在外侧成立——内侧用公式要添负号，开曲面要先补面凑闭。"
       },
       "keyPoints": [
         {
-          "id": "qu-mian-fang-xiang-jue-ding-fa-xiang-0ogsyk",
-          "title": "曲面方向决定法向量符号",
-          "bodyMarkdown": "曲面方向决定法向量符号"
+          "id": "wai-ce-fa-xiang-liang-chao-qu-yu-wai",
+          "title": "外侧 = 法向量朝区域外",
+          "bodyMarkdown": "外侧 = 法向量朝区域外"
         },
         {
-          "id": "bi-qu-mian-tong-chang-qu-wai-ce-wei-1kwq88",
-          "title": "闭曲面通常取外侧为正",
-          "bodyMarkdown": "闭曲面通常取外侧为正"
+          "id": "gao-si-gong-shi-mo-ren-wai-ce",
+          "title": "高斯公式默认外侧",
+          "bodyMarkdown": "高斯公式默认外侧"
         },
         {
-          "id": "can-shu-hua-huo-tou-ying-shi-yao-zheng-048hj1",
-          "title": "参数化或投影时要正确处理面积因子",
-          "bodyMarkdown": "参数化或投影时要正确处理面积因子"
+          "id": "kai-qu-mian-yong-bu-mian-fa-cou-bi",
+          "title": "开曲面用「补面法」凑闭",
+          "bodyMarkdown": "开曲面用「补面法」凑闭"
         }
       ],
       "examples": [
         {
-          "id": "qiu-mian-wai-ce-tong-0f4n1t",
+          "id": "qiu-mian-wai-ce-shi-1sva2n",
           "title": "讲解例子",
-          "bodyMarkdown": "球面外侧通量可以用高斯公式，把曲面积分换成球体内的散度积分。"
+          "bodyMarkdown": "球面外侧是标准外侧；用球面挖洞处理含奇点问题。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲面积分累加曲面上的标量，第二类曲面积分则计算向量场穿过带方向曲面的通量。高斯公式把闭曲面通量换成体积分，斯托克斯公式把曲面上的旋度积分换成边界曲线积分。\n\n### 解题步骤\n\n1. 确定曲面方向\n2. 写法向量与面积元\n3. 选择直接算、高斯或斯托克斯转换\n\n### 易错点\n\n边界方向与曲面法向量不匹配，会使斯托克斯公式结果差一个负号。"
+      "bodyMarkdown": "闭曲面（围成空间区域）的外侧指法向量指向区域外部；高斯公式正是在外侧成立——内侧用公式要添负号，开曲面要先补面凑闭。\n\n### 解题步骤\n\n1. 确认曲面封闭\n2. 确认外侧\n3. 开曲面先补简单面\n\n### 易错点\n\n题目给的侧与公式方向不一致还硬套——先统一再加负号。"
     },
     {
       "schemaVersion": "1.0",
@@ -1086,47 +1086,47 @@
       "sectionId": "m1-p1-c7-s6",
       "sectionTitle": "高斯公式",
       "title": "通量",
-      "summary": "第一类曲面积分累加曲面上的标量，第二类曲面积分则计算向量场穿过带方向曲面的通量。",
+      "summary": "向量场 A=(P,Q,R) 穿过曲面 Σ 指定侧的通量 Φ=∬_Σ A·n dS=∬P dydz+Q dzdx+R dxdy；Φ>0 净流出、<0 净流入，是流体力学的核心量。",
       "tags": [
-        "穿过曲面的总量"
+        "穿过曲面的流量"
       ],
       "sortOrder": 220,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∯ₛF·n dS=∭ᵥdiv F dV；∮∂S F·dr=∬ₛcurl F·n dS",
-        "caption": "第一类曲面积分累加曲面上的标量，第二类曲面积分则计算向量场穿过带方向曲面的通量。"
+        "content": "Φ=∬_Σ P dydz+Q dzdx+R dxdy",
+        "caption": "向量场 A=(P,Q,R) 穿过曲面 Σ 指定侧的通量 Φ=∬_Σ A·n dS=∬P dydz+Q dzdx+R dx"
       },
       "keyPoints": [
         {
-          "id": "qu-mian-fang-xiang-jue-ding-fa-xiang-0ogsyk",
-          "title": "曲面方向决定法向量符号",
-          "bodyMarkdown": "曲面方向决定法向量符号"
+          "id": "a-n-ds-dian-ji-xing-shi",
+          "title": "Φ=∬A·n dS（点积形式）",
+          "bodyMarkdown": "Φ=∬A·n dS（点积形式）"
         },
         {
-          "id": "bi-qu-mian-tong-chang-qu-wai-ce-wei-1kwq88",
-          "title": "闭曲面通常取外侧为正",
-          "bodyMarkdown": "闭曲面通常取外侧为正"
+          "id": "zu-he-xing-shi-dydz-dzdx-dxdy-ge-guan-1qvuzr",
+          "title": "组合形式 dydz、dzdx、dxdy 各管一个",
+          "bodyMarkdown": "组合形式 dydz、dzdx、dxdy 各管一个分量"
         },
         {
-          "id": "can-shu-hua-huo-tou-ying-shi-yao-zheng-048hj1",
-          "title": "参数化或投影时要正确处理面积因子",
-          "bodyMarkdown": "参数化或投影时要正确处理面积因子"
+          "id": "tong-liang-wei-0-jin-chu-xiang-di",
+          "title": "通量为 0",
+          "bodyMarkdown": "通量为 0：进出相抵"
         }
       ],
       "examples": [
         {
-          "id": "qiu-mian-wai-ce-tong-0f4n1t",
+          "id": "a-x-y-z-chuan-guo-dan-04d6ev",
           "title": "讲解例子",
-          "bodyMarkdown": "球面外侧通量可以用高斯公式，把曲面积分换成球体内的散度积分。"
+          "bodyMarkdown": "A=(x,y,z) 穿过单位球面外侧：由高斯公式 Φ=∭3dV=4π。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲面积分累加曲面上的标量，第二类曲面积分则计算向量场穿过带方向曲面的通量。高斯公式把闭曲面通量换成体积分，斯托克斯公式把曲面上的旋度积分换成边界曲线积分。\n\n### 解题步骤\n\n1. 确定曲面方向\n2. 写法向量与面积元\n3. 选择直接算、高斯或斯托克斯转换\n\n### 易错点\n\n边界方向与曲面法向量不匹配，会使斯托克斯公式结果差一个负号。"
+      "bodyMarkdown": "向量场 A=(P,Q,R) 穿过曲面 Σ 指定侧的通量 Φ=∬_Σ A·n dS=∬P dydz+Q dzdx+R dxdy；Φ>0 净流出、<0 净流入，是流体力学的核心量。\n\n### 解题步骤\n\n1. 读出场与曲面\n2. 定侧得 n\n3. 按组合式或点积式计算\n\n### 易错点\n\n把通量算成 |A| 乘面积——必须是法向分量的积累（点积）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1137,47 +1137,47 @@
       "sectionId": "m1-p1-c7-s6",
       "sectionTitle": "高斯公式",
       "title": "三重积分与曲面积分转换",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "高斯公式：闭曲面外侧的通量积分 = 区域上散度的三重积分，∬P dydz+Q dzdx+R dxdy=∭(∂P/∂x+∂Q/∂y+∂R/∂z)dV；条件是 P、Q、R 在闭区域内有一阶连续偏导。",
       "tags": [
-        "把几何量切成微元"
+        "高斯公式"
       ],
       "sortOrder": 230,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "format": "latex",
+        "content": "∬_{Σ⁺}=∭_Ω(∂P/∂x+∂Q/∂y+∂R/∂z)dV",
+        "caption": "高斯公式：闭曲面外侧的通量积分 = 区域上散度的三重积分，∬P dydz+Q dzdx+R dxdy=∭(∂P/∂x+∂"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "you-duan-bei-ji-shi-shi-san-du-div-a",
+          "title": "右端被积式是散度 div A",
+          "bodyMarkdown": "右端被积式是散度 div A"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "yao-qiu-pian-dao-lian-xu-qie-qu-mian-0bka0z",
+          "title": "要求偏导连续且曲面封闭",
+          "bodyMarkdown": "要求偏导连续且曲面封闭"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "qi-dian-zai-nei-bu-shi-wa-dong-chu-li",
+          "title": "奇点在内部时挖洞处理",
+          "bodyMarkdown": "奇点在内部时挖洞处理"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "div-x-y-z-3-dan-wei-qiu-0hznv4",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "div(x,y,z)=3：单位球内通量=3·(4π/3)=4π。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "高斯公式：闭曲面外侧的通量积分 = 区域上散度的三重积分，∬P dydz+Q dzdx+R dxdy=∭(∂P/∂x+∂Q/∂y+∂R/∂z)dV；条件是 P、Q、R 在闭区域内有一阶连续偏导。\n\n### 解题步骤\n\n1. 验证封闭与偏导连续\n2. 算散度\n3. 化三重积分（常配球/柱坐标）\n\n### 易错点\n\n场在区域内有奇点（如点电荷）直接套高斯——必须挖小球去奇点。"
     },
     {
       "schemaVersion": "1.0",
@@ -1188,47 +1188,47 @@
       "sectionId": "m1-p1-c7-s7",
       "sectionTitle": "斯托克斯公式",
       "title": "曲面边界方向",
-      "summary": "第一类曲面积分累加曲面上的标量，第二类曲面积分则计算向量场穿过带方向曲面的通量。",
+      "summary": "斯托克斯公式中边界曲线 Γ 的方向按右手法则定：伸右手与曲面指定侧的法向量同向，四指弯曲方向即 Γ 的正向——「面定侧、手定边」。",
       "tags": [
-        "穿过曲面的总量"
+        "右手法则定向"
       ],
       "sortOrder": 240,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∯ₛF·n dS=∭ᵥdiv F dV；∮∂S F·dr=∬ₛcurl F·n dS",
-        "caption": "第一类曲面积分累加曲面上的标量，第二类曲面积分则计算向量场穿过带方向曲面的通量。"
+        "content": "Γ⁺ 与 n 成右手系",
+        "caption": "斯托克斯公式中边界曲线 Γ 的方向按右手法则定：伸右手与曲面指定侧的法向量同向，四指弯曲方向即 Γ 的正向——「面定侧、手定边」。"
       },
       "keyPoints": [
         {
-          "id": "qu-mian-fang-xiang-jue-ding-fa-xiang-0ogsyk",
-          "title": "曲面方向决定法向量符号",
-          "bodyMarkdown": "曲面方向决定法向量符号"
+          "id": "de-fang-xiang-yu-de-ce-pei-tao",
+          "title": "Γ 的方向与 Σ 的侧配套",
+          "bodyMarkdown": "Γ 的方向与 Σ 的侧配套"
         },
         {
-          "id": "bi-qu-mian-tong-chang-qu-wai-ce-wei-1kwq88",
-          "title": "闭曲面通常取外侧为正",
-          "bodyMarkdown": "闭曲面通常取外侧为正"
+          "id": "you-shou-fa-ze-mu-zhi-yan-n-si-zhi-wei-0vj3u5",
+          "title": "右手法则",
+          "bodyMarkdown": "右手法则：拇指沿 n，四指为 Γ 正向"
         },
         {
-          "id": "can-shu-hua-huo-tou-ying-shi-yao-zheng-048hj1",
-          "title": "参数化或投影时要正确处理面积因子",
-          "bodyMarkdown": "参数化或投影时要正确处理面积因子"
+          "id": "huan-ce-ze-bian-jie-fang-xiang-tong-shi-0amhll",
+          "title": "换侧则边界方向同时反转",
+          "bodyMarkdown": "换侧则边界方向同时反转"
         }
       ],
       "examples": [
         {
-          "id": "qiu-mian-wai-ce-tong-0f4n1t",
+          "id": "shang-ban-qiu-mian-qu-04ojg5",
           "title": "讲解例子",
-          "bodyMarkdown": "球面外侧通量可以用高斯公式，把曲面积分换成球体内的散度积分。"
+          "bodyMarkdown": "上半球面取上侧，其边界（赤道圆）正向从 +z 轴往下看是逆时针。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一类曲面积分累加曲面上的标量，第二类曲面积分则计算向量场穿过带方向曲面的通量。高斯公式把闭曲面通量换成体积分，斯托克斯公式把曲面上的旋度积分换成边界曲线积分。\n\n### 解题步骤\n\n1. 确定曲面方向\n2. 写法向量与面积元\n3. 选择直接算、高斯或斯托克斯转换\n\n### 易错点\n\n边界方向与曲面法向量不匹配，会使斯托克斯公式结果差一个负号。"
+      "bodyMarkdown": "斯托克斯公式中边界曲线 Γ 的方向按右手法则定：伸右手与曲面指定侧的法向量同向，四指弯曲方向即 Γ 的正向——「面定侧、手定边」。\n\n### 解题步骤\n\n1. 确定曲面的侧\n2. 按右手定则转出边界方向\n3. 核对「面在左侧」\n\n### 易错点\n\n侧与边界方向各自独立指定——两者必须匹配，否则公式差负号。"
     },
     {
       "schemaVersion": "1.0",
@@ -1239,47 +1239,47 @@
       "sectionId": "m1-p1-c7-s7",
       "sectionTitle": "斯托克斯公式",
       "title": "曲面积分与空间曲线积分转换",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "斯托克斯公式把沿空间闭曲线的第二类积分换成曲面上旋度的第二类面积分：∮_Γ P dx+Q dy+R dz=∬_Σ(curl F)·n dS；它是格林公式从平面到空间的推广。",
       "tags": [
-        "把几何量切成微元"
+        "斯托克斯公式"
       ],
       "sortOrder": 250,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "∮_Γ F·dr=∬_Σ(curl F)·n dS",
+        "caption": "斯托克斯公式把沿空间闭曲线的第二类积分换成曲面上旋度的第二类面积分：∮_Γ P dx+Q dy+R dz=∬_Σ(cur"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "you-duan-bei-ji-xiang-liang-shi-xuan-du-0r09mh",
+          "title": "右端被积向量是旋度 curl F",
+          "bodyMarkdown": "右端被积向量是旋度 curl F"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "yu-de-fang-xiang-an-you-shou-xi-pei-tao",
+          "title": "Γ 与 Σ 的方向按右手系配套",
+          "bodyMarkdown": "Γ 与 Σ 的方向按右手系配套"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "tui-hua-dao-z-0-ping-mian-ji-ge-lin-1kxu77",
+          "title": "退化到 z=0 平面即格林公式",
+          "bodyMarkdown": "退化到 z=0 平面即格林公式"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "f-y-x-0-curl-f-0-0-2-0t4uz2",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "F=(−y,x,0)：curl F=(0,0,2)，绕任意水平圆的环量=2×围面积。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "斯托克斯公式把沿空间闭曲线的第二类积分换成曲面上旋度的第二类面积分：∮_Γ P dx+Q dy+R dz=∬_Σ(curl F)·n dS；它是格林公式从平面到空间的推广。\n\n### 解题步骤\n\n1. 验证 Γ 闭且 F 偏导连续\n2. 选张在 Γ 上的简单曲面\n3. 算旋度点积后投影计算\n\n### 易错点\n\n曲面上偏导有奇点仍套公式——同高斯，需要挖洞。"
     }
   ]
 }
