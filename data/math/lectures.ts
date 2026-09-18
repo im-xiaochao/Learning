@@ -1748,7 +1748,12 @@ export function getMathLecture(topic: string, section = '', chapter = ''): MathL
    * 不再走下面的规则分派。规则层要覆盖 960 个知识点，必然复用且容易遮蔽，
    * 精编层是「一个知识点一份内容」的正确答案，写一个就覆盖一个。
    */
-  const curated = CURATED[`${cleanTopic(chapter)}/${title}`] || CURATED[title]
+  // 三级查表：章节/小节/标题 → 章节/标题 → 标题。
+  // 为什么需要小节级：同一章内会有同名知识点（「随机变量的数字特征」里方差、协方差、
+  // 相关系数三节各有一个「定义」），只到章节级无法区分。
+  const ch = cleanTopic(chapter)
+  const sec = cleanTopic(section)
+  const curated = CURATED[`${ch}/${sec}/${title}`] || CURATED[`${ch}/${title}`] || CURATED[title]
   if (curated) return { title, ...curated }
   const direct = DIRECT[title] || fuzzyDirect(title)
   const detail = direct || scopedBody(title, scope) || fallbackBody(title, scope)

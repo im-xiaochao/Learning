@@ -15,47 +15,47 @@
       "sectionId": "m1-p3-c7-s1",
       "sectionTitle": "点估计",
       "title": "参数",
-      "summary": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。",
+      "summary": "参数是总体分布中未知的常数，例如正态分布的 μ 与 σ²。参数估计就是由样本推断这些未知常数，分为点估计与区间估计两类。",
       "tags": [
-        "从数据估计未知量"
+        "分布里的未知常数"
       ],
       "sortOrder": 10,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(θ^) = θ（无偏）；θ^ₙ→θ（相合/一致）",
-        "caption": "参数估计用样本信息推断总体参数。"
+        "content": "总体 F(x; θ)，θ 未知",
+        "caption": "参数是总体分布中未知的常数，例如正态分布的 μ 与 σ²。"
       },
       "keyPoints": [
         {
-          "id": "gu-ji-liang-zai-chou-yang-qian-shi-sui-1tp91w",
-          "title": "估计量在抽样前是随机的",
-          "bodyMarkdown": "估计量在抽样前是随机的"
+          "id": "can-shu-shi-zong-ti-fen-bu-de-wei-zhi-0xhu2v",
+          "title": "参数是总体分布的未知常数",
+          "bodyMarkdown": "参数是总体分布的未知常数，不是随机变量"
         },
         {
-          "id": "wu-pian-bu-deng-yu-mei-ci-dou-zhun-que",
-          "title": "无偏不等于每次都准确",
-          "bodyMarkdown": "无偏不等于每次都准确"
+          "id": "dian-gu-ji-gei-chu-yi-ge-shu-zhi-qu-1khhr1",
+          "title": "点估计给出一个数值",
+          "bodyMarkdown": "点估计给出一个数值，区间估计给出一个范围"
         },
         {
-          "id": "ju-gu-ji-yong-yang-ben-ju-pi-pei-zong-15brv9",
-          "title": "矩估计用样本矩匹配总体矩",
-          "bodyMarkdown": "矩估计用样本矩匹配总体矩"
+          "id": "can-shu-ji-zuo-gu-ji-liang-ji-zuo",
+          "title": "参数记作 θ",
+          "bodyMarkdown": "参数记作 θ，估计量记作 θ̂"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-x-de-jun-zhi-wei-1vv0ps",
+          "id": "x-n-qie-dou-wei-zhi-shi-1g7unu",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X₁,…,Xₙ 的均值为 μ 的无偏估计，样本均值就是 μ 的一个自然估计量。"
+          "bodyMarkdown": "X~N(μ,σ²) 且 μ、σ² 都未知时，待估参数有两个。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。\n\n### 解题步骤\n\n1. 选估计方法\n2. 写估计量并代入样本\n3. 检查无偏、方差或一致性\n\n### 易错点\n\n把估计值和估计量混为一谈，或只看无偏性不看方差。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "参数是总体分布中未知的常数，例如正态分布的 μ 与 σ²。参数估计就是由样本推断这些未知常数，分为点估计与区间估计两类。\n\n### 解题步骤\n\n1. 写出总体分布\n2. 指出哪些是未知参数\n3. 确定估计目标\n\n### 易错点\n\n把统计量的值当成参数——估计量与参数不是一回事。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p3-c7-s1",
       "sectionTitle": "点估计",
       "title": "估计量",
-      "summary": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。",
+      "summary": "估计量是用于估计未知参数的统计量，它是样本的函数、本身是随机变量，常用 θ̂ 表示。",
       "tags": [
-        "从数据估计未知量"
+        "用来估计参数的统计量"
       ],
       "sortOrder": 20,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(θ^) = θ（无偏）；θ^ₙ→θ（相合/一致）",
-        "caption": "参数估计用样本信息推断总体参数。"
+        "content": "θ̂=θ̂(X₁,…,Xₙ)",
+        "caption": "估计量是用于估计未知参数的统计量，它是样本的函数、本身是随机变量，常用 θ̂ 表示。"
       },
       "keyPoints": [
         {
-          "id": "gu-ji-liang-zai-chou-yang-qian-shi-sui-1tp91w",
-          "title": "估计量在抽样前是随机的",
-          "bodyMarkdown": "估计量在抽样前是随机的"
+          "id": "gu-ji-liang-shi-tong-ji-liang-sui-ji-0txud0",
+          "title": "估计量是统计量（随机变量）",
+          "bodyMarkdown": "估计量是统计量（随机变量），且不含未知参数"
         },
         {
-          "id": "wu-pian-bu-deng-yu-mei-ci-dou-zhun-que",
-          "title": "无偏不等于每次都准确",
-          "bodyMarkdown": "无偏不等于每次都准确"
+          "id": "tong-yi-can-shu-ke-yi-you-duo-ge-gu-ji-1f88xh",
+          "title": "同一参数可以有多个估计量",
+          "bodyMarkdown": "同一参数可以有多个估计量，需要比较优劣"
         },
         {
-          "id": "ju-gu-ji-yong-yang-ben-ju-pi-pei-zong-15brv9",
-          "title": "矩估计用样本矩匹配总体矩",
-          "bodyMarkdown": "矩估计用样本矩匹配总体矩"
+          "id": "hao-huai-yong-wu-pian-xing-you-xiao-1w3a3g",
+          "title": "好坏用无偏性、有效性、一致性衡量",
+          "bodyMarkdown": "好坏用无偏性、有效性、一致性衡量"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-x-de-jun-zhi-wei-1vv0ps",
+          "id": "gu-ji-ji-ke-yi-yong-x-1hpiem",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X₁,…,Xₙ 的均值为 μ 的无偏估计，样本均值就是 μ 的一个自然估计量。"
+          "bodyMarkdown": "估计 μ 既可以用 X̄，也可以用样本中位数，两者都是估计量。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。\n\n### 解题步骤\n\n1. 选估计方法\n2. 写估计量并代入样本\n3. 检查无偏、方差或一致性\n\n### 易错点\n\n把估计值和估计量混为一谈，或只看无偏性不看方差。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "估计量是用于估计未知参数的统计量，它是样本的函数、本身是随机变量，常用 θ̂ 表示。同一个参数可以构造出多个估计量。\n\n### 解题步骤\n\n1. 构造不含未知参数的统计量\n2. 说明它用于估计哪个参数\n3. 用评价标准比较优劣\n\n### 易错点\n\n把估计量当成一个固定的数——它是随机变量。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p3-c7-s1",
       "sectionTitle": "点估计",
       "title": "估计值",
-      "summary": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。",
+      "summary": "估计值是把样本观测值代入估计量后得到的具体数值，也就是估计量的一次实现。",
       "tags": [
-        "从数据估计未知量"
+        "代入观测值后的数"
       ],
       "sortOrder": 30,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(θ^) = θ（无偏）；θ^ₙ→θ（相合/一致）",
-        "caption": "参数估计用样本信息推断总体参数。"
+        "content": "θ̂(x₁,…,xₙ)",
+        "caption": "估计值是把样本观测值代入估计量后得到的具体数值，也就是估计量的一次实现。"
       },
       "keyPoints": [
         {
-          "id": "gu-ji-liang-zai-chou-yang-qian-shi-sui-1tp91w",
-          "title": "估计量在抽样前是随机的",
-          "bodyMarkdown": "估计量在抽样前是随机的"
+          "id": "gu-ji-zhi-shi-shu-gu-ji-liang-shi-sui-0g17fl",
+          "title": "估计值是数",
+          "bodyMarkdown": "估计值是数，估计量是随机变量"
         },
         {
-          "id": "wu-pian-bu-deng-yu-mei-ci-dou-zhun-que",
-          "title": "无偏不等于每次都准确",
-          "bodyMarkdown": "无偏不等于每次都准确"
+          "id": "tong-yi-gu-ji-liang-zai-bu-tong-yang-0yc807",
+          "title": "同一估计量在不同样本下给出不同的估计值",
+          "bodyMarkdown": "同一估计量在不同样本下给出不同的估计值"
         },
         {
-          "id": "ju-gu-ji-yong-yang-ben-ju-pi-pei-zong-15brv9",
-          "title": "矩估计用样本矩匹配总体矩",
-          "bodyMarkdown": "矩估计用样本矩匹配总体矩"
+          "id": "zui-zhong-da-an-tong-chang-yao-qiu-gei-0idn7e",
+          "title": "最终答案通常要求给出估计值",
+          "bodyMarkdown": "最终答案通常要求给出估计值"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-x-de-jun-zhi-wei-1vv0ps",
+          "id": "guan-ce-zhi-wei-1-3-5-1u4vva",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X₁,…,Xₙ 的均值为 μ 的无偏估计，样本均值就是 μ 的一个自然估计量。"
+          "bodyMarkdown": "观测值为 1、3、5 时，X̄ 的估计值为 3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。\n\n### 解题步骤\n\n1. 选估计方法\n2. 写估计量并代入样本\n3. 检查无偏、方差或一致性\n\n### 易错点\n\n把估计值和估计量混为一谈，或只看无偏性不看方差。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "估计值是把样本观测值代入估计量后得到的具体数值，也就是估计量的一次实现。做题时最终要给出的是估计值。\n\n### 解题步骤\n\n1. 写出估计量的表达式\n2. 代入样本观测值\n3. 算出具体的数\n\n### 易错点\n\n题目要求估计值，却只写了估计量的表达式。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p3-c7-s2",
       "sectionTitle": "矩估计法",
       "title": "总体矩",
-      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "summary": "总体矩是总体分布的矩，通常含未知参数，例如 E(X)=μ、E(X²)=σ²+μ²。",
       "tags": [
-        "用样本认识总体"
+        "含参数的总体特征"
       ],
       "sortOrder": 40,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
-        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+        "content": "E(X)、E(X²) 等",
+        "caption": "总体矩是总体分布的矩，通常含未知参数，例如 E(X)=μ、E(X²)=σ²+μ²。"
       },
       "keyPoints": [
         {
-          "id": "yang-ben-yao-you-dai-biao-xing",
-          "title": "样本要有代表性",
-          "bodyMarkdown": "样本要有代表性"
+          "id": "zong-ti-ju-shi-li-lun-zhi-tong-chang-01yrp7",
+          "title": "总体矩是理论值",
+          "bodyMarkdown": "总体矩是理论值，通常含未知参数"
         },
         {
-          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
-          "title": "样本均值是总体均值的自然估计量",
-          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+          "id": "yi-jie-yuan-dian-ju-jiu-shi-zong-ti-jun-0ypzcb",
+          "title": "一阶原点矩就是总体均值 μ",
+          "bodyMarkdown": "一阶原点矩就是总体均值 μ"
         },
         {
-          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
-          "title": "正态总体下均值、方差对应不同抽样分布",
-          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+          "id": "you-ji-ge-wei-zhi-can-shu-jiu-yao-lie-015pw6",
+          "title": "有几个未知参数就要列几个方程",
+          "bodyMarkdown": "有几个未知参数就要列几个方程"
         }
       ],
       "examples": [
         {
-          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "id": "zhi-shu-fen-bu-e-zhong-0j3tlh",
           "title": "讲解例子",
-          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+          "bodyMarkdown": "指数分布 E(λ) 中 E(X)=1/λ，令其等于 X̄ 得 λ̂=1/X̄。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "总体矩是总体分布的矩，通常含未知参数，例如 E(X)=μ、E(X²)=σ²+μ²。矩估计就是让总体矩等于样本矩，从而解出参数。\n\n### 解题步骤\n\n1. 写出含参数的总体矩\n2. 令其等于对应的样本矩\n3. 解方程（组）得估计量\n\n### 易错点\n\n方程个数少于未知参数个数，解不出来。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p3-c7-s2",
       "sectionTitle": "矩估计法",
       "title": "样本矩",
-      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "summary": "矩估计法中用样本矩去替换总体矩：样本 k 阶原点矩 A_k=(1/n)ΣXᵢᵏ。",
       "tags": [
-        "用样本认识总体"
+        "矩估计的替换对象"
       ],
       "sortOrder": 50,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
-        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+        "content": "A_k=(1/n)ΣXᵢᵏ",
+        "caption": "矩估计法中用样本矩去替换总体矩：样本 k 阶原点矩 A_k=(1/n)ΣXᵢᵏ。"
       },
       "keyPoints": [
         {
-          "id": "yang-ben-yao-you-dai-biao-xing",
-          "title": "样本要有代表性",
-          "bodyMarkdown": "样本要有代表性"
+          "id": "a-k-1-n-x-shi-tong-ji-liang",
+          "title": "A_k=(1/n)ΣXᵢᵏ",
+          "bodyMarkdown": "A_k=(1/n)ΣXᵢᵏ，是统计量"
         },
         {
-          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
-          "title": "样本均值是总体均值的自然估计量",
-          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+          "id": "yang-ben-ju-shi-zong-ti-ju-de-xiang-he-15vlbv",
+          "title": "样本矩是总体矩的相合估计",
+          "bodyMarkdown": "样本矩是总体矩的相合估计"
         },
         {
-          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
-          "title": "正态总体下均值、方差对应不同抽样分布",
-          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+          "id": "ju-gu-ji-bu-yao-qiu-zhi-dao-fen-bu-de-0duoir",
+          "title": "矩估计不要求知道分布的具体形式（只要矩存在）",
+          "bodyMarkdown": "矩估计不要求知道分布的具体形式（只要矩存在）"
         }
       ],
       "examples": [
         {
-          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "id": "a-x-a-1-n-x",
           "title": "讲解例子",
-          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+          "bodyMarkdown": "A₁=X̄，A₂=(1/n)ΣXᵢ²。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "矩估计法中用样本矩去替换总体矩：样本 k 阶原点矩 A_k=(1/n)ΣXᵢᵏ。它是总体矩的相合估计，也是矩估计方程的左边。\n\n### 解题步骤\n\n1. 算出所需的样本矩\n2. 与总体矩一一对应\n3. 建立并求解方程\n\n### 易错点\n\n把样本中心矩与原点矩用错位置。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p3-c7-s2",
       "sectionTitle": "矩估计法",
       "title": "用样本矩匹配总体矩",
-      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "summary": "矩估计法的核心是「用样本矩替换总体矩」：令总体矩等于对应的样本矩，得到关于未知参数的方程（组），解出即得矩估计量。",
       "tags": [
-        "用样本认识总体"
+        "矩估计的核心动作"
       ],
       "sortOrder": 60,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
-        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+        "content": "E(Xᵏ) = (1/n)ΣXᵢᵏ（k=1,…,m）",
+        "caption": "矩估计法的核心是「用样本矩替换总体矩」：令总体矩等于对应的样本矩，得到关于未知参数的方程（组），解出即得矩估计量。"
       },
       "keyPoints": [
         {
-          "id": "yang-ben-yao-you-dai-biao-xing",
-          "title": "样本要有代表性",
-          "bodyMarkdown": "样本要有代表性"
+          "id": "you-ji-ge-wei-zhi-can-shu-jiu-ling-qian-1olxh8",
+          "title": "有几个未知参数就令前几阶矩相等",
+          "bodyMarkdown": "有几个未知参数就令前几阶矩相等"
         },
         {
-          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
-          "title": "样本均值是总体均值的自然估计量",
-          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+          "id": "zong-ti-ju-xie-cheng-han-can-shu-de-1mk2v3",
+          "title": "总体矩写成含参数的表达式",
+          "bodyMarkdown": "总体矩写成含参数的表达式，样本矩用观测值计算"
         },
         {
-          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
-          "title": "正态总体下均值、方差对应不同抽样分布",
-          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+          "id": "jie-chu-de-jie-jiu-shi-ju-gu-ji-liang",
+          "title": "解出的解就是矩估计量",
+          "bodyMarkdown": "解出的解就是矩估计量"
         }
       ],
       "examples": [
         {
-          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "id": "jun-yun-fen-bu-u-0-e-x-1oir3i",
           "title": "讲解例子",
-          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+          "bodyMarkdown": "均匀分布 U(0,θ)：E(X)=θ/2=X̄ ⇒ θ̂=2X̄。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "矩估计法的核心是「用样本矩替换总体矩」：令总体矩等于对应的样本矩，得到关于未知参数的方程（组），解出即得矩估计量。\n\n### 解题步骤\n\n1. 确定未知参数个数 k\n2. 写出前 k 阶总体矩并令其等于样本矩\n3. 解方程（组）得到估计量\n\n### 易错点\n\n把方程写成「样本矩等于总体矩的估计值」，而不是令两者相等。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m1-p3-c7-s3",
       "sectionTitle": "最大似然估计",
       "title": "似然函数：把样本看成已知、参数看成变量",
-      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "summary": "似然函数把样本观测值视为已知、把参数视为自变量：L(θ)=∏f(xᵢ;θ)。",
       "tags": [
-        "用样本认识总体"
+        "似然函数的构造"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
-        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+        "content": "L(θ)=∏ᵢ₌₁ⁿ f(xᵢ; θ)",
+        "caption": "似然函数把样本观测值视为已知、把参数视为自变量：L(θ)=∏f(xᵢ;θ)。"
       },
       "keyPoints": [
         {
-          "id": "yang-ben-yao-you-dai-biao-xing",
-          "title": "样本要有代表性",
-          "bodyMarkdown": "样本要有代表性"
+          "id": "l-f-x-li-san-xing-yong-fen-bu-l",
+          "title": "L(θ)=∏f(xᵢ",
+          "bodyMarkdown": "L(θ)=∏f(xᵢ;θ)，离散型用分布律"
         },
         {
-          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
-          "title": "样本均值是总体均值的自然估计量",
-          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+          "id": "yang-ben-yi-zhi-can-shu-wei-bian-liang-0lxjn7",
+          "title": "样本已知、参数为变量",
+          "bodyMarkdown": "样本已知、参数为变量，这是它与联合密度的区别"
         },
         {
-          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
-          "title": "正态总体下均值、方差对应不同抽样分布",
-          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+          "id": "shi-l-zui-da-de-jiu-shi-zui-da-si-ran-1k07zq",
+          "title": "使 L 最大的 θ 就是最大似然估计",
+          "bodyMarkdown": "使 L 最大的 θ 就是最大似然估计"
         }
       ],
       "examples": [
         {
-          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "id": "zong-ti-wei-b-1-p-guan-0gwa6j",
           "title": "讲解例子",
-          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+          "bodyMarkdown": "总体为 B(1,p)、观测到 1,0,1 时，L(p)=p²(1−p)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "似然函数把样本观测值视为已知、把参数视为自变量：L(θ)=∏f(xᵢ;θ)。它的值表示「参数取 θ 时，观测到这组样本的可能性大小」。\n\n### 解题步骤\n\n1. 写出总体的密度或分布律\n2. 把 n 个样本代入并连乘\n3. 得到关于 θ 的表达式\n\n### 易错点\n\n漏掉连乘中的某一项，或把似然函数写成参数的分布。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m1-p3-c7-s3",
       "sectionTitle": "最大似然估计",
       "title": "取对数把乘积变成和",
-      "summary": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。",
+      "summary": "连乘求导很麻烦，取对数后变成求和：ln L(θ)=Σln f(xᵢ;θ)。",
       "tags": [
-        "从数据估计未知量"
+        "对数似然"
       ],
       "sortOrder": 80,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(θ^) = θ（无偏）；θ^ₙ→θ（相合/一致）",
-        "caption": "参数估计用样本信息推断总体参数。"
+        "content": "ln L(θ)=Σᵢ₌₁ⁿ ln f(xᵢ; θ)",
+        "caption": "连乘求导很麻烦，取对数后变成求和：ln L(θ)=Σln f(xᵢ;θ)。"
       },
       "keyPoints": [
         {
-          "id": "gu-ji-liang-zai-chou-yang-qian-shi-sui-1tp91w",
-          "title": "估计量在抽样前是随机的",
-          "bodyMarkdown": "估计量在抽样前是随机的"
+          "id": "ln-l-ln-f-x-lian-cheng-bian-qiu-he",
+          "title": "ln L(θ)=Σln f(xᵢ",
+          "bodyMarkdown": "ln L(θ)=Σln f(xᵢ;θ)，连乘变求和"
         },
         {
-          "id": "wu-pian-bu-deng-yu-mei-ci-dou-zhun-que",
-          "title": "无偏不等于每次都准确",
-          "bodyMarkdown": "无偏不等于每次都准确"
+          "id": "dan-diao-xing-bao-zheng-zui-zhi-dian-bu-16dvct",
+          "title": "单调性保证最值点不变",
+          "bodyMarkdown": "单调性保证最值点不变"
         },
         {
-          "id": "ju-gu-ji-yong-yang-ben-ju-pi-pei-zong-15brv9",
-          "title": "矩估计用样本矩匹配总体矩",
-          "bodyMarkdown": "矩估计用样本矩匹配总体矩"
+          "id": "zhe-ji-hu-shi-suo-you-zui-da-si-ran-ti-0xs3ri",
+          "title": "这几乎是所有最大似然题的必经步骤",
+          "bodyMarkdown": "这几乎是所有最大似然题的必经步骤"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-x-de-jun-zhi-wei-1vv0ps",
+          "id": "l-p-p-1-p-shi-ln-l-2ln-1c3lq1",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X₁,…,Xₙ 的均值为 μ 的无偏估计，样本均值就是 μ 的一个自然估计量。"
+          "bodyMarkdown": "L(p)=p²(1−p) 时，ln L=2ln p+ln(1−p)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。\n\n### 解题步骤\n\n1. 选估计方法\n2. 写估计量并代入样本\n3. 检查无偏、方差或一致性\n\n### 易错点\n\n把估计值和估计量混为一谈，或只看无偏性不看方差。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "连乘求导很麻烦，取对数后变成求和：ln L(θ)=Σln f(xᵢ;θ)。由于对数单调递增，L 与 ln L 在同一点取最大值，所以只对 ln L 求极值即可。\n\n### 解题步骤\n\n1. 写出 L(θ)\n2. 取对数得到 ln L(θ)\n3. 整理成便于求导的形式\n\n### 易错点\n\n直接对 L 求导，计算量大且容易出错。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m1-p3-c7-s3",
       "sectionTitle": "最大似然估计",
       "title": "令导数为零并检查参数范围",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "最大似然估计通过解 d ln L/dθ = 0 得到，但还必须检查驻点是否落在参数允许范围内、端点是否更优，参数范围往往是解题关键。",
       "tags": [
-        "先把事件说清楚"
+        "求解与校验"
       ],
       "sortOrder": 90,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "d ln L(θ)/dθ = 0",
+        "caption": "最大似然估计通过解 d ln L/dθ = 0 得到，但还必须检查驻点是否落在参数允许范围内、端点是否更优，参数范围往往是解题关键。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "jie-d-ln-l-d-0-de-dao-zhu-dian",
+          "title": "解 d ln L/dθ=0 得到驻点",
+          "bodyMarkdown": "解 d ln L/dθ=0 得到驻点"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "bi-xu-jian-cha-zhu-dian-shi-fou-zai-can-0dyktf",
+          "title": "必须检查驻点是否在参数允许范围内",
+          "bodyMarkdown": "必须检查驻点是否在参数允许范围内"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "ruo-ln-l-dan-diao-ze-zui-you-dian-chu-0xpqsg",
+          "title": "若 ln L 单调",
+          "bodyMarkdown": "若 ln L 单调，则最优点出现在端点"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "jun-yun-fen-bu-u-0-de-0b4xr9",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "均匀分布 U(0,θ) 的似然函数在 θ≥max xᵢ 上单调递减，故 θ̂=max xᵢ。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "最大似然估计通过解 d ln L/dθ = 0 得到，但还必须检查驻点是否落在参数允许范围内、端点是否更优，参数范围往往是解题关键。\n\n### 解题步骤\n\n1. 求 d ln L/dθ 并令其为 0\n2. 解出 θ 的表达式\n3. 检查是否在参数范围内并加以说明\n\n### 易错点\n\n只解出驻点就下结论，忽略驻点不在参数范围内的情形。"
     },
     {
       "schemaVersion": "1.0",
@@ -474,47 +474,47 @@
       "sectionId": "m1-p3-c7-s4",
       "sectionTitle": "估计量评价标准",
       "title": "无偏性",
-      "summary": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。",
+      "summary": "无偏性指 E(θ̂)=θ，即估计量在平均意义上等于真值。例如 X̄ 是 μ 的无偏估计，S² 是 σ² 的无偏估计。",
       "tags": [
-        "从数据估计未知量"
+        "期望等于参数"
       ],
       "sortOrder": 100,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(θ^) = θ（无偏）；θ^ₙ→θ（相合/一致）",
-        "caption": "参数估计用样本信息推断总体参数。"
+        "content": "E(θ̂)=θ",
+        "caption": "无偏性指 E(θ̂)=θ，即估计量在平均意义上等于真值。"
       },
       "keyPoints": [
         {
-          "id": "gu-ji-liang-zai-chou-yang-qian-shi-sui-1tp91w",
-          "title": "估计量在抽样前是随机的",
-          "bodyMarkdown": "估计量在抽样前是随机的"
+          "id": "wu-pian-e-ping-jun-bu-pian-gao-ye-bu-0vvik4",
+          "title": "无偏：E(θ̂)=θ，平均不偏高也不偏低",
+          "bodyMarkdown": "无偏：E(θ̂)=θ，平均不偏高也不偏低"
         },
         {
-          "id": "wu-pian-bu-deng-yu-mei-ci-dou-zhun-que",
-          "title": "无偏不等于每次都准确",
-          "bodyMarkdown": "无偏不等于每次都准确"
+          "id": "x-wu-pian-gu-ji-s-wu-pian-gu-ji",
+          "title": "X̄ 无偏估计 μ",
+          "bodyMarkdown": "X̄ 无偏估计 μ，S² 无偏估计 σ²"
         },
         {
-          "id": "ju-gu-ji-yong-yang-ben-ju-pi-pei-zong-15brv9",
-          "title": "矩估计用样本矩匹配总体矩",
-          "bodyMarkdown": "矩估计用样本矩匹配总体矩"
+          "id": "wu-pian-xing-bu-bao-zheng-dan-ci-gu-ji-1lcf6n",
+          "title": "无偏性不保证单次估计的误差小",
+          "bodyMarkdown": "无偏性不保证单次估计的误差小"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-x-de-jun-zhi-wei-1vv0ps",
+          "id": "e-x-suo-yi-x-shi-de-wu-1w73yr",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X₁,…,Xₙ 的均值为 μ 的无偏估计，样本均值就是 μ 的一个自然估计量。"
+          "bodyMarkdown": "E(X̄)=μ，所以 X̄ 是 μ 的无偏估计。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。\n\n### 解题步骤\n\n1. 选估计方法\n2. 写估计量并代入样本\n3. 检查无偏、方差或一致性\n\n### 易错点\n\n把估计值和估计量混为一谈，或只看无偏性不看方差。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "无偏性指 E(θ̂)=θ，即估计量在平均意义上等于真值。例如 X̄ 是 μ 的无偏估计，S² 是 σ² 的无偏估计。\n\n### 解题步骤\n\n1. 写出估计量的期望\n2. 与真参数比较\n3. 相等即无偏\n\n### 易错点\n\n把「无偏」理解成「每次都估得很准」，它只是平均意义下的性质。"
     },
     {
       "schemaVersion": "1.0",
@@ -525,47 +525,47 @@
       "sectionId": "m1-p3-c7-s4",
       "sectionTitle": "估计量评价标准",
       "title": "有效性",
-      "summary": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。",
+      "summary": "在两个无偏估计之间，方差更小的那个更有效，因为它的取值更集中、估计更稳定。",
       "tags": [
-        "从数据估计未知量"
+        "方差更小者更有效"
       ],
       "sortOrder": 110,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(θ^) = θ（无偏）；θ^ₙ→θ（相合/一致）",
-        "caption": "参数估计用样本信息推断总体参数。"
+        "content": "D(θ̂₁) < D(θ̂₂) ⇒ θ̂₁ 更有效",
+        "caption": "在两个无偏估计之间，方差更小的那个更有效，因为它的取值更集中、估计更稳定。"
       },
       "keyPoints": [
         {
-          "id": "gu-ji-liang-zai-chou-yang-qian-shi-sui-1tp91w",
-          "title": "估计量在抽样前是随机的",
-          "bodyMarkdown": "估计量在抽样前是随机的"
+          "id": "qian-ti-shi-liang-ge-gu-ji-liang-dou-wu-1a0ijc",
+          "title": "前提是两个估计量都无偏",
+          "bodyMarkdown": "前提是两个估计量都无偏"
         },
         {
-          "id": "wu-pian-bu-deng-yu-mei-ci-dou-zhun-que",
-          "title": "无偏不等于每次都准确",
-          "bodyMarkdown": "无偏不等于每次都准确"
+          "id": "fang-cha-yue-xiao-yue-you-xiao",
+          "title": "方差越小越有效",
+          "bodyMarkdown": "方差越小越有效"
         },
         {
-          "id": "ju-gu-ji-yong-yang-ben-ju-pi-pei-zong-15brv9",
-          "title": "矩估计用样本矩匹配总体矩",
-          "bodyMarkdown": "矩估计用样本矩匹配总体矩"
+          "id": "suo-you-wu-pian-gu-ji-zhong-fang-cha-0yki6g",
+          "title": "所有无偏估计中方差最小的称为最小方差无偏估计",
+          "bodyMarkdown": "所有无偏估计中方差最小的称为最小方差无偏估计"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-x-de-jun-zhi-wei-1vv0ps",
+          "id": "zheng-tai-zong-ti-zhong-0s6j2s",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X₁,…,Xₙ 的均值为 μ 的无偏估计，样本均值就是 μ 的一个自然估计量。"
+          "bodyMarkdown": "正态总体中 X̄ 比样本中位数更有效（方差更小）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。\n\n### 解题步骤\n\n1. 选估计方法\n2. 写估计量并代入样本\n3. 检查无偏、方差或一致性\n\n### 易错点\n\n把估计值和估计量混为一谈，或只看无偏性不看方差。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "在两个无偏估计之间，方差更小的那个更有效，因为它的取值更集中、估计更稳定。比较有效性就是比较方差。\n\n### 解题步骤\n\n1. 确认两个估计量都无偏\n2. 分别计算方差\n3. 方差小者更有效\n\n### 易错点\n\n对两个有偏估计比较方差，前提不成立。"
     },
     {
       "schemaVersion": "1.0",
@@ -576,47 +576,47 @@
       "sectionId": "m1-p3-c7-s4",
       "sectionTitle": "估计量评价标准",
       "title": "一致性",
-      "summary": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。",
+      "summary": "一致性指 n→∞ 时估计量依概率收敛到参数：θ̂ₙ →ᴾ θ。",
       "tags": [
-        "从数据估计未知量"
+        "样本量越大越接近真值"
       ],
       "sortOrder": 120,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(θ^) = θ（无偏）；θ^ₙ→θ（相合/一致）",
-        "caption": "参数估计用样本信息推断总体参数。"
+        "content": "θ̂ₙ →ᴾ θ（n→∞）",
+        "caption": "一致性指 n→∞ 时估计量依概率收敛到参数：θ̂ₙ →ᴾ θ。"
       },
       "keyPoints": [
         {
-          "id": "gu-ji-liang-zai-chou-yang-qian-shi-sui-1tp91w",
-          "title": "估计量在抽样前是随机的",
-          "bodyMarkdown": "估计量在抽样前是随机的"
+          "id": "yi-zhi-xing-yi-gai-l-shou-lian-dao",
+          "title": "一致性：θ̂ₙ 依概率收敛到 θ",
+          "bodyMarkdown": "一致性：θ̂ₙ 依概率收敛到 θ"
         },
         {
-          "id": "wu-pian-bu-deng-yu-mei-ci-dou-zhun-que",
-          "title": "无偏不等于每次都准确",
-          "bodyMarkdown": "无偏不等于每次都准确"
+          "id": "yang-ben-ju-dou-shi-yi-zhi-gu-ji-you-da-1macnn",
+          "title": "样本矩都是一致估计（由大数定律保证）",
+          "bodyMarkdown": "样本矩都是一致估计（由大数定律保证）"
         },
         {
-          "id": "ju-gu-ji-yong-yang-ben-ju-pi-pei-zong-15brv9",
-          "title": "矩估计用样本矩匹配总体矩",
-          "bodyMarkdown": "矩估计用样本矩匹配总体矩"
+          "id": "yi-zhi-xing-shi-da-yang-ben-xing-zhi-n-13sf5w",
+          "title": "一致性是大样本性质",
+          "bodyMarkdown": "一致性是大样本性质，n 小时不一定好"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-x-de-jun-zhi-wei-1vv0ps",
+          "id": "x-yi-gai-l-shou-lian-0l85mn",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X₁,…,Xₙ 的均值为 μ 的无偏估计，样本均值就是 μ 的一个自然估计量。"
+          "bodyMarkdown": "X̄ 依概率收敛到 μ，这正是辛钦大数定律的内容。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "参数估计用样本信息推断总体参数。估计量是随机变量，代入样本后得到估计值；无偏性看平均是否等于真值，一致性看样本变大是否靠近真值，有效性比较波动大小。\n\n### 解题步骤\n\n1. 选估计方法\n2. 写估计量并代入样本\n3. 检查无偏、方差或一致性\n\n### 易错点\n\n把估计值和估计量混为一谈，或只看无偏性不看方差。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "一致性指 n→∞ 时估计量依概率收敛到参数：θ̂ₙ →ᴾ θ。样本均值、样本方差、样本矩都是一致估计。\n\n### 解题步骤\n\n1. 写出估计量\n2. 用大数定律或方差趋于 0 说明\n3. 得出收敛结论\n\n### 易错点\n\n把一致性与无偏性混为一谈，两者互不包含。"
     },
     {
       "schemaVersion": "1.0",
@@ -627,47 +627,47 @@
       "sectionId": "m1-p3-c7-s5",
       "sectionTitle": "区间估计",
       "title": "置信度",
-      "summary": "置信区间不是说参数“有某个概率落在已经算出的区间里”，而是构造一种长期覆盖率为 1−α 的随机区间。",
+      "summary": "置信度 1−α 表示在重复抽样中，置信区间包含真参数的概率，常用 0.95 或 0.99；α 是「没包含」的概率。",
       "tags": [
-        "给参数一个范围"
+        "区间的可信程度"
       ],
       "sortOrder": 130,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(L(X)≤θ≤U(X))=1−α",
-        "caption": "置信区间不是说参数“有某个概率落在已经算出的区间里”，而是构造一种长期覆盖率为 1−α 的随机区间。"
+        "content": "P{L(X)≤θ≤U(X)}=1−α",
+        "caption": "置信度 1−α 表示在重复抽样中，置信区间包含真参数的概率，常用 0.95 或 0.99；α 是「没包含」的概率。"
       },
       "keyPoints": [
         {
-          "id": "zhi-xin-du-yue-gao-qu-jian-tong-chang-1alr0s",
+          "id": "zhi-xin-du-1-chang-qu-0-95-0-99",
+          "title": "置信度 = 1−α",
+          "bodyMarkdown": "置信度 = 1−α，常取 0.95、0.99"
+        },
+        {
+          "id": "han-yi-shi-chong-fu-chou-yang-shi-bao-0fqe3i",
+          "title": "含义是「重复抽样时包含真值的比例」",
+          "bodyMarkdown": "含义是「重复抽样时包含真值的比例」，不是「参数落在区间内的概率」"
+        },
+        {
+          "id": "zhi-xin-du-yue-gao-qu-jian-yue-kuan",
           "title": "置信度越高",
-          "bodyMarkdown": "置信度越高，区间通常越宽"
-        },
-        {
-          "id": "yang-ben-liang-yue-da-qu-jian-tong-1xixok",
-          "title": "样本量越大",
-          "bodyMarkdown": "样本量越大，区间通常越窄"
-        },
-        {
-          "id": "fang-cha-yi-zhi-he-wei-zhi-dui-ying-bu-1sm0xz",
-          "title": "方差已知和未知对应不同分布",
-          "bodyMarkdown": "方差已知和未知对应不同分布"
+          "bodyMarkdown": "置信度越高，区间越宽"
         }
       ],
       "examples": [
         {
-          "id": "zheng-tai-zong-ti-jun-1xsi34",
+          "id": "95-zhi-xin-qu-jian-yi-1x6ngc",
           "title": "讲解例子",
-          "bodyMarkdown": "正态总体均值方差已知时使用 z 分位点；方差未知时通常使用 t 分位点。"
+          "bodyMarkdown": "95% 置信区间意味着反复抽样 100 次，约有 95 次的区间盖住真值。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "置信区间不是说参数“有某个概率落在已经算出的区间里”，而是构造一种长期覆盖率为 1−α 的随机区间。区间宽度受样本量、置信水平和总体波动影响。\n\n### 解题步骤\n\n1. 选枢轴量\n2. 把参数整理到不等式中\n3. 代入样本并解释置信水平\n\n### 易错点\n\n把置信区间解释成参数在本次区间内的概率是 1−α。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "置信度 1−α 表示在重复抽样中，置信区间包含真参数的概率，常用 0.95 或 0.99；α 是「没包含」的概率。\n\n### 解题步骤\n\n1. 确定 1−α\n2. 查出对应的分位数\n3. 构造区间\n\n### 易错点\n\n把置信度解释成「参数落在区间内的概率」——参数是常数，不是随机的。"
     },
     {
       "schemaVersion": "1.0",
@@ -678,47 +678,47 @@
       "sectionId": "m1-p3-c7-s5",
       "sectionTitle": "区间估计",
       "title": "置信区间",
-      "summary": "置信区间不是说参数“有某个概率落在已经算出的区间里”，而是构造一种长期覆盖率为 1−α 的随机区间。",
+      "summary": "置信区间是由样本构造的随机区间 [L(X),U(X)]，它以 1−α 的概率包含未知参数。",
       "tags": [
-        "给参数一个范围"
+        "由统计量构造的区间"
       ],
       "sortOrder": 140,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(L(X)≤θ≤U(X))=1−α",
-        "caption": "置信区间不是说参数“有某个概率落在已经算出的区间里”，而是构造一种长期覆盖率为 1−α 的随机区间。"
+        "content": "P{L(X)≤θ≤U(X)}=1−α",
+        "caption": "置信区间是由样本构造的随机区间 [L(X),U(X)]，它以 1−α 的概率包含未知参数。"
       },
       "keyPoints": [
         {
-          "id": "zhi-xin-du-yue-gao-qu-jian-tong-chang-1alr0s",
-          "title": "置信度越高",
-          "bodyMarkdown": "置信度越高，区间通常越宽"
+          "id": "zhi-xin-qu-jian-shi-sui-ji-qu-jian-sui-1mgafh",
+          "title": "置信区间是随机区间",
+          "bodyMarkdown": "置信区间是随机区间，随样本变化"
         },
         {
-          "id": "yang-ben-liang-yue-da-qu-jian-tong-1xixok",
-          "title": "样本量越大",
-          "bodyMarkdown": "样本量越大，区间通常越窄"
+          "id": "gou-zao-bu-zhou-zhao-shu-zhou-liang-0kwipb",
+          "title": "构造步骤",
+          "bodyMarkdown": "构造步骤：找枢轴量 → 用分位数夹住 → 解出参数范围"
         },
         {
-          "id": "fang-cha-yi-zhi-he-wei-zhi-dui-ying-bu-1sm0xz",
-          "title": "方差已知和未知对应不同分布",
-          "bodyMarkdown": "方差已知和未知对应不同分布"
+          "id": "zhi-xin-du-yue-gao-qu-jian-yue-kuan-0bx2y5",
+          "title": "置信度越高区间越宽",
+          "bodyMarkdown": "置信度越高区间越宽，样本量越大区间越窄"
         }
       ],
       "examples": [
         {
-          "id": "zheng-tai-zong-ti-jun-1xsi34",
+          "id": "yi-zhi-shi-de-95-zhi-0cckss",
           "title": "讲解例子",
-          "bodyMarkdown": "正态总体均值方差已知时使用 z 分位点；方差未知时通常使用 t 分位点。"
+          "bodyMarkdown": "σ 已知时 μ 的 95% 置信区间为 X̄±1.96·σ/√n。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "置信区间不是说参数“有某个概率落在已经算出的区间里”，而是构造一种长期覆盖率为 1−α 的随机区间。区间宽度受样本量、置信水平和总体波动影响。\n\n### 解题步骤\n\n1. 选枢轴量\n2. 把参数整理到不等式中\n3. 代入样本并解释置信水平\n\n### 易错点\n\n把置信区间解释成参数在本次区间内的概率是 1−α。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "置信区间是由样本构造的随机区间 [L(X),U(X)]，它以 1−α 的概率包含未知参数。构造方法是找一个枢轴量，用它的分位数反解出参数的范围。\n\n### 解题步骤\n\n1. 选择合适的枢轴量（U、T、χ²、F）\n2. 用分位数写出概率式\n3. 解不等式得到参数区间\n\n### 易错点\n\n端点算错，例如漏掉除以 √n 或用错分位数。"
     },
     {
       "schemaVersion": "1.0",
@@ -729,47 +729,47 @@
       "sectionId": "m1-p3-c7-s5",
       "sectionTitle": "区间估计",
       "title": "单正态总体均值置信区间",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "σ² 已知时用 U=(X̄−μ)/(σ/√n)~N(0,1)，区间为 X̄±z_{α/2}·σ/√n；",
       "tags": [
-        "从概率规律到曲线"
+        "分 σ 已知与未知"
       ],
       "sortOrder": 150,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "format": "latex",
+        "content": "σ 已知：X̄±z_{α/2}σ/√n；σ 未知：X̄±t_{α/2}(n−1)S/√n",
+        "caption": "σ² 已知时用 U=(X̄−μ)/(σ/√n)~N(0,1)，区间为 X̄±z_{α/2}·σ/√n；"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "yi-zhi-x-z-2-n",
+          "title": "σ 已知",
+          "bodyMarkdown": "σ 已知：X̄±z_{α/2}·σ/√n"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "wei-zhi-x-t-2-n-1-s-n",
+          "title": "σ 未知",
+          "bodyMarkdown": "σ 未知：X̄±t_{α/2}(n−1)·S/√n"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "wei-zhi-shi-yong-s-dai-ti-fen-wei-shu-06lc6p",
+          "title": "σ 未知时用 S 代替 σ",
+          "bodyMarkdown": "σ 未知时用 S 代替 σ，分位数改用 t 分布"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "n-16-x-52-s-4-0-05-shi-0gu4y3",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "n=16、X̄=52、S=4、α=0.05 时，区间为 52±2.131×1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "σ² 已知时用 U=(X̄−μ)/(σ/√n)~N(0,1)，区间为 X̄±z_{α/2}·σ/√n；σ² 未知时用 T=(X̄−μ)/(S/√n)~t(n−1)，把 σ 换成 S、z 换成 t 分位数。\n\n### 解题步骤\n\n1. 判断 σ 是否已知\n2. 写出对应的枢轴量\n3. 代入公式并注明置信度\n\n### 易错点\n\nσ 未知时仍用 z 分位数。"
     },
     {
       "schemaVersion": "1.0",
@@ -780,47 +780,47 @@
       "sectionId": "m1-p3-c7-s5",
       "sectionTitle": "区间估计",
       "title": "单正态总体方差置信区间",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "方差的置信区间由 (n−1)S²/σ²~χ²(n−1) 反解得到，两端分别用 χ² 的右、左分位数，因此区间不是关于 S² 对称的。",
       "tags": [
-        "从概率规律到曲线"
+        "用卡方构造"
       ],
       "sortOrder": 160,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "format": "latex",
+        "content": "(n−1)S²/χ²_{α/2}(n−1) ≤ σ² ≤ (n−1)S²/χ²_{1−α/2}(n−1)",
+        "caption": "方差的置信区间由 (n−1)S²/σ²~χ²(n−1) 反解得到，两端分别用 χ² 的右、左分位数，因此区间不是关于 S² 对称的。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "shu-zhou-liang-shi-n-1-s-n-1",
+          "title": "枢轴量是 (n−1)S²/σ² ~ χ²(n−1",
+          "bodyMarkdown": "枢轴量是 (n−1)S²/σ² ~ χ²(n−1)"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "liang-duan-yong-de-zuo-you-fen-wei-shu-08u6n4",
+          "title": "两端用 χ² 的左右分位数",
+          "bodyMarkdown": "两端用 χ² 的左右分位数，位置不能颠倒"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "fen-bu-bu-dui-chen-qu-jian-bu-dui-chen",
+          "title": "χ² 分布不对称",
+          "bodyMarkdown": "χ² 分布不对称，区间不对称"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "n-10-s-4-0-05-shi-cha-9-15fgni",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "n=10、S²=4、α=0.05 时，查 χ²(9) 的 0.025 与 0.975 分位数后代入。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "方差的置信区间由 (n−1)S²/σ²~χ²(n−1) 反解得到，两端分别用 χ² 的右、左分位数，因此区间不是关于 S² 对称的。\n\n### 解题步骤\n\n1. 写出 χ² 枢轴量与概率式\n2. 对 σ² 解不等式\n3. 代入左右分位数\n\n### 易错点\n\n把两个分位数写反，导致区间上下限颠倒。"
     },
     {
       "schemaVersion": "1.0",
@@ -831,47 +831,47 @@
       "sectionId": "m1-p3-c7-s5",
       "sectionTitle": "区间估计",
       "title": "两正态总体参数相关区间估计",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "两总体情形主要估计均值差 μ₁−μ₂ 与方差比 σ₁²/σ₂²：均值差用两个样本均值之差（σ 已知用正态、未知但相等用 t）；方差比用 F 分布。",
       "tags": [
-        "从概率规律到曲线"
+        "均值差与方差比"
       ],
       "sortOrder": 170,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "F=(S₁²/σ₁²)/(S₂²/σ₂²) ~ F(n₁−1, n₂−1)",
+        "caption": "两总体情形主要估计均值差 μ₁−μ₂ 与方差比 σ₁²/σ₂²：均值差用两个样本均值之差（σ 已知用正态、未知但相等用 t）；方差比用 F 分布。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "x-shi-de-wu-pian-gu-ji",
+          "title": "X̄−Ȳ 是 μ₁−μ₂ 的无偏估计",
+          "bodyMarkdown": "X̄−Ȳ 是 μ₁−μ₂ 的无偏估计"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "fang-cha-bi-yong-f-s-s-f-n-1-n-1",
+          "title": "方差比用 F=(S₁²/σ₁²)/(S₂²/σ₂",
+          "bodyMarkdown": "方差比用 F=(S₁²/σ₁²)/(S₂²/σ₂²) ~ F(n₁−1, n₂−1)"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "qian-ti-shi-liang-ge-yang-ben-xiang-hu-0i25px",
+          "title": "前提是两个样本相互独立",
+          "bodyMarkdown": "前提是两个样本相互独立"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "bi-jiao-liang-tiao-1xndh1",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "比较两条生产线的方差是否相当，用 F 分布构造 σ₁²/σ₂² 的置信区间。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "两总体情形主要估计均值差 μ₁−μ₂ 与方差比 σ₁²/σ₂²：均值差用两个样本均值之差（σ 已知用正态、未知但相等用 t）；方差比用 F 分布。\n\n### 解题步骤\n\n1. 确认两样本独立\n2. 选择统计量（U / T / F）\n3. 写出区间并代入数值\n\n### 易错点\n\n把 F 的两个自由度顺序写反。"
     }
   ]
 }

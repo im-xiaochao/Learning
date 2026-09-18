@@ -26,7 +26,7 @@ const GOLDEN = [
   ['一元函数微分学', '复合函数求导', "f′(g(x))g′(x)", '要的是链式法则，不是复合函数的定义'],
   ['一元函数微分学', '分段函数求导', '导数定义', '分界点必须回到导数定义'],
   ['多元函数微分学', '方向导数定义', '∇f', '方向导数 = 梯度点乘单位方向'],
-  ['随机变量的数字特征', '线性相关意义', '相关系数', '概率里的线性相关指 |ρ|=1，不是线代向量组'],
+  ['随机变量的数字特征', '线性相关意义', '|ρ|=1', '概率里的线性相关指 |ρ|=1，不是线代向量组'],
   ['行列式', '二阶、三阶、n 阶行列式', '面积', '行列式应给几何意义或展开定义，不能是高阶导数公式'],
   ['矩阵', '矩阵概念', 'ᵀ', '转置是矩阵运算的基础'],
   // ── 精编内容（data/math/curated.ts）抽查：确保精编层优先于规则层 ──
@@ -102,17 +102,39 @@ for (const [chapterKey, title, need, why] of GOLDEN) {
 }
 
 console.log('\n【精编内容的键必须唯一命中】')
-check('不带「/」的键在全库只对应一个知识点（重名要限定章节）', () => {
-  // curated.ts 的键有两种：`标题` 与 `章节标题/标题`。
-  // 只按标题索引时，像「定义」这种标题全库有 22 处，会把概率的内容套到矩阵/向量上。
+/** 从 curated.ts 里解析出所有精编键（注意：标题本身可能含「/」，如 P(A|B)=P(AB)/P(B)） */
+function curatedKeys() {
   const src = fs.readFileSync(path.join(ROOT, 'data', 'math', 'curated.ts'), 'utf8')
   const body = src.slice(src.indexOf('const PROBABILITY_EVENTS'), src.indexOf('export const CURATED'))
-  const keys = [...body.matchAll(/^  (?:'([^']+)'|([^':\s][^:]*)): \{$/gm)].map((m) => (m[1] ?? m[2]).trim())
+  // 负向字符类必须排除换行：写成 [^:] 会跨行吞掉下一条目（踩过）
+  const keys = [...body.matchAll(/^  (?:'([^']+)'|([^':\n][^:\n]*)): \{$/gm)].map((m) => (m[1] ?? m[2]).trim())
   if (!keys.length) throw new Error('没解析出任何精编键，检查正则')
+  return keys
+}
+
+check('每个精编键都能命中知识点（键写错会静默不生效）', () => {
+  const byTitle = new Set()
+  const byChapterTitle = new Set()
+  const byChapterSectionTitle = new Set()
+  for (const { chapter, kp } of points) {
+    byTitle.add(kp.title)
+    byChapterTitle.add(`${chapter.title}/${kp.title}`)
+    byChapterSectionTitle.add(`${chapter.title}/${kp.sectionTitle}/${kp.title}`)
+  }
+  // 标题里可能自带「/」，所以三种解释任一命中就算合法
+  const dead = curatedKeys().filter(
+    (k) => !byTitle.has(k) && !byChapterTitle.has(k) && !byChapterSectionTitle.has(k),
+  )
+  if (dead.length) throw new Error(`这些键不命中任何知识点，等于白写：${dead.join('、')}`)
+  return true
+})
+
+check('只按标题索引的键在全库唯一（重名必须写成「章节/标题」）', () => {
   const count = new Map()
   for (const { kp } of points) count.set(kp.title, (count.get(kp.title) || 0) + 1)
-  const bad = keys
-    .filter((k) => !k.includes('/'))
+  const byChapterTitle = new Set(points.map((p) => `${p.chapter.title}/${p.kp.title}`))
+  const bad = curatedKeys()
+    .filter((k) => !byChapterTitle.has(k)) // 没写成「章节/标题」的，就是只按标题索引
     .filter((k) => (count.get(k) || 0) > 1)
     .map((k) => `${k}（全库 ${count.get(k)} 处）`)
   if (bad.length) throw new Error(`这些键重名，必须写成「章节/标题」：${bad.join('、')}`)
@@ -138,6 +160,21 @@ check('精编内容确实生效（抽查的摘要不再与他人重复）', () =
   }
   if (missing.length) throw new Error(`抽查的知识点没找到：${missing.join('、')}`)
   if (shared.length) throw new Error(`${shared.join('、')} 的摘要仍与他人重复，精编内容没生效`)
+  return true
+})
+
+console.log('\n【整册收口：概率论 148 个知识点全部精编】')
+check('概率册每个知识点的摘要都互不重复（说明全部来自精编内容）', () => {
+  const prob = points.filter((p) => p.chapter.subjectId === 'probability')
+  const seen = new Map()
+  for (const { kp } of prob) seen.set(kp.summary, (seen.get(kp.summary) || 0) + 1)
+  const dup = [...seen.entries()].filter(([, n]) => n > 1)
+  if (dup.length) {
+    throw new Error(
+      `${prob.length} 个点里还有 ${dup.reduce((a, [, n]) => a + n, 0)} 条的摘要与他人重复：` +
+        dup.slice(0, 3).map(([s]) => s.slice(0, 18)).join(' / '),
+    )
+  }
   return true
 })
 

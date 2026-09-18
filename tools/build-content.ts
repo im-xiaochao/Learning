@@ -477,11 +477,11 @@ function buildCatalog() {
           const sectionTitle = stripNumbering(section.title)
           const items: { title: string; lec: LectureLike }[] = []
           for (const topic of section.intro || []) {
-            items.push({ title: topic, lec: getMathLecture(topic, section.title, chapter.title) })
+            items.push({ title: topic, lec: getMathLecture(topic, sectionTitle, chapter.title) })
             stats.introTopics++
           }
           for (const point of section.points || []) {
-            items.push({ title: point.title, lec: getMathLecture(point.title, section.title, chapter.title) })
+            items.push({ title: point.title, lec: getMathLecture(point.title, sectionTitle, chapter.title) })
             stats.structuredPoints++
           }
           for (const item of items) {

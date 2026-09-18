@@ -15,47 +15,47 @@
       "sectionId": "m1-p3-c3-s1",
       "sectionTitle": "二维随机变量",
       "title": "联合分布函数",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "联合分布函数 F(x,y)=P{X≤x, Y≤y} 是两个变量同时落在左下区域的概率。",
       "tags": [
-        "从概率规律到曲线"
+        "两个变量的累积概率"
       ],
       "sortOrder": 10,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "F(x,y)=P{X≤x, Y≤y}",
+        "caption": "联合分布函数 F(x,y)=P{X≤x, Y≤y} 是两个变量同时落在左下区域的概率。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "f-x-y-p-x-x-y-y-liang-ge-tiao-jian-yao-15dg4l",
+          "title": "F(x,y)=P{X≤x, Y≤y}，两个条件要",
+          "bodyMarkdown": "F(x,y)=P{X≤x, Y≤y}，两个条件要同时成立"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "dui-mei-ge-bian-liang-dou-dan-diao-bu-00gbvl",
+          "title": "对每个变量都单调不减、右连续",
+          "bodyMarkdown": "对每个变量都单调不减、右连续，且边界上 F(−∞,y)=F(x,−∞)=0"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "f-1-bian-jie-zhi-chang-yong-lai-ding-0k8gls",
+          "title": "F(+∞",
+          "bodyMarkdown": "F(+∞,+∞)=1，边界值常用来定待定常数"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "liang-ci-pao-ying-bi-ji-06s9eo",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "两次抛硬币记 X、Y 为两次结果，则 F(1,1)=P{X≤1,Y≤1}=1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "联合分布函数 F(x,y)=P{X≤x, Y≤y} 是两个变量同时落在左下区域的概率。它把一维的累积思想推广到二维：离散型对应双重求和，连续型对应二重积分。\n\n### 解题步骤\n\n1. 写出 F(x,y) 的定义式\n2. 离散型双重求和、连续型二重积分\n3. 用边界条件验算\n\n### 易错点\n\n把 F(x,y) 当成 P{X≤x}·P{Y≤y}——只有 X、Y 独立时才能这样拆。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p3-c3-s1",
       "sectionTitle": "二维随机变量",
       "title": "联合分布律",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "联合分布律是 (X,Y) 取各对值的概率表：P{X=xᵢ, Y=yⱼ}=pᵢⱼ，要求每个 pᵢⱼ 非负且总和为 1。",
       "tags": [
-        "从概率规律到曲线"
+        "离散型的二维概率表"
       ],
       "sortOrder": 20,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "P{X=xᵢ, Y=yⱼ}=pᵢⱼ，ΣᵢΣⱼpᵢⱼ=1",
+        "caption": "联合分布律是 (X,Y) 取各对值的概率表：P{X=xᵢ, Y=yⱼ}=pᵢⱼ，要求每个 pᵢⱼ 非负且总和为 1。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "p-0-qie-suo-you-p-zhi-he-deng-yu-1",
+          "title": "pᵢⱼ≥0 且所有 pᵢⱼ 之和等于 1",
+          "bodyMarkdown": "pᵢⱼ≥0 且所有 pᵢⱼ 之和等于 1"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "xing-he-lie-he-fen-bie-shi-x-y-de-bian-0junwz",
+          "title": "行和、列和分别是 X、Y 的边缘分布律",
+          "bodyMarkdown": "行和、列和分别是 X、Y 的边缘分布律"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "qiu-ren-yi-shi-jian-de-gai-l-jiu-shi-ba-0em75t",
+          "title": "求任意事件的概率就是把对应的 pᵢⱼ 相加",
+          "bodyMarkdown": "求任意事件的概率就是把对应的 pᵢⱼ 相加"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "liang-ci-pao-ying-bi-x-0r87ev",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "两次抛硬币，(X,Y) 的四对取值各为 1/4，总和为 1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "联合分布律是 (X,Y) 取各对值的概率表：P{X=xᵢ, Y=yⱼ}=pᵢⱼ，要求每个 pᵢⱼ 非负且总和为 1。它是二维离散型随机变量的完整描述。\n\n### 解题步骤\n\n1. 列出所有取值对\n2. 逐对计算概率\n3. 用总和为 1 验算\n\n### 易错点\n\n只列了部分取值对，导致概率之和小于 1。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p3-c3-s1",
       "sectionTitle": "二维随机变量",
       "title": "联合密度",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "联合密度 f(x,y) 满足非负且全平面二重积分为 1，区域 D 上的概率等于 f 在 D 上的二重积分，它描述概率在平面上的分布密度。",
       "tags": [
-        "从概率规律到曲线"
+        "二维连续型的密度"
       ],
       "sortOrder": 30,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "P{(X,Y)∈D}=∬_D f(x,y)dxdy",
+        "caption": "联合密度 f(x,y) 满足非负且全平面二重积分为 1，区域 D 上的概率等于 f 在 D 上的二重积分，它描述概率在平面上的分布密度。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "f-x-y-0-qie-f-x-y-dxdy-1",
+          "title": "f(x,y)≥0，且 ∬f(x,y)dxdy=1",
+          "bodyMarkdown": "f(x,y)≥0，且 ∬f(x,y)dxdy=1"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "p-x-y-d-d-f-x-y-dxdy",
+          "title": "P{(X",
+          "bodyMarkdown": "P{(X,Y)∈D}=∬_D f(x,y)dxdy"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "mi-du-zhi-ben-shen-bu-shi-gai-l-mou-0wz7tq",
+          "title": "密度值本身不是概率",
+          "bodyMarkdown": "密度值本身不是概率，某点的密度没有概率意义"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "dan-wei-yuan-nei-f-1-0ibn0f",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "单位圆内 f=1/π 时，∬f=1 成立，说明系数正确。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "联合密度 f(x,y) 满足非负且全平面二重积分为 1，区域 D 上的概率等于 f 在 D 上的二重积分，它描述概率在平面上的分布密度。\n\n### 解题步骤\n\n1. 用归一化条件定出常数\n2. 把事件画成平面区域\n3. 在该区域上做二重积分\n\n### 易错点\n\n把 f(x₀,y₀) 当成 P{X=x₀,Y=y₀}——连续型单点概率为 0。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p3-c3-s2",
       "sectionTitle": "边缘分布",
       "title": "离散情形求和",
-      "summary": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。",
+      "summary": "求离散型的边缘分布律就是把联合分布律按行或按列求和：X 的边缘分布是每一行的和，Y 的是每一列的和。",
       "tags": [
-        "同时描述两个随机量"
+        "边缘分布靠行和列和"
       ],
       "sortOrder": 40,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "F(x,y)=P(X≤x,Y≤y)；独立时 f₍X,Y₎=fₓfᵧ",
-        "caption": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。"
+        "content": "P{X=xᵢ}=Σⱼpᵢⱼ，P{Y=yⱼ}=Σᵢpᵢⱼ",
+        "caption": "求离散型的边缘分布律就是把联合分布律按行或按列求和：X 的边缘分布是每一行的和，Y 的是每一列的和。"
       },
       "keyPoints": [
         {
-          "id": "li-san-bian-yuan-fen-bu-yong-qiu-he-0t9dvx",
-          "title": "离散边缘分布用求和",
-          "bodyMarkdown": "离散边缘分布用求和，连续边缘分布用积分"
+          "id": "p-x-x-p-an-xing-qiu-he-p-y-y-p-an-lie-1297iu",
+          "title": "P{X=xᵢ}=Σⱼpᵢⱼ（按行求和）",
+          "bodyMarkdown": "P{X=xᵢ}=Σⱼpᵢⱼ（按行求和），P{Y=yⱼ}=Σᵢpᵢⱼ（按列求和）"
         },
         {
-          "id": "du-li-lian-he-bian-yuan-cheng-ji",
-          "title": "独立 ⇔ 联合 = 边缘乘积",
-          "bodyMarkdown": "独立 ⇔ 联合 = 边缘乘积"
+          "id": "bian-yuan-fen-bu-you-lian-he-fen-bu-wei-0omdnd",
+          "title": "边缘分布由联合分布唯一决定",
+          "bodyMarkdown": "边缘分布由联合分布唯一决定"
         },
         {
-          "id": "he-de-fen-bu-chang-tong-guo-juan-ji-huo-0306go",
-          "title": "和的分布常通过卷积或分布函数法得到",
-          "bodyMarkdown": "和的分布常通过卷积或分布函数法得到"
+          "id": "fan-guo-lai-bu-cheng-li-xiang-tong-de-1qg09h",
+          "title": "反过来不成立",
+          "bodyMarkdown": "反过来不成立：相同的边缘分布可以对应不同的联合分布"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-y-du-li-e-x-y-e-x-028z3a",
+          "id": "lian-he-fen-bu-l-ge-140kkc",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X、Y 独立，E(X+Y)=E(X)+E(Y)，而 X+Y 的密度可用卷积计算。"
+          "bodyMarkdown": "联合分布律各行均为 (1/4,1/4) 时，两个边缘分布都是 (1/2,1/2)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。独立时联合分布可以拆成边缘分布的乘积。\n\n### 解题步骤\n\n1. 写联合对象与支持区域\n2. 求和/积分得到边缘\n3. 按乘积关系检查独立性\n\n### 易错点\n\n联合密度的积分区域不是整个平面时，边缘积分上下限要随区域变化。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "求离散型的边缘分布律就是把联合分布律按行或按列求和：X 的边缘分布是每一行的和，Y 的是每一列的和。\n\n### 解题步骤\n\n1. 把联合分布律写成表格\n2. 按行或按列求和\n3. 检查边缘分布之和为 1\n\n### 易错点\n\n以为边缘分布能反推出联合分布——信息量不够。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p3-c3-s2",
       "sectionTitle": "边缘分布",
       "title": "连续情形积分",
-      "summary": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。",
+      "summary": "连续型的边缘密度是把联合密度对另一个变量积分：f_X(x)=∫f(x,y)dy。",
       "tags": [
-        "同时描述两个随机量"
+        "边缘密度靠积分"
       ],
       "sortOrder": 50,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "F(x,y)=P(X≤x,Y≤y)；独立时 f₍X,Y₎=fₓfᵧ",
-        "caption": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。"
+        "content": "f_X(x)=∫₋∞^∞f(x,y)dy",
+        "caption": "连续型的边缘密度是把联合密度对另一个变量积分：f_X(x)=∫f(x,y)dy。"
       },
       "keyPoints": [
         {
-          "id": "li-san-bian-yuan-fen-bu-yong-qiu-he-0t9dvx",
-          "title": "离散边缘分布用求和",
-          "bodyMarkdown": "离散边缘分布用求和，连续边缘分布用积分"
+          "id": "f-x-x-f-x-y-dy-f-y-y-f-x-y-dx",
+          "title": "f_X(x)=∫₋∞^∞f(x",
+          "bodyMarkdown": "f_X(x)=∫₋∞^∞f(x,y)dy，f_Y(y)=∫₋∞^∞f(x,y)dx"
         },
         {
-          "id": "du-li-lian-he-bian-yuan-cheng-ji",
-          "title": "独立 ⇔ 联合 = 边缘乘积",
-          "bodyMarkdown": "独立 ⇔ 联合 = 边缘乘积"
+          "id": "ji-fen-xian-yao-an-gu-ding-x-shi-y-de-1jfmgt",
+          "title": "积分限要按「固定 x 时 y 的取值范围」写",
+          "bodyMarkdown": "积分限要按「固定 x 时 y 的取值范围」写"
         },
         {
-          "id": "he-de-fen-bu-chang-tong-guo-juan-ji-huo-0306go",
-          "title": "和的分布常通过卷积或分布函数法得到",
-          "bodyMarkdown": "和的分布常通过卷积或分布函数法得到"
+          "id": "bian-yuan-mi-du-tong-yang-man-zu-ji-fen-1sw6yp",
+          "title": "边缘密度同样满足积分为 1",
+          "bodyMarkdown": "边缘密度同样满足积分为 1"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-y-du-li-e-x-y-e-x-028z3a",
+          "id": "f-x-y-1-0-x-1-0-y-1-shi-14mx2u",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X、Y 独立，E(X+Y)=E(X)+E(Y)，而 X+Y 的密度可用卷积计算。"
+          "bodyMarkdown": "f(x,y)=1（0<x<1,0<y<1）时，f_X(x)=∫₀¹1dy=1（0<x<1）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。独立时联合分布可以拆成边缘分布的乘积。\n\n### 解题步骤\n\n1. 写联合对象与支持区域\n2. 求和/积分得到边缘\n3. 按乘积关系检查独立性\n\n### 易错点\n\n联合密度的积分区域不是整个平面时，边缘积分上下限要随区域变化。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "连续型的边缘密度是把联合密度对另一个变量积分：f_X(x)=∫f(x,y)dy。关键是写清积分上下限，而上下限由联合密度非零的区域决定。\n\n### 解题步骤\n\n1. 画出联合密度非零的区域\n2. 固定 x 写出 y 的范围\n3. 对 y 积分得到 f_X(x)\n\n### 易错点\n\n积分限写成常数而不是关于 x 的表达式，三角形区域必错。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p3-c3-s3",
       "sectionTitle": "条件分布",
       "title": "条件分布律",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "条件分布律是已知 Y=yⱼ 时 X 的分布：P{X=xᵢ|Y=yⱼ}=pᵢⱼ/P{Y=yⱼ}，分母是 Y 的边缘概率。",
       "tags": [
-        "从概率规律到曲线"
+        "已知一个求另一个"
       ],
       "sortOrder": 60,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "P{X=xᵢ|Y=yⱼ}=pᵢⱼ/P{Y=yⱼ}",
+        "caption": "条件分布律是已知 Y=yⱼ 时 X 的分布：P{X=xᵢ|Y=yⱼ}=pᵢⱼ/P{Y=yⱼ}，分母是 Y 的边缘概率。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "p-x-x-y-y-p-p-y-y-fen-mu-bi-xu-da-yu-0",
+          "title": "P{X=xᵢ|Y=yⱼ}=pᵢⱼ/P{Y=yⱼ}",
+          "bodyMarkdown": "P{X=xᵢ|Y=yⱼ}=pᵢⱼ/P{Y=yⱼ}，分母必须大于 0"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "tiao-jian-fen-bu-l-dui-x-qiu-he-bi-xu-10g9mk",
+          "title": "条件分布律对 xᵢ 求和必须为 1",
+          "bodyMarkdown": "条件分布律对 xᵢ 求和必须为 1"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "tiao-jian-fen-bu-yu-bian-yuan-fen-bu-bu-100zuw",
+          "title": "条件分布与边缘分布不同",
+          "bodyMarkdown": "条件分布与边缘分布不同，方向也不能颠倒"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "ge-hang-jun-wei-1-4-1-4-1rsi5k",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "各行均为 (1/4,1/4) 时，P{X=0|Y=0}=(1/4)/(1/2)=1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "条件分布律是已知 Y=yⱼ 时 X 的分布：P{X=xᵢ|Y=yⱼ}=pᵢⱼ/P{Y=yⱼ}，分母是 Y 的边缘概率。它相当于把样本空间压缩到表格里的一行（或一列）。\n\n### 解题步骤\n\n1. 先算分母（Y 的边缘概率）\n2. 把该行的各概率除以分母\n3. 检查求和是否为 1\n\n### 易错点\n\n分母误用 X 的边缘概率，导致条件分布之和不为 1。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m1-p3-c3-s3",
       "sectionTitle": "条件分布",
       "title": "条件密度",
-      "summary": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。",
+      "summary": "连续型的条件密度是 f_{X|Y}(x|y)=f(x,y)/f_Y(y)（要求 f_Y(y)>0）。",
       "tags": [
-        "同时描述两个随机量"
+        "连续型的条件密度"
       ],
       "sortOrder": 70,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "F(x,y)=P(X≤x,Y≤y)；独立时 f₍X,Y₎=fₓfᵧ",
-        "caption": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。"
+        "format": "latex",
+        "content": "f_{X|Y}(x|y)=f(x,y)/f_Y(y)",
+        "caption": "连续型的条件密度是 f_{X|Y}(x|y)=f(x,y)/f_Y(y)（要求 f_Y(y)>0）。"
       },
       "keyPoints": [
         {
-          "id": "li-san-bian-yuan-fen-bu-yong-qiu-he-0t9dvx",
-          "title": "离散边缘分布用求和",
-          "bodyMarkdown": "离散边缘分布用求和，连续边缘分布用积分"
+          "id": "f-x-y-x-y-f-x-y-f-y-y-fen-mu-shi-y-de-0zplv1",
+          "title": "f_{X|Y}(x|y)=f(x",
+          "bodyMarkdown": "f_{X|Y}(x|y)=f(x,y)/f_Y(y)，分母是 Y 的边缘密度"
         },
         {
-          "id": "du-li-lian-he-bian-yuan-cheng-ji",
-          "title": "独立 ⇔ 联合 = 边缘乘积",
-          "bodyMarkdown": "独立 ⇔ 联合 = 边缘乘积"
+          "id": "tiao-jian-mi-du-dui-x-ji-fen-wei-1",
+          "title": "条件密度对 x 积分为 1",
+          "bodyMarkdown": "条件密度对 x 积分为 1"
         },
         {
-          "id": "he-de-fen-bu-chang-tong-guo-juan-ji-huo-0306go",
-          "title": "和的分布常通过卷积或分布函数法得到",
-          "bodyMarkdown": "和的分布常通过卷积或分布函数法得到"
+          "id": "x-yu-y-du-li-shi-tiao-jian-mi-du-tui-11sh1a",
+          "title": "X 与 Y 独立时条件密度退化为边缘密度",
+          "bodyMarkdown": "X 与 Y 独立时条件密度退化为边缘密度"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-y-du-li-e-x-y-e-x-028z3a",
+          "id": "f-x-y-1-0-x-y-1-shi-f-x-0u4bfi",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X、Y 独立，E(X+Y)=E(X)+E(Y)，而 X+Y 的密度可用卷积计算。"
+          "bodyMarkdown": "f(x,y)=1（0<x,y<1）时 f_{X|Y}(x|y)=1，与 f_X(x)=1 相同，说明独立。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。独立时联合分布可以拆成边缘分布的乘积。\n\n### 解题步骤\n\n1. 写联合对象与支持区域\n2. 求和/积分得到边缘\n3. 按乘积关系检查独立性\n\n### 易错点\n\n联合密度的积分区域不是整个平面时，边缘积分上下限要随区域变化。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "连续型的条件密度是 f_{X|Y}(x|y)=f(x,y)/f_Y(y)（要求 f_Y(y)>0）。它与条件概率的定义式一一对应，只是把概率换成了密度。\n\n### 解题步骤\n\n1. 先求边缘密度 f_Y(y)\n2. 用联合密度除以它\n3. 检查对 x 的积分是否为 1\n\n### 易错点\n\n分母写成联合密度，或忘记注明 y 的取值范围。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m1-p3-c3-s4",
       "sectionTitle": "独立性",
       "title": "联合分布分解条件",
-      "summary": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。",
+      "summary": "X 与 Y 独立当且仅当联合分布等于边缘分布之积：离散型 P{X=xᵢ,Y=yⱼ}=P{X=xᵢ}P{Y=yⱼ}，连续型 f(x,y)=f_X(x)f_Y(y)。",
       "tags": [
-        "同时描述两个随机量"
+        "独立就是能拆开"
       ],
       "sortOrder": 80,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "F(x,y)=P(X≤x,Y≤y)；独立时 f₍X,Y₎=fₓfᵧ",
-        "caption": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。"
+        "content": "f(x,y)=f_X(x)f_Y(y)；pᵢⱼ=pᵢ·p·ⱼ",
+        "caption": "X 与 Y 独立当且仅当联合分布等于边缘分布之积：离散型 P{X=xᵢ,Y=yⱼ}=P{X=xᵢ}P{Y=yⱼ}"
       },
       "keyPoints": [
         {
-          "id": "li-san-bian-yuan-fen-bu-yong-qiu-he-0t9dvx",
-          "title": "离散边缘分布用求和",
-          "bodyMarkdown": "离散边缘分布用求和，连续边缘分布用积分"
+          "id": "du-li-lian-he-fen-bu-bian-yuan-fen-bu-0561q1",
+          "title": "独立 ⇔ 联合分布 = 边缘分布的乘积",
+          "bodyMarkdown": "独立 ⇔ 联合分布 = 边缘分布的乘积"
         },
         {
-          "id": "du-li-lian-he-bian-yuan-cheng-ji",
-          "title": "独立 ⇔ 联合 = 边缘乘积",
-          "bodyMarkdown": "独立 ⇔ 联合 = 边缘乘积"
+          "id": "li-san-xing-yu-lian-xu-xing-ge-you-yi-0g64ih",
+          "title": "离散型与连续型各有一套写法",
+          "bodyMarkdown": "离散型与连续型各有一套写法，本质相同"
         },
         {
-          "id": "he-de-fen-bu-chang-tong-guo-juan-ji-huo-0306go",
-          "title": "和的分布常通过卷积或分布函数法得到",
-          "bodyMarkdown": "和的分布常通过卷积或分布函数法得到"
+          "id": "zhi-yao-you-yi-dui-qu-zhi-bu-man-zu-0i487h",
+          "title": "只要有一对取值不满足乘积式",
+          "bodyMarkdown": "只要有一对取值不满足乘积式，就不独立"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-y-du-li-e-x-y-e-x-028z3a",
+          "id": "f-x-y-1-1-1-f-x-x-f-y-y-1rjzir",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X、Y 独立，E(X+Y)=E(X)+E(Y)，而 X+Y 的密度可用卷积计算。"
+          "bodyMarkdown": "f(x,y)=1=1×1=f_X(x)f_Y(y)（0<x,y<1），故 X、Y 独立。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。独立时联合分布可以拆成边缘分布的乘积。\n\n### 解题步骤\n\n1. 写联合对象与支持区域\n2. 求和/积分得到边缘\n3. 按乘积关系检查独立性\n\n### 易错点\n\n联合密度的积分区域不是整个平面时，边缘积分上下限要随区域变化。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "X 与 Y 独立当且仅当联合分布等于边缘分布之积：离散型 P{X=xᵢ,Y=yⱼ}=P{X=xᵢ}P{Y=yⱼ}，连续型 f(x,y)=f_X(x)f_Y(y)。判断独立就验这一条。\n\n### 解题步骤\n\n1. 分别求出两个边缘分布\n2. 把两个边缘分布相乘\n3. 与联合分布逐点比较\n\n### 易错点\n\n只验一个取值点就断言独立，或把「边缘分布相同」当成独立。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m1-p3-c3-s5",
       "sectionTitle": "二维均匀分布与二维正态分布",
       "title": "基本概念",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "二维均匀分布在区域 D 上密度为常数 1/S_D，概率就是面积比；二维正态分布由五个参数确定，密度曲面呈钟形，等值线是椭圆。",
       "tags": [
-        "从概率规律到曲线"
+        "两个常用二维分布"
       ],
       "sortOrder": 90,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "均匀：f=1/S_D（(x,y)∈D）；正态：参数 (μ₁,μ₂,σ₁²,σ₂²,ρ)",
+        "caption": "二维均匀分布在区域 D 上密度为常数 1/S_D，概率就是面积比；二维正态分布由五个参数确定，密度曲面呈钟形，等值线是椭圆。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "er-wei-jun-yun-fen-bu-gai-l-deng-yu-0tsuvh",
+          "title": "二维均匀分布",
+          "bodyMarkdown": "二维均匀分布：概率等于面积比，密度为区域面积的倒数"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "er-wei-zheng-tai-you-wu-ge-can-shu-que-0zcpbs",
+          "title": "二维正态由 μ₁、μ₂、σ₁²、σ₂²、ρ 五个",
+          "bodyMarkdown": "二维正态由 μ₁、μ₂、σ₁²、σ₂²、ρ 五个参数确定"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "jue-ding-deng-zhi-xian-tuo-yuan-de-qing-0xbf36",
+          "title": "ρ 决定等值线椭圆的倾斜方向与扁平程度",
+          "bodyMarkdown": "ρ 决定等值线椭圆的倾斜方向与扁平程度"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "zai-dan-wei-yuan-nei-17gxi3",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "在单位圆内均匀取点，落在半径 1/2 的同心圆内的概率 =(π/4)/π=1/4。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "二维均匀分布在区域 D 上密度为常数 1/S_D，概率就是面积比；二维正态分布由五个参数确定，密度曲面呈钟形，等值线是椭圆。\n\n### 解题步骤\n\n1. 判断是均匀分布还是正态分布\n2. 均匀分布按面积比算概率\n3. 正态分布按参数写出密度或直接引用结论\n\n### 易错点\n\n以为二维均匀分布等价于「两个变量各自均匀且独立」——正方形区域成立，一般区域不成立。"
     },
     {
       "schemaVersion": "1.0",
@@ -474,47 +474,47 @@
       "sectionId": "m1-p3-c3-s5",
       "sectionTitle": "二维均匀分布与二维正态分布",
       "title": "二维正态的相关性与独立性特点",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "二维正态分布有一条特别好的性质：X 与 Y 不相关（ρ=0）与它们独立是等价的。",
       "tags": [
-        "从概率规律到曲线"
+        "ρ=0 就独立"
       ],
       "sortOrder": 100,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "二维正态：ρ=0 ⇔ 独立",
+        "caption": "二维正态分布有一条特别好的性质：X 与 Y 不相关（ρ=0）与它们独立是等价的。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "er-wei-zheng-tai-xia-0-x-yu-y-du-li",
+          "title": "二维正态下 ρ=0 ⇔ X 与 Y 独立",
+          "bodyMarkdown": "二维正态下 ρ=0 ⇔ X 与 Y 独立"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "liang-ge-bian-yuan-fen-bu-reng-shi-05ugws",
+          "title": "两个边缘分布仍是正态",
+          "bodyMarkdown": "两个边缘分布仍是正态，参数就是各自的 μ 与 σ²"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "x-y-de-xian-xing-zu-he-reng-fu-cong-19tsw0",
+          "title": "X、Y 的线性组合仍服从正态分布",
+          "bodyMarkdown": "X、Y 的线性组合仍服从正态分布"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "x-y-fu-cong-er-wei-0zx63u",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "(X,Y) 服从二维正态且 ρ=0 时，f(x,y)=f_X(x)f_Y(y) 成立。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "二维正态分布有一条特别好的性质：X 与 Y 不相关（ρ=0）与它们独立是等价的。这一点在其它分布里并不成立，是二维正态最常考的结论。\n\n### 解题步骤\n\n1. 先确认联合分布是二维正态\n2. 看 ρ 是否为 0 判断独立性\n3. 需要时利用线性组合的正态性\n\n### 易错点\n\n把「ρ=0 ⇒ 独立」用到非正态分布上——一般只能得到「不相关」。"
     },
     {
       "schemaVersion": "1.0",
@@ -525,47 +525,47 @@
       "sectionId": "m1-p3-c3-s6",
       "sectionTitle": "二维随机变量函数分布",
       "title": "X+Y",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "求 Z=X+Y 的分布用分布函数法或卷积公式 f_Z(z)=∫f(x,z−x)dx。",
       "tags": [
-        "从概率规律到曲线"
+        "和的分布"
       ],
       "sortOrder": 110,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "f_Z(z)=∫f(x,z−x)dx",
+        "caption": "求 Z=X+Y 的分布用分布函数法或卷积公式 f_Z(z)=∫f(x,z−x)dx。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "f-z-z-f-x-z-x-dx-ji-fen-xian-you-lian-0to4bb",
+          "title": "f_Z(z)=∫₋∞^∞f(x",
+          "bodyMarkdown": "f_Z(z)=∫₋∞^∞f(x,z−x)dx，积分限由联合密度非零区域决定"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "du-li-shi-ke-xie-cheng-f-z-z-f-x-x-f-y-0v5ceq",
+          "title": "独立时可写成 f_Z(z)=∫f_X(x)f_Y",
+          "bodyMarkdown": "独立时可写成 f_Z(z)=∫f_X(x)f_Y(z−x)dx"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "du-li-zheng-tai-bian-liang-zhi-he-reng-01w2ms",
+          "title": "独立正态变量之和仍服从正态",
+          "bodyMarkdown": "独立正态变量之和仍服从正态，参数相加"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "liang-ge-du-li-biao-0cjrcp",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "两个独立标准正态变量之和服从 N(0,2)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "求 Z=X+Y 的分布用分布函数法或卷积公式 f_Z(z)=∫f(x,z−x)dx。X、Y 独立时公式最好用；不独立时要先写出联合密度再代入。\n\n### 解题步骤\n\n1. 写出联合密度\n2. 用 z=x+y 把被积函数换成含 z 的形式\n3. 确定 x 的积分限（关键一步）\n\n### 易错点\n\n积分限直接写 ±∞，忽略联合密度只在某个区域内非零。"
     },
     {
       "schemaVersion": "1.0",
@@ -576,47 +576,47 @@
       "sectionId": "m1-p3-c3-s6",
       "sectionTitle": "二维随机变量函数分布",
       "title": "最大值/最小值",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "求 M=max(X,Y) 或 N=min(X,Y) 的分布用分布函数法：F_M(z)=P{X≤z, Y≤z}，F_N(z)=1−P{X>z, Y>z}。",
       "tags": [
-        "从概率规律到曲线"
+        "极值的分布"
       ],
       "sortOrder": 120,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "F_max(z)=F_X(z)F_Y(z)；F_min(z)=1−[1−F_X(z)][1−F_Y(z)]",
+        "caption": "求 M=max(X,Y) 或 N=min(X,Y) 的分布用分布函数法：F_M(z)=P{X≤z, Y≤z}"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "f-max-z-p-x-z-y-z-du-li-shi-deng-yu-10hiz0",
+          "title": "F_max(z)=P{X≤z",
+          "bodyMarkdown": "F_max(z)=P{X≤z,Y≤z}，独立时等于两个分布函数相乘"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "f-min-z-1-1-f-x-z-1-f-y-z-du-li-shi",
+          "title": "F_min(z)=1−[1−F_X(z)][1−",
+          "bodyMarkdown": "F_min(z)=1−[1−F_X(z)][1−F_Y(z)]（独立时）"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "n-ge-du-li-tong-fen-bu-bian-liang-de-ji-0ulv24",
+          "title": "n 个独立同分布变量的极值可同样推广",
+          "bodyMarkdown": "n 个独立同分布变量的极值可同样推广"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "liang-ge-du-li-u-0-1-04h81o",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "两个独立 U(0,1) 变量的最大值：F_M(z)=z²，密度为 2z。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "求 M=max(X,Y) 或 N=min(X,Y) 的分布用分布函数法：F_M(z)=P{X≤z, Y≤z}，F_N(z)=1−P{X>z, Y>z}。若独立，这些概率可以直接拆成乘积。\n\n### 解题步骤\n\n1. 写出极值的分布函数定义式\n2. 把事件化成关于各变量的条件\n3. 独立时用乘积简化\n\n### 易错点\n\n把「最大值不超过 z」错写成「至少有一个不超过 z」。"
     },
     {
       "schemaVersion": "1.0",
@@ -627,47 +627,47 @@
       "sectionId": "m1-p3-c3-s6",
       "sectionTitle": "二维随机变量函数分布",
       "title": "卷积思想",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "卷积把「两个独立变量之和的密度」写成两个密度的积分叠加：f_Z(z)=∫f_X(x)f_Y(z−x)dx。",
       "tags": [
-        "从概率规律到曲线"
+        "独立和的密度叠加"
       ],
       "sortOrder": 130,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "format": "latex",
+        "content": "f_{X+Y}(z)=∫f_X(x)f_Y(z−x)dx",
+        "caption": "卷积把「两个独立变量之和的密度」写成两个密度的积分叠加：f_Z(z)=∫f_X(x)f_Y(z−x)dx。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "juan-ji-zhi-dui-du-li-bian-liang-zhi-1a28tm",
+          "title": "卷积只对独立变量直接使用",
+          "bodyMarkdown": "卷积只对独立变量直接使用，不独立要回到联合密度"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "ji-fen-xian-you-liang-ge-mi-du-tong-shi-0wkuhh",
+          "title": "积分限由「两个密度同时非零」决定",
+          "bodyMarkdown": "积分限由「两个密度同时非零」决定"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "chang-jian-jie-lun-zheng-tai-bo-song-156nto",
+          "title": "常见结论",
+          "bodyMarkdown": "常见结论：正态、泊松、Γ 分布的和仍属同族"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "liang-ge-du-li-jun-yun-1wlj8x",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "两个独立均匀分布之和的密度呈三角形。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "卷积把「两个独立变量之和的密度」写成两个密度的积分叠加：f_Z(z)=∫f_X(x)f_Y(z−x)dx。直观上是把一条密度曲线沿另一条加权滑动后叠加。\n\n### 解题步骤\n\n1. 确认两个变量独立\n2. 写出两个密度\n3. 按 z−x 的关系确定积分限并积分\n\n### 易错点\n\n变量不独立时也套卷积公式，忽略它们之间的相关性。"
     }
   ]
 }

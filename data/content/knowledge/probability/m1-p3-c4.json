@@ -15,47 +15,47 @@
       "sectionId": "m1-p3-c4-s1",
       "sectionTitle": "数学期望",
       "title": "离散型期望",
-      "summary": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。",
+      "summary": "离散型期望 E(X)=Σxᵢpᵢ，是按概率加权的平均值，反映取值的中心位置。",
       "tags": [
-        "长期加权平均"
+        "概率加权的平均"
       ],
       "sortOrder": 10,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(X)=Σxᵢpᵢ；E(X)=∫xf(x)dx",
-        "caption": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。"
+        "content": "E(X)=Σᵢ xᵢpᵢ",
+        "caption": "离散型期望 E(X)=Σxᵢpᵢ，是按概率加权的平均值，反映取值的中心位置。"
       },
       "keyPoints": [
         {
-          "id": "li-san-xing-yong-qiu-he-lian-xu-xing-0adlfx",
-          "title": "离散型用求和",
-          "bodyMarkdown": "离散型用求和，连续型用积分"
+          "id": "e-x-x-p-quan-zhong-jiu-shi-ge-qu-zhi-de-0s8e3a",
+          "title": "E(X)=Σxᵢpᵢ",
+          "bodyMarkdown": "E(X)=Σxᵢpᵢ，权重就是各取值的概率"
         },
         {
-          "id": "e-ax-by-ae-x-be-y-bu-yao-qiu-du-li",
-          "title": "E(aX+bY)=aE(X)+bE(Y) 不要求",
-          "bodyMarkdown": "E(aX+bY)=aE(X)+bE(Y) 不要求独立"
+          "id": "qi-wang-bu-yi-ding-shi-x-de-ke-neng-qu-0l82gd",
+          "title": "期望不一定是 X 的可能取值（骰子的期望是 3.",
+          "bodyMarkdown": "期望不一定是 X 的可能取值（骰子的期望是 3.5）"
         },
         {
-          "id": "qi-wang-cun-zai-xu-yao-xiang-ying-ji-1f9i67",
-          "title": "期望存在需要相应积分/级数收敛",
-          "bodyMarkdown": "期望存在需要相应积分/级数收敛"
+          "id": "ji-shu-bu-jue-dui-shou-lian-shi-qi-wang-021lma",
+          "title": "级数不绝对收敛时",
+          "bodyMarkdown": "级数不绝对收敛时，期望不存在"
         }
       ],
       "examples": [
         {
-          "id": "gong-ping-tou-zi-de-qi-1d93z7",
+          "id": "zhi-tou-zi-e-x-1-2-6-6-1x353b",
           "title": "讲解例子",
-          "bodyMarkdown": "公平骰子的期望为 3.5，虽然一次投掷不可能出现 3.5。"
+          "bodyMarkdown": "掷骰子：E(X)=(1+2+…+6)/6=3.5。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。它可以落在实际取值之外；对函数的期望可以直接对函数值加权，不必先求函数分布。\n\n### 解题步骤\n\n1. 写出取值与概率/密度\n2. 对随机变量或函数加权\n3. 利用线性性质化简\n\n### 易错点\n\n把期望理解成必然会出现的结果，或忽略期望不存在的情况。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "离散型期望 E(X)=Σxᵢpᵢ，是按概率加权的平均值，反映取值的中心位置。它要求级数绝对收敛，否则期望不存在。\n\n### 解题步骤\n\n1. 写出分布律\n2. 逐项相乘后求和\n3. 检查结果是否落在取值范围附近\n\n### 易错点\n\n把期望当成「最可能出现的值」——它是按概率加权的中心位置。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p3-c4-s1",
       "sectionTitle": "数学期望",
       "title": "连续型期望",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "连续型期望 E(X)=∫xf(x)dx，把求和换成积分。积分区间由密度的非零范围决定，同样要求积分绝对收敛。",
       "tags": [
-        "从概率规律到曲线"
+        "密度加权的积分"
       ],
       "sortOrder": 20,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "E(X)=∫₋∞^∞x f(x)dx",
+        "caption": "连续型期望 E(X)=∫xf(x)dx，把求和换成积分。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "e-x-x-f-x-dx",
+          "title": "E(X)=∫₋∞^∞x f(x)dx",
+          "bodyMarkdown": "E(X)=∫₋∞^∞x f(x)dx"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "ji-fen-xian-an-mi-du-fei-ling-de-qu-1kq4u9",
+          "title": "积分限按密度非零的区间写",
+          "bodyMarkdown": "积分限按密度非零的区间写，不要一律写 ±∞"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "guan-yu-yuan-dian-dui-chen-de-mi-du-qi-0zmv3t",
+          "title": "关于原点对称的密度",
+          "bodyMarkdown": "关于原点对称的密度，其期望为 0（若存在）"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "x-u-0-1-e-x-x-dx-1-2",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "X~U(0,1)：E(X)=∫₀¹x dx=1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "连续型期望 E(X)=∫xf(x)dx，把求和换成积分。积分区间由密度的非零范围决定，同样要求积分绝对收敛。\n\n### 解题步骤\n\n1. 写出密度\n2. 按非零区间列出积分式\n3. 计算并检验结果是否合理\n\n### 易错点\n\n忽略密度在区间外取 0，把积分限写错。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p3-c4-s1",
       "sectionTitle": "数学期望",
       "title": "随机变量函数期望",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "求 g(X) 的期望不必先求 g(X) 的分布，直接对原分布加权即可：E[g(X)]=Σg(xᵢ)pᵢ 或 ∫g(x)f(x)dx，这一步省掉了求分布的麻烦。",
       "tags": [
-        "从概率规律到曲线"
+        "不必先求分布"
       ],
       "sortOrder": 30,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "E[g(X)]=∫g(x)f(x)dx",
+        "caption": "求 g(X) 的期望不必先求 g(X) 的分布，直接对原分布加权即可：E[g(X)]=Σg(xᵢ)pᵢ 或 ∫g(x)f"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "e-g-x-g-x-p-li-san-g-x-f-x-dx-lian-xu",
+          "title": "E[g(X)]=Σg(xᵢ)pᵢ（离散）/ ∫g",
+          "bodyMarkdown": "E[g(X)]=Σg(xᵢ)pᵢ（离散）/ ∫g(x)f(x)dx（连续）"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "bu-xu-yao-xian-qiu-chu-g-x-de-fen-bu",
+          "title": "不需要先求出 g(X) 的分布",
+          "bodyMarkdown": "不需要先求出 g(X) 的分布"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "er-wei-tong-li-e-g-x-y-g-x-y-f-x-y-dxdy",
+          "title": "二维同理",
+          "bodyMarkdown": "二维同理：E[g(X,Y)]=∬g(x,y)f(x,y)dxdy"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "x-u-0-1-shi-e-x-x-dx-1-3",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "X~U(0,1) 时 E(X²)=∫₀¹x²dx=1/3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "求 g(X) 的期望不必先求 g(X) 的分布，直接对原分布加权即可：E[g(X)]=Σg(xᵢ)pᵢ 或 ∫g(x)f(x)dx，这一步省掉了求分布的麻烦。\n\n### 解题步骤\n\n1. 写出 g 的表达式\n2. 用原分布做加权（求和或积分）\n3. 检查能否拆成线性项\n\n### 易错点\n\n先费劲求出 g(X) 的密度再算期望，多绕一圈还容易出错。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p3-c4-s1",
       "sectionTitle": "数学期望",
       "title": "期望性质",
-      "summary": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。",
+      "summary": "期望最重要的性质是线性：E(aX+bY+c)=aE(X)+bE(Y)+c，**对任意 X、Y 都成立，不要求独立**。",
       "tags": [
-        "长期加权平均"
+        "线性运算不变"
       ],
       "sortOrder": 40,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(X)=Σxᵢpᵢ；E(X)=∫xf(x)dx",
-        "caption": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。"
+        "content": "E(aX+bY+c)=aE(X)+bE(Y)+c",
+        "caption": "期望最重要的性质是线性：E(aX+bY+c)=aE(X)+bE(Y)+c，**对任意 X、Y 都成立，不要求独立**。"
       },
       "keyPoints": [
         {
-          "id": "li-san-xing-yong-qiu-he-lian-xu-xing-0adlfx",
-          "title": "离散型用求和",
-          "bodyMarkdown": "离散型用求和，连续型用积分"
+          "id": "e-ax-by-c-ae-x-be-y-c-bu-xu-yao-du-li-041m1z",
+          "title": "E(aX+bY+c)=aE(X)+bE(Y)+c",
+          "bodyMarkdown": "E(aX+bY+c)=aE(X)+bE(Y)+c，不需要独立性"
         },
         {
-          "id": "e-ax-by-ae-x-be-y-bu-yao-qiu-du-li",
-          "title": "E(aX+bY)=aE(X)+bE(Y) 不要求",
-          "bodyMarkdown": "E(aX+bY)=aE(X)+bE(Y) 不要求独立"
+          "id": "e-xy-e-x-e-y-xu-yao-du-li-huo-bu-xiang-1wxoyn",
+          "title": "E(XY)=E(X)E(Y) 需要独立或不相关",
+          "bodyMarkdown": "E(XY)=E(X)E(Y) 需要独立或不相关"
         },
         {
-          "id": "qi-wang-cun-zai-xu-yao-xiang-ying-ji-1f9i67",
-          "title": "期望存在需要相应积分/级数收敛",
-          "bodyMarkdown": "期望存在需要相应积分/级数收敛"
+          "id": "chang-shu-ke-yi-ti-chu-qie-e-c-c",
+          "title": "常数可以提出",
+          "bodyMarkdown": "常数可以提出，且 E(C)=C"
         }
       ],
       "examples": [
         {
-          "id": "gong-ping-tou-zi-de-qi-1d93z7",
+          "id": "e-2x-3y-1-2e-x-3e-y-1-00b6y7",
           "title": "讲解例子",
-          "bodyMarkdown": "公平骰子的期望为 3.5，虽然一次投掷不可能出现 3.5。"
+          "bodyMarkdown": "E(2X−3Y+1)=2E(X)−3E(Y)+1，无需独立性。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。它可以落在实际取值之外；对函数的期望可以直接对函数值加权，不必先求函数分布。\n\n### 解题步骤\n\n1. 写出取值与概率/密度\n2. 对随机变量或函数加权\n3. 利用线性性质化简\n\n### 易错点\n\n把期望理解成必然会出现的结果，或忽略期望不存在的情况。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "期望最重要的性质是线性：E(aX+bY+c)=aE(X)+bE(Y)+c，**对任意 X、Y 都成立，不要求独立**。而 E(XY)=E(X)E(Y) 只在独立（或不相关）时成立。\n\n### 解题步骤\n\n1. 先把式子拆成线性组合\n2. 分别计算各项期望\n3. 遇到乘积项时先确认独立性\n\n### 易错点\n\n对不独立的变量使用 E(XY)=E(X)E(Y)。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p3-c4-s2",
       "sectionTitle": "方差",
       "title": "定义",
-      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "summary": "方差 D(X)=E{[X−E(X)]²} 衡量取值围绕均值的分散程度，它把偏离量平方后取期望，因此一定非负。",
       "tags": [
-        "衡量波动与联动"
+        "偏离均值的平均平方"
       ],
       "sortOrder": 50,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
-        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+        "content": "D(X)=E{[X−E(X)]²}",
+        "caption": "方差 D(X)=E{[X−E(X)]²} 衡量取值围绕均值的分散程度，它把偏离量平方后取期望，因此一定非负。"
       },
       "keyPoints": [
         {
-          "id": "d-x-e-x-e-x",
-          "title": "D(X)=E(X²)−[E(X)]²",
-          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+          "id": "d-x-e-x-e-x-0-deng-yu-0-shuo-ming-x-ji-1am4c5",
+          "title": "D(X)=E{[X−E(X)]²}≥0",
+          "bodyMarkdown": "D(X)=E{[X−E(X)]²}≥0，等于 0 说明 X 几乎处处为常数"
         },
         {
-          "id": "d-ax-b-a-d-x",
-          "title": "D(aX+b)=a²D(X)",
-          "bodyMarkdown": "D(aX+b)=a²D(X)"
+          "id": "biao-zhun-cha-d-x-yu-x-tong-liang-gang-0d6ls6",
+          "title": "标准差 σ=√D(X) 与 X 同量纲",
+          "bodyMarkdown": "标准差 σ=√D(X) 与 X 同量纲，比方差更直观"
         },
         {
-          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
-          "title": "独立且期望存在时协方差为 0",
-          "bodyMarkdown": "独立且期望存在时协方差为 0"
+          "id": "fang-cha-heng-liang-fen-san-cheng-du-bu-1ux8f2",
+          "title": "方差衡量分散程度",
+          "bodyMarkdown": "方差衡量分散程度，不衡量位置"
         }
       ],
       "examples": [
         {
-          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "id": "chang-shu-de-fang-cha-1mya87",
           "title": "讲解例子",
-          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+          "bodyMarkdown": "常数的方差为 0；两枚骰子之和的方差大于单枚骰子的方差。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "方差 D(X)=E{[X−E(X)]²} 衡量取值围绕均值的分散程度，它把偏离量平方后取期望，因此一定非负。方差的算术平方根是标准差，量纲与 X 一致。\n\n### 解题步骤\n\n1. 先求 E(X)\n2. 再求 E{[X−E(X)]²}\n3. 结果必须非负，否则算错\n\n### 易错点\n\n忘记平方，导致出现负的方差。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p3-c4-s2",
       "sectionTitle": "方差",
       "title": "D(X)=E(X²)-[E(X)]²",
-      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "summary": "计算方差常用 D(X)=E(X²)−[E(X)]²，它省去了构造 X−E(X) 的步骤：先算出 E(X) 与 E(X²) 两个数，相减即可。",
       "tags": [
-        "衡量波动与联动"
+        "更常用的计算式"
       ],
       "sortOrder": 60,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
-        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+        "content": "D(X)=E(X²)−[E(X)]²",
+        "caption": "计算方差常用 D(X)=E(X²)−[E(X)]²，它省去了构造 X−E(X) 的步骤：先算出 E(X) 与 E(X²) 两个数，相减即可。"
       },
       "keyPoints": [
         {
-          "id": "d-x-e-x-e-x",
+          "id": "d-x-e-x-e-x-you-bian-liang-xiang-fen-0zntx3",
           "title": "D(X)=E(X²)−[E(X)]²",
-          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²，右边两项分别计算"
         },
         {
-          "id": "d-ax-b-a-d-x",
-          "title": "D(aX+b)=a²D(X)",
-          "bodyMarkdown": "D(aX+b)=a²D(X)"
+          "id": "e-x-yong-e-g-x-de-gong-shi-suan-bu-yao-0o5o81",
+          "title": "E(X²) 用 E[g(X)] 的公式算",
+          "bodyMarkdown": "E(X²) 用 E[g(X)] 的公式算，不要与 [E(X)]² 混淆"
         },
         {
-          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
-          "title": "独立且期望存在时协方差为 0",
-          "bodyMarkdown": "独立且期望存在时协方差为 0"
+          "id": "li-san-xing-yu-lian-xu-xing-dou-shi-00vrer",
+          "title": "离散型与连续型都适用这一式",
+          "bodyMarkdown": "离散型与连续型都适用这一式"
         }
       ],
       "examples": [
         {
-          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "id": "x-u-0-1-e-x-1-2-e-x-1-3-0vfn20",
           "title": "讲解例子",
-          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+          "bodyMarkdown": "X~U(0,1)：E(X)=1/2、E(X²)=1/3，故 D(X)=1/3−1/4=1/12。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "计算方差常用 D(X)=E(X²)−[E(X)]²，它省去了构造 X−E(X) 的步骤：先算出 E(X) 与 E(X²) 两个数，相减即可。\n\n### 解题步骤\n\n1. 算出 E(X)\n2. 算出 E(X²)\n3. 两者相减得到方差\n\n### 易错点\n\n把 E(X²) 写成 [E(X)]²，导致方差算成 0。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m1-p3-c4-s2",
       "sectionTitle": "方差",
       "title": "方差性质",
-      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "summary": "方差的性质：D(C)=0；D(aX+b)=a²D(X)，平移不改变方差、系数要平方；独立（或不相关）时 D(X±Y)=D(X)+D(Y)。",
       "tags": [
-        "衡量波动与联动"
+        "常数与线性的影响"
       ],
       "sortOrder": 70,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
-        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+        "content": "D(aX+b)=a²D(X)；D(X±Y)=D(X)+D(Y)（独立）",
+        "caption": "方差的性质：D(C)=0；D(aX+b)=a²D(X)，平移不改变方差、系数要平方；独立（或不相关）时 D(X±Y)=D(X)+D(Y)。"
       },
       "keyPoints": [
         {
-          "id": "d-x-e-x-e-x",
-          "title": "D(X)=E(X²)−[E(X)]²",
-          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
-        },
-        {
-          "id": "d-ax-b-a-d-x",
+          "id": "d-ax-b-a-d-x-ping-yi-b-bu-ying-xiang-0z678e",
           "title": "D(aX+b)=a²D(X)",
-          "bodyMarkdown": "D(aX+b)=a²D(X)"
+          "bodyMarkdown": "D(aX+b)=a²D(X)，平移 b 不影响方差"
         },
         {
-          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
-          "title": "独立且期望存在时协方差为 0",
-          "bodyMarkdown": "独立且期望存在时协方差为 0"
+          "id": "du-li-huo-bu-xiang-guan-shi-d-x-y-d-x-d-05541p",
+          "title": "独立或不相关时 D(X±Y)=D(X)+D(Y)",
+          "bodyMarkdown": "独立或不相关时 D(X±Y)=D(X)+D(Y)，符号都是加"
+        },
+        {
+          "id": "d-c-0-chang-shu-mei-you-fen-san-xing",
+          "title": "D(C)=0",
+          "bodyMarkdown": "D(C)=0，常数没有分散性"
         }
       ],
       "examples": [
         {
-          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "id": "d-3x-2-9d-x-du-li-shi-d-1bhgt8",
           "title": "讲解例子",
-          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+          "bodyMarkdown": "D(3X−2)=9D(X)；独立时 D(X−Y)=D(X)+D(Y)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "方差的性质：D(C)=0；D(aX+b)=a²D(X)，平移不改变方差、系数要平方；独立（或不相关）时 D(X±Y)=D(X)+D(Y)。\n\n### 解题步骤\n\n1. 先把系数提出并平方\n2. 去掉常数项\n3. 独立时把各方差相加\n\n### 易错点\n\n把 D(X−Y) 写成 D(X)−D(Y)，或忘记把系数平方。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m1-p3-c4-s3",
       "sectionTitle": "常见分布期望与方差",
       "title": "0-1",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "0-1 分布的期望等于成功概率 p，方差为 p(1−p)。它是推导二项分布期望与方差的基础构件。",
       "tags": [
-        "从概率规律到曲线"
+        "E=p，D=p(1−p)"
       ],
       "sortOrder": 80,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "E(X)=p，D(X)=p(1−p)",
+        "caption": "0-1 分布的期望等于成功概率 p，方差为 p(1−p)。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "e-x-p-d-x-p-1-p",
+          "title": "E(X)=p",
+          "bodyMarkdown": "E(X)=p，D(X)=p(1−p)"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "fang-cha-zai-p-1-2-shi-zui-da-zui-da-0rwbgb",
+          "title": "方差在 p=1/2 时最大",
+          "bodyMarkdown": "方差在 p=1/2 时最大，最大值为 1/4"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "ta-jiu-shi-er-xiang-fen-bu-zai-n-1-shi-06rl4l",
+          "title": "它就是二项分布在 n=1 时的情形",
+          "bodyMarkdown": "它就是二项分布在 n=1 时的情形"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "pao-ying-bi-ji-zheng-1hrc7y",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "抛硬币记正面为 1：E=1/2，D=1/4。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "0-1 分布的期望等于成功概率 p，方差为 p(1−p)。它是推导二项分布期望与方差的基础构件。\n\n### 解题步骤\n\n1. 确认 X 只取 0 与 1\n2. 读出成功概率 p\n3. 套用 E=p、D=p(1−p)\n\n### 易错点\n\n把参数 p 与期望混为一谈（这里数值相同，但二项分布里不是）。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m1-p3-c4-s3",
       "sectionTitle": "常见分布期望与方差",
       "title": "二项",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "二项分布 X~B(n,p) 的期望是 np、方差是 np(1−p)。",
       "tags": [
-        "从概率规律到曲线"
+        "np 与 np(1−p)"
       ],
       "sortOrder": 90,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "E(X)=np，D(X)=np(1−p)",
+        "caption": "二项分布 X~B(n,p) 的期望是 np、方差是 np(1−p)。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "e-x-np-d-x-np-1-p",
+          "title": "E(X)=np",
+          "bodyMarkdown": "E(X)=np，D(X)=np(1−p)"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "chai-cheng-n-ge-du-li-0-1-bian-liang-0ae6kg",
+          "title": "拆成 n 个独立 0-1 变量之和是最好用的推导",
+          "bodyMarkdown": "拆成 n 个独立 0-1 变量之和是最好用的推导方式"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "qi-wang-yu-fang-cha-dou-sui-n-zeng-da-0c8vhg",
+          "title": "期望与方差都随 n 增大",
+          "bodyMarkdown": "期望与方差都随 n 增大，方差还受 p 影响"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "zhi-100-ci-ying-bi-de-0jdw4o",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "掷 100 次硬币的正面数：E=50，D=25。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "二项分布 X~B(n,p) 的期望是 np、方差是 np(1−p)。把 X 看成 n 个独立 0-1 变量之和，两条结论都能立刻推出。\n\n### 解题步骤\n\n1. 读出 n 与 p\n2. 套用 E=np、D=np(1−p)\n3. 检查结果是否合理\n\n### 易错点\n\n方差漏掉 (1−p)，写成 np² 或 np。"
     },
     {
       "schemaVersion": "1.0",
@@ -474,47 +474,47 @@
       "sectionId": "m1-p3-c4-s3",
       "sectionTitle": "常见分布期望与方差",
       "title": "泊松",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "泊松分布 P(λ) 的期望与方差都等于 λ，这是它最显著的特征，常用来识别分布或由均值反推参数。",
       "tags": [
-        "从概率规律到曲线"
+        "期望方差都等于 λ"
       ],
       "sortOrder": 100,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "E(X)=D(X)=λ",
+        "caption": "泊松分布 P(λ) 的期望与方差都等于 λ，这是它最显著的特征，常用来识别分布或由均值反推参数。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "e-x-d-x-liang-zhe-xiang-deng-shi-bo-1g64ba",
+          "title": "E(X)=D(X)=λ",
+          "bodyMarkdown": "E(X)=D(X)=λ，两者相等是泊松的标志"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "zhi-dao-jun-zhi-huo-fang-cha-zhong-ren-08zw20",
+          "title": "知道均值或方差中任一个就能确定 λ",
+          "bodyMarkdown": "知道均值或方差中任一个就能确定 λ"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "yu-er-xiang-fen-bu-de-jin-si-guan-xi-qu-08ldr0",
+          "title": "与二项分布的近似关系",
+          "bodyMarkdown": "与二项分布的近似关系：取 λ=np"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "mou-lu-kou-mei-xiao-shi-0vnyoa",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "某路口每小时平均到达 5 辆车，则其方差也是 5。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "泊松分布 P(λ) 的期望与方差都等于 λ，这是它最显著的特征，常用来识别分布或由均值反推参数。\n\n### 解题步骤\n\n1. 确认是泊松分布\n2. 由已知的期望或方差确定 λ\n3. 再计算所需概率\n\n### 易错点\n\n把 λ 当成概率；二项近似时用错 λ（应取 np）。"
     },
     {
       "schemaVersion": "1.0",
@@ -525,47 +525,47 @@
       "sectionId": "m1-p3-c4-s3",
       "sectionTitle": "常见分布期望与方差",
       "title": "均匀",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "均匀分布 U(a,b) 的期望是区间中点 (a+b)/2，方差是 (b−a)²/12。",
       "tags": [
-        "从概率规律到曲线"
+        "中点与十二分之一"
       ],
       "sortOrder": 110,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "E(X)=(a+b)/2，D(X)=(b−a)²/12",
+        "caption": "均匀分布 U(a,b) 的期望是区间中点 (a+b)/2，方差是 (b−a)²/12。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "e-x-a-b-2-ji-qu-jian-zhong-dian",
+          "title": "E(X)=(a+b)/2",
+          "bodyMarkdown": "E(X)=(a+b)/2，即区间中点"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "d-x-b-a-12",
+          "title": "D(X)=(b−a)²/12",
+          "bodyMarkdown": "D(X)=(b−a)²/12"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "qu-jian-chang-du-fan-bei-fang-cha-bian-0d2xop",
+          "title": "区间长度翻倍",
+          "bodyMarkdown": "区间长度翻倍，方差变为原来的 4 倍"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "x-u-2-5-e-3-5-d-9-12-0-1uytiv",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "X~U(2,5)：E=3.5，D=9/12=0.75。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "均匀分布 U(a,b) 的期望是区间中点 (a+b)/2，方差是 (b−a)²/12。方差只与区间长度有关，与位置无关。\n\n### 解题步骤\n\n1. 读出 a 与 b\n2. 取中点得到期望\n3. 用长度的平方除以 12 得到方差\n\n### 易错点\n\n方差忘记除以 12，或写成 (b−a)/12。"
     },
     {
       "schemaVersion": "1.0",
@@ -576,47 +576,47 @@
       "sectionId": "m1-p3-c4-s3",
       "sectionTitle": "常见分布期望与方差",
       "title": "指数",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "指数分布 E(λ) 的期望是 1/λ、方差是 1/λ²。λ 是单位时间内的平均发生次数，所以平均等待时间自然是它的倒数。",
       "tags": [
-        "从概率规律到曲线"
+        "期望是 λ 的倒数"
       ],
       "sortOrder": 120,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "E(X)=1/λ，D(X)=1/λ²",
+        "caption": "指数分布 E(λ) 的期望是 1/λ、方差是 1/λ²。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "e-x-1-d-x-1",
+          "title": "E(X)=1/λ",
+          "bodyMarkdown": "E(X)=1/λ，D(X)=1/λ²"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "yue-da-biao-shi-fa-sheng-yue-pin-fan-0e5j7p",
+          "title": "λ 越大表示发生越频繁",
+          "bodyMarkdown": "λ 越大表示发生越频繁，平均等待越短"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "biao-zhun-cha-deng-yu-qi-wang-zhe-shi-1vw2zb",
+          "title": "标准差等于期望",
+          "bodyMarkdown": "标准差等于期望，这是指数分布的特点"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "ping-jun-shou-ming-5-1pnfyy",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "平均寿命 5 年的元件：λ=1/5，E=5，D=25。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "指数分布 E(λ) 的期望是 1/λ、方差是 1/λ²。λ 是单位时间内的平均发生次数，所以平均等待时间自然是它的倒数。\n\n### 解题步骤\n\n1. 确认参数 λ 的含义\n2. 取倒数得到期望\n3. 平方取倒数得到方差\n\n### 易错点\n\n把参数 λ 直接当成期望，与期望弄反。"
     },
     {
       "schemaVersion": "1.0",
@@ -627,47 +627,47 @@
       "sectionId": "m1-p3-c4-s3",
       "sectionTitle": "常见分布期望与方差",
       "title": "正态",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "正态分布 N(μ,σ²) 的两个参数恰好就是期望与方差：E(X)=μ、D(X)=σ²，这是正态分布最好记的一点。",
       "tags": [
-        "从概率规律到曲线"
+        "参数就是期望与方差"
       ],
       "sortOrder": 130,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "E(X)=μ，D(X)=σ²",
+        "caption": "正态分布 N(μ,σ²) 的两个参数恰好就是期望与方差：E(X)=μ、D(X)=σ²，这是正态分布最好记的一点。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "e-x-d-x-can-shu-ji-shu-zi-te-zheng",
+          "title": "E(X)=μ",
+          "bodyMarkdown": "E(X)=μ，D(X)=σ²，参数即数字特征"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "yue-da-fen-bu-yue-fen-san-mi-du-qu-xian-0alpiu",
+          "title": "σ 越大分布越分散",
+          "bodyMarkdown": "σ 越大分布越分散，密度曲线越平缓"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "biao-zhun-hua-hou-z-x-de-qi-wang-wei-0-0mwsbp",
+          "title": "标准化后 Z=(X−μ)/σ 的期望为 0、方差",
+          "bodyMarkdown": "标准化后 Z=(X−μ)/σ 的期望为 0、方差为 1"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "x-n-2-9-e-2-d-9-biao-0gkukh",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "X~N(2,9)：E=2，D=9，标准差 σ=3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "正态分布 N(μ,σ²) 的两个参数恰好就是期望与方差：E(X)=μ、D(X)=σ²，这是正态分布最好记的一点。\n\n### 解题步骤\n\n1. 读出 μ 与 σ²\n2. 直接写出期望与方差\n3. 需要时做标准化转换\n\n### 易错点\n\n把第二个参数当成标准差 σ（它是方差 σ²）。"
     },
     {
       "schemaVersion": "1.0",
@@ -678,47 +678,47 @@
       "sectionId": "m1-p3-c4-s4",
       "sectionTitle": "协方差",
       "title": "定义",
-      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "summary": "协方差 Cov(X,Y)=E{[X−E(X)][Y−E(Y)]} 衡量两个变量是否同向变化：为正表示同向，为负表示反向，为 0 表示不相关。",
       "tags": [
-        "衡量波动与联动"
+        "衡量同向变化"
       ],
       "sortOrder": 140,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
-        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+        "content": "Cov(X,Y)=E(XY)−E(X)E(Y)",
+        "caption": "协方差 Cov(X,Y)=E{[X−E(X)][Y−E(Y)]} 衡量两个变量是否同向变化：为正表示同向，为负表示反向，为 0 表示不相关。"
       },
       "keyPoints": [
         {
-          "id": "d-x-e-x-e-x",
-          "title": "D(X)=E(X²)−[E(X)]²",
-          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+          "id": "cov-x-y-e-xy-e-x-e-y-zhe-shi-zui-chang-15p4e2",
+          "title": "Cov(X",
+          "bodyMarkdown": "Cov(X,Y)=E(XY)−E(X)E(Y)，这是最常用的计算式"
         },
         {
-          "id": "d-ax-b-a-d-x",
-          "title": "D(aX+b)=a²D(X)",
-          "bodyMarkdown": "D(aX+b)=a²D(X)"
+          "id": "cov-x-x-d-x",
+          "title": "Cov(X",
+          "bodyMarkdown": "Cov(X,X)=D(X)"
         },
         {
-          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
-          "title": "独立且期望存在时协方差为 0",
-          "bodyMarkdown": "独立且期望存在时协方差为 0"
+          "id": "xie-fang-cha-de-da-xiao-shou-liang-gang-0rfoab",
+          "title": "协方差的大小受量纲影响",
+          "bodyMarkdown": "协方差的大小受量纲影响，比较强弱要看相关系数"
         }
       ],
       "examples": [
         {
-          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "id": "ruo-x-zeng-da-shi-y-ye-0hgr1f",
           "title": "讲解例子",
-          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+          "bodyMarkdown": "若 X 增大时 Y 也增大，则协方差为正。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "协方差 Cov(X,Y)=E{[X−E(X)][Y−E(Y)]} 衡量两个变量是否同向变化：为正表示同向，为负表示反向，为 0 表示不相关。\n\n### 解题步骤\n\n1. 算出 E(XY)、E(X)、E(Y)\n2. 代入 Cov=E(XY)−E(X)E(Y)\n3. 看符号判断同向或反向\n\n### 易错点\n\n把 Cov(X,Y)=0 直接读成「X 与 Y 独立」——它只说明不相关。"
     },
     {
       "schemaVersion": "1.0",
@@ -729,47 +729,47 @@
       "sectionId": "m1-p3-c4-s4",
       "sectionTitle": "协方差",
       "title": "性质",
-      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "summary": "协方差对两个变量都满足线性（双线性）：Cov(aX+bY, Z)=aCov(X,Z)+bCov(Y,Z)。",
       "tags": [
-        "衡量波动与联动"
+        "双线性运算"
       ],
       "sortOrder": 150,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
-        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+        "content": "D(X±Y)=D(X)+D(Y)±2Cov(X,Y)",
+        "caption": "协方差对两个变量都满足线性（双线性）：Cov(aX+bY, Z)=aCov(X,Z)+bCov(Y,Z)。"
       },
       "keyPoints": [
         {
-          "id": "d-x-e-x-e-x",
-          "title": "D(X)=E(X²)−[E(X)]²",
-          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+          "id": "cov-dui-mei-ge-bian-liang-dou-xian-xing-06ff0p",
+          "title": "Cov 对每个变量都线性",
+          "bodyMarkdown": "Cov 对每个变量都线性，可以直接展开"
         },
         {
-          "id": "d-ax-b-a-d-x",
-          "title": "D(aX+b)=a²D(X)",
-          "bodyMarkdown": "D(aX+b)=a²D(X)"
+          "id": "d-x-y-d-x-d-y-2cov-x-y",
+          "title": "D(X±Y)=D(X)+D(Y)±2Cov(X",
+          "bodyMarkdown": "D(X±Y)=D(X)+D(Y)±2Cov(X,Y)"
         },
         {
-          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
-          "title": "独立且期望存在时协方差为 0",
-          "bodyMarkdown": "独立且期望存在时协方差为 0"
+          "id": "du-li-shi-cov-0-fang-cha-gong-shi-tui-08798l",
+          "title": "独立时 Cov=0",
+          "bodyMarkdown": "独立时 Cov=0，方差公式退化为相加"
         }
       ],
       "examples": [
         {
-          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "id": "x-yu-y-bu-du-li-shi-077k83",
           "title": "讲解例子",
-          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+          "bodyMarkdown": "X 与 Y 不独立时，方差不能直接相加，必须减去 2Cov(X,Y) 这一项。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "协方差对两个变量都满足线性（双线性）：Cov(aX+bY, Z)=aCov(X,Z)+bCov(Y,Z)。由此得到 D(X±Y)=D(X)+D(Y)±2Cov(X,Y)，这是方差加法公式的一般形式。\n\n### 解题步骤\n\n1. 按双线性展开式子\n2. 逐项计算协方差\n3. 代入方差公式\n\n### 易错点\n\n漏掉协方差项，直接用 D(X−Y)=D(X)+D(Y)。"
     },
     {
       "schemaVersion": "1.0",
@@ -780,47 +780,47 @@
       "sectionId": "m1-p3-c4-s5",
       "sectionTitle": "相关系数",
       "title": "定义",
-      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "summary": "相关系数 ρ_XY=Cov(X,Y)/(σ_Xσ_Y) 是把协方差除以两个标准差得到的无量纲量，取值范围是 [−1,1]，用来衡量线性相关的强弱。",
       "tags": [
-        "衡量波动与联动"
+        "标准化后的协方差"
       ],
       "sortOrder": 160,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
-        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+        "content": "ρ_XY=Cov(X,Y)/(σ_Xσ_Y)",
+        "caption": "相关系数 ρ_XY=Cov(X,Y)/(σ_Xσ_Y) 是把协方差除以两个标准差得到的无量纲量，取值范围是 [−1,1]，用来衡量线性相关的强弱。"
       },
       "keyPoints": [
         {
-          "id": "d-x-e-x-e-x",
-          "title": "D(X)=E(X²)−[E(X)]²",
-          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+          "id": "cov-x-y-x-y-shi-wu-liang-gang-de-shu",
+          "title": "ρ=Cov(X",
+          "bodyMarkdown": "ρ=Cov(X,Y)/(σ_Xσ_Y)，是无量纲的数"
         },
         {
-          "id": "d-ax-b-a-d-x",
-          "title": "D(aX+b)=a²D(X)",
-          "bodyMarkdown": "D(aX+b)=a²D(X)"
+          "id": "de-fu-hao-yu-xie-fang-cha-yi-zhi-da-1foybm",
+          "title": "ρ 的符号与协方差一致",
+          "bodyMarkdown": "ρ 的符号与协方差一致，大小反映线性相关的强弱"
         },
         {
-          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
-          "title": "独立且期望存在时协方差为 0",
-          "bodyMarkdown": "独立且期望存在时协方差为 0"
+          "id": "1-biao-shi-cun-zai-wan-quan-xian-xing-0kerja",
+          "title": "ρ=±1 表示存在完全线性关系",
+          "bodyMarkdown": "ρ=±1 表示存在完全线性关系"
         }
       ],
       "examples": [
         {
-          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "id": "ruo-y-2x-1-ze-1-wan-1i697f",
           "title": "讲解例子",
-          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+          "bodyMarkdown": "若 Y=2X+1，则 ρ=1，完全正线性相关。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "相关系数 ρ_XY=Cov(X,Y)/(σ_Xσ_Y) 是把协方差除以两个标准差得到的无量纲量，取值范围是 [−1,1]，用来衡量线性相关的强弱。\n\n### 解题步骤\n\n1. 算协方差\n2. 算两个标准差\n3. 相除得相关系数并检查是否落在 [−1,1]\n\n### 易错点\n\n分母用方差代替标准差，导致 |ρ|>1。"
     },
     {
       "schemaVersion": "1.0",
@@ -831,47 +831,47 @@
       "sectionId": "m1-p3-c4-s5",
       "sectionTitle": "相关系数",
       "title": "取值范围",
-      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "summary": "相关系数的绝对值不超过 1：|ρ|≤1，等号成立当且仅当 X 与 Y 以概率 1 成线性关系。",
       "tags": [
-        "衡量波动与联动"
+        "绝对值不超过 1"
       ],
       "sortOrder": 170,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
-        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+        "content": "|ρ_XY|≤1",
+        "caption": "相关系数的绝对值不超过 1：|ρ|≤1，等号成立当且仅当 X 与 Y 以概率 1 成线性关系。"
       },
       "keyPoints": [
         {
-          "id": "d-x-e-x-e-x",
-          "title": "D(X)=E(X²)−[E(X)]²",
-          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+          "id": "1-1-suan-chu-jie-wai-yi-ding-shi-cuo-de",
+          "title": "−1≤ρ≤1",
+          "bodyMarkdown": "−1≤ρ≤1，算出界外一定是错的"
         },
         {
-          "id": "d-ax-b-a-d-x",
-          "title": "D(aX+b)=a²D(X)",
-          "bodyMarkdown": "D(aX+b)=a²D(X)"
+          "id": "1-cun-zai-a-b-shi-p-y-ax-b-1-a-0",
+          "title": "|ρ|=1 ⇔ 存在 a、b 使 P{Y=aX+",
+          "bodyMarkdown": "|ρ|=1 ⇔ 存在 a、b 使 P{Y=aX+b}=1（a≠0）"
         },
         {
-          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
-          "title": "独立且期望存在时协方差为 0",
-          "bodyMarkdown": "独立且期望存在时协方差为 0"
+          "id": "zhi-heng-liang-xian-xing-guan-xi-fei-1g8myn",
+          "title": "ρ 只衡量线性关系",
+          "bodyMarkdown": "ρ 只衡量线性关系，非线性关系可能算出 ρ≈0"
         }
       ],
       "examples": [
         {
-          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "id": "ruo-y-x-qie-x-guan-yu-0-0bid9o",
           "title": "讲解例子",
-          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+          "bodyMarkdown": "若 Y=X² 且 X 关于 0 对称，则 ρ=0，但两者并不独立。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "相关系数的绝对值不超过 1：|ρ|≤1，等号成立当且仅当 X 与 Y 以概率 1 成线性关系。这条由柯西—施瓦茨不等式保证，常用来验算。\n\n### 解题步骤\n\n1. 算出 ρ\n2. 检查是否落在 [−1,1] 内\n3. 用等号情形判断是否完全线性\n\n### 易错点\n\n由 ρ=0 断定两个变量没有关系——可能只是没有线性关系。"
     },
     {
       "schemaVersion": "1.0",
@@ -882,47 +882,47 @@
       "sectionId": "m1-p3-c4-s5",
       "sectionTitle": "相关系数",
       "title": "线性相关意义",
-      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "summary": "概率论里说两个随机变量「线性相关」通常指 |ρ|=1，即它们以概率 1 满足 Y=aX+b；ρ 越接近 ±1，线性关系越强。",
       "tags": [
-        "衡量波动与联动"
+        "|ρ|=1 才算线性相关"
       ],
       "sortOrder": 180,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
-        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+        "content": "|ρ|=1 ⇔ P{Y=aX+b}=1（a≠0）",
+        "caption": "概率论里说两个随机变量「线性相关」通常指 |ρ|=1，即它们以概率 1 满足 Y=aX+b；ρ 越接近 ±1，线性关系越强。"
       },
       "keyPoints": [
         {
-          "id": "d-x-e-x-e-x",
-          "title": "D(X)=E(X²)−[E(X)]²",
-          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+          "id": "1-yi-gai-l-1-cun-zai-xian-xing-guan-xi",
+          "title": "|ρ|=1 ⇔ 以概率 1 存在线性关系",
+          "bodyMarkdown": "|ρ|=1 ⇔ 以概率 1 存在线性关系"
         },
         {
-          "id": "d-ax-b-a-d-x",
-          "title": "D(aX+b)=a²D(X)",
-          "bodyMarkdown": "D(aX+b)=a²D(X)"
+          "id": "0-cheng-wei-bu-xiang-guan-zhi-shuo-ming-1kdebz",
+          "title": "ρ=0 称为不相关",
+          "bodyMarkdown": "ρ=0 称为不相关，只说明没有线性关系"
         },
         {
-          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
-          "title": "独立且期望存在时协方差为 0",
-          "bodyMarkdown": "独立且期望存在时协方差为 0"
+          "id": "zhe-li-de-xiang-guan-yu-xian-xing-dai-03o774",
+          "title": "这里的「相关」与线性代数里向量组的线性相关是两回",
+          "bodyMarkdown": "这里的「相关」与线性代数里向量组的线性相关是两回事"
         }
       ],
       "examples": [
         {
-          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "id": "y-3x-2-shi-1-liang-zhe-0h8fym",
           "title": "讲解例子",
-          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+          "bodyMarkdown": "Y=3X−2 时 ρ=1，两者完全线性相关。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "概率论里说两个随机变量「线性相关」通常指 |ρ|=1，即它们以概率 1 满足 Y=aX+b；ρ 越接近 ±1，线性关系越强。\n\n### 解题步骤\n\n1. 算出 ρ\n2. 看 |ρ| 是否接近 1\n3. 结合等号条件判断是否完全线性\n\n### 易错点\n\n把 ρ 的数值直接当成「相关程度的百分比」。"
     },
     {
       "schemaVersion": "1.0",
@@ -933,47 +933,47 @@
       "sectionId": "m1-p3-c4-s5",
       "sectionTitle": "相关系数",
       "title": "ρ=0 与独立的区别",
-      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "summary": "ρ=0 只说明不存在线性关系，称为「不相关」；独立要求联合分布等于边缘分布之积，是更强的条件。",
       "tags": [
-        "衡量波动与联动"
+        "不相关不等于独立"
       ],
       "sortOrder": 190,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
-        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+        "content": "独立 ⇒ ρ=0；二维正态下 ρ=0 ⇒ 独立",
+        "caption": "ρ=0 只说明不存在线性关系，称为「不相关」；独立要求联合分布等于边缘分布之积，是更强的条件。"
       },
       "keyPoints": [
         {
-          "id": "d-x-e-x-e-x",
-          "title": "D(X)=E(X²)−[E(X)]²",
-          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+          "id": "du-li-bu-xiang-guan-cov-0-fan-guo-lai-1bs15g",
+          "title": "独立 ⇒ 不相关（Cov=0）",
+          "bodyMarkdown": "独立 ⇒ 不相关（Cov=0），反过来一般不成立"
         },
         {
-          "id": "d-ax-b-a-d-x",
-          "title": "D(aX+b)=a²D(X)",
-          "bodyMarkdown": "D(aX+b)=a²D(X)"
+          "id": "bu-xiang-guan-zhi-pai-chu-xian-xing-16m17u",
+          "title": "不相关只排除线性关系",
+          "bodyMarkdown": "不相关只排除线性关系，非线性关系仍可能存在"
         },
         {
-          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
-          "title": "独立且期望存在时协方差为 0",
-          "bodyMarkdown": "独立且期望存在时协方差为 0"
+          "id": "er-wei-zheng-tai-xia-liang-zhe-deng-jia-1t9bxt",
+          "title": "二维正态下两者等价",
+          "bodyMarkdown": "二维正态下两者等价，这是特例而不是通例"
         }
       ],
       "examples": [
         {
-          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "id": "x-n-0-1-y-x-0-dan-x-y-075rvr",
           "title": "讲解例子",
-          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+          "bodyMarkdown": "X~N(0,1)、Y=X²：ρ=0 但 X、Y 不独立。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "ρ=0 只说明不存在线性关系，称为「不相关」；独立要求联合分布等于边缘分布之积，是更强的条件。独立一定不相关，不相关不一定独立——二维正态是唯一的例外。\n\n### 解题步骤\n\n1. 先判断是否独立（看联合分布能否拆开）\n2. 再算协方差判断是否不相关\n3. 题目说明是二维正态时两者可互推\n\n### 易错点\n\n把「不相关」当成「独立」，这是最经典的错误之一。"
     },
     {
       "schemaVersion": "1.0",
@@ -984,47 +984,47 @@
       "sectionId": "m1-p3-c4-s6",
       "sectionTitle": "矩",
       "title": "原点矩",
-      "summary": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。",
+      "summary": "k 阶原点矩是 E(Xᵏ)，一阶原点矩就是期望。原点矩以原点为基准刻画分布，是矩估计法的原料。",
       "tags": [
-        "长期加权平均"
+        "X 的 k 次方的期望"
       ],
       "sortOrder": 200,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(X)=Σxᵢpᵢ；E(X)=∫xf(x)dx",
-        "caption": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。"
+        "content": "μ_k=E(Xᵏ)",
+        "caption": "k 阶原点矩是 E(Xᵏ)，一阶原点矩就是期望。"
       },
       "keyPoints": [
         {
-          "id": "li-san-xing-yong-qiu-he-lian-xu-xing-0adlfx",
-          "title": "离散型用求和",
-          "bodyMarkdown": "离散型用求和，连续型用积分"
+          "id": "k-jie-yuan-dian-ju-e-x-yi-jie-jiu-shi-e-158308",
+          "title": "k 阶原点矩 = E(Xᵏ)",
+          "bodyMarkdown": "k 阶原点矩 = E(Xᵏ)，一阶就是 E(X)"
         },
         {
-          "id": "e-ax-by-ae-x-be-y-bu-yao-qiu-du-li",
-          "title": "E(aX+bY)=aE(X)+bE(Y) 不要求",
-          "bodyMarkdown": "E(aX+bY)=aE(X)+bE(Y) 不要求独立"
+          "id": "yuan-dian-ju-yi-yuan-dian-wei-ji-zhun-1vftiq",
+          "title": "原点矩以原点为基准",
+          "bodyMarkdown": "原点矩以原点为基准，中心矩以均值为基准"
         },
         {
-          "id": "qi-wang-cun-zai-xu-yao-xiang-ying-ji-1f9i67",
-          "title": "期望存在需要相应积分/级数收敛",
-          "bodyMarkdown": "期望存在需要相应积分/级数收敛"
+          "id": "ju-gu-ji-fa-jiu-shi-yong-yang-ben-yuan-05bmaq",
+          "title": "矩估计法就是用样本原点矩匹配总体原点矩",
+          "bodyMarkdown": "矩估计法就是用样本原点矩匹配总体原点矩"
         }
       ],
       "examples": [
         {
-          "id": "gong-ping-tou-zi-de-qi-1d93z7",
+          "id": "k-1-shi-de-dao-e-x-k-2-0u52pa",
           "title": "讲解例子",
-          "bodyMarkdown": "公平骰子的期望为 3.5，虽然一次投掷不可能出现 3.5。"
+          "bodyMarkdown": "k=1 时得到 E(X)；k=2 时得到 E(X²)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。它可以落在实际取值之外；对函数的期望可以直接对函数值加权，不必先求函数分布。\n\n### 解题步骤\n\n1. 写出取值与概率/密度\n2. 对随机变量或函数加权\n3. 利用线性性质化简\n\n### 易错点\n\n把期望理解成必然会出现的结果，或忽略期望不存在的情况。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "k 阶原点矩是 E(Xᵏ)，一阶原点矩就是期望。原点矩以原点为基准刻画分布，是矩估计法的原料。\n\n### 解题步骤\n\n1. 确定阶数 k\n2. 按定义求 E(Xᵏ)\n3. 与样本矩对应建立方程\n\n### 易错点\n\n把原点矩与中心矩混用，导致矩估计方程写错。"
     },
     {
       "schemaVersion": "1.0",
@@ -1035,47 +1035,47 @@
       "sectionId": "m1-p3-c4-s6",
       "sectionTitle": "矩",
       "title": "中心矩",
-      "summary": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。",
+      "summary": "k 阶中心矩是 E{[X−E(X)]ᵏ}，二阶中心矩就是方差。",
       "tags": [
-        "长期加权平均"
+        "以均值为基准的矩"
       ],
       "sortOrder": 210,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "E(X)=Σxᵢpᵢ；E(X)=∫xf(x)dx",
-        "caption": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。"
+        "content": "E{[X−E(X)]ᵏ}",
+        "caption": "k 阶中心矩是 E{[X−E(X)]ᵏ}，二阶中心矩就是方差。"
       },
       "keyPoints": [
         {
-          "id": "li-san-xing-yong-qiu-he-lian-xu-xing-0adlfx",
-          "title": "离散型用求和",
-          "bodyMarkdown": "离散型用求和，连续型用积分"
+          "id": "k-jie-zhong-xin-ju-e-x-e-x-er-jie-jiu-1lik2w",
+          "title": "k 阶中心矩 = E{[X−E(X)]ᵏ}",
+          "bodyMarkdown": "k 阶中心矩 = E{[X−E(X)]ᵏ}，二阶就是方差"
         },
         {
-          "id": "e-ax-by-ae-x-be-y-bu-yao-qiu-du-li",
-          "title": "E(aX+bY)=aE(X)+bE(Y) 不要求",
-          "bodyMarkdown": "E(aX+bY)=aE(X)+bE(Y) 不要求独立"
+          "id": "yi-jie-zhong-xin-ju-heng-wei-0",
+          "title": "一阶中心矩恒为 0",
+          "bodyMarkdown": "一阶中心矩恒为 0"
         },
         {
-          "id": "qi-wang-cun-zai-xu-yao-xiang-ying-ji-1f9i67",
-          "title": "期望存在需要相应积分/级数收敛",
-          "bodyMarkdown": "期望存在需要相应积分/级数收敛"
+          "id": "san-jie-fan-ying-pian-xie-si-jie-fan-0v0b4t",
+          "title": "三阶反映偏斜、四阶反映尖峭程度",
+          "bodyMarkdown": "三阶反映偏斜、四阶反映尖峭程度"
         }
       ],
       "examples": [
         {
-          "id": "gong-ping-tou-zi-de-qi-1d93z7",
+          "id": "k-2-shi-zhong-xin-ju-0le61y",
           "title": "讲解例子",
-          "bodyMarkdown": "公平骰子的期望为 3.5，虽然一次投掷不可能出现 3.5。"
+          "bodyMarkdown": "k=2 时中心矩等于 D(X)；k=1 时恒为 0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "数学期望是按概率加权的平均位置，描述随机变量长期重复试验的中心。它可以落在实际取值之外；对函数的期望可以直接对函数值加权，不必先求函数分布。\n\n### 解题步骤\n\n1. 写出取值与概率/密度\n2. 对随机变量或函数加权\n3. 利用线性性质化简\n\n### 易错点\n\n把期望理解成必然会出现的结果，或忽略期望不存在的情况。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "k 阶中心矩是 E{[X−E(X)]ᵏ}，二阶中心矩就是方差。中心矩刻画分布围绕均值的形状（偏斜、尖峭程度）。\n\n### 解题步骤\n\n1. 先求 E(X)\n2. 按定义求 E{[X−E(X)]ᵏ}\n3. 对照方差等含义理解\n\n### 易错点\n\n把二阶中心矩写成 E(X²)（那是二阶原点矩）。"
     }
   ]
 }

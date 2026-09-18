@@ -15,47 +15,47 @@
       "sectionId": "m1-p3-c8-s1",
       "sectionTitle": "基本思想",
       "title": "原假设 H0",
-      "summary": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。",
+      "summary": "原假设 H0 是我们要检验的命题，通常取「没有差异」「参数等于某值」这类保守说法。",
       "tags": [
-        "用证据检验假设"
+        "被检验的默认说法"
       ],
       "sortOrder": 10,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "α=P(拒绝H₀|H₀为真)",
-        "caption": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。"
+        "content": "H0: μ=μ₀（等号放在 H0）",
+        "caption": "原假设 H0 是我们要检验的命题，通常取「没有差异」「参数等于某值」这类保守说法。"
       },
       "keyPoints": [
         {
-          "id": "xian-zhu-xing-shui-ping-kong-zhi-di-yi-1wburh",
-          "title": "显著性水平控制第一类错误概率",
-          "bodyMarkdown": "显著性水平控制第一类错误概率"
+          "id": "h0-tong-chang-qu-deng-hao-xing-shi",
+          "title": "H0 通常取等号形式（μ=μ₀、σ²=σ₀²）",
+          "bodyMarkdown": "H0 通常取等号形式（μ=μ₀、σ²=σ₀²）"
         },
         {
-          "id": "ju-jue-yu-you-tong-ji-liang-fen-bu-he-1u812t",
-          "title": "拒绝域由统计量分布和备择方向决定",
-          "bodyMarkdown": "拒绝域由统计量分布和备择方向决定"
+          "id": "h0-shi-bei-bao-hu-de-jia-she-zhi-you-0068gy",
+          "title": "H0 是「被保护」的假设",
+          "bodyMarkdown": "H0 是「被保护」的假设，只有证据充分才拒绝它"
         },
         {
-          "id": "p-zhi-shi-guan-cha-dao-dang-qian-huo-0vbapg",
-          "title": "P 值是观察到当前或更极端证据时的概率",
-          "bodyMarkdown": "P 值是观察到当前或更极端证据时的概率"
+          "id": "bu-ju-jue-h0-bu-deng-yu-zheng-ming-h0-0pj7r4",
+          "title": "不拒绝 H0 不等于证明 H0 正确",
+          "bodyMarkdown": "不拒绝 H0 不等于证明 H0 正确"
         }
       ],
       "examples": [
         {
-          "id": "jian-yan-jun-zhi-shi-1e8cri",
+          "id": "jian-yan-mou-pi-ling-104wri",
           "title": "讲解例子",
-          "bodyMarkdown": "检验均值是否等于 μ₀ 时，根据方差已知/未知选择 z 或 t 统计量。"
+          "bodyMarkdown": "检验某批零件平均长度是否等于 10cm：H0: μ=10。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。如果结果落入拒绝域，就拒绝 H₀；否则只能说证据不足，不能把“未拒绝”当成 H₀ 已被证明。\n\n### 解题步骤\n\n1. 写 H₀、H₁\n2. 选统计量与分布\n3. 比较临界值或 P 值并作结论\n\n### 易错点\n\nP 值小不等于 H₀ 为真的概率小；结论必须对应题目语境。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "原假设 H0 是我们要检验的命题，通常取「没有差异」「参数等于某值」这类保守说法。检验的逻辑是：在 H0 成立的条件下，看样本是否异常到足以否定它。\n\n### 解题步骤\n\n1. 把要检验的说法写成等式\n2. 记为 H0\n3. 再写出对应的 H1\n\n### 易错点\n\n把希望证明的结论放在 H0（应放在 H1）。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p3-c8-s1",
       "sectionTitle": "基本思想",
       "title": "备择假设 H1",
-      "summary": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。",
+      "summary": "备择假设 H1 与 H0 对立：双侧检验写 μ≠μ₀，单侧检验写 μ>μ₀ 或 μ<μ₀，方向由题目的语义决定。",
       "tags": [
-        "用证据检验假设"
+        "与 H0 对立的说法"
       ],
       "sortOrder": 20,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "α=P(拒绝H₀|H₀为真)",
-        "caption": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。"
+        "content": "H1: μ≠μ₀（双侧）或 μ>μ₀ / μ<μ₀（单侧）",
+        "caption": "备择假设 H1 与 H0 对立：双侧检验写 μ≠μ₀，单侧检验写 μ>μ₀ 或 μ<μ₀，方向由题目的语义决定。"
       },
       "keyPoints": [
         {
-          "id": "xian-zhu-xing-shui-ping-kong-zhi-di-yi-1wburh",
-          "title": "显著性水平控制第一类错误概率",
-          "bodyMarkdown": "显著性水平控制第一类错误概率"
+          "id": "h1-yu-h0-hu-chi-qie-fu-gai-can-shu-kong-11jmsy",
+          "title": "H1 与 H0 互斥且覆盖参数空间",
+          "bodyMarkdown": "H1 与 H0 互斥且覆盖参数空间"
         },
         {
-          "id": "ju-jue-yu-you-tong-ji-liang-fen-bu-he-1u812t",
-          "title": "拒绝域由统计量分布和备择方向决定",
-          "bodyMarkdown": "拒绝域由统计量分布和备择方向决定"
+          "id": "shuang-ce-yong-dan-ce-yong-huo",
+          "title": "双侧用 ≠",
+          "bodyMarkdown": "双侧用 ≠，单侧用 > 或 <"
         },
         {
-          "id": "p-zhi-shi-guan-cha-dao-dang-qian-huo-0vbapg",
-          "title": "P 值是观察到当前或更极端证据时的概率",
-          "bodyMarkdown": "P 值是观察到当前或更极端证据时的概率"
+          "id": "fang-xiang-you-shi-fou-gao-yu-di-yu-zhe-1ba3zw",
+          "title": "方向由「是否高于 / 低于」这类表述决定",
+          "bodyMarkdown": "方向由「是否高于 / 低于」这类表述决定"
         }
       ],
       "examples": [
         {
-          "id": "jian-yan-jun-zhi-shi-1e8cri",
+          "id": "ping-jun-shou-ming-shi-14x3rz",
           "title": "讲解例子",
-          "bodyMarkdown": "检验均值是否等于 μ₀ 时，根据方差已知/未知选择 z 或 t 统计量。"
+          "bodyMarkdown": "「平均寿命是否高于 1000 小时」→ H1: μ>1000（单侧）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。如果结果落入拒绝域，就拒绝 H₀；否则只能说证据不足，不能把“未拒绝”当成 H₀ 已被证明。\n\n### 解题步骤\n\n1. 写 H₀、H₁\n2. 选统计量与分布\n3. 比较临界值或 P 值并作结论\n\n### 易错点\n\nP 值小不等于 H₀ 为真的概率小；结论必须对应题目语境。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "备择假设 H1 与 H0 对立：双侧检验写 μ≠μ₀，单侧检验写 μ>μ₀ 或 μ<μ₀，方向由题目的语义决定。\n\n### 解题步骤\n\n1. 判断是双侧还是单侧\n2. 写出 H1\n3. 与 H0 配对检查\n\n### 易错点\n\n把单侧检验写成双侧，拒绝域与结论都会错。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p3-c8-s1",
       "sectionTitle": "基本思想",
       "title": "检验统计量",
-      "summary": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。",
+      "summary": "检验统计量把样本信息浓缩成一个数，用于判断是否拒绝 H0：均值检验用 U=(X̄−μ₀)/(σ/√n)，方差检验用 χ²=(n−1)S²/σ₀²。",
       "tags": [
-        "用样本认识总体"
+        "用来判断的量"
       ],
       "sortOrder": 30,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "X̄=(1/n)ΣXᵢ；S²=(1/(n−1))Σ(Xᵢ−X̄)²",
-        "caption": "总体是研究对象的全体，样本是从总体中抽出的有限观测。"
+        "content": "U=(X̄−μ₀)/(σ/√n) ~ N(0,1)（H0 成立时）",
+        "caption": "检验统计量把样本信息浓缩成一个数，用于判断是否拒绝 H0：均值检验用 U=(X̄−μ₀)/(σ/√n)，方差检验用 χ²=(n−1)S²/σ₀²。"
       },
       "keyPoints": [
         {
-          "id": "yang-ben-yao-you-dai-biao-xing",
-          "title": "样本要有代表性",
-          "bodyMarkdown": "样本要有代表性"
+          "id": "jian-yan-tong-ji-liang-zai-h0-cheng-li-0lc60l",
+          "title": "检验统计量在 H0 成立时分布已知",
+          "bodyMarkdown": "检验统计量在 H0 成立时分布已知"
         },
         {
-          "id": "yang-ben-jun-zhi-shi-zong-ti-jun-zhi-de-1mwjqw",
-          "title": "样本均值是总体均值的自然估计量",
-          "bodyMarkdown": "样本均值是总体均值的自然估计量"
+          "id": "jun-zhi-yong-u-huo-t-fang-cha-yong-fang-0o768s",
+          "title": "均值用 U 或 T",
+          "bodyMarkdown": "均值用 U 或 T，方差用 χ²，方差比用 F"
         },
         {
-          "id": "zheng-tai-zong-ti-xia-jun-zhi-fang-cha-0jdq57",
-          "title": "正态总体下均值、方差对应不同抽样分布",
-          "bodyMarkdown": "正态总体下均值、方差对应不同抽样分布"
+          "id": "tong-ji-liang-de-zhi-yue-ji-duan-yue-089m0g",
+          "title": "统计量的值越极端",
+          "bodyMarkdown": "统计量的值越极端，越倾向拒绝 H0"
         }
       ],
       "examples": [
         {
-          "id": "zheng-tai-zong-ti-fang-1na28x",
+          "id": "jian-yan-qie-yi-zhi-shi-0xf8h8",
           "title": "讲解例子",
-          "bodyMarkdown": "正态总体方差未知时，均值标准化后服从 t 分布而不是标准正态。"
+          "bodyMarkdown": "检验 μ 且 σ 已知时，用 U 统计量。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "总体是研究对象的全体，样本是从总体中抽出的有限观测。统计量只由样本计算、不含未知参数；抽样分布描述统计量在重复抽样中的波动，是区间估计和假设检验的基础。\n\n### 解题步骤\n\n1. 区分总体参数与样本统计量\n2. 写出统计量的分布\n3. 根据已知条件选择 χ²、t 或 F\n\n### 易错点\n\n把样本方差分母写成 n 后直接套用无偏性结论。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "检验统计量把样本信息浓缩成一个数，用于判断是否拒绝 H0：均值检验用 U=(X̄−μ₀)/(σ/√n)，方差检验用 χ²=(n−1)S²/σ₀²。\n\n### 解题步骤\n\n1. 按检验对象选统计量\n2. 在 H0 成立下写出其分布\n3. 代入样本算出统计量的值\n\n### 易错点\n\n统计量里用了未知参数，应代入 H0 下的已知值。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p3-c8-s1",
       "sectionTitle": "基本思想",
       "title": "显著性水平 α",
-      "summary": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。",
+      "summary": "显著性水平 α 是事先规定的、允许犯第一类错误（H0 为真却拒绝）的最大概率，常取 0.05 或 0.01。",
       "tags": [
-        "用证据检验假设"
+        "允许犯错的概率上限"
       ],
       "sortOrder": 40,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "α=P(拒绝H₀|H₀为真)",
-        "caption": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。"
+        "content": "P{拒绝 H0 | H0 为真} = α",
+        "caption": "显著性水平 α 是事先规定的、允许犯第一类错误（H0 为真却拒绝）的最大概率，常取 0.05 或 0.01。"
       },
       "keyPoints": [
         {
-          "id": "xian-zhu-xing-shui-ping-kong-zhi-di-yi-1wburh",
-          "title": "显著性水平控制第一类错误概率",
-          "bodyMarkdown": "显著性水平控制第一类错误概率"
+          "id": "shi-ju-jue-h0-shi-ke-neng-fan-cuo-de-1g1o7e",
+          "title": "α 是拒绝 H0 时可能犯错的概率上限",
+          "bodyMarkdown": "α 是拒绝 H0 时可能犯错的概率上限"
         },
         {
-          "id": "ju-jue-yu-you-tong-ji-liang-fen-bu-he-1u812t",
-          "title": "拒绝域由统计量分布和备择方向决定",
-          "bodyMarkdown": "拒绝域由统计量分布和备择方向决定"
+          "id": "chang-qu-0-05-0-01-you-ti-mu-gei-chu",
+          "title": "常取 0.05、0.01",
+          "bodyMarkdown": "常取 0.05、0.01，由题目给出"
         },
         {
-          "id": "p-zhi-shi-guan-cha-dao-dang-qian-huo-0vbapg",
-          "title": "P 值是观察到当前或更极端证据时的概率",
-          "bodyMarkdown": "P 值是观察到当前或更极端证据时的概率"
+          "id": "yue-xiao-ju-jue-yu-yue-xiao-yue-bu-rong-1n59y2",
+          "title": "α 越小",
+          "bodyMarkdown": "α 越小，拒绝域越小，越不容易拒绝 H0"
         }
       ],
       "examples": [
         {
-          "id": "jian-yan-jun-zhi-shi-1e8cri",
+          "id": "0-05-de-shuang-ce-u-0cec3r",
           "title": "讲解例子",
-          "bodyMarkdown": "检验均值是否等于 μ₀ 时，根据方差已知/未知选择 z 或 t 统计量。"
+          "bodyMarkdown": "α=0.05 的双侧 U 检验，临界值为 ±1.96。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。如果结果落入拒绝域，就拒绝 H₀；否则只能说证据不足，不能把“未拒绝”当成 H₀ 已被证明。\n\n### 解题步骤\n\n1. 写 H₀、H₁\n2. 选统计量与分布\n3. 比较临界值或 P 值并作结论\n\n### 易错点\n\nP 值小不等于 H₀ 为真的概率小；结论必须对应题目语境。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "显著性水平 α 是事先规定的、允许犯第一类错误（H0 为真却拒绝）的最大概率，常取 0.05 或 0.01。α 越小，拒绝 H0 的门槛越高。\n\n### 解题步骤\n\n1. 读出题目给的 α\n2. 确定单侧还是双侧\n3. 查对应的分位数\n\n### 易错点\n\n把 α 当成「H0 为真的概率」。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p3-c8-s1",
       "sectionTitle": "基本思想",
       "title": "拒绝域",
-      "summary": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。",
+      "summary": "拒绝域是检验统计量取值的一个区域：统计量的值落在里面就拒绝 H0，否则不拒绝。",
       "tags": [
-        "用证据检验假设"
+        "统计量的翻车区"
       ],
       "sortOrder": 50,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "α=P(拒绝H₀|H₀为真)",
-        "caption": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。"
+        "format": "latex",
+        "content": "双侧拒绝域：|U|>z_{α/2}",
+        "caption": "拒绝域是检验统计量取值的一个区域：统计量的值落在里面就拒绝 H0，否则不拒绝。"
       },
       "keyPoints": [
         {
-          "id": "xian-zhu-xing-shui-ping-kong-zhi-di-yi-1wburh",
-          "title": "显著性水平控制第一类错误概率",
-          "bodyMarkdown": "显著性水平控制第一类错误概率"
+          "id": "ju-jue-yu-you-yu-h1-de-fang-xiang-gong-1lr55r",
+          "title": "拒绝域由 α 与 H1 的方向共同决定",
+          "bodyMarkdown": "拒绝域由 α 与 H1 的方向共同决定"
         },
         {
-          "id": "ju-jue-yu-you-tong-ji-liang-fen-bu-he-1u812t",
-          "title": "拒绝域由统计量分布和备择方向决定",
-          "bodyMarkdown": "拒绝域由统计量分布和备择方向决定"
+          "id": "shuang-ce-u-z-2-you-ce-u-z-zuo-ce-u-z",
+          "title": "双侧：|U|>z_{α/2}；右侧：U>z_α；",
+          "bodyMarkdown": "双侧：|U|>z_{α/2}；右侧：U>z_α；左侧：U<−z_α"
         },
         {
-          "id": "p-zhi-shi-guan-cha-dao-dang-qian-huo-0vbapg",
-          "title": "P 值是观察到当前或更极端证据时的概率",
-          "bodyMarkdown": "P 值是观察到当前或更极端证据时的概率"
+          "id": "tong-ji-liang-luo-ru-ju-jue-yu-jiu-ju-1q7k2o",
+          "title": "统计量落入拒绝域就拒绝 H0",
+          "bodyMarkdown": "统计量落入拒绝域就拒绝 H0"
         }
       ],
       "examples": [
         {
-          "id": "jian-yan-jun-zhi-shi-1e8cri",
+          "id": "u-jian-yan-0-05-shuang-162bgv",
           "title": "讲解例子",
-          "bodyMarkdown": "检验均值是否等于 μ₀ 时，根据方差已知/未知选择 z 或 t 统计量。"
+          "bodyMarkdown": "U 检验、α=0.05 双侧时，|U|>1.96 就拒绝 H0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。如果结果落入拒绝域，就拒绝 H₀；否则只能说证据不足，不能把“未拒绝”当成 H₀ 已被证明。\n\n### 解题步骤\n\n1. 写 H₀、H₁\n2. 选统计量与分布\n3. 比较临界值或 P 值并作结论\n\n### 易错点\n\nP 值小不等于 H₀ 为真的概率小；结论必须对应题目语境。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "拒绝域是检验统计量取值的一个区域：统计量的值落在里面就拒绝 H0，否则不拒绝。双侧检验的拒绝域在两端，单侧在一端。\n\n### 解题步骤\n\n1. 确定单双侧\n2. 按 α 查出临界值\n3. 写出拒绝域并与统计量的值比较\n\n### 易错点\n\n单侧检验却用双侧的临界值，或方向写反。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p3-c8-s1",
       "sectionTitle": "基本思想",
       "title": "P 值的直观理解（作为辅助）",
-      "summary": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。",
+      "summary": "P 值是在 H0 成立时，出现「当前样本或更极端样本」的概率。",
       "tags": [
-        "用证据检验假设"
+        "比 α 更细的尺度"
       ],
       "sortOrder": 60,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "α=P(拒绝H₀|H₀为真)",
-        "caption": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。"
+        "content": "P 值 = P{统计量更极端 | H0}",
+        "caption": "P 值是在 H0 成立时，出现「当前样本或更极端样本」的概率。"
       },
       "keyPoints": [
         {
-          "id": "xian-zhu-xing-shui-ping-kong-zhi-di-yi-1wburh",
-          "title": "显著性水平控制第一类错误概率",
-          "bodyMarkdown": "显著性水平控制第一类错误概率"
+          "id": "p-zhi-h0-cheng-li-shi-chu-xian-dang-02h9ru",
+          "title": "P 值 = H0 成立时出现当前或更极端结果的概",
+          "bodyMarkdown": "P 值 = H0 成立时出现当前或更极端结果的概率"
         },
         {
-          "id": "ju-jue-yu-you-tong-ji-liang-fen-bu-he-1u812t",
-          "title": "拒绝域由统计量分布和备择方向决定",
-          "bodyMarkdown": "拒绝域由统计量分布和备择方向决定"
+          "id": "p-ju-jue-h0-p-bu-ju-jue",
+          "title": "P<α 拒绝 H0",
+          "bodyMarkdown": "P<α 拒绝 H0，P≥α 不拒绝"
         },
         {
-          "id": "p-zhi-shi-guan-cha-dao-dang-qian-huo-0vbapg",
-          "title": "P 值是观察到当前或更极端证据时的概率",
-          "bodyMarkdown": "P 值是观察到当前或更极端证据时的概率"
+          "id": "p-zhi-yue-xiao-yang-ben-yu-h0-de-chong-0ud23b",
+          "title": "P 值越小",
+          "bodyMarkdown": "P 值越小，样本与 H0 的冲突越强"
         }
       ],
       "examples": [
         {
-          "id": "jian-yan-jun-zhi-shi-1e8cri",
+          "id": "u-2-5-de-shuang-ce-p-1fet38",
           "title": "讲解例子",
-          "bodyMarkdown": "检验均值是否等于 μ₀ 时，根据方差已知/未知选择 z 或 t 统计量。"
+          "bodyMarkdown": "U=2.5 的双侧 P 值 =2(1−Φ(2.5))≈0.0124<0.05，拒绝 H0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。如果结果落入拒绝域，就拒绝 H₀；否则只能说证据不足，不能把“未拒绝”当成 H₀ 已被证明。\n\n### 解题步骤\n\n1. 写 H₀、H₁\n2. 选统计量与分布\n3. 比较临界值或 P 值并作结论\n\n### 易错点\n\nP 值小不等于 H₀ 为真的概率小；结论必须对应题目语境。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "P 值是在 H0 成立时，出现「当前样本或更极端样本」的概率。P 值小于 α 就拒绝 H0，它比简单的拒绝/不拒绝给出了更多信息。\n\n### 解题步骤\n\n1. 算出检验统计量的值\n2. 求该值及更极端区域的概率\n3. 与 α 比较并下结论\n\n### 易错点\n\n把 P 值当成「H0 为真的概率」。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m1-p3-c8-s2",
       "sectionTitle": "两类错误",
       "title": "第一类错误",
-      "summary": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。",
+      "summary": "第一类错误是「H0 为真却拒绝了 H0」，也叫弃真，其概率就是显著性水平 α，由研究者事先控制。",
       "tags": [
-        "用证据检验假设"
+        "弃真"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "α=P(拒绝H₀|H₀为真)",
-        "caption": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。"
+        "content": "P{拒绝 H0 | H0 真} = α",
+        "caption": "第一类错误是「H0 为真却拒绝了 H0」，也叫弃真，其概率就是显著性水平 α，由研究者事先控制。"
       },
       "keyPoints": [
         {
-          "id": "xian-zhu-xing-shui-ping-kong-zhi-di-yi-1wburh",
-          "title": "显著性水平控制第一类错误概率",
-          "bodyMarkdown": "显著性水平控制第一类错误概率"
+          "id": "di-yi-lei-cuo-wu-qi-zhen-gai-l-wei",
+          "title": "第一类错误 = 弃真",
+          "bodyMarkdown": "第一类错误 = 弃真，概率为 α"
         },
         {
-          "id": "ju-jue-yu-you-tong-ji-liang-fen-bu-he-1u812t",
-          "title": "拒绝域由统计量分布和备择方向决定",
-          "bodyMarkdown": "拒绝域由统计量分布和备择方向决定"
+          "id": "you-yan-jiu-zhe-shi-xian-gei-ding",
+          "title": "α 由研究者事先给定",
+          "bodyMarkdown": "α 由研究者事先给定"
         },
         {
-          "id": "p-zhi-shi-guan-cha-dao-dang-qian-huo-0vbapg",
-          "title": "P 值是观察到当前或更极端证据时的概率",
-          "bodyMarkdown": "P 值是观察到当前或更极端证据时的概率"
+          "id": "yue-xiao-yue-bu-rong-yi-fan-di-yi-lei-0z1l6w",
+          "title": "α 越小",
+          "bodyMarkdown": "α 越小，越不容易犯第一类错误"
         }
       ],
       "examples": [
         {
-          "id": "jian-yan-jun-zhi-shi-1e8cri",
+          "id": "0-05-yi-wei-zhe-100-ci-1fww90",
           "title": "讲解例子",
-          "bodyMarkdown": "检验均值是否等于 μ₀ 时，根据方差已知/未知选择 z 或 t 统计量。"
+          "bodyMarkdown": "α=0.05 意味着 100 次检验中约有 5 次会误拒真实的 H0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。如果结果落入拒绝域，就拒绝 H₀；否则只能说证据不足，不能把“未拒绝”当成 H₀ 已被证明。\n\n### 解题步骤\n\n1. 写 H₀、H₁\n2. 选统计量与分布\n3. 比较临界值或 P 值并作结论\n\n### 易错点\n\nP 值小不等于 H₀ 为真的概率小；结论必须对应题目语境。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "第一类错误是「H0 为真却拒绝了 H0」，也叫弃真，其概率就是显著性水平 α，由研究者事先控制。\n\n### 解题步骤\n\n1. 明确 H0 为真的前提\n2. 指出拒绝 H0 会犯的错误\n3. 写出其概率 α\n\n### 易错点\n\n把第一类错误的概率当成 1−α。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m1-p3-c8-s2",
       "sectionTitle": "两类错误",
       "title": "第二类错误",
-      "summary": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。",
+      "summary": "第二类错误是「H0 为假却没有拒绝 H0」，也叫取伪，其概率记作 β。",
       "tags": [
-        "用证据检验假设"
+        "取伪"
       ],
       "sortOrder": 80,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "α=P(拒绝H₀|H₀为真)",
-        "caption": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。"
+        "content": "P{不拒绝 H0 | H0 假} = β",
+        "caption": "第二类错误是「H0 为假却没有拒绝 H0」，也叫取伪，其概率记作 β。"
       },
       "keyPoints": [
         {
-          "id": "xian-zhu-xing-shui-ping-kong-zhi-di-yi-1wburh",
-          "title": "显著性水平控制第一类错误概率",
-          "bodyMarkdown": "显著性水平控制第一类错误概率"
+          "id": "di-er-lei-cuo-wu-qu-wei-gai-l-ji-zuo",
+          "title": "第二类错误 = 取伪",
+          "bodyMarkdown": "第二类错误 = 取伪，概率记作 β"
         },
         {
-          "id": "ju-jue-yu-you-tong-ji-liang-fen-bu-he-1u812t",
-          "title": "拒绝域由统计量分布和备择方向决定",
-          "bodyMarkdown": "拒绝域由统计量分布和备择方向决定"
+          "id": "yang-ben-liang-yue-da-yue-xiao",
+          "title": "样本量越大",
+          "bodyMarkdown": "样本量越大，β 越小"
         },
         {
-          "id": "p-zhi-shi-guan-cha-dao-dang-qian-huo-0vbapg",
-          "title": "P 值是观察到当前或更极端证据时的概率",
-          "bodyMarkdown": "P 值是观察到当前或更极端证据时的概率"
+          "id": "yu-xiang-hu-zhi-yue-jian-xiao-wang-wang-1q3nbr",
+          "title": "α 与 β 相互制约",
+          "bodyMarkdown": "α 与 β 相互制约：减小 α 往往增大 β"
         }
       ],
       "examples": [
         {
-          "id": "jian-yan-jun-zhi-shi-1e8cri",
+          "id": "zeng-da-yang-ben-liang-1au786",
           "title": "讲解例子",
-          "bodyMarkdown": "检验均值是否等于 μ₀ 时，根据方差已知/未知选择 z 或 t 统计量。"
+          "bodyMarkdown": "增大样本量可以在保持 α 的同时减小 β。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "假设检验先把“默认成立的说法”放入 H₀，再用样本构造统计量。如果结果落入拒绝域，就拒绝 H₀；否则只能说证据不足，不能把“未拒绝”当成 H₀ 已被证明。\n\n### 解题步骤\n\n1. 写 H₀、H₁\n2. 选统计量与分布\n3. 比较临界值或 P 值并作结论\n\n### 易错点\n\nP 值小不等于 H₀ 为真的概率小；结论必须对应题目语境。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "第二类错误是「H0 为假却没有拒绝 H0」，也叫取伪，其概率记作 β。样本量增大时 β 减小，而 α 与 β 不能同时任意小。\n\n### 解题步骤\n\n1. 明确 H0 为假的前提\n2. 指出不拒绝 H0 会犯的错误\n3. 说明 β 与 n、α 的关系\n\n### 易错点\n\n以为可以同时把 α 与 β 都降到任意小。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m1-p3-c8-s3",
       "sectionTitle": "正态总体均值检验",
       "title": "方差已知",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "正态总体、σ² 已知时检验 μ 用 U=(X̄−μ₀)/(σ/√n)，H0 成立时服从 N(0,1)，按 α 查标准正态分位数即可。",
       "tags": [
-        "从概率规律到曲线"
+        "用 U 统计量检验均值"
       ],
       "sortOrder": 90,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "U=(X̄−μ₀)/(σ/√n) ~ N(0,1)",
+        "caption": "正态总体、σ² 已知时检验 μ 用 U=(X̄−μ₀)/(σ/√n)，H0 成立时服从 N(0,1)，按 α 查标准正态分位数即可。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "shu-zhou-liang-u-x-n-n-0-1",
+          "title": "枢轴量 U=(X̄−μ₀)/(σ/√n) ~ N",
+          "bodyMarkdown": "枢轴量 U=(X̄−μ₀)/(σ/√n) ~ N(0,1)"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "shuang-ce-lin-jie-zhi-z-2-dan-ce-yong-z",
+          "title": "双侧临界值 ±z_{α/2}",
+          "bodyMarkdown": "双侧临界值 ±z_{α/2}，单侧用 z_α"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "yi-zhi-shi-shi-yong-u-jian-yan-de-qian-058897",
+          "title": "σ 已知是使用 U 检验的前提",
+          "bodyMarkdown": "σ 已知是使用 U 检验的前提"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "n-25-2-x-10-5-10-u-1-25-089y7z",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "n=25、σ=2、X̄=10.5、μ₀=10：U=1.25<1.96，不拒绝 H0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "正态总体、σ² 已知时检验 μ 用 U=(X̄−μ₀)/(σ/√n)，H0 成立时服从 N(0,1)，按 α 查标准正态分位数即可。\n\n### 解题步骤\n\n1. 写出 H0 与 H1\n2. 算出 U 的值\n3. 与临界值比较并下结论\n\n### 易错点\n\n把 σ/√n 写成 σ 或 σ²/√n。"
     },
     {
       "schemaVersion": "1.0",
@@ -474,47 +474,47 @@
       "sectionId": "m1-p3-c8-s3",
       "sectionTitle": "正态总体均值检验",
       "title": "方差未知",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "σ² 未知时用样本标准差代替：T=(X̄−μ₀)/(S/√n)，H0 成立时服从 t(n−1)，按 t 分布查临界值。",
       "tags": [
-        "从概率规律到曲线"
+        "用 T 统计量检验均值"
       ],
       "sortOrder": 100,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "T=(X̄−μ₀)/(S/√n) ~ t(n−1)",
+        "caption": "σ² 未知时用样本标准差代替：T=(X̄−μ₀)/(S/√n)，H0 成立时服从 t(n−1)，按 t 分布查临界值。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "shu-zhou-liang-t-x-s-n-t-n-1",
+          "title": "枢轴量 T=(X̄−μ₀)/(S/√n) ~ t",
+          "bodyMarkdown": "枢轴量 T=(X̄−μ₀)/(S/√n) ~ t(n−1)"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "zi-you-du-shi-n-1",
+          "title": "自由度是 n−1",
+          "bodyMarkdown": "自由度是 n−1"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "wei-zhi-shi-bi-xu-yong-t-fen-bu-er-bu-15flfz",
+          "title": "σ 未知时必须用 t 分布而不是标准正态",
+          "bodyMarkdown": "σ 未知时必须用 t 分布而不是标准正态"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "n-16-s-4-x-2-shi-t-2-yu-1jlkuu",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "n=16、S=4、X̄−μ₀=2 时 T=2，与 t(15) 的 2.131 比较。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "σ² 未知时用样本标准差代替：T=(X̄−μ₀)/(S/√n)，H0 成立时服从 t(n−1)，按 t 分布查临界值。\n\n### 解题步骤\n\n1. 算出 X̄ 与 S\n2. 代入 T 的公式\n3. 查 t(n−1) 的临界值并比较\n\n### 易错点\n\n用 z 分位数代替 t 分位数，小样本时误差明显。"
     },
     {
       "schemaVersion": "1.0",
@@ -525,47 +525,47 @@
       "sectionId": "m1-p3-c8-s4",
       "sectionTitle": "正态总体方差检验",
       "title": "方差检验使用 χ² 统计量",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "正态总体方差检验用 χ²=(n−1)S²/σ₀²，在 H0: σ²=σ₀² 成立时服从 χ²(n−1)，这是方差检验与均值检验最大的不同。",
       "tags": [
-        "从概率规律到曲线"
+        "检验方差用卡方"
       ],
       "sortOrder": 110,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "χ²=(n−1)S²/σ₀² ~ χ²(n−1)",
+        "caption": "正态总体方差检验用 χ²=(n−1)S²/σ₀²，在 H0: σ²=σ₀² 成立时服从 χ²(n−1)，这是方差检验与均值检验最大的不同。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "shu-zhou-liang-n-1-s-n-1",
+          "title": "枢轴量 χ²=(n−1)S²/σ₀² ~ χ²(",
+          "bodyMarkdown": "枢轴量 χ²=(n−1)S²/σ₀² ~ χ²(n−1)"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "zi-you-du-shi-n-1",
+          "title": "自由度是 n−1",
+          "bodyMarkdown": "自由度是 n−1"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "fen-bu-bu-dui-chen-zuo-you-lin-jie-zhi-0kdf7l",
+          "title": "χ² 分布不对称",
+          "bodyMarkdown": "χ² 分布不对称，左右临界值不对称"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "n-10-s-4-2-shi-tong-ji-08da9l",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "n=10、S²=4、σ₀²=2 时，统计量的值为 18。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "正态总体方差检验用 χ²=(n−1)S²/σ₀²，在 H0: σ²=σ₀² 成立时服从 χ²(n−1)，这是方差检验与均值检验最大的不同。\n\n### 解题步骤\n\n1. 写出 H0: σ²=σ₀²\n2. 算出 χ² 的值\n3. 查 χ²(n−1) 的左右分位数\n\n### 易错点\n\n自由度写成 n，或用正态分位数做方差检验。"
     },
     {
       "schemaVersion": "1.0",
@@ -576,47 +576,47 @@
       "sectionId": "m1-p3-c8-s4",
       "sectionTitle": "正态总体方差检验",
       "title": "原假设与双侧/单侧拒绝域",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "方差检验的拒绝域取决于 H1 的方向：双侧 H1: σ²≠σ₀² 时，χ² 落在两侧分位数之外才拒绝；单侧则只用一侧分位数。",
       "tags": [
-        "从概率规律到曲线"
+        "方差检验的拒绝域"
       ],
       "sortOrder": 120,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "format": "latex",
+        "content": "双侧拒绝域：χ²>χ²_{α/2}(n−1) 或 χ²<χ²_{1−α/2}(n−1)",
+        "caption": "方差检验的拒绝域取决于 H1 的方向：双侧 H1: σ²≠σ₀² 时，χ² 落在两侧分位数之外才拒绝；单侧则只用一侧分位数。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "shuang-ce-2-huo-1-2",
+          "title": "双侧：χ²>χ²_{α/2} 或 χ²<χ²_{",
+          "bodyMarkdown": "双侧：χ²>χ²_{α/2} 或 χ²<χ²_{1−α/2}"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "you-ce-dan-ce",
+          "title": "右侧单侧",
+          "bodyMarkdown": "右侧单侧：χ²>χ²_α"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "zuo-ce-dan-ce-1",
+          "title": "左侧单侧",
+          "bodyMarkdown": "左侧单侧：χ²<χ²_{1−α}"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "n-10-0-05-shuang-ce-shi-1h0660",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "n=10、α=0.05 双侧时，χ²(9) 的 0.025 与 0.975 分位数为 2.700 与 19.023。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "方差检验的拒绝域取决于 H1 的方向：双侧 H1: σ²≠σ₀² 时，χ² 落在两侧分位数之外才拒绝；单侧则只用一侧分位数。\n\n### 解题步骤\n\n1. 由 H1 判断单双侧\n2. 按 α 查 χ² 分位数\n3. 写出拒绝域\n\n### 易错点\n\n把 χ² 的两个分位数写反，左侧用了大分位数。"
     },
     {
       "schemaVersion": "1.0",
@@ -627,47 +627,47 @@
       "sectionId": "m1-p3-c8-s4",
       "sectionTitle": "正态总体方差检验",
       "title": "根据临界值作出检验结论",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "算出统计量的值后，与临界值比较：落入拒绝域就拒绝 H0，否则不拒绝。",
       "tags": [
-        "从概率规律到曲线"
+        "比较并下结论"
       ],
       "sortOrder": 130,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "统计量 ∈ 拒绝域 ⇒ 拒绝 H0",
+        "caption": "算出统计量的值后，与临界值比较：落入拒绝域就拒绝 H0，否则不拒绝。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "jie-lun-zhi-you-liang-zhong-ju-jue-h0-0x7bf3",
+          "title": "结论只有两种",
+          "bodyMarkdown": "结论只有两种：拒绝 H0 或不拒绝 H0"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "bu-neng-xie-jie-shou-h0-mei-you-zheng-0mgffx",
+          "title": "不能写「接受 H0」——没有证明 H0 正确",
+          "bodyMarkdown": "不能写「接受 H0」——没有证明 H0 正确"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "yao-jie-he-yu-jing-shuo-ming-shi-ji-jie-1jn0oj",
+          "title": "要结合语境说明实际结论",
+          "bodyMarkdown": "要结合语境说明实际结论"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "u-2-3-1-96-ju-jue-h0-1dc66n",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "U=2.3>1.96，拒绝 H0，认为该批产品的平均长度与 10cm 有显著差异。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "算出统计量的值后，与临界值比较：落入拒绝域就拒绝 H0，否则不拒绝。结论要按规范表述写出，并结合题目语境说明实际含义。\n\n### 解题步骤\n\n1. 算出统计量的值\n2. 与临界值比较\n3. 按规范表述给出结论\n\n### 易错点\n\n把「不拒绝」写成「接受」，或漏掉结论的实际含义。"
     },
     {
       "schemaVersion": "1.0",
@@ -678,47 +678,47 @@
       "sectionId": "m1-p3-c8-s5",
       "sectionTitle": "两正态总体相关检验",
       "title": "均值差",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "检验两个正态总体均值是否相等，用两样本均值之差：σ 已知时构造 U 统计量（标准正态），σ 未知但相等时构造 T 统计量（自由度 n₁+n₂−2）。",
       "tags": [
-        "从概率规律到曲线"
+        "两总体均值的比较"
       ],
       "sortOrder": 140,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "T=(X̄−Ȳ)/√(S_w²(1/n₁+1/n₂)) ~ t(n₁+n₂−2)",
+        "caption": "检验两个正态总体均值是否相等，用两样本均值之差：σ 已知时构造 U 统计量（标准正态），σ 未知但相等时构造 T 统计量（自由度 n₁+n₂−2）。"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "h0-tong-ji-liang-ji-yu-x",
+          "title": "H0: μ₁=μ₂",
+          "bodyMarkdown": "H0: μ₁=μ₂，统计量基于 X̄−Ȳ"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "yi-zhi-yong-u-wei-zhi-dan-xiang-deng-11gmcm",
+          "title": "σ 已知用 U",
+          "bodyMarkdown": "σ 已知用 U；σ 未知但相等用合并方差的 T"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "t-tong-ji-liang-de-zi-you-du-shi-n-n-2",
+          "title": "T 统计量的自由度是 n₁+n₂−2",
+          "bodyMarkdown": "T 统计量的自由度是 n₁+n₂−2"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "bi-jiao-liang-pi-chan-11jxow",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "比较两批产品的平均强度是否相同，用两样本 t 检验。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "检验两个正态总体均值是否相等，用两样本均值之差：σ 已知时构造 U 统计量（标准正态），σ 未知但相等时构造 T 统计量（自由度 n₁+n₂−2）。\n\n### 解题步骤\n\n1. 判断方差是否已知、是否相等\n2. 写出对应的统计量\n3. 查临界值并下结论\n\n### 易错点\n\n自由度写成 n₁+n₂ 或 min(n₁,n₂)。"
     },
     {
       "schemaVersion": "1.0",
@@ -729,47 +729,47 @@
       "sectionId": "m1-p3-c8-s5",
       "sectionTitle": "两正态总体相关检验",
       "title": "方差比的基本检验结构",
-      "summary": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。",
+      "summary": "检验两个正态总体方差是否相等，用样本方差之比构造 F 统计量：F=(S₁²/σ₁²)/(S₂²/σ₂²)，在 H0: σ₁²=σ₂² 成立时服从 F(n₁−1,n₂−1)。",
       "tags": [
-        "从概率规律到曲线"
+        "两总体方差的比较"
       ],
       "sortOrder": 150,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(a<X<b)=∫ₐᵇf(x)dx；Z=(X−μ)/σ",
-        "caption": "随机变量用分布描述“各个取值出现的可能性”。"
+        "content": "F=S₁²/S₂² ~ F(n₁−1, n₂−1)（H0 成立时）",
+        "caption": "检验两个正态总体方差是否相等，用样本方差之比构造 F 统计量：F=(S₁²/σ₁²)/(S₂²/σ₂²)"
       },
       "keyPoints": [
         {
-          "id": "fen-bu-han-shu-f-x-p-x-x-dan-diao-bu-1t0ce0",
-          "title": "分布函数 F(x)=P(X≤x) 单调不减且右连",
-          "bodyMarkdown": "分布函数 F(x)=P(X≤x) 单调不减且右连续"
+          "id": "h0-ci-shi-f-s-s-f-n-1-n-1",
+          "title": "H0: σ₁²=σ₂²",
+          "bodyMarkdown": "H0: σ₁²=σ₂²，此时 F=S₁²/S₂² ~ F(n₁−1, n₂−1)"
         },
         {
-          "id": "mi-du-ji-fen-wei-1",
-          "title": "密度积分为 1",
-          "bodyMarkdown": "密度积分为 1"
+          "id": "liang-ge-zi-you-du-de-shun-xu-yu-fen-zi-115md2",
+          "title": "两个自由度的顺序与分子分母一致",
+          "bodyMarkdown": "两个自由度的顺序与分子分母一致"
         },
         {
-          "id": "zheng-tai-biao-zhun-hua-z-x",
-          "title": "正态标准化 z=(x−μ)/σ",
-          "bodyMarkdown": "正态标准化 z=(x−μ)/σ"
+          "id": "f-jian-yan-tong-yang-fen-shuang-ce-yu-0xknro",
+          "title": "F 检验同样分双侧与单侧",
+          "bodyMarkdown": "F 检验同样分双侧与单侧"
         }
       ],
       "examples": [
         {
-          "id": "er-xiang-fen-bu-miao-01o9x0",
+          "id": "pan-duan-liang-tiao-118k3l",
           "title": "讲解例子",
-          "bodyMarkdown": "二项分布描述固定次数独立重复试验的成功次数；泊松常用于稀有事件计数。"
+          "bodyMarkdown": "判断两条生产线的方差是否相当：F=1.8 与 F(9,9) 的临界值比较。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:28:29Z",
-      "bodyMarkdown": "随机变量用分布描述“各个取值出现的可能性”。离散型用分布律，连续型用密度；连续密度的高度不是概率，区间概率要靠曲线下面积。标准化让不同均值和方差的正态变量统一到标准正态。\n\n### 解题步骤\n\n1. 判断离散/连续\n2. 写分布或密度并检查归一性\n3. 按题目求区间概率或标准化\n\n### 易错点\n\n把密度 f(x) 当成单点概率，或忘记标准差必须取正。"
+      "updatedAt": "2026-09-18T12:45:48Z",
+      "bodyMarkdown": "检验两个正态总体方差是否相等，用样本方差之比构造 F 统计量：F=(S₁²/σ₁²)/(S₂²/σ₂²)，在 H0: σ₁²=σ₂² 成立时服从 F(n₁−1,n₂−1)。\n\n### 解题步骤\n\n1. 写出 H0 与 H1\n2. 算出 F=S₁²/S₂²\n3. 查 F 分布分位数并比较\n\n### 易错点\n\n把分子分母的自由度写反。"
     }
   ]
 }
