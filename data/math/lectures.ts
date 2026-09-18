@@ -624,7 +624,11 @@ function scopedBody(title: string, section: string): LectureBody | null {
   // 而二元极限讲左右极限是**错的**——二元极限要求沿任意路径趋近。
   if (
     /左极限|右极限|函数极限|无穷远处极限|x→x0|x→∞|极限/.test(scope) &&
-    !/洛必达|第一重要|第二重要|工具箱|等价无穷小|积分|级数|二重|多元|偏导|梯度|方向导数/.test(scope)
+    // 概率侧的「中心极限定理」「标准化」「大数定律」也要排掉：它们的 scope 里带「极限」，
+    // 原来会被这条一元极限规则吞掉（拿到左右极限判据，完全无关）。
+    !/洛必达|第一重要|第二重要|工具箱|等价无穷小|积分|级数|二重|多元|偏导|梯度|方向导数|中心极限|大数定律|棣莫弗|标准化|正态|切比雪夫/.test(
+      scope,
+    )
   ) {
     return body(
       '逼近而非代入',
@@ -1736,7 +1740,7 @@ function fuzzyDirect(title: string): LectureBody | undefined {
   return undefined
 }
 
-export function getMathLecture(topic: string, section = ''): MathLecture {
+export function getMathLecture(topic: string, section = '', chapter = ''): MathLecture {
   const title = cleanTopic(topic)
   const scope = cleanTopic(section)
   /*
@@ -1744,7 +1748,7 @@ export function getMathLecture(topic: string, section = ''): MathLecture {
    * 不再走下面的规则分派。规则层要覆盖 960 个知识点，必然复用且容易遮蔽，
    * 精编层是「一个知识点一份内容」的正确答案，写一个就覆盖一个。
    */
-  const curated = CURATED[title]
+  const curated = CURATED[`${cleanTopic(chapter)}/${title}`] || CURATED[title]
   if (curated) return { title, ...curated }
   const direct = DIRECT[title] || fuzzyDirect(title)
   const detail = direct || scopedBody(title, scope) || fallbackBody(title, scope)

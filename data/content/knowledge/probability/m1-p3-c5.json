@@ -15,47 +15,47 @@
       "sectionId": "m1-p3-c5-s1",
       "sectionTitle": "切比雪夫不等式",
       "title": "用方差控制偏离均值的概率",
-      "summary": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。",
+      "summary": "切比雪夫不等式给出「偏离均值」的概率上界：P{|X−EX|≥ε} ≤ D(X)/ε²。",
       "tags": [
-        "衡量波动与联动"
+        "切比雪夫不等式"
       ],
       "sortOrder": 10,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "D(X)=E(X²)−E²(X)；ρ=Cov(X,Y)/(σₓσᵧ)",
-        "caption": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。"
+        "content": "P{|X−EX|≥ε} ≤ D(X)/ε²",
+        "caption": "切比雪夫不等式给出「偏离均值」的概率上界：P{|X−EX|≥ε} ≤ D(X)/ε²。"
       },
       "keyPoints": [
         {
-          "id": "d-x-e-x-e-x",
-          "title": "D(X)=E(X²)−[E(X)]²",
-          "bodyMarkdown": "D(X)=E(X²)−[E(X)]²"
+          "id": "p-x-ex-d-x-qi-zhong-shi-ren-yi-zheng-shu",
+          "title": "P{|X−EX|≥ε} ≤ D(X)/ε²",
+          "bodyMarkdown": "P{|X−EX|≥ε} ≤ D(X)/ε²，其中 ε 是任意正数"
         },
         {
-          "id": "d-ax-b-a-d-x",
-          "title": "D(aX+b)=a²D(X)",
-          "bodyMarkdown": "D(aX+b)=a²D(X)"
+          "id": "fang-cha-yue-xiao-pian-li-jun-zhi-chao-1md0lb",
+          "title": "方差越小",
+          "bodyMarkdown": "方差越小，偏离均值超过 ε 的概率上界越小"
         },
         {
-          "id": "du-li-qie-qi-wang-cun-zai-shi-xie-fang-1sunre",
-          "title": "独立且期望存在时协方差为 0",
-          "bodyMarkdown": "独立且期望存在时协方差为 0"
+          "id": "zhi-yao-ex-yu-dx-cun-zai-jiu-neng-yong-0jvw5z",
+          "title": "只要 EX 与 DX 存在就能用",
+          "bodyMarkdown": "只要 EX 与 DX 存在就能用，不需要具体分布"
         }
       ],
       "examples": [
         {
-          "id": "ruo-y-2x-1-ze-cov-x-y-057c83",
+          "id": "ex-10-dx-4-ze-p-x-10-5-16u01m",
           "title": "讲解例子",
-          "bodyMarkdown": "若 Y=2X+1，则 Cov(X,Y)=2D(X)，相关系数为 1（只要 X 非退化）。"
+          "bodyMarkdown": "EX=10、DX=4，则 P{|X−10|≥5} ≤ 4/25=0.16。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:20:27Z",
-      "bodyMarkdown": "方差描述随机变量围绕均值的平均平方偏离，协方差描述两个变量是否同向变化，相关系数把协方差标准化到 −1 与 1 之间。零相关只排除线性联动，不代表一定独立。\n\n### 解题步骤\n\n1. 先求均值\n2. 用二阶矩或乘积期望计算\n3. 按尺度和符号解释结果\n\n### 易错点\n\nρ=0 不等于独立；方差变换时系数要平方。"
+      "updatedAt": "2026-09-18T12:28:29Z",
+      "bodyMarkdown": "切比雪夫不等式给出「偏离均值」的概率上界：P{|X−EX|≥ε} ≤ D(X)/ε²。它只用到均值和方差，不要求知道分布的具体形状，这是它最大的价值。\n\n### 解题步骤\n\n1. 写出 EX 与 DX\n2. 把「偏离」写成 |X−EX|≥ε\n3. 代入不等式得到概率上界\n\n### 易错点\n\n把不等式方向写反（它是上界不是等号），或漏掉分母的平方。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p3-c5-s2",
       "sectionTitle": "大数定律",
       "title": "切比雪夫大数定律",
-      "summary": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。",
+      "summary": "切比雪夫大数定律说：若 Xᵢ 相互独立且方差一致有界，则样本均值依概率收敛到各自期望的平均值。",
       "tags": [
-        "从随机到稳定"
+        "方差有界则均值稳定"
       ],
       "sortOrder": 20,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(|X−EX|≥ε)≤D(X)/ε²；(ΣXᵢ−nμ)/(σ√n)→N(0,1)",
-        "caption": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。"
+        "content": "(1/n)ΣXᵢ →ᴾ (1/n)ΣE(Xᵢ)",
+        "caption": "切比雪夫大数定律说：若 Xᵢ 相互独立且方差一致有界，则样本均值依概率收敛到各自期望的平均值。"
       },
       "keyPoints": [
         {
-          "id": "qie-bi-xue-fu-bu-deng-shi-yong-fang-cha-05y8ju",
-          "title": "切比雪夫不等式用方差控制偏离概率",
-          "bodyMarkdown": "切比雪夫不等式用方差控制偏离概率"
+          "id": "tiao-jian-xiang-hu-du-li-fang-cha-yi-1ij0kr",
+          "title": "条件：相互独立 + 方差一致有界",
+          "bodyMarkdown": "条件：相互独立 + 方差一致有界"
         },
         {
-          "id": "da-shu-ding-l-guan-zhu-n-qu-yu-wu-qiong-0t2fh8",
-          "title": "大数定律关注 n 趋于无穷的平均行为",
-          "bodyMarkdown": "大数定律关注 n 趋于无穷的平均行为"
+          "id": "jie-lun-yang-ben-jun-zhi-yi-gai-l-shou-0cw0dw",
+          "title": "结论：样本均值依概率收敛到期望的平均值",
+          "bodyMarkdown": "结论：样本均值依概率收敛到期望的平均值"
         },
         {
-          "id": "zhong-xin-ji-xian-ding-li-xu-yao-biao-05kxev",
-          "title": "中心极限定理需要标准化并关注误差尺度",
-          "bodyMarkdown": "中心极限定理需要标准化并关注误差尺度"
+          "id": "zheng-ming-gong-ju-zheng-shi-qie-bi-xue-162y1x",
+          "title": "证明工具正是切比雪夫不等式",
+          "bodyMarkdown": "证明工具正是切比雪夫不等式"
         }
       ],
       "examples": [
         {
-          "id": "yang-ben-liang-zeng-da-1b9dpi",
+          "id": "du-li-tong-fen-bu-qie-1a3i0i",
           "title": "讲解例子",
-          "bodyMarkdown": "样本量增大时，抛硬币正面频率趋近 1/2；大量重复测量的均值近似正态。"
+          "bodyMarkdown": "独立同分布且方差有限时，样本均值收敛到总体均值 μ。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:20:27Z",
-      "bodyMarkdown": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。前者讲稳定，后者讲波动形状。\n\n### 解题步骤\n\n1. 确认独立同分布或矩条件\n2. 写出平均量/标准化量\n3. 选择定律并说明收敛含义\n\n### 易错点\n\n把“样本平均接近均值”理解为每次都接近，忽略概率和波动尺度。"
+      "updatedAt": "2026-09-18T12:28:29Z",
+      "bodyMarkdown": "切比雪夫大数定律说：若 Xᵢ 相互独立且方差一致有界，则样本均值依概率收敛到各自期望的平均值。它把「平均值会稳定」这个直觉变成了定理。\n\n### 解题步骤\n\n1. 检查独立性与方差有界\n2. 写出样本均值的期望与方差\n3. 用切比雪夫不等式取极限\n\n### 易错点\n\n忽略「方差有界」这个前提，以为只要独立就能用。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p3-c5-s2",
       "sectionTitle": "大数定律",
       "title": "伯努利大数定律",
-      "summary": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。",
+      "summary": "伯努利大数定律是切比雪夫大数定律在 0-1 分布上的特例：n 次独立重复试验中，事件发生的频率 μₙ/n 依概率收敛到它的概率 p，这为「用频率估计概率」提供了理论依据。",
       "tags": [
-        "从随机到稳定"
+        "频率收敛到概率"
       ],
       "sortOrder": 30,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(|X−EX|≥ε)≤D(X)/ε²；(ΣXᵢ−nμ)/(σ√n)→N(0,1)",
-        "caption": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。"
+        "content": "μₙ/n →ᴾ p",
+        "caption": "伯努利大数定律是切比雪夫大数定律在 0-1 分布上的特例：n 次独立重复试验中"
       },
       "keyPoints": [
         {
-          "id": "qie-bi-xue-fu-bu-deng-shi-yong-fang-cha-05y8ju",
-          "title": "切比雪夫不等式用方差控制偏离概率",
-          "bodyMarkdown": "切比雪夫不等式用方差控制偏离概率"
+          "id": "pin-l-n-yi-gai-l-shou-lian-dao-gai-l-p",
+          "title": "频率 μₙ/n 依概率收敛到概率 p",
+          "bodyMarkdown": "频率 μₙ/n 依概率收敛到概率 p"
         },
         {
-          "id": "da-shu-ding-l-guan-zhu-n-qu-yu-wu-qiong-0t2fh8",
-          "title": "大数定律关注 n 趋于无穷的平均行为",
-          "bodyMarkdown": "大数定律关注 n 趋于无穷的平均行为"
+          "id": "ta-shi-0-1-fen-bu-shang-de-qie-bi-xue-1bcppx",
+          "title": "它是 0-1 分布上的切比雪夫大数定律特例",
+          "bodyMarkdown": "它是 0-1 分布上的切比雪夫大数定律特例"
         },
         {
-          "id": "zhong-xin-ji-xian-ding-li-xu-yao-biao-05kxev",
-          "title": "中心极限定理需要标准化并关注误差尺度",
-          "bodyMarkdown": "中心极限定理需要标准化并关注误差尺度"
+          "id": "ci-shu-yue-duo-pin-l-yue-jie-jin-gai-l-0p6d6j",
+          "title": "「次数越多频率越接近概率」的严格表述就是它",
+          "bodyMarkdown": "「次数越多频率越接近概率」的严格表述就是它"
         }
       ],
       "examples": [
         {
-          "id": "yang-ben-liang-zeng-da-1b9dpi",
+          "id": "pao-ying-bi-10000-ci-0ltkar",
           "title": "讲解例子",
-          "bodyMarkdown": "样本量增大时，抛硬币正面频率趋近 1/2；大量重复测量的均值近似正态。"
+          "bodyMarkdown": "抛硬币 10000 次，正面频率以很大概率落在 0.5 附近。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:20:27Z",
-      "bodyMarkdown": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。前者讲稳定，后者讲波动形状。\n\n### 解题步骤\n\n1. 确认独立同分布或矩条件\n2. 写出平均量/标准化量\n3. 选择定律并说明收敛含义\n\n### 易错点\n\n把“样本平均接近均值”理解为每次都接近，忽略概率和波动尺度。"
+      "updatedAt": "2026-09-18T12:28:29Z",
+      "bodyMarkdown": "伯努利大数定律是切比雪夫大数定律在 0-1 分布上的特例：n 次独立重复试验中，事件发生的频率 μₙ/n 依概率收敛到它的概率 p，这为「用频率估计概率」提供了理论依据。\n\n### 解题步骤\n\n1. 把每次试验写成 0-1 变量\n2. 频率就是这些变量的样本均值\n3. 套用大数定律得到收敛结论\n\n### 易错点\n\n把「依概率收敛」读成「必然收敛」——它是概率意义下的收敛。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p3-c5-s2",
       "sectionTitle": "大数定律",
       "title": "辛钦大数定律",
-      "summary": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。",
+      "summary": "辛钦大数定律的条件最宽松：只要 Xᵢ 独立同分布且期望存在，样本均值就依概率收敛到 μ，**不要求方差存在**。",
       "tags": [
-        "从随机到稳定"
+        "独立同分布就够"
       ],
       "sortOrder": 40,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(|X−EX|≥ε)≤D(X)/ε²；(ΣXᵢ−nμ)/(σ√n)→N(0,1)",
-        "caption": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。"
+        "content": "(1/n)ΣXᵢ →ᴾ μ（独立同分布，E(X)=μ）",
+        "caption": "辛钦大数定律的条件最宽松：只要 Xᵢ 独立同分布且期望存在，样本均值就依概率收敛到 μ，**不要求方差存在**。"
       },
       "keyPoints": [
         {
-          "id": "qie-bi-xue-fu-bu-deng-shi-yong-fang-cha-05y8ju",
-          "title": "切比雪夫不等式用方差控制偏离概率",
-          "bodyMarkdown": "切比雪夫不等式用方差控制偏离概率"
+          "id": "tiao-jian-du-li-tong-fen-bu-qi-wang-cun-1c9mkv",
+          "title": "条件：独立同分布 + 期望存在（不要求方差）",
+          "bodyMarkdown": "条件：独立同分布 + 期望存在（不要求方差）"
         },
         {
-          "id": "da-shu-ding-l-guan-zhu-n-qu-yu-wu-qiong-0t2fh8",
-          "title": "大数定律关注 n 趋于无穷的平均行为",
-          "bodyMarkdown": "大数定律关注 n 趋于无穷的平均行为"
+          "id": "jie-lun-yang-ben-jun-zhi-yi-gai-l-shou-02t9yr",
+          "title": "结论：样本均值依概率收敛到 μ",
+          "bodyMarkdown": "结论：样本均值依概率收敛到 μ"
         },
         {
-          "id": "zhong-xin-ji-xian-ding-li-xu-yao-biao-05kxev",
-          "title": "中心极限定理需要标准化并关注误差尺度",
-          "bodyMarkdown": "中心极限定理需要标准化并关注误差尺度"
+          "id": "ta-bi-qie-bi-xue-fu-da-shu-ding-l-tiao-0bzuza",
+          "title": "它比切比雪夫大数定律条件更弱",
+          "bodyMarkdown": "它比切比雪夫大数定律条件更弱，考试里更常用"
         }
       ],
       "examples": [
         {
-          "id": "yang-ben-liang-zeng-da-1b9dpi",
+          "id": "x-du-li-tong-fen-bu-qie-0cf17d",
           "title": "讲解例子",
-          "bodyMarkdown": "样本量增大时，抛硬币正面频率趋近 1/2；大量重复测量的均值近似正态。"
+          "bodyMarkdown": "Xᵢ 独立同分布且服从参数为 λ 的指数分布，则样本均值收敛到 1/λ。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:20:27Z",
-      "bodyMarkdown": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。前者讲稳定，后者讲波动形状。\n\n### 解题步骤\n\n1. 确认独立同分布或矩条件\n2. 写出平均量/标准化量\n3. 选择定律并说明收敛含义\n\n### 易错点\n\n把“样本平均接近均值”理解为每次都接近，忽略概率和波动尺度。"
+      "updatedAt": "2026-09-18T12:28:29Z",
+      "bodyMarkdown": "辛钦大数定律的条件最宽松：只要 Xᵢ 独立同分布且期望存在，样本均值就依概率收敛到 μ，**不要求方差存在**。判断「能不能用大数定律」时先看是否独立同分布。\n\n### 解题步骤\n\n1. 确认独立同分布\n2. 确认期望存在\n3. 直接得到样本均值收敛到 μ\n\n### 易错点\n\n把三个大数定律的条件混用：辛钦不需要方差，切比雪夫需要方差有界。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p3-c5-s2",
       "sectionTitle": "大数定律",
       "title": "频率稳定到概率的思想",
-      "summary": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。",
+      "summary": "频率稳定性指：随试验次数增加，事件发生的频率会在概率附近摆动并逐渐稳定，这正是概率的统计性定义。",
       "tags": [
-        "从随机到稳定"
+        "概率的频率解释"
       ],
       "sortOrder": 50,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(|X−EX|≥ε)≤D(X)/ε²；(ΣXᵢ−nμ)/(σ√n)→N(0,1)",
-        "caption": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。"
+        "content": "频率 μₙ/n ≈ p（n 充分大）",
+        "caption": "频率稳定性指：随试验次数增加，事件发生的频率会在概率附近摆动并逐渐稳定，这正是概率的统计性定义。"
       },
       "keyPoints": [
         {
-          "id": "qie-bi-xue-fu-bu-deng-shi-yong-fang-cha-05y8ju",
-          "title": "切比雪夫不等式用方差控制偏离概率",
-          "bodyMarkdown": "切比雪夫不等式用方差控制偏离概率"
+          "id": "pin-l-shi-shi-yan-de-dao-de-zhi-gai-l-113mwc",
+          "title": "频率是试验得到的值",
+          "bodyMarkdown": "频率是试验得到的值，概率是理论值，两者不是同一个东西"
         },
         {
-          "id": "da-shu-ding-l-guan-zhu-n-qu-yu-wu-qiong-0t2fh8",
-          "title": "大数定律关注 n 趋于无穷的平均行为",
-          "bodyMarkdown": "大数定律关注 n 趋于无穷的平均行为"
+          "id": "pin-l-zai-gai-l-fu-jin-wen-ding-shi-00gvxg",
+          "title": "频率在概率附近稳定",
+          "bodyMarkdown": "频率在概率附近稳定，是「用频率估计概率」的依据"
         },
         {
-          "id": "zhong-xin-ji-xian-ding-li-xu-yao-biao-05kxev",
-          "title": "中心极限定理需要标准化并关注误差尺度",
-          "bodyMarkdown": "中心极限定理需要标准化并关注误差尺度"
+          "id": "ci-shu-yue-duo-yue-wen-ding-dan-bu-hui-0z57j2",
+          "title": "次数越多越稳定",
+          "bodyMarkdown": "次数越多越稳定，但不会精确相等"
         }
       ],
       "examples": [
         {
-          "id": "yang-ben-liang-zeng-da-1b9dpi",
+          "id": "pao-ying-bi-ci-shu-yue-1rkp38",
           "title": "讲解例子",
-          "bodyMarkdown": "样本量增大时，抛硬币正面频率趋近 1/2；大量重复测量的均值近似正态。"
+          "bodyMarkdown": "抛硬币次数越多，正面频率越接近 0.5，但不会恰好等于 0.5。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:20:27Z",
-      "bodyMarkdown": "大数定律说明试验次数增加时，样本平均或频率会稳定到理论值；中心极限定理说明许多独立小影响相加后，标准化和会接近正态分布。前者讲稳定，后者讲波动形状。\n\n### 解题步骤\n\n1. 确认独立同分布或矩条件\n2. 写出平均量/标准化量\n3. 选择定律并说明收敛含义\n\n### 易错点\n\n把“样本平均接近均值”理解为每次都接近，忽略概率和波动尺度。"
+      "updatedAt": "2026-09-18T12:28:29Z",
+      "bodyMarkdown": "频率稳定性指：随试验次数增加，事件发生的频率会在概率附近摆动并逐渐稳定，这正是概率的统计性定义。伯努利大数定律为这个直觉提供了严格证明。\n\n### 解题步骤\n\n1. 先明确事件与其概率\n2. 用频率近似概率\n3. 说明次数增加会提高可靠性\n\n### 易错点\n\n认为「次数多就一定等于概率」，或把频率直接当作概率的定义。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p3-c5-s3",
       "sectionTitle": "中心极限定理",
       "title": "独立同分布中心极限定理",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "独立同分布中心极限定理说：Xᵢ 独立同分布且期望 μ、方差 σ² 存在时，标准化后的和 (ΣXᵢ−nμ)/(σ√n) 依分布收敛到标准正态 N(0,1)。",
       "tags": [
-        "逼近而非代入"
+        "和的分布趋近正态"
       ],
       "sortOrder": 60,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "content": "(ΣXᵢ−nμ)/(σ√n) → N(0,1)",
+        "caption": "独立同分布中心极限定理说：Xᵢ 独立同分布且期望 μ、方差 σ² 存在时"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "tiao-jian-du-li-tong-fen-bu-qi-wang-yu-1uwdxn",
+          "title": "条件：独立同分布 + 期望与方差都存在",
+          "bodyMarkdown": "条件：独立同分布 + 期望与方差都存在"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "jie-lun-biao-zhun-hua-hou-de-he-yi-fen-18oyzt",
+          "title": "结论：标准化后的和依分布收敛到 N(0,1)",
+          "bodyMarkdown": "结论：标准化后的和依分布收敛到 N(0,1)"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "bu-lun-yuan-lai-de-fen-bu-shi-shen-me-19tnbt",
+          "title": "不论原来的分布是什么",
+          "bodyMarkdown": "不论原来的分布是什么，和的分布都趋近正态"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "zhi-100-ci-tou-zi-dian-1ybzks",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "掷 100 次骰子，点数之和近似服从 N(350, 100×35/12)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:20:27Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "updatedAt": "2026-09-18T12:28:29Z",
+      "bodyMarkdown": "独立同分布中心极限定理说：Xᵢ 独立同分布且期望 μ、方差 σ² 存在时，标准化后的和 (ΣXᵢ−nμ)/(σ√n) 依分布收敛到标准正态 N(0,1)。它解释了正态分布为何如此普遍。\n\n### 解题步骤\n\n1. 确认独立同分布且方差存在\n2. 写出 nμ 与标准差 σ√n\n3. 标准化后查标准正态表作近似\n\n### 易错点\n\n把「依分布收敛」理解成「每个 Xᵢ 服从正态」——趋近正态的是标准化后的和。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m1-p3-c5-s3",
       "sectionTitle": "中心极限定理",
       "title": "棣莫弗—拉普拉斯定理",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "棣莫弗—拉普拉斯定理是中心极限定理在二项分布上的特例：X~B(n,p) 时，(X−np)/√(np(1−p)) 依分布收敛到 N(0,1)，于是二项概率可以用正态分布近似计算。",
       "tags": [
-        "逼近而非代入"
+        "二项分布的正态近似"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "content": "(X−np)/√(np(1−p)) → N(0,1)",
+        "caption": "棣莫弗—拉普拉斯定理是中心极限定理在二项分布上的特例：X~B(n,p) 时"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "ta-shi-zhong-xin-ji-xian-ding-li-zai-0-1ei3ao",
+          "title": "它是中心极限定理在 0-1 分布上的特例",
+          "bodyMarkdown": "它是中心极限定理在 0-1 分布上的特例"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "yao-qiu-n-jiao-da-qie-np-yu-n-1-p-dou-0j864m",
+          "title": "要求 n 较大",
+          "bodyMarkdown": "要求 n 较大，且 np 与 n(1−p) 都不能太小"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "biao-zhun-hua-shi-yong-np-yu-np-1-p-bie-0g06b5",
+          "title": "标准化时用 np 与 √(np(1−p))",
+          "bodyMarkdown": "标准化时用 np 与 √(np(1−p))，别写成 np(1−p)"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "pao-400-ci-ying-bi-03v5q8",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "抛 400 次硬币，正面数超过 220 的概率可用 N(200,100) 近似。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:20:27Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "updatedAt": "2026-09-18T12:28:29Z",
+      "bodyMarkdown": "棣莫弗—拉普拉斯定理是中心极限定理在二项分布上的特例：X~B(n,p) 时，(X−np)/√(np(1−p)) 依分布收敛到 N(0,1)，于是二项概率可以用正态分布近似计算。\n\n### 解题步骤\n\n1. 确认 X~B(n,p) 且 n 足够大\n2. 算出 np 与 √(np(1−p))\n3. 标准化后用 Φ 计算近似概率\n\n### 易错点\n\nn 很小时硬用正态近似，或把标准差写成方差。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m1-p3-c5-s3",
       "sectionTitle": "中心极限定理",
       "title": "标准化",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "中心极限定理里的标准化指把「和」减去期望、再除以标准差：(ΣXᵢ−nμ)/(σ√n)。",
       "tags": [
-        "逼近而非代入"
+        "把和变成标准正态"
       ],
       "sortOrder": 80,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "content": "(ΣXᵢ−nμ)/(σ√n)",
+        "caption": "中心极限定理里的标准化指把「和」减去期望、再除以标准差：(ΣXᵢ−nμ)/(σ√n)。"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "fen-zi-shi-he-jian-qu-ta-de-qi-wang-fen-1nk327",
+          "title": "分子是「和减去它的期望」",
+          "bodyMarkdown": "分子是「和减去它的期望」，分母是「和的标准差」"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "fen-mu-yong-n-bu-shi-ye-bu-shi-n",
+          "title": "分母用 σ√n",
+          "bodyMarkdown": "分母用 σ√n，不是 σ，也不是 nσ"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "biao-zhun-hua-zhi-hou-cai-neng-yong-0qd8an",
+          "title": "标准化之后才能用 Φ 表",
+          "bodyMarkdown": "标准化之后才能用 Φ 表，这是做近似题的关键一步"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "x-du-li-tong-fen-bu-2-3-0ycc42",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "Xᵢ 独立同分布、μ=2、σ=3、n=100，则 ΣXᵢ 近似服从 N(200,900)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:20:27Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "updatedAt": "2026-09-18T12:28:29Z",
+      "bodyMarkdown": "中心极限定理里的标准化指把「和」减去期望、再除以标准差：(ΣXᵢ−nμ)/(σ√n)。这样得到的变量依分布收敛到 N(0,1)，之后就能查标准正态表做近似计算。\n\n### 解题步骤\n\n1. 写出和的期望 nμ 与方差 nσ²\n2. 开方得到标准差 σ√n\n3. 做减法与除法完成标准化\n\n### 易错点\n\n分母写成 σ 或 nσ，忘掉 √n 这个因子。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m1-p3-c5-s3",
       "sectionTitle": "中心极限定理",
       "title": "二项分布正态近似",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "二项分布在 n 较大时可用正态分布近似：X~B(n,p) 近似服从 N(np, np(1−p))，于是 P{X≤k}≈Φ((k−np)/√(np(1−p)))，能省掉大量组合数计算。",
       "tags": [
-        "逼近而非代入"
+        "n 大时用正态算二项"
       ],
       "sortOrder": 90,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "content": "X~B(n,p) ≈ N(np, np(1−p))",
+        "caption": "二项分布在 n 较大时可用正态分布近似：X~B(n,p) 近似服从 N(np, np(1−p))"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "jin-si-fen-bu-shi-n-np-np-1-p-jun-zhi-1651cd",
+          "title": "近似分布是 N(np",
+          "bodyMarkdown": "近似分布是 N(np, np(1−p))，均值方差与二项分布一致"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "yao-qiu-n-jiao-da-qie-np-n-1-p-bu-neng-133rwr",
+          "title": "要求 n 较大",
+          "bodyMarkdown": "要求 n 较大，且 np、n(1−p) 不能太小"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "qu-jian-gai-l-yong-liang-ge-zhi-xiang-1gou7k",
+          "title": "区间概率用两个 Φ 值相减得到",
+          "bodyMarkdown": "区间概率用两个 Φ 值相减得到"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "pao-100-ci-ying-bi-04c1ap",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "抛 100 次硬币，正面数落在 45 到 55 之间的概率 ≈ Φ(1.1)−Φ(−1.1)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:20:27Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "updatedAt": "2026-09-18T12:28:29Z",
+      "bodyMarkdown": "二项分布在 n 较大时可用正态分布近似：X~B(n,p) 近似服从 N(np, np(1−p))，于是 P{X≤k}≈Φ((k−np)/√(np(1−p)))，能省掉大量组合数计算。\n\n### 解题步骤\n\n1. 确认 n 足够大\n2. 写出 np 与 √(np(1−p))\n3. 标准化端点后查表相减\n\n### 易错点\n\n用正态近似去算单点概率 P{X=k}（应算区间），或 n 太小时强行近似。"
     }
   ]
 }

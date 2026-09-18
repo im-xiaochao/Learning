@@ -36,6 +36,15 @@ const GOLDEN = [
   ['随机事件与概率', '贝叶斯公式 P(Aⱼ|B)=P(Aⱼ)P(B|Aⱼ)/P(B)', '先验', '由结果反推原因'],
   ['随机事件与概率', '对立事件', '1−P(A)', '正难则反的根据'],
   ['随机事件与概率', '长度、面积、体积比', '测度', '几何概型看测度之比'],
+  // 概率第 2 讲（一维随机变量）与第 5 讲（大数定律）
+  ['一维随机变量及其分布', '二项分布', 'Cₙᵏ', '二项分布的通项'],
+  ['一维随机变量及其分布', '密度与分布函数关系', 'F′(x)=f(x)', '密度与分布函数互逆'],
+  // 注意：两个「标准化」内容不同——一维随机变量那处是正态标准化 Z=(X−μ)/σ，
+  // 大数定律那处是中心极限定理里对「和」的标准化 (ΣXᵢ−nμ)/(σ√n)。
+  ['一维随机变量及其分布', '标准化', 'Z=(X−μ)/σ', '正态标准化要除标准差 σ'],
+  ['大数定律与中心极限定理', '标准化', 'σ√n', '中心极限定理是对「和」标准化'],
+  ['大数定律与中心极限定理', '用方差控制偏离均值的概率', 'ε²', '切比雪夫不等式'],
+  ['大数定律与中心极限定理', '辛钦大数定律', '独立同分布', '辛钦的条件最宽松'],
 ]
 
 /** 展示内容里不允许出现的人名 / 课程名（合规红线） */
@@ -91,6 +100,46 @@ for (const [chapterKey, title, need, why] of GOLDEN) {
     return true
   })
 }
+
+console.log('\n【精编内容的键必须唯一命中】')
+check('不带「/」的键在全库只对应一个知识点（重名要限定章节）', () => {
+  // curated.ts 的键有两种：`标题` 与 `章节标题/标题`。
+  // 只按标题索引时，像「定义」这种标题全库有 22 处，会把概率的内容套到矩阵/向量上。
+  const src = fs.readFileSync(path.join(ROOT, 'data', 'math', 'curated.ts'), 'utf8')
+  const body = src.slice(src.indexOf('const PROBABILITY_EVENTS'), src.indexOf('export const CURATED'))
+  const keys = [...body.matchAll(/^  (?:'([^']+)'|([^':\s][^:]*)): \{$/gm)].map((m) => (m[1] ?? m[2]).trim())
+  if (!keys.length) throw new Error('没解析出任何精编键，检查正则')
+  const count = new Map()
+  for (const { kp } of points) count.set(kp.title, (count.get(kp.title) || 0) + 1)
+  const bad = keys
+    .filter((k) => !k.includes('/'))
+    .filter((k) => (count.get(k) || 0) > 1)
+    .map((k) => `${k}（全库 ${count.get(k)} 处）`)
+  if (bad.length) throw new Error(`这些键重名，必须写成「章节/标题」：${bad.join('、')}`)
+  return true
+})
+check('精编内容确实生效（抽查的摘要不再与他人重复）', () => {
+  // 按「章节 + 标题」抽样：像「标准化」这种标题有两处，只有被精编的那一处才该是独有摘要
+  const sample = [
+    ['随机事件与概率', '德摩根律'],
+    ['一维随机变量及其分布', '二项分布'],
+    ['一维随机变量及其分布', '标准化'],
+    ['一维随机变量及其分布', '分布函数法'],
+    ['一维随机变量及其分布', '定义'],
+  ]
+  const dup = new Map()
+  for (const { kp } of points) dup.set(kp.summary, (dup.get(kp.summary) || 0) + 1)
+  const missing = []
+  const shared = []
+  for (const [chapterKey, title] of sample) {
+    const hit = points.filter((p) => p.chapter.title.includes(chapterKey) && p.kp.title === title)
+    if (!hit.length) missing.push(`${chapterKey}/${title}`)
+    else if (hit.some((p) => dup.get(p.kp.summary) > 1)) shared.push(`${chapterKey}/${title}`)
+  }
+  if (missing.length) throw new Error(`抽查的知识点没找到：${missing.join('、')}`)
+  if (shared.length) throw new Error(`${shared.join('、')} 的摘要仍与他人重复，精编内容没生效`)
+  return true
+})
 
 console.log('\n【合规：展示内容不得出现课程名 / 人名】')
 check(`展示字段不含 ${FORBIDDEN.join('、')}`, () => {
