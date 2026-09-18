@@ -600,11 +600,13 @@ check('刷题卡是整行（.study-card.wide 有 grid-column: 1 / -1）', () => 
   return true
 })
 check('刷题不算进今日目标：进度环与待办仍是两项', () => {
-  // 反向断言：pct 仍除以 2、pending 仍只有两个来源，刷题不参与
-  if (!/pct=Math\.round\(\(wc\/50\*100\+knowledgePct\)\/2\)/.test(src)) {
+  // 反向断言：pct 仍除以 2、pending 仍只有两个来源，刷题不参与。
+  // 分子分母：单词的分母从写死的 50 改成 wordPlanTotal()（= 每天新学 + 复习，默认仍是 50），
+  // 口径没变，只是不再写死。
+  if (!/pct=Math\.round\(\(wc\/wordPlanTotal\(\)\*100\+knowledgePct\)\/2\)/.test(src)) {
     throw new Error('今日进度环口径被改动（应仍为单词 + 知识点两项）')
   }
-  if (!/pending=\(wc<50\?1:0\)\+\(state\.planned\.length\?1:0\)/.test(src)) {
+  if (!/pending=\(wc<wordPlanTotal\(\)\?1:0\)\+\(state\.planned\.length\?1:0\)/.test(src)) {
     throw new Error('今日待办口径被改动（应仍为两项）')
   }
   return true

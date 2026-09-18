@@ -57,6 +57,14 @@
         {
           "path": "favorites/favorites",
           "style": { "navigationStyle": "custom" }
+        },
+        {
+          "path": "wordbook/wordbook",
+          "style": { "navigationStyle": "custom" }
+        },
+        {
+          "path": "word-plan/word-plan",
+          "style": { "navigationStyle": "custom" }
         }
       ]
     },

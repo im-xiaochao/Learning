@@ -311,6 +311,8 @@ input::placeholder { color: var(--muted); opacity: 1; }
   .rate-button.unknown:hover { background: oklch(0.895 0.027 40); color: oklch(0.38 0.1 36); }
   .rate-button:not(.unknown):not(.familiar):hover { background: var(--surface); color: var(--fg); border-color: var(--primary); }
   .pronunciation:hover { background: var(--primary-soft); color: var(--primary-hover); }
+.word-ipa { display: inline-flex; align-items: center; gap: 9px; color: var(--muted); font-size: 13px; }
+.word-ipa .accent-label { font-size: 9px; border-left: 1px solid var(--border); padding-left: 9px; }
   .word-list-row:hover { background: var(--surface); color: var(--fg); box-shadow: inset 0 -2px 0 var(--primary); }
 }
 @media (max-width: 375px) {
@@ -382,7 +384,6 @@ const iconPaths = {
   clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', check:'<path d="m5 12 4 4L19 6"/>',
   circleCheck:'<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>',
   star:'<path d="m12 3 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.6l-5.7 3 1.1-6.4L2.8 9.7l6.4-.9Z"/>',
-  sound:'<path d="M11 4 5 9H2v6h3l6 5ZM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',
   search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
   refresh:'<path d="M20 7v5h-5M4 17v-5h5M5.4 7a8 8 0 0 1 13.2-1L20 8M4 16l1.4 2A8 8 0 0 0 19 17"/>',
   target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
@@ -502,7 +503,7 @@ const concepts = [
   ]
 ];
 const STORAGE_KEY = 'cishu-learning-prototype-v1';
-const defaults = {answered:{}, quizAnswers:{}, favorites:[], planned:[], readTopics:[], lastTopic:'calculus-2', goals:{words:50, knowledge:3, english:'英语一', subject:'数学一', year:'2027'}};
+const defaults = {answered:{}, quizAnswers:{}, favorites:[], planned:[], readTopics:[], lastTopic:'calculus-2', goals:{words:20, review:30, knowledge:3, english:'英语一', subject:'数学一', year:'2027'}};
 let saved = {};
 try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') || {}; } catch (_) {}
 const savedGoals = saved.goals && typeof saved.goals === 'object' ? saved.goals : {};
@@ -514,14 +515,25 @@ delete state.solved;
 delete state.wrong;
 delete state.goals.math;
 if (![1,2,3,5].includes(Number(state.goals.knowledge))) state.goals.knowledge=defaults.goals.knowledge;
-let route='home', historyStack=[], subjectIndex=0, chartMode='words', searchTerm='';
+let route='home', historyStack=[], subjectIndex=0, chartMode='words', searchTerm='', wordFilter='all';
 const subjectCursor = {math:0, library:0};
-let reviewQueue=[], reviewIndex=0, reviewGrade=null, revealMeaning=true, detailWord=0, detailTopic=2;
+let reviewQueue=[], reviewIndex=0, reviewGrade=null, revealMeaning=true, detailWord=0, detailTopic=2, reviewMode='new';
 let quizSource='x4', quizModule='', quizCursor=0, quizRevealed=false, quizPicked='';
 let toastTimer, sheetOpener;
 const main = document.getElementById('content');
 function persist() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (_) {} }
-function wordCount() { return Math.min(50,32 + Object.keys(state.answered).length); }
+/**
+ * 每日单词计划。newTotal=每天新学多少个，reviewTotal=每天复习多少个，
+ * 与「学习目标」页的「单词目标」共用 state.goals.words，避免两个地方各说一套。
+ */
+function wordPlan() { const g=state.goals||{}; const pick=(v,fallback,allowed)=>allowed.includes(Number(v))?Number(v):fallback; return {newTotal:pick(g.words,20,[10,20,30,50]), reviewTotal:pick(g.review,30,[20,30,50,80])}; }
+function wordPlanTotal() { const p=wordPlan(); return p.newTotal+p.reviewTotal; }
+function todayKey() { const d=new Date(); return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(); }
+/** 今日进度：跨天自动归零。learned=今天新学的词，reviewed=今天复习的词 */
+function wordToday() { const t=state.wordToday; if(!t || typeof t!=='object' || t.date!==todayKey()) { state.wordToday={date:todayKey(), learned:0, reviewed:0}; persist(); } return state.wordToday; }
+/** 答完一个词：第一次见计入新词，之后再答计入复习 */
+function wordProgress(firstTime) { const t=wordToday(), p=wordPlan(); if(firstTime) t.learned=Math.min(p.newTotal,(Number(t.learned)||0)+1); else t.reviewed=Math.min(p.reviewTotal,(Number(t.reviewed)||0)+1); }
+function wordCount() { const t=wordToday(), p=wordPlan(); return Math.min(wordPlanTotal(), Math.min(p.newTotal,Number(t.learned)||0)+Math.min(p.reviewTotal,Number(t.reviewed)||0)); }
 function topicKey(subject, topic) { return subjects[subject].id+'-'+topic; }
 function topicReadCount(subject) { return state.readTopics.filter(key=>key.indexOf(subjects[subject].id+'-')===0).length; }
 function subjectProgress(subject) { return Math.min(subjects[subject].total, subjects[subject].progress + topicReadCount(subject)); }
@@ -535,17 +547,17 @@ function goBack() { const previous=historyStack.pop(); if(previous) { route=prev
 function tabOf(subject) { return subjects[subject] && subjects[subject].kind === 'math' ? 'math' : 'library'; }
 function tabSubjects(tab) { const ids = tab === 'library' ? LIBRARY_SUBJECT_IDS : MATH_SUBJECT_IDS; return ids.map(id => subjects.findIndex(s => s.id === id)).filter(i => i >= 0); }
 function ensureSubjectInTab(tab) { const list = tabSubjects(tab); if (!list.includes(subjectIndex)) subjectIndex = list[Math.min(subjectCursor[tab] || 0, list.length - 1)]; }
-function activeTab() { if(['words','review','result','word-detail'].includes(route)) return 'words'; if(['math','library'].includes(route)) return route; if(route==='topic') return tabOf(subjectIndex);
+function activeTab() { if(['words','review','result','word-detail','wordbook','word-plan'].includes(route)) return 'words'; if(['math','library'].includes(route)) return route; if(route==='topic') return tabOf(subjectIndex);
  if(['quiz','quiz-question','quiz-result'].includes(route)) return 'library'; if(route==='plan') return 'my'; if(['my','goals','favorites'].includes(route)) return 'my'; return 'home'; }
 function progressBar(value) { return `<div class="small-progress"><span style="width:${Math.max(0,Math.min(100,value))}%"></span></div>`; }
 function homePage() {
-  const wc=wordCount(), kc=knowledgeCount(), total=knowledgeTotal(), knowledgePct=Math.round(kc/total*100), pct=Math.round((wc/50*100+knowledgePct)/2), pending=(wc<50?1:0)+(state.planned.length?1:0), last=topicFromKey(state.lastTopic), recentSubject=subjects[last.subject];
+  const wc=wordCount(), kc=knowledgeCount(), total=knowledgeTotal(), knowledgePct=Math.round(kc/total*100), pct=Math.round((wc/wordPlanTotal()*100+knowledgePct)/2), pending=(wc<wordPlanTotal()?1:0)+(state.planned.length?1:0), last=topicFromKey(state.lastTopic), recentSubject=subjects[last.subject];
   return `<section class="page" data-od-id="learning-overview">
     <div class="row"><p class="eyebrow">9 月 14 日 · 星期一</p><span class="streak">${icon('flame')}连续学习 7 天</span></div>
     <h1 class="page-title" data-od-id="home-greeting">今天，也向前一步。</h1>
     <section class="daily-card" data-od-id="today-progress"><div><p class="eyebrow">每一步，都算数</p><h2>${pending?'把坚持，变成<br>自己的底气。':'今天的目标，<br>都做到了。'}</h2><p class="daily-meta">${icon('circleCheck')}${pending?`今日还有 ${pending} 项学习待完成`:'好好休息，明天继续同行'}</p></div><div class="progress-ring" role="img" aria-label="今日进度 ${pct}%"><svg viewBox="0 0 108 108"><circle class="ring-track" cx="54" cy="54" r="45"/><circle class="ring-fill" cx="54" cy="54" r="45" stroke-dasharray="282.74" stroke-dashoffset="${282.74*(1-pct/100)}"/></svg><div class="ring-label"><strong>${pct}<span>%</span></strong><small>今日进度</small></div></div></section>
     <div class="section-head"><h2 data-od-id="today-tasks-heading">今日学习</h2><span>${pending?`${pending} 项待办`:'全部完成'}</span></div>
-    <div class="learning-grid"><button class="study-card" data-action="nav" data-route="words" data-od-id="home-vocabulary-card"><div class="row">${icon('book','card-icon')}<span class="card-kicker">考研英语</span></div><h3>今日单词</h3><p class="study-numbers"><strong>${wc}</strong> / 50 个</p>${progressBar(wc*2)}<span class="card-link">${wc===50?'查看复习成果':'继续背词'}${icon(wc===50?'check':'arrow')}</span></button>
+    <div class="learning-grid"><button class="study-card" data-action="nav" data-route="words" data-od-id="home-vocabulary-card"><div class="row">${icon('book','card-icon')}<span class="card-kicker">考研英语</span></div><h3>今日单词</h3><p class="study-numbers"><strong>${wc}</strong> / ${wordPlanTotal()} 个</p>${progressBar(wordPlanTotal()?wc/wordPlanTotal()*100:0)}<span class="card-link">${wc>=wordPlanTotal()?'查看复习成果':wc?'继续背词':'开始背词'}${icon(wc>=wordPlanTotal()?'check':'arrow')}</span></button>
     <button class="study-card" data-action="nav" data-route="math" data-od-id="home-knowledge-card"><div class="row">${icon('book','card-icon')}<span class="card-kicker">数学 · 资料库</span></div><h3>知识点讲解</h3><p class="study-numbers"><strong>${kc}</strong> / ${total} 个</p>${progressBar(knowledgePct)}<span class="card-link">${state.lastTopic?'继续读知识点':'打开知识库'}${icon('arrow')}</span></button>
     <button class="study-card wide" data-action="quiz" data-od-id="home-politics-card"><div class="row">${icon('book','card-icon')}<span class="card-kicker">考研政治</span></div><h3>政治刷题</h3><p class="study-numbers"><strong>${allQuizDone()}</strong> / ${allQuizTotal()} 题</p>${progressBar(allQuizTotal()?allQuizDone()/allQuizTotal()*100:0)}<span class="card-link">${allQuizDone()?'继续刷题':'去刷题'}${icon('arrow')}</span></button></div>
     <div class="section-head"><h2 data-od-id="recent-learning-heading">接着上次学</h2><span>把知识，再往前推一点</span></div>
@@ -553,14 +565,17 @@ function homePage() {
   </section>`;
 }
 function wordsPage() {
-  const done=wordCount()===50, left=50-wordCount();
+  const plan=wordPlan(), today=wordToday();
+  const learned=Math.min(plan.newTotal,Number(today.learned)||0), reviewed=Math.min(plan.reviewTotal,Number(today.reviewed)||0);
+  const newLeft=plan.newTotal-learned, reviewLeft=plan.reviewTotal-reviewed, left=newLeft+reviewLeft, started=learned+reviewed>0;
+  const statCard=(id,iconName,kicker,title,done,total,rest,doneNote)=>`<div class="study-card" data-od-id="${id}"><div class="row">${icon(iconName,'card-icon')}<span class="card-kicker">${kicker}</span></div><h3>${title}</h3><p class="study-numbers"><strong>${done}</strong> / ${total} 个</p>${progressBar(total?done/total*100:0)}<span class="card-link">${rest?`还剩 ${rest} 个`:doneNote}</span></div>`;
   return `<section class="page" data-od-id="vocabulary-home"><p class="eyebrow">考研英语 · 核心词汇</p><h1 class="page-title" data-od-id="vocabulary-title">让每个单词，留得更久。</h1>
-  <div class="panel mt20" data-od-id="vocabulary-progress"><div class="row"><div><p class="eyebrow">今日单词</p><p class="big-number">${wordCount()} <small>/ 50</small></p></div><span class="pill">${icon(done?'check':'clock')}${done?'今日已完成':`还剩 ${left} 个`}</span></div><div class="mt16">${progressBar(wordCount()*2)}</div><div class="row progress-split"><span>新词 20 / 20</span><span>复习 ${wordCount()-20} / 30</span></div></div>
-  <div class="section-head"><h2 data-od-id="vocabulary-tasks-heading">今日任务</h2><span>一点点，记得更牢</span></div><div class="task-list">
-  <button class="task" data-action="review-start" data-od-id="review-task"><span class="task-icon">${icon(done?'circleCheck':'refresh')}</span><span class="task-content"><h3>记忆巩固 <span class="pill">${done?'已完成':'进行中'}</span></h3><p>${done?'30 个单词，完成今天的复习':`待复习 ${left} 个 · 按熟悉程度巩固`}</p></span>${icon('chevron')}</button>
-  <div class="task" data-od-id="new-words-completed"><span class="task-icon">${icon('check')}</span><span class="task-content"><h3>新词初识</h3><p>20 个新词，今天都见过了</p></span><span class="pill">已完成</span></div></div>
-  <button class="primary-button mt20" data-action="review-start" data-od-id="start-word-review">${done?'查看复习结果':`继续复习 · ${left} 个单词`}${icon('arrow')}</button><p class="quiet-note">不必一次记住，重要的是一次次相遇。</p>
-  <div class="menu-list"><button class="menu-row" data-action="nav" data-route="favorites" data-od-id="vocabulary-favorites">${icon('star')}<strong>我的收藏</strong><small>${state.favorites.length} 个单词</small>${icon('chevron')}</button></div></section>`;
+  <div class="learning-grid mt20" data-od-id="vocabulary-today">${statCard('today-new-words','book','今日计划','今日新词',learned,plan.newTotal,newLeft,'今日新词已完成')}${statCard('today-review-words','refresh','温故知新','今日复习',reviewed,plan.reviewTotal,reviewLeft,'今日复习已完成')}</div>
+  <button class="primary-button mt20" data-action="review-start" data-od-id="start-word-review">${started?(left?`继续学习 · 还剩 ${left} 个`:'今日已完成 · 再练一组'):'开始学习'}${icon('arrow')}</button><p class="quiet-note">不必一次记住，重要的是一次次相遇。</p>
+  <div class="section-head"><h2 data-od-id="vocabulary-tools-heading">单词工具</h2><span>按自己的节奏来</span></div>
+  <div class="learning-grid" data-od-id="vocabulary-tools"><button class="study-card" data-action="nav" data-route="wordbook" data-od-id="vocabulary-wordbook"><div class="row">${icon('book','card-icon')}<span class="card-kicker">共 ${vocabulary.length} 个单词</span></div><h3>单词本</h3><p class="study-numbers">查看每个单词的学习状态</p><span class="card-link">${icon('chevron')}</span></button>
+  <button class="study-card" data-action="nav" data-route="word-plan" data-od-id="vocabulary-plan"><div class="row">${icon('target','card-icon')}<span class="card-kicker">每天 ${wordPlanTotal()} 个</span></div><h3>计划设定</h3><p class="study-numbers">新学 ${plan.newTotal} 个 · 复习 ${plan.reviewTotal} 个</p><span class="card-link">${icon('chevron')}</span></button></div>
+  </section>`;
 }
 function knowledgeArt(kind) { return kind==='politics' ? `<svg viewBox="0 0 100 82" fill="none"><path d="M16 71h68M20 65V23l30-15 30 15v42" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M29 65V36h42v29M38 65V45h24v20M46 45v20M54 45v20" stroke="currentColor" stroke-width="1.7"/><path d="M50 8v-4M14 27h-4M86 27h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>` : `<svg viewBox="0 0 100 82" fill="none"><path d="M5 61h90M26 76V5" stroke="currentColor" stroke-width="1"/><path d="M10 70C28 70 25 14 45 14S60 67 91 21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="m91 58 4 3-4 3M23 9l3-4 3 4" stroke="currentColor"/><circle cx="45" cy="14" r="3" fill="currentColor"/></svg>`; }
 function knowledgeRows(items) { return items.map(({s,i,j})=>`<button class="knowledge-row" data-action="topic" data-subject="${i}" data-topic="${j}" data-od-id="knowledge-${s.id}-${j}"><span class="knowledge-number">${String(j+1).padStart(2,'0')}</span><span class="knowledge-content"><h3>${s.topics[j]}</h3><p>${searchTerm?s.name+' · ':''}${s.notes[j]}</p></span>${icon(state.planned.includes(topicKey(i,j))?'plan':'chevron')}</button>`).join(''); }
@@ -569,7 +584,7 @@ function knowledgeResults() {
   if(searchTerm) { const query=searchTerm.toLowerCase(); const results=subjects.flatMap((s,i)=>s.topics.map((_,j)=>({s,i,j}))).filter(x=>(x.s.topics[x.j]+x.s.name+x.s.notes[x.j]).toLowerCase().includes(query)); return `<div class="section-head"><h2>搜索结果</h2><span>${results.length} 个知识点</span></div><div class="knowledge-list">${results.length?knowledgeRows(results):`<div class="panel"><h3>暂时没有找到“${esc(searchTerm)}”</h3><p class="subtext mt12">试试“极限”“矩阵”或“马克思主义”。</p><button class="text-button" data-action="clear-search" data-od-id="clear-search">清空搜索</button></div>`}</div>`; }
   if(!s.topics.length) return `<div class="panel mt20" data-od-id="knowledge-empty"><p class="eyebrow">课程大纲</p><h3>${s.name}</h3><p class="subtext mt12">${s.intro}</p><p class="quiet-note" style="margin-top:10px">${s.chapter}<br>题库与讲解正在整理中。</p><button class="text-button" style="width:100%" data-action="tab" data-route="math" data-od-id="empty-goto-math">先去数学看看${icon('chevron')}</button></div>`;
   return `<button class="knowledge-feature" data-action="topic" data-subject="${subjectIndex}" data-topic="${focus}" data-od-id="current-knowledge-chapter"><div class="feature-text"><p class="eyebrow">正在阅读 · 第一章</p><h2>${s.chapter}</h2><p class="subtext">${s.intro}</p><span class="approach-note">${icon('eye')}先理解，再记忆</span><div class="chapter-foot">${progressBar(progress/s.total*100)}<span>已读 ${progress} / ${s.total} 节</span></div></div><span class="feature-art" aria-hidden="true">${knowledgeArt(s.kind)}</span><span class="feature-arrow">${icon('arrow')}</span></button>
-  <div class="section-head"><h2 data-od-id="knowledge-section-heading">知识点讲解</h2><button class="text-button" data-action="nav" data-route="plan" data-od-id="open-knowledge-plan">我的计划${icon('chevron')}</button></div><div class="knowledge-list">${knowledgeRows(s.topics.map((_,j)=>({s,i:subjectIndex,j})))}</div>`;
+  <div class="section-head"><h2 data-od-id="knowledge-section-heading">知识点讲解</h2><span>已读 ${progress} / ${s.total} 节</span></div><div class="knowledge-list">${knowledgeRows(s.topics.map((_,j)=>({s,i:subjectIndex,j})))}</div>`;
 }
 /**
  * 学科切换器。
@@ -605,29 +620,46 @@ function myPage() {
 }
 function wordExample(w, translation=true) { return `<div class="example"><p class="label">语境例句</p><p class="english" lang="en">${esc(w.sentence).replace(new RegExp('\\b'+w.word+'\\b','gi'),'<mark>$&</mark>')}</p>${translation?`<p class="chinese">${w.translation}</p>`:''}</div>`; }
 function favoriteButton(index, id) { const saved=state.favorites.includes(index); return `<button class="icon-button ${saved?'saved':''}" data-action="favorite" data-word="${index}" aria-label="${saved?'取消收藏':'收藏单词'}" aria-pressed="${saved}" data-od-id="${id}">${icon('star')}</button>`; }
-function speakButton(index) { return `<button class="pronunciation" data-action="pronounce" data-word="${index}" aria-label="播放 ${vocabulary[index].word} 英式发音" data-od-id="word-pronunciation">${icon('sound')}<span lang="en">/${vocabulary[index].ipa}/</span><span class="accent-label">英音</span></button>`; }
+/** 音标是单词释义的一部分，不是「播放发音」的入口：只展示，不可点 */
+function wordIpa(index) { return `<span class="word-ipa" data-od-id="word-ipa"><span lang="en">/${vocabulary[index].ipa}/</span><span class="accent-label">英音</span></span>`; }
 function reviewPage() {
   const index=reviewQueue[reviewIndex], w=vocabulary[index];
   if(!w) return resultPage();
   const g=reviewGrade, feedback={familiar:['记住了，继续保持。','本次已标记为熟悉，可以在复习结果中回看。'],fuzzy:['有点印象，也是进步。','已记入薄弱词，完成本组后可以再练一遍。'],unknown:['没关系，再认识一次。','先读一遍释义和例句，再试着用自己的话记住它。']};
   return `<section class="page" data-od-id="word-review"><div class="review-top"><strong>记忆巩固</strong><span><b>${String(reviewIndex+1).padStart(2,'0')}</b> / ${String(reviewQueue.length).padStart(2,'0')}</span></div>${progressBar((reviewIndex+(g?1:0))/reviewQueue.length*100)}<p class="review-hint">${g?'每一次回想，都在加深记忆。':'先回想一下，再判断你对它的熟悉程度。'}</p>
-  <article class="word-card" data-od-id="review-word-card"><div class="row"><span class="word-label">考研核心词汇</span>${favoriteButton(index,'review-favorite')}</div><h1 class="word-heading" lang="en" data-od-id="review-word">${w.word}</h1>${speakButton(index)}<div class="word-definition" data-od-id="review-definition">${revealMeaning?`<p><span class="part">${w.part}</span>${w.meaning}</p>`:`<button class="text-button" data-action="reveal" data-od-id="reveal-word-meaning">${icon('eye')}想好了吗？点此查看释义</button>`}</div>${wordExample(w,revealMeaning)}</article>
+  <article class="word-card" data-od-id="review-word-card"><div class="row"><span class="word-label">考研核心词汇</span>${favoriteButton(index,'review-favorite')}</div><h1 class="word-heading" lang="en" data-od-id="review-word">${w.word}</h1>${wordIpa(index)}<div class="word-definition" data-od-id="review-definition">${revealMeaning?`<p><span class="part">${w.part}</span>${w.meaning}</p>`:`<button class="text-button" data-action="reveal" data-od-id="reveal-word-meaning">${icon('eye')}想好了吗？点此查看释义</button>`}</div>${wordExample(w,revealMeaning)}</article>
   <div class="review-tools"><button class="text-button" data-action="reveal" data-od-id="toggle-word-meaning">${icon('eye')}${revealMeaning?'隐藏释义，试着回想':'显示中文释义'}</button><button class="text-button" data-action="word-detail" data-word="${index}" data-od-id="open-word-detail">词根与助记${icon('chevron')}</button></div>
   ${g?`<div class="review-feedback ${g==='familiar'?'':'needs-work'}" role="status" data-od-id="word-rating-feedback"><div class="feedback-title">${icon(g==='familiar'?'circleCheck':'refresh')}${feedback[g][0]}</div><p>${feedback[g][1]}</p><button class="primary-button" data-action="review-next" data-od-id="next-review-word">${reviewIndex===reviewQueue.length-1?'查看复习结果':'下一个单词'}${icon('arrow')}</button></div>`:`<p class="rating-label">这个单词，你记住了吗？</p><div class="ratings" data-od-id="word-rating-actions"><button class="rate-button unknown" data-action="grade" data-value="unknown" data-od-id="rate-unknown">不认识<small>再认识一次</small></button><button class="rate-button" data-action="grade" data-value="fuzzy" data-od-id="rate-fuzzy">模糊<small>还需巩固</small></button><button class="rate-button familiar" data-action="grade" data-value="familiar" data-od-id="rate-familiar">熟悉<small>已经记住</small></button></div>`}</section>`;
 }
 function wordDetailPage() {
   const w=vocabulary[detailWord];
-  return `<section class="page" data-od-id="word-detail"><div class="row"><span class="pill">考研核心词汇</span>${favoriteButton(detailWord,'detail-favorite')}</div><div class="detail-hero"><h1 class="word-heading" lang="en" data-od-id="word-detail-title">${w.word}</h1>${speakButton(detailWord)}<p class="definition"><span class="math">${w.part}</span> ${w.meaning}</p></div><section class="detail-section" data-od-id="word-root"><h2>从词根，读懂单词</h2><div class="root-parts">${w.root}</div><p class="subtext">${w.rootNote}</p></section><section class="detail-section memory-note" data-od-id="word-mnemonic"><h2>给记忆一个落脚点</h2><p>${w.memory}</p></section>${wordExample(w)}<section class="detail-section" data-od-id="word-collocation"><h2>把它放进表达里</h2><p>${w.collocation}</p></section><button class="primary-button mt20" data-action="back" data-od-id="return-from-word-detail">${historyStack.at(-1)?.route==='review'?'返回复习':'返回单词列表'}${icon('arrow')}</button></section>`;
+  return `<section class="page" data-od-id="word-detail"><div class="row"><span class="pill">考研核心词汇</span>${favoriteButton(detailWord,'detail-favorite')}</div><div class="detail-hero"><h1 class="word-heading" lang="en" data-od-id="word-detail-title">${w.word}</h1>${wordIpa(detailWord)}<p class="definition"><span class="math">${w.part}</span> ${w.meaning}</p></div><section class="detail-section" data-od-id="word-root"><h2>从词根，读懂单词</h2><div class="root-parts">${w.root}</div><p class="subtext">${w.rootNote}</p></section><section class="detail-section memory-note" data-od-id="word-mnemonic"><h2>给记忆一个落脚点</h2><p>${w.memory}</p></section>${wordExample(w)}<section class="detail-section" data-od-id="word-collocation"><h2>把它放进表达里</h2><p>${w.collocation}</p></section><button class="primary-button mt20" data-action="back" data-od-id="return-from-word-detail">${historyStack.at(-1)?.route==='review'?'返回复习':'返回单词列表'}${icon('arrow')}</button></section>`;
 }
 function resultPage() {
   const items=vocabulary.map((w,i)=>({w,i,g:state.answered[w.word]})).filter(x=>x.g), counts=['familiar','fuzzy','unknown'].map(g=>items.filter(x=>x.g===g).length), weak=counts[1]+counts[2];
-  return `<section class="page" data-od-id="review-result"><div class="result-hero"><div class="result-mark">${icon('check')}</div><h1 data-od-id="review-result-title">${wordCount()===50?'今天的单词，拿下了。':'这一组，记得更牢了。'}</h1><p class="subtext">已复习 ${items.length} 个单词，每一次回想都算数。<br>${weak?`还有 ${weak} 个词值得再见一面。`:'这一轮都记住了，保持你的学习节奏。'}</p></div><div class="result-counts" data-od-id="review-grade-summary">${['熟悉','模糊','不认识'].map((t,i)=>`<div><strong>${counts[i]}</strong><small>${t}</small></div>`).join('')}</div><button class="primary-button" data-action="${weak?'review-weak':'home'}" data-od-id="review-result-primary">${weak?`再练薄弱单词 · ${weak} 个`:'回到学习首页'}${icon('arrow')}</button>${weak?'<button class="text-button" style="width:100%" data-action="home" data-od-id="review-result-home">今天先到这里</button>':''}<div class="section-head"><h2>这次复习的单词</h2><span>点开查看词根与助记</span></div><div class="word-list">${items.map(({w,i,g})=>`<button class="word-list-row" data-action="word-detail" data-word="${i}" data-od-id="result-word-${w.word}"><span><strong lang="en">${w.word}</strong><small>${w.meaning}</small></span><span class="pill ${g==='familiar'?'':'orange'}">${{familiar:'熟悉',fuzzy:'模糊',unknown:'不认识'}[g]}</span></button>`).join('')}</div></section>`;
+  return `<section class="page" data-od-id="review-result"><div class="result-hero"><div class="result-mark">${icon('check')}</div><h1 data-od-id="review-result-title">${wordCount()>=wordPlanTotal()?'今天的单词，拿下了。':'这一组，记得更牢了。'}</h1><p class="subtext">已复习 ${items.length} 个单词，每一次回想都算数。<br>${weak?`还有 ${weak} 个词值得再见一面。`:'这一轮都记住了，保持你的学习节奏。'}</p></div><div class="result-counts" data-od-id="review-grade-summary">${['熟悉','模糊','不认识'].map((t,i)=>`<div><strong>${counts[i]}</strong><small>${t}</small></div>`).join('')}</div><button class="primary-button" data-action="${weak?'review-weak':'home'}" data-od-id="review-result-primary">${weak?`再练薄弱单词 · ${weak} 个`:'回到学习首页'}${icon('arrow')}</button>${weak?'<button class="text-button" style="width:100%" data-action="home" data-od-id="review-result-home">今天先到这里</button>':''}<div class="section-head"><h2>这次复习的单词</h2><span>点开查看词根与助记</span></div><div class="word-list">${items.map(({w,i,g})=>`<button class="word-list-row" data-action="word-detail" data-word="${i}" data-od-id="result-word-${w.word}"><span><strong lang="en">${w.word}</strong><small>${w.meaning}</small></span><span class="pill ${g==='familiar'?'':'orange'}">${{familiar:'熟悉',fuzzy:'模糊',unknown:'不认识'}[g]}</span></button>`).join('')}</div></section>`;
 }
 function emptyPage(symbol,title,copy,action,label,id) { return `<section class="page empty" data-od-id="${id}"><div class="empty-symbol">${icon(symbol)}</div><h1 data-od-id="${id}-heading">${title}</h1><p>${copy}</p><button class="primary-button" data-action="${action}" data-od-id="${id}-action">${label}${icon('arrow')}</button></section>`; }
 function favoritesPage() {
   const items=state.favorites.filter(i=>vocabulary[i]);
   if(!items.length) return emptyPage('star','留住值得再看一遍的词','遇到想收藏的单词，点一下星标。<br>下一次，它们就在这里等你。','review-start','去复习单词','favorites-empty');
   return `<section class="page" data-od-id="favorites-list"><p class="eyebrow">我的单词本</p><h1 class="page-title" data-od-id="favorites-title">值得，再见一面。</h1><p class="subtext mt12">已收藏 ${items.length} 个单词</p><div class="word-list mt20">${items.map(i=>`<button class="word-list-row" data-action="word-detail" data-word="${i}" data-od-id="favorite-${vocabulary[i].word}"><span><strong lang="en">${vocabulary[i].word}</strong><small>${vocabulary[i].meaning}</small></span>${icon('chevron')}</button>`).join('')}</div></section>`;
+}
+function wordbookPage() {
+  const items=vocabulary.map((w,i)=>({w,i,g:state.answered[w.word]||''}));
+  const status=g=>g?{familiar:'熟悉',fuzzy:'模糊',unknown:'不认识'}[g]:'未学习';
+  const match=x=>wordFilter==='all'||(wordFilter==='new'?!x.g:wordFilter==='familiar'?x.g==='familiar':!!x.g && x.g!=='familiar');
+  const list=items.filter(match), learned=items.filter(x=>x.g).length, weak=items.filter(x=>x.g && x.g!=='familiar').length;
+  return `<section class="page" data-od-id="word-book"><p class="eyebrow">考研英语 · 核心词汇</p><h1 class="page-title" data-od-id="word-book-title">每个词，都有自己的位置。</h1><p class="subtext mt12">共 ${items.length} 个单词 · 已学 ${learned} 个 · 待巩固 ${weak} 个</p>
+  <div class="src-switch mt20" role="tablist" aria-label="按学习状态筛选" data-od-id="word-book-filter">${[['all','全部'],['new','未学习'],['familiar','已熟悉'],['weak','需巩固']].map(([v,t])=>`<button class="src-chip ${wordFilter===v?'active':''}" role="tab" aria-selected="${wordFilter===v}" data-action="word-filter" data-value="${v}" data-od-id="word-filter-${v}">${t}</button>`).join('')}</div>
+  <div class="word-list mt20" data-od-id="word-book-list">${list.length?list.map(({w,i,g})=>`<button class="word-list-row" data-action="word-detail" data-word="${i}" data-od-id="wordbook-${w.word}"><span><strong lang="en">${w.word}</strong><small>${w.part} ${w.meaning}</small></span><span class="pill ${g==='familiar'?'':'orange'}">${status(g)}</span></button>`).join(''):'<p class="subtext" style="padding:18px 0">这个分类下还没有单词。</p>'}</div><p class="quiet-note">点开单词，可以看到词根与助记。</p></section>`;
+}
+function wordPlanPage() {
+  const plan=wordPlan();
+  const row=(field,label,options,current)=>`<div class="panel mt16" data-od-id="word-plan-${field}"><h2 style="font-size:14px">${label}</h2><div class="src-switch" role="group" aria-label="${label}">${options.map(v=>`<button class="src-chip ${v===current?'active':''}" aria-pressed="${v===current}" data-action="word-plan" data-field="${field}" data-value="${v}" data-od-id="word-plan-${field}-${v}">${v}<small>个 / 天</small></button>`).join('')}</div></div>`;
+  return `<section class="page" data-od-id="word-plan-settings"><p class="eyebrow">按自己的节奏来</p><h1 class="page-title" data-od-id="word-plan-title">目标刚刚好，才走得远。</h1><p class="subtext mt12">现在每天新学 ${plan.newTotal} 个、复习 ${plan.reviewTotal} 个，共 ${wordPlanTotal()} 个。</p>
+  ${row('newTotal','每天新学多少个单词',[10,20,30,50],plan.newTotal)}${row('reviewTotal','每天复习多少个单词',[20,30,50,80],plan.reviewTotal)}
+  <p class="quiet-note">修改后立即生效，今日进度会按新的目标重新计算。<br>复习量不少于新词量，记得更牢。</p><button class="primary-button mt20" data-action="back" data-od-id="word-plan-back">返回背单词${icon('arrow')}</button></section>`;
 }
 // ── 政治刷题 ────────────────────────────────────────────────────────
 
@@ -793,10 +825,10 @@ function planPage() {
 }
 function goalsPage() {
   const select=(name,label,options)=>`<label class="field"><span>${label}</span><select name="${name}" data-od-id="goal-${name}">${options.map(([v,t])=>`<option value="${v}" ${String(state.goals[name])===String(v)?'selected':''}>${t}</option>`).join('')}</select></label>`;
-  return `<section class="page" data-od-id="learning-goals"><p class="eyebrow">找到可以坚持的节奏</p><h1 class="page-title" data-od-id="goals-title">目标刚刚好，才能走更远。</h1><form id="goal-form"><div class="panel mt20"><h2 style="font-size:14px">我的考研目标</h2>${select('year','考研年份',[['2027','2027 考研'],['2028','2028 考研'],['2029','2029 考研']])}<div class="form-grid">${select('english','英语科目',[['英语一','英语一'],['英语二','英语二']])}${select('subject','数学科目',[['数学一','数学一'],['数学二','数学二'],['数学三','数学三']])}</div></div><div class="panel mt16"><h2 style="font-size:14px">每日学习量</h2><div class="form-grid">${select('words','单词目标',[[20,'20 个'],[30,'30 个'],[50,'50 个'],[80,'80 个']])}${select('knowledge','知识点目标',[[1,'1 个'],[2,'2 个'],[3,'3 个'],[5,'5 个']])}</div><p class="goal-helper">新的学习量从明天起生效，今天继续按原计划完成。单词与知识点目标会保存在当前浏览器。</p></div><button type="submit" class="primary-button mt20" data-od-id="save-learning-goals">保存目标${icon('check')}</button><p class="form-status" id="goal-save-status" role="status"></p></form></section>`;
+  return `<section class="page" data-od-id="learning-goals"><p class="eyebrow">找到可以坚持的节奏</p><h1 class="page-title" data-od-id="goals-title">目标刚刚好，才能走更远。</h1><form id="goal-form"><div class="panel mt20"><h2 style="font-size:14px">我的考研目标</h2>${select('year','考研年份',[['2027','2027 考研'],['2028','2028 考研'],['2029','2029 考研']])}<div class="form-grid">${select('english','英语科目',[['英语一','英语一'],['英语二','英语二']])}${select('subject','数学科目',[['数学一','数学一'],['数学二','数学二'],['数学三','数学三']])}</div></div><div class="panel mt16"><h2 style="font-size:14px">每日学习量</h2><div class="form-grid">${select('words','单词目标',[[10,'10 个'],[20,'20 个'],[30,'30 个'],[50,'50 个']])}${select('knowledge','知识点目标',[[1,'1 个'],[2,'2 个'],[3,'3 个'],[5,'5 个']])}</div><p class="goal-helper">新的学习量从明天起生效，今天继续按原计划完成。单词与知识点目标会保存在当前浏览器。</p></div><button type="submit" class="primary-button mt20" data-od-id="save-learning-goals">保存目标${icon('check')}</button><p class="form-status" id="goal-save-status" role="status"></p></form></section>`;
 }
 function render() {
-  const tab=activeTab(), titles={'review':'单词复习','result':'复习结果','word-detail':'单词详情','topic':'知识点讲解','goals':'学习目标','favorites':'收藏单词','plan':'学习计划','quiz':'政治题库','quiz-paper':'卷内题目','quiz-question':'答题','quiz-result':'练习结果'};
+  const tab=activeTab(), titles={'review':'单词复习','result':'复习结果','word-detail':'单词详情','topic':'知识点讲解','goals':'学习目标','favorites':'收藏单词','wordbook':'单词本','word-plan':'计划设定','plan':'学习计划','quiz':'政治题库','quiz-paper':'卷内题目','quiz-question':'答题','quiz-result':'练习结果'};
   document.getElementById('app-brand').className='brand'+(titles[route]?' sub':'');
   document.getElementById('app-brand').innerHTML=titles[route]?`<button class="back-button" data-action="back" aria-label="返回上一页" data-od-id="page-back">${icon('back')}</button><span>${titles[route]}</span>`:`${icon('logo','brand-logo')}<span>词数同行</span>`;
   document.getElementById('tabbar').innerHTML=[['home','home','学习'],['words','book','单词'],['math','math','数学'],['library','folder','资料库'],['my','user','我的']].map(([r,i,t])=>`<button class="tab ${tab===r?'active':''}" data-action="tab" data-route="${r}" data-od-id="tab-${r}" ${tab===r?'aria-current="page"':''}><span class="tab-icon">${icon(i)}</span><span>${t}</span></button>`).join('');
@@ -806,7 +838,7 @@ function render() {
 }
 function stampInspectable(root) { root.querySelectorAll('h1,h2,h3,button,input,select,section,article,form').forEach((node,i)=>{ if(!node.hasAttribute('data-od-id')) node.setAttribute('data-od-id',`${route}-${node.tagName.toLowerCase()}-${i+1}`); }); }
 const politicsQuizPage = () => `<section class="page" data-od-id="politics-quiz-standalone">`+politicsQuizBody()+`</section>`;
-const extraPages={'review':reviewPage,'word-detail':wordDetailPage,'result':resultPage,'favorites':favoritesPage,'topic':topicPage,'plan':planPage,'goals':goalsPage,'quiz':politicsQuizPage,'quiz-paper':quizPaperSetPage,'quiz-question':politicsQuestionPage,'quiz-result':quizResultPage};
+const extraPages={'review':reviewPage,'word-detail':wordDetailPage,'result':resultPage,'favorites':favoritesPage,'wordbook':wordbookPage,'word-plan':wordPlanPage,'topic':topicPage,'plan':planPage,'goals':goalsPage,'quiz':politicsQuizPage,'quiz-paper':quizPaperSetPage,'quiz-question':politicsQuestionPage,'quiz-result':quizResultPage};
 function closeSheet() { document.getElementById('overlay').hidden=true; }
 function openMenu() { sheetOpener=document.activeElement; const overlay=document.getElementById('overlay'); overlay.innerHTML=`<section class="sheet" role="dialog" aria-modal="true" aria-labelledby="menu-heading"><div class="sheet-handle"></div><div class="row"><h2 id="menu-heading">词数同行</h2><button class="icon-button" data-action="close-sheet" aria-label="关闭菜单" data-od-id="close-menu">${icon('close')}</button></div><p class="subtext">背好每个单词，理解每个知识点。</p><div class="menu-list"><button class="menu-row" data-action="nav" data-route="goals" data-od-id="menu-goals">${icon('target')}<strong>调整学习目标</strong>${icon('chevron')}</button><button class="menu-row" data-action="nav" data-route="favorites" data-od-id="menu-favorites">${icon('star')}<strong>查看收藏单词</strong>${icon('chevron')}</button><button class="menu-row" data-action="nav" data-route="plan" data-od-id="menu-plan">${icon('plan')}<strong>打开学习计划</strong>${icon('chevron')}</button></div><p class="quiet-note">词数同行 · 考研知识库原型<br>体验数据仅保存在当前浏览器。</p></section>`; overlay.hidden=false; overlay.querySelector('button').focus(); }
 function handleAction(action, el) {
@@ -823,15 +855,15 @@ function handleAction(action, el) {
 }
 function startReview(weak=false) {
   if(!weak && reviewQueue.length && reviewIndex<reviewQueue.length) { navigate('review'); return; }
-  reviewQueue=vocabulary.map((w,i)=>({w,i})).filter(({w})=>weak?(state.answered[w.word] && state.answered[w.word]!=='familiar'):!state.answered[w.word]).map(x=>x.i);
-  reviewIndex=0; reviewGrade=null; revealMeaning=true;
+  const plan=wordPlan(), today=wordToday();
+  const due=vocabulary.map((w,i)=>({w,i})).filter(({w})=>state.answered[w.word] && state.answered[w.word]!=='familiar');
+  const fresh=vocabulary.map((w,i)=>({w,i})).filter(({w})=>!state.answered[w.word]);
+  const newDone=(Number(today.learned)||0)>=plan.newTotal;
+  reviewMode=(weak||newDone)?'review':'new';
+  let queue=reviewMode==='review'?due:fresh;
+  if(!queue.length) queue=reviewMode==='review'?fresh:due;
+  reviewQueue=queue.map(x=>x.i); reviewIndex=0; reviewGrade=null; revealMeaning=true;
   if(!reviewQueue.length) navigate('result'); else navigate('review',route!=='result');
-}
-function pronounce(index) {
-  if(!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance==='undefined') { showToast('当前浏览器不支持语音朗读，可参考单词音标'); return; }
-  window.speechSynthesis.cancel(); const utterance=new SpeechSynthesisUtterance(vocabulary[index].word); utterance.lang='en-GB'; utterance.rate=0.82;
-  const voice=window.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase()==='en-gb'); if(voice) utterance.voice=voice;
-  utterance.onerror=()=>showToast('暂时无法播放发音，可参考单词音标'); window.speechSynthesis.speak(utterance);
 }
 function handleLearningAction(action,el) {
   if(action==='review-start') startReview();
@@ -840,12 +872,13 @@ function handleLearningAction(action,el) {
   else if(action==='grade') {
     if(reviewGrade || !['familiar','fuzzy','unknown'].includes(el.dataset.value)) return;
     const w=vocabulary[reviewQueue[reviewIndex]]; if(!w) return;
-    reviewGrade=el.dataset.value; state.answered[w.word]=reviewGrade; revealMeaning=true; persist(); render(); main.scrollTop=Math.max(0,main.scrollHeight-main.clientHeight);
+    reviewGrade=el.dataset.value; const firstTime=!state.answered[w.word]; state.answered[w.word]=reviewGrade; wordProgress(firstTime); revealMeaning=true; persist(); render(); main.scrollTop=Math.max(0,main.scrollHeight-main.clientHeight);
   }
   else if(action==='review-next') { if(!reviewGrade) return; reviewIndex++; reviewGrade=null; revealMeaning=true; if(reviewIndex>=reviewQueue.length) navigate('result',false); else { render(); main.scrollTop=0; } }
   else if(action==='word-detail') { detailWord=Number(el.dataset.word); if(vocabulary[detailWord]) navigate('word-detail'); }
   else if(action==='favorite') { const index=Number(el.dataset.word); if(!vocabulary[index])return; const exists=state.favorites.includes(index); state.favorites=exists?state.favorites.filter(i=>i!==index):[...state.favorites,index]; persist(); const scroll=main.scrollTop; render(); main.scrollTop=scroll; showToast(exists?'已取消收藏':'已收藏，可在「我的」中查看'); }
-  else if(action==='pronounce') pronounce(Number(el.dataset.word));
+  else if(action==='word-filter') { wordFilter=el.dataset.value||'all'; render(); }
+  else if(action==='word-plan') { const field=el.dataset.field, value=Number(el.dataset.value), allowed=field==='newTotal'?[10,20,30,50]:[20,30,50,80]; if(!allowed.includes(value)) return; state.goals=field==='newTotal'?{...state.goals,words:value}:{...state.goals,review:value}; persist(); render(); showToast(field==='newTotal'?`每天新学 ${value} 个单词`:`每天复习 ${value} 个单词`); }
   else if(action==='quiz') { quizSource='x4'; quizModule=''; quizCursor=0; quizPicked=[]; quizRevealed=false; navigate('quiz'); }
   else if(action==='quiz-source') { quizSource=el.dataset.source; quizModule=''; quizCursor=0; quizPicked=[]; quizRevealed=false; render(); main.scrollTop=0; }
   else if(action==='quiz-paper') { quizModule=el.dataset.paper; quizCursor=0; quizPicked=[]; quizRevealed=false; navigate('quiz-paper'); }
@@ -867,8 +900,8 @@ function handleLearningAction(action,el) {
 }
 function saveGoals(form) {
   const data=Object.fromEntries(new FormData(form));
-  if(![20,30,50,80].includes(Number(data.words)) || ![1,2,3,5].includes(Number(data.knowledge))) { showToast('请选择有效的学习目标'); return; }
-  state.goals={words:Number(data.words),knowledge:Number(data.knowledge),english:data.english,subject:data.subject,year:data.year}; persist();
+  if(![10,20,30,50].includes(Number(data.words)) || ![1,2,3,5].includes(Number(data.knowledge))) { showToast('请选择有效的学习目标'); return; }
+  state.goals={...state.goals,words:Number(data.words),review:wordPlan().reviewTotal,knowledge:Number(data.knowledge),english:data.english,subject:data.subject,year:data.year}; persist();
   document.getElementById('goal-save-status').textContent=`已保存：每天 ${data.words} 个单词、阅读 ${data.knowledge} 个知识点，从明天开始执行。`;
   showToast('目标已保存，一起稳稳向前');
 }

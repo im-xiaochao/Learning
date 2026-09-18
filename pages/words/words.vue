@@ -1,23 +1,34 @@
 <script setup lang="ts">
-/** 单词页：今日单词进度、今日任务、进入复习、我的收藏 */
+/**
+ * 单词页：今日新词 / 今日复习两张卡、开始学习、单词本与计划设定两个入口。
+ *
+ * 为什么主按钮默认是「开始学习」：之前是「已完成 / 未完成」二分，一进来就落在
+ * 未完成那一侧，显示成补进度的话术。现在按真实进度三分支——没开始说「开始学习」，
+ * 进行中说「还剩几个」，全达标才说「已完成」。
+ */
 import { computed } from 'vue'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
 import { startReview } from '../../stores/review'
-import { appWordIds } from '../../data/generated/app/word-ids'
 
-const { currentGoal, todayWords, favoriteWordIds, getFamiliarity } = useLearning()
+const { currentGoal, todayWords, todayNewWords, todayReviewWords, wordTargets } = useLearning()
 
-const goal = computed(() => currentGoal.value.dailyWords)
-const done = computed(() => todayWords.value >= goal.value)
-const left = computed(() => Math.max(0, goal.value - todayWords.value))
-const percent = computed(() => Math.min(100, Math.round((todayWords.value / goal.value) * 100)))
+const targets = computed(() => wordTargets.value)
+const newDone = computed(() => Math.min(targets.value.newWords, todayNewWords.value))
+const reviewDone = computed(() => Math.min(targets.value.review, todayReviewWords.value))
+const newLeft = computed(() => Math.max(0, targets.value.newWords - newDone.value))
+const reviewLeft = computed(() => Math.max(0, targets.value.review - reviewDone.value))
+const left = computed(() => newLeft.value + reviewLeft.value)
+const started = computed(() => todayWords.value > 0)
+const finished = computed(() => started.value && left.value === 0)
 
-/** 新词初识：今日新词额度（上限 20）是否已认完 */
-const freshCount = computed(() => appWordIds.filter((id) => getFamiliarity(id) === undefined).length)
-const newQuota = computed(() => Math.min(20, goal.value))
-const newDone = computed(() => todayWords.value >= newQuota.value)
-const reviewedToday = computed(() => Math.max(0, todayWords.value - Math.min(newQuota.value, todayWords.value)))
+const primaryLabel = computed(() => {
+  if (!started.value) return '开始学习'
+  if (finished.value) return '今日已完成 · 再练一轮'
+  return `继续学习 · 还剩 ${left.value} 个`
+})
+
+const quota = computed(() => currentGoal.value.dailyWords)
 
 function goReview() {
   if (!startReview('today')) {
@@ -27,8 +38,12 @@ function goReview() {
   uni.navigateTo({ url: '/pages-words/review/review' })
 }
 
-function goFavorites() {
-  uni.navigateTo({ url: '/pages-words/favorites/favorites' })
+function goWordbook() {
+  uni.navigateTo({ url: '/pages-words/wordbook/wordbook' })
+}
+
+function goWordPlan() {
+  uni.navigateTo({ url: '/pages-words/word-plan/word-plan' })
 }
 </script>
 
@@ -40,70 +55,82 @@ function goFavorites() {
       <text class="eyebrow">考研英语 · 核心词汇</text>
       <text class="page-title">让每个单词，留得更久。</text>
 
-      <view class="panel mt20">
-        <view class="row">
-          <view>
-            <text class="eyebrow">今日单词</text>
-            <text class="big-number">{{ todayWords }}<text class="unit"> / {{ goal }}</text></text>
+      <!-- 今日进度：新词 / 复习各一张，分母来自「计划设定」 -->
+      <view class="learning-grid mt20">
+        <view class="study-card">
+          <view class="row">
+            <image class="card-icon" src="/static/icons/logo-primary.png" mode="aspectFit" />
+            <text class="card-kicker">今日计划</text>
           </view>
-          <view class="pill">
-            <image :src="done ? '/static/icons/check-primary.png' : '/static/icons/clock.png'" mode="aspectFit" />
-            <text>{{ done ? '今日已完成' : `还剩 ${left} 个` }}</text>
+          <text class="card-title">今日新词</text>
+          <text class="study-numbers">
+            <text class="num">{{ newDone }}</text>
+            / {{ targets.newWords }} 个
+          </text>
+          <view class="small-progress">
+            <view class="bar" :style="`width:${Math.round((newDone / targets.newWords) * 100)}%`" />
+          </view>
+          <view class="card-link">
+            <text>{{ newLeft ? `还剩 ${newLeft} 个` : '今日新词已完成' }}</text>
           </view>
         </view>
-        <view class="small-progress mt16"><view class="bar" :style="`width:${percent}%`" /></view>
-        <view class="progress-split">
-          <text>新词 {{ Math.min(20, todayWords) }} / 20</text>
-          <text>复习 {{ reviewedToday }} / {{ Math.max(0, goal - 20) }}</text>
-        </view>
-      </view>
 
-      <view class="section-head">
-        <text class="head-title">今日任务</text>
-        <text class="head-note">一点点，记得更牢</text>
-      </view>
-
-      <view class="task-list">
-        <button class="task" hover-class="hover-press" @tap="goReview">
-          <view class="task-icon">
-            <image :src="done ? '/static/icons/circleCheck-primary.png' : '/static/icons/refresh-primary.png'" mode="aspectFit" />
+        <view class="study-card">
+          <view class="row">
+            <image class="card-icon" src="/static/icons/refresh-primary.png" mode="aspectFit" />
+            <text class="card-kicker">温故知新</text>
           </view>
-          <view class="task-content">
-            <view class="task-title">
-              <text>记忆巩固</text>
-              <view class="pill">{{ done ? '已完成' : '进行中' }}</view>
-            </view>
-            <text class="task-sub">{{ done ? `${goal} 个单词，完成今天的复习` : `待复习 ${left} 个 · 按熟悉程度巩固` }}</text>
+          <text class="card-title">今日复习</text>
+          <text class="study-numbers">
+            <text class="num">{{ reviewDone }}</text>
+            / {{ targets.review }} 个
+          </text>
+          <view class="small-progress">
+            <view class="bar" :style="`width:${Math.round((reviewDone / Math.max(1, targets.review)) * 100)}%`" />
           </view>
-          <image class="chev" src="/static/icons/chevron.png" mode="aspectFit" />
-        </button>
-
-        <view class="task">
-          <view class="task-icon">
-            <image src="/static/icons/check-primary.png" mode="aspectFit" />
+          <view class="card-link">
+            <text>{{ reviewLeft ? `还剩 ${reviewLeft} 个` : '今日复习已完成' }}</text>
           </view>
-          <view class="task-content">
-            <view class="task-title"><text>新词初识</text></view>
-            <text class="task-sub">词库剩余 {{ freshCount }} 个未学单词</text>
-          </view>
-          <view class="pill">{{ newDone ? '已完成' : '待开始' }}</view>
         </view>
       </view>
 
       <button class="primary-button mt20" hover-class="hover-press" @tap="goReview">
-        <text>{{ done ? '再复习一轮' : `继续复习 · ${left} 个单词` }}</text>
+        <text>{{ primaryLabel }}</text>
         <image src="/static/icons/arrow-on.png" mode="aspectFit" />
       </button>
       <text class="quiet-note">不必一次记住，重要的是一次次相遇。</text>
 
-      <view class="menu-list">
-        <button class="menu-row" hover-class="hover-press" @tap="goFavorites">
-          <image class="menu-icon" src="/static/icons/star.png" mode="aspectFit" />
-          <text class="menu-label">我的收藏</text>
-          <text class="menu-value">{{ favoriteWordIds.length }} 个单词</text>
-          <image class="chev" src="/static/icons/chevron.png" mode="aspectFit" />
+      <view class="section-head">
+        <text class="head-title">单词工具</text>
+        <text class="head-note">按自己的节奏来</text>
+      </view>
+
+      <view class="learning-grid">
+        <button class="study-card" hover-class="hover-press" @tap="goWordbook">
+          <view class="row">
+            <image class="card-icon" src="/static/icons/logo-primary.png" mode="aspectFit" />
+            <text class="card-kicker">考研英语</text>
+          </view>
+          <text class="card-title">单词本</text>
+          <text class="study-numbers">查看每个单词的学习状态</text>
+          <view class="card-link">
+            <image src="/static/icons/chevron.png" mode="aspectFit" />
+          </view>
+        </button>
+
+        <button class="study-card" hover-class="hover-press" @tap="goWordPlan">
+          <view class="row">
+            <image class="card-icon" src="/static/icons/target-primary.png" mode="aspectFit" />
+            <text class="card-kicker">每天 {{ quota }} 个</text>
+          </view>
+          <text class="card-title">计划设定</text>
+          <text class="study-numbers">新学 {{ targets.newWords }} 个 · 复习 {{ targets.review }} 个</text>
+          <view class="card-link">
+            <image src="/static/icons/chevron.png" mode="aspectFit" />
+          </view>
         </button>
       </view>
+
     </view>
   </view>
 </template>

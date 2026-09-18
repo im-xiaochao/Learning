@@ -956,6 +956,18 @@ scroll-view {
   font-size: 10px;
   color: var(--muted);
 }
+/* 音标是释义的一部分：保留展示，但不再是「播放发音」的按钮（暂无读音功能） */
+.word-ipa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.word-ipa .accent-label {
+  border-left: 1px solid var(--border);
+  padding-left: 6px;
+}
 .word-definition {
   margin-top: 16px;
   padding-top: 14px;

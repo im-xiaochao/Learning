@@ -191,10 +191,6 @@ function openPoint(id: string) {
   uni.navigateTo({ url: `/pages-knowledge/topic/topic?id=${id}` })
 }
 
-function goPlan() {
-  uni.navigateTo({ url: '/pages/plan/plan' })
-}
-
 function pad(n: number): string {
   return String(n).padStart(2, '0')
 }
@@ -327,12 +323,10 @@ function pad(n: number): string {
         </view>
       </button>
 
+      <!-- 「我的计划」入口已移除（用户口径：数学模块不需要它）；
+           学习计划页仍可从「我的 · 学习计划」进入 -->
       <view class="section-head">
         <text class="head-title">知识点讲解</text>
-        <button class="text-button" hover-class="hover-press" @tap="goPlan">
-          <text>我的计划</text>
-          <image src="/static/icons/chevron.png" mode="aspectFit" />
-        </button>
       </view>
       <text class="head-note" style="display: block; margin: -6px 0 12px">
         {{ subject?.name }} · 共 {{ chapterList.length }} 章 / {{ totalOfSubject }} 个知识点

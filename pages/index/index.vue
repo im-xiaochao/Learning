@@ -107,7 +107,7 @@ function openRecent() {
           <text class="study-numbers"><text class="num">{{ todayWords }}</text> / {{ currentGoal.dailyWords }} 个</text>
           <view class="small-progress"><view class="bar" :style="`width:${wordPercent}%`" /></view>
           <view class="card-link">
-            <text>{{ wordsDone ? '查看复习成果' : '继续背词' }}</text>
+            <text>{{ wordsDone ? '查看复习成果' : todayWords ? '继续背词' : '开始背词' }}</text>
             <image :src="wordsDone ? '/static/icons/check-primary.png' : '/static/icons/arrow-primary.png'" mode="aspectFit" />
           </view>
         </button>

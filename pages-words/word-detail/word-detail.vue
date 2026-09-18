@@ -85,22 +85,6 @@ function onFavorite() {
   uni.showToast({ title: added ? '已收藏' : '已取消收藏', icon: 'none' })
 }
 
-function pronounce() {
-  const w = word.value
-  if (!w) return
-  // #ifdef H5
-  const synth = (window as unknown as { speechSynthesis?: SpeechSynthesis }).speechSynthesis
-  if (synth && typeof SpeechSynthesisUtterance !== 'undefined') {
-    synth.cancel()
-    const u = new SpeechSynthesisUtterance(w.word)
-    u.lang = 'en-GB'
-    u.rate = 0.82
-    synth.speak(u)
-    return
-  }
-  // #endif
-  uni.showToast({ title: '当前端暂不支持语音朗读，可参考音标', icon: 'none' })
-}
 </script>
 
 <template>
@@ -118,11 +102,11 @@ function pronounce() {
 
         <view class="detail-hero">
           <text class="word-heading">{{ word.word }}</text>
-          <button class="pronunciation" hover-class="hover-press" @tap="pronounce">
-            <image src="/static/icons/sound-primary.png" mode="aspectFit" />
+          <!-- 音标保留；读音功能还没有，不做成可点的发音按钮 -->
+          <view class="word-ipa">
             <text>/{{ word.ipa }}/</text>
             <text class="accent-label">英音</text>
-          </button>
+          </view>
         </view>
 
         <view class="panel mt20">

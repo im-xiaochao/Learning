@@ -58,6 +58,23 @@ const SHIM_NAMES = [
   'politicsQuizBody',
   'quizPaperSetPage',
   'chartMode',
+  // 背单词模块（单词本 / 计划设定 / 今日进度）
+  'vocabulary',
+  'wordPlan',
+  'wordPlanTotal',
+  'wordToday',
+  'wordCount',
+  'wordProgress',
+  'wordsPage',
+  'wordbookPage',
+  'wordPlanPage',
+  'startReview',
+  'handleAction',
+  'handleLearningAction',
+  'reviewQueue',
+  'reviewIndex',
+  'reviewMode',
+  'wordFilter',
 ]
 
 const shim = [

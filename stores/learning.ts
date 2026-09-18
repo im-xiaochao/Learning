@@ -207,6 +207,38 @@ export const todayWords = computed(() => todayDistinct('word_reviewed'))
 export const todayKnowledge = computed(() => todayDistinct('knowledge_completed'))
 export const todayQuiz = computed(() => todayDistinct('quiz_answered'))
 
+/**
+ * 今日新学的单词数：这个词在历史上第一次被复习，就发生在今天。
+ *
+ * 判据是「该词所有 word_reviewed 事件里最早的 localDate === 今天」，而不是看
+ * wordProgress 里有没有记录——后者分不出「今天第一次见」和「以前见过今天再复习」。
+ */
+export const todayNewWords = computed(() => {
+  const firstSeen = new Map<string, string>()
+  for (const e of state.value.learningEvents) {
+    if (e.type !== 'word_reviewed') continue
+    const prev = firstSeen.get(e.contentId)
+    if (!prev || e.localDate < prev) firstSeen.set(e.contentId, e.localDate)
+  }
+  const today = localDate()
+  let n = 0
+  for (const day of firstSeen.values()) if (day === today) n += 1
+  return n
+})
+
+/** 今日复习的单词数：今天复习过的词里，刨掉今天新学的那些 */
+export const todayReviewWords = computed(() => Math.max(0, todayWords.value - todayNewWords.value))
+
+/**
+ * 今日单词目标拆分：新词 40% / 复习 60%。
+ * 与原型口径一致（每天 50 → 新词 20 + 复习 30），且复习量不少于新词量。
+ */
+export const wordTargets = computed(() => {
+  const total = Math.max(1, currentGoal.value.dailyWords)
+  const newWords = Math.max(1, Math.round(total * 0.4))
+  return { newWords, review: Math.max(0, total - newWords) }
+})
+
 /** 累计学习量：全部历史事件按内容 ID 去重 */
 export const totalWords = computed(() => new Set(state.value.learningEvents.filter((e) => e.type === 'word_reviewed').map((e) => e.contentId)).size)
 export const totalKnowledge = computed(
@@ -417,11 +449,32 @@ export function saveGoals(input: { examYear: number; englishExam: string; mathEx
   touch()
 }
 
+/**
+ * 只改「每天学多少个单词」：**今天立即生效**。
+ *
+ * 与 saveGoals 的「次日生效」不同——单词页的「计划设定」改完，今日新词/复习的目标
+ * 要立刻跟着变，否则用户会以为没保存上。顺带把今天之后还没生效的目标一并对齐，
+ * 不然明天会被旧值顶回去（goalHistory 取的是 effectiveFrom 最晚的那条）。
+ */
+export function setDailyWords(dailyWords: number): void {
+  if (!DAILY_WORD_OPTIONS.includes(dailyWords)) return
+  const today = localDate()
+  const current = currentGoal.value
+  const next = state.value.goalHistory.map((g) => (g.effectiveFrom < today ? g : { ...g, dailyWords }))
+  state.value.goalHistory = next.some((g) => g.effectiveFrom === today)
+    ? next
+    : [...next, { effectiveFrom: today, dailyWords, dailyKnowledgePoints: current.dailyKnowledgePoints }]
+  touch()
+}
+
 export function useLearning() {
   return {
     state,
     currentGoal,
     todayWords,
+    todayNewWords,
+    todayReviewWords,
+    wordTargets,
     todayKnowledge,
     todayQuiz,
     todayPending,
@@ -447,5 +500,6 @@ export function useLearning() {
     toggleFavorite,
     togglePlan,
     saveGoals,
+    setDailyWords,
   }
 }

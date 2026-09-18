@@ -4,7 +4,7 @@
  * 设计稿在卡片里展示「语境例句」，但词库（data/content/vocabulary）没有例句字段，
  * 因此这里只渲染音标 / 词性 / 释义，例句位置留给后续补数据。
  */
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { onUnload } from '@dcloudio/uni-app'
 import AppHeader from '../../components/AppHeader.vue'
 import { useLearning } from '../../stores/learning'
@@ -24,26 +24,6 @@ const feedbackText: Record<Familiarity, [string, string]> = {
 const word = computed(() => appWords.find((w) => w.id === currentId.value))
 const saved = computed(() => (word.value ? isFavorite(word.value.id) : false))
 const progress = computed(() => (total.value ? Math.round(((position.value - 1 + (grade.value ? 1 : 0)) / total.value) * 100) : 0))
-
-const toast = ref('')
-
-function pronounce() {
-  const w = word.value
-  if (!w) return
-  // #ifdef H5
-  const synth = (window as unknown as { speechSynthesis?: SpeechSynthesis }).speechSynthesis
-  if (synth && typeof SpeechSynthesisUtterance !== 'undefined') {
-    synth.cancel()
-    const u = new SpeechSynthesisUtterance(w.word)
-    u.lang = 'en-GB'
-    u.rate = 0.82
-    synth.speak(u)
-    return
-  }
-  // #endif
-  toast.value = '当前端暂不支持语音朗读，可参考音标'
-  uni.showToast({ title: toast.value, icon: 'none' })
-}
 
 function onFavorite() {
   const w = word.value
@@ -101,11 +81,11 @@ onUnload(() => {
 
         <text class="word-heading">{{ word.word }}</text>
 
-        <button class="pronunciation" hover-class="hover-press" @tap="pronounce">
-          <image src="/static/icons/sound-primary.png" mode="aspectFit" />
+        <!-- 音标是释义的一部分，保留；读音功能还没有，所以不再做成可点的发音按钮 -->
+        <view class="word-ipa">
           <text>/{{ word.ipa }}/</text>
           <text class="accent-label">英音</text>
-        </button>
+        </view>
 
         <view class="word-definition">
           <text v-if="reveal" class="def-text"><text class="part">{{ word.pos }}</text>{{ word.meaning }}</text>
