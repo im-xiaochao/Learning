@@ -15,47 +15,47 @@
       "sectionId": "m1-p1-c8-s1",
       "sectionTitle": "常数项级数",
       "title": "级数与部分和",
-      "summary": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。",
+      "summary": "级数 Σuₙ 是无穷个数依次相加，前 n 项之和 Sₙ=Σᵢ₌₁ⁿuᵢ 叫部分和；部分和数列 {Sₙ} 的极限定义级数的和——「无限相加」的意义完全由极限给出。",
       "tags": [
-        "无限累加的极限"
+        "无穷项相加"
       ],
       "sortOrder": 10,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Σaₙ 收敛 ⇔ Sₙ=Σₖ₌₁ⁿaₖ 有有限极限",
-        "caption": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。"
+        "content": "S=limₙ→∞ Sₙ=limₙ→∞ Σᵢ₌₁ⁿuᵢ",
+        "caption": "级数 Σuₙ 是无穷个数依次相加，前 n 项之和 Sₙ=Σᵢ₌₁ⁿuᵢ 叫部分和；"
       },
       "keyPoints": [
         {
-          "id": "ji-shu-shou-lian-de-bi-yao-tiao-jian-1c1q1q",
-          "title": "级数收敛的必要条件是通项趋于 0",
-          "bodyMarkdown": "级数收敛的必要条件是通项趋于 0"
+          "id": "s-u-u-u-shi-bu-fen-he",
+          "title": "Sₙ=u₁+u₂+…+uₙ 是部分和",
+          "bodyMarkdown": "Sₙ=u₁+u₂+…+uₙ 是部分和"
         },
         {
-          "id": "bi-yao-tiao-jian-bu-chong-fen",
-          "title": "必要条件不充分",
-          "bodyMarkdown": "必要条件不充分"
+          "id": "ji-shu-de-he-lim-s-cun-zai-cai-you-yi-yi",
+          "title": "级数的和 = lim Sₙ（存在才有意义）",
+          "bodyMarkdown": "级数的和 = lim Sₙ（存在才有意义）"
         },
         {
-          "id": "ji-he-ji-shu-he-qu-jue-yu-gong-bi-jue-0omeiw",
-          "title": "几何级数和取决于公比绝对值",
-          "bodyMarkdown": "几何级数和取决于公比绝对值"
+          "id": "wu-qiong-xiang-jia-bu-shi-pu-tong-jia-0mpaoq",
+          "title": "无穷相加不是普通加法",
+          "bodyMarkdown": "无穷相加不是普通加法，不能随便重排"
         }
       ],
       "examples": [
         {
-          "id": "1-2-cong-n-0-kai-shi-de-0l0p58",
+          "id": "1-n-n-1-de-s-1-1-n-1-1-11skj7",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(1/2)ⁿ 从 n=0 开始的和为 2；Σ1/n 发散。"
+          "bodyMarkdown": "Σ1/(n(n+1)) 的 Sₙ=1−1/(n+1)→1，级数的和为 1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。先看通项是否趋于零，再根据正项、交错或绝对值结构选择判别法。\n\n### 解题步骤\n\n1. 写部分和或观察通项\n2. 选择合适判别法\n3. 若收敛再计算和或估计误差\n\n### 易错点\n\n通项趋于 0 只能排除一部分发散情形，不能直接判收敛。"
+      "bodyMarkdown": "级数 Σuₙ 是无穷个数依次相加，前 n 项之和 Sₙ=Σᵢ₌₁ⁿuᵢ 叫部分和；部分和数列 {Sₙ} 的极限定义级数的和——「无限相加」的意义完全由极限给出。\n\n### 解题步骤\n\n1. 写出部分和 Sₙ\n2. 求 lim Sₙ\n3. 极限存在即为级数的和\n\n### 易错点\n\n把「部分和趋于某个值」与「通项趋于某个值」混为一谈。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p1-c8-s1",
       "sectionTitle": "常数项级数",
       "title": "收敛、发散",
-      "summary": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。",
+      "summary": "部分和数列收敛（lim Sₙ 存在）叫级数收敛，否则发散；发散级数没有和，部分和无界或振荡都算发散。",
       "tags": [
-        "无限累加的极限"
+        "看部分和极限"
       ],
       "sortOrder": 20,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Σaₙ 收敛 ⇔ Sₙ=Σₖ₌₁ⁿaₖ 有有限极限",
-        "caption": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。"
+        "content": "收敛 ⇔ lim Sₙ=S（有限）",
+        "caption": "部分和数列收敛（lim Sₙ 存在）叫级数收敛，否则发散；发散级数没有和，部分和无界或振荡都算发散。"
       },
       "keyPoints": [
         {
-          "id": "ji-shu-shou-lian-de-bi-yao-tiao-jian-1c1q1q",
-          "title": "级数收敛的必要条件是通项趋于 0",
-          "bodyMarkdown": "级数收敛的必要条件是通项趋于 0"
+          "id": "shou-lian-s-you-ji-xian",
+          "title": "收敛 ⇔ {Sₙ} 有极限",
+          "bodyMarkdown": "收敛 ⇔ {Sₙ} 有极限"
         },
         {
-          "id": "bi-yao-tiao-jian-bu-chong-fen",
-          "title": "必要条件不充分",
-          "bodyMarkdown": "必要条件不充分"
+          "id": "lim-s-huo-bu-cun-zai-dou-jiao-fa-san",
+          "title": "lim Sₙ=∞ 或不存在都叫发散",
+          "bodyMarkdown": "lim Sₙ=∞ 或不存在都叫发散"
         },
         {
-          "id": "ji-he-ji-shu-he-qu-jue-yu-gong-bi-jue-0omeiw",
-          "title": "几何级数和取决于公比绝对值",
-          "bodyMarkdown": "几何级数和取决于公比绝对值"
+          "id": "shou-lian-shi-yu-xiang-r-s-s-0",
+          "title": "收敛时余项 rₙ=S−Sₙ→0",
+          "bodyMarkdown": "收敛时余项 rₙ=S−Sₙ→0"
         }
       ],
       "examples": [
         {
-          "id": "1-2-cong-n-0-kai-shi-de-0l0p58",
+          "id": "1-2-de-s-1-1-2-1-shou-0bb9u0",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(1/2)ⁿ 从 n=0 开始的和为 2；Σ1/n 发散。"
+          "bodyMarkdown": "Σ1/2ⁿ 的 Sₙ=1−1/2ⁿ→1 收敛；Σn 的 Sₙ→∞ 发散。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。先看通项是否趋于零，再根据正项、交错或绝对值结构选择判别法。\n\n### 解题步骤\n\n1. 写部分和或观察通项\n2. 选择合适判别法\n3. 若收敛再计算和或估计误差\n\n### 易错点\n\n通项趋于 0 只能排除一部分发散情形，不能直接判收敛。"
+      "bodyMarkdown": "部分和数列收敛（lim Sₙ 存在）叫级数收敛，否则发散；发散级数没有和，部分和无界或振荡都算发散。\n\n### 解题步骤\n\n1. 求部分和 Sₙ\n2. 算极限\n3. 有极限即收敛\n\n### 易错点\n\n只看通项趋零就判收敛——通项趋零是必要条件不是充分条件。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p1-c8-s1",
       "sectionTitle": "常数项级数",
       "title": "收敛必要条件 u_n→0",
-      "summary": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。",
+      "summary": "级数收敛则通项必趋于零：uₙ=Sₙ−Sₙ₋₁→0；逆否命题是常用判断——uₙ 不趋于 0 立即断言发散，但 uₙ→0 不能保证收敛（调和级数就是反例）。",
       "tags": [
-        "无限累加的极限"
+        "通项不趋零必发散"
       ],
       "sortOrder": 30,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Σaₙ 收敛 ⇔ Sₙ=Σₖ₌₁ⁿaₖ 有有限极限",
-        "caption": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。"
+        "content": "收敛 ⇒ lim uₙ=0",
+        "caption": "级数收敛则通项必趋于零：uₙ=Sₙ−Sₙ₋₁→0；逆否命题是常用判断——uₙ 不趋于 0 立即断言发散"
       },
       "keyPoints": [
         {
-          "id": "ji-shu-shou-lian-de-bi-yao-tiao-jian-1c1q1q",
-          "title": "级数收敛的必要条件是通项趋于 0",
-          "bodyMarkdown": "级数收敛的必要条件是通项趋于 0"
+          "id": "shou-lian-u-0",
+          "title": "收敛 ⇒ uₙ→0",
+          "bodyMarkdown": "收敛 ⇒ uₙ→0"
         },
         {
-          "id": "bi-yao-tiao-jian-bu-chong-fen",
-          "title": "必要条件不充分",
-          "bodyMarkdown": "必要条件不充分"
+          "id": "u-0-fa-san-di-yi-bu-jian-cha",
+          "title": "uₙ↛0 ⇒ 发散（第一步检查）",
+          "bodyMarkdown": "uₙ↛0 ⇒ 发散（第一步检查）"
         },
         {
-          "id": "ji-he-ji-shu-he-qu-jue-yu-gong-bi-jue-0omeiw",
-          "title": "几何级数和取决于公比绝对值",
-          "bodyMarkdown": "几何级数和取决于公比绝对值"
+          "id": "u-0-shou-lian-1-n-fa-san",
+          "title": "uₙ→0 ⇏ 收敛",
+          "bodyMarkdown": "uₙ→0 ⇏ 收敛：Σ1/n 发散"
         }
       ],
       "examples": [
         {
-          "id": "1-2-cong-n-0-kai-shi-de-0l0p58",
+          "id": "n-n-1-de-tong-xiang-1-0-0leew8",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(1/2)ⁿ 从 n=0 开始的和为 2；Σ1/n 发散。"
+          "bodyMarkdown": "Σn/(n+1) 的通项→1≠0，发散；Σ1/n 通项→0 但发散。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。先看通项是否趋于零，再根据正项、交错或绝对值结构选择判别法。\n\n### 解题步骤\n\n1. 写部分和或观察通项\n2. 选择合适判别法\n3. 若收敛再计算和或估计误差\n\n### 易错点\n\n通项趋于 0 只能排除一部分发散情形，不能直接判收敛。"
+      "bodyMarkdown": "级数收敛则通项必趋于零：uₙ=Sₙ−Sₙ₋₁→0；逆否命题是常用判断——uₙ 不趋于 0 立即断言发散，但 uₙ→0 不能保证收敛（调和级数就是反例）。\n\n### 解题步骤\n\n1. 先算 lim uₙ\n2. 不趋零直接判发散\n3. 趋零再选判别法\n\n### 易错点\n\n把「uₙ→0」当收敛的充分条件——方向反了。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p1-c8-s1",
       "sectionTitle": "常数项级数",
       "title": "级数基本性质",
-      "summary": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。",
+      "summary": "收敛级数可逐项乘常数、逐项相减相加（和差仍收敛），增删有限项不改变敛散性；收敛级数可以加括号，但加括号后收敛推不出原级数收敛。",
       "tags": [
-        "无限累加的极限"
+        "线性与去括号"
       ],
       "sortOrder": 40,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Σaₙ 收敛 ⇔ Sₙ=Σₖ₌₁ⁿaₖ 有有限极限",
-        "caption": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。"
+        "content": "Σ(uₙ±vₙ)=Σuₙ±Σvₙ",
+        "caption": "收敛级数可逐项乘常数、逐项相减相加（和差仍收敛），增删有限项不改变敛散性；收敛级数可以加括号，但加括号后收敛推不出原级数收敛。"
       },
       "keyPoints": [
         {
-          "id": "ji-shu-shou-lian-de-bi-yao-tiao-jian-1c1q1q",
-          "title": "级数收敛的必要条件是通项趋于 0",
-          "bodyMarkdown": "级数收敛的必要条件是通项趋于 0"
+          "id": "ku-kv-k-u-k-v-dou-shou-lian-shi",
+          "title": "Σ(kuₙ±kvₙ)=kΣuₙ±kΣvₙ（都收敛",
+          "bodyMarkdown": "Σ(kuₙ±kvₙ)=kΣuₙ±kΣvₙ（都收敛时）"
         },
         {
-          "id": "bi-yao-tiao-jian-bu-chong-fen",
-          "title": "必要条件不充分",
-          "bodyMarkdown": "必要条件不充分"
+          "id": "gai-bian-you-xian-xiang-bu-ying-xiang-07knx8",
+          "title": "改变有限项不影响敛散性",
+          "bodyMarkdown": "改变有限项不影响敛散性"
         },
         {
-          "id": "ji-he-ji-shu-he-qu-jue-yu-gong-bi-jue-0omeiw",
-          "title": "几何级数和取决于公比绝对值",
-          "bodyMarkdown": "几何级数和取决于公比绝对值"
+          "id": "shou-lian-jia-kuo-hao-reng-shou-lian-1nj787",
+          "title": "收敛 ⇒ 加括号仍收敛",
+          "bodyMarkdown": "收敛 ⇒ 加括号仍收敛；反之不成立"
         }
       ],
       "examples": [
         {
-          "id": "1-2-cong-n-0-kai-shi-de-0l0p58",
+          "id": "1-2-1-n-shou-lian-liang-0mryt7",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(1/2)ⁿ 从 n=0 开始的和为 2；Σ1/n 发散。"
+          "bodyMarkdown": "Σ(1/2ⁿ+1/n²) 收敛（两个收敛级数之和）；Σ(1/2ⁿ−1/n) 发散。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。先看通项是否趋于零，再根据正项、交错或绝对值结构选择判别法。\n\n### 解题步骤\n\n1. 写部分和或观察通项\n2. 选择合适判别法\n3. 若收敛再计算和或估计误差\n\n### 易错点\n\n通项趋于 0 只能排除一部分发散情形，不能直接判收敛。"
+      "bodyMarkdown": "收敛级数可逐项乘常数、逐项相减相加（和差仍收敛），增删有限项不改变敛散性；收敛级数可以加括号，但加括号后收敛推不出原级数收敛。\n\n### 解题步骤\n\n1. 拆成已知敛散的级数\n2. 用线性性合成结论\n3. 有限项变动忽略不计\n\n### 易错点\n\n一个收敛一个发散的两级数之和按「收敛」处理——结果是发散。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p1-c8-s2",
       "sectionTitle": "正项级数",
       "title": "几何级数",
-      "summary": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。",
+      "summary": "几何级数 Σₙ₌₀^∞ aqⁿ（a≠0）当 |q|<1 时收敛于 a/(1−q)，当 |q|≥1 时发散；它是「有限区间收敛」的模型级数，幂级数求和几乎都回到它。",
       "tags": [
-        "无限累加的极限"
+        "q 的范围定生死"
       ],
       "sortOrder": 50,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Σaₙ 收敛 ⇔ Sₙ=Σₖ₌₁ⁿaₖ 有有限极限",
-        "caption": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。"
+        "content": "Σaqⁿ=a/(1−q)（|q|<1）",
+        "caption": "几何级数 Σₙ₌₀^∞ aqⁿ（a≠0）当 |q|<1 时收敛于 a/(1−q)，当 |q|≥1 时发散；"
       },
       "keyPoints": [
         {
-          "id": "ji-shu-shou-lian-de-bi-yao-tiao-jian-1c1q1q",
-          "title": "级数收敛的必要条件是通项趋于 0",
-          "bodyMarkdown": "级数收敛的必要条件是通项趋于 0"
+          "id": "q-1-s-a-1-q",
+          "title": "|q|<1",
+          "bodyMarkdown": "|q|<1：S=a/(1−q)"
         },
         {
-          "id": "bi-yao-tiao-jian-bu-chong-fen",
-          "title": "必要条件不充分",
-          "bodyMarkdown": "必要条件不充分"
+          "id": "q-1-fa-san-tong-xiang-bu-qu-ling",
+          "title": "|q|≥1",
+          "bodyMarkdown": "|q|≥1：发散（通项不趋零）"
         },
         {
-          "id": "ji-he-ji-shu-he-qu-jue-yu-gong-bi-jue-0omeiw",
-          "title": "几何级数和取决于公比绝对值",
-          "bodyMarkdown": "几何级数和取决于公比绝对值"
+          "id": "shou-xiang-a-yu-gong-bi-q-yao-fen-qing",
+          "title": "首项 a 与公比 q 要分清",
+          "bodyMarkdown": "首项 a 与公比 q 要分清"
         }
       ],
       "examples": [
         {
-          "id": "1-2-cong-n-0-kai-shi-de-0l0p58",
+          "id": "x-2-x-2-dang-x-2-shou-15182z",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(1/2)ⁿ 从 n=0 开始的和为 2；Σ1/n 发散。"
+          "bodyMarkdown": "Σxⁿ/2ⁿ=Σ(x/2)ⁿ 当 |x|<2 收敛于 1/(1−x/2)=2/(2−x)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。先看通项是否趋于零，再根据正项、交错或绝对值结构选择判别法。\n\n### 解题步骤\n\n1. 写部分和或观察通项\n2. 选择合适判别法\n3. 若收敛再计算和或估计误差\n\n### 易错点\n\n通项趋于 0 只能排除一部分发散情形，不能直接判收敛。"
+      "bodyMarkdown": "几何级数 Σₙ₌₀^∞ aqⁿ（a≠0）当 |q|<1 时收敛于 a/(1−q)，当 |q|≥1 时发散；它是「有限区间收敛」的模型级数，幂级数求和几乎都回到它。\n\n### 解题步骤\n\n1. 认出公比 q\n2. 检查 |q|<1\n3. 代公式求和\n\n### 易错点\n\nq=−1 时通项 (−1)ⁿ 不趋零仍发散——别只看正负摆动就以为收敛。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p1-c8-s2",
       "sectionTitle": "正项级数",
       "title": "p 级数",
-      "summary": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。",
+      "summary": "p 级数 Σ1/nᵖ 当 p>1 时收敛、p≤1 时发散；p=1 是调和级数（发散），p=2 收敛——它是比较判别法最常用的「标尺」。",
       "tags": [
-        "无限累加的极限"
+        "p>1 才收敛"
       ],
       "sortOrder": 60,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Σaₙ 收敛 ⇔ Sₙ=Σₖ₌₁ⁿaₖ 有有限极限",
-        "caption": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。"
+        "content": "Σ1/nᵖ 收敛 ⇔ p>1",
+        "caption": "p 级数 Σ1/nᵖ 当 p>1 时收敛、p≤1 时发散；p=1 是调和级数（发散），p=2 收敛——它是比较判别法最常用的「标尺」。"
       },
       "keyPoints": [
         {
-          "id": "ji-shu-shou-lian-de-bi-yao-tiao-jian-1c1q1q",
-          "title": "级数收敛的必要条件是通项趋于 0",
-          "bodyMarkdown": "级数收敛的必要条件是通项趋于 0"
+          "id": "1-n-p-1-shou-lian-p-1-fa-san",
+          "title": "Σ1/nᵖ",
+          "bodyMarkdown": "Σ1/nᵖ：p>1 收敛，p≤1 发散"
         },
         {
-          "id": "bi-yao-tiao-jian-bu-chong-fen",
-          "title": "必要条件不充分",
-          "bodyMarkdown": "必要条件不充分"
+          "id": "p-1-tiao-he-ji-shu-fa-san-jing-dian-jie-0aoeaz",
+          "title": "p=1 调和级数发散（经典结论）",
+          "bodyMarkdown": "p=1 调和级数发散（经典结论）"
         },
         {
-          "id": "ji-he-ji-shu-he-qu-jue-yu-gong-bi-jue-0omeiw",
-          "title": "几何级数和取决于公比绝对值",
-          "bodyMarkdown": "几何级数和取决于公比绝对值"
+          "id": "1-n-yu-1-n-ln-n-deng-bian-ti-ling-pan",
+          "title": "Σ1/nᵖ 与 Σ1/(n ln n) 等变体另",
+          "bodyMarkdown": "Σ1/nᵖ 与 Σ1/(n ln n) 等变体另判"
         }
       ],
       "examples": [
         {
-          "id": "1-2-cong-n-0-kai-shi-de-0l0p58",
+          "id": "1-n-shou-lian-1-n-p-1-2-1gnkc1",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(1/2)ⁿ 从 n=0 开始的和为 2；Σ1/n 发散。"
+          "bodyMarkdown": "Σ1/n² 收敛；Σ1/√n（p=1/2）发散；Σ1/√(n³)（p=3/2）收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数不是把无限多项直接相加，而是考察部分和序列是否有有限极限。先看通项是否趋于零，再根据正项、交错或绝对值结构选择判别法。\n\n### 解题步骤\n\n1. 写部分和或观察通项\n2. 选择合适判别法\n3. 若收敛再计算和或估计误差\n\n### 易错点\n\n通项趋于 0 只能排除一部分发散情形，不能直接判收敛。"
+      "bodyMarkdown": "p 级数 Σ1/nᵖ 当 p>1 时收敛、p≤1 时发散；p=1 是调和级数（发散），p=2 收敛——它是比较判别法最常用的「标尺」。\n\n### 解题步骤\n\n1. 把通项化成 1/nᵖ 形\n2. 读出 p\n3. 按 p 与 1 比大小\n\n### 易错点\n\n把 1/√n 当 p=2——指数在分母上要化成幂：1/√n=n^{−1/2}。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m1-p1-c8-s2",
       "sectionTitle": "正项级数",
       "title": "比较判别法",
-      "summary": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。",
+      "summary": "正项级数里若 0≤aₙ≤bₙ（从某项起），则「大收则小收，小发则大发」：bₙ 收敛推 aₙ 收敛，aₙ 发散推 bₙ 发散；关键是找对可比的标尺级数。",
       "tags": [
-        "比较收敛速度"
+        "大收则小收"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim aₙ/bₙ=c∈(0,∞) ⇒ Σaₙ与Σbₙ同敛散",
-        "caption": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。"
+        "content": "0≤aₙ≤bₙ：b 收 ⇒ a 收",
+        "caption": "正项级数里若 0≤aₙ≤bₙ（从某项起），则「大收则小收，小发则大发」：bₙ 收敛推 aₙ 收敛，aₙ 发散推 bₙ 发散；关键是找对可比的标尺级数。"
       },
       "keyPoints": [
         {
-          "id": "bi-jiao-dui-xiang-yao-yi-zhi-shou-lian-0dg3j1",
-          "title": "比较对象要已知收敛或发散",
-          "bodyMarkdown": "比较对象要已知收敛或发散"
+          "id": "cong-mou-xiang-qi-kong-zhi-zhu-ji-ke-0hkszy",
+          "title": "从某项起控制住即可（前几项无关）",
+          "bodyMarkdown": "从某项起控制住即可（前几项无关）"
         },
         {
-          "id": "bi-zhi-gen-zhi-xiao-yu-1-shou-lian-da-1iez1c",
-          "title": "比值/根值小于 1 收敛、大于 1 发散",
-          "bodyMarkdown": "比值/根值小于 1 收敛、大于 1 发散"
+          "id": "b-shou-a-shou-a-fa-b-fa",
+          "title": "b 收 ⇒ a 收",
+          "bodyMarkdown": "b 收 ⇒ a 收；a 发 ⇒ b 发"
         },
         {
-          "id": "jiao-cuo-pan-bie-xu-yao-dan-diao-di-1v928n",
-          "title": "交错判别需要单调递减和趋零",
-          "bodyMarkdown": "交错判别需要单调递减和趋零"
+          "id": "biao-chi-chang-qu-p-ji-shu-yu-ji-he-ji-1f35ar",
+          "title": "标尺常取 p 级数与几何级数",
+          "bodyMarkdown": "标尺常取 p 级数与几何级数"
         }
       ],
       "examples": [
         {
-          "id": "1-n-tiao-jian-shou-lian-0oxgkn",
+          "id": "1-n-n-1-n-shou-lian-gu-1vtkfp",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(−1)ⁿ/n 条件收敛，但 Σ1/n 发散；它说明符号抵消会改变结果。"
+          "bodyMarkdown": "Σ1/(n²+n)≤1/n² 收敛，故收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。正项用比较、极限比较、比值或根值；交错级数还要检查单调趋零，绝对收敛则先看绝对值级数。\n\n### 解题步骤\n\n1. 判断项的符号结构\n2. 选择比较对象或比值\n3. 写出严格的收敛结论\n\n### 易错点\n\n把“比值等于 1”当作已经判定，等于 1 时通常需要换方法。"
+      "bodyMarkdown": "正项级数里若 0≤aₙ≤bₙ（从某项起），则「大收则小收，小发则大发」：bₙ 收敛推 aₙ 收敛，aₙ 发散推 bₙ 发散；关键是找对可比的标尺级数。\n\n### 解题步骤\n\n1. 估计通项量级\n2. 选标尺级数\n3. 验证不等式方向\n\n### 易错点\n\n不等式方向放反（拿小的收敛推大的收敛）——单向推理不能逆用。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m1-p1-c8-s2",
       "sectionTitle": "正项级数",
       "title": "比较判别法极限形式",
-      "summary": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。",
+      "summary": "若 lim aₙ/bₙ=λ：0<λ<+∞ 时两级数同敛散；λ=0 时由 bₙ 收敛推 aₙ 收敛；λ=+∞ 时由 bₙ 发散推 aₙ 发散——比硬找不等式好用得多。",
       "tags": [
-        "比较收敛速度"
+        "同阶同敛散"
       ],
       "sortOrder": 80,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim aₙ/bₙ=c∈(0,∞) ⇒ Σaₙ与Σbₙ同敛散",
-        "caption": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。"
+        "content": "lim aₙ/bₙ=λ（0<λ<∞）⇒ 同敛散",
+        "caption": "若 lim aₙ/bₙ=λ：0<λ<+∞ 时两级数同敛散；λ=0 时由 bₙ 收敛推 aₙ 收敛；"
       },
       "keyPoints": [
         {
-          "id": "bi-jiao-dui-xiang-yao-yi-zhi-shou-lian-0dg3j1",
-          "title": "比较对象要已知收敛或发散",
-          "bodyMarkdown": "比较对象要已知收敛或发散"
+          "id": "tong-jie-you-xian-zheng-tong-lian-san",
+          "title": "同阶（λ 有限正）⇒ 同敛散",
+          "bodyMarkdown": "同阶（λ 有限正）⇒ 同敛散"
         },
         {
-          "id": "bi-zhi-gen-zhi-xiao-yu-1-shou-lian-da-1iez1c",
-          "title": "比值/根值小于 1 收敛、大于 1 发散",
-          "bodyMarkdown": "比值/根值小于 1 收敛、大于 1 发散"
+          "id": "a-shi-b-gao-jie-wu-qiong-xiao-qie-b-1mn3ya",
+          "title": "aₙ 是 bₙ 高阶无穷小且 b 收 ⇒ a 收",
+          "bodyMarkdown": "aₙ 是 bₙ 高阶无穷小且 b 收 ⇒ a 收"
         },
         {
-          "id": "jiao-cuo-pan-bie-xu-yao-dan-diao-di-1v928n",
-          "title": "交错判别需要单调递减和趋零",
-          "bodyMarkdown": "交错判别需要单调递减和趋零"
+          "id": "qie-b-fa-a-fa",
+          "title": "λ=∞ 且 b 发 ⇒ a 发",
+          "bodyMarkdown": "λ=∞ 且 b 发 ⇒ a 发"
         }
       ],
       "examples": [
         {
-          "id": "1-n-tiao-jian-shou-lian-0oxgkn",
+          "id": "tan-1-n-yu-1-n-bi-ji-050k2f",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(−1)ⁿ/n 条件收敛，但 Σ1/n 发散；它说明符号抵消会改变结果。"
+          "bodyMarkdown": "Σtan(1/n) 与 Σ1/n 比：极限 1，同发散。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。正项用比较、极限比较、比值或根值；交错级数还要检查单调趋零，绝对收敛则先看绝对值级数。\n\n### 解题步骤\n\n1. 判断项的符号结构\n2. 选择比较对象或比值\n3. 写出严格的收敛结论\n\n### 易错点\n\n把“比值等于 1”当作已经判定，等于 1 时通常需要换方法。"
+      "bodyMarkdown": "若 lim aₙ/bₙ=λ：0<λ<+∞ 时两级数同敛散；λ=0 时由 bₙ 收敛推 aₙ 收敛；λ=+∞ 时由 bₙ 发散推 aₙ 发散——比硬找不等式好用得多。\n\n### 解题步骤\n\n1. 构造标尺 bₙ\n2. 算极限 λ\n3. 按 λ 分情况下结论\n\n### 易错点\n\nλ=0 或 ∞ 时仍说「同敛散」——这两种情形结论是单向的。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m1-p1-c8-s2",
       "sectionTitle": "正项级数",
       "title": "比值判别法",
-      "summary": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。",
+      "summary": "正项级数算 lim aₙ₊₁/aₙ=ρ：ρ<1 收敛，ρ>1（含 ∞）发散，ρ=1 判别失效要换方法；通项含阶乘、指数幂时首选比值法。",
       "tags": [
-        "比较收敛速度"
+        "后项比前项"
       ],
       "sortOrder": 90,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim aₙ/bₙ=c∈(0,∞) ⇒ Σaₙ与Σbₙ同敛散",
-        "caption": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。"
+        "content": "lim aₙ₊₁/aₙ=ρ：ρ<1 收，ρ>1 发",
+        "caption": "正项级数算 lim aₙ₊₁/aₙ=ρ：ρ<1 收敛，ρ>1（含 ∞）发散，ρ=1 判别失效要换方法；通项含阶乘、指数幂时首选比值法。"
       },
       "keyPoints": [
         {
-          "id": "bi-jiao-dui-xiang-yao-yi-zhi-shou-lian-0dg3j1",
-          "title": "比较对象要已知收敛或发散",
-          "bodyMarkdown": "比较对象要已知收敛或发散"
+          "id": "1-shou-lian-1-fa-san-tong-xiang-bu-qu-0va2x2",
+          "title": "ρ<1 收敛",
+          "bodyMarkdown": "ρ<1 收敛；ρ>1 发散（通项不趋零）"
         },
         {
-          "id": "bi-zhi-gen-zhi-xiao-yu-1-shou-lian-da-1iez1c",
-          "title": "比值/根值小于 1 收敛、大于 1 发散",
-          "bodyMarkdown": "比值/根值小于 1 收敛、大于 1 发散"
+          "id": "1-shi-xiao-ru-p-ji-shu-yong-yuan-de-1",
+          "title": "ρ=1 失效",
+          "bodyMarkdown": "ρ=1 失效：如 p 级数永远得 1"
         },
         {
-          "id": "jiao-cuo-pan-bie-xu-yao-dan-diao-di-1v928n",
-          "title": "交错判别需要单调递减和趋零",
-          "bodyMarkdown": "交错判别需要单调递减和趋零"
+          "id": "han-n-k-you-xian-yong-ta",
+          "title": "含 n!、kⁿ 优先用它",
+          "bodyMarkdown": "含 n!、kⁿ 优先用它"
         }
       ],
       "examples": [
         {
-          "id": "1-n-tiao-jian-shou-lian-0oxgkn",
+          "id": "1-n-bi-zhi-1-n-1-0-1-15atnc",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(−1)ⁿ/n 条件收敛，但 Σ1/n 发散；它说明符号抵消会改变结果。"
+          "bodyMarkdown": "Σ1/n!：比值 =1/(n+1)→0<1，收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。正项用比较、极限比较、比值或根值；交错级数还要检查单调趋零，绝对收敛则先看绝对值级数。\n\n### 解题步骤\n\n1. 判断项的符号结构\n2. 选择比较对象或比值\n3. 写出严格的收敛结论\n\n### 易错点\n\n把“比值等于 1”当作已经判定，等于 1 时通常需要换方法。"
+      "bodyMarkdown": "正项级数算 lim aₙ₊₁/aₙ=ρ：ρ<1 收敛，ρ>1（含 ∞）发散，ρ=1 判别失效要换方法；通项含阶乘、指数幂时首选比值法。\n\n### 解题步骤\n\n1. 写 aₙ₊₁/aₙ\n2. 求极限 ρ\n3. 与 1 比较下结论\n\n### 易错点\n\nρ=1 时硬下结论——必须换比较或根值等其他方法。"
     },
     {
       "schemaVersion": "1.0",
@@ -474,47 +474,47 @@
       "sectionId": "m1-p1-c8-s2",
       "sectionTitle": "正项级数",
       "title": "根值判别法",
-      "summary": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。",
+      "summary": "正项级数算 lim ⁿ√aₙ=ρ：ρ<1 收敛，ρ>1 发散，ρ=1 失效；通项整体带 n 次幂（如 (aₙ)ⁿ 形）时用它最顺手。",
       "tags": [
-        "比较收敛速度"
+        "开 n 次方取极限"
       ],
       "sortOrder": 100,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim aₙ/bₙ=c∈(0,∞) ⇒ Σaₙ与Σbₙ同敛散",
-        "caption": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。"
+        "content": "lim ⁿ√aₙ=ρ：ρ<1 收，ρ>1 发，=1 失效",
+        "caption": "正项级数算 lim ⁿ√aₙ=ρ：ρ<1 收敛，ρ>1 发散，ρ=1 失效；通项整体带 n 次幂（如 (aₙ)ⁿ 形）时用它最顺手。"
       },
       "keyPoints": [
         {
-          "id": "bi-jiao-dui-xiang-yao-yi-zhi-shou-lian-0dg3j1",
-          "title": "比较对象要已知收敛或发散",
-          "bodyMarkdown": "比较对象要已知收敛或发散"
+          "id": "lim-a",
+          "title": "ρ=lim ⁿ√aₙ",
+          "bodyMarkdown": "ρ=lim ⁿ√aₙ"
         },
         {
-          "id": "bi-zhi-gen-zhi-xiao-yu-1-shou-lian-da-1iez1c",
-          "title": "比值/根值小于 1 收敛、大于 1 发散",
-          "bodyMarkdown": "比值/根值小于 1 收敛、大于 1 发散"
+          "id": "pan-fa-yu-bi-zhi-fa-wan-quan-ping-xing",
+          "title": "判法与比值法完全平行",
+          "bodyMarkdown": "判法与比值法完全平行"
         },
         {
-          "id": "jiao-cuo-pan-bie-xu-yao-dan-diao-di-1v928n",
-          "title": "交错判别需要单调递减和趋零",
-          "bodyMarkdown": "交错判别需要单调递减和趋零"
+          "id": "tong-xiang-xing-ru-f-n-shi-shou-xuan",
+          "title": "通项形如 [f(n)]ⁿ 时首选",
+          "bodyMarkdown": "通项形如 [f(n)]ⁿ 时首选"
         }
       ],
       "examples": [
         {
-          "id": "1-n-tiao-jian-shou-lian-0oxgkn",
+          "id": "n-2n-1-a-n-2n-1-1-2-1-1u4jqg",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(−1)ⁿ/n 条件收敛，但 Σ1/n 发散；它说明符号抵消会改变结果。"
+          "bodyMarkdown": "Σ(n/(2n+1))ⁿ：ⁿ√aₙ=n/(2n+1)→1/2<1，收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。正项用比较、极限比较、比值或根值；交错级数还要检查单调趋零，绝对收敛则先看绝对值级数。\n\n### 解题步骤\n\n1. 判断项的符号结构\n2. 选择比较对象或比值\n3. 写出严格的收敛结论\n\n### 易错点\n\n把“比值等于 1”当作已经判定，等于 1 时通常需要换方法。"
+      "bodyMarkdown": "正项级数算 lim ⁿ√aₙ=ρ：ρ<1 收敛，ρ>1 发散，ρ=1 失效；通项整体带 n 次幂（如 (aₙ)ⁿ 形）时用它最顺手。\n\n### 解题步骤\n\n1. 开 n 次方\n2. 求极限 ρ\n3. 与 1 比较\n\n### 易错点\n\n该用根值的题硬用比值——能做但通常更繁琐；两法 ρ=1 都失效。"
     },
     {
       "schemaVersion": "1.0",
@@ -525,47 +525,47 @@
       "sectionId": "m1-p1-c8-s3",
       "sectionTitle": "交错级数",
       "title": "莱布尼茨判别法",
-      "summary": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。",
+      "summary": "交错级数 Σ(−1)ⁿ⁻¹uₙ（uₙ>0）满足 uₙ 单调不增且趋于 0 时必收敛；三条要素里「趋零」是核心，「单调不增」保证部分和摆动幅度越来越小。",
       "tags": [
-        "比较收敛速度"
+        "交错+递减+趋零"
       ],
       "sortOrder": 110,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim aₙ/bₙ=c∈(0,∞) ⇒ Σaₙ与Σbₙ同敛散",
-        "caption": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。"
+        "content": "uₙ↓ 且 uₙ→0 ⇒ Σ(−1)ⁿ⁻¹uₙ 收敛",
+        "caption": "交错级数 Σ(−1)ⁿ⁻¹uₙ（uₙ>0）满足 uₙ 单调不增且趋于 0 时必收敛；三条要素里「趋零」是核心，「单调不增」保证部分和摆动幅度越来越小。"
       },
       "keyPoints": [
         {
-          "id": "bi-jiao-dui-xiang-yao-yi-zhi-shou-lian-0dg3j1",
-          "title": "比较对象要已知收敛或发散",
-          "bodyMarkdown": "比较对象要已知收敛或发散"
+          "id": "tiao-jian-u-dan-diao-bu-zeng-qie-u-0",
+          "title": "条件：uₙ 单调不增 且 uₙ→0",
+          "bodyMarkdown": "条件：uₙ 单调不增 且 uₙ→0"
         },
         {
-          "id": "bi-zhi-gen-zhi-xiao-yu-1-shou-lian-da-1iez1c",
-          "title": "比值/根值小于 1 收敛、大于 1 发散",
-          "bodyMarkdown": "比值/根值小于 1 收敛、大于 1 发散"
+          "id": "jie-lun-jiao-cuo-ji-shu-shou-lian",
+          "title": "结论：交错级数收敛",
+          "bodyMarkdown": "结论：交错级数收敛"
         },
         {
-          "id": "jiao-cuo-pan-bie-xu-yao-dan-diao-di-1v928n",
-          "title": "交错判别需要单调递减和趋零",
-          "bodyMarkdown": "交错判别需要单调递减和趋零"
+          "id": "dan-diao-xing-zhi-yao-qiu-zui-zhong-15eicb",
+          "title": "单调性只要求「最终」成立",
+          "bodyMarkdown": "单调性只要求「最终」成立"
         }
       ],
       "examples": [
         {
-          "id": "1-n-tiao-jian-shou-lian-0oxgkn",
+          "id": "1-n-1-n-dan-diao-jian-1607fv",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(−1)ⁿ/n 条件收敛，但 Σ1/n 发散；它说明符号抵消会改变结果。"
+          "bodyMarkdown": "Σ(−1)ⁿ⁻¹/n：1/n 单调减趋于 0，收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。正项用比较、极限比较、比值或根值；交错级数还要检查单调趋零，绝对收敛则先看绝对值级数。\n\n### 解题步骤\n\n1. 判断项的符号结构\n2. 选择比较对象或比值\n3. 写出严格的收敛结论\n\n### 易错点\n\n把“比值等于 1”当作已经判定，等于 1 时通常需要换方法。"
+      "bodyMarkdown": "交错级数 Σ(−1)ⁿ⁻¹uₙ（uₙ>0）满足 uₙ 单调不增且趋于 0 时必收敛；三条要素里「趋零」是核心，「单调不增」保证部分和摆动幅度越来越小。\n\n### 解题步骤\n\n1. 确认正负交错\n2. 验证单调不增\n3. 验证趋于 0\n\n### 易错点\n\n只验趋零不验单调——两条缺一不可（单调不增可从某项起）。"
     },
     {
       "schemaVersion": "1.0",
@@ -576,47 +576,47 @@
       "sectionId": "m1-p1-c8-s3",
       "sectionTitle": "交错级数",
       "title": "误差估计基本思想",
-      "summary": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。",
+      "summary": "莱布尼茨级数取前 n 项近似和时，误差不超过被舍弃的第一项：|S−Sₙ|≤uₙ₊₁；这正是交错级数「好估计」的原因，也是定精度求项数的依据。",
       "tags": [
-        "比较收敛速度"
+        "下一项封顶"
       ],
       "sortOrder": 120,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim aₙ/bₙ=c∈(0,∞) ⇒ Σaₙ与Σbₙ同敛散",
-        "caption": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。"
+        "content": "|S−Sₙ|≤uₙ₊₁",
+        "caption": "莱布尼茨级数取前 n 项近似和时，误差不超过被舍弃的第一项：|S−Sₙ|≤uₙ₊₁；这正是交错级数「好估计」的原因，也是定精度求项数的依据。"
       },
       "keyPoints": [
         {
-          "id": "bi-jiao-dui-xiang-yao-yi-zhi-shou-lian-0dg3j1",
-          "title": "比较对象要已知收敛或发散",
-          "bodyMarkdown": "比较对象要已知收敛或发散"
+          "id": "r-u-she-qu-xiang-de-shou-xiang",
+          "title": "|rₙ|≤uₙ₊₁（舍去项的首项）",
+          "bodyMarkdown": "|rₙ|≤uₙ₊₁（舍去项的首项）"
         },
         {
-          "id": "bi-zhi-gen-zhi-xiao-yu-1-shou-lian-da-1iez1c",
-          "title": "比值/根值小于 1 收敛、大于 1 发散",
-          "bodyMarkdown": "比值/根值小于 1 收敛、大于 1 发散"
+          "id": "you-jing-du-fan-jie-xu-yao-de-xiang-shu-1s2ni0",
+          "title": "由精度反解需要的项数 n",
+          "bodyMarkdown": "由精度反解需要的项数 n"
         },
         {
-          "id": "jiao-cuo-pan-bie-xu-yao-dan-diao-di-1v928n",
-          "title": "交错判别需要单调递减和趋零",
-          "bodyMarkdown": "交错判别需要单调递减和趋零"
+          "id": "zhi-dui-lai-bu-ni-ci-xing-ji-shu-cheng-18zrcp",
+          "title": "只对莱布尼茨型级数成立",
+          "bodyMarkdown": "只对莱布尼茨型级数成立"
         }
       ],
       "examples": [
         {
-          "id": "1-n-tiao-jian-shou-lian-0oxgkn",
+          "id": "1-n-qu-n-10-wu-cha-1-11-1p1tjz",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(−1)ⁿ/n 条件收敛，但 Σ1/n 发散；它说明符号抵消会改变结果。"
+          "bodyMarkdown": "Σ(−1)ⁿ⁻¹/n 取 n=10：误差 ≤1/11<0.1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。正项用比较、极限比较、比值或根值；交错级数还要检查单调趋零，绝对收敛则先看绝对值级数。\n\n### 解题步骤\n\n1. 判断项的符号结构\n2. 选择比较对象或比值\n3. 写出严格的收敛结论\n\n### 易错点\n\n把“比值等于 1”当作已经判定，等于 1 时通常需要换方法。"
+      "bodyMarkdown": "莱布尼茨级数取前 n 项近似和时，误差不超过被舍弃的第一项：|S−Sₙ|≤uₙ₊₁；这正是交错级数「好估计」的原因，也是定精度求项数的依据。\n\n### 解题步骤\n\n1. 写误差 |S−Sₙ|\n2. 放缩到 uₙ₊₁\n3. 按精度解 n\n\n### 易错点\n\n对任意级数套 uₙ₊₁ 估计——该结论依赖交错递减结构。"
     },
     {
       "schemaVersion": "1.0",
@@ -627,47 +627,47 @@
       "sectionId": "m1-p1-c8-s4",
       "sectionTitle": "任意项级数",
       "title": "绝对收敛",
-      "summary": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。",
+      "summary": "若 Σ|uₙ| 收敛，则称 Σuₙ 绝对收敛；绝对收敛是更强的收敛——它同时说明「正项化后也收敛」，正项级数的全部判别法因此都能用上。",
       "tags": [
-        "比较收敛速度"
+        "加绝对值仍收敛"
       ],
       "sortOrder": 130,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim aₙ/bₙ=c∈(0,∞) ⇒ Σaₙ与Σbₙ同敛散",
-        "caption": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。"
+        "content": "Σ|uₙ| 收敛 ⇒ Σuₙ 绝对收敛",
+        "caption": "若 Σ|uₙ| 收敛，则称 Σuₙ 绝对收敛；绝对收敛是更强的收敛——它同时说明「正项化后也收敛」，正项级数的全部判别法因此都能用上。"
       },
       "keyPoints": [
         {
-          "id": "bi-jiao-dui-xiang-yao-yi-zhi-shou-lian-0dg3j1",
-          "title": "比较对象要已知收敛或发散",
-          "bodyMarkdown": "比较对象要已知收敛或发散"
+          "id": "u-shou-lian-jue-dui-shou-lian",
+          "title": "Σ|uₙ| 收敛 ⇒ 绝对收敛",
+          "bodyMarkdown": "Σ|uₙ| 收敛 ⇒ 绝对收敛"
         },
         {
-          "id": "bi-zhi-gen-zhi-xiao-yu-1-shou-lian-da-1iez1c",
-          "title": "比值/根值小于 1 收敛、大于 1 发散",
-          "bodyMarkdown": "比值/根值小于 1 收敛、大于 1 发散"
+          "id": "jue-dui-shou-lian-bi-shou-lian-yun-han-1yp7cd",
+          "title": "绝对收敛必收敛（蕴含定理）",
+          "bodyMarkdown": "绝对收敛必收敛（蕴含定理）"
         },
         {
-          "id": "jiao-cuo-pan-bie-xu-yao-dan-diao-di-1v928n",
-          "title": "交错判别需要单调递减和趋零",
-          "bodyMarkdown": "交错判别需要单调递减和趋零"
+          "id": "pan-jue-dui-shou-lian-dui-u-yong-zheng-0r5foq",
+          "title": "判绝对收敛",
+          "bodyMarkdown": "判绝对收敛：对 |uₙ| 用正项级数方法"
         }
       ],
       "examples": [
         {
-          "id": "1-n-tiao-jian-shou-lian-0oxgkn",
+          "id": "1-n-1-n-shou-lian-gu-1amryv",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(−1)ⁿ/n 条件收敛，但 Σ1/n 发散；它说明符号抵消会改变结果。"
+          "bodyMarkdown": "Σ(−1)ⁿ/n²：Σ1/n² 收敛，故绝对收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。正项用比较、极限比较、比值或根值；交错级数还要检查单调趋零，绝对收敛则先看绝对值级数。\n\n### 解题步骤\n\n1. 判断项的符号结构\n2. 选择比较对象或比值\n3. 写出严格的收敛结论\n\n### 易错点\n\n把“比值等于 1”当作已经判定，等于 1 时通常需要换方法。"
+      "bodyMarkdown": "若 Σ|uₙ| 收敛，则称 Σuₙ 绝对收敛；绝对收敛是更强的收敛——它同时说明「正项化后也收敛」，正项级数的全部判别法因此都能用上。\n\n### 解题步骤\n\n1. 取绝对值得正项级数\n2. 用比值/比较判别\n3. 收敛则下「绝对收敛」\n\n### 易错点\n\n把「原级数收敛」就当绝对收敛——还要看绝对值级数是否收敛。"
     },
     {
       "schemaVersion": "1.0",
@@ -678,47 +678,47 @@
       "sectionId": "m1-p1-c8-s4",
       "sectionTitle": "任意项级数",
       "title": "条件收敛",
-      "summary": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。",
+      "summary": "Σuₙ 收敛而 Σ|uₙ| 发散，称为条件收敛；典型代表是 Σ(−1)ⁿ⁻¹/n——莱布尼茨保证收敛，调和级数说明不绝对，它的和依赖项的排列顺序。",
       "tags": [
-        "比较收敛速度"
+        "收敛但不绝对"
       ],
       "sortOrder": 140,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim aₙ/bₙ=c∈(0,∞) ⇒ Σaₙ与Σbₙ同敛散",
-        "caption": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。"
+        "content": "Σuₙ 收敛 且 Σ|uₙ| 发散 ⇔ 条件收敛",
+        "caption": "Σuₙ 收敛而 Σ|uₙ| 发散，称为条件收敛；典型代表是 Σ(−1)ⁿ⁻¹/n——莱布尼茨保证收敛，调和级数说明不绝对，它的和依赖项的排列顺序。"
       },
       "keyPoints": [
         {
-          "id": "bi-jiao-dui-xiang-yao-yi-zhi-shou-lian-0dg3j1",
-          "title": "比较对象要已知收敛或发散",
-          "bodyMarkdown": "比较对象要已知收敛或发散"
+          "id": "tiao-jian-shou-lian-shou-lian-bu-jue-0i4tev",
+          "title": "条件收敛 = 收敛 + 不绝对收敛",
+          "bodyMarkdown": "条件收敛 = 收敛 + 不绝对收敛"
         },
         {
-          "id": "bi-zhi-gen-zhi-xiao-yu-1-shou-lian-da-1iez1c",
-          "title": "比值/根值小于 1 收敛、大于 1 发散",
-          "bodyMarkdown": "比值/根值小于 1 收敛、大于 1 发散"
+          "id": "dian-xing-1-n",
+          "title": "典型：Σ(−1)ⁿ⁻¹/n",
+          "bodyMarkdown": "典型：Σ(−1)ⁿ⁻¹/n"
         },
         {
-          "id": "jiao-cuo-pan-bie-xu-yao-dan-diao-di-1v928n",
-          "title": "交错判别需要单调递减和趋零",
-          "bodyMarkdown": "交错判别需要单调递减和趋零"
+          "id": "tiao-jian-shou-lian-ji-shu-zhong-pai-ke-16f6b8",
+          "title": "条件收敛级数重排可改变和",
+          "bodyMarkdown": "条件收敛级数重排可改变和"
         }
       ],
       "examples": [
         {
-          "id": "1-n-tiao-jian-shou-lian-0oxgkn",
+          "id": "1-n-tiao-jian-shou-lian-1osplp",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(−1)ⁿ/n 条件收敛，但 Σ1/n 发散；它说明符号抵消会改变结果。"
+          "bodyMarkdown": "Σ(−1)ⁿ⁻¹/n 条件收敛；Σ(−1)ⁿ⁻¹/n² 绝对收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。正项用比较、极限比较、比值或根值；交错级数还要检查单调趋零，绝对收敛则先看绝对值级数。\n\n### 解题步骤\n\n1. 判断项的符号结构\n2. 选择比较对象或比值\n3. 写出严格的收敛结论\n\n### 易错点\n\n把“比值等于 1”当作已经判定，等于 1 时通常需要换方法。"
+      "bodyMarkdown": "Σuₙ 收敛而 Σ|uₙ| 发散，称为条件收敛；典型代表是 Σ(−1)ⁿ⁻¹/n——莱布尼茨保证收敛，调和级数说明不绝对，它的和依赖项的排列顺序。\n\n### 解题步骤\n\n1. 先证原级数收敛\n2. 再证绝对值级数发散\n3. 两者合起来下结论\n\n### 易错点\n\n跳过「绝对值级数发散」的验证——不绝对收敛必须落实，不能默认。"
     },
     {
       "schemaVersion": "1.0",
@@ -729,47 +729,47 @@
       "sectionId": "m1-p1-c8-s4",
       "sectionTitle": "任意项级数",
       "title": "绝对收敛蕴含收敛",
-      "summary": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。",
+      "summary": "定理：若 Σ|uₙ| 收敛，则 Σuₙ 必收敛；思路来自 |uₙ|=uₙ⁺+uₙ⁻（正部加负部取正号），两个正项级数都收敛即可推得。",
       "tags": [
-        "比较收敛速度"
+        "强收敛带弱收敛"
       ],
       "sortOrder": 150,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim aₙ/bₙ=c∈(0,∞) ⇒ Σaₙ与Σbₙ同敛散",
-        "caption": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。"
+        "content": "绝对收敛 ⇒ 收敛（反之不然）",
+        "caption": "定理：若 Σ|uₙ| 收敛，则 Σuₙ 必收敛；思路来自 |uₙ|=uₙ⁺+uₙ⁻（正部加负部取正号），两个正项级数都收敛即可推得。"
       },
       "keyPoints": [
         {
-          "id": "bi-jiao-dui-xiang-yao-yi-zhi-shou-lian-0dg3j1",
-          "title": "比较对象要已知收敛或发散",
-          "bodyMarkdown": "比较对象要已知收敛或发散"
+          "id": "u-shou-lian-u-shou-lian",
+          "title": "Σ|uₙ| 收敛 ⇒ Σuₙ 收敛",
+          "bodyMarkdown": "Σ|uₙ| 收敛 ⇒ Σuₙ 收敛"
         },
         {
-          "id": "bi-zhi-gen-zhi-xiao-yu-1-shou-lian-da-1iez1c",
-          "title": "比值/根值小于 1 收敛、大于 1 发散",
-          "bodyMarkdown": "比值/根值小于 1 收敛、大于 1 发散"
+          "id": "fan-xiang-bu-cheng-li-tiao-jian-shou-1ipclz",
+          "title": "反向不成立（条件收敛存在）",
+          "bodyMarkdown": "反向不成立（条件收敛存在）"
         },
         {
-          "id": "jiao-cuo-pan-bie-xu-yao-dan-diao-di-1v928n",
-          "title": "交错判别需要单调递减和趋零",
-          "bodyMarkdown": "交错判别需要单调递减和趋零"
+          "id": "ren-yi-xiang-ji-shu-di-yi-bu-xian-pan-076fbj",
+          "title": "任意项级数第一步先判绝对",
+          "bodyMarkdown": "任意项级数第一步先判绝对"
         }
       ],
       "examples": [
         {
-          "id": "1-n-tiao-jian-shou-lian-0oxgkn",
+          "id": "sin-n-n-sin-n-n-1-n-10zkop",
           "title": "讲解例子",
-          "bodyMarkdown": "Σ(−1)ⁿ/n 条件收敛，但 Σ1/n 发散；它说明符号抵消会改变结果。"
+          "bodyMarkdown": "Σsin(n)/n²：|sin n|/n²≤1/n² 收敛，绝对收敛故收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "级数判别法是在不直接求和的情况下，比较它与已知级数的衰减速度。正项用比较、极限比较、比值或根值；交错级数还要检查单调趋零，绝对收敛则先看绝对值级数。\n\n### 解题步骤\n\n1. 判断项的符号结构\n2. 选择比较对象或比值\n3. 写出严格的收敛结论\n\n### 易错点\n\n把“比值等于 1”当作已经判定，等于 1 时通常需要换方法。"
+      "bodyMarkdown": "定理：若 Σ|uₙ| 收敛，则 Σuₙ 必收敛；思路来自 |uₙ|=uₙ⁺+uₙ⁻（正部加负部取正号），两个正项级数都收敛即可推得。它是「先判绝对、再看条件」策略的依据。\n\n### 解题步骤\n\n1. 对 Σ|uₙ| 用正项判别法\n2. 绝对收敛则原级数收敛\n3. 发散再看是否条件收敛\n\n### 易错点\n\n以为收敛可以推出绝对收敛——条件收敛就是活生生的反例。"
     },
     {
       "schemaVersion": "1.0",
@@ -780,47 +780,47 @@
       "sectionId": "m1-p1-c8-s5",
       "sectionTitle": "幂级数",
       "title": "收敛半径",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "幂级数 Σaₙxⁿ 的系数满足 lim|aₙ₊₁/aₙ|=ρ 时，收敛半径 R=1/ρ（ρ=0 时 R=+∞，ρ=∞ 时 R=0）；|x|<R 内绝对收敛，|x|>R 内发散。",
       "tags": [
-        "围绕中心展开"
+        "ρ 的倒数"
       ],
       "sortOrder": 160,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "R=1/ρ",
+        "caption": "幂级数 Σaₙxⁿ 的系数满足 lim|aₙ₊₁/aₙ|=ρ 时，收敛半径 R=1/ρ（ρ=0 时 R=+∞"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "r-1-lim-a-a",
+          "title": "R=1/ρ",
+          "bodyMarkdown": "R=1/ρ，ρ=lim|aₙ₊₁/aₙ|"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "0-r-chu-chu-shou-lian",
+          "title": "ρ=0 ⇒ R=∞（处处收敛）",
+          "bodyMarkdown": "ρ=0 ⇒ R=∞（处处收敛）"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "r-0-zhi-zai-x-0-shou-lian",
+          "title": "ρ=∞ ⇒ R=0（只在 x=0 收敛）",
+          "bodyMarkdown": "ρ=∞ ⇒ R=0（只在 x=0 收敛）"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "x-n-lim-1-n-1-0-r-chu-0an8g8",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "Σxⁿ/n!：ρ=lim 1/(n+1)=0，R=∞，处处收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "幂级数 Σaₙxⁿ 的系数满足 lim|aₙ₊₁/aₙ|=ρ 时，收敛半径 R=1/ρ（ρ=0 时 R=+∞，ρ=∞ 时 R=0）；|x|<R 内绝对收敛，|x|>R 内发散。\n\n### 解题步骤\n\n1. 算系数比的极限 ρ\n2. 取倒数得 R\n3. 按 |x| 与 R 比较定性\n\n### 易错点\n\nρ=1 时误写 R=1 的「结论」而不验证端点——半径之外端点另判。"
     },
     {
       "schemaVersion": "1.0",
@@ -831,47 +831,47 @@
       "sectionId": "m1-p1-c8-s5",
       "sectionTitle": "幂级数",
       "title": "收敛区间",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "幂级数的收敛区间指 (−R, R)：区间内绝对收敛，区间外发散；「收敛域」则还要把端点 x=±R 的收敛情况并入——区间是开的，域可能闭。",
       "tags": [
-        "围绕中心展开"
+        "开区间 (−R, R)"
       ],
       "sortOrder": 170,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "收敛区间 (−R, R)",
+        "caption": "幂级数的收敛区间指 (−R, R)：区间内绝对收敛，区间外发散；「收敛域」则还要把端点 x=±R 的收敛情况并入——区间是开的，域可能闭。"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "shou-lian-qu-jian-r-r-bu-han-duan-dian",
+          "title": "收敛区间 = (−R",
+          "bodyMarkdown": "收敛区间 = (−R, R)，不含端点"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "shou-lian-yu-qu-jian-pan-ding-de-duan-0ea6xg",
+          "title": "收敛域 = 区间 + 判定的端点",
+          "bodyMarkdown": "收敛域 = 区间 + 判定的端点"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "ti-mu-wen-yu-bi-xu-yan-duan-dian",
+          "title": "题目问「域」必须验端点",
+          "bodyMarkdown": "题目问「域」必须验端点"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "x-n-r-1-qu-jian-1-1-046upp",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "Σxⁿ/n：R=1，区间 (−1,1)；端点 x=−1 收敛、x=1 发散，域为 [−1,1)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "幂级数的收敛区间指 (−R, R)：区间内绝对收敛，区间外发散；「收敛域」则还要把端点 x=±R 的收敛情况并入——区间是开的，域可能闭。\n\n### 解题步骤\n\n1. 求 R\n2. 写开区间\n3. 验端点后写收敛域\n\n### 易错点\n\n把收敛区间当收敛域——端点收不收是另一道判别题。"
     },
     {
       "schemaVersion": "1.0",
@@ -882,47 +882,47 @@
       "sectionId": "m1-p1-c8-s5",
       "sectionTitle": "幂级数",
       "title": "端点单独判断",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "x=±R 处幂级数退化为数项级数，收敛性要单独判别（常交错判别、p 级数比较）；同一级数两个端点可以一收一发，收敛域因此有开有闭。",
       "tags": [
-        "围绕中心展开"
+        "半径管不到端点"
       ],
       "sortOrder": 180,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "x=±R：逐点代入判别",
+        "caption": "x=±R 处幂级数退化为数项级数，收敛性要单独判别（常交错判别、p 级数比较）；同一级数两个端点可以一收一发，收敛域因此有开有闭。"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "duan-dian-shi-shu-xiang-ji-shu-wen-ti",
+          "title": "端点是数项级数问题",
+          "bodyMarkdown": "端点是数项级数问题"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "x-r-yu-x-r-fen-bie-pan",
+          "title": "x=R 与 x=−R 分别判",
+          "bodyMarkdown": "x=R 与 x=−R 分别判"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "duan-dian-shou-lian-shi-yu-xie-bi-duan",
+          "title": "端点收敛时域写闭端",
+          "bodyMarkdown": "端点收敛时域写闭端"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "x-n-zai-1-dou-shi-1-n-1gmbxd",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "Σxⁿ/n² 在 ±1 都是 Σ(±1)ⁿ/n²，绝对收敛，域 [−1,1]。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "x=±R 处幂级数退化为数项级数，收敛性要单独判别（常交错判别、p 级数比较）；同一级数两个端点可以一收一发，收敛域因此有开有闭。\n\n### 解题步骤\n\n1. 代 x=R 成数项级数\n2. 选判别法下结论\n3. 同法验 x=−R\n\n### 易错点\n\n端点判别偷懒跳过——收敛域端点的开闭是最常见的扣分点。"
     },
     {
       "schemaVersion": "1.0",
@@ -933,47 +933,47 @@
       "sectionId": "m1-p1-c8-s5",
       "sectionTitle": "幂级数",
       "title": "和函数",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "幂级数在收敛域内逐点求和得到函数 S(x)=Σaₙxⁿ，叫和函数；求和函数就是把级数往几何级数或已知展开式上凑，定义域恰是收敛域。",
       "tags": [
-        "围绕中心展开"
+        "级数的「总和」函数"
       ],
       "sortOrder": 190,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "S(x)=Σaₙxⁿ，x∈收敛域",
+        "caption": "幂级数在收敛域内逐点求和得到函数 S(x)=Σaₙxⁿ，叫和函数；求和函数就是把级数往几何级数或已知展开式上凑，定义域恰是收敛域。"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "s-x-lim-s-x-ding-yi-yu-shou-lian-yu",
+          "title": "S(x)=limₙ Sₙ(x)",
+          "bodyMarkdown": "S(x)=limₙ Sₙ(x)，定义域=收敛域"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "qiu-fa-zhu-xiang-qiu-dao-ji-fen-hua-0b2fe3",
+          "title": "求法：逐项求导/积分化成几何级数",
+          "bodyMarkdown": "求法：逐项求导/积分化成几何级数"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "s-yu-s-dou-zai-qu-jian-nei-zhu-xiang-0degtt",
+          "title": "S′ 与 ∫S 都在区间内逐项进行",
+          "bodyMarkdown": "S′ 与 ∫S 都在区间内逐项进行"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "n-x-shi-x-zhu-xiang-qiu-0w65in",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "Σn xⁿ⁻¹ 是 Σxⁿ 逐项求导的结果，和函数 S(x)=1/(1−x)²（|x|<1）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "幂级数在收敛域内逐点求和得到函数 S(x)=Σaₙxⁿ，叫和函数；求和函数就是把级数往几何级数或已知展开式上凑，定义域恰是收敛域。\n\n### 解题步骤\n\n1. 求收敛域\n2. 凑成已知和的形状\n3. 写和函数并限定定义域\n\n### 易错点\n\n和函数忘了写定义域——离开收敛域等式没有意义。"
     },
     {
       "schemaVersion": "1.0",
@@ -984,47 +984,47 @@
       "sectionId": "m1-p1-c8-s5",
       "sectionTitle": "幂级数",
       "title": "逐项求导",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "幂级数在收敛区间内可逐项求导：S′(x)=Σn aₙxⁿ⁻¹，收敛半径不变；端点的收敛性可能改变（范围可能缩小），所以逐项操作后要重验端点。",
       "tags": [
-        "围绕中心展开"
+        "收敛区间内随便求"
       ],
       "sortOrder": 200,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "S′(x)=Σₙ₌₁^∞ n aₙxⁿ⁻¹",
+        "caption": "幂级数在收敛区间内可逐项求导：S′(x)=Σn aₙxⁿ⁻¹，收敛半径不变；端点的收敛性可能改变（范围可能缩小），所以逐项操作后要重验端点。"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "qu-jian-nei-s-n-a-x",
+          "title": "区间内：S′=Σn aₙxⁿ⁻¹",
+          "bodyMarkdown": "区间内：S′=Σn aₙxⁿ⁻¹"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "qiu-dao-bu-gai-bian-shou-lian-ban-jing-r",
+          "title": "求导不改变收敛半径 R",
+          "bodyMarkdown": "求导不改变收敛半径 R"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "duan-dian-shou-lian-xing-yao-chong-xin-1fucew",
+          "title": "端点收敛性要重新判断",
+          "bodyMarkdown": "端点收敛性要重新判断"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "x-1-1-x-qiu-dao-n-x-1-1-0804fq",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "Σxⁿ=1/(1−x) 求导：Σn xⁿ⁻¹=1/(1−x)²，半径仍 1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "幂级数在收敛区间内可逐项求导：S′(x)=Σn aₙxⁿ⁻¹，收敛半径不变；端点的收敛性可能改变（范围可能缩小），所以逐项操作后要重验端点。\n\n### 解题步骤\n\n1. 确认在区间内部\n2. 逐项求导\n3. 重新求收敛域\n\n### 易错点\n\n在端点上直接逐项求导——结论只在区间内部成立。"
     },
     {
       "schemaVersion": "1.0",
@@ -1035,47 +1035,47 @@
       "sectionId": "m1-p1-c8-s5",
       "sectionTitle": "幂级数",
       "title": "逐项积分",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "幂级数在收敛区间内可逐项积分：∫₀ˣS(t)dt=Σ aₙxⁿ⁺¹/(n+1)，收敛半径不变；积分只会让通项变小，端点反而可能由发散变收敛。",
       "tags": [
-        "围绕中心展开"
+        "0 到 x 逐项积"
       ],
       "sortOrder": 210,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "∫₀ˣ S(t)dt=Σ aₙxⁿ⁺¹/(n+1)",
+        "caption": "幂级数在收敛区间内可逐项积分：∫₀ˣS(t)dt=Σ aₙxⁿ⁺¹/(n+1)，收敛半径不变；积分只会让通项变小，端点反而可能由发散变收敛。"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "s-a-x-n-1",
+          "title": "∫₀ˣS=Σ aₙxⁿ⁺¹/(n+1)",
+          "bodyMarkdown": "∫₀ˣS=Σ aₙxⁿ⁺¹/(n+1)"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "ji-fen-bu-gai-bian-shou-lian-ban-jing",
+          "title": "积分不改变收敛半径",
+          "bodyMarkdown": "积分不改变收敛半径"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "duan-dian-ke-neng-bian-de-geng-hao-fa-16vogb",
+          "title": "端点可能变得更好（发散→收敛）",
+          "bodyMarkdown": "端点可能变得更好（发散→收敛）"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "x-ji-fen-x-n-1-ln-1-x-x-03zx0m",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "Σxⁿ 积分：Σxⁿ⁺¹/(n+1)=−ln(1−x)（|x|<1，x=−1 也成立）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "幂级数在收敛区间内可逐项积分：∫₀ˣS(t)dt=Σ aₙxⁿ⁺¹/(n+1)，收敛半径不变；积分只会让通项变小，端点反而可能由发散变收敛。\n\n### 解题步骤\n\n1. 区间内逐项积分\n2. 系数除以新幂次\n3. 重验端点\n\n### 易错点\n\n逐项积分后忘加常数——不定积分形式要补 C（定限形式不用）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1086,47 +1086,47 @@
       "sectionId": "m1-p1-c8-s6",
       "sectionTitle": "函数展开成幂级数",
       "title": "1/(1-x)",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "1/(1−x)=Σₙ₌₀^∞ xⁿ（|x|<1）是最基本的函数展开：它就是首项 1、公比 x 的几何级数；其余多数和函数问题最终都往这个形式上凑。",
       "tags": [
-        "围绕中心展开"
+        "一切幂级数求和的原型"
       ],
       "sortOrder": 220,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "1/(1−x)=Σₙ₌₀^∞ xⁿ（|x|<1）",
+        "caption": "1/(1−x)=Σₙ₌₀^∞ xⁿ（|x|<1）是最基本的函数展开：它就是首项 1、公比 x 的几何级数；其余多数和函数问题最终都往这个形式上凑。"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "1-1-x-1-x-x-x-1",
+          "title": "1/(1−x)=1+x+x²+…（|x|<1）",
+          "bodyMarkdown": "1/(1−x)=1+x+x²+…（|x|<1）"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "shou-lian-ban-jing-r-1-duan-dian-x-1-0cqxhg",
+          "title": "收敛半径 R=1",
+          "bodyMarkdown": "收敛半径 R=1，端点 x=±1 都发散"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "zhu-xiang-qiu-dao-ji-fen-ke-sheng-cheng-0gd718",
+          "title": "逐项求导/积分可生成新和函数",
+          "bodyMarkdown": "逐项求导/积分可生成新和函数"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "x-1-2-shi-1-2-1-1-1-2-2",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "x=1/2 时 Σ(1/2)ⁿ=1/(1−1/2)=2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "1/(1−x)=Σₙ₌₀^∞ xⁿ（|x|<1）是最基本的函数展开：它就是首项 1、公比 x 的几何级数；其余多数和函数问题最终都往这个形式上凑。\n\n### 解题步骤\n\n1. 认出几何级数结构\n2. 确认 |x|<1\n3. 按需变形（换元/求导/积分）\n\n### 易错点\n\n把收敛域写成 [−1,1) 或全体实数——两端 x=±1 通项不趋零，都发散。"
     },
     {
       "schemaVersion": "1.0",
@@ -1137,47 +1137,47 @@
       "sectionId": "m1-p1-c8-s6",
       "sectionTitle": "函数展开成幂级数",
       "title": "e^x",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "eˣ=Σₙ₌₀^∞ xⁿ/n!，收敛域为全体实数 R；与泰勒公式不同，这里是无穷级数等式——对一切 x 都成立，系数正是 1/n!",
       "tags": [
-        "围绕中心展开"
+        "幂级数视角的 eˣ"
       ],
       "sortOrder": 230,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "eˣ=Σₙ₌₀^∞ xⁿ/n!",
+        "caption": "eˣ=Σₙ₌₀^∞ xⁿ/n!"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "e-x-n-x",
+          "title": "eˣ=Σ xⁿ/n!（−∞<x<∞）",
+          "bodyMarkdown": "eˣ=Σ xⁿ/n!（−∞<x<∞）"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "shou-lian-ban-jing-r-bi-zhi-fa-de-0",
+          "title": "收敛半径 R=∞（比值法得 0）",
+          "bodyMarkdown": "收敛半径 R=∞（比值法得 0）"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "dai-x-1-de-e-1-n-shu-e-de-ji-shu-ding-yi",
+          "title": "代 x=1 得 e=Σ1/n!（数 e 的级数定",
+          "bodyMarkdown": "代 x=1 得 e=Σ1/n!（数 e 的级数定义）"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "e-x-1-x-n-dui-yi-qie-x-0h6abt",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "e^{−x}=Σ(−1)ⁿxⁿ/n! 对一切 x 成立。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "eˣ=Σₙ₌₀^∞ xⁿ/n!，收敛域为全体实数 R；与泰勒公式不同，这里是无穷级数等式——对一切 x 都成立，系数正是 1/n!。\n\n### 解题步骤\n\n1. 背出系数 1/n!\n2. 由比值法验 R=∞\n3. 按需代值或变形\n\n### 易错点\n\n记成只有 |x|<1 才成立——eˣ 的展开处处收敛。"
     },
     {
       "schemaVersion": "1.0",
@@ -1188,47 +1188,47 @@
       "sectionId": "m1-p1-c8-s6",
       "sectionTitle": "函数展开成幂级数",
       "title": "sin x",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "sin x=Σₙ₌₀^∞ (−1)ⁿ x^{2n+1}/(2n+1)!",
       "tags": [
-        "围绕中心展开"
+        "奇次幂交错"
       ],
       "sortOrder": 240,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "sin x=x−x³/3!+x⁵/5!−…",
+        "caption": "sin x=Σₙ₌₀^∞ (−1)ⁿ x^{2n+1}/(2n+1)!"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "sin-x-1-x-2n-1-2n-1",
+          "title": "sin x=Σ(−1)ⁿx^{2n+1}/(2n",
+          "bodyMarkdown": "sin x=Σ(−1)ⁿx^{2n+1}/(2n+1)!"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "r-qi-ci-mi",
+          "title": "R=∞，奇次幂",
+          "bodyMarkdown": "R=∞，奇次幂"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "zhu-xiang-qiu-dao-de-cos-x-de-zhan-kai",
+          "title": "逐项求导得 cos x 的展开",
+          "bodyMarkdown": "逐项求导得 cos x 的展开"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "sin-x-de-qian-san-xiang-1ju4n1",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "sin x 的前三项：x−x³/6+x⁵/120。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "sin x=Σₙ₌₀^∞ (−1)ⁿ x^{2n+1}/(2n+1)!，只有奇次幂、系数交错，对一切 x 收敛；它是「由 cos 逐项积分/求导」互相推的搭档。\n\n### 解题步骤\n\n1. 写出通项 (−1)ⁿ x^{2n+1}/(2n+1)!\n2. 确认 R=∞\n3. 变形时保持奇次幂结构\n\n### 易错点\n\n指数与阶乘不同步（写成 x^{2n}/(2n+1)!）——2n+1 对 2n+1 才对。"
     },
     {
       "schemaVersion": "1.0",
@@ -1239,47 +1239,47 @@
       "sectionId": "m1-p1-c8-s6",
       "sectionTitle": "函数展开成幂级数",
       "title": "cos x",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "cos x=Σₙ₌₀^∞ (−1)ⁿ x^{2n}/(2n)!",
       "tags": [
-        "围绕中心展开"
+        "偶次幂交错"
       ],
       "sortOrder": 250,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "cos x=1−x²/2!+x⁴/4!−…",
+        "caption": "cos x=Σₙ₌₀^∞ (−1)ⁿ x^{2n}/(2n)!"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "cos-x-1-x-2n-2n",
+          "title": "cos x=Σ(−1)ⁿx^{2n}/(2n)!",
+          "bodyMarkdown": "cos x=Σ(−1)ⁿx^{2n}/(2n)!"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "r-ou-ci-mi",
+          "title": "R=∞，偶次幂",
+          "bodyMarkdown": "R=∞，偶次幂"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "zhu-xiang-qiu-dao-de-sin-x",
+          "title": "逐项求导得 −sin x",
+          "bodyMarkdown": "逐项求导得 −sin x"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "lim-x-0-1-cos-x-x-yong-1sc7al",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "lim_{x→0}(1−cos x)/x² 用展开：1−cos x∼x²/2，极限 1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "cos x=Σₙ₌₀^∞ (−1)ⁿ x^{2n}/(2n)!，只有偶次幂、系数交错，对一切 x 收敛；与 sin x 互为逐项求导关系，常用来算特殊极限与级数和。\n\n### 解题步骤\n\n1. 写出通项 (−1)ⁿx^{2n}/(2n)!\n2. 确认 R=∞\n3. 需要奇函数时换 sin 展开\n\n### 易错点\n\n把 cos 展开与 sin 混写（偶次幂配奇阶乘）——必须 2n 对 2n。"
     },
     {
       "schemaVersion": "1.0",
@@ -1290,47 +1290,47 @@
       "sectionId": "m1-p1-c8-s6",
       "sectionTitle": "函数展开成幂级数",
       "title": "ln(1+x)",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "ln(1+x)=Σₙ₌₁^∞ (−1)ⁿ⁻¹xⁿ/n，由 1/(1+t) 的几何级数逐项积分而来；收敛域是半开区间 −1<x≤1——端点 x=1 收敛（交错调和级数）是考点。",
       "tags": [
-        "围绕中心展开"
+        "收敛域有端点讲究"
       ],
       "sortOrder": 260,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "ln(1+x)=x−x²/2+x³/3−…（−1<x≤1）",
+        "caption": "ln(1+x)=Σₙ₌₁^∞ (−1)ⁿ⁻¹xⁿ/n，由 1/(1+t) 的几何级数逐项积分而来；"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "ln-1-x-1-x-n",
+          "title": "ln(1+x)=Σ(−1)ⁿ⁻¹xⁿ/n",
+          "bodyMarkdown": "ln(1+x)=Σ(−1)ⁿ⁻¹xⁿ/n"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "shou-lian-yu-1-1",
+          "title": "收敛域 (−1",
+          "bodyMarkdown": "收敛域 (−1,1]"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "dai-x-1-de-ln2-1-n",
+          "title": "代 x=1 得 ln2=Σ(−1)ⁿ⁻¹/n",
+          "bodyMarkdown": "代 x=1 得 ln2=Σ(−1)ⁿ⁻¹/n"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "ln2-de-ji-shu-1-1-2-1-3-0rxcn3",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "ln2 的级数：1−1/2+1/3−1/4+…。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "ln(1+x)=Σₙ₌₁^∞ (−1)ⁿ⁻¹xⁿ/n，由 1/(1+t) 的几何级数逐项积分而来；收敛域是半开区间 −1<x≤1——端点 x=1 收敛（交错调和级数）是考点。\n\n### 解题步骤\n\n1. 从 1/(1+t) 出发\n2. 逐项积分并代 t∈[0,x]\n3. 单独判定端点 x=±1\n\n### 易错点\n\n把收敛域写成 (−1,1)——x=1 处交错调和级数收敛，域含 1。"
     },
     {
       "schemaVersion": "1.0",
@@ -1341,47 +1341,47 @@
       "sectionId": "m1-p1-c8-s6",
       "sectionTitle": "函数展开成幂级数",
       "title": "(1+x)^α",
-      "summary": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。",
+      "summary": "(1+x)^α=1+Σₙ₌₁^∞ α(α−1)…(α−n+1)/n!",
       "tags": [
-        "围绕中心展开"
+        "二项级数"
       ],
       "sortOrder": 270,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "R=1/limsup |aₙ|^(1/n)",
-        "caption": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。"
+        "content": "(1+x)^α=1+αx+α(α−1)x²/2!+…（|x|<1）",
+        "caption": "(1+x)^α=1+Σₙ₌₁^∞ α(α−1)…(α−n+1)/n!"
       },
       "keyPoints": [
         {
-          "id": "xian-yong-bi-zhi-gen-zhi-qiu-ban-jing",
-          "title": "先用比值/根值求半径",
-          "bodyMarkdown": "先用比值/根值求半径"
+          "id": "xi-shu-shi-jiang-jie-cheng-chu-n",
+          "title": "系数是「降阶乘」除 n!",
+          "bodyMarkdown": "系数是「降阶乘」除 n!"
         },
         {
-          "id": "liang-ge-duan-dian-bu-neng-you-ban-jing-1fzqsl",
-          "title": "两个端点不能由半径直接决定",
-          "bodyMarkdown": "两个端点不能由半径直接决定"
+          "id": "r-1-chu-fei-wei-fei-fu-zheng-shu",
+          "title": "R=1（除非 α 为非负整数）",
+          "bodyMarkdown": "R=1（除非 α 为非负整数）"
         },
         {
-          "id": "zhu-xiang-yun-suan-tong-chang-zai-shou-0x1il0",
-          "title": "逐项运算通常在收敛区间内部成立",
-          "bodyMarkdown": "逐项运算通常在收敛区间内部成立"
+          "id": "1-shi-tui-hua-wei-ji-he-ji-shu-1-1-x",
+          "title": "α=−1 时退化为几何级数 1/(1+x)",
+          "bodyMarkdown": "α=−1 时退化为几何级数 1/(1+x)"
         }
       ],
       "examples": [
         {
-          "id": "x-n-zai-x-1-shou-lian-x-0qz6ma",
+          "id": "1-2-1-x-1-x-2-x-8-x-16-11a22o",
           "title": "讲解例子",
-          "bodyMarkdown": "Σxⁿ/n 在 |x|<1 收敛，x=1 时是调和级数发散，x=−1 时交错收敛。"
+          "bodyMarkdown": "α=1/2：√(1+x)=1+x/2−x²/8+x³/16−…（|x|<1）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "幂级数的核心是收敛半径：在中心附近通常收敛，远处通常发散，端点必须单独判断。确定收敛区间后，才可以在内部逐项求导、逐项积分或计算和函数。\n\n### 解题步骤\n\n1. 整理成 (x−x₀) 的幂\n2. 求收敛半径\n3. 单独判断端点并说明运算范围\n\n### 易错点\n\n求出半径后直接把端点包含进去，是幂级数题的典型错误。"
+      "bodyMarkdown": "(1+x)^α=1+Σₙ₌₁^∞ α(α−1)…(α−n+1)/n!·xⁿ（α 不是非负整数时），收敛半径 R=1，端点收敛性随 α 而定；α 为正整数时级数自然截断成有限项。\n\n### 解题步骤\n\n1. 写 α(α−1)…(α−n+1)/n!\n2. 定 R=1\n3. 端点按 α 讨论或只答内部\n\n### 易错点\n\n系数忘「逐项降一」——分子是 α 从开始连乘递减，不是 αⁿ。"
     },
     {
       "schemaVersion": "1.0",
@@ -1392,47 +1392,47 @@
       "sectionId": "m1-p1-c8-s7",
       "sectionTitle": "傅里叶级数",
       "title": "周期函数",
-      "summary": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。",
+      "summary": "若 f(x+T)=f(x) 对一切 x 成立（T>0 最小者叫最小正周期），则 f 是周期函数；傅里叶级数的研究对象就是以 2π（或 2l）为周期的函数。",
       "tags": [
-        "拆成谐波"
+        "按周期重复"
       ],
       "sortOrder": 280,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f(x)∼a₀/2+Σ[aₙcos(nπx/L)+bₙsin(nπx/L)]",
-        "caption": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。"
+        "content": "f(x+T)=f(x)",
+        "caption": "若 f(x+T)=f(x) 对一切 x 成立（T>0 最小者叫最小正周期），则 f 是周期函数；"
       },
       "keyPoints": [
         {
-          "id": "zhou-qi-jue-ding-ji-pin",
-          "title": "周期决定基频",
-          "bodyMarkdown": "周期决定基频"
+          "id": "f-x-t-f-x-shi-ding-yi-shi",
+          "title": "f(x+T)=f(x) 是定义式",
+          "bodyMarkdown": "f(x+T)=f(x) 是定义式"
         },
         {
-          "id": "ji-ou-xing-ke-yi-rang-yi-ban-xi-shu-zhi-0rm382",
-          "title": "奇偶性可以让一半系数直接为零",
-          "bodyMarkdown": "奇偶性可以让一半系数直接为零"
+          "id": "zhou-qi-han-shu-ji-fen-yi-ge-zhou-qi-ji-1b307y",
+          "title": "周期函数积分一个周期即可代表全体",
+          "bodyMarkdown": "周期函数积分一个周期即可代表全体"
         },
         {
-          "id": "shou-lian-dian-de-zhi-yu-zuo-you-ji-1x6pij",
-          "title": "收敛点的值与左右极限平均有关",
-          "bodyMarkdown": "收敛点的值与左右极限平均有关"
+          "id": "fei-zhou-qi-han-shu-ke-tong-guo-zhou-qi-0o0e69",
+          "title": "非周期函数可通过周期延拓展开",
+          "bodyMarkdown": "非周期函数可通过周期延拓展开"
         }
       ],
       "examples": [
         {
-          "id": "ou-han-shu-zai-dui-chen-0oi0c4",
+          "id": "sin-x-cos-x-yi-2-wei-14lg0q",
           "title": "讲解例子",
-          "bodyMarkdown": "偶函数在对称区间上只需计算余弦系数；奇函数只保留正弦项。"
+          "bodyMarkdown": "sin x、cos x 以 2π 为周期；方波以 2l 为周期。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。\n\n### 解题步骤\n\n1. 确定周期与展开区间\n2. 利用奇偶性简化系数\n3. 计算系数并解释收敛\n\n### 易错点\n\n把傅里叶级数在跳跃点的收敛值写成单侧函数值，而不是左右平均。"
+      "bodyMarkdown": "若 f(x+T)=f(x) 对一切 x 成立（T>0 最小者叫最小正周期），则 f 是周期函数；傅里叶级数的研究对象就是以 2π（或 2l）为周期的函数。\n\n### 解题步骤\n\n1. 找最小正周期\n2. 积分限取一个周期\n3. 延拓时按间断处理\n\n### 易错点\n\n周期函数的积分「除以周期」时用了整个定义域——取一个周期就行。"
     },
     {
       "schemaVersion": "1.0",
@@ -1443,47 +1443,47 @@
       "sectionId": "m1-p1-c8-s7",
       "sectionTitle": "傅里叶级数",
       "title": "傅里叶系数",
-      "summary": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。",
+      "summary": "以 2π 为周期的函数的傅里叶系数：aₙ=(1/π)∫_{−π}^{π}f(x)cos nx dx",
       "tags": [
-        "拆成谐波"
+        "三角函数正交算出来"
       ],
       "sortOrder": 290,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "f(x)∼a₀/2+Σ[aₙcos(nπx/L)+bₙsin(nπx/L)]",
-        "caption": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。"
+        "format": "latex",
+        "content": "aₙ=(1/π)∫_{−π}^{π}f cos nx dx，bₙ=(1/π)∫_{−π}^{π}f sin nx dx",
+        "caption": "以 2π 为周期的函数的傅里叶系数：aₙ=(1/π)∫_{−π}^{π}f(x)cos nx dx"
       },
       "keyPoints": [
         {
-          "id": "zhou-qi-jue-ding-ji-pin",
-          "title": "周期决定基频",
-          "bodyMarkdown": "周期决定基频"
+          "id": "a-pei-cos-b-pei-sin-ji-fen-yi-zhou-qi",
+          "title": "aₙ 配 cos、bₙ 配 sin",
+          "bodyMarkdown": "aₙ 配 cos、bₙ 配 sin，积分一周期"
         },
         {
-          "id": "ji-ou-xing-ke-yi-rang-yi-ban-xi-shu-zhi-0rm382",
-          "title": "奇偶性可以让一半系数直接为零",
-          "bodyMarkdown": "奇偶性可以让一半系数直接为零"
+          "id": "zheng-jiao-xing-bu-tong-pin-l-cheng-ji-1dsa7r",
+          "title": "正交性：不同频率乘积积分为 0",
+          "bodyMarkdown": "正交性：不同频率乘积积分为 0"
         },
         {
-          "id": "shou-lian-dian-de-zhi-yu-zuo-you-ji-1x6pij",
-          "title": "收敛点的值与左右极限平均有关",
-          "bodyMarkdown": "收敛点的值与左右极限平均有关"
+          "id": "xi-shu-wei-yi-you-f-jue-ding",
+          "title": "系数唯一由 f 决定",
+          "bodyMarkdown": "系数唯一由 f 决定"
         }
       ],
       "examples": [
         {
-          "id": "ou-han-shu-zai-dui-chen-0oi0c4",
+          "id": "f-x-x-x-a-0-ji-han-shu-0dogou",
           "title": "讲解例子",
-          "bodyMarkdown": "偶函数在对称区间上只需计算余弦系数；奇函数只保留正弦项。"
+          "bodyMarkdown": "f(x)=x（−π<x≤π）：aₙ=0（奇函数），bₙ=2(−1)ⁿ⁺¹/n。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。\n\n### 解题步骤\n\n1. 确定周期与展开区间\n2. 利用奇偶性简化系数\n3. 计算系数并解释收敛\n\n### 易错点\n\n把傅里叶级数在跳跃点的收敛值写成单侧函数值，而不是左右平均。"
+      "bodyMarkdown": "以 2π 为周期的函数的傅里叶系数：aₙ=(1/π)∫_{−π}^{π}f(x)cos nx dx、bₙ=(1/π)∫_{−π}^{π}f(x)sin nx dx；由三角函数系的正交性两边积分逐项解出。\n\n### 解题步骤\n\n1. 定周期与积分限\n2. 按公式分别积分\n3. 先算 a₀ 再算 aₙ、bₙ\n\n### 易错点\n\n积分限没用满一个周期（如只积 [0,π]）——系数就错了。"
     },
     {
       "schemaVersion": "1.0",
@@ -1494,47 +1494,47 @@
       "sectionId": "m1-p1-c8-s7",
       "sectionTitle": "傅里叶级数",
       "title": "正弦/余弦展开",
-      "summary": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。",
+      "summary": "奇函数的傅里叶级数只含正弦项（bₙ，正弦级数），偶函数只含余弦项与常数项（aₙ，余弦级数）；定义在半区间上的函数可刻意做奇/偶延拓，得到指定形态的展开。",
       "tags": [
-        "拆成谐波"
+        "奇偶决定形态"
       ],
       "sortOrder": 300,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f(x)∼a₀/2+Σ[aₙcos(nπx/L)+bₙsin(nπx/L)]",
-        "caption": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。"
+        "content": "奇：f=Σbₙ sin nx；偶：f=a₀/2+Σaₙ cos nx",
+        "caption": "奇函数的傅里叶级数只含正弦项（bₙ，正弦级数），偶函数只含余弦项与常数项（aₙ，余弦级数）；"
       },
       "keyPoints": [
         {
-          "id": "zhou-qi-jue-ding-ji-pin",
-          "title": "周期决定基频",
-          "bodyMarkdown": "周期决定基频"
+          "id": "ji-han-shu-zhi-you-b-zheng-xian-zhan-kai",
+          "title": "奇函数 ⇒ 只有 bₙ（正弦展开）",
+          "bodyMarkdown": "奇函数 ⇒ 只有 bₙ（正弦展开）"
         },
         {
-          "id": "ji-ou-xing-ke-yi-rang-yi-ban-xi-shu-zhi-0rm382",
-          "title": "奇偶性可以让一半系数直接为零",
-          "bodyMarkdown": "奇偶性可以让一半系数直接为零"
+          "id": "ou-han-shu-zhi-you-a-yu-xian-zhan-kai",
+          "title": "偶函数 ⇒ 只有 aₙ（余弦展开）",
+          "bodyMarkdown": "偶函数 ⇒ 只有 aₙ（余弦展开）"
         },
         {
-          "id": "shou-lian-dian-de-zhi-yu-zuo-you-ji-1x6pij",
-          "title": "收敛点的值与左右极限平均有关",
-          "bodyMarkdown": "收敛点的值与左右极限平均有关"
+          "id": "ban-qu-jian-han-shu-kao-qi-ou-yan-tuo-1qj50o",
+          "title": "半区间函数靠奇/偶延拓二选一",
+          "bodyMarkdown": "半区间函数靠奇/偶延拓二选一"
         }
       ],
       "examples": [
         {
-          "id": "ou-han-shu-zai-dui-chen-0oi0c4",
+          "id": "f-x-0-x-qi-yan-tuo-de-1hq1hm",
           "title": "讲解例子",
-          "bodyMarkdown": "偶函数在对称区间上只需计算余弦系数；奇函数只保留正弦项。"
+          "bodyMarkdown": "f=x（0<x<π）奇延拓得正弦级数 2Σ(−1)ⁿ⁺¹sin nx/n。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。\n\n### 解题步骤\n\n1. 确定周期与展开区间\n2. 利用奇偶性简化系数\n3. 计算系数并解释收敛\n\n### 易错点\n\n把傅里叶级数在跳跃点的收敛值写成单侧函数值，而不是左右平均。"
+      "bodyMarkdown": "奇函数的傅里叶级数只含正弦项（bₙ，正弦级数），偶函数只含余弦项与常数项（aₙ，余弦级数）；定义在半区间上的函数可刻意做奇/偶延拓，得到指定形态的展开。\n\n### 解题步骤\n\n1. 判断 f 的奇偶\n2. 奇延拓或偶延拓\n3. 只算需要的那组系数\n\n### 易错点\n\n延拓后的间断点忘了按狄利克雷收敛值处理——级数在延拓点收于左右极限平均。"
     },
     {
       "schemaVersion": "1.0",
@@ -1545,47 +1545,47 @@
       "sectionId": "m1-p1-c8-s7",
       "sectionTitle": "傅里叶级数",
       "title": "狄利克雷收敛定理的使用",
-      "summary": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。",
+      "summary": "狄利克雷定理：f 满足收敛定理条件时，傅里叶级数在连续点收敛于 f(x)，在间断点收敛于左右极限的平均值 [f(x₀⁻)+f(x₀⁺)]/2——求「级数在 x₀ 处的和」全靠这条。",
       "tags": [
-        "拆成谐波"
+        "连续点收自己"
       ],
       "sortOrder": 310,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f(x)∼a₀/2+Σ[aₙcos(nπx/L)+bₙsin(nπx/L)]",
-        "caption": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。"
+        "content": "S(x₀)=[f(x₀⁻)+f(x₀⁺)]/2（间断点）",
+        "caption": "狄利克雷定理：f 满足收敛定理条件时，傅里叶级数在连续点收敛于 f(x)"
       },
       "keyPoints": [
         {
-          "id": "zhou-qi-jue-ding-ji-pin",
-          "title": "周期决定基频",
-          "bodyMarkdown": "周期决定基频"
+          "id": "lian-xu-dian-he-f-x",
+          "title": "连续点：和 = f(x₀)",
+          "bodyMarkdown": "连续点：和 = f(x₀)"
         },
         {
-          "id": "ji-ou-xing-ke-yi-rang-yi-ban-xi-shu-zhi-0rm382",
-          "title": "奇偶性可以让一半系数直接为零",
-          "bodyMarkdown": "奇偶性可以让一半系数直接为零"
+          "id": "jian-duan-dian-he-zuo-you-ji-xian-de-0dhs57",
+          "title": "间断点：和 = 左右极限的平均",
+          "bodyMarkdown": "间断点：和 = 左右极限的平均"
         },
         {
-          "id": "shou-lian-dian-de-zhi-yu-zuo-you-ji-1x6pij",
-          "title": "收敛点的值与左右极限平均有关",
-          "bodyMarkdown": "收敛点的值与左右极限平均有关"
+          "id": "duan-dian-yan-tuo-dian-an-yan-tuo-hou-1rpxa2",
+          "title": "端点/延拓点按延拓后的间断算",
+          "bodyMarkdown": "端点/延拓点按延拓后的间断算"
         }
       ],
       "examples": [
         {
-          "id": "ou-han-shu-zai-dui-chen-0oi0c4",
+          "id": "fang-bo-zai-tiao-bian-0g9qpo",
           "title": "讲解例子",
-          "bodyMarkdown": "偶函数在对称区间上只需计算余弦系数；奇函数只保留正弦项。"
+          "bodyMarkdown": "方波在跳变点处的级数和 = 跳变两侧值的平均。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。\n\n### 解题步骤\n\n1. 确定周期与展开区间\n2. 利用奇偶性简化系数\n3. 计算系数并解释收敛\n\n### 易错点\n\n把傅里叶级数在跳跃点的收敛值写成单侧函数值，而不是左右平均。"
+      "bodyMarkdown": "狄利克雷定理：f 满足收敛定理条件时，傅里叶级数在连续点收敛于 f(x)，在间断点收敛于左右极限的平均值 [f(x₀⁻)+f(x₀⁺)]/2——求「级数在 x₀ 处的和」全靠这条。\n\n### 解题步骤\n\n1. 找 x₀ 是连续还是间断\n2. 间断则求左右极限\n3. 按定理写和值\n\n### 易错点\n\n在间断点写 S(x₀)=f(x₀)——恰恰在那里级数不取函数值。"
     },
     {
       "schemaVersion": "1.0",
@@ -1596,47 +1596,47 @@
       "sectionId": "m1-p1-c8-s7",
       "sectionTitle": "傅里叶级数",
       "title": "级数：一项项叠加显示部分和变化",
-      "summary": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。",
+      "summary": "把级数的前 n 项和 Sₙ 看成逐次叠加：每加一项，Sₙ 向总和逼近一步；观察 {Sₙ} 是否稳定，是「收敛/发散」最直观的动态图像。",
       "tags": [
-        "拆成谐波"
+        "部分和的直观"
       ],
       "sortOrder": 320,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f(x)∼a₀/2+Σ[aₙcos(nπx/L)+bₙsin(nπx/L)]",
-        "caption": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。"
+        "content": "Sₙ=Σᵢ₌₁ⁿuᵢ，S=lim Sₙ",
+        "caption": "把级数的前 n 项和 Sₙ 看成逐次叠加：每加一项，Sₙ 向总和逼近一步；观察 {Sₙ} 是否稳定，是「收敛/发散」最直观的动态图像。"
       },
       "keyPoints": [
         {
-          "id": "zhou-qi-jue-ding-ji-pin",
-          "title": "周期决定基频",
-          "bodyMarkdown": "周期决定基频"
+          "id": "s-s-s-shi-zhu-bu-die-jia-de-guo-cheng",
+          "title": "S₁, S₂, …, Sₙ 是逐步叠加的过程",
+          "bodyMarkdown": "S₁, S₂, …, Sₙ 是逐步叠加的过程"
         },
         {
-          "id": "ji-ou-xing-ke-yi-rang-yi-ban-xi-shu-zhi-0rm382",
-          "title": "奇偶性可以让一半系数直接为零",
-          "bodyMarkdown": "奇偶性可以让一半系数直接为零"
+          "id": "wen-ding-zai-mou-ge-zhi-fu-jin-shou-lian",
+          "title": "稳定在某个值附近 ⇒ 收敛",
+          "bodyMarkdown": "稳定在某个值附近 ⇒ 收敛"
         },
         {
-          "id": "shou-lian-dian-de-zhi-yu-zuo-you-ji-1x6pij",
-          "title": "收敛点的值与左右极限平均有关",
-          "bodyMarkdown": "收敛点的值与左右极限平均有关"
+          "id": "wu-jie-huo-lai-hui-da-fu-zhen-dang-fa-1y5jm8",
+          "title": "无界或来回大幅振荡 ⇒ 发散",
+          "bodyMarkdown": "无界或来回大幅振荡 ⇒ 发散"
         }
       ],
       "examples": [
         {
-          "id": "ou-han-shu-zai-dui-chen-0oi0c4",
+          "id": "1-n-de-bu-fen-he-xun-su-078qp4",
           "title": "讲解例子",
-          "bodyMarkdown": "偶函数在对称区间上只需计算余弦系数；奇函数只保留正弦项。"
+          "bodyMarkdown": "Σ1/n² 的部分和迅速稳定在 π²/6 附近。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。\n\n### 解题步骤\n\n1. 确定周期与展开区间\n2. 利用奇偶性简化系数\n3. 计算系数并解释收敛\n\n### 易错点\n\n把傅里叶级数在跳跃点的收敛值写成单侧函数值，而不是左右平均。"
+      "bodyMarkdown": "把级数的前 n 项和 Sₙ 看成逐次叠加：每加一项，Sₙ 向总和逼近一步；观察 {Sₙ} 是否稳定，是「收敛/发散」最直观的动态图像。\n\n### 解题步骤\n\n1. 画部分和折线\n2. 观察是否趋于水平\n3. 结合判别法定论\n\n### 易错点\n\n部分和看似稳定就下结论——图形直观要配合判别法证明。"
     },
     {
       "schemaVersion": "1.0",
@@ -1647,47 +1647,47 @@
       "sectionId": "m1-p1-c8-s7",
       "sectionTitle": "傅里叶级数",
       "title": "傅里叶：逐渐增加谐波数量，观察曲线逼近目标周期函数",
-      "summary": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。",
+      "summary": "傅里叶级数把周期函数分解成频率倍增的正弦波（谐波）之和：取的项数越多，叠加曲线与目标函数贴合得越好；在间断点附近会看到「过冲」但整体收敛。",
       "tags": [
-        "拆成谐波"
+        "谐波叠加逼近"
       ],
       "sortOrder": 330,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f(x)∼a₀/2+Σ[aₙcos(nπx/L)+bₙsin(nπx/L)]",
-        "caption": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。"
+        "content": "f≈a₀/2+Σₙ₌₁ᴺ(aₙcos nx+bₙsin nx)",
+        "caption": "傅里叶级数把周期函数分解成频率倍增的正弦波（谐波）之和：取的项数越多，叠加曲线与目标函数贴合得越好；在间断点附近会看到「过冲」但整体收敛。"
       },
       "keyPoints": [
         {
-          "id": "zhou-qi-jue-ding-ji-pin",
-          "title": "周期决定基频",
-          "bodyMarkdown": "周期决定基频"
+          "id": "mei-xiang-shi-yi-ge-xie-bo-pin-l-n-bei",
+          "title": "每项是一个谐波（频率 n 倍）",
+          "bodyMarkdown": "每项是一个谐波（频率 n 倍）"
         },
         {
-          "id": "ji-ou-xing-ke-yi-rang-yi-ban-xi-shu-zhi-0rm382",
-          "title": "奇偶性可以让一半系数直接为零",
-          "bodyMarkdown": "奇偶性可以让一半系数直接为零"
+          "id": "xiang-shu-zeng-jia-bi-jin-geng-hao",
+          "title": "项数增加 ⇒ 逼近更好",
+          "bodyMarkdown": "项数增加 ⇒ 逼近更好"
         },
         {
-          "id": "shou-lian-dian-de-zhi-yu-zuo-you-ji-1x6pij",
-          "title": "收敛点的值与左右极限平均有关",
-          "bodyMarkdown": "收敛点的值与左右极限平均有关"
+          "id": "jian-duan-dian-shou-lian-dao-zuo-you-ji-0aguht",
+          "title": "间断点收敛到左右极限平均",
+          "bodyMarkdown": "间断点收敛到左右极限平均"
         }
       ],
       "examples": [
         {
-          "id": "ou-han-shu-zai-dui-chen-0oi0c4",
+          "id": "fang-bo-zhi-yong-qi-ci-1vetgk",
           "title": "讲解例子",
-          "bodyMarkdown": "偶函数在对称区间上只需计算余弦系数；奇函数只保留正弦项。"
+          "bodyMarkdown": "方波只用奇次正弦谐波叠加：项数越多棱角越清晰。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。\n\n### 解题步骤\n\n1. 确定周期与展开区间\n2. 利用奇偶性简化系数\n3. 计算系数并解释收敛\n\n### 易错点\n\n把傅里叶级数在跳跃点的收敛值写成单侧函数值，而不是左右平均。"
+      "bodyMarkdown": "傅里叶级数把周期函数分解成频率倍增的正弦波（谐波）之和：取的项数越多，叠加曲线与目标函数贴合得越好；在间断点附近会看到「过冲」但整体收敛。\n\n### 解题步骤\n\n1. 算出前几个系数\n2. 逐次叠加谐波\n3. 对照目标函数观察\n\n### 易错点\n\n逼近曲线在间断点「冲过头」就以为发散——那是吉布斯现象，级数仍收敛。"
     }
   ]
 }
