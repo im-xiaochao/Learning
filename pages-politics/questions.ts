@@ -1,7 +1,7 @@
 /**
  * 由 tools/build-content.ts 从 data/content 生成，请勿手改。
  * 重新生成：cd tools && npm run build:content
- * 数据来源时间：2026-09-18T12:12:14Z
+ * 数据来源时间：2026-09-18T12:20:27Z
  */
 
 export interface AppPoliticsOption { key: string; text: string }

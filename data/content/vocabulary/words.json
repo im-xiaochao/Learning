@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "courseId": "english",
-  "generatedAt": "2026-09-18T12:12:14Z",
+  "generatedAt": "2026-09-18T12:20:27Z",
   "count": 5493,
   "words": [
   {"schemaVersion":"1.0","id":"word-due","contentVersion":1,"courseId":"english","word":"due","pronunciations":[{"accent":"uk","ipa":"dju:"}],"senses":[{"partOfSpeech":"a.","meaningZh":"(to)应支付的;(车,船等)预定应到达的"}],"examples":[],"collocations":[],"tags":["考研英语","形容词"],"sources":[],"status":"published","updatedAt":"2026-09-16T04:02:19Z"},

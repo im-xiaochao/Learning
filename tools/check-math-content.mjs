@@ -29,6 +29,13 @@ const GOLDEN = [
   ['随机变量的数字特征', '线性相关意义', '相关系数', '概率里的线性相关指 |ρ|=1，不是线代向量组'],
   ['行列式', '二阶、三阶、n 阶行列式', '面积', '行列式应给几何意义或展开定义，不能是高阶导数公式'],
   ['矩阵', '矩阵概念', 'ᵀ', '转置是矩阵运算的基础'],
+  // ── 精编内容（data/math/curated.ts）抽查：确保精编层优先于规则层 ──
+  ['随机事件与概率', '德摩根律', 'ᶜ', '取非要交换并交，公式必须写对'],
+  ['随机事件与概率', '独立与互斥的区别', '互斥与独立', '两个概念不能混用'],
+  ['随机事件与概率', '全概率公式 P(B)=ΣP(Aᵢ)P(B|Aᵢ)', 'Σ', '按原因分类求和'],
+  ['随机事件与概率', '贝叶斯公式 P(Aⱼ|B)=P(Aⱼ)P(B|Aⱼ)/P(B)', '先验', '由结果反推原因'],
+  ['随机事件与概率', '对立事件', '1−P(A)', '正难则反的根据'],
+  ['随机事件与概率', '长度、面积、体积比', '测度', '几何概型看测度之比'],
 ]
 
 /** 展示内容里不允许出现的人名 / 课程名（合规红线） */
@@ -67,7 +74,17 @@ for (const [chapterKey, title, need, why] of GOLDEN) {
     const hit = points.filter((p) => p.chapter.title.includes(chapterKey) && p.kp.title === title)
     if (!hit.length) throw new Error(`找不到这个知识点（章节关键词「${chapterKey}」）`)
     const bad = hit.filter((p) => {
-      const text = `${p.kp.summary} ${p.kp.anchor?.content || ''}`
+      // 查「展示给用户的全部内容」，不只是 summary + 锚点：
+      // 有些关键信息写在要点或正文里（例如「先验」出现在要点的解释句中）。
+      const text = [
+        p.kp.summary,
+        p.kp.anchor?.content,
+        p.kp.bodyMarkdown,
+        ...(p.kp.keyPoints || []).flatMap((k) => [k.title, k.bodyMarkdown]),
+        ...(p.kp.examples || []).map((e) => e.bodyMarkdown),
+      ]
+        .filter(Boolean)
+        .join(' ')
       return !text.includes(need)
     })
     if (bad.length) throw new Error(`${bad.length} 条不含「${need}」——${why}`)

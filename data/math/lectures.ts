@@ -6,6 +6,9 @@
  * 这样即使源知识图谱只有一个短标题，页面也不会退化成一句泛泛的介绍。
  */
 
+/* 精编内容（按知识点标题精确索引）。curated.ts 只做 **type-only** 引用本文件，运行时无环。 */
+import { CURATED } from './curated'
+
 export type MathVisualKind =
   | 'mapping'
   | 'limit'
@@ -1736,6 +1739,13 @@ function fuzzyDirect(title: string): LectureBody | undefined {
 export function getMathLecture(topic: string, section = ''): MathLecture {
   const title = cleanTopic(topic)
   const scope = cleanTopic(section)
+  /*
+   * 精编内容优先：data/math/curated.ts 里按标题**精确**登记的知识点直接用它，
+   * 不再走下面的规则分派。规则层要覆盖 960 个知识点，必然复用且容易遮蔽，
+   * 精编层是「一个知识点一份内容」的正确答案，写一个就覆盖一个。
+   */
+  const curated = CURATED[title]
+  if (curated) return { title, ...curated }
   const direct = DIRECT[title] || fuzzyDirect(title)
   const detail = direct || scopedBody(title, scope) || fallbackBody(title, scope)
   return {

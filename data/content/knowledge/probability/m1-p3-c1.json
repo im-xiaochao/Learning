@@ -15,47 +15,47 @@
       "sectionId": "m1-p3-c1-s1",
       "sectionTitle": "随机试验与样本空间",
       "title": "随机试验",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "随机试验要同时满足三条：条件可重复、结果不止一个、试验前无法确定哪一个结果会出现。",
       "tags": [
-        "先把事件说清楚"
+        "可重复且事前不可预言"
       ],
       "sortOrder": 10,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "随机试验 = 可重复 + 结果不唯一 + 事前不可预言",
+        "caption": "随机试验要同时满足三条：条件可重复、结果不止一个、试验前无法确定哪一个结果会出现。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "ke-chong-fu-zai-xiang-tong-tiao-jian-0cjjj2",
+          "title": "可重复：在相同条件下能反复做同一次试验，这是谈概",
+          "bodyMarkdown": "可重复：在相同条件下能反复做同一次试验，这是谈概率的前提"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "jie-guo-bu-wei-yi-suo-you-ke-neng-jie-00oo2o",
+          "title": "结果不唯一",
+          "bodyMarkdown": "结果不唯一：所有可能结果事先能列出来，只是不知道会出现哪一个"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "shi-yan-qian-bu-ke-yu-yan-jie-guo-you-179ywd",
+          "title": "试验前不可预言",
+          "bodyMarkdown": "试验前不可预言：结果由偶然因素决定，而不是由已知条件唯一决定"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "pao-ying-bi-ji-zheng-1txdt1",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "抛硬币记正反面是随机试验；解方程 2x=4 不是，因为结果唯一确定。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "随机试验要同时满足三条：条件可重复、结果不止一个、试验前无法确定哪一个结果会出现。像「抛一枚硬币记录正反面」满足三条，而「求 2+3 等于几」不是——它的结果被条件唯一确定，没有随机性可言。\n\n### 解题步骤\n\n1. 先判断条件能否重复\n2. 再列出全部可能结果\n3. 最后确认事前无法确定结果\n\n### 易错点\n\n把「结果未知」当成随机试验——只要条件一固定结果就唯一确定的，都不算。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p3-c1-s1",
       "sectionTitle": "随机试验与样本空间",
       "title": "样本点",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "样本点是试验的一个可能结果，用 ω 表示，它是样本空间里的「元素」。",
       "tags": [
-        "先把事件说清楚"
+        "一次试验的一个结果"
       ],
       "sortOrder": 20,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "ω：一次试验的一个可能结果",
+        "caption": "样本点是试验的一个可能结果，用 ω 表示，它是样本空间里的「元素」。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "yang-ben-dian-dui-ying-yi-ge-bu-neng-0kdxcq",
+          "title": "样本点对应一个不能再分的结果",
+          "bodyMarkdown": "样本点对应一个不能再分的结果，再拆就没有意义了"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "yi-ci-shi-yan-zhi-chu-xian-yi-ge-yang-15opcw",
+          "title": "一次试验只出现一个样本点",
+          "bodyMarkdown": "一次试验只出现一个样本点，所以样本点之间互斥"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "bu-tong-shi-yan-de-yang-ben-dian-bu-0vvy91",
+          "title": "不同试验的样本点不能混用",
+          "bodyMarkdown": "不同试验的样本点不能混用，否则样本空间就对不上"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "zhi-yi-ke-tou-zi-3-shi-0ibbu3",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "掷一颗骰子，ω=3 是一个样本点，六个样本点构成完整的样本空间。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "样本点是试验的一个可能结果，用 ω 表示，它是样本空间里的「元素」。所以样本点是不能再分的结果，样本点之间天然互斥：一次试验只会出现其中一个。\n\n### 解题步骤\n\n1. 把结果拆到不能再分\n2. 给每个结果一个记号 ω\n3. 检查有没有遗漏或重复\n\n### 易错点\n\n把「点数大于 3」当样本点——它是样本点的集合（事件），不是单个结果。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p3-c1-s1",
       "sectionTitle": "随机试验与样本空间",
       "title": "样本空间",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "样本空间是全部样本点构成的集合，记作 Ω，它是「全集」，任何事件都是它的子集。",
       "tags": [
-        "先把事件说清楚"
+        "全部样本点的集合"
       ],
       "sortOrder": 30,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "Ω={ω₁,ω₂,…,ωₙ}（有限情形）",
+        "caption": "样本空间是全部样本点构成的集合，记作 Ω，它是「全集」，任何事件都是它的子集。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "bi-xu-bao-han-suo-you-ke-neng-jie-guo-0f900q",
+          "title": "Ω 必须包含所有可能结果",
+          "bodyMarkdown": "Ω 必须包含所有可能结果，漏一个就会让后面的概率之和不足 1"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "shi-jian-shi-de-zi-ji-yang-ben-dian-shi-0alucf",
+          "title": "事件是 Ω 的子集",
+          "bodyMarkdown": "事件是 Ω 的子集，样本点是 Ω 的元素，两者层级不同"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "yang-ben-kong-jian-de-cu-xi-ke-yi-zi-ji-0j1gct",
+          "title": "样本空间的粗细可以自己选",
+          "bodyMarkdown": "样本空间的粗细可以自己选，按题目关心的信息量决定"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "pao-liang-ci-ying-bi-qu-0p9d8f",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "抛两次硬币取 Ω={正正,正反,反正,反反}；若只关心正面个数，也可取 Ω={0,1,2}。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "样本空间是全部样本点构成的集合，记作 Ω，它是「全集」，任何事件都是它的子集。同一个试验的样本空间可以按需要取粗或取细，取法不同，事件的写法就不同。\n\n### 解题步骤\n\n1. 列出所有不能再分的结果\n2. 把结果收进一个集合\n3. 按题目需要决定粗细\n\n### 易错点\n\n两次抛硬币把「一正一反」当成一个样本点，漏掉了「正反」和「反正」的顺序。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p3-c1-s1",
       "sectionTitle": "随机试验与样本空间",
       "title": "随机事件",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "随机事件就是样本空间的子集，也就是若干样本点凑成的一件事；事件发生当且仅当试验结果落在这个子集里。",
       "tags": [
-        "先把事件说清楚"
+        "样本空间的子集"
       ],
       "sortOrder": 40,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "A ⊆ Ω；A 发生 ⇔ ω ∈ A",
+        "caption": "随机事件就是样本空间的子集，也就是若干样本点凑成的一件事；事件发生当且仅当试验结果落在这个子集里。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "shi-jian-shi-ji-he-shi-jian-fa-sheng-13nngd",
+          "title": "事件是集合",
+          "bodyMarkdown": "事件是集合，事件发生就是试验结果落在该集合内"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "shi-bi-ran-shi-jian-shi-bu-ke-neng-shi-1ro3we",
+          "title": "Ω 是必然事件",
+          "bodyMarkdown": "Ω 是必然事件，∅ 是不可能事件，两者都是事件的极端情形"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "fu-he-shi-jian-yong-ji-he-yun-suan-biao-14a6zd",
+          "title": "复合事件用集合运算表达",
+          "bodyMarkdown": "复合事件用集合运算表达，先翻译成集合再算概率"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "zhi-tou-zi-a-dian-shu-1b1cnb",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "掷骰子，A=「点数大于 3」={4,5,6}，是 Ω={1,…,6} 的子集。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "随机事件就是样本空间的子集，也就是若干样本点凑成的一件事；事件发生当且仅当试验结果落在这个子集里。Ω 本身叫必然事件，空集 ∅ 叫不可能事件。\n\n### 解题步骤\n\n1. 把事件翻译成「哪些样本点满足它」\n2. 写出对应的子集\n3. 再用集合运算表达复合事件\n\n### 易错点\n\n把「事件」和「概率」混为一谈：事件是集合，概率是给集合赋的数值。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p3-c1-s2",
       "sectionTitle": "事件关系与运算",
       "title": "包含",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "A ⊂ B 表示 A 的每个样本点都在 B 里：A 发生则 B 一定发生。",
       "tags": [
-        "先把事件说清楚"
+        "一个事件蕴含另一个"
       ],
       "sortOrder": 50,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "A ⊂ B ⇒ P(A) ≤ P(B)",
+        "caption": "A ⊂ B 表示 A 的每个样本点都在 B 里：A 发生则 B 一定发生。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "a-b-deng-jia-yu-a-fa-sheng-bi-you-b-fa-15ll0h",
+          "title": "A ⊂ B 等价于「A 发生必有 B 发生」",
+          "bodyMarkdown": "A ⊂ B 等价于「A 发生必有 B 发生」，方向不能反"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "bao-han-guan-xi-yu-gai-l-da-xiao-mei-12pbr7",
+          "title": "包含关系与概率大小没有必然联系",
+          "bodyMarkdown": "包含关系与概率大小没有必然联系，但一定给出不等式 P(A) ≤ P(B)"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "yong-bao-han-guan-xi-chang-chang-neng-00x5gu",
+          "title": "用包含关系常常能把复杂事件换成更好算的那个",
+          "bodyMarkdown": "用包含关系常常能把复杂事件换成更好算的那个"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "a-dian-shu-wei-6-b-dian-0fudwd",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "A=「点数为 6」，B=「点数为偶数」，A ⊂ B，故 1/6 = P(A) ≤ P(B) = 1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "A ⊂ B 表示 A 的每个样本点都在 B 里：A 发生则 B 一定发生。判断包含关系只能看样本点集合的归属，不能凭「哪个说法听起来更强」下结论。\n\n### 解题步骤\n\n1. 把两个事件都写成样本点集合\n2. 逐个样本点检查归属\n3. 再用包含关系推概率不等式\n\n### 易错点\n\n由 A ⊂ B 反过来说「B 发生则 A 发生」——方向反了。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p3-c1-s2",
       "sectionTitle": "事件关系与运算",
       "title": "相等",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "A = B 当且仅当 A ⊂ B 且 B ⊂ A，也就是两个事件包含的样本点完全相同。",
       "tags": [
-        "先把事件说清楚"
+        "互相包含才相等"
       ],
       "sortOrder": 60,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "A = B ⇔ A ⊂ B 且 B ⊂ A",
+        "caption": "A = B 当且仅当 A ⊂ B 且 B ⊂ A，也就是两个事件包含的样本点完全相同。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "xiang-deng-yao-liang-ge-fang-xiang-dou-0xhr9p",
+          "title": "相等要两个方向都验证",
+          "bodyMarkdown": "相等要两个方向都验证，只验一个方向是不够的"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "pan-duan-de-shi-yong-ban-fa-shi-hua-dao-1xcvse",
+          "title": "判断的实用办法是化到「最简单的样本点集合」再比较",
+          "bodyMarkdown": "判断的实用办法是化到「最简单的样本点集合」再比较"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "a-b-shi-gai-l-yi-ding-xiang-deng-dan-1sg2kj",
+          "title": "A = B 时概率一定相等",
+          "bodyMarkdown": "A = B 时概率一定相等，但概率相等推不出事件相等"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "dian-shu-da-yu-3-yu-19nxm1",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "「点数大于 3」与「点数不小于 4」都等于 {4,5,6}，是同一个事件。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "A = B 当且仅当 A ⊂ B 且 B ⊂ A，也就是两个事件包含的样本点完全相同。要比较两个事件是否相等，必须先把它们化到同一个样本空间里。\n\n### 解题步骤\n\n1. 分别写出两个事件的样本点集合\n2. 检查是否互相包含\n3. 概率相等只能作为辅助线索\n\n### 易错点\n\n用 P(A) = P(B) 断定 A = B——概率相等只是必要条件，不是充分条件。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m1-p3-c1-s2",
       "sectionTitle": "事件关系与运算",
       "title": "并、交、差",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "并 A∪B 表示「至少一个发生」，交 A∩B 表示「两个都发生」，差 A−B 表示「A 发生而 B 不发生」。",
       "tags": [
-        "先把事件说清楚"
+        "或、且、而不"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "A∪B、A∩B、A−B=A B̄",
+        "caption": "并 A∪B 表示「至少一个发生」，交 A∩B 表示「两个都发生」，差 A−B 表示「A 发生而 B 不发生」。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "a-b-shi-zhi-shao-yi-ge-fa-sheng-bu-shi-1nexo6",
+          "title": "A∪B 是「至少一个发生」",
+          "bodyMarkdown": "A∪B 是「至少一个发生」，不是「恰好一个发生」"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "a-b-shi-tong-shi-fa-sheng-yu-zhi-shao-1k09fw",
+          "title": "A∩B 是「同时发生」",
+          "bodyMarkdown": "A∩B 是「同时发生」，与「至少一个」正好相对"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "a-b-a-b-ye-jiu-shi-a-fa-sheng-qie-b-bu-1a4bzf",
+          "title": "A−B = A∩B̄",
+          "bodyMarkdown": "A−B = A∩B̄，也就是 A 发生且 B 不发生"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "a-zhi-shao-yi-ci-zheng-06y2hb",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "A=「至少一次正面」，B=「两次都正面」：A∪B=A，A∩B=B，A−B=「恰有一次正面」。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "并 A∪B 表示「至少一个发生」，交 A∩B 表示「两个都发生」，差 A−B 表示「A 发生而 B 不发生」。这三个运算都可以直接按「或 / 且 / 而不」翻译。\n\n### 解题步骤\n\n1. 先把自然语言翻译成「或 / 且 / 而不」\n2. 写出集合运算式\n3. 再用运算律化简\n\n### 易错点\n\n把 A−B 写成 A∪B̄，漏掉了「B 不发生」这个关键条件。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m1-p3-c1-s2",
       "sectionTitle": "事件关系与运算",
       "title": "对立事件",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "对立事件 Ā 就是「A 不发生」，满足 A∪Ā = Ω 且 A∩Ā = ∅。",
       "tags": [
-        "先把事件说清楚"
+        "非此即彼的那个事件"
       ],
       "sortOrder": 80,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "A∪Ā=Ω，A∩Ā=∅，P(Ā)=1−P(A)",
+        "caption": "对立事件 Ā 就是「A 不发生」，满足 A∪Ā = Ω 且 A∩Ā = ∅。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "yi-ge-shi-jian-zhi-you-yi-ge-dui-li-shi-1a1utp",
+          "title": "一个事件只有一个对立事件",
+          "bodyMarkdown": "一个事件只有一个对立事件，而互斥事件可以有多个"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "dui-li-yao-qiu-bing-ji-qia-wei-qie-jiao-1nmch6",
+          "title": "对立要求并集恰为 Ω 且交集为空",
+          "bodyMarkdown": "对立要求并集恰为 Ω 且交集为空，缺一不可"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "p-1-p-a-shi-chu-li-zhi-shao-zhi-duo-lei-0avbxd",
+          "title": "P(Ā)=1−P(A) 是处理「至少」「至多」类",
+          "bodyMarkdown": "P(Ā)=1−P(A) 是处理「至少」「至多」类问题的常用手段"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "p-zhi-shao-yi-ci-zheng-1id0bb",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "P(至少一次正面)=1−P(两次都反面)=1−1/4=3/4。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "对立事件 Ā 就是「A 不发生」，满足 A∪Ā = Ω 且 A∩Ā = ∅。它的最大用处是「正难则反」：正面算不出来时，用 P(Ā) = 1 − P(A) 从反面绕过去。\n\n### 解题步骤\n\n1. 先看「不发生」是否唯一\n2. 用 1−P(A) 转化\n3. 把「至少」「至多」写成补事件再算\n\n### 易错点\n\n把「对立」与「互斥」等同：互斥的两个事件加起来不一定等于 Ω。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m1-p3-c1-s2",
       "sectionTitle": "事件关系与运算",
       "title": "互斥事件",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "互斥指 A∩B = ∅，即两个事件不可能同时发生；但互斥并不要求它们的并集等于 Ω。",
       "tags": [
-        "先把事件说清楚"
+        "不能同时发生"
       ],
       "sortOrder": 90,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "A∩B=∅ ⇒ P(A∪B)=P(A)+P(B)",
+        "caption": "互斥指 A∩B = ∅，即两个事件不可能同时发生；但互斥并不要求它们的并集等于 Ω。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "a-b-jiu-shi-hu-chi-pan-duan-biao-zhun-024cf3",
+          "title": "A∩B=∅ 就是互斥",
+          "bodyMarkdown": "A∩B=∅ 就是互斥，判断标准是看有没有公共样本点"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "hu-chi-shi-bing-de-gai-l-deng-yu-gai-l-080dtj",
+          "title": "互斥时并的概率等于概率之和",
+          "bodyMarkdown": "互斥时并的概率等于概率之和，这是可加性最直接的应用"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "hu-chi-yu-dui-li-bu-deng-jia-dui-li-hai-13ei0f",
+          "title": "互斥与对立不等价",
+          "bodyMarkdown": "互斥与对立不等价：对立还要求两个事件合起来盖满 Ω"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "zhi-tou-zi-a-1-b-2-hu-0rfj4r",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "掷骰子 A={1}、B={2} 互斥，但 A∪B={1,2}≠Ω，所以它们不对立。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "互斥指 A∩B = ∅，即两个事件不可能同时发生；但互斥并不要求它们的并集等于 Ω。只有「互斥且并为 Ω」时，两者才互为对立。\n\n### 解题步骤\n\n1. 检查两个事件有没有公共样本点\n2. 有公共点就不互斥\n3. 互斥时用 P(A∪B)=P(A)+P(B)\n\n### 易错点\n\n看到「不同时发生」就写 P(A)+P(B)=1——只有对立才成立。"
     },
     {
       "schemaVersion": "1.0",
@@ -474,47 +474,47 @@
       "sectionId": "m1-p3-c1-s2",
       "sectionTitle": "事件关系与运算",
       "title": "德摩根律",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "德摩根律讲「取非」如何穿过并和交：并的补等于补的交，交的补等于补的并。",
       "tags": [
-        "先把事件说清楚"
+        "取非要交换并交"
       ],
       "sortOrder": 100,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "(A∪B)ᶜ=Ā∩B̄；(A∩B)ᶜ=Ā∪B̄",
+        "caption": "德摩根律讲「取非」如何穿过并和交：并的补等于补的交，交的补等于补的并。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "bing-de-bu-deng-yu-ge-zi-bu-de-jiao-1vyrp9",
+          "title": "并的补等于各自补的交",
+          "bodyMarkdown": "并的补等于各自补的交，交的补等于各自补的并"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "qu-fei-shi-bing-jiao-bi-xu-hu-huan-zhe-104j9y",
+          "title": "取非时并交必须互换",
+          "bodyMarkdown": "取非时并交必须互换，这是最容易漏的一步"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "duo-shi-jian-qing-xing-tong-yang-cheng-1yqjzf",
+          "title": "多事件情形同样成立",
+          "bodyMarkdown": "多事件情形同样成立，可以整体取非再逐项拆"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "zhi-shao-yi-ci-zheng-0p8sxm",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "「至少一次正面」的补是「两次都是反面」，用德摩根律一次就能写对。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "德摩根律讲「取非」如何穿过并和交：并的补等于补的交，交的补等于补的并。求「至少一个不发生」这类概率时，它能一步把事件翻过来。\n\n### 解题步骤\n\n1. 把目标事件写成「非（…）」\n2. 用德摩根律拆开\n3. 再按互斥或独立计算概率\n\n### 易错点\n\n只对每个事件取非，忘了把 ∪ 换成 ∩（或反过来）。"
     },
     {
       "schemaVersion": "1.0",
@@ -525,47 +525,47 @@
       "sectionId": "m1-p3-c1-s3",
       "sectionTitle": "概率公理与性质",
       "title": "非负性",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "非负性规定任何事件的概率都大于等于 0，它给出概率的取值下界。",
       "tags": [
-        "先把事件说清楚"
+        "概率不会为负"
       ],
       "sortOrder": 110,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "P(A) ≥ 0，P(∅)=0",
+        "caption": "非负性规定任何事件的概率都大于等于 0，它给出概率的取值下界。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "dui-ren-yi-shi-jian-a-dou-you-p-a-0-chu-1t3hie",
+          "title": "对任意事件 A 都有 P(A) ≥ 0",
+          "bodyMarkdown": "对任意事件 A 都有 P(A) ≥ 0，出现负概率一定是算错了"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "bu-ke-neng-shi-jian-de-gai-l-wei-0-dan-03ge99",
+          "title": "不可能事件的概率为 0",
+          "bodyMarkdown": "不可能事件的概率为 0，但概率为 0 的事件未必是不可能事件"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "fei-fu-xing-yu-gui-fan-xing-he-qi-lai-0tudk9",
+          "title": "非负性与规范性合起来把概率限制在 [0",
+          "bodyMarkdown": "非负性与规范性合起来把概率限制在 [0,1] 内"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "lian-xu-xing-sui-ji-1o3e7a",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "连续型随机变量取任一单点的概率都是 0，但「取到该点」并非不可能事件。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "非负性规定任何事件的概率都大于等于 0，它给出概率的取值下界。单看很朴素，但它与规范性、可列可加性一起，构成概率的公理化定义。\n\n### 解题步骤\n\n1. 先确认事件属于当前样本空间\n2. 用非负性排除负值结果\n3. 注意零概率与不可能事件不等价\n\n### 易错点\n\n把「概率为 0」直接读成「不可能发生」，在连续情形下两者不等价。"
     },
     {
       "schemaVersion": "1.0",
@@ -576,47 +576,47 @@
       "sectionId": "m1-p3-c1-s3",
       "sectionTitle": "概率公理与性质",
       "title": "规范性",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "规范性规定必然事件的概率为 1，即 P(Ω) = 1。它与互补性一起给出 P(Ā) = 1 − P(A)，是「正难则反」的根据。",
       "tags": [
-        "先把事件说清楚"
+        "全集的概率为 1"
       ],
       "sortOrder": 120,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "P(Ω)=1，P(Ā)=1−P(A)",
+        "caption": "规范性规定必然事件的概率为 1，即 P(Ω) = 1。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "p-1-suo-you-ji-ben-shi-jian-de-gai-l-1euyav",
+          "title": "P(Ω)=1",
+          "bodyMarkdown": "P(Ω)=1，所有基本事件的概率之和必须等于 1"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "pei-he-hu-bu-xing-de-dao-p-1-p-a",
+          "title": "配合互补性得到 P(Ā)=1−P(A)",
+          "bodyMarkdown": "配合互补性得到 P(Ā)=1−P(A)"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "ren-he-shi-jian-de-gai-l-dou-bu-hui-0wd40n",
+          "title": "任何事件的概率都不会超过 1",
+          "bodyMarkdown": "任何事件的概率都不会超过 1，超过就是样本空间或计算出了问题"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "ruo-p-a-0-3-ze-p-0-7-0uvhr7",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "若 P(A)=0.3，则 P(Ā)=0.7，两者之和恰为 1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "规范性规定必然事件的概率为 1，即 P(Ω) = 1。它与互补性一起给出 P(Ā) = 1 − P(A)，是「正难则反」的根据。\n\n### 解题步骤\n\n1. 把样本空间列全\n2. 检查各基本事件概率之和是否为 1\n3. 用 1−P(A) 求补事件的概率\n\n### 易错点\n\n样本空间没列全，导致所有基本事件的概率之和小于 1。"
     },
     {
       "schemaVersion": "1.0",
@@ -627,47 +627,47 @@
       "sectionId": "m1-p3-c1-s3",
       "sectionTitle": "概率公理与性质",
       "title": "可列可加性基本思想",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "可列可加性说：若 A₁,A₂,… 两两互斥，则它们并的概率等于各自概率之和。",
       "tags": [
-        "先把事件说清楚"
+        "互斥才可以直接相加"
       ],
       "sortOrder": 130,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "AᵢAⱼ=∅（i≠j）⇒ P(∪Aᵢ)=ΣP(Aᵢ)",
+        "caption": "可列可加性说：若 A₁,A₂,… 两两互斥，则它们并的概率等于各自概率之和。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "zhi-you-liang-liang-hu-chi-de-shi-jian-125sun",
+          "title": "只有两两互斥的事件列才能直接相加",
+          "bodyMarkdown": "只有两两互斥的事件列才能直接相加"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "bu-hu-chi-shi-yao-yong-rong-chi-gong-0aedac",
+          "title": "不互斥时要用容斥公式把重复计算的部分减掉",
+          "bodyMarkdown": "不互斥时要用容斥公式把重复计算的部分减掉"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "ba-fu-za-shi-jian-chai-cheng-hu-chi-046230",
+          "title": "把复杂事件拆成互斥小块是通用手法",
+          "bodyMarkdown": "把复杂事件拆成互斥小块是通用手法，拆分方式不唯一"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "qia-you-yi-ci-zheng-05rn86",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "「恰有一次正面」拆成 {正反} 与 {反正}，两块互斥，概率相加得 1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "可列可加性说：若 A₁,A₂,… 两两互斥，则它们并的概率等于各自概率之和。它是概率可加性的根据，也是「把复杂事件拆成互斥小块再相加」这一套路的来源。\n\n### 解题步骤\n\n1. 把目标事件拆成两两互斥的部分\n2. 分别求每块的概率\n3. 相加得到总概率\n\n### 易错点\n\n对不互斥的事件直接相加，把公共部分算了两遍。"
     },
     {
       "schemaVersion": "1.0",
@@ -678,47 +678,47 @@
       "sectionId": "m1-p3-c1-s3",
       "sectionTitle": "概率公理与性质",
       "title": "加法公式",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "加法公式 P(A∪B) = P(A) + P(B) − P(AB) 处理「至少一个发生」的概率，减掉的正是被重复计算的那部分。",
       "tags": [
-        "先把事件说清楚"
+        "至少一个发生的概率"
       ],
       "sortOrder": 140,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
         "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "caption": "加法公式 P(A∪B) = P(A) + P(B) − P(AB) 处理「至少一个发生」的概率，减掉的正是被重复计算的那部分。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "xian-jia-hou-jian-jian-diao-de-shi-18ir7w",
+          "title": "先加后减",
+          "bodyMarkdown": "先加后减，减掉的是重复计算的交集部分"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "san-shi-jian-yao-an-jia-dan-jian-liang-1nxffj",
+          "title": "三事件要按「加单、减两两交、加三交」的顺序写全",
+          "bodyMarkdown": "三事件要按「加单、减两两交、加三交」的顺序写全"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "hu-chi-shi-jiao-ji-wei-kong-gong-shi-0b88r0",
+          "title": "互斥时交集为空",
+          "bodyMarkdown": "互斥时交集为空，公式退化成概率直接相加"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "p-a-0-5-p-b-0-4-p-ab-0-1x0g1h",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "P(A)=0.5、P(B)=0.4、P(AB)=0.2，则 P(A∪B)=0.5+0.4−0.2=0.7。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "加法公式 P(A∪B) = P(A) + P(B) − P(AB) 处理「至少一个发生」的概率，减掉的正是被重复计算的那部分。三个事件时还要把两两交加回来、再减去三交。\n\n### 解题步骤\n\n1. 判断两个事件是否有公共部分\n2. 有公共部分就减去 P(AB)\n3. 三事件按容斥顺序逐项写全\n\n### 易错点\n\n三个事件时只减两两交，忘了把三交加回来。"
     },
     {
       "schemaVersion": "1.0",
@@ -729,47 +729,47 @@
       "sectionId": "m1-p3-c1-s4",
       "sectionTitle": "古典概型",
       "title": "等可能基本事件",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "古典概型要求样本空间有限、且每个基本事件等可能，此时 P(A) 等于 A 包含的基本事件数除以基本事件总数。",
       "tags": [
-        "先把事件说清楚"
+        "有限且等可能才能用"
       ],
       "sortOrder": 150,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "P(A)=k/n（有限等可能）",
+        "caption": "古典概型要求样本空间有限、且每个基本事件等可能，此时 P(A) 等于 A 包含的基本事件数除以基本事件总数。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "liang-ge-tiao-jian-bi-xu-tong-shi-man-0wwzfd",
+          "title": "两个条件必须同时满足",
+          "bodyMarkdown": "两个条件必须同时满足：样本空间有限 + 各基本事件等可能"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "gai-l-you-li-jie-guo-shu-zong-jie-guo-03bdpu",
+          "title": "概率 = 有利结果数 ÷ 总结果数",
+          "bodyMarkdown": "概率 = 有利结果数 ÷ 总结果数，分子分母口径必须一致"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "deng-ke-neng-bu-cheng-li-shi-bu-neng-080zcr",
+          "title": "等可能不成立时不能用这个公式",
+          "bodyMarkdown": "等可能不成立时不能用这个公式，要回到条件概率或分布去算"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "zhi-liang-ke-tou-zi-04gx3m",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "掷两颗骰子，点数和为 7 的概率是 6/36=1/6（36 种等可能结果）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "古典概型要求样本空间有限、且每个基本事件等可能，此时 P(A) 等于 A 包含的基本事件数除以基本事件总数。判断「是否等可能」是用它的前提。\n\n### 解题步骤\n\n1. 确认有限且等可能\n2. 数出总结果数 n 与有利结果数 k\n3. 算 k/n 并检查结果不超过 1\n\n### 易错点\n\n把「看起来对称」当成等可能，例如「和为 2」与「和为 7」其实并不等可能。"
     },
     {
       "schemaVersion": "1.0",
@@ -780,47 +780,47 @@
       "sectionId": "m1-p3-c1-s4",
       "sectionTitle": "古典概型",
       "title": "排列组合计数",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "排列组合是古典概型的计数工具：有顺序用排列，无顺序用组合，分步相乘、分类相加。",
       "tags": [
-        "先把事件说清楚"
+        "数清楚有利与全部"
       ],
       "sortOrder": 160,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "Aₙᵐ=n!/(n−m)!，Cₙᵐ=n!/[m!(n−m)!]",
+        "caption": "排列组合是古典概型的计数工具：有顺序用排列，无顺序用组合，分步相乘、分类相加。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "you-xu-yong-pai-lie-wu-xu-yong-zu-he-1neil6",
+          "title": "有序用排列、无序用组合",
+          "bodyMarkdown": "有序用排列、无序用组合，判断依据是交换顺序是否算新结果"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "fen-bu-ji-shu-yong-cheng-fa-fen-lei-ji-0kdtf1",
+          "title": "分步计数用乘法、分类计数用加法",
+          "bodyMarkdown": "分步计数用乘法、分类计数用加法，两类不能混用"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "fen-zi-fen-mu-bi-xu-yong-tong-yi-tao-ji-1t8jp6",
+          "title": "分子分母必须用同一套计数规则",
+          "bodyMarkdown": "分子分母必须用同一套计数规则，否则比值没有意义"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "cong-5-ren-zhong-xuan-2-1e6kbr",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "从 5 人中选 2 人值日（无序）有 C₅²=10 种；若分正副班长（有序）则是 A₅²=20 种。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "排列组合是古典概型的计数工具：有顺序用排列，无顺序用组合，分步相乘、分类相加。数错一半概率就全错，所以先要想清楚「顺序算不算不同」。\n\n### 解题步骤\n\n1. 先定「顺序是否算不同」\n2. 分步或分类完成计数\n3. 分子分母用同一套规则\n\n### 易错点\n\n分子用组合、分母用排列，两边口径不一致。"
     },
     {
       "schemaVersion": "1.0",
@@ -831,47 +831,47 @@
       "sectionId": "m1-p3-c1-s5",
       "sectionTitle": "几何概型",
       "title": "长度、面积、体积比",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "几何概型把「等可能」从有限个点换成区域上的均匀取值：概率等于目标区域的测度与总区域测度之比。",
       "tags": [
-        "把几何量切成微元"
+        "几何概型看测度之比"
       ],
       "sortOrder": 170,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "P = m(目标区域) / m(总区域)",
+        "caption": "几何概型把「等可能」从有限个点换成区域上的均匀取值：概率等于目标区域的测度与总区域测度之比。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "gai-l-mu-biao-qu-yu-ce-du-zong-qu-yu-ce-0bof94",
+          "title": "概率 = 目标区域测度 ÷ 总区域测度",
+          "bodyMarkdown": "概率 = 目标区域测度 ÷ 总区域测度，长度、面积、体积同理"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "zong-qu-yu-de-ce-du-bi-xu-you-xian-fou-0v19m8",
+          "title": "总区域的测度必须有限",
+          "bodyMarkdown": "总区域的测度必须有限，否则不能直接用比值定义概率"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "xian-ba-shi-jian-hua-cheng-qu-yu-zai-0ymbe0",
+          "title": "先把事件画成区域",
+          "bodyMarkdown": "先把事件画成区域，再算两个测度，不要凭直觉猜比例"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "zai-0-2-shang-sui-ji-qu-0wirga",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "在 [0,2] 上随机取一点，落在 [0.5,1.5] 内的概率是 1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "几何概型把「等可能」从有限个点换成区域上的均匀取值：概率等于目标区域的测度与总区域测度之比。关键一步是把事件翻译成「落在哪个区域」。\n\n### 解题步骤\n\n1. 把随机取值写成区域上的均匀取点\n2. 把事件翻译成区域条件\n3. 计算两个测度之比\n\n### 易错点\n\n区域取错，例如把「距离小于 1」画成一条线而不是一条带。"
     },
     {
       "schemaVersion": "1.0",
@@ -882,47 +882,47 @@
       "sectionId": "m1-p3-c1-s6",
       "sectionTitle": "条件概率",
       "title": "P(A|B)=P(AB)/P(B)",
-      "summary": "条件概率是在已知 B 发生后，把样本空间缩小到 B，再计算 A 在其中的比例。",
+      "summary": "条件概率 P(A|B) = P(AB)/P(B) 的含义是：在已知 B 发生的条件下，样本空间被压缩到 B 内部，再看 A 占多少。",
       "tags": [
-        "信息改变样本空间"
+        "把样本空间压缩到 B"
       ],
       "sortOrder": 180,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A|B)=P(AB)/P(B)",
-        "caption": "条件概率是在已知 B 发生后，把样本空间缩小到 B，再计算 A 在其中的比例。"
+        "content": "P(A|B)=P(AB)/P(B)（P(B)>0）",
+        "caption": "条件概率 P(A|B) = P(AB)/P(B) 的含义是：在已知 B 发生的条件下，样本空间被压缩到 B 内部，再看 A 占多少。"
       },
       "keyPoints": [
         {
-          "id": "p-a-b-de-fen-mu-shi-p-b",
-          "title": "P(A|B) 的分母是 P(B)",
-          "bodyMarkdown": "P(A|B) 的分母是 P(B)"
+          "id": "fen-mu-p-b-bi-xu-da-yu-0-fou-ze-tiao-0qgotv",
+          "title": "分母 P(B) 必须大于 0",
+          "bodyMarkdown": "分母 P(B) 必须大于 0，否则条件概率没有定义"
         },
         {
-          "id": "du-li-p-a-b-p-a",
-          "title": "独立 ⇔ P(A|B)=P(A)",
-          "bodyMarkdown": "独立 ⇔ P(A|B)=P(A)"
+          "id": "p-a-b-yu-p-b-a-yi-ban-bu-xiang-deng-1flzgl",
+          "title": "P(A|B) 与 P(B|A) 一般不相等",
+          "bodyMarkdown": "P(A|B) 与 P(B|A) 一般不相等，方向不能随便换"
         },
         {
-          "id": "tiao-jian-shun-xu-bu-neng-dian-dao",
-          "title": "条件顺序不能颠倒",
-          "bodyMarkdown": "条件顺序不能颠倒"
+          "id": "tiao-jian-gai-l-ben-shen-ye-shi-gai-l-0282ib",
+          "title": "条件概率本身也是概率",
+          "bodyMarkdown": "条件概率本身也是概率，同样满足三条公理"
         }
       ],
       "examples": [
         {
-          "id": "cong-yi-fu-pai-zhong-yi-0qmx8t",
+          "id": "zhi-tou-zi-yi-zhi-dian-02fzm4",
           "title": "讲解例子",
-          "bodyMarkdown": "从一副牌中已知抽到红牌，再求是方块，概率为 13/26=1/2。"
+          "bodyMarkdown": "掷骰子，已知点数为偶数，求点数大于 3 的概率 = P({4,6})/P({2,4,6})=2/3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "条件概率是在已知 B 发生后，把样本空间缩小到 B，再计算 A 在其中的比例。独立表示知道 B 没有改变 A 的概率，条件概率和独立性要按定义区分。\n\n### 解题步骤\n\n1. 明确已知事件\n2. 写出交集与条件事件\n3. 代入定义并检查分母非零\n\n### 易错点\n\nP(A|B) 通常不等于 P(B|A)，这是条件概率题的核心陷阱。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "条件概率 P(A|B) = P(AB)/P(B) 的含义是：在已知 B 发生的条件下，样本空间被压缩到 B 内部，再看 A 占多少。它不是两个概率相除的技巧，而是换了一个样本空间。\n\n### 解题步骤\n\n1. 确认条件事件的概率不为 0\n2. 把样本空间限制到 B 内\n3. 计算 A∩B 在 B 中的占比\n\n### 易错点\n\n把 P(A|B) 与 P(B|A) 混用：「患病者中检出阳性的比例」不等于「阳性者中真患病的比例」。"
     },
     {
       "schemaVersion": "1.0",
@@ -933,51 +933,47 @@
       "sectionId": "m1-p3-c1-s7",
       "sectionTitle": "乘法公式",
       "title": "两事件乘法公式 P(AB)=P(B)P(A|B)",
-      "summary": "乘法公式把连续发生的事件拆成一段一段的条件概率：先明确最后要发生的联合事件，再沿概率树把每一条路径上的概率相乘。",
+      "summary": "乘法公式把「两个都发生」拆成两步：先让 B 发生，再在 B 已发生的条件下让 A 发生。",
       "tags": [
-        "沿路径相乘"
+        "两个都发生就分两步"
       ],
       "sortOrder": 190,
-      "estimatedMinutes": 5,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A₁A₂…Aₙ)=P(A₁)P(A₂|A₁)…P(Aₙ|A₁…Aₙ)",
-        "caption": "乘法公式把连续发生的事件拆成一段一段的条件概率：先明确最后要发生的联合事件，再沿概率树把每一条路径上的概率相乘。"
+        "content": "P(AB)=P(B)P(A|B)=P(A)P(B|A)",
+        "caption": "乘法公式把「两个都发生」拆成两步：先让 B 发生，再在 B 已发生的条件下让 A 发生。"
       },
       "keyPoints": [
         {
-          "id": "p-ab-p-a-p-b-a-p-b-p-a-b",
-          "title": "P(AB)=P(A)P(B|A)=P(B)P(A",
-          "bodyMarkdown": "P(AB)=P(A)P(B|A)=P(B)P(A|B)"
+          "id": "xian-fa-sheng-de-zuo-tiao-jian-hou-fa-1pzjdv",
+          "title": "先发生的作条件、后发生的作条件事件",
+          "bodyMarkdown": "先发生的作条件、后发生的作条件事件，顺序可以互换"
         },
         {
-          "id": "duo-shi-jian-yong-lian-shi-fen-jie-zhu-0epc13",
-          "title": "多事件用链式分解逐层相乘",
-          "bodyMarkdown": "多事件用链式分解逐层相乘"
+          "id": "p-ab-p-b-p-a-b-p-a-p-b-a-tiao-hao-suan-0gx2av",
+          "title": "P(AB)=P(B)P(A|B)=P(A)P(B",
+          "bodyMarkdown": "P(AB)=P(B)P(A|B)=P(A)P(B|A)，挑好算的那个方向用"
         },
         {
-          "id": "du-li-shi-tiao-jian-gai-l-ke-hua-wei-wu-0jo002",
-          "title": "独立时条件概率可化为无条件概率",
-          "bodyMarkdown": "独立时条件概率可化为无条件概率，但要先验证独立性"
+          "id": "du-li-shi-tui-hua-cheng-p-a-p-b-zhe-shi-1agnvz",
+          "title": "独立时退化成 P(A)P(B)",
+          "bodyMarkdown": "独立时退化成 P(A)P(B)，这时乘法最省事"
         }
       ],
       "examples": [
         {
-          "id": "lian-xu-chou-qu-liang-14073j",
+          "id": "5-jian-chan-pin-zhong-1n21xo",
           "title": "讲解例子",
-          "bodyMarkdown": "连续抽取两张牌都为红牌：按“不放回”写成 P(红₁)P(红₂|红₁)，不能直接用两个 1/2 相乘。"
+          "bodyMarkdown": "5 件产品中有 1 件次品，不放回取两件都合格的概率 =(4/5)(3/4)=3/5。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·概率第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "乘法公式把连续发生的事件拆成一段一段的条件概率：先明确最后要发生的联合事件，再沿概率树把每一条路径上的概率相乘。多事件情形要保持条件顺序，不能把无条件概率直接相乘。\n\n### 解题步骤\n\n1. 写出目标联合事件\n2. 按发生顺序分解条件概率\n3. 沿每条路径相乘并检查条件方向\n\n### 易错点\n\n把 P(A|B) 写成 P(B|A)，或在不独立时直接把 P(AB) 写成 P(A)P(B)。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "乘法公式把「两个都发生」拆成两步：先让 B 发生，再在 B 已发生的条件下让 A 发生。它是求交事件概率的标准工具，也是全概率公式与贝叶斯公式的零件。\n\n### 解题步骤\n\n1. 判断哪个条件概率更好求\n2. 按「先谁后谁」写出公式\n3. 代入数值并检查结果是否合理\n\n### 易错点\n\n不放回抽样仍按独立计算，把第二次的合格率写成 4/5。"
     },
     {
       "schemaVersion": "1.0",
@@ -988,51 +984,47 @@
       "sectionId": "m1-p3-c1-s7",
       "sectionTitle": "乘法公式",
       "title": "多事件乘法公式",
-      "summary": "乘法公式把连续发生的事件拆成一段一段的条件概率：先明确最后要发生的联合事件，再沿概率树把每一条路径上的概率相乘。",
+      "summary": "多事件乘法公式把 P(A₁A₂…Aₙ) 写成一条链：先算第一个事件的概率，再算「在前面的都发生」条件下的第二个概率，依此类推逐项相乘。",
       "tags": [
-        "沿路径相乘"
+        "一条链逐项相乘"
       ],
       "sortOrder": 200,
-      "estimatedMinutes": 5,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A₁A₂…Aₙ)=P(A₁)P(A₂|A₁)…P(Aₙ|A₁…Aₙ)",
-        "caption": "乘法公式把连续发生的事件拆成一段一段的条件概率：先明确最后要发生的联合事件，再沿概率树把每一条路径上的概率相乘。"
+        "content": "P(A₁A₂…Aₙ)=P(A₁)P(A₂|A₁)…P(Aₙ|A₁…Aₙ₋₁)",
+        "caption": "多事件乘法公式把 P(A₁A₂…Aₙ) 写成一条链：先算第一个事件的概率，再算「在前面的都发生」条件下的第二个概率，依此类推逐项相乘。"
       },
       "keyPoints": [
         {
-          "id": "p-ab-p-a-p-b-a-p-b-p-a-b",
-          "title": "P(AB)=P(A)P(B|A)=P(B)P(A",
-          "bodyMarkdown": "P(AB)=P(A)P(B|A)=P(B)P(A|B)"
+          "id": "mei-yi-bu-de-tiao-jian-dou-shi-qian-1nunnf",
+          "title": "每一步的条件都是「前面的事件全部发生」",
+          "bodyMarkdown": "每一步的条件都是「前面的事件全部发生」"
         },
         {
-          "id": "duo-shi-jian-yong-lian-shi-fen-jie-zhu-0epc13",
-          "title": "多事件用链式分解逐层相乘",
-          "bodyMarkdown": "多事件用链式分解逐层相乘"
+          "id": "shun-xu-ke-yi-tiao-zheng-tiao-tiao-jian-0ro7b1",
+          "title": "顺序可以调整",
+          "bodyMarkdown": "顺序可以调整，挑条件概率好算的顺序写"
         },
         {
-          "id": "du-li-shi-tiao-jian-gai-l-ke-hua-wei-wu-0jo002",
-          "title": "独立时条件概率可化为无条件概率",
-          "bodyMarkdown": "独立时条件概率可化为无条件概率，但要先验证独立性"
+          "id": "bu-fang-hui-chou-yang-shi-yang-ben-03g0ds",
+          "title": "不放回抽样时样本量逐次递减",
+          "bodyMarkdown": "不放回抽样时样本量逐次递减，每一项的分母都要跟着改"
         }
       ],
       "examples": [
         {
-          "id": "lian-xu-chou-qu-liang-14073j",
+          "id": "10-jian-chan-pin-zhong-1oumxu",
           "title": "讲解例子",
-          "bodyMarkdown": "连续抽取两张牌都为红牌：按“不放回”写成 P(红₁)P(红₂|红₁)，不能直接用两个 1/2 相乘。"
+          "bodyMarkdown": "10 件产品中 3 件次品，不放回取 3 件都合格 =(7/10)(6/9)(5/8)=7/24。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·概率第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "乘法公式把连续发生的事件拆成一段一段的条件概率：先明确最后要发生的联合事件，再沿概率树把每一条路径上的概率相乘。多事件情形要保持条件顺序，不能把无条件概率直接相乘。\n\n### 解题步骤\n\n1. 写出目标联合事件\n2. 按发生顺序分解条件概率\n3. 沿每条路径相乘并检查条件方向\n\n### 易错点\n\n把 P(A|B) 写成 P(B|A)，或在不独立时直接把 P(AB) 写成 P(A)P(B)。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "多事件乘法公式把 P(A₁A₂…Aₙ) 写成一条链：先算第一个事件的概率，再算「在前面的都发生」条件下的第二个概率，依此类推逐项相乘。\n\n### 解题步骤\n\n1. 排好事件顺序\n2. 逐项写出条件概率\n3. 连乘并检查乘积落在 [0,1] 内\n\n### 易错点\n\n每一步都用最初的分母，忘了不放回会改变样本量。"
     },
     {
       "schemaVersion": "1.0",
@@ -1043,51 +1035,47 @@
       "sectionId": "m1-p3-c1-s7",
       "sectionTitle": "乘法公式",
       "title": "概率树：沿一条路径相乘",
-      "summary": "乘法公式把连续发生的事件拆成一段一段的条件概率：先明确最后要发生的联合事件，再沿概率树把每一条路径上的概率相乘。",
+      "summary": "概率树把多步试验画成分层结构：每一层是一次选择，从根到叶的一条路径对应一种完整结果，路径概率等于沿路各条件概率之积。",
       "tags": [
-        "沿路径相乘"
+        "分层画树再算概率"
       ],
       "sortOrder": 210,
-      "estimatedMinutes": 5,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A₁A₂…Aₙ)=P(A₁)P(A₂|A₁)…P(Aₙ|A₁…Aₙ)",
-        "caption": "乘法公式把连续发生的事件拆成一段一段的条件概率：先明确最后要发生的联合事件，再沿概率树把每一条路径上的概率相乘。"
+        "content": "P(路径)=∏ 沿路条件概率",
+        "caption": "概率树把多步试验画成分层结构：每一层是一次选择，从根到叶的一条路径对应一种完整结果，路径概率等于沿路各条件概率之积。"
       },
       "keyPoints": [
         {
-          "id": "p-ab-p-a-p-b-a-p-b-p-a-b",
-          "title": "P(AB)=P(A)P(B|A)=P(B)P(A",
-          "bodyMarkdown": "P(AB)=P(A)P(B|A)=P(B)P(A|B)"
+          "id": "yi-tiao-lu-jing-de-gai-l-yan-lu-ge-tiao-1uoqoj",
+          "title": "一条路径的概率 = 沿路各条件概率连乘",
+          "bodyMarkdown": "一条路径的概率 = 沿路各条件概率连乘"
         },
         {
-          "id": "duo-shi-jian-yong-lian-shi-fen-jie-zhu-0epc13",
-          "title": "多事件用链式分解逐层相乘",
-          "bodyMarkdown": "多事件用链式分解逐层相乘"
+          "id": "tong-yi-fu-jie-dian-xia-ge-fen-zhi-de-0migsk",
+          "title": "同一父节点下各分支的概率之和必须等于 1",
+          "bodyMarkdown": "同一父节点下各分支的概率之和必须等于 1"
         },
         {
-          "id": "du-li-shi-tiao-jian-gai-l-ke-hua-wei-wu-0jo002",
-          "title": "独立时条件概率可化为无条件概率",
-          "bodyMarkdown": "独立时条件概率可化为无条件概率，但要先验证独立性"
+          "id": "bu-tong-lu-jing-hu-chi-qiu-huo-shi-ba-0gnrjl",
+          "title": "不同路径互斥",
+          "bodyMarkdown": "不同路径互斥，求「或」时把相应路径的概率相加"
         }
       ],
       "examples": [
         {
-          "id": "lian-xu-chou-qu-liang-14073j",
+          "id": "liang-ci-chou-jiang-ge-07lyd0",
           "title": "讲解例子",
-          "bodyMarkdown": "连续抽取两张牌都为红牌：按“不放回”写成 P(红₁)P(红₂|红₁)，不能直接用两个 1/2 相乘。"
+          "bodyMarkdown": "两次抽奖各有 1/2 中奖，「恰好一次中奖」有两条路径，各为 1/4，合计 1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·概率第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "乘法公式把连续发生的事件拆成一段一段的条件概率：先明确最后要发生的联合事件，再沿概率树把每一条路径上的概率相乘。多事件情形要保持条件顺序，不能把无条件概率直接相乘。\n\n### 解题步骤\n\n1. 写出目标联合事件\n2. 按发生顺序分解条件概率\n3. 沿每条路径相乘并检查条件方向\n\n### 易错点\n\n把 P(A|B) 写成 P(B|A)，或在不独立时直接把 P(AB) 写成 P(A)P(B)。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "概率树把多步试验画成分层结构：每一层是一次选择，从根到叶的一条路径对应一种完整结果，路径概率等于沿路各条件概率之积。\n\n### 解题步骤\n\n1. 按试验步骤分层画树\n2. 在每条分支上标注条件概率\n3. 连乘得路径概率，再按需要相加\n\n### 易错点\n\n漏画分支，导致同一层的分支概率之和不为 1（说明样本空间没列全）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1098,51 +1086,47 @@
       "sectionId": "m1-p3-c1-s8",
       "sectionTitle": "全概率公式",
       "title": "完备事件组与全集分解",
-      "summary": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；",
+      "summary": "完备事件组 A₁,…,Aₙ 是一组两两互斥、并为 Ω 的事件，等价于把样本空间完整切开。",
       "tags": [
-        "沿路径拆分"
+        "把全集切成互斥的几块"
       ],
       "sortOrder": 220,
-      "estimatedMinutes": 5,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(B)=ΣP(Aᵢ)P(B|Aᵢ)；P(Aⱼ|B)=P(Aⱼ)P(B|Aⱼ)/P(B)",
-        "caption": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+        "content": "AᵢAⱼ=∅（i≠j），∪Aᵢ=Ω",
+        "caption": "完备事件组 A₁,…,Aₙ 是一组两两互斥、并为 Ω 的事件，等价于把样本空间完整切开。"
       },
       "keyPoints": [
         {
-          "id": "fen-jie-shi-jian-zu-bi-xu-hu-chi-qie-fu-104rjh",
-          "title": "分解事件组必须互斥且覆盖全集（完备事件组）",
-          "bodyMarkdown": "分解事件组必须互斥且覆盖全集（完备事件组）"
+          "id": "liang-liang-hu-chi-qie-bing-wei-quan-ji-03uvxl",
+          "title": "两两互斥且并为全集",
+          "bodyMarkdown": "两两互斥且并为全集，两个条件缺一不可"
         },
         {
-          "id": "quan-gai-l-zheng-xiang-hui-zong-p-b-p-a-0jh3lf",
-          "title": "全概率正向汇总",
-          "bodyMarkdown": "全概率正向汇总：P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+          "id": "chang-yong-de-hua-fen-wei-du-shi-yuan-1kpd1t",
+          "title": "常用的划分维度是「原因」「来源」或「机器」",
+          "bodyMarkdown": "常用的划分维度是「原因」「来源」或「机器」"
         },
         {
-          "id": "bei-ye-si-fen-mu-bao-han-suo-you-neng-0muen5",
-          "title": "贝叶斯分母包含所有能产生该结果的路径",
-          "bodyMarkdown": "贝叶斯分母包含所有能产生该结果的路径"
+          "id": "hua-fen-bi-xu-wan-zheng-lou-diao-yi-0h5za4",
+          "title": "划分必须完整",
+          "bodyMarkdown": "划分必须完整：漏掉一块，算出来的概率一定偏小"
         }
       ],
       "examples": [
         {
-          "id": "jian-ce-yang-xing-hou-0xpc0i",
+          "id": "mou-chan-pin-you-jia-yi-1e40w0",
           "title": "讲解例子",
-          "bodyMarkdown": "检测阳性后求真正患病率：分母必须同时包含真阳性和假阳性两条路径。"
+          "bodyMarkdown": "某产品由甲、乙两条生产线制造，则 {甲线生产, 乙线生产} 构成完备事件组。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·概率第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；贝叶斯则在观察到结果后，把各条路径重新归一化，反推某个原因的后验概率。全概率是正向汇总，贝叶斯是反向推断。\n\n### 解题步骤\n\n1. 找完备事件组\n2. 画概率树并写各路径乘积\n3. 按目标方向求和或归一化\n\n### 易错点\n\n把检测阳性率直接当成患病率，忽略基准比例（先验）和假阳性。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "完备事件组 A₁,…,Aₙ 是一组两两互斥、并为 Ω 的事件，等价于把样本空间完整切开。全概率公式和贝叶斯公式都建立在按完备事件组分解之上。\n\n### 解题步骤\n\n1. 找出把结果分成几类的原因\n2. 检查是否互斥且完整\n3. 用它们分解目标事件\n\n### 易错点\n\n划分有重叠或有遗漏，导致各块概率之和不为 1。"
     },
     {
       "schemaVersion": "1.0",
@@ -1153,51 +1137,47 @@
       "sectionId": "m1-p3-c1-s8",
       "sectionTitle": "全概率公式",
       "title": "全概率公式 P(B)=ΣP(Aᵢ)P(B|Aᵢ)",
-      "summary": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；",
+      "summary": "全概率公式把事件 B 按完备事件组 Aᵢ 拆成互斥的几块，再逐块用乘法公式相加。",
       "tags": [
-        "沿路径拆分"
+        "按原因分类求和"
       ],
       "sortOrder": 230,
       "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(B)=ΣP(Aᵢ)P(B|Aᵢ)；P(Aⱼ|B)=P(Aⱼ)P(B|Aⱼ)/P(B)",
-        "caption": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+        "content": "P(B)=Σᵢ P(Aᵢ)P(B|Aᵢ)",
+        "caption": "全概率公式把事件 B 按完备事件组 Aᵢ 拆成互斥的几块，再逐块用乘法公式相加。"
       },
       "keyPoints": [
         {
-          "id": "fen-jie-shi-jian-zu-bi-xu-hu-chi-qie-fu-104rjh",
-          "title": "分解事件组必须互斥且覆盖全集（完备事件组）",
-          "bodyMarkdown": "分解事件组必须互斥且覆盖全集（完备事件组）"
+          "id": "san-bu-zou-fen-jie-yuan-yin-zhu-kuai-1wdr0d",
+          "title": "三步走：分解原因 → 逐块相乘 → 全部相加",
+          "bodyMarkdown": "三步走：分解原因 → 逐块相乘 → 全部相加"
         },
         {
-          "id": "quan-gai-l-zheng-xiang-hui-zong-p-b-p-a-0jh3lf",
-          "title": "全概率正向汇总",
-          "bodyMarkdown": "全概率正向汇总：P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+          "id": "mei-yi-kuai-dou-shi-gai-yuan-yin-fa-19vwsp",
+          "title": "每一块都是「该原因发生且结果发生」的概率",
+          "bodyMarkdown": "每一块都是「该原因发生且结果发生」的概率"
         },
         {
-          "id": "bei-ye-si-fen-mu-bao-han-suo-you-neng-0muen5",
-          "title": "贝叶斯分母包含所有能产生该结果的路径",
-          "bodyMarkdown": "贝叶斯分母包含所有能产生该结果的路径"
+          "id": "jie-guo-gai-l-yi-ding-jie-yu-ge-p-b-a-1x2ksz",
+          "title": "结果概率一定介于各 P(B|Aᵢ) 的最小值与最",
+          "bodyMarkdown": "结果概率一定介于各 P(B|Aᵢ) 的最小值与最大值之间，可用来验算"
         }
       ],
       "examples": [
         {
-          "id": "jian-ce-yang-xing-hou-0xpc0i",
+          "id": "jia-xian-chan-60-ci-pin-1pibpc",
           "title": "讲解例子",
-          "bodyMarkdown": "检测阳性后求真正患病率：分母必须同时包含真阳性和假阳性两条路径。"
+          "bodyMarkdown": "甲线产 60%（次品率 2%）、乙线产 40%（次品率 5%），任取一件为次品的概率 =0.6×0.02+0.4×0.05=0.032。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·概率第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；贝叶斯则在观察到结果后，把各条路径重新归一化，反推某个原因的后验概率。全概率是正向汇总，贝叶斯是反向推断。\n\n### 解题步骤\n\n1. 找完备事件组\n2. 画概率树并写各路径乘积\n3. 按目标方向求和或归一化\n\n### 易错点\n\n把检测阳性率直接当成患病率，忽略基准比例（先验）和假阳性。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "全概率公式把事件 B 按完备事件组 Aᵢ 拆成互斥的几块，再逐块用乘法公式相加。它解决的是「结果由多种原因造成，求结果发生的概率」这类问题。\n\n### 解题步骤\n\n1. 确定完备事件组（原因）\n2. 算各原因概率与对应条件概率\n3. 逐项相乘后求和\n\n### 易错点\n\n漏掉某个原因，或把 P(Aᵢ) 与 P(B|Aᵢ) 的位置写反。"
     },
     {
       "schemaVersion": "1.0",
@@ -1208,51 +1188,47 @@
       "sectionId": "m1-p3-c1-s8",
       "sectionTitle": "全概率公式",
       "title": "分类汇总：按原因分组后相加",
-      "summary": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；",
+      "summary": "分类汇总是全概率公式的直觉版本：把结果按「它可能从哪里来」分组，组内用乘法算这一组的贡献，组与组之间用加法汇总。",
       "tags": [
-        "沿路径拆分"
+        "组内相乘、组间相加"
       ],
       "sortOrder": 240,
-      "estimatedMinutes": 5,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(B)=ΣP(Aᵢ)P(B|Aᵢ)；P(Aⱼ|B)=P(Aⱼ)P(B|Aⱼ)/P(B)",
-        "caption": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+        "content": "P(B)=Σ 各组内乘积",
+        "caption": "分类汇总是全概率公式的直觉版本：把结果按「它可能从哪里来」分组，组内用乘法算这一组的贡献，组与组之间用加法汇总。"
       },
       "keyPoints": [
         {
-          "id": "fen-jie-shi-jian-zu-bi-xu-hu-chi-qie-fu-104rjh",
-          "title": "分解事件组必须互斥且覆盖全集（完备事件组）",
-          "bodyMarkdown": "分解事件组必须互斥且覆盖全集（完备事件组）"
+          "id": "zu-nei-xiang-cheng-zu-jian-xiang-jia-1izthc",
+          "title": "组内相乘、组间相加",
+          "bodyMarkdown": "组内相乘、组间相加，这是全概率公式的通俗说法"
         },
         {
-          "id": "quan-gai-l-zheng-xiang-hui-zong-p-b-p-a-0jh3lf",
-          "title": "全概率正向汇总",
-          "bodyMarkdown": "全概率正向汇总：P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+          "id": "fen-zu-bi-xu-hu-chi-qie-wan-zheng-fou-1911k1",
+          "title": "分组必须互斥且完整",
+          "bodyMarkdown": "分组必须互斥且完整，否则会重复计算或漏算"
         },
         {
-          "id": "bei-ye-si-fen-mu-bao-han-suo-you-neng-0muen5",
-          "title": "贝叶斯分母包含所有能产生该结果的路径",
-          "bodyMarkdown": "贝叶斯分母包含所有能产生该结果的路径"
+          "id": "fen-zu-yue-xi-jie-guo-bu-bian-dan-ji-0vt8fk",
+          "title": "分组越细结果不变",
+          "bodyMarkdown": "分组越细结果不变，但计算量会变大，选合适的粒度即可"
         }
       ],
       "examples": [
         {
-          "id": "jian-ce-yang-xing-hou-0xpc0i",
+          "id": "ba-chi-dao-an-zuo-di-0rpruj",
           "title": "讲解例子",
-          "bodyMarkdown": "检测阳性后求真正患病率：分母必须同时包含真阳性和假阳性两条路径。"
+          "bodyMarkdown": "把「迟到」按「坐地铁 / 坐公交」分组，分别算出概率再相加。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·概率第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；贝叶斯则在观察到结果后，把各条路径重新归一化，反推某个原因的后验概率。全概率是正向汇总，贝叶斯是反向推断。\n\n### 解题步骤\n\n1. 找完备事件组\n2. 画概率树并写各路径乘积\n3. 按目标方向求和或归一化\n\n### 易错点\n\n把检测阳性率直接当成患病率，忽略基准比例（先验）和假阳性。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "分类汇总是全概率公式的直觉版本：把结果按「它可能从哪里来」分组，组内用乘法算这一组的贡献，组与组之间用加法汇总。分组标准必须互斥且完整。\n\n### 解题步骤\n\n1. 选一个能把情况分干净的维度\n2. 在每组内算条件概率的乘积\n3. 把所有组的结果相加\n\n### 易错点\n\n把同一种情况分进两组，导致重复计算。"
     },
     {
       "schemaVersion": "1.0",
@@ -1263,51 +1239,47 @@
       "sectionId": "m1-p3-c1-s9",
       "sectionTitle": "贝叶斯公式",
       "title": "贝叶斯公式 P(Aⱼ|B)=P(Aⱼ)P(B|Aⱼ)/P(B)",
-      "summary": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；",
+      "summary": "贝叶斯公式在观察到结果 B 之后，反过来更新对原因 Aⱼ 的判断：分子是「这条路径」的概率，分母是所有路径概率之和（通常由全概率公式算出）。",
       "tags": [
-        "沿路径拆分"
+        "由结果反推原因"
       ],
       "sortOrder": 250,
-      "estimatedMinutes": 5,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(B)=ΣP(Aᵢ)P(B|Aᵢ)；P(Aⱼ|B)=P(Aⱼ)P(B|Aⱼ)/P(B)",
-        "caption": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+        "content": "P(Aⱼ|B)=P(Aⱼ)P(B|Aⱼ)/ΣᵢP(Aᵢ)P(B|Aᵢ)",
+        "caption": "贝叶斯公式在观察到结果 B 之后，反过来更新对原因 Aⱼ 的判断：分子是「这条路径」的概率，分母是所有路径概率之和（通常由全概率公式算出）。"
       },
       "keyPoints": [
         {
-          "id": "fen-jie-shi-jian-zu-bi-xu-hu-chi-qie-fu-104rjh",
-          "title": "分解事件组必须互斥且覆盖全集（完备事件组）",
-          "bodyMarkdown": "分解事件组必须互斥且覆盖全集（完备事件组）"
+          "id": "fen-mu-shi-p-b-yong-quan-gai-l-gong-shi-0h3f0u",
+          "title": "分母是 P(B)",
+          "bodyMarkdown": "分母是 P(B)，用全概率公式在所有原因上求和得到"
         },
         {
-          "id": "quan-gai-l-zheng-xiang-hui-zong-p-b-p-a-0jh3lf",
-          "title": "全概率正向汇总",
-          "bodyMarkdown": "全概率正向汇总：P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+          "id": "xian-yan-gai-l-p-a-bei-jie-guo-b-xiu-10a4qm",
+          "title": "先验概率 P(Aⱼ) 被结果 B 修正为后验概率",
+          "bodyMarkdown": "先验概率 P(Aⱼ) 被结果 B 修正为后验概率"
         },
         {
-          "id": "bei-ye-si-fen-mu-bao-han-suo-you-neng-0muen5",
-          "title": "贝叶斯分母包含所有能产生该结果的路径",
-          "bodyMarkdown": "贝叶斯分母包含所有能产生该结果的路径"
+          "id": "p-b-a-gao-yu-ping-jun-shui-ping-shi-hou-016v7w",
+          "title": "P(B|Aⱼ) 高于平均水平时后验大于先验",
+          "bodyMarkdown": "P(B|Aⱼ) 高于平均水平时后验大于先验，反之小于先验"
         }
       ],
       "examples": [
         {
-          "id": "jian-ce-yang-xing-hou-0xpc0i",
+          "id": "shang-li-zhong-ruo-chou-09hysa",
           "title": "讲解例子",
-          "bodyMarkdown": "检测阳性后求真正患病率：分母必须同时包含真阳性和假阳性两条路径。"
+          "bodyMarkdown": "上例中若抽到次品，它来自乙线的概率 =0.4×0.05/0.032=0.625。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·概率第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；贝叶斯则在观察到结果后，把各条路径重新归一化，反推某个原因的后验概率。全概率是正向汇总，贝叶斯是反向推断。\n\n### 解题步骤\n\n1. 找完备事件组\n2. 画概率树并写各路径乘积\n3. 按目标方向求和或归一化\n\n### 易错点\n\n把检测阳性率直接当成患病率，忽略基准比例（先验）和假阳性。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "贝叶斯公式在观察到结果 B 之后，反过来更新对原因 Aⱼ 的判断：分子是「这条路径」的概率，分母是所有路径概率之和（通常由全概率公式算出）。\n\n### 解题步骤\n\n1. 写出先验概率与各条件概率\n2. 用全概率公式算出 P(B)\n3. 代入公式求后验概率\n\n### 易错点\n\n分子分母用错路径，或忘了分母要覆盖全部原因。"
     },
     {
       "schemaVersion": "1.0",
@@ -1318,51 +1290,47 @@
       "sectionId": "m1-p3-c1-s9",
       "sectionTitle": "贝叶斯公式",
       "title": "后验概率",
-      "summary": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；",
+      "summary": "后验概率是观察到结果之后重新计算的原因概率，它把先验概率和似然 P(B|A) 结合起来。",
       "tags": [
-        "沿路径拆分"
+        "拿到证据之后重新估计"
       ],
       "sortOrder": 260,
-      "estimatedMinutes": 5,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(B)=ΣP(Aᵢ)P(B|Aᵢ)；P(Aⱼ|B)=P(Aⱼ)P(B|Aⱼ)/P(B)",
-        "caption": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+        "content": "P(Aⱼ|B) ∝ P(Aⱼ)P(B|Aⱼ)",
+        "caption": "后验概率是观察到结果之后重新计算的原因概率，它把先验概率和似然 P(B|A) 结合起来。"
       },
       "keyPoints": [
         {
-          "id": "fen-jie-shi-jian-zu-bi-xu-hu-chi-qie-fu-104rjh",
-          "title": "分解事件组必须互斥且覆盖全集（完备事件组）",
-          "bodyMarkdown": "分解事件组必须互斥且覆盖全集（完备事件组）"
+          "id": "hou-yan-xian-yan-si-ran-san-zhe-gou-1mnkqr",
+          "title": "后验 ∝ 先验 × 似然",
+          "bodyMarkdown": "后验 ∝ 先验 × 似然，三者构成贝叶斯公式的三块"
         },
         {
-          "id": "quan-gai-l-zheng-xiang-hui-zong-p-b-p-a-0jh3lf",
-          "title": "全概率正向汇总",
-          "bodyMarkdown": "全概率正向汇总：P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+          "id": "zheng-ju-de-qu-fen-du-yue-gao-hou-yan-1ykc81",
+          "title": "证据的区分度越高",
+          "bodyMarkdown": "证据的区分度越高，后验偏离先验越远"
         },
         {
-          "id": "bei-ye-si-fen-mu-bao-han-suo-you-neng-0muen5",
-          "title": "贝叶斯分母包含所有能产生该结果的路径",
-          "bodyMarkdown": "贝叶斯分母包含所有能产生该结果的路径"
+          "id": "suo-you-yuan-yin-de-hou-yan-gai-l-zhi-0owi8r",
+          "title": "所有原因的后验概率之和必须等于 1",
+          "bodyMarkdown": "所有原因的后验概率之和必须等于 1，可用来验算"
         }
       ],
       "examples": [
         {
-          "id": "jian-ce-yang-xing-hou-0xpc0i",
+          "id": "jian-ce-ling-min-du-95-101yzk",
           "title": "讲解例子",
-          "bodyMarkdown": "检测阳性后求真正患病率：分母必须同时包含真阳性和假阳性两条路径。"
+          "bodyMarkdown": "检测灵敏度 95%、假阳性 5%、患病率 1% 时，阳性者真患病的后验约 16%。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·概率第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；贝叶斯则在观察到结果后，把各条路径重新归一化，反推某个原因的后验概率。全概率是正向汇总，贝叶斯是反向推断。\n\n### 解题步骤\n\n1. 找完备事件组\n2. 画概率树并写各路径乘积\n3. 按目标方向求和或归一化\n\n### 易错点\n\n把检测阳性率直接当成患病率，忽略基准比例（先验）和假阳性。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "后验概率是观察到结果之后重新计算的原因概率，它把先验概率和似然 P(B|A) 结合起来。考研题里通常就是贝叶斯公式算出的那个值。\n\n### 解题步骤\n\n1. 写下各原因的先验概率\n2. 计算各原因的似然\n3. 归一化得到后验概率\n\n### 易错点\n\n把后验当成新的先验继续套用，或忘记归一化（各原因后验之和不为 1）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1373,51 +1341,47 @@
       "sectionId": "m1-p3-c1-s9",
       "sectionTitle": "贝叶斯公式",
       "title": "反向推断：由结果追溯原因",
-      "summary": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；",
+      "summary": "反向推断是先有结果、再问「最可能来自哪个原因」，属于贝叶斯公式的应用场景。",
       "tags": [
-        "沿路径拆分"
+        "已知结果问原因"
       ],
       "sortOrder": 270,
-      "estimatedMinutes": 5,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(B)=ΣP(Aᵢ)P(B|Aᵢ)；P(Aⱼ|B)=P(Aⱼ)P(B|Aⱼ)/P(B)",
-        "caption": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+        "content": "P(原因|结果)=P(原因)P(结果|原因)/P(结果)",
+        "caption": "反向推断是先有结果、再问「最可能来自哪个原因」，属于贝叶斯公式的应用场景。"
       },
       "keyPoints": [
         {
-          "id": "fen-jie-shi-jian-zu-bi-xu-hu-chi-qie-fu-104rjh",
-          "title": "分解事件组必须互斥且覆盖全集（完备事件组）",
-          "bodyMarkdown": "分解事件组必须互斥且覆盖全集（完备事件组）"
+          "id": "zheng-xiang-shi-yuan-yin-jie-guo-fan-1xkjoj",
+          "title": "正向是「原因→结果」",
+          "bodyMarkdown": "正向是「原因→结果」，反向是「结果→原因」，所求量不同"
         },
         {
-          "id": "quan-gai-l-zheng-xiang-hui-zong-p-b-p-a-0jh3lf",
-          "title": "全概率正向汇总",
-          "bodyMarkdown": "全概率正向汇总：P(B)=ΣP(Aᵢ)P(B|Aᵢ)"
+          "id": "fan-xiang-tui-duan-bi-xu-jie-zhu-quan-1qrh6x",
+          "title": "反向推断必须借助全概率公式得到分母",
+          "bodyMarkdown": "反向推断必须借助全概率公式得到分母"
         },
         {
-          "id": "bei-ye-si-fen-mu-bao-han-suo-you-neng-0muen5",
-          "title": "贝叶斯分母包含所有能产生该结果的路径",
-          "bodyMarkdown": "贝叶斯分母包含所有能产生该结果的路径"
+          "id": "suo-qiu-tong-chang-shi-p-yuan-yin-jie-0j03k2",
+          "title": "所求通常是 P(原因|结果)",
+          "bodyMarkdown": "所求通常是 P(原因|结果)，注意条件的写法"
         }
       ],
       "examples": [
         {
-          "id": "jian-ce-yang-xing-hou-0xpc0i",
+          "id": "yi-zhi-ji-qi-bao-jing-0476n5",
           "title": "讲解例子",
-          "bodyMarkdown": "检测阳性后求真正患病率：分母必须同时包含真阳性和假阳性两条路径。"
+          "bodyMarkdown": "「已知机器报警，求确实发生故障的概率」就是典型的反向推断。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·概率第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "全概率公式来自全集分解思想：把目标事件按互斥且完备的原因 A₁,…,Aₙ 拆开，P(B)=ΣP(Aᵢ)P(B|Aᵢ)，沿每条路径求乘积再汇总；贝叶斯则在观察到结果后，把各条路径重新归一化，反推某个原因的后验概率。全概率是正向汇总，贝叶斯是反向推断。\n\n### 解题步骤\n\n1. 找完备事件组\n2. 画概率树并写各路径乘积\n3. 按目标方向求和或归一化\n\n### 易错点\n\n把检测阳性率直接当成患病率，忽略基准比例（先验）和假阳性。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "反向推断是先有结果、再问「最可能来自哪个原因」，属于贝叶斯公式的应用场景。做题时先分清题目给的是「原因→结果」还是「结果→原因」，别把条件概率的方向写反。\n\n### 解题步骤\n\n1. 标出题目给的是正向还是反向\n2. 正向用全概率公式，反向用贝叶斯公式\n3. 检查答案是否落在 [0,1] 内\n\n### 易错点\n\n把「故障时报警的概率」直接当成「报警时故障的概率」。"
     },
     {
       "schemaVersion": "1.0",
@@ -1428,47 +1392,47 @@
       "sectionId": "m1-p3-c1-s10",
       "sectionTitle": "独立性",
       "title": "两事件独立",
-      "summary": "条件概率是在已知 B 发生后，把样本空间缩小到 B，再计算 A 在其中的比例。",
+      "summary": "A 与 B 独立指 P(AB) = P(A)P(B)，当 P(B) > 0 时等价于 P(A|B) = P(A)。",
       "tags": [
-        "信息改变样本空间"
+        "一个发生不影响另一个"
       ],
       "sortOrder": 280,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A|B)=P(AB)/P(B)",
-        "caption": "条件概率是在已知 B 发生后，把样本空间缩小到 B，再计算 A 在其中的比例。"
+        "content": "P(AB)=P(A)P(B)",
+        "caption": "A 与 B 独立指 P(AB) = P(A)P(B)，当 P(B) > 0 时等价于 P(A|B) = P(A)。"
       },
       "keyPoints": [
         {
-          "id": "p-a-b-de-fen-mu-shi-p-b",
-          "title": "P(A|B) 的分母是 P(B)",
-          "bodyMarkdown": "P(A|B) 的分母是 P(B)"
+          "id": "ding-yi-shi-shi-p-ab-p-a-p-b-pan-duan-0w1b09",
+          "title": "定义式是 P(AB)=P(A)P(B)",
+          "bodyMarkdown": "定义式是 P(AB)=P(A)P(B)，判断独立就验这一个式子"
         },
         {
-          "id": "du-li-p-a-b-p-a",
-          "title": "独立 ⇔ P(A|B)=P(A)",
-          "bodyMarkdown": "独立 ⇔ P(A|B)=P(A)"
+          "id": "deng-jia-xing-shi-p-a-b-p-a-geng-zhi-0kkz0q",
+          "title": "等价形式 P(A|B)=P(A) 更直观",
+          "bodyMarkdown": "等价形式 P(A|B)=P(A) 更直观：条件不改变概率"
         },
         {
-          "id": "tiao-jian-shun-xu-bu-neng-dian-dao",
-          "title": "条件顺序不能颠倒",
-          "bodyMarkdown": "条件顺序不能颠倒"
+          "id": "du-li-yu-hu-chi-shi-liang-ge-bu-tong-1xc6xe",
+          "title": "独立与互斥是两个不同概念",
+          "bodyMarkdown": "独立与互斥是两个不同概念，不能互相推"
         }
       ],
       "examples": [
         {
-          "id": "cong-yi-fu-pai-zhong-yi-0qmx8t",
+          "id": "pao-liang-ci-ying-bi-di-11hhd4",
           "title": "讲解例子",
-          "bodyMarkdown": "从一副牌中已知抽到红牌，再求是方块，概率为 13/26=1/2。"
+          "bodyMarkdown": "抛两次硬币，「第一次正面」与「第二次正面」独立：概率 =1/2×1/2=1/4。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "条件概率是在已知 B 发生后，把样本空间缩小到 B，再计算 A 在其中的比例。独立表示知道 B 没有改变 A 的概率，条件概率和独立性要按定义区分。\n\n### 解题步骤\n\n1. 明确已知事件\n2. 写出交集与条件事件\n3. 代入定义并检查分母非零\n\n### 易错点\n\nP(A|B) 通常不等于 P(B|A)，这是条件概率题的核心陷阱。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "A 与 B 独立指 P(AB) = P(A)P(B)，当 P(B) > 0 时等价于 P(A|B) = P(A)。独立是概率意义上的互不影响，不是日常说的「两件事没有关系」。\n\n### 解题步骤\n\n1. 分别算出 P(A)、P(B)、P(AB)\n2. 验证乘积是否相等\n3. 独立时用乘法直接算交事件概率\n\n### 易错点\n\n由「互斥」推「独立」：两个概率都大于 0 的互斥事件一定不独立。"
     },
     {
       "schemaVersion": "1.0",
@@ -1479,47 +1443,47 @@
       "sectionId": "m1-p3-c1-s10",
       "sectionTitle": "独立性",
       "title": "多事件独立",
-      "summary": "条件概率是在已知 B 发生后，把样本空间缩小到 B，再计算 A 在其中的比例。",
+      "summary": "n 个事件相互独立要求任意 k 个（k = 2,…,n）事件交的概率都等于各自概率之积，只验证两两独立是不够的。",
       "tags": [
-        "信息改变样本空间"
+        "任意子集都要成立"
       ],
       "sortOrder": 290,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A|B)=P(AB)/P(B)",
-        "caption": "条件概率是在已知 B 发生后，把样本空间缩小到 B，再计算 A 在其中的比例。"
+        "content": "P(Aᵢ₁…Aᵢₖ)=∏P(Aᵢⱼ)，1≤k≤n",
+        "caption": "n 个事件相互独立要求任意 k 个（k = 2,…,n）事件交的概率都等于各自概率之积，只验证两两独立是不够的。"
       },
       "keyPoints": [
         {
-          "id": "p-a-b-de-fen-mu-shi-p-b",
-          "title": "P(A|B) 的分母是 P(B)",
-          "bodyMarkdown": "P(A|B) 的分母是 P(B)"
+          "id": "yao-yan-zheng-suo-you-k-yuan-zi-ji-k-2-1tyrgf",
+          "title": "要验证所有 k 元子集（k≥2）",
+          "bodyMarkdown": "要验证所有 k 元子集（k≥2），不能只看两两"
         },
         {
-          "id": "du-li-p-a-b-p-a",
-          "title": "独立 ⇔ P(A|B)=P(A)",
-          "bodyMarkdown": "独立 ⇔ P(A|B)=P(A)"
+          "id": "liang-liang-du-li-tui-bu-chu-xiang-hu-13vcak",
+          "title": "两两独立推不出相互独立",
+          "bodyMarkdown": "两两独立推不出相互独立，反之一定成立"
         },
         {
-          "id": "tiao-jian-shun-xu-bu-neng-dian-dao",
-          "title": "条件顺序不能颠倒",
-          "bodyMarkdown": "条件顺序不能颠倒"
+          "id": "kao-shi-li-chang-gei-liang-liang-du-li-02218c",
+          "title": "考试里常给「两两独立但不相互独立」的反例来设陷阱",
+          "bodyMarkdown": "考试里常给「两两独立但不相互独立」的反例来设陷阱"
         }
       ],
       "examples": [
         {
-          "id": "cong-yi-fu-pai-zhong-yi-0qmx8t",
+          "id": "cun-zai-san-ge-shi-jian-18ayb7",
           "title": "讲解例子",
-          "bodyMarkdown": "从一副牌中已知抽到红牌，再求是方块，概率为 13/26=1/2。"
+          "bodyMarkdown": "存在三个事件两两独立，但 P(ABC) ≠ P(A)P(B)P(C)，说明两两独立不够。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "条件概率是在已知 B 发生后，把样本空间缩小到 B，再计算 A 在其中的比例。独立表示知道 B 没有改变 A 的概率，条件概率和独立性要按定义区分。\n\n### 解题步骤\n\n1. 明确已知事件\n2. 写出交集与条件事件\n3. 代入定义并检查分母非零\n\n### 易错点\n\nP(A|B) 通常不等于 P(B|A)，这是条件概率题的核心陷阱。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "n 个事件相互独立要求任意 k 个（k = 2,…,n）事件交的概率都等于各自概率之积，只验证两两独立是不够的。\n\n### 解题步骤\n\n1. 列出所有至少二元的子集\n2. 逐个验证乘积等式\n3. 确认没有漏掉三元及以上的组合\n\n### 易错点\n\n只验证 P(ABC)=P(A)P(B)P(C) 就断言相互独立（还必须验两两）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1530,47 +1494,47 @@
       "sectionId": "m1-p3-c1-s10",
       "sectionTitle": "独立性",
       "title": "独立与互斥的区别",
-      "summary": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。",
+      "summary": "互斥说的是「不能同时发生」（A∩B = ∅），独立说的是「发生与否互不影响」（P(AB) = P(A)P(B)）。",
       "tags": [
-        "先把事件说清楚"
+        "两套完全不同的条件"
       ],
       "sortOrder": 300,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "P(A∪B)=P(A)+P(B)−P(AB)",
-        "caption": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。"
+        "content": "互斥：A∩B=∅；独立：P(AB)=P(A)P(B)",
+        "caption": "互斥说的是「不能同时发生」（A∩B = ∅），独立说的是「发生与否互不影响」（P(AB) = P(A)P(B)）。"
       },
       "keyPoints": [
         {
-          "id": "a-biao-shi-a-shi-shi-jian",
-          "title": "A⊂Ω 表示 A 是事件",
-          "bodyMarkdown": "A⊂Ω 表示 A 是事件"
+          "id": "hu-chi-shi-ji-he-bu-xiang-jiao-du-li-0elnif",
+          "title": "互斥是集合不相交",
+          "bodyMarkdown": "互斥是集合不相交，独立是概率可乘，出发点不同"
         },
         {
-          "id": "a-shi-a-bu-fa-sheng",
-          "title": "Aᶜ 是 A 不发生",
-          "bodyMarkdown": "Aᶜ 是 A 不发生"
+          "id": "p-a-0-qie-p-b-0-shi-hu-chi-yu-du-li-hu-1skesr",
+          "title": "P(A)>0 且 P(B)>0 时",
+          "bodyMarkdown": "P(A)>0 且 P(B)>0 时，互斥与独立互相排斥"
         },
         {
-          "id": "hu-chi-shi-jiao-ji-wei-kong-bu-deng-yu-1uv2hn",
-          "title": "互斥是交集为空",
-          "bodyMarkdown": "互斥是交集为空，不等于独立"
+          "id": "pan-duan-shi-xian-wen-neng-bu-neng-tong-1pvg9y",
+          "title": "判断时先问「能不能同时发生」",
+          "bodyMarkdown": "判断时先问「能不能同时发生」，再用乘积式检验独立"
         }
       ],
       "examples": [
         {
-          "id": "chou-liang-zhang-pai-0yhyyu",
+          "id": "pao-yi-ci-ying-bi-zheng-0kavfb",
           "title": "讲解例子",
-          "bodyMarkdown": "抽两张牌至少有一张红牌，可用总数减去“两张都不是红牌”。"
+          "bodyMarkdown": "抛一次硬币，{正面} 与 {反面} 互斥但不独立：P(正反)=0 ≠ 1/4。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
-      "updatedAt": "2026-09-18T12:12:14Z",
-      "bodyMarkdown": "概率计算的第一步是建立样本空间 Ω，再把文字条件翻译成事件。并、交、补和互斥关系决定能否使用加法公式；事件定义越清楚，后面的计数越不容易错。\n\n### 解题步骤\n\n1. 列基本结果\n2. 定义目标事件\n3. 画集合关系并选公式\n\n### 易错点\n\n把“互斥”误认为“独立”；非平凡事件互斥时通常反而不独立。"
+      "updatedAt": "2026-09-18T12:20:27Z",
+      "bodyMarkdown": "互斥说的是「不能同时发生」（A∩B = ∅），独立说的是「发生与否互不影响」（P(AB) = P(A)P(B)）。当两个事件的概率都大于 0 时，这两种关系不可能同时成立。\n\n### 解题步骤\n\n1. 先判断两个事件能否同时发生\n2. 再用乘积式检验是否独立\n3. 注意零概率事件的特殊情形\n\n### 易错点\n\n把「互不影响」理解成「没有交集」，把两个概念混着用。"
     }
   ]
 }
