@@ -780,47 +780,47 @@
       "sectionId": "m1-p2-c3-s5",
       "sectionTitle": "向量组的秩",
       "title": "与矩阵行秩/列秩的关系",
-      "summary": "矩阵的行秩与列秩相等且都等于矩阵的秩：因此按列拼的向量组秩、按行拼的向量组秩、矩阵秩三者是同一个数——求哪一个都走「行变换化阶梯」。",
+      "summary": "把向量组按列拼成矩阵后，向量组的秩 = 矩阵的列秩；同时矩阵的行秩 = 列秩 = 矩阵秩——「三秩合一」让行向量组、列向量组、矩阵秩互相换算。",
       "tags": [
-        "行秩、列秩、矩阵秩合一"
+        "三秩合一"
       ],
       "sortOrder": 160,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "r(A)=行秩=列秩",
-        "caption": "矩阵的行秩与列秩相等且都等于矩阵的秩：因此按列拼的向量组秩、按行拼的向量组秩、矩阵秩三者是同一个数——求哪一个都走「行变换化阶梯」。"
+        "content": "r(A)=r(Aᵀ)=列秩=行秩",
+        "caption": "把向量组按列拼成矩阵后，向量组的秩 = 矩阵的列秩；同时矩阵的行秩 = 列秩 = 矩阵秩——「三秩合一」让行向量组、列向量组、矩阵秩互相换算。"
       },
       "keyPoints": [
         {
-          "id": "lie-zhi-xing-zhi-r-a",
-          "title": "列秩 = 行秩 = r(A)",
-          "bodyMarkdown": "列秩 = 行秩 = r(A)"
+          "id": "lie-xiang-liang-zu-de-zhi-r-a",
+          "title": "列向量组的秩 = r(A)",
+          "bodyMarkdown": "列向量组的秩 = r(A)"
         },
         {
-          "id": "xiang-liang-zu-de-zhi-pin-ju-zhen-hou-1wvlcd",
-          "title": "向量组的秩 = 拼矩阵后的秩",
-          "bodyMarkdown": "向量组的秩 = 拼矩阵后的秩"
+          "id": "xing-xiang-liang-zu-de-zhi-r-a-lie-zhi",
+          "title": "行向量组的秩 = r(A)（=列秩）",
+          "bodyMarkdown": "行向量组的秩 = r(A)（=列秩）"
         },
         {
-          "id": "r-a-r-a-bao-zheng-xing-zu-lie-zu-hu-tong",
-          "title": "r(A)=r(Aᵀ) 保证行组、列组互通",
-          "bodyMarkdown": "r(A)=r(Aᵀ) 保证行组、列组互通"
+          "id": "r-a-r-a-sui-shi-ke-yong",
+          "title": "r(A)=r(Aᵀ) 随时可用",
+          "bodyMarkdown": "r(A)=r(Aᵀ) 随时可用"
         }
       ],
       "examples": [
         {
-          "id": "3-4-ju-zhen-xing-jie-ti-0aujls",
+          "id": "xing-xiang-liang-zu-qiu-0fvlex",
           "title": "讲解例子",
-          "bodyMarkdown": "3×4 矩阵行阶梯有 2 个非零行：列向量组与行向量组的秩都是 2。"
+          "bodyMarkdown": "行向量组求秩：转置按列拼，或直接化行阶梯数非零行。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "矩阵的行秩与列秩相等且都等于矩阵的秩：因此按列拼的向量组秩、按行拼的向量组秩、矩阵秩三者是同一个数——求哪一个都走「行变换化阶梯」。\n\n### 解题步骤\n\n1. 选拼法（列或行）\n2. 化行阶梯\n3. 读非零行数\n\n### 易错点\n\n认为行向量组必须「按行变换」求秩——列向量、行向量殊途同归。"
+      "bodyMarkdown": "把向量组按列拼成矩阵后，向量组的秩 = 矩阵的列秩；同时矩阵的行秩 = 列秩 = 矩阵秩——「三秩合一」让行向量组、列向量组、矩阵秩互相换算。\n\n### 解题步骤\n\n1. 按列（行）拼矩阵\n2. 求矩阵秩\n3. 即向量组的秩\n\n### 易错点\n\n行向量组的秩要按「行」数？不必——三秩合一，怎么拼都一样。"
     },
     {
       "schemaVersion": "1.0",

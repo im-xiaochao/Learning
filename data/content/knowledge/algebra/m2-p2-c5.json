@@ -15,47 +15,47 @@
       "sectionId": "m2-p2-c5-s1",
       "sectionTitle": "特征值、特征向量",
       "title": "Aα=λα",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "特征值与特征向量的定义式 Aα=λα：方阵 A 作用在非零向量 α 上只产生「伸缩」不改变方向（或反向），伸缩倍数 λ 就是特征值、α 是对应特征向量。",
       "tags": [
-        "用坐标描述方向"
+        "方向不变的向量"
       ],
       "sortOrder": 10,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "Aα=λα（α≠0）",
+        "caption": "特征值与特征向量的定义式 Aα=λα：方阵 A 作用在非零向量 α 上只产生「伸缩」不改变方向（或反向）"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "a-shi-ding-yi-deng-shi-fu-shu-yu-tao-lun",
+          "title": "Aα=λα 是定义等式（λ 复数域讨论）",
+          "bodyMarkdown": "Aα=λα 是定义等式（λ 复数域讨论）"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "fang-xiang-bu-bian-huo-qia-hao-fan-xiang",
+          "title": "α 方向不变（或恰好反向）",
+          "bodyMarkdown": "α 方向不变（或恰好反向）"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "yi-ge-te-zheng-zhi-dui-ying-wu-qiong-0z992m",
+          "title": "一个特征值对应无穷多个特征向量（差常数倍）",
+          "bodyMarkdown": "一个特征值对应无穷多个特征向量（差常数倍）"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "a-2-0-0-3-e-man-zu-ae-0guvjl",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "A=(2 0; 0 3)：e₁ 满足 Ae₁=2e₁，λ=2 对应 e₁。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "特征值与特征向量的定义式 Aα=λα：方阵 A 作用在非零向量 α 上只产生「伸缩」不改变方向（或反向），伸缩倍数 λ 就是特征值、α 是对应特征向量。\n\n### 解题步骤\n\n1. 验证等式成立\n2. 读出 λ 与 α\n3. 检查 α≠0\n\n### 易错点\n\n把 λ 当成向量分量——λ 是标量倍数，不是 α 的某个分量。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m2-p2-c5-s1",
       "sectionTitle": "特征值、特征向量",
       "title": "α≠0",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "特征向量必须是非零向量：α=0 时 A·0=λ·0 对任何 λ 都成立，定义就失效了；「α≠0」是定义的一部分，验证特征向量先查它。",
       "tags": [
-        "用坐标描述方向"
+        "定义里的强制条件"
       ],
       "sortOrder": 20,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "α≠0 且 Aα=λα",
+        "caption": "特征向量必须是非零向量：α=0 时 A·0=λ·0 对任何 λ 都成立，定义就失效了；「α≠0」是定义的一部分，验证特征向量先查它。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "ling-xiang-liang-bu-shi-ren-he-te-zheng-061t09",
+          "title": "零向量不是任何特征值的特征向量",
+          "bodyMarkdown": "零向量不是任何特征值的特征向量"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "te-zheng-xiang-liang-fei-ling-shi-ding-1l0pw6",
+          "title": "特征向量非零是定义要求",
+          "bodyMarkdown": "特征向量非零是定义要求"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "te-zheng-zhi-ke-yi-wei-0-a-bu-ke-ni-shi",
+          "title": "特征值可以为 0（A 不可逆时）",
+          "bodyMarkdown": "特征值可以为 0（A 不可逆时）"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "0-shi-te-zheng-xiang-13rn23",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "λ=0 时特征向量仍非零：Aα=0 的非零解就是 λ=0 的特征向量。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "特征向量必须是非零向量：α=0 时 A·0=λ·0 对任何 λ 都成立，定义就失效了；「α≠0」是定义的一部分，验证特征向量先查它。\n\n### 解题步骤\n\n1. 求出候选 α\n2. 验证 α≠0\n3. 再代回 Aα=λα\n\n### 易错点\n\n把「特征值为 0」与「特征向量为 0」混为一谈——值可为 0，向量不行。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m2-p2-c5-s1",
       "sectionTitle": "特征值、特征向量",
       "title": "几何意义",
-      "summary": "曲线上的割线在第二个点逼近第一个点时，最终趋向切线。导数就是切线相对 x 轴的斜率，它描述的是局部一阶趋势，而不是整段区间的平均走势。",
+      "summary": "几何上：特征向量是线性变换下「方向不改变」的方向，特征值是该方向上的伸缩倍数——λ>1 拉长、0<λ<1 压缩、λ<0 反向、λ=0 压扁到原点。",
       "tags": [
-        "切线斜率"
+        "不变方向与伸缩倍数"
       ],
       "sortOrder": 30,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y−f(x₀)=f′(x₀)(x−x₀)",
-        "caption": "曲线上的割线在第二个点逼近第一个点时，最终趋向切线。"
+        "content": "Aα=λα：|λα|/|α|=|λ|",
+        "caption": "几何上：特征向量是线性变换下「方向不改变」的方向，特征值是该方向上的伸缩倍数——λ>1 拉长、0<λ<1 压缩、λ<0 反向、λ=0 压扁到原点。"
       },
       "keyPoints": [
         {
-          "id": "f-0-biao-shi-ju-bu-xiang-you-shang-sheng",
-          "title": "f′>0 表示局部向右上升",
-          "bodyMarkdown": "f′>0 表示局部向右上升"
+          "id": "te-zheng-xiang-liang-bian-huan-de-bu-0lc3b0",
+          "title": "特征向量 = 变换的不变方向",
+          "bodyMarkdown": "特征向量 = 变换的不变方向"
         },
         {
-          "id": "f-0-biao-shi-ju-bu-xiang-you-xia-jiang",
-          "title": "f′<0 表示局部向右下降",
-          "bodyMarkdown": "f′<0 表示局部向右下降"
+          "id": "shi-gai-fang-xiang-shang-de-shen-suo-l",
+          "title": "λ 是该方向上的伸缩率",
+          "bodyMarkdown": "λ 是该方向上的伸缩率"
         },
         {
-          "id": "f-0-zhi-biao-shi-qie-xian-shui-ping",
-          "title": "f′=0 只表示切线水平",
-          "bodyMarkdown": "f′=0 只表示切线水平"
+          "id": "0-biao-shi-gai-fang-xiang-bei-ya-mei-a-0l7aa2",
+          "title": "λ=0 表示该方向被压没（A 降秩）",
+          "bodyMarkdown": "λ=0 表示该方向被压没（A 降秩）"
         }
       ],
       "examples": [
         {
-          "id": "y-x-zai-1-1-de-qie-xian-1mh5ok",
+          "id": "dui-jiao-ju-zhen-diag-2-01toeh",
           "title": "讲解例子",
-          "bodyMarkdown": "y=x² 在 (1,1) 的切线为 y−1=2(x−1)，法线斜率为 −1/2。"
+          "bodyMarkdown": "对角矩阵 diag(2,3) 把 x 方向拉长 2 倍、y 方向 3 倍——坐标轴就是特征方向。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "曲线上的割线在第二个点逼近第一个点时，最终趋向切线。导数就是切线相对 x 轴的斜率，它描述的是局部一阶趋势，而不是整段区间的平均走势。\n\n### 解题步骤\n\n1. 取曲线上一点\n2. 写割线斜率\n3. 取极限得到切线与法线\n\n### 易错点\n\n导数为零不自动意味着极值，还要看附近导数变号或更高阶信息。"
+      "bodyMarkdown": "几何上：特征向量是线性变换下「方向不改变」的方向，特征值是该方向上的伸缩倍数——λ>1 拉长、0<λ<1 压缩、λ<0 反向、λ=0 压扁到原点。\n\n### 解题步骤\n\n1. 画变换前后\n2. 找不转的方向\n3. 量伸缩倍数\n\n### 易错点\n\n认为一切向量都沿自身方向变换——一般向量会「转」，只有特征方向不变。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m2-p2-c5-s2",
       "sectionTitle": "特征值计算",
       "title": "|λE-A|=0",
-      "summary": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。",
+      "summary": "特征方程 |λE−A|=0：特征多项式是 λ 的 n 次首一多项式，n 个根（复数域计重数）就是全部特征值；展开时善用行（列）和相等的结构提取因式。",
       "tags": [
-        "保持方向的变换"
+        "数二的特征方程"
       ],
       "sortOrder": 40,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Aα=λα，α≠0；det(λI−A)=0",
-        "caption": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。"
+        "content": "f(λ)=|λE−A|",
+        "caption": "特征方程 |λE−A|=0：特征多项式是 λ 的 n 次首一多项式，n 个根（复数域计重数）就是全部特征值；展开时善用行（列）和相等的结构提取因式。"
       },
       "keyPoints": [
         {
-          "id": "te-zheng-xiang-liang-bu-neng-shi-ling-1p3i1t",
-          "title": "特征向量不能是零向量",
-          "bodyMarkdown": "特征向量不能是零向量"
+          "id": "e-a-0-gei-chu-quan-bu-te-zheng-zhi",
+          "title": "|λE−A|=0 给出全部特征值",
+          "bodyMarkdown": "|λE−A|=0 给出全部特征值"
         },
         {
-          "id": "bu-tong-te-zheng-zhi-dui-ying-de-te-03qxom",
-          "title": "不同特征值对应的特征向量线性无关",
-          "bodyMarkdown": "不同特征值对应的特征向量线性无关"
+          "id": "shou-yi-n-ci-duo-xiang-shi",
+          "title": "首一 n 次多项式",
+          "bodyMarkdown": "首一 n 次多项式"
         },
         {
-          "id": "ji-shi-te-zheng-zhi-zhi-he-hang-lie-shi-15y31n",
-          "title": "迹是特征值之和",
-          "bodyMarkdown": "迹是特征值之和，行列式是特征值之积"
+          "id": "tr-a-a-yan-suan",
+          "title": "Σλᵢ=tr(A)、∏λᵢ=|A| 验算",
+          "bodyMarkdown": "Σλᵢ=tr(A)、∏λᵢ=|A| 验算"
         }
       ],
       "examples": [
         {
-          "id": "a-diag-2-3-shi-1-0-he-0-1ft0xk",
+          "id": "er-jie-zhen-kuai-su-fa-19jeeb",
           "title": "讲解例子",
-          "bodyMarkdown": "A=diag(2,3) 时，(1,0) 和 (0,1) 分别是特征值 2、3 的特征向量。"
+          "bodyMarkdown": "二阶阵快速法：λ²−tr(A)λ+|A|=0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。求解时先求特征方程，再对每个特征值解对应齐次方程。\n\n### 解题步骤\n\n1. 解 det(λI−A)=0\n2. 对每个 λ 解 (A−λI)x=0\n3. 检查重根对应的独立向量数量\n\n### 易错点\n\n把零向量当特征向量，或只求出特征值却没有求特征向量。"
+      "bodyMarkdown": "特征方程 |λE−A|=0：特征多项式是 λ 的 n 次首一多项式，n 个根（复数域计重数）就是全部特征值；展开时善用行（列）和相等的结构提取因式。\n\n### 解题步骤\n\n1. 写 λE−A\n2. 展开行列式\n3. 求根并验算\n\n### 易错点\n\n二阶以上用「对角线法则」展开——三阶以上必须按行列展开。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m2-p2-c5-s2",
       "sectionTitle": "特征值计算",
       "title": "特征多项式",
-      "summary": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。",
+      "summary": "特征多项式 f(λ)=|λE−A|：首项 λⁿ、常数项 (−1)ⁿ|A|、λⁿ⁻¹ 系数是 −tr(A)；相似矩阵特征多项式相同，是相似不变量的母体。",
       "tags": [
-        "保持方向的变换"
+        "λ 的 n 次多项式"
       ],
       "sortOrder": 50,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Aα=λα，α≠0；det(λI−A)=0",
-        "caption": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。"
+        "content": "f(λ)=|λE−A|",
+        "caption": "特征多项式 f(λ)=|λE−A|：首项 λⁿ、常数项 (−1)ⁿ|A|、λⁿ⁻¹ 系数是 −tr(A)；相似矩阵特征多项式相同，是相似不变量的母体。"
       },
       "keyPoints": [
         {
-          "id": "te-zheng-xiang-liang-bu-neng-shi-ling-1p3i1t",
-          "title": "特征向量不能是零向量",
-          "bodyMarkdown": "特征向量不能是零向量"
+          "id": "f-tr-a-1-a",
+          "title": "f(λ)=λⁿ−tr(A)λⁿ⁻¹+…+(−1)",
+          "bodyMarkdown": "f(λ)=λⁿ−tr(A)λⁿ⁻¹+…+(−1)ⁿ|A|"
         },
         {
-          "id": "bu-tong-te-zheng-zhi-dui-ying-de-te-03qxom",
-          "title": "不同特征值对应的特征向量线性无关",
-          "bodyMarkdown": "不同特征值对应的特征向量线性无关"
+          "id": "xiang-si-te-zheng-duo-xiang-shi-xiang-11d8b5",
+          "title": "相似 ⇒ 特征多项式相同",
+          "bodyMarkdown": "相似 ⇒ 特征多项式相同"
         },
         {
-          "id": "ji-shi-te-zheng-zhi-zhi-he-hang-lie-shi-15y31n",
-          "title": "迹是特征值之和",
-          "bodyMarkdown": "迹是特征值之和，行列式是特征值之积"
+          "id": "f-a-o-kai-lai-ha-mi-dun-kuo-zhan",
+          "title": "f(A)=O（凯莱—哈密顿",
+          "bodyMarkdown": "f(A)=O（凯莱—哈密顿，扩展）"
         }
       ],
       "examples": [
         {
-          "id": "a-diag-2-3-shi-1-0-he-0-1ft0xk",
+          "id": "er-jie-f-tr-a-a-gen-you-0ux8i3",
           "title": "讲解例子",
-          "bodyMarkdown": "A=diag(2,3) 时，(1,0) 和 (0,1) 分别是特征值 2、3 的特征向量。"
+          "bodyMarkdown": "二阶：f(λ)=λ²−tr(A)λ+|A|，根由韦达定理互验。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。求解时先求特征方程，再对每个特征值解对应齐次方程。\n\n### 解题步骤\n\n1. 解 det(λI−A)=0\n2. 对每个 λ 解 (A−λI)x=0\n3. 检查重根对应的独立向量数量\n\n### 易错点\n\n把零向量当特征向量，或只求出特征值却没有求特征向量。"
+      "bodyMarkdown": "特征多项式 f(λ)=|λE−A|：首项 λⁿ、常数项 (−1)ⁿ|A|、λⁿ⁻¹ 系数是 −tr(A)；相似矩阵特征多项式相同，是相似不变量的母体。\n\n### 解题步骤\n\n1. 按结构展开\n2. 读系数（迹/行列式）\n3. 求根\n\n### 易错点\n\n常数项符号漏带 (−1)ⁿ——n 为奇偶时不同。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m2-p2-c5-s3",
       "sectionTitle": "特征向量计算",
       "title": "(A-λE)x=0",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "求特征向量即解 (A−λE)x=0：非零解全部是对应 λ 的特征向量；行变换化最简形后，基础解系的非零线性组合就是这一特征值的特征子空间去掉零向量。",
       "tags": [
-        "用坐标描述方向"
+        "数二的求向量方程"
       ],
       "sortOrder": 60,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "解空间 = ker(A−λE)",
+        "caption": "求特征向量即解 (A−λE)x=0：非零解全部是对应 λ 的特征向量；行变换化最简形后，基础解系的非零线性组合就是这一特征值的特征子空间去掉零向量。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "a-e-x-0-de-fei-ling-jie-te-zheng-xiang-0w8go1",
+          "title": "(A−λE)x=0 的非零解 = 特征向量",
+          "bodyMarkdown": "(A−λE)x=0 的非零解 = 特征向量"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "ji-chu-jie-xi-han-n-r-a-e-ge-xiang-liang",
+          "title": "基础解系含 n−r(A−λE) 个向量",
+          "bodyMarkdown": "基础解系含 n−r(A−λE) 个向量"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "ji-he-zhong-shu-you-ci-du-chu",
+          "title": "几何重数由此读出",
+          "bodyMarkdown": "几何重数由此读出"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "r-a-e-2-n-3-ji-chu-jie-1dse39",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "r(A−λE)=2（n=3）：基础解系 1 个向量，几何重数 1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "求特征向量即解 (A−λE)x=0：非零解全部是对应 λ 的特征向量；行变换化最简形后，基础解系的非零线性组合就是这一特征值的特征子空间去掉零向量。\n\n### 解题步骤\n\n1. 代 λ\n2. 行变换解齐次组\n3. 取基础解系\n\n### 易错点\n\n把含零向量的全部解都当特征向量——特征向量必须非零。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m2-p2-c5-s3",
       "sectionTitle": "特征向量计算",
       "title": "特征子空间",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "λ 的特征子空间 Vλ 是 (A−λE)x=0 的解空间：维数是几何重数，介于 1 与代数重数之间；不同特征值的特征子空间除了零向量没有公共元素。",
       "tags": [
-        "用坐标描述方向"
+        "一个特征值一个子空间"
       ],
       "sortOrder": 70,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "dim Vλ=n−r(A−λE)",
+        "caption": "λ 的特征子空间 Vλ 是 (A−λE)x=0 的解空间：维数是几何重数，介于 1 与代数重数之间；不同特征值的特征子空间除了零向量没有公共元素。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "v-ker-a-e",
+          "title": "Vλ=ker(A−λE)",
+          "bodyMarkdown": "Vλ=ker(A−λE)"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "1-dim-v-dai-shu-zhong-shu",
+          "title": "1≤dim Vλ≤代数重数",
+          "bodyMarkdown": "1≤dim Vλ≤代数重数"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "v-v-0",
+          "title": "Vλ∩Vμ={0}（λ≠μ）",
+          "bodyMarkdown": "Vλ∩Vμ={0}（λ≠μ）"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "1-yu-2-de-te-zheng-1ra4lj",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "λ=1 与 λ=2 的特征向量不能相等（否则 λ=1=2 矛盾）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "λ 的特征子空间 Vλ 是 (A−λE)x=0 的解空间：维数是几何重数，介于 1 与代数重数之间；不同特征值的特征子空间除了零向量没有公共元素。\n\n### 解题步骤\n\n1. 构造方程\n2. 求解空间\n3. 报维数\n\n### 易错点\n\n两个特征值的特征向量做加法仍是特征向量——不成立，子空间之间不叠加。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m2-p2-c5-s4",
       "sectionTitle": "特征值性质",
       "title": "迹",
-      "summary": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。",
+      "summary": "迹 tr(A)=Σaᵢᵢ=Σλᵢ（全部特征值之和，计重数）；迹还满足 tr(A+B)=tr(A)+tr(B)、tr(kA)=k·tr(A)，是「读出特征值总和」最快的窗口。",
       "tags": [
-        "保持方向的变换"
+        "对角线之和"
       ],
       "sortOrder": 80,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Aα=λα，α≠0；det(λI−A)=0",
-        "caption": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。"
+        "content": "tr(A)=λ₁+…+λₙ",
+        "caption": "迹 tr(A)=Σaᵢᵢ=Σλᵢ（全部特征值之和，计重数）；迹还满足 tr(A+B)=tr(A)+tr(B)"
       },
       "keyPoints": [
         {
-          "id": "te-zheng-xiang-liang-bu-neng-shi-ling-1p3i1t",
-          "title": "特征向量不能是零向量",
-          "bodyMarkdown": "特征向量不能是零向量"
+          "id": "tr-a",
+          "title": "tr(A)=Σλᵢ",
+          "bodyMarkdown": "tr(A)=Σλᵢ"
         },
         {
-          "id": "bu-tong-te-zheng-zhi-dui-ying-de-te-03qxom",
-          "title": "不同特征值对应的特征向量线性无关",
-          "bodyMarkdown": "不同特征值对应的特征向量线性无关"
+          "id": "tr-ab-tr-ba-xun-huan-xing-zhi",
+          "title": "tr(AB)=tr(BA)（循环性质）",
+          "bodyMarkdown": "tr(AB)=tr(BA)（循环性质）"
         },
         {
-          "id": "ji-shi-te-zheng-zhi-zhi-he-hang-lie-shi-15y31n",
-          "title": "迹是特征值之和",
-          "bodyMarkdown": "迹是特征值之和，行列式是特征值之积"
+          "id": "chang-yu-a-lian-yong-fan-qiu-can-shu",
+          "title": "常与 |A|=∏λᵢ 联用反求参数",
+          "bodyMarkdown": "常与 |A|=∏λᵢ 联用反求参数"
         }
       ],
       "examples": [
         {
-          "id": "a-diag-2-3-shi-1-0-he-0-1ft0xk",
+          "id": "yi-zhi-te-zheng-zhi-2-2-0rkeeo",
           "title": "讲解例子",
-          "bodyMarkdown": "A=diag(2,3) 时，(1,0) 和 (0,1) 分别是特征值 2、3 的特征向量。"
+          "bodyMarkdown": "已知特征值 2、2、λ₃ 与 tr=7：λ₃=3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。求解时先求特征方程，再对每个特征值解对应齐次方程。\n\n### 解题步骤\n\n1. 解 det(λI−A)=0\n2. 对每个 λ 解 (A−λI)x=0\n3. 检查重根对应的独立向量数量\n\n### 易错点\n\n把零向量当特征向量，或只求出特征值却没有求特征向量。"
+      "bodyMarkdown": "迹 tr(A)=Σaᵢᵢ=Σλᵢ（全部特征值之和，计重数）；迹还满足 tr(A+B)=tr(A)+tr(B)、tr(kA)=k·tr(A)，是「读出特征值总和」最快的窗口。\n\n### 解题步骤\n\n1. 加对角线\n2. 对比特征值和\n3. 列方程解参数\n\n### 易错点\n\ntr(AB) 与 tr(A)tr(B) 混写——迹没有乘法公式，只有循环等式。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,51 +423,47 @@
       "sectionId": "m2-p2-c5-s4",
       "sectionTitle": "特征值性质",
       "title": "行列式",
-      "summary": "从几何本质看行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。",
+      "summary": "|A|=λ₁λ₂…λₙ（全部特征值连乘，计重数）：由此 0 是否为特征值直接决定可逆性；也常与迹联立，用两条方程「反求」两个未知特征值。",
       "tags": [
-        "有向面积的缩放"
+        "特征值之积"
       ],
       "sortOrder": 90,
-      "estimatedMinutes": 5,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|AB|=|A||B|；|A|≠0 ⇔ A 可逆",
-        "caption": "从几何本质看行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积"
+        "content": "|A|=λ₁⋯λₙ",
+        "caption": "|A|=λ₁λ₂…λₙ（全部特征值连乘，计重数）：由此 0 是否为特征值直接决定可逆性；也常与迹联立，用两条方程「反求」两个未知特征值。"
       },
       "keyPoints": [
         {
-          "id": "ji-he-ben-zhi-er-jie-ping-xing-si-bian-1xeo9d",
-          "title": "几何本质",
-          "bodyMarkdown": "几何本质：二阶=平行四边形有向面积，三阶=平行六面体有向体积"
+          "id": "a",
+          "title": "|A|=∏λᵢ",
+          "bodyMarkdown": "|A|=∏λᵢ"
         },
         {
-          "id": "jiao-huan-liang-hang-bian-hao-yi-hang-0v12k6",
-          "title": "交换两行变号",
-          "bodyMarkdown": "交换两行变号；一行加另一行的倍数不变"
+          "id": "0-te-zheng-zhi-bu-ke-ni",
+          "title": "0 特征值 ⇔ 不可逆",
+          "bodyMarkdown": "0 特征值 ⇔ 不可逆"
         },
         {
-          "id": "san-jiao-ju-zhen-hang-lie-shi-deng-yu-0ojdf5",
-          "title": "三角矩阵行列式等于对角线乘积",
-          "bodyMarkdown": "三角矩阵行列式等于对角线乘积"
+          "id": "yu-tr-lian-yong-jie-can-shu-ti",
+          "title": "与 tr 联用解参数题",
+          "bodyMarkdown": "与 tr 联用解参数题"
         }
       ],
       "examples": [
         {
-          "id": "ba-ju-zhen-hua-wei-08r3iu",
+          "id": "te-zheng-zhi-1-2-3-a-6-0148k7",
           "title": "讲解例子",
-          "bodyMarkdown": "把矩阵化为上三角后，行列式直接等于对角线元素之积。"
+          "bodyMarkdown": "特征值 1、−2、3：|A|=−6，A 可逆。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·线代第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "从几何本质看行列式：二阶行列式是以两个行向量为邻边的平行四边形的有向面积，三阶行列式是平行六面体的有向体积——行列式把方阵的线性变换压缩成一个数，绝对值是面积或体积的缩放倍数，符号表示方向是否翻转。计算时优先用行列式性质化成三角形，而不是盲目展开。\n\n### 解题步骤\n\n1. 先观察可用的行列式性质\n2. 消元或选择零多的行列展开\n3. 用结果判断可逆与秩\n\n### 易错点\n\n把矩阵的行变换和行列式的影响混淆，尤其是交换行与倍乘行。"
+      "bodyMarkdown": "|A|=λ₁λ₂…λₙ（全部特征值连乘，计重数）：由此 0 是否为特征值直接决定可逆性；也常与迹联立，用两条方程「反求」两个未知特征值。\n\n### 解题步骤\n\n1. 连乘特征值\n2. 对照 |A|\n3. 必要时联立\n\n### 易错点\n\n复根不成对就乘出复数——实矩阵复根共轭成对，乘积为正实数。"
     },
     {
       "schemaVersion": "1.0",
@@ -478,47 +474,47 @@
       "sectionId": "m2-p2-c5-s4",
       "sectionTitle": "特征值性质",
       "title": "幂",
-      "summary": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。",
+      "summary": "Aᵏ 的特征值是 λᵏ（特征向量不变）：由 Aᵏα=λᵏα 逐次归纳；配合「f(A) 的特征值=f(λ)」总思想，矩阵幂的问题化成数字幂。",
       "tags": [
-        "保持方向的变换"
+        "特征值的幂"
       ],
       "sortOrder": 100,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Aα=λα，α≠0；det(λI−A)=0",
-        "caption": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。"
+        "content": "Aᵏα=λᵏα",
+        "caption": "Aᵏ 的特征值是 λᵏ（特征向量不变）：由 Aᵏα=λᵏα 逐次归纳；配合「f(A) 的特征值=f(λ)」总思想，矩阵幂的问题化成数字幂。"
       },
       "keyPoints": [
         {
-          "id": "te-zheng-xiang-liang-bu-neng-shi-ling-1p3i1t",
-          "title": "特征向量不能是零向量",
-          "bodyMarkdown": "特征向量不能是零向量"
+          "id": "a-de-pu",
+          "title": "Aᵏ 的谱 = {λᵢᵏ}",
+          "bodyMarkdown": "Aᵏ 的谱 = {λᵢᵏ}"
         },
         {
-          "id": "bu-tong-te-zheng-zhi-dui-ying-de-te-03qxom",
-          "title": "不同特征值对应的特征向量线性无关",
-          "bodyMarkdown": "不同特征值对应的特征向量线性无关"
+          "id": "a-bu-bian",
+          "title": "Aᵏα=λᵏα（α 不变）",
+          "bodyMarkdown": "Aᵏα=λᵏα（α 不变）"
         },
         {
-          "id": "ji-shi-te-zheng-zhi-zhi-he-hang-lie-shi-15y31n",
-          "title": "迹是特征值之和",
-          "bodyMarkdown": "迹是特征值之和，行列式是特征值之积"
+          "id": "qiu-a-de-tao-lu-xian-pu-zai-zu-zhuang",
+          "title": "求 Aⁿ 的套路",
+          "bodyMarkdown": "求 Aⁿ 的套路：先谱再组装"
         }
       ],
       "examples": [
         {
-          "id": "a-diag-2-3-shi-1-0-he-0-1ft0xk",
+          "id": "1-2-a-de-te-zheng-zhi-1-1imdzm",
           "title": "讲解例子",
-          "bodyMarkdown": "A=diag(2,3) 时，(1,0) 和 (0,1) 分别是特征值 2、3 的特征向量。"
+          "bodyMarkdown": "λ=−1、2：A⁵ 的特征值 −1、32。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。求解时先求特征方程，再对每个特征值解对应齐次方程。\n\n### 解题步骤\n\n1. 解 det(λI−A)=0\n2. 对每个 λ 解 (A−λI)x=0\n3. 检查重根对应的独立向量数量\n\n### 易错点\n\n把零向量当特征向量，或只求出特征值却没有求特征向量。"
+      "bodyMarkdown": "Aᵏ 的特征值是 λᵏ（特征向量不变）：由 Aᵏα=λᵏα 逐次归纳；配合「f(A) 的特征值=f(λ)」总思想，矩阵幂的问题化成数字幂。\n\n### 解题步骤\n\n1. 求 A 的谱\n2. 逐个幂次\n3. 验证或组装矩阵\n\n### 易错点\n\nλ=0 时 Aᵏ 特征值全 0 但 Aᵏ 未必是 O——别把谱与矩阵混同。"
     },
     {
       "schemaVersion": "1.0",
@@ -529,47 +525,47 @@
       "sectionId": "m2-p2-c5-s4",
       "sectionTitle": "特征值性质",
       "title": "逆矩阵",
-      "summary": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。",
+      "summary": "A 可逆时 A⁻¹ 的特征值为 1/λᵢ（特征向量不变）；由 Aα=λα 左乘 A⁻¹ 即得。",
       "tags": [
-        "撤销变换"
+        "特征值取倒数"
       ],
       "sortOrder": 110,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "A⁻¹=adj(A)/|A|（|A|≠0）",
-        "caption": "逆矩阵把矩阵造成的线性变换撤销。"
+        "content": "A⁻¹α=λ⁻¹α",
+        "caption": "A 可逆时 A⁻¹ 的特征值为 1/λᵢ（特征向量不变）；由 Aα=λα 左乘 A⁻¹ 即得。"
       },
       "keyPoints": [
         {
-          "id": "aa-i",
-          "title": "AA⁻¹=I",
-          "bodyMarkdown": "AA⁻¹=I"
+          "id": "a-de-pu-1-xu-a-0",
+          "title": "A⁻¹ 的谱 = {1/λᵢ}（需 |A|≠0）",
+          "bodyMarkdown": "A⁻¹ 的谱 = {1/λᵢ}（需 |A|≠0）"
         },
         {
-          "id": "ke-ni-a-0-r-a-n",
-          "title": "可逆 ⇔ |A|≠0 ⇔ r(A)=n",
-          "bodyMarkdown": "可逆 ⇔ |A|≠0 ⇔ r(A)=n"
+          "id": "a-de-pu-a",
+          "title": "A* 的谱 = {|A|/λᵢ}",
+          "bodyMarkdown": "A* 的谱 = {|A|/λᵢ}"
         },
         {
-          "id": "qiu-ni-ke-yong-ban-sui-ju-zhen-huo-zeng-1il6ce",
-          "title": "求逆可用伴随矩阵或增广矩阵消元",
-          "bodyMarkdown": "求逆可用伴随矩阵或增广矩阵消元"
+          "id": "te-zheng-xiang-liang-quan-bu-bu-bian",
+          "title": "特征向量全部不变",
+          "bodyMarkdown": "特征向量全部不变"
         }
       ],
       "examples": [
         {
-          "id": "ba-a-i-xing-bian-huan-05mydu",
+          "id": "4-2-a-de-te-zheng-zhi-1-0woet6",
           "title": "讲解例子",
-          "bodyMarkdown": "把 [A|I] 行变换为 [I|A⁻¹]，右半部分就是逆矩阵。"
+          "bodyMarkdown": "λ=4、−2：A⁻¹ 的特征值 1/4、−1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "逆矩阵把矩阵造成的线性变换撤销。它存在的本质条件是变换没有把空间压扁到更低维，也就是行列式非零、秩满、齐次方程只有零解等条件彼此等价。\n\n### 解题步骤\n\n1. 先判可逆性\n2. 选择伴随或初等变换\n3. 用乘积验证结果\n\n### 易错点\n\n行列式为零时不存在逆矩阵，不能用除法“形式求逆”。"
+      "bodyMarkdown": "A 可逆时 A⁻¹ 的特征值为 1/λᵢ（特征向量不变）；由 Aα=λα 左乘 A⁻¹ 即得。伴随矩阵 A* 的特征值 |A|/λᵢ 是它的孪生结论。\n\n### 解题步骤\n\n1. 验证可逆\n2. 取倒数\n3. 沿用特征向量\n\n### 易错点\n\nλ=0 的矩阵也求逆谱——0 不能取倒数，前提先行。"
     },
     {
       "schemaVersion": "1.0",
@@ -580,47 +576,47 @@
       "sectionId": "m2-p2-c5-s5",
       "sectionTitle": "相似矩阵",
       "title": "B=P^{-1}AP",
-      "summary": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。",
+      "summary": "相似的定义：存在可逆矩阵 P 使 B=P⁻¹AP，称 A 相似于 B；相似是「同一线性变换在不同基下」的表现——同一个人换了套衣服。",
       "tags": [
-        "换基看清矩阵"
+        "相似的定义式"
       ],
       "sortOrder": 120,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "B=P⁻¹AP；A=PΛP⁻¹",
-        "caption": "相似变换表示同一个线性变换在不同基底下的矩阵。"
+        "content": "B=P⁻¹AP",
+        "caption": "相似的定义：存在可逆矩阵 P 使 B=P⁻¹AP，称 A 相似于 B；相似是「同一线性变换在不同基下」的表现——同一个人换了套衣服。"
       },
       "keyPoints": [
         {
-          "id": "xiang-si-ju-zhen-you-xiang-tong-te-1wzn70",
-          "title": "相似矩阵有相同特征多项式、迹和行列式",
-          "bodyMarkdown": "相似矩阵有相同特征多项式、迹和行列式"
+          "id": "b-p-ap-p-ke-ni-a-b",
+          "title": "B=P⁻¹AP（P 可逆）⇔ A∽B",
+          "bodyMarkdown": "B=P⁻¹AP（P 可逆）⇔ A∽B"
         },
         {
-          "id": "n-ge-xian-xing-wu-guan-te-zheng-xiang-1y7q9c",
-          "title": "n 个线性无关特征向量才能对角化",
-          "bodyMarkdown": "n 个线性无关特征向量才能对角化"
+          "id": "ji-he-tong-yi-xian-xing-bian-huan-zai-0m1enx",
+          "title": "几何：同一线性变换在不同基下的矩阵",
+          "bodyMarkdown": "几何：同一线性变换在不同基下的矩阵"
         },
         {
-          "id": "shi-dui-chen-ju-zhen-yi-ding-ke-zheng-06sc8e",
-          "title": "实对称矩阵一定可正交对角化",
-          "bodyMarkdown": "实对称矩阵一定可正交对角化"
+          "id": "dui-jiao-hua-zhao-p-shi-xiang-si-dui-1gflqq",
+          "title": "对角化 = 找 P 使相似对象是对角阵",
+          "bodyMarkdown": "对角化 = 找 P 使相似对象是对角阵"
         }
       ],
       "examples": [
         {
-          "id": "dui-jiao-ju-zhen-de-k-1px1c3",
+          "id": "p-te-zheng-xiang-liang-1l9f4p",
           "title": "讲解例子",
-          "bodyMarkdown": "对角矩阵的 k 次幂只需把对角线元素分别取 k 次方。"
+          "bodyMarkdown": "P=(α₁ α₂ … αₙ)（特征向量按列）时 P⁻¹AP=Λ。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。\n\n### 解题步骤\n\n1. 求特征值及特征向量\n2. 判断独立向量数量\n3. 构造 P 与 Λ 并验证\n\n### 易错点\n\n有 n 个特征值不等于一定有 n 个线性无关特征向量，重根要单独判断。"
+      "bodyMarkdown": "相似的定义：存在可逆矩阵 P 使 B=P⁻¹AP，称 A 相似于 B；相似是「同一线性变换在不同基下」的表现——同一个人换了套衣服。\n\n### 解题步骤\n\n1. 找可逆 P\n2. 验证等式\n3. 下相似结论\n\n### 易错点\n\n写成 PAP⁻¹=B——方向与顺序都有讲究，按定义对照。"
     },
     {
       "schemaVersion": "1.0",
@@ -631,47 +627,47 @@
       "sectionId": "m2-p2-c5-s5",
       "sectionTitle": "相似矩阵",
       "title": "相似不变量",
-      "summary": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。",
+      "summary": "相似矩阵必同享：行列式、迹、秩、特征多项式与全部特征值（连带代数重数）；这些不变量常用来「反求相似中的参数」或判不相似。",
       "tags": [
-        "换基看清矩阵"
+        "相似矩阵共享的量"
       ],
       "sortOrder": 130,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "B=P⁻¹AP；A=PΛP⁻¹",
-        "caption": "相似变换表示同一个线性变换在不同基底下的矩阵。"
+        "content": "A∽B ⇒ f_A(λ)=f_B(λ)",
+        "caption": "相似矩阵必同享：行列式、迹、秩、特征多项式与全部特征值（连带代数重数）；这些不变量常用来「反求相似中的参数」或判不相似。"
       },
       "keyPoints": [
         {
-          "id": "xiang-si-ju-zhen-you-xiang-tong-te-1wzn70",
-          "title": "相似矩阵有相同特征多项式、迹和行列式",
-          "bodyMarkdown": "相似矩阵有相同特征多项式、迹和行列式"
+          "id": "a-b-tr-a-tr-b-r-a-r-b",
+          "title": "|A|=|B|、tr(A)=tr(B)、r(A)",
+          "bodyMarkdown": "|A|=|B|、tr(A)=tr(B)、r(A)=r(B)"
         },
         {
-          "id": "n-ge-xian-xing-wu-guan-te-zheng-xiang-1y7q9c",
-          "title": "n 个线性无关特征向量才能对角化",
-          "bodyMarkdown": "n 个线性无关特征向量才能对角化"
+          "id": "te-zheng-duo-xiang-shi-xiang-tong-te-01pke1",
+          "title": "特征多项式相同 ⇒ 特征值相同",
+          "bodyMarkdown": "特征多项式相同 ⇒ 特征值相同"
         },
         {
-          "id": "shi-dui-chen-ju-zhen-yi-ding-ke-zheng-06sc8e",
-          "title": "实对称矩阵一定可正交对角化",
-          "bodyMarkdown": "实对称矩阵一定可正交对角化"
+          "id": "bu-bian-liang-bu-tong-bi-bu-xiang-si-ni-0irlkv",
+          "title": "不变量不同 ⇒ 必不相似（逆否使用）",
+          "bodyMarkdown": "不变量不同 ⇒ 必不相似（逆否使用）"
         }
       ],
       "examples": [
         {
-          "id": "dui-jiao-ju-zhen-de-k-1px1c3",
+          "id": "a-b-qie-tr-cha-1-ti-mu-1yst2e",
           "title": "讲解例子",
-          "bodyMarkdown": "对角矩阵的 k 次幂只需把对角线元素分别取 k 次方。"
+          "bodyMarkdown": "A∽B 且 tr 差 1 ⇒ 题目给的 P 里藏参数，用 tr 列方程。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。\n\n### 解题步骤\n\n1. 求特征值及特征向量\n2. 判断独立向量数量\n3. 构造 P 与 Λ 并验证\n\n### 易错点\n\n有 n 个特征值不等于一定有 n 个线性无关特征向量，重根要单独判断。"
+      "bodyMarkdown": "相似矩阵必同享：行列式、迹、秩、特征多项式与全部特征值（连带代数重数）；这些不变量常用来「反求相似中的参数」或判不相似。\n\n### 解题步骤\n\n1. 算不变量\n2. 列方程求参数\n3. 或判不相似\n\n### 易错点\n\n把不变量相等当「相似」——必要不充分（还要看能否对角化到位）。"
     },
     {
       "schemaVersion": "1.0",
@@ -682,47 +678,47 @@
       "sectionId": "m2-p2-c5-s6",
       "sectionTitle": "相似对角化",
       "title": "定义",
-      "summary": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。",
+      "summary": "相似对角化：对 n 阶方阵 A，若存在可逆矩阵 P 使 P⁻¹AP=Λ（对角阵），则称 A 可相似对角化；P 的列是 A 的线性无关特征向量，Λ 对角线放对应特征值。",
       "tags": [
-        "换基看清矩阵"
+        "数二的化对角定义"
       ],
       "sortOrder": 140,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "B=P⁻¹AP；A=PΛP⁻¹",
-        "caption": "相似变换表示同一个线性变换在不同基底下的矩阵。"
+        "content": "P⁻¹AP=Λ",
+        "caption": "相似对角化：对 n 阶方阵 A，若存在可逆矩阵 P 使 P⁻¹AP=Λ（对角阵），则称 A 可相似对角化；"
       },
       "keyPoints": [
         {
-          "id": "xiang-si-ju-zhen-you-xiang-tong-te-1wzn70",
-          "title": "相似矩阵有相同特征多项式、迹和行列式",
-          "bodyMarkdown": "相似矩阵有相同特征多项式、迹和行列式"
+          "id": "ding-yi-p-ke-ni-p-ap",
+          "title": "定义：∃P 可逆，P⁻¹AP=Λ",
+          "bodyMarkdown": "定义：∃P 可逆，P⁻¹AP=Λ"
         },
         {
-          "id": "n-ge-xian-xing-wu-guan-te-zheng-xiang-1y7q9c",
-          "title": "n 个线性无关特征向量才能对角化",
-          "bodyMarkdown": "n 个线性无关特征向量才能对角化"
+          "id": "p-de-lie-te-zheng-xiang-liang-shun-xu-02ckp3",
+          "title": "P 的列 = 特征向量（顺序与 Λ 一致）",
+          "bodyMarkdown": "P 的列 = 特征向量（顺序与 Λ 一致）"
         },
         {
-          "id": "shi-dui-chen-ju-zhen-yi-ding-ke-zheng-06sc8e",
-          "title": "实对称矩阵一定可正交对角化",
-          "bodyMarkdown": "实对称矩阵一定可正交对角化"
+          "id": "ke-dui-jiao-hua-n-ge-xian-xing-wu-guan-1kzwov",
+          "title": "可对角化 ⇔ n 个线性无关特征向量",
+          "bodyMarkdown": "可对角化 ⇔ n 个线性无关特征向量"
         }
       ],
       "examples": [
         {
-          "id": "dui-jiao-ju-zhen-de-k-1px1c3",
+          "id": "liang-ge-bu-tong-te-0gf8ai",
           "title": "讲解例子",
-          "bodyMarkdown": "对角矩阵的 k 次幂只需把对角线元素分别取 k 次方。"
+          "bodyMarkdown": "两个不同特征值各一特征向量：P=(α₁ α₂)、Λ=diag(λ₁,λ₂)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。\n\n### 解题步骤\n\n1. 求特征值及特征向量\n2. 判断独立向量数量\n3. 构造 P 与 Λ 并验证\n\n### 易错点\n\n有 n 个特征值不等于一定有 n 个线性无关特征向量，重根要单独判断。"
+      "bodyMarkdown": "相似对角化：对 n 阶方阵 A，若存在可逆矩阵 P 使 P⁻¹AP=Λ（对角阵），则称 A 可相似对角化；P 的列是 A 的线性无关特征向量，Λ 对角线放对应特征值。\n\n### 解题步骤\n\n1. 求特征值向量\n2. 验证个数\n3. 组装 P、Λ\n\n### 易错点\n\nΛ 的对角元顺序与 P 的列不匹配——装配关系一一对应。"
     },
     {
       "schemaVersion": "1.0",
@@ -733,47 +729,47 @@
       "sectionId": "m2-p2-c5-s6",
       "sectionTitle": "相似对角化",
       "title": "充分必要条件",
-      "summary": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。",
+      "summary": "A 可对角化的充要条件：A 有 n 个线性无关的特征向量，等价于每个特征值的几何重数等于代数重数；「n 个不同特征值」只是充分情形。",
       "tags": [
-        "换基看清矩阵"
+        "可对角化的判据"
       ],
       "sortOrder": 150,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "B=P⁻¹AP；A=PΛP⁻¹",
-        "caption": "相似变换表示同一个线性变换在不同基底下的矩阵。"
+        "content": "Σ(dim Vλᵢ)=n ⇔ 可对角化",
+        "caption": "A 可对角化的充要条件：A 有 n 个线性无关的特征向量，等价于每个特征值的几何重数等于代数重数；「n 个不同特征值」只是充分情形。"
       },
       "keyPoints": [
         {
-          "id": "xiang-si-ju-zhen-you-xiang-tong-te-1wzn70",
-          "title": "相似矩阵有相同特征多项式、迹和行列式",
-          "bodyMarkdown": "相似矩阵有相同特征多项式、迹和行列式"
+          "id": "chong-yao-n-ge-wu-guan-te-zheng-xiang-0juydf",
+          "title": "充要：n 个无关特征向量",
+          "bodyMarkdown": "充要：n 个无关特征向量"
         },
         {
-          "id": "n-ge-xian-xing-wu-guan-te-zheng-xiang-1y7q9c",
-          "title": "n 个线性无关特征向量才能对角化",
-          "bodyMarkdown": "n 个线性无关特征向量才能对角化"
+          "id": "deng-jia-ji-he-zhong-shu-dai-shu-zhong-1jxbwr",
+          "title": "等价：∀λ，几何重数=代数重数",
+          "bodyMarkdown": "等价：∀λ，几何重数=代数重数"
         },
         {
-          "id": "shi-dui-chen-ju-zhen-yi-ding-ke-zheng-06sc8e",
-          "title": "实对称矩阵一定可正交对角化",
-          "bodyMarkdown": "实对称矩阵一定可正交对角化"
+          "id": "chong-fen-fei-bi-yao-n-ge-hu-yi-te-0hf2kr",
+          "title": "充分（非必要）",
+          "bodyMarkdown": "充分（非必要）：n 个互异特征值"
         }
       ],
       "examples": [
         {
-          "id": "dui-jiao-ju-zhen-de-k-1px1c3",
+          "id": "er-zhong-gen-ji-he-099yd9",
           "title": "讲解例子",
-          "bodyMarkdown": "对角矩阵的 k 次幂只需把对角线元素分别取 k 次方。"
+          "bodyMarkdown": "二重根几何重数 1：不可对角化（缺一个无关向量）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。\n\n### 解题步骤\n\n1. 求特征值及特征向量\n2. 判断独立向量数量\n3. 构造 P 与 Λ 并验证\n\n### 易错点\n\n有 n 个特征值不等于一定有 n 个线性无关特征向量，重根要单独判断。"
+      "bodyMarkdown": "A 可对角化的充要条件：A 有 n 个线性无关的特征向量，等价于每个特征值的几何重数等于代数重数；「n 个不同特征值」只是充分情形。\n\n### 解题步骤\n\n1. 列特征值与重数\n2. 逐个验证几何重数\n3. 下结论\n\n### 易错点\n\n把「有重根」当「不可对角化」——要看几何重数是否补齐。"
     },
     {
       "schemaVersion": "1.0",
@@ -784,47 +780,47 @@
       "sectionId": "m2-p2-c5-s6",
       "sectionTitle": "相似对角化",
       "title": "n 个线性无关特征向量",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "A 可对角化 ⇔ A 有 n 个线性无关的特征向量 ⇔ 每个特征值的几何重数等于代数重数；不同特征值的特征向量天然无关，重根是唯一要小心的地方。",
       "tags": [
-        "用坐标描述方向"
+        "可对角化的充要条件"
       ],
       "sortOrder": 160,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "Σ几何重数=n ⇔ 可对角化",
+        "caption": "A 可对角化 ⇔ A 有 n 个线性无关的特征向量 ⇔ 每个特征值的几何重数等于代数重数；不同特征值的特征向量天然无关，重根是唯一要小心的地方。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "chong-yao-n-ge-xian-xing-wu-guan-te-0tflzz",
+          "title": "充要：n 个线性无关特征向量",
+          "bodyMarkdown": "充要：n 个线性无关特征向量"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "deng-jia-shuo-fa-mei-ge-de-ji-he-zhong-00ykl5",
+          "title": "等价说法",
+          "bodyMarkdown": "等价说法：每个 λ 的几何重数=代数重数"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "wu-zhong-gen-bi-ke-dui-jiao-hua",
+          "title": "无重根 ⇒ 必可对角化",
+          "bodyMarkdown": "无重根 ⇒ 必可对角化"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "san-jie-te-zheng-zhi-1-1c0cab",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "三阶、特征值 1（单）、2（二重且几何重数 2）⇒ 可对角化。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "A 可对角化 ⇔ A 有 n 个线性无关的特征向量 ⇔ 每个特征值的几何重数等于代数重数；不同特征值的特征向量天然无关，重根是唯一要小心的地方。\n\n### 解题步骤\n\n1. 列各特征值重数\n2. 求各几何重数\n3. 逐一对照\n\n### 易错点\n\n有重根就断言不可对角化——重根只要「够数」仍可对角化。"
     },
     {
       "schemaVersion": "1.0",
@@ -835,47 +831,47 @@
       "sectionId": "m2-p2-c5-s6",
       "sectionTitle": "相似对角化",
       "title": "重根情况",
-      "summary": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。",
+      "summary": "k 重特征值要对角化成功，必须解出恰好 k 个线性无关的特征向量（几何重数=k）；流程是解 (A−λE)x=0 看基础解系个数，缺一个就整体失败。",
       "tags": [
-        "换基看清矩阵"
+        "数二的合格检查"
       ],
       "sortOrder": 170,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "B=P⁻¹AP；A=PΛP⁻¹",
-        "caption": "相似变换表示同一个线性变换在不同基底下的矩阵。"
+        "content": "n−r(A−λE)=k",
+        "caption": "k 重特征值要对角化成功，必须解出恰好 k 个线性无关的特征向量（几何重数=k）；流程是解 (A−λE)x=0 看基础解系个数，缺一个就整体失败。"
       },
       "keyPoints": [
         {
-          "id": "xiang-si-ju-zhen-you-xiang-tong-te-1wzn70",
-          "title": "相似矩阵有相同特征多项式、迹和行列式",
-          "bodyMarkdown": "相似矩阵有相同特征多项式、迹和行列式"
+          "id": "k-zhong-gen-xu-yao-k-ge-wu-guan-te-12v8p3",
+          "title": "k 重根需要 k 个无关特征向量",
+          "bodyMarkdown": "k 重根需要 k 个无关特征向量"
         },
         {
-          "id": "n-ge-xian-xing-wu-guan-te-zheng-xiang-1y7q9c",
-          "title": "n 个线性无关特征向量才能对角化",
-          "bodyMarkdown": "n 个线性无关特征向量才能对角化"
+          "id": "ge-shu-n-r-a-e",
+          "title": "个数 = n−r(A−λE)",
+          "bodyMarkdown": "个数 = n−r(A−λE)"
         },
         {
-          "id": "shi-dui-chen-ju-zhen-yi-ding-ke-zheng-06sc8e",
-          "title": "实对称矩阵一定可正交对角化",
-          "bodyMarkdown": "实对称矩阵一定可正交对角化"
+          "id": "ren-he-yi-ge-zhong-gen-bu-da-biao-bu-ke-0ifcgg",
+          "title": "任何一个重根不达标 ⇒ 不可对角化",
+          "bodyMarkdown": "任何一个重根不达标 ⇒ 不可对角化"
         }
       ],
       "examples": [
         {
-          "id": "dui-jiao-ju-zhen-de-k-1px1c3",
+          "id": "san-chong-gen-jie-chu-3-03wfo2",
           "title": "讲解例子",
-          "bodyMarkdown": "对角矩阵的 k 次幂只需把对角线元素分别取 k 次方。"
+          "bodyMarkdown": "三重根解出 3 个无关向量 ⇒ 合格，可对角化。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。\n\n### 解题步骤\n\n1. 求特征值及特征向量\n2. 判断独立向量数量\n3. 构造 P 与 Λ 并验证\n\n### 易错点\n\n有 n 个特征值不等于一定有 n 个线性无关特征向量，重根要单独判断。"
+      "bodyMarkdown": "k 重特征值要对角化成功，必须解出恰好 k 个线性无关的特征向量（几何重数=k）；流程是解 (A−λE)x=0 看基础解系个数，缺一个就整体失败。\n\n### 解题步骤\n\n1. 列出重根\n2. 逐个求基础解系\n3. 对照重数\n\n### 易错点\n\n重根只解出一个向量就组装 P——列数不够 n，P 不可逆。"
     },
     {
       "schemaVersion": "1.0",
@@ -886,47 +882,47 @@
       "sectionId": "m2-p2-c5-s7",
       "sectionTitle": "实对称矩阵",
       "title": "实特征值",
-      "summary": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。",
+      "summary": "实对称矩阵的特征值全为实数（复根不会出现）：这是实对称矩阵三大性质之一（另两个：不同特征值特征向量正交、必可正交对角化），也保证全程可在实数域操作。",
       "tags": [
-        "保持方向的变换"
+        "实对称的谱全实"
       ],
       "sortOrder": 180,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Aα=λα，α≠0；det(λI−A)=0",
-        "caption": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。"
+        "content": "A=Aᵀ ⇒ λ∈R",
+        "caption": "实对称矩阵的特征值全为实数（复根不会出现）：这是实对称矩阵三大性质之一（另两个：不同特征值特征向量正交、必可正交对角化），也保证全程可在实数域操作。"
       },
       "keyPoints": [
         {
-          "id": "te-zheng-xiang-liang-bu-neng-shi-ling-1p3i1t",
-          "title": "特征向量不能是零向量",
-          "bodyMarkdown": "特征向量不能是零向量"
+          "id": "shi-dui-chen-r",
+          "title": "实对称 ⇒ λᵢ∈R",
+          "bodyMarkdown": "实对称 ⇒ λᵢ∈R"
         },
         {
-          "id": "bu-tong-te-zheng-zhi-dui-ying-de-te-03qxom",
-          "title": "不同特征值对应的特征向量线性无关",
-          "bodyMarkdown": "不同特征值对应的特征向量线性无关"
+          "id": "te-zheng-xiang-liang-ke-qu-shi-xiang-0cr57h",
+          "title": "特征向量可取实向量",
+          "bodyMarkdown": "特征向量可取实向量"
         },
         {
-          "id": "ji-shi-te-zheng-zhi-zhi-he-hang-lie-shi-15y31n",
-          "title": "迹是特征值之和",
-          "bodyMarkdown": "迹是特征值之和，行列式是特征值之积"
+          "id": "wei-zheng-jiao-dui-jiao-hua-pu-lu",
+          "title": "为正交对角化铺路",
+          "bodyMarkdown": "为正交对角化铺路"
         }
       ],
       "examples": [
         {
-          "id": "a-diag-2-3-shi-1-0-he-0-1ft0xk",
+          "id": "dui-cheng-zhen-de-te-1nscib",
           "title": "讲解例子",
-          "bodyMarkdown": "A=diag(2,3) 时，(1,0) 和 (0,1) 分别是特征值 2、3 的特征向量。"
+          "bodyMarkdown": "对称阵的特征方程判别式必 ≥0（二阶时直观可见）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。求解时先求特征方程，再对每个特征值解对应齐次方程。\n\n### 解题步骤\n\n1. 解 det(λI−A)=0\n2. 对每个 λ 解 (A−λI)x=0\n3. 检查重根对应的独立向量数量\n\n### 易错点\n\n把零向量当特征向量，或只求出特征值却没有求特征向量。"
+      "bodyMarkdown": "实对称矩阵的特征值全为实数（复根不会出现）：这是实对称矩阵三大性质之一（另两个：不同特征值特征向量正交、必可正交对角化），也保证全程可在实数域操作。\n\n### 解题步骤\n\n1. 验证对称\n2. 断言全实\n3. 继续实数运算\n\n### 易错点\n\n实矩阵（不对称）也可能全实特征值——「全实」不推出「对称」，方向别反。"
     },
     {
       "schemaVersion": "1.0",
@@ -937,47 +933,47 @@
       "sectionId": "m2-p2-c5-s7",
       "sectionTitle": "实对称矩阵",
       "title": "不同特征值特征向量正交",
-      "summary": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。",
+      "summary": "实对称矩阵不同特征值的特征向量互相正交：由对称性 (Aα,β)=(α,Aβ) 与 λ≠μ 推出内积为零；重根内部不保证，需施密特正交化补齐。",
       "tags": [
-        "保持方向的变换"
+        "数二的说法"
       ],
       "sortOrder": 190,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Aα=λα，α≠0；det(λI−A)=0",
-        "caption": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。"
+        "content": "(α,β)=0（λ≠μ）",
+        "caption": "实对称矩阵不同特征值的特征向量互相正交：由对称性 (Aα,β)=(α,Aβ) 与 λ≠μ 推出内积为零；重根内部不保证，需施密特正交化补齐。"
       },
       "keyPoints": [
         {
-          "id": "te-zheng-xiang-liang-bu-neng-shi-ling-1p3i1t",
-          "title": "特征向量不能是零向量",
-          "bodyMarkdown": "特征向量不能是零向量"
+          "id": "0",
+          "title": "λ≠μ ⇒ (α",
+          "bodyMarkdown": "λ≠μ ⇒ (α,β)=0"
         },
         {
-          "id": "bu-tong-te-zheng-zhi-dui-ying-de-te-03qxom",
-          "title": "不同特征值对应的特征向量线性无关",
-          "bodyMarkdown": "不同特征值对应的特征向量线性无关"
+          "id": "tong-yi-nei-bu-yao-zi-ji-zheng-jiao-hua",
+          "title": "同一 λ 内部要自己正交化",
+          "bodyMarkdown": "同一 λ 内部要自己正交化"
         },
         {
-          "id": "ji-shi-te-zheng-zhi-zhi-he-hang-lie-shi-15y31n",
-          "title": "迹是特征值之和",
-          "bodyMarkdown": "迹是特征值之和，行列式是特征值之积"
+          "id": "quan-ti-zheng-jiao-hua-hou-dan-wei-hua-1lxvo2",
+          "title": "全体正交化后单位化拼 Q",
+          "bodyMarkdown": "全体正交化后单位化拼 Q"
         }
       ],
       "examples": [
         {
-          "id": "a-diag-2-3-shi-1-0-he-0-1ft0xk",
+          "id": "0-yu-5-de-te-zheng-0dzg9g",
           "title": "讲解例子",
-          "bodyMarkdown": "A=diag(2,3) 时，(1,0) 和 (0,1) 分别是特征值 2、3 的特征向量。"
+          "bodyMarkdown": "λ=0 与 λ=5 的特征向量内积必为 0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "一般向量经过矩阵会改变方向，特征向量却只沿原方向被拉伸或反向，拉伸比例就是特征值。求解时先求特征方程，再对每个特征值解对应齐次方程。\n\n### 解题步骤\n\n1. 解 det(λI−A)=0\n2. 对每个 λ 解 (A−λI)x=0\n3. 检查重根对应的独立向量数量\n\n### 易错点\n\n把零向量当特征向量，或只求出特征值却没有求特征向量。"
+      "bodyMarkdown": "实对称矩阵不同特征值的特征向量互相正交：由对称性 (Aα,β)=(α,Aβ) 与 λ≠μ 推出内积为零；重根内部不保证，需施密特正交化补齐。\n\n### 解题步骤\n\n1. 跨特征值自动正交\n2. 重根内施密特\n3. 单位化\n\n### 易错点\n\n跳过重根内部的正交化——「不同特征值正交」不覆盖「同值之间」。"
     },
     {
       "schemaVersion": "1.0",
@@ -988,47 +984,47 @@
       "sectionId": "m2-p2-c5-s7",
       "sectionTitle": "实对称矩阵",
       "title": "正交对角化",
-      "summary": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。",
+      "summary": "正交对角化：把实对称矩阵化为 QᵀAQ=Λ，其中 Q 正交；操作链条：特征值 → 特征向量 → 重根内施密特正交化 → 全体单位化 → 按列拼 Q、对角写 Λ。",
       "tags": [
-        "换基看清矩阵"
+        "QᵀAQ=Λ 的全过程"
       ],
       "sortOrder": 200,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "B=P⁻¹AP；A=PΛP⁻¹",
-        "caption": "相似变换表示同一个线性变换在不同基底下的矩阵。"
+        "content": "QᵀAQ=Λ，QᵀQ=E",
+        "caption": "正交对角化：把实对称矩阵化为 QᵀAQ=Λ，其中 Q 正交；操作链条：特征值 → 特征向量 → 重根内施密特正交化 → "
       },
       "keyPoints": [
         {
-          "id": "xiang-si-ju-zhen-you-xiang-tong-te-1wzn70",
-          "title": "相似矩阵有相同特征多项式、迹和行列式",
-          "bodyMarkdown": "相似矩阵有相同特征多项式、迹和行列式"
+          "id": "chan-chu-zheng-jiao-ju-zhen-q-yu-dui-1k4622",
+          "title": "产出：正交矩阵 Q 与对角阵 Λ",
+          "bodyMarkdown": "产出：正交矩阵 Q 与对角阵 Λ"
         },
         {
-          "id": "n-ge-xian-xing-wu-guan-te-zheng-xiang-1y7q9c",
-          "title": "n 个线性无关特征向量才能对角化",
-          "bodyMarkdown": "n 个线性无关特征向量才能对角化"
+          "id": "zhong-gen-nei-bu-bi-xu-shi-mi-te-zheng-0ydh95",
+          "title": "重根内部必须施密特正交化",
+          "bodyMarkdown": "重根内部必须施密特正交化"
         },
         {
-          "id": "shi-dui-chen-ju-zhen-yi-ding-ke-zheng-06sc8e",
-          "title": "实对称矩阵一定可正交对角化",
-          "bodyMarkdown": "实对称矩阵一定可正交对角化"
+          "id": "jie-guo-yong-yu-er-ci-xing-biao-zhun-hua",
+          "title": "结果用于二次型标准化",
+          "bodyMarkdown": "结果用于二次型标准化"
         }
       ],
       "examples": [
         {
-          "id": "dui-jiao-ju-zhen-de-k-1px1c3",
+          "id": "san-jie-shi-dui-chen-1ekvxk",
           "title": "讲解例子",
-          "bodyMarkdown": "对角矩阵的 k 次幂只需把对角线元素分别取 k 次方。"
+          "bodyMarkdown": "三阶实对称、单根二重根各就各位：Q 三列单位正交。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "相似变换表示同一个线性变换在不同基底下的矩阵。可对角化意味着找到足够多的线性无关特征向量，把复杂矩阵换成对角矩阵，从而快速计算矩阵幂和函数。\n\n### 解题步骤\n\n1. 求特征值及特征向量\n2. 判断独立向量数量\n3. 构造 P 与 Λ 并验证\n\n### 易错点\n\n有 n 个特征值不等于一定有 n 个线性无关特征向量，重根要单独判断。"
+      "bodyMarkdown": "正交对角化：把实对称矩阵化为 QᵀAQ=Λ，其中 Q 正交；操作链条：特征值 → 特征向量 → 重根内施密特正交化 → 全体单位化 → 按列拼 Q、对角写 Λ。\n\n### 解题步骤\n\n1. 求谱与向量\n2. 正交化、单位化\n3. 拼 Q 验 QᵀQ=E\n\n### 易错点\n\n直接拿特征向量拼 Q 而不单位化——QᵀQ≠E，不算「正交」对角化。"
     }
   ]
 }
