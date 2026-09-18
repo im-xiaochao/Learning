@@ -2,7 +2,7 @@
  * 政治题库内容审计 v3（只读，不改数据）。
  * 用法：cd tools && npx tsx _audit2.ts
  */
-import { POLITICS_QUESTIONS, POLITICS_MODULES } from '../data'
+import { POLITICS_QUESTIONS } from '../data'
 
 type Q = any
 const QS = POLITICS_QUESTIONS as Q[]
