@@ -45,6 +45,15 @@ const GOLDEN = [
   ['大数定律与中心极限定理', '标准化', 'σ√n', '中心极限定理是对「和」标准化'],
   ['大数定律与中心极限定理', '用方差控制偏离均值的概率', 'ε²', '切比雪夫不等式'],
   ['大数定律与中心极限定理', '辛钦大数定律', '独立同分布', '辛钦的条件最宽松'],
+  // 高数第 1 章「函数、极限与连续」（数一/数二 两册）
+  ['函数、极限与连续', '第一重要极限', 'sin x/x=1', '第一重要极限的结论'],
+  ['函数、极限与连续', '第二重要极限', '1^∞', '第二重要极限专治 1^∞ 型'],
+  ['函数、极限与连续', '闭区间连续函数性质', '零点定理', '闭区间连续的四条性质'],
+  ['函数、极限与连续', '常用等价无穷小（x→0）', 'x−sin x∼x³/6', '差函数的等价无穷小'],
+  ['函数、极限与连续', '0/0', '约去', '0/0 型要约去零因子'],
+  ['函数、极限与连续', '洛必达', '0/0 或 ∞/∞', '洛必达的适用条件'],
+  ['函数、极限与连续', '泰勒', '展开阶数', '泰勒展开要展够阶数'],
+  ['函数、极限与连续', '间断点分类', '第一类', '间断点按左右极限分两类'],
 ]
 
 /** 展示内容里不允许出现的人名 / 课程名（合规红线） */
@@ -129,15 +138,25 @@ check('每个精编键都能命中知识点（键写错会静默不生效）', (
   return true
 })
 
-check('只按标题索引的键在全库唯一（重名必须写成「章节/标题」）', () => {
-  const count = new Map()
-  for (const { kp } of points) count.set(kp.title, (count.get(kp.title) || 0) + 1)
+check('只按标题索引的键：同名知识点必须同属一个章节', () => {
+  /*
+   * 判据：把同名知识点按「所属章节标题」归拢。
+   *   - 同一个章节名 → 是数一/数二 共用的章节（如「函数、极限与连续」两册各有一份），
+   *     内容本来就该一样，允许共用一份精编；
+   *   - 不同章节名 → 真正的跨章节重名（如「定义」同时出现在矩阵、向量、数字特征…），
+   *     必须写成「章节/标题」，否则会把内容套到别的章节上。
+   */
+  const chaptersOf = new Map()
+  for (const { chapter, kp } of points) {
+    if (!chaptersOf.has(kp.title)) chaptersOf.set(kp.title, new Set())
+    chaptersOf.get(kp.title).add(chapter.title)
+  }
   const byChapterTitle = new Set(points.map((p) => `${p.chapter.title}/${p.kp.title}`))
   const bad = curatedKeys()
     .filter((k) => !byChapterTitle.has(k)) // 没写成「章节/标题」的，就是只按标题索引
-    .filter((k) => (count.get(k) || 0) > 1)
-    .map((k) => `${k}（全库 ${count.get(k)} 处）`)
-  if (bad.length) throw new Error(`这些键重名，必须写成「章节/标题」：${bad.join('、')}`)
+    .filter((k) => (chaptersOf.get(k)?.size || 0) > 1)
+    .map((k) => `${k}（横跨：${[...chaptersOf.get(k)].join('、')}）`)
+  if (bad.length) throw new Error(`这些键跨章节重名，必须写成「章节/标题」：${bad.join('；')}`)
   return true
 })
 check('精编内容确实生效（抽查的摘要不再与他人重复）', () => {

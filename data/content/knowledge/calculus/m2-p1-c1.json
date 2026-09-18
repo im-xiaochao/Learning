@@ -15,47 +15,47 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "函数的概念",
-      "summary": "函数不是一条公式，而是一种“输入唯一决定输出”的对应关系。做题时先确定定义域，再检查对应法则是否对每个允许输入都给出唯一的函数值，最后才讨论图像和性质。",
+      "summary": "函数是「一个输入对应唯一输出」的对应关系，记作 y=f(x)。",
       "tags": [
-        "核心定义"
+        "输入唯一决定输出"
       ],
       "sortOrder": 10,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f: D → W，x ∈ D ↦ f(x) ∈ W",
-        "caption": "函数不是一条公式，而是一种“输入唯一决定输出”的对应关系。"
+        "content": "f: D → R，x ↦ y=f(x)",
+        "caption": "函数是「一个输入对应唯一输出」的对应关系，记作 y=f(x)。"
       },
       "keyPoints": [
         {
-          "id": "ding-yi-yu-jue-ding-yun-xu-shu-ru-shen-1fet2b",
-          "title": "定义域决定允许输入什么",
-          "bodyMarkdown": "定义域决定允许输入什么"
+          "id": "san-yao-su-ding-yi-yu-dui-ying-fa-ze-1rul1w",
+          "title": "三要素：定义域、对应法则、值域（值域由前两者决定",
+          "bodyMarkdown": "三要素：定义域、对应法则、值域（值域由前两者决定）"
         },
         {
-          "id": "tong-yi-ge-jie-xi-shi-pei-shang-bu-tong-02ruux",
-          "title": "同一个解析式配上不同定义域会得到不同函数",
-          "bodyMarkdown": "同一个解析式配上不同定义域会得到不同函数"
+          "id": "yi-ge-x-zhi-neng-dui-ying-yi-ge-y-fou-1ptlzw",
+          "title": "一个 x 只能对应一个 y",
+          "bodyMarkdown": "一个 x 只能对应一个 y，否则不是（单值）函数"
         },
         {
-          "id": "zhi-yu-shi-shi-ji-shu-chu-de-ji-he-bu-00kuic",
-          "title": "值域是实际输出的集合",
-          "bodyMarkdown": "值域是实际输出的集合，不一定等于陪域"
+          "id": "ding-yi-yu-yu-dui-ying-fa-ze-dou-xiang-0gn5f0",
+          "title": "定义域与对应法则都相同",
+          "bodyMarkdown": "定义域与对应法则都相同，才是同一个函数"
         }
       ],
       "examples": [
         {
-          "id": "f-x-2x-1-d-0-1-2-shi-0cja2l",
+          "id": "y-1-x-de-ding-yi-yu-shi-0c8dk3",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=2x+1，D={0,1,2} 时，输出集合为 {1,3,5}。"
+          "bodyMarkdown": "y=√(1−x²) 的定义域是 [−1,1]，值域是 [0,1]。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "函数不是一条公式，而是一种“输入唯一决定输出”的对应关系。做题时先确定定义域，再检查对应法则是否对每个允许输入都给出唯一的函数值，最后才讨论图像和性质。\n\n### 解题步骤\n\n1. 列出使表达式有意义的 x\n2. 写清 f(x) 的对应法则\n3. 检查一个输入是否对应多个输出\n\n### 易错点\n\n解析式相同不代表函数相同；定义域不同，函数就可能不同。"
+      "bodyMarkdown": "函数是「一个输入对应唯一输出」的对应关系，记作 y=f(x)。定义域、对应法则、值域三个要素里，值域由前两者决定，所以判断两个函数是否相同只看定义域与对应法则。\n\n### 解题步骤\n\n1. 先确定定义域（使表达式有意义）\n2. 写清对应法则\n3. 判断是否为单值对应\n\n### 易错点\n\n只看表达式不看定义域，把 y=x 与 y=x²/x 当成同一个函数。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "函数的表示法",
-      "summary": "解析式、表格和图像描述的是同一个对应关系的不同侧面。解析法便于计算，图像法便于观察单调、极值和对称性，表格法适合离散数据；遇到分段或参数问题，还要特别关注定义域与参数范围。",
+      "summary": "函数可以用解析式、图像、表格三种方式表示，它们是同一个对应关系的不同侧面：解析式便于计算，图像便于观察单调性与对称性。",
       "tags": [
-        "三种视角"
+        "解析式、图像、表格"
       ],
       "sortOrder": 20,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y=f(x)；参数式 x=x(t), y=y(t)；分段式按区间分别定义",
-        "caption": "解析式、表格和图像描述的是同一个对应关系的不同侧面。"
+        "content": "y=f(x)；分段：f(x)=g₁(x)（x∈D₁）…",
+        "caption": "函数可以用解析式、图像、表格三种方式表示，它们是同一个对应关系的不同侧面：解析式便于计算，图像便于观察单调性与对称性。"
       },
       "keyPoints": [
         {
-          "id": "jie-xi-fa-qiang-diao-yun-suan-gui-ze",
-          "title": "解析法强调运算规则",
-          "bodyMarkdown": "解析法强调运算规则"
+          "id": "jie-xi-shi-shi-he-ji-suan-tu-xiang-shi-0z41pu",
+          "title": "解析式适合计算",
+          "bodyMarkdown": "解析式适合计算，图像适合观察整体性质"
         },
         {
-          "id": "tu-xiang-fa-bu-neng-dai-ti-ding-yi-yu-0shobi",
-          "title": "图像法不能代替定义域与精确计算",
-          "bodyMarkdown": "图像法不能代替定义域与精确计算"
+          "id": "fen-duan-han-shu-shi-jie-xi-shi-de-yi-0t0s0w",
+          "title": "分段函数是解析式的一种",
+          "bodyMarkdown": "分段函数是解析式的一种，按区间分别给法则"
         },
         {
-          "id": "can-shu-fang-cheng-zhong-x-y-you-tong-0ctxum",
-          "title": "参数方程中 x、y 由同一个参数同步变化",
-          "bodyMarkdown": "参数方程中 x、y 由同一个参数同步变化"
+          "id": "zai-biao-shi-zhi-jian-zhuan-huan-shi-1mb1li",
+          "title": "在表示之间转换时要保留定义域信息",
+          "bodyMarkdown": "在表示之间转换时要保留定义域信息"
         }
       ],
       "examples": [
         {
-          "id": "tong-yi-han-shu-y-x-ke-0zdjdv",
+          "id": "y-x-ji-ke-yi-xie-cheng-1yvqm6",
           "title": "讲解例子",
-          "bodyMarkdown": "同一函数 y=x² 可以用公式、表格或抛物线表示；求零点时图像能先给出位置判断，公式再给出精确值。"
+          "bodyMarkdown": "y=|x| 既可以写成解析式，也可以画成 V 形图像。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "解析式、表格和图像描述的是同一个对应关系的不同侧面。解析法便于计算，图像法便于观察单调、极值和对称性，表格法适合离散数据；遇到分段或参数问题，还要特别关注定义域与参数范围。\n\n### 解题步骤\n\n1. 先看定义域与变量\n2. 按题目目的选择表示法\n3. 在不同表示之间互相验证\n\n### 易错点\n\n只看图像的局部形状就断言全局性质，容易漏掉定义域和断点。"
+      "bodyMarkdown": "函数可以用解析式、图像、表格三种方式表示，它们是同一个对应关系的不同侧面：解析式便于计算，图像便于观察单调性与对称性。\n\n### 解题步骤\n\n1. 选择便于计算的表示方式\n2. 画图时注意定义域与断点\n3. 转换表示时保留定义域\n\n### 易错点\n\n画图时忽略定义域，把只在某区间成立的表达式画到整个数轴。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "有界性",
-      "summary": "有界性回答的是函数值能否被两条水平线统一夹住。上界只要求 f(x)≤M，下界只要求 f(x)≥m；同时有上界和下界才叫有界。",
+      "summary": "f 在区间 I 上有界，指存在 M>0 使 |f(x)|≤M 对 I 上所有 x 成立。",
       "tags": [
-        "范围控制"
+        "存在上下界"
       ],
       "sortOrder": 30,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "m≤f(x)≤M",
-        "caption": "有界性回答的是函数值能否被两条水平线统一夹住。"
+        "content": "∃M>0，∀x∈I：|f(x)|≤M",
+        "caption": "f 在区间 I 上有界，指存在 M>0 使 |f(x)|≤M 对 I 上所有 x 成立。"
       },
       "keyPoints": [
         {
-          "id": "you-jie-bu-deng-yu-you-zui-da-zhi-zui-0rm2nv",
-          "title": "有界不等于有最大值",
-          "bodyMarkdown": "有界不等于有最大值，最大值还要求某个点真正取到"
+          "id": "you-jie-cun-zai-m-0-shi-f-x-m-zai-qu-1gn7c9",
+          "title": "有界 ⇔ 存在 M>0 使 |f(x)|≤M 在",
+          "bodyMarkdown": "有界 ⇔ 存在 M>0 使 |f(x)|≤M 在区间上恒成立"
         },
         {
-          "id": "ju-bu-you-jie-zhi-zai-mou-ge-lin-yu-0odel8",
-          "title": "局部有界只在某个邻域成立",
-          "bodyMarkdown": "局部有界只在某个邻域成立"
+          "id": "you-jie-xing-yi-lai-qu-jian-1-x-zai-0-1-0pvasm",
+          "title": "有界性依赖区间",
+          "bodyMarkdown": "有界性依赖区间：1/x 在 (0,1) 无界、在 (1,2) 有界"
         },
         {
-          "id": "bi-qu-jian-lian-xu-han-shu-yi-ding-you-0oqaww",
-          "title": "闭区间连续函数一定有界",
-          "bodyMarkdown": "闭区间连续函数一定有界"
+          "id": "bi-qu-jian-shang-lian-xu-you-jie-zhe-0ggvwf",
+          "title": "闭区间上连续 ⇒ 有界（这是后面证明题的常用结论",
+          "bodyMarkdown": "闭区间上连续 ⇒ 有界（这是后面证明题的常用结论）"
         }
       ],
       "examples": [
         {
-          "id": "sin-x-zai-zheng-ge-shi-1v4sor",
+          "id": "sin-x-zai-r-shang-you-100946",
           "title": "讲解例子",
-          "bodyMarkdown": "sin x 在整个实轴上满足 −1≤sin x≤1，因此有界；x² 在实轴上无上界。"
+          "bodyMarkdown": "sin x 在 R 上有界（取 M=1）；f(x)=x 在 R 上无界。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "有界性回答的是函数值能否被两条水平线统一夹住。上界只要求 f(x)≤M，下界只要求 f(x)≥m；同时有上界和下界才叫有界。极限存在、闭区间连续性和有界性经常互相配合。\n\n### 解题步骤\n\n1. 写出候选上界或下界\n2. 检查整个定义域而非某一段\n3. 区分“有界”与“取到最值”\n\n### 易错点\n\n只找到一个上界就说函数“有界”，还必须同时有下界。"
+      "bodyMarkdown": "f 在区间 I 上有界，指存在 M>0 使 |f(x)|≤M 对 I 上所有 x 成立。有界是「整体性质」，必须同时指明区间与常数。\n\n### 解题步骤\n\n1. 明确讨论的区间\n2. 估计 |f(x)| 的上界\n3. 给出使不等式成立的 M\n\n### 易错点\n\n说「有界」却不指明区间，结论没有意义。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "单调性",
-      "summary": "单调性比较的是任意两个有序输入的输出关系。可导时，导数符号把“逐点比较”转成“局部变化率判断”：f′≥0 给出单调不减，严格单调通常需要进一步排除导数恒为零的区间。",
+      "summary": "单调递增指 x₁<x₂ 时 f(x₁)≤f(x₂)（严格递增则严格小于）。",
       "tags": [
-        "比较输出变化"
+        "增减一致"
       ],
       "sortOrder": 40,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
         "content": "x₁<x₂ ⇒ f(x₁)≤f(x₂)（单调不减）",
-        "caption": "单调性比较的是任意两个有序输入的输出关系。"
+        "caption": "单调递增指 x₁<x₂ 时 f(x₁)≤f(x₂)（严格递增则严格小于）。"
       },
       "keyPoints": [
         {
-          "id": "dan-diao-qu-jian-yao-xie-qing-chu-kai-1ozggh",
-          "title": "单调区间要写清楚开闭端点",
-          "bodyMarkdown": "单调区间要写清楚开闭端点"
+          "id": "dan-diao-xing-bi-xu-zai-zhi-ding-qu-15xgwr",
+          "title": "单调性必须在指定区间上讨论",
+          "bodyMarkdown": "单调性必须在指定区间上讨论"
         },
         {
-          "id": "dao-shu-wei-ling-de-gu-li-dian-bu-po-0v74g5",
-          "title": "导数为零的孤立点不破坏严格单调",
-          "bodyMarkdown": "导数为零的孤立点不破坏严格单调"
+          "id": "yan-ge-dan-diao-shi-fan-han-shu-cun-zai-0s3n81",
+          "title": "严格单调是反函数存在的充分条件",
+          "bodyMarkdown": "严格单调是反函数存在的充分条件"
         },
         {
-          "id": "fen-duan-han-shu-yao-fen-bie-pan-duan-072onl",
-          "title": "分段函数要分别判断各段并检查接点",
-          "bodyMarkdown": "分段函数要分别判断各段并检查接点"
+          "id": "dao-shu-fu-hao-shi-pan-duan-dan-diao-0d3rdq",
+          "title": "导数符号是判断单调性的常用工具",
+          "bodyMarkdown": "导数符号是判断单调性的常用工具"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-de-dao-shu-3x-0-0su5w6",
+          "id": "f-x-x-zai-r-shang-yan-0y2bm4",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=x³ 的导数 3x²≥0，且除 x=0 外为正，所以 f 在实轴上严格递增。"
+          "bodyMarkdown": "f(x)=x³ 在 R 上严格递增，所以它有反函数。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "单调性比较的是任意两个有序输入的输出关系。可导时，导数符号把“逐点比较”转成“局部变化率判断”：f′≥0 给出单调不减，严格单调通常需要进一步排除导数恒为零的区间。\n\n### 解题步骤\n\n1. 求导并找出定义域内的临界点\n2. 按临界点分区间判断导数符号\n3. 把符号表翻译成单调区间\n\n### 易错点\n\n某一点 f′=0 不能直接推出该点是极值，也不能直接否定严格单调。"
+      "bodyMarkdown": "单调递增指 x₁<x₂ 时 f(x₁)≤f(x₂)（严格递增则严格小于）。单调性在求反函数、比较大小、证明不等式时最有用。\n\n### 解题步骤\n\n1. 任取 x₁<x₂\n2. 比较 f(x₁) 与 f(x₂)\n3. 或用 f′ 的符号判断\n\n### 易错点\n\n把「局部单调」当成「整体单调」。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "奇偶性",
-      "summary": "奇偶性是定义域关于原点对称时，函数图像呈现的对称关系。偶函数关于 y 轴对称，奇函数关于原点中心对称；判断前必须先检查定义域，否则 f(−x) 可能根本没有意义。",
+      "summary": "奇函数满足 f(−x)=−f(x)，图像关于原点对称；偶函数满足 f(−x)=f(x)，图像关于 y 轴对称。",
       "tags": [
-        "对称性"
+        "关于原点或 y 轴对称"
       ],
       "sortOrder": 50,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "偶：f(−x)=f(x)；奇：f(−x)=−f(x)",
-        "caption": "奇偶性是定义域关于原点对称时，函数图像呈现的对称关系。"
+        "content": "奇：f(−x)=−f(x)；偶：f(−x)=f(x)",
+        "caption": "奇函数满足 f(−x)=−f(x)，图像关于原点对称；偶函数满足 f(−x)=f(x)，图像关于 y 轴对称。"
       },
       "keyPoints": [
         {
-          "id": "ou-han-shu-man-zu-f-x-f-x",
-          "title": "偶函数满足 f(−x)=f(x)",
-          "bodyMarkdown": "偶函数满足 f(−x)=f(x)"
+          "id": "qi-f-x-f-x-ou-f-x-f-x",
+          "title": "奇：f(−x)=−f(x)；偶：f(−x)=f(",
+          "bodyMarkdown": "奇：f(−x)=−f(x)；偶：f(−x)=f(x)"
         },
         {
-          "id": "ji-han-shu-man-zu-f-x-f-x",
-          "title": "奇函数满足 f(−x)=−f(x)",
-          "bodyMarkdown": "奇函数满足 f(−x)=−f(x)"
+          "id": "ding-yi-yu-bi-xu-guan-yu-yuan-dian-dui-0yk63o",
+          "title": "定义域必须关于原点对称",
+          "bodyMarkdown": "定义域必须关于原点对称，否则无从谈奇偶性"
         },
         {
-          "id": "ji-han-shu-zai-0-you-ding-yi-shi-bi-you-0yk6ev",
-          "title": "奇函数在 0 有定义时必有 f(0)=0",
-          "bodyMarkdown": "奇函数在 0 有定义时必有 f(0)=0"
+          "id": "ji-han-shu-zai-0-chu-you-ding-yi-shi-bi-0f1386",
+          "title": "奇函数在 0 处有定义时必有 f(0)=0",
+          "bodyMarkdown": "奇函数在 0 处有定义时必有 f(0)=0"
         }
       ],
       "examples": [
         {
-          "id": "x-shi-ou-han-shu-x-shi-19c3jg",
+          "id": "x-shi-ji-han-shu-cos-x-1yoxmw",
           "title": "讲解例子",
-          "bodyMarkdown": "x² 是偶函数，x³ 是奇函数；sin x 为奇函数，cos x 为偶函数。"
+          "bodyMarkdown": "x³ 是奇函数；cos x 是偶函数；x+1 非奇非偶。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "奇偶性是定义域关于原点对称时，函数图像呈现的对称关系。偶函数关于 y 轴对称，奇函数关于原点中心对称；判断前必须先检查定义域，否则 f(−x) 可能根本没有意义。\n\n### 解题步骤\n\n1. 检查定义域是否关于 0 对称\n2. 计算 f(−x)\n3. 与 f(x) 或 −f(x) 比较\n\n### 易错点\n\n定义域不对称时不能套奇偶性公式。"
+      "bodyMarkdown": "奇函数满足 f(−x)=−f(x)，图像关于原点对称；偶函数满足 f(−x)=f(x)，图像关于 y 轴对称。前提是定义域关于原点对称。\n\n### 解题步骤\n\n1. 检查定义域是否关于原点对称\n2. 算 f(−x) 并与 ±f(x) 比较\n3. 给出奇 / 偶 / 非奇非偶的结论\n\n### 易错点\n\n定义域不对称就断言奇偶性。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "周期性",
-      "summary": "周期性表示函数沿横轴平移某个长度后图像完全重复。周期不是随便一个能让部分点重合的数，而是满足对定义域内所有 x 都成立的正数；最小正周期反映真正的重复长度。",
+      "summary": "若存在 T>0 使 f(x+T)=f(x) 对定义域内所有 x 成立，就称 f 为周期函数，T 为它的一个周期；通常所说的周期指最小正周期。",
       "tags": [
-        "重复结构"
+        "隔一段重复一次"
       ],
       "sortOrder": 60,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f(x+T)=f(x)，T>0",
-        "caption": "周期性表示函数沿横轴平移某个长度后图像完全重复。"
+        "content": "f(x+T)=f(x)",
+        "caption": "若存在 T>0 使 f(x+T)=f(x) 对定义域内所有 x 成立，就称 f 为周期函数，T 为它的一个周期；通常所说的周期指最小正周期。"
       },
       "keyPoints": [
         {
-          "id": "zhou-qi-bi-xu-yu-ding-yi-yu-jian-rong",
-          "title": "周期必须与定义域兼容",
-          "bodyMarkdown": "周期必须与定义域兼容"
+          "id": "f-x-t-f-x-qie-t-0",
+          "title": "f(x+T)=f(x)",
+          "bodyMarkdown": "f(x+T)=f(x)，且 T>0"
         },
         {
-          "id": "chang-shu-han-shu-mei-you-wei-yi-de-zui-1h04ph",
-          "title": "常数函数没有唯一的最小正周期",
-          "bodyMarkdown": "常数函数没有唯一的最小正周期"
+          "id": "zhou-qi-han-shu-de-tu-xiang-mei-ge-t-0eb1j3",
+          "title": "周期函数的图像每隔 T 重复一次",
+          "bodyMarkdown": "周期函数的图像每隔 T 重复一次"
         },
         {
-          "id": "fu-he-he-bei-jiao-hui-gai-bian-zhou-qi-1ro41d",
-          "title": "复合和倍角会改变周期",
-          "bodyMarkdown": "复合和倍角会改变周期，先化简再判断"
+          "id": "sin-x-cos-x-de-zui-xiao-zheng-zhou-qi-1s5htn",
+          "title": "sin x、cos x 的最小正周期是 2π",
+          "bodyMarkdown": "sin x、cos x 的最小正周期是 2π，|sin x| 是 π"
         }
       ],
       "examples": [
         {
-          "id": "sin-2x-de-zui-xiao-0z163u",
+          "id": "sin-x-de-zhou-qi-wei-2-18p4tp",
           "title": "讲解例子",
-          "bodyMarkdown": "sin(2x) 的最小正周期为 π；sin x+1 的周期不变，竖直平移不影响周期。"
+          "bodyMarkdown": "sin x 的周期为 2π；|sin x| 的周期为 π。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "周期性表示函数沿横轴平移某个长度后图像完全重复。周期不是随便一个能让部分点重合的数，而是满足对定义域内所有 x 都成立的正数；最小正周期反映真正的重复长度。\n\n### 解题步骤\n\n1. 写出 f(x+T)\n2. 利用恒等式化简\n3. 取满足条件的最小正 T\n\n### 易错点\n\n把“某个重复间距”误认为最小正周期，常见于三角函数倍角题。"
+      "bodyMarkdown": "若存在 T>0 使 f(x+T)=f(x) 对定义域内所有 x 成立，就称 f 为周期函数，T 为它的一个周期；通常所说的周期指最小正周期。\n\n### 解题步骤\n\n1. 找出满足 f(x+T)=f(x) 的正数 T\n2. 验证对定义域内所有 x 都成立\n3. 必要时求最小正周期\n\n### 易错点\n\n把某个周期的整数倍当成最小正周期。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,9 +321,9 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "复合函数",
-      "summary": "复合函数先由内层函数把 x 变成 g(x)，再把 g(x) 送入外层函数 f。",
+      "summary": "复合函数 y=f[g(x)] 是把 g 的输出作为 f 的输入；它成立的条件是 g 的值域与 f 的定义域有交集，定义域要同时满足两个函数的要求。",
       "tags": [
-        "层层代入"
+        "函数套函数"
       ],
       "sortOrder": 70,
       "estimatedMinutes": 4,
@@ -331,37 +331,37 @@
         "type": "formula",
         "format": "text",
         "content": "(f∘g)(x)=f(g(x))",
-        "caption": "复合函数先由内层函数把 x 变成 g(x)，再把 g(x) 送入外层函数 f。"
+        "caption": "复合函数 y=f[g(x)] 是把 g 的输出作为 f 的输入；它成立的条件是 g 的值域与 f 的定义域有交集，定义域要同时满足两个函数的要求。"
       },
       "keyPoints": [
         {
-          "id": "shun-xu-bu-neng-jiao-huan-f-g-tong-05rn7z",
-          "title": "顺序不能交换",
-          "bodyMarkdown": "顺序不能交换：f∘g 通常不等于 g∘f"
+          "id": "yao-qiu-g-de-zhi-yu-luo-zai-f-de-ding-0z3sms",
+          "title": "要求 g 的值域落在 f 的定义域内（至少相交）",
+          "bodyMarkdown": "要求 g 的值域落在 f 的定义域内（至少相交）"
         },
         {
-          "id": "ding-yi-yu-yao-jing-guo-liang-ceng-shai-0yk6ae",
-          "title": "定义域要经过两层筛选",
-          "bodyMarkdown": "定义域要经过两层筛选"
+          "id": "fu-he-han-shu-de-ding-yi-yu-you-nei-wai-1h7ng8",
+          "title": "复合函数的定义域由内外两个函数共同限制",
+          "bodyMarkdown": "复合函数的定义域由内外两个函数共同限制"
         },
         {
-          "id": "qiu-dao-shi-dui-ying-shi-yong-lian-shi-0o89y6",
-          "title": "求导时对应使用链式法则",
-          "bodyMarkdown": "求导时对应使用链式法则"
+          "id": "fu-he-shun-xu-bu-tong-jie-guo-yi-ban-bu-0rmxre",
+          "title": "复合顺序不同",
+          "bodyMarkdown": "复合顺序不同，结果一般不同"
         }
       ],
       "examples": [
         {
-          "id": "f-u-u-g-x-x-1-ze-fu-he-0br5f5",
+          "id": "f-x-x-g-x-1-x-shi-fu-he-0ivyv7",
           "title": "讲解例子",
-          "bodyMarkdown": "f(u)=√u，g(x)=x²−1，则复合函数为 √(x²−1)，定义域是 |x|≥1。"
+          "bodyMarkdown": "f(x)=√x、g(x)=1−x² 时，复合函数的定义域是 |x|≤1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "复合函数先由内层函数把 x 变成 g(x)，再把 g(x) 送入外层函数 f。它的定义域同时受内层有定义和内层输出落在外层定义域限制，不能只看最外层表达式。\n\n### 解题步骤\n\n1. 辨认内层 g 与外层 f\n2. 先写 g(x) 的取值范围\n3. 检查该范围是否落入 f 的定义域\n\n### 易错点\n\n只把表达式代进去而不检查内层输出，会得到错误定义域。"
+      "bodyMarkdown": "复合函数 y=f[g(x)] 是把 g 的输出作为 f 的输入；它成立的条件是 g 的值域与 f 的定义域有交集，定义域要同时满足两个函数的要求。\n\n### 解题步骤\n\n1. 写出内层函数的输出范围\n2. 与外层函数的定义域取交\n3. 得到复合函数的定义域\n\n### 易错点\n\n只考虑外层函数的定义域，漏掉内层的限制。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,9 +372,9 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "反函数",
-      "summary": "反函数把原函数的输出重新当作输入。一个函数要有反函数，至少要在所讨论的定义域上满足一一对应；连续严格单调函数天然适合求反函数，图像与原函数关于 y=x 对称。",
+      "summary": "若 y=f(x) 中 x 与 y 一一对应，就可以解出 x=f⁻¹(y)，得到反函数；反函数的定义域是原函数的值域，图像关于直线 y=x 对称。",
       "tags": [
-        "反向对应"
+        "把对应倒过来"
       ],
       "sortOrder": 80,
       "estimatedMinutes": 4,
@@ -382,37 +382,37 @@
         "type": "formula",
         "format": "text",
         "content": "f⁻¹(f(x))=x；f(f⁻¹(x))=x",
-        "caption": "反函数把原函数的输出重新当作输入。"
+        "caption": "若 y=f(x) 中 x 与 y 一一对应，就可以解出 x=f⁻¹(y)，得到反函数；反函数的定义域是原函数的值域，图像关于直线 y=x 对称。"
       },
       "keyPoints": [
         {
-          "id": "xian-xian-zhi-ding-yi-yu-cai-neng-rang-1sccgo",
-          "title": "先限制定义域",
-          "bodyMarkdown": "先限制定义域，才能让函数一一对应"
+          "id": "yan-ge-dan-diao-shi-fan-han-shu-cun-zai-0s3n81",
+          "title": "严格单调是反函数存在的充分条件",
+          "bodyMarkdown": "严格单调是反函数存在的充分条件"
         },
         {
-          "id": "f-f-x-x-yu-f-f-x-x-de-shu-ru-fan-wei-bu-152i6e",
-          "title": "f⁻¹(f(x))=x 与 f(f⁻¹(x))=",
-          "bodyMarkdown": "f⁻¹(f(x))=x 与 f(f⁻¹(x))=x 的输入范围不同"
+          "id": "fan-han-shu-de-ding-yi-yu-yuan-han-shu-0ehwmi",
+          "title": "反函数的定义域 = 原函数的值域",
+          "bodyMarkdown": "反函数的定义域 = 原函数的值域"
         },
         {
-          "id": "fan-han-shu-de-ding-yi-yu-he-zhi-yu-hu-0gk8di",
-          "title": "反函数的定义域和值域互换",
-          "bodyMarkdown": "反函数的定义域和值域互换"
+          "id": "f-f-x-x-f-f-x-x",
+          "title": "f⁻¹(f(x))=x",
+          "bodyMarkdown": "f⁻¹(f(x))=x，f(f⁻¹(x))=x"
         }
       ],
       "examples": [
         {
-          "id": "y-x-zai-quan-ti-shi-shu-1bjnwf",
+          "id": "y-e-de-fan-han-shu-shi-1o1mtl",
           "title": "讲解例子",
-          "bodyMarkdown": "y=x² 在全体实数上没有反函数；限制 x≥0 后，反函数为 y=√x。"
+          "bodyMarkdown": "y=eˣ 的反函数是 y=ln x，定义域 x>0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "反函数把原函数的输出重新当作输入。一个函数要有反函数，至少要在所讨论的定义域上满足一一对应；连续严格单调函数天然适合求反函数，图像与原函数关于 y=x 对称。\n\n### 解题步骤\n\n1. 判断原函数是否一一对应\n2. 交换 x、y 并解出 y\n3. 交换定义域和值域并验证\n\n### 易错点\n\n水平线检验不通过时，不能把“解出来的一个分支”直接叫反函数。"
+      "bodyMarkdown": "若 y=f(x) 中 x 与 y 一一对应，就可以解出 x=f⁻¹(y)，得到反函数；反函数的定义域是原函数的值域，图像关于直线 y=x 对称。\n\n### 解题步骤\n\n1. 确认一一对应（如严格单调）\n2. 由 y=f(x) 解出 x\n3. 交换 x、y 并写出反函数的定义域\n\n### 易错点\n\n忘记反函数的定义域来自原函数的值域。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "分段函数",
-      "summary": "分段函数在不同区间使用不同表达式，真正容易出错的地方集中在分界点：函数值由题目指定的那一段决定，极限要分别从左右计算，连续与可导还要把这些结果对齐。",
+      "summary": "分段函数在不同区间用不同表达式，它是一个函数而不是多个；求值、讨论连续性、求导时都要按「x 落在哪一段」分别处理。",
       "tags": [
-        "接点管理"
+        "按区间分别给法则"
       ],
       "sortOrder": 90,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "连续：limₓ→a−f(x)=limₓ→a+f(x)=f(a)",
-        "caption": "分段函数在不同区间使用不同表达式，真正容易出错的地方集中在分界点：函数值由题目指定的那一段决定，极限要分别从左右计算，连续与可导还要把这些结果对齐。"
+        "content": "f(x)=g₁(x)（x∈D₁）；g₂(x)（x∈D₂）",
+        "caption": "分段函数在不同区间用不同表达式，它是一个函数而不是多个；求值、讨论连续性、求导时都要按「x 落在哪一段」分别处理。"
       },
       "keyPoints": [
         {
-          "id": "fen-jie-dian-han-shu-zhi-zuo-you-ji-0jeitt",
-          "title": "分界点函数值、左右极限是三个独立对象",
-          "bodyMarkdown": "分界点函数值、左右极限是三个独立对象"
+          "id": "fen-duan-han-shu-shi-yi-ge-han-shu-zhi-01cuxf",
+          "title": "分段函数是「一个函数」",
+          "bodyMarkdown": "分段函数是「一个函数」，只是法则分段给出"
         },
         {
-          "id": "lian-xu-yao-qiu-zuo-you-ji-xian-xiang-0zbvfc",
-          "title": "连续要求左右极限相等且等于函数值",
-          "bodyMarkdown": "连续要求左右极限相等且等于函数值"
+          "id": "fen-duan-dian-bi-xu-dan-du-tao-lun-lian-0jfbfl",
+          "title": "分段点必须单独讨论连续性与可导性",
+          "bodyMarkdown": "分段点必须单独讨论连续性与可导性"
         },
         {
-          "id": "ke-dao-hai-yao-bi-jiao-zuo-you-dao-shu",
-          "title": "可导还要比较左右导数",
-          "bodyMarkdown": "可导还要比较左右导数"
+          "id": "fen-duan-dian-chu-yao-fen-bie-qiu-zuo-0tlou1",
+          "title": "分段点处要分别求左右极限与左右导数",
+          "bodyMarkdown": "分段点处要分别求左右极限与左右导数"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-x-0-x-x-0-zai-0-0a6sju",
+          "id": "f-x-x-x-0-x-x-0-jiu-shi-1siwiu",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=x（x<0），x²（x≥0）在 0 处左右极限都为 0，且 f(0)=0，所以连续。"
+          "bodyMarkdown": "f(x)=x（x≥0）、−x（x<0）就是 f(x)=|x|。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "分段函数在不同区间使用不同表达式，真正容易出错的地方集中在分界点：函数值由题目指定的那一段决定，极限要分别从左右计算，连续与可导还要把这些结果对齐。\n\n### 解题步骤\n\n1. 先算分界点函数值\n2. 分别求左右极限或左右导数\n3. 按连续/可导条件解参数\n\n### 易错点\n\n只检查两段表达式在接点“代入相等”，不能替代左右极限检查。"
+      "bodyMarkdown": "分段函数在不同区间用不同表达式，它是一个函数而不是多个；求值、讨论连续性、求导时都要按「x 落在哪一段」分别处理。\n\n### 解题步骤\n\n1. 判断 x 属于哪一段\n2. 用该段的表达式计算\n3. 分段点单独讨论\n\n### 易错点\n\n把分段函数当成多个函数，或漏掉分段点的单独讨论。"
     },
     {
       "schemaVersion": "1.0",
@@ -474,47 +474,47 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "隐函数",
-      "summary": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。",
+      "summary": "隐函数是由方程 F(x,y)=0 确定的函数关系，未必能解出显式 y=f(x)。",
       "tags": [
-        "方程约束下求变化"
+        "由方程确定的函数"
       ],
       "sortOrder": 100,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Fₓ+Fᵧy′=0；y′=−Fₓ/Fᵧ（Fᵧ≠0）",
-        "caption": "隐函数由方程约束而不是显式公式给出。"
+        "content": "F(x,y)=0 ⇒ y′=−Fₓ/Fᵧ（Fᵧ≠0）",
+        "caption": "隐函数是由方程 F(x,y)=0 确定的函数关系，未必能解出显式 y=f(x)。"
       },
       "keyPoints": [
         {
-          "id": "yi-yuan-yin-han-shu-qiu-dao-yao-ba-y-1u40t8",
-          "title": "一元隐函数求导要把 y 当成 y(x)",
-          "bodyMarkdown": "一元隐函数求导要把 y 当成 y(x)"
+          "id": "yin-han-shu-you-fang-cheng-f-x-y-0-que-0nkrld",
+          "title": "隐函数由方程 F(x",
+          "bodyMarkdown": "隐函数由方程 F(x,y)=0 确定，可以不显式解出"
         },
         {
-          "id": "duo-yuan-yin-han-shu-yao-jian-cha-ya-ke-13r7bo",
-          "title": "多元隐函数要检查雅可比条件",
-          "bodyMarkdown": "多元隐函数要检查雅可比条件"
+          "id": "qiu-dao-shi-ba-y-shi-wei-x-de-han-shu-1bvj4b",
+          "title": "求导时把 y 视为 x 的函数（用链式法则）",
+          "bodyMarkdown": "求导时把 y 视为 x 的函数（用链式法则）"
         },
         {
-          "id": "jie-guo-bao-liu-y-huo-qi-ta-bian-liang-0udoyb",
-          "title": "结果保留 y 或其他变量是正常的",
-          "bodyMarkdown": "结果保留 y 或其他变量是正常的"
+          "id": "qiu-dao-jie-guo-yi-ban-tong-shi-han-x-0ddqei",
+          "title": "求导结果一般同时含 x 与 y",
+          "bodyMarkdown": "求导结果一般同时含 x 与 y"
         }
       ],
       "examples": [
         {
-          "id": "x-y-1-gei-chu-y-x-y-zai-08jt6k",
+          "id": "x-y-1-liang-bian-qiu-0mwdji",
           "title": "讲解例子",
-          "bodyMarkdown": "x²+y²=1 给出 y′=−x/y；在上半圆上 y>0。"
+          "bodyMarkdown": "x²+y²=1 两边求导得 2x+2yy′=0，故 y′=−x/y。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。\n\n### 解题步骤\n\n1. 写出约束方程\n2. 对所有项求全导数\n3. 整理目标导数并代入点\n\n### 易错点\n\n忘记含 y 的项要乘 y′，或在 Fᵧ=0 处强行套公式。"
+      "bodyMarkdown": "隐函数是由方程 F(x,y)=0 确定的函数关系，未必能解出显式 y=f(x)。求导时把 y 看成 x 的函数，方程两边同时对 x 求导即可。\n\n### 解题步骤\n\n1. 方程两边对 x 求导\n2. 把含 y′ 的项集中到一侧\n3. 解出 y′\n\n### 易错点\n\n对 y 求导时忘了乘 y′。"
     },
     {
       "schemaVersion": "1.0",
@@ -576,9 +576,9 @@
       "sectionId": "m2-p1-c1-s2",
       "sectionTitle": "数列极限",
       "title": "数列与极限",
-      "summary": "数列极限描述的是 n 足够大以后所有项都稳定靠近同一个数 A。",
+      "summary": "数列极限 lim aₙ=A 的 ε-N 定义是：对任意 ε>0，都存在 N，当 n>N 时 |aₙ−A|<ε。",
       "tags": [
-        "最终稳定"
+        "数列极限的定义"
       ],
       "sortOrder": 120,
       "estimatedMinutes": 4,
@@ -586,37 +586,37 @@
         "type": "formula",
         "format": "text",
         "content": "∀ε>0，∃N：n>N ⇒ |aₙ−A|<ε",
-        "caption": "数列极限描述的是 n 足够大以后所有项都稳定靠近同一个数 A。"
+        "caption": "数列极限 lim aₙ=A 的 ε-N 定义是：对任意 ε>0，都存在 N，当 n>N 时 |aₙ−A|<ε。"
       },
       "keyPoints": [
         {
-          "id": "ji-xian-shi-wei-bu-xing-zhi",
-          "title": "极限是尾部性质",
-          "bodyMarkdown": "极限是尾部性质"
+          "id": "n-ding-yi-0-n-n-n-a-a",
+          "title": "ε-N 定义",
+          "bodyMarkdown": "ε-N 定义：∀ε>0，∃N，n>N ⇒ |aₙ−A|<ε"
         },
         {
-          "id": "yue-xiao-tong-chang-xu-yao-geng-da-de-n",
-          "title": "ε 越小",
-          "bodyMarkdown": "ε 越小，通常需要更大的 N"
+          "id": "shi-ren-yi-xiao-de-zheng-shu-n-yi-lai",
+          "title": "ε 是任意小的正数",
+          "bodyMarkdown": "ε 是任意小的正数，N 依赖 ε"
         },
         {
-          "id": "shou-lian-shu-lie-bi-you-jie-dan-you-130dgr",
-          "title": "收敛数列必有界",
-          "bodyMarkdown": "收敛数列必有界，但有界数列不一定收敛"
+          "id": "shu-lie-ji-xian-yu-qian-mian-you-xian-06qi5t",
+          "title": "数列极限与前面有限项无关",
+          "bodyMarkdown": "数列极限与前面有限项无关"
         }
       ],
       "examples": [
         {
-          "id": "a-1-n-shou-lian-dao-0-0xkgwj",
+          "id": "a-1-n-de-ji-xian-wei-0-0u9a0q",
           "title": "讲解例子",
-          "bodyMarkdown": "aₙ=1/n 收敛到 0；给定 ε=0.01，n>100 后就有 |aₙ|<ε。"
+          "bodyMarkdown": "aₙ=1/n 的极限为 0：对任意 ε，取 N=1/ε 即可。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "数列极限描述的是 n 足够大以后所有项都稳定靠近同一个数 A。前面有限多项可以异常，关键是给定任意精度 ε，能否找到一个统一的 N，使 N 之后的每一项都进入 ε 邻域。\n\n### 解题步骤\n\n1. 猜测目标 A\n2. 把 |aₙ−A| 控制到 ε 内\n3. 给出 N 与结论\n\n### 易错点\n\n只验证前几项接近 A，不能证明数列极限。"
+      "bodyMarkdown": "数列极限 lim aₙ=A 的 ε-N 定义是：对任意 ε>0，都存在 N，当 n>N 时 |aₙ−A|<ε。它刻画的是「n 充分大以后，aₙ 任意接近 A」。\n\n### 解题步骤\n\n1. 写出 |aₙ−A| 的表达式\n2. 解不等式找出 N\n3. 说明 n>N 时不等式成立\n\n### 易错点\n\n把「任意 ε」当成「某个固定的 ε」。"
     },
     {
       "schemaVersion": "1.0",
@@ -627,47 +627,47 @@
       "sectionId": "m2-p1-c1-s2",
       "sectionTitle": "数列极限",
       "title": "极限性质",
-      "summary": "求极限没有唯一固定动作。先直接代入判断是否为定式，再按代数结构选择因式分解、有理化、等价无穷小、夹逼、洛必达或泰勒；每一步都要保留原来的趋近条件。",
+      "summary": "数列极限同样满足四则运算：若 aₙ→A、bₙ→B，则 aₙ±bₙ→A±B、aₙbₙ→AB，且当 B≠0 时 aₙ/bₙ→A/B。",
       "tags": [
-        "按结构选工具"
+        "数列极限的四则运算"
       ],
       "sortOrder": 130,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "0/0：因式分解、等价替换、洛必达、泰勒；∞/∞：比较最高阶或洛必达",
-        "caption": "求极限没有唯一固定动作。"
+        "content": "aₙ→A，bₙ→B（B≠0）⇒ aₙ/bₙ→A/B",
+        "caption": "数列极限同样满足四则运算：若 aₙ→A、bₙ→B，则 aₙ±bₙ→A±B、aₙbₙ→AB，且当 B≠0 时 aₙ/bₙ→A/B。"
       },
       "keyPoints": [
         {
-          "id": "xian-dai-ru-bu-yao-yi-shang-lai-jiu-luo-00bp04",
-          "title": "先代入，不要一上来就洛必达",
-          "bodyMarkdown": "先代入，不要一上来就洛必达"
+          "id": "si-ze-yun-suan-yao-qiu-liang-ge-shu-lie-07mvr2",
+          "title": "四则运算要求两个数列都收敛",
+          "bodyMarkdown": "四则运算要求两个数列都收敛"
         },
         {
-          "id": "di-xiao-hou-kan-shou-ge-fei-ling-jie",
-          "title": "抵消后看首个非零阶",
-          "bodyMarkdown": "抵消后看首个非零阶"
+          "id": "shang-de-ji-xian-yao-qiu-fen-mu-ji-xian-01llzx",
+          "title": "商的极限要求分母极限不为 0",
+          "bodyMarkdown": "商的极限要求分母极限不为 0"
         },
         {
-          "id": "jia-bi-he-deng-jia-ti-huan-dou-yao-he-1modh7",
-          "title": "夹逼和等价替换都要核对适用结构",
-          "bodyMarkdown": "夹逼和等价替换都要核对适用结构"
+          "id": "zi-shu-lie-shou-lian-dao-tong-yi-ji-0aoo3o",
+          "title": "子数列收敛到同一极限（常用来证明极限不存在）",
+          "bodyMarkdown": "子数列收敛到同一极限（常用来证明极限不存在）"
         }
       ],
       "examples": [
         {
-          "id": "fen-zi-fen-mu-dou-han-1-0r5aiq",
+          "id": "a-2n-1-n-2-1-n-2",
           "title": "讲解例子",
-          "bodyMarkdown": "分子分母都含 √(1+x)−1 时，先有理化通常比洛必达更短。"
+          "bodyMarkdown": "aₙ=(2n+1)/n=2+1/n→2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "求极限没有唯一固定动作。先直接代入判断是否为定式，再按代数结构选择因式分解、有理化、等价无穷小、夹逼、洛必达或泰勒；每一步都要保留原来的趋近条件。\n\n### 解题步骤\n\n1. 代入识别型别\n2. 按结构选择最短方法\n3. 复核结果的数量级和符号\n\n### 易错点\n\n方法越复杂不代表越正确；先找能暴露抵消结构的变形。"
+      "bodyMarkdown": "数列极限同样满足四则运算：若 aₙ→A、bₙ→B，则 aₙ±bₙ→A±B、aₙbₙ→AB，且当 B≠0 时 aₙ/bₙ→A/B。\n\n### 解题步骤\n\n1. 确认各数列收敛\n2. 分别求极限\n3. 用四则运算合并\n\n### 易错点\n\n对发散数列使用四则运算。"
     },
     {
       "schemaVersion": "1.0",
@@ -678,47 +678,47 @@
       "sectionId": "m2-p1-c1-s2",
       "sectionTitle": "数列极限",
       "title": "极限存在准则",
-      "summary": "极限存在准则把难以直接计算的问题转成结构判断。单调有界准则关注“只往一个方向走且有边界”，夹逼准则关注“上下两个控制量一起收缩到同一点”。",
+      "summary": "两个常用准则：单调有界数列必收敛；若 gₙ≤aₙ≤hₙ 且 gₙ、hₙ 都趋于同一极限 A，则 aₙ 也趋于 A（夹逼准则）。",
       "tags": [
-        "先判存在，再求数值"
+        "单调有界与夹逼"
       ],
       "sortOrder": 140,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "aₙ 单调且有界 ⇒ aₙ 收敛；gₙ≤aₙ≤hₙ 且 gₙ,hₙ→A ⇒ aₙ→A",
-        "caption": "极限存在准则把难以直接计算的问题转成结构判断。"
+        "content": "gₙ≤aₙ≤hₙ，gₙ,hₙ→A ⇒ aₙ→A",
+        "caption": "两个常用准则：单调有界数列必收敛；若 gₙ≤aₙ≤hₙ 且 gₙ、hₙ 都趋于同一极限 A，则 aₙ 也趋于 A（夹逼准则）。"
       },
       "keyPoints": [
         {
-          "id": "dan-diao-xing-ti-gong-qu-shi-you-jie-131d7m",
-          "title": "单调性提供趋势",
-          "bodyMarkdown": "单调性提供趋势，有界性提供边界"
+          "id": "dan-diao-you-jie-shou-lian-chang-yong-1qxnki",
+          "title": "单调有界 ⇒ 收敛（常用于递推数列）",
+          "bodyMarkdown": "单调有界 ⇒ 收敛（常用于递推数列）"
         },
         {
-          "id": "jia-bi-de-liang-ge-duan-dian-bi-xu-qu-0r80xu",
-          "title": "夹逼的两个端点必须趋于同一个数",
-          "bodyMarkdown": "夹逼的两个端点必须趋于同一个数"
+          "id": "jia-bi-zhun-ze-liang-ce-jia-zhu-ji-ke-17kry2",
+          "title": "夹逼准则",
+          "bodyMarkdown": "夹逼准则：两侧夹住即可得极限"
         },
         {
-          "id": "zhun-ze-xian-jie-jue-cun-zai-xing-bu-yi-1xc704",
-          "title": "准则先解决存在性",
-          "bodyMarkdown": "准则先解决存在性，不一定直接给出精确表达式"
+          "id": "jia-bi-shi-liang-ce-ji-xian-bi-xu-xiang-0wras4",
+          "title": "夹逼时两侧极限必须相同",
+          "bodyMarkdown": "夹逼时两侧极限必须相同"
         }
       ],
       "examples": [
         {
-          "id": "0-sin-n-n-1-n-0-suo-yi-0r0nvb",
+          "id": "a-sin-n-n-you-1-n-a-1-n-0nfcww",
           "title": "讲解例子",
-          "bodyMarkdown": "0≤|sin n|/n≤1/n→0，所以 sin n/n→0。"
+          "bodyMarkdown": "aₙ=(sin n)/n：由 −1/n≤aₙ≤1/n 夹逼得极限为 0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "极限存在准则把难以直接计算的问题转成结构判断。单调有界准则关注“只往一个方向走且有边界”，夹逼准则关注“上下两个控制量一起收缩到同一点”。\n\n### 解题步骤\n\n1. 观察单调或构造上下界\n2. 证明控制量有界/收敛\n3. 写出极限存在与数值结论\n\n### 易错点\n\n只证明数列有界不能直接推出收敛，还需要单调或其他结构。"
+      "bodyMarkdown": "两个常用准则：单调有界数列必收敛；若 gₙ≤aₙ≤hₙ 且 gₙ、hₙ 都趋于同一极限 A，则 aₙ 也趋于 A（夹逼准则）。\n\n### 解题步骤\n\n1. 判断单调性与有界性，或构造两侧数列\n2. 求出共同极限\n3. 得出中间数列的极限\n\n### 易错点\n\n两侧极限不同却仍下结论。"
     },
     {
       "schemaVersion": "1.0",
@@ -729,47 +729,47 @@
       "sectionId": "m2-p1-c1-s3",
       "sectionTitle": "函数极限",
       "title": "x→x0",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "x→x₀ 时的极限看的是 x 无限接近 x₀（但不等于 x₀）时 f(x) 的趋势，与 f(x₀) 的取值无关；这也是它可以处理「0/0」型的原因。",
       "tags": [
-        "逼近而非代入"
+        "去心邻域内的趋势"
       ],
       "sortOrder": 150,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "format": "latex",
+        "content": "lim_{x→x₀} f(x)=A",
+        "caption": "x→x₀ 时的极限看的是 x 无限接近 x₀（但不等于 x₀）时 f(x) 的趋势，与 f(x₀) 的取值无关；这也是它可以处理「0/0」型的原因。"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "ji-xian-yu-f-x-wu-guan-f-x-ke-yi-mei-0jabvu",
+          "title": "极限与 f(x₀) 无关",
+          "bodyMarkdown": "极限与 f(x₀) 无关，f(x₀) 可以没有定义"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "qu-xin-lin-yu-0-x-x-shi-ding-yi-de-he-0z1akd",
+          "title": "去心邻域 0<|x−x₀|<δ 是定义的核心",
+          "bodyMarkdown": "去心邻域 0<|x−x₀|<δ 是定义的核心"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "cun-zai-ji-xian-shi-zuo-you-ji-xian-bi-10y643",
+          "title": "存在极限时",
+          "bodyMarkdown": "存在极限时，左右极限必须都存在且相等"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "lim-x-0-sin-x-x-1-er-x-14gsmc",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "lim_{x→0} sin x/x=1，而 x=0 处函数无定义。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "bodyMarkdown": "x→x₀ 时的极限看的是 x 无限接近 x₀（但不等于 x₀）时 f(x) 的趋势，与 f(x₀) 的取值无关；这也是它可以处理「0/0」型的原因。\n\n### 解题步骤\n\n1. 把 x 的趋向值代入判断类型\n2. 化简后求极限\n3. 必要时分别求左右极限\n\n### 易错点\n\n先代入求函数值再当极限。"
     },
     {
       "schemaVersion": "1.0",
@@ -780,47 +780,47 @@
       "sectionId": "m2-p1-c1-s3",
       "sectionTitle": "函数极限",
       "title": "左极限、右极限",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "左极限 f(x₀−) 与右极限 f(x₀+) 分别描述从左右两侧靠近时的趋势；两者都存在且相等时，f 在 x₀ 处的极限才存在。",
       "tags": [
-        "逼近而非代入"
+        "两侧分别看"
       ],
       "sortOrder": 160,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "content": "f(x₀−)=f(x₀+) ⇒ 极限存在",
+        "caption": "左极限 f(x₀−) 与右极限 f(x₀+) 分别描述从左右两侧靠近时的趋势；两者都存在且相等时，f 在 x₀ 处的极限才存在。"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "zuo-you-ji-xian-dou-cun-zai-qie-xiang-01g7eq",
+          "title": "左右极限都存在且相等 ⇔ 极限存在",
+          "bodyMarkdown": "左右极限都存在且相等 ⇔ 极限存在"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "fen-duan-han-shu-han-jue-dui-zhi-de-han-0j6g3p",
+          "title": "分段函数、含绝对值的函数要分别求两侧",
+          "bodyMarkdown": "分段函数、含绝对值的函数要分别求两侧"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "zhi-shu-yu-fan-zheng-qie-zai-0-chu-shi-1ydp1m",
+          "title": "指数与反正切在 0 处是典型的左右不等例子",
+          "bodyMarkdown": "指数与反正切在 0 处是典型的左右不等例子"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "f-x-arctan-1-x-zai-0-0r79ez",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "f(x)=arctan(1/x) 在 0 处左右极限为 −π/2 与 π/2，极限不存在。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "bodyMarkdown": "左极限 f(x₀−) 与右极限 f(x₀+) 分别描述从左右两侧靠近时的趋势；两者都存在且相等时，f 在 x₀ 处的极限才存在。\n\n### 解题步骤\n\n1. 写出 x<x₀ 与 x>x₀ 时 f 的表达式\n2. 分别求极限\n3. 比较两者是否相等\n\n### 易错点\n\n把左右极限中的一个当成极限。"
     },
     {
       "schemaVersion": "1.0",
@@ -831,47 +831,47 @@
       "sectionId": "m2-p1-c1-s3",
       "sectionTitle": "函数极限",
       "title": "无穷远处极限",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "无穷远处极限指 x→+∞ 或 x→−∞ 时的极限；做题时先看清是哪一个方向，若是 x→∞ 则两个方向都要算且结果相同。",
       "tags": [
-        "逼近而非代入"
+        "两个方向都要看"
       ],
       "sortOrder": 170,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "format": "latex",
+        "content": "lim_{x→±∞} f(x)",
+        "caption": "无穷远处极限指 x→+∞ 或 x→−∞ 时的极限；做题时先看清是哪一个方向，若是 x→∞ 则两个方向都要算且结果相同。"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "xian-fen-qing-x-hai-shi-x",
+          "title": "先分清 x→+∞ 还是 x→−∞",
+          "bodyMarkdown": "先分清 x→+∞ 还是 x→−∞"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "x-yao-qiu-liang-ge-fang-xiang-jie-guo-1wzaog",
+          "title": "x→∞ 要求两个方向结果相同",
+          "bodyMarkdown": "x→∞ 要求两个方向结果相同"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "wu-qiong-yuan-chu-de-ji-xian-yu-han-shu-0vn723",
+          "title": "无穷远处的极限与函数在有限点处的取值无关",
+          "bodyMarkdown": "无穷远处的极限与函数在有限点处的取值无关"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "lim-x-e-x-0-er-lim-x-e-x",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "lim_{x→+∞} e^{−x}=0，而 lim_{x→−∞} e^{−x}=+∞。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "bodyMarkdown": "无穷远处极限指 x→+∞ 或 x→−∞ 时的极限；做题时先看清是哪一个方向，若是 x→∞ 则两个方向都要算且结果相同。\n\n### 解题步骤\n\n1. 判断题目给的趋向方向\n2. 按最高次项比较或直接计算\n3. 必要时分别算两个方向\n\n### 易错点\n\n把 x→−∞ 当成 x→+∞ 算（根式、指数最容易出错）。"
     },
     {
       "schemaVersion": "1.0",
@@ -882,47 +882,47 @@
       "sectionId": "m2-p1-c1-s3",
       "sectionTitle": "函数极限",
       "title": "极限性质",
-      "summary": "求极限没有唯一固定动作。先直接代入判断是否为定式，再按代数结构选择因式分解、有理化、等价无穷小、夹逼、洛必达或泰勒；每一步都要保留原来的趋近条件。",
+      "summary": "函数极限具有唯一性、局部有界性与保号性，并满足四则运算：当各部分极限都存在时，和差积商的极限等于极限的和差积商（商的极限要求分母极限不为 0）。",
       "tags": [
-        "按结构选工具"
+        "四则运算与保号性"
       ],
       "sortOrder": 180,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "0/0：因式分解、等价替换、洛必达、泰勒；∞/∞：比较最高阶或洛必达",
-        "caption": "求极限没有唯一固定动作。"
+        "content": "lim(f±g)=lim f±lim g；lim(fg)=lim f·lim g",
+        "caption": "函数极限具有唯一性、局部有界性与保号性，并满足四则运算：当各部分极限都存在时，和差积商的极限等于极限的和差积商（商的极限要求分母极限不为 0）。"
       },
       "keyPoints": [
         {
-          "id": "xian-dai-ru-bu-yao-yi-shang-lai-jiu-luo-00bp04",
-          "title": "先代入，不要一上来就洛必达",
-          "bodyMarkdown": "先代入，不要一上来就洛必达"
+          "id": "si-ze-yun-suan-de-qian-ti-shi-ge-bu-fen-04bwrs",
+          "title": "四则运算的前提是各部分极限都存在",
+          "bodyMarkdown": "四则运算的前提是各部分极限都存在"
         },
         {
-          "id": "di-xiao-hou-kan-shou-ge-fei-ling-jie",
-          "title": "抵消后看首个非零阶",
-          "bodyMarkdown": "抵消后看首个非零阶"
+          "id": "shang-de-ji-xian-yao-qiu-fen-mu-ji-xian-01llzx",
+          "title": "商的极限要求分母极限不为 0",
+          "bodyMarkdown": "商的极限要求分母极限不为 0"
         },
         {
-          "id": "jia-bi-he-deng-jia-ti-huan-dou-yao-he-1modh7",
-          "title": "夹逼和等价替换都要核对适用结构",
-          "bodyMarkdown": "夹逼和等价替换都要核对适用结构"
+          "id": "bao-hao-xing-ji-xian-0-zai-qu-xin-lin-19jbp6",
+          "title": "保号性：极限 >0 ⇒ 在去心邻域内函数值 >0",
+          "bodyMarkdown": "保号性：极限 >0 ⇒ 在去心邻域内函数值 >0"
         }
       ],
       "examples": [
         {
-          "id": "fen-zi-fen-mu-dou-han-1-0r5aiq",
+          "id": "lim-x-1-x-3x-1-3-4",
           "title": "讲解例子",
-          "bodyMarkdown": "分子分母都含 √(1+x)−1 时，先有理化通常比洛必达更短。"
+          "bodyMarkdown": "lim_{x→1}(x²+3x)=1+3=4。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "求极限没有唯一固定动作。先直接代入判断是否为定式，再按代数结构选择因式分解、有理化、等价无穷小、夹逼、洛必达或泰勒；每一步都要保留原来的趋近条件。\n\n### 解题步骤\n\n1. 代入识别型别\n2. 按结构选择最短方法\n3. 复核结果的数量级和符号\n\n### 易错点\n\n方法越复杂不代表越正确；先找能暴露抵消结构的变形。"
+      "bodyMarkdown": "函数极限具有唯一性、局部有界性与保号性，并满足四则运算：当各部分极限都存在时，和差积商的极限等于极限的和差积商（商的极限要求分母极限不为 0）。\n\n### 解题步骤\n\n1. 把式子拆成基本极限\n2. 检查每个极限是否存在\n3. 用四则运算合并\n\n### 易错点\n\n忽略「各部分极限存在」的前提就拆开（如 ∞−∞）。"
     },
     {
       "schemaVersion": "1.0",
@@ -933,51 +933,47 @@
       "sectionId": "m2-p1-c1-s4",
       "sectionTitle": "无穷小与无穷大",
       "title": "无穷小",
-      "summary": "当 x→x₀（或 x→∞）时函数 f(x) 的极限为零，就称 f(x) 为该过程中的无穷小。",
+      "summary": "极限为 0 的变量称为无穷小，它是一个变量而不是「很小的常数」。",
       "tags": [
-        "极限为零"
+        "趋于 0 的变量"
       ],
       "sortOrder": 190,
-      "estimatedMinutes": 6,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)=0 ⇔ f(x) 为无穷小；lim f(x)=A ⇔ f(x)=A+α，α→0",
-        "caption": "当 x→x₀（或 x→∞）时函数 f(x) 的极限为零，就称 f(x) 为该过程中的无穷小。"
+        "content": "lim f(x)=0 ⇔ f 为无穷小",
+        "caption": "极限为 0 的变量称为无穷小，它是一个变量而不是「很小的常数」。"
       },
       "keyPoints": [
         {
-          "id": "wu-qiong-xiao-shi-ji-xian-wei-0-de-han-04gkw5",
-          "title": "无穷小是极限为 0 的函数（过程）",
-          "bodyMarkdown": "无穷小是极限为 0 的函数（过程），不是固定的很小的数"
+          "id": "wu-qiong-xiao-shi-ji-xian-wei-0-de-bian-191vqf",
+          "title": "无穷小是极限为 0 的变量",
+          "bodyMarkdown": "无穷小是极限为 0 的变量，不是很小的数"
         },
         {
-          "id": "tuo-mao-fa-lim-f-a-f-a-zheng-ming-ti-189qfk",
-          "title": "脱帽法：lim f=A ⇔ f=A+α，证明题常",
-          "bodyMarkdown": "脱帽法：lim f=A ⇔ f=A+α，证明题常借此把极限改写成代数式"
+          "id": "lim-f-a-f-a-0",
+          "title": "lim f=A ⇔ f=A+α（α→0）",
+          "bodyMarkdown": "lim f=A ⇔ f=A+α（α→0）"
         },
         {
-          "id": "bi-xu-zhi-ming-ji-xian-guo-cheng-tong-1c48qh",
-          "title": "必须指明极限过程",
-          "bodyMarkdown": "必须指明极限过程：同一函数在 x→0 是无穷小，换过程就不是"
+          "id": "you-xian-ge-wu-qiong-xiao-de-he-ji-reng-1t58vl",
+          "title": "有限个无穷小的和、积仍是无穷小",
+          "bodyMarkdown": "有限个无穷小的和、积仍是无穷小；无穷小与有界量的积也是无穷小"
         }
       ],
       "examples": [
         {
-          "id": "zheng-lim-f-a-shi-chang-0ge3vw",
+          "id": "x-0-shi-sin-x-shi-wu-11bbnq",
           "title": "讲解例子",
-          "bodyMarkdown": "证 lim f=A 时常令 f=A+α，把“极限语言”转成对 α 的代数估计。"
+          "bodyMarkdown": "x→0 时 sin x 是无穷小；而 10⁻¹⁰ 是常数，不是无穷小。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "当 x→x₀（或 x→∞）时函数 f(x) 的极限为零，就称 f(x) 为该过程中的无穷小。用“脱帽法”可以把它和极限连成一体：lim f(x)=A ⇔ f(x)=A+α，其中 α→0；把 A 换成 0，就是无穷小的定义。无穷小不是一个“很小的数”，而是一个极限为零的变化过程，0 是唯一可以算作无穷小的常数（也是最高阶的无穷小）。\n\n### 解题步骤\n\n1. 先确认极限过程 x→?\n2. 计算 lim f(x)\n3. 极限为 0 才是该过程的无穷小\n\n### 易错点\n\n离开极限过程谈无穷小是错题前提；常数中只有 0 是无穷小。"
+      "bodyMarkdown": "极限为 0 的变量称为无穷小，它是一个变量而不是「很小的常数」。lim f(x)=A 等价于 f(x)=A+α，其中 α 是无穷小（脱帽法）。\n\n### 解题步骤\n\n1. 把极限写成 A+α 的形式\n2. 利用 α→0 的性质\n3. 注意与有界量相乘仍是无穷小\n\n### 易错点\n\n把「很小的数」当成无穷小。"
     },
     {
       "schemaVersion": "1.0",
@@ -988,51 +984,47 @@
       "sectionId": "m2-p1-c1-s4",
       "sectionTitle": "无穷小与无穷大",
       "title": "无穷大",
-      "summary": "当 x→x₀（或 x→∞）时 |f(x)| 无限增大，称 f(x) 为该过程的无穷大，记 lim f(x)=∞。",
+      "summary": "当 |f(x)| 无限增大时称 f 为无穷大，记作 lim f=∞。",
       "tags": [
-        "无限增大"
+        "绝对值无限增大"
       ],
       "sortOrder": 200,
-      "estimatedMinutes": 6,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)=∞ ⇔ lim 1/f(x)=0（同一过程，f≠0）",
-        "caption": "当 x→x₀（或 x→∞）时 |f(x)| 无限增大，称 f(x) 为该过程的无穷大，记 lim f(x)=∞。"
+        "content": "lim f(x)=∞ ⇔ lim 1/f(x)=0",
+        "caption": "当 |f(x)| 无限增大时称 f 为无穷大，记作 lim f=∞。"
       },
       "keyPoints": [
         {
-          "id": "yao-qu-fen-yu-xie-jie-lun-shi-shuo-qing-0sazcv",
-          "title": "∞ 要区分 +∞ 与 −∞",
-          "bodyMarkdown": "∞ 要区分 +∞ 与 −∞，写结论时说清符号"
+          "id": "wu-qiong-da-shi-jue-dui-zhi-wu-xian-0ofen3",
+          "title": "无穷大是绝对值无限增大的变量",
+          "bodyMarkdown": "无穷大是绝对值无限增大的变量"
         },
         {
-          "id": "dao-shu-guan-xi-de-qian-ti-shi-f-x-0-1soczw",
-          "title": "倒数关系的前提是 f(x)≠0 且极限过程一致",
-          "bodyMarkdown": "倒数关系的前提是 f(x)≠0 且极限过程一致"
+          "id": "lim-f-lim-1-f-0-tong-yi-guo-cheng-f-0",
+          "title": "lim f=∞ ⇔ lim 1/f=0（同一过程",
+          "bodyMarkdown": "lim f=∞ ⇔ lim 1/f=0（同一过程，f≠0）"
         },
         {
-          "id": "wu-jie-wu-qiong-da-x-shi-x-sin-x-wu-jie-0cqbnl",
-          "title": "无界 ≠ 无穷大",
-          "bodyMarkdown": "无界 ≠ 无穷大：x→∞ 时 x·sin x 无界却反复回到 0 附近"
+          "id": "wu-qiong-da-bu-shi-shu-dou-shi-wei-ding-103mtx",
+          "title": "无穷大不是数",
+          "bodyMarkdown": "无穷大不是数，∞−∞、∞/∞ 都是未定式"
         }
       ],
       "examples": [
         {
-          "id": "x-0-shi-1-x-wei-wu-1bazaw",
+          "id": "x-0-shi-1-x-shi-wu-19r4ur",
           "title": "讲解例子",
-          "bodyMarkdown": "x→0 时 1/x 为无穷大；e^{tan x}−e^{sin x}=e^{sin x}(e^{tan x−sin x}−1)∼tan x−sin x∼½x³（x→0）。"
+          "bodyMarkdown": "x→0 时 1/x 是无穷大，1/x² 也是（且趋于 +∞）。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "当 x→x₀（或 x→∞）时 |f(x)| 无限增大，称 f(x) 为该过程的无穷大，记 lim f(x)=∞。它与无穷小互为倒数：同一过程中 f 为无穷大，则 1/f 为无穷小；反之 f 为无穷小且 f(x)≠0，则 1/f 为无穷大。无穷大一定无界，但无界量不一定是无穷大。\n\n### 解题步骤\n\n1. 确认极限过程\n2. 验证 |f(x)| 是否无限增大\n3. 需要取倒数时先检查 f(x)≠0\n\n### 易错点\n\n把“无界”直接当“无穷大”是经典错误：无穷大要求趋势稳定地远离，不允许中途回落。"
+      "bodyMarkdown": "当 |f(x)| 无限增大时称 f 为无穷大，记作 lim f=∞。无穷大与无穷小互为倒数关系（同一过程、f≠0），但它不是数，不能参与普通四则运算。\n\n### 解题步骤\n\n1. 判断 |f| 是否无限增大\n2. 利用与无穷小的倒数关系\n3. 注意区分 +∞ 与 ∞\n\n### 易错点\n\n把 ∞ 当成数去运算。"
     },
     {
       "schemaVersion": "1.0",
@@ -1043,51 +1035,47 @@
       "sectionId": "m2-p1-c1-s4",
       "sectionTitle": "无穷小与无穷大",
       "title": "无穷小比较",
-      "summary": "在同一极限过程中 α(x)→0、β(x)→0（β≠0），用 lim α/β 比阶：等于 0 则 α 是 β 的高阶无穷小，记 α=o(β)，表示 α 趋近更快；",
+      "summary": "比较两个无穷小看它们的比值极限：比值为 0 说明前者是高阶无穷小，为非零常数说明同阶，为 1 说明等价，为 c≠0 时 α 是 β 的 k 阶无穷小。",
       "tags": [
-        "比阶"
+        "用比值判断阶"
       ],
       "sortOrder": 210,
-      "estimatedMinutes": 6,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim α/β=0 ⇒ α=o(β)；=c≠0 ⇒ 同阶；=1 ⇒ α∼β；lim α/βᵏ=c≠0 ⇒ k 阶",
-        "caption": "在同一极限过程中 α(x)→0、β(x)→0（β≠0），用 lim α/β 比阶：等于 0 则 α 是 β 的高阶无穷小"
+        "content": "lim α/β=1 ⇔ α∼β",
+        "caption": "比较两个无穷小看它们的比值极限：比值为 0 说明前者是高阶无穷小，为非零常数说明同阶，为 1 说明等价，为 c≠0 时 α 是 β 的 k 阶无穷小。"
       },
       "keyPoints": [
         {
-          "id": "bi-jie-yao-qiu-tong-guo-cheng-tong-wei-0eqs8n",
-          "title": "比阶要求同过程、同为无穷小、β≠0",
-          "bodyMarkdown": "比阶要求同过程、同为无穷小、β≠0"
+          "id": "lim-0-o-gao-jie-wu-qiong-xiao",
+          "title": "lim α/β=0 ⇒ α=o(β)（高阶无穷小",
+          "bodyMarkdown": "lim α/β=0 ⇒ α=o(β)（高阶无穷小）"
         },
         {
-          "id": "deng-jia-bu-shi-xiang-deng-sin-x-x-dan-1tiwy3",
-          "title": "“等价”不是相等",
-          "bodyMarkdown": "“等价”不是相等：sin x∼x，但 x−sin x∼⅙x³"
+          "id": "lim-c-0-tong-jie-c-1-deng-jia",
+          "title": "lim α/β=c≠0 ⇒ 同阶",
+          "bodyMarkdown": "lim α/β=c≠0 ⇒ 同阶；c=1 ⇒ 等价 α∼β"
         },
         {
-          "id": "k-jie-ke-hua-qu-jin-su-du-shi-tai-le-0cx4m7",
-          "title": "k 阶刻画趋近速度",
-          "bodyMarkdown": "k 阶刻画趋近速度，是泰勒展开定阶的前置概念"
+          "id": "lim-c-0-shi-de-k-jie-wu-qiong-xiao",
+          "title": "lim α/βᵏ=c≠0 ⇒ α 是 β 的 k",
+          "bodyMarkdown": "lim α/βᵏ=c≠0 ⇒ α 是 β 的 k 阶无穷小"
         }
       ],
       "examples": [
         {
-          "id": "x-0-shi-1-cos-x-x-1-2-1rwxrm",
+          "id": "x-0-shi-1-cos-x-x-2-suo-1xbukk",
           "title": "讲解例子",
-          "bodyMarkdown": "x→0 时 (1−cos x)/x²→1/2，故 1−cos x 是 x 的 2 阶无穷小。"
+          "bodyMarkdown": "x→0 时 1−cos x∼x²/2，所以它是 x 的二阶无穷小。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "在同一极限过程中 α(x)→0、β(x)→0（β≠0），用 lim α/β 比阶：等于 0 则 α 是 β 的高阶无穷小，记 α=o(β)，表示 α 趋近更快；等于 ∞ 则 α 是低阶；等于 c≠0 则同阶；等于 1 则等价，记 α∼β；若 lim α/βᵏ=c≠0，则 α 是 β 的 k 阶无穷小。\n\n### 解题步骤\n\n1. 确认两者同为该过程无穷小\n2. 求 lim α/β\n3. 按 0 / ∞ / c≠0 / 1 归类\n\n### 易错点\n\n并不是任意两个无穷小都能比阶：x·sin(1/x) 与 x² 在 x→0 时比值振荡不存在，既无高阶低阶之分，也无同阶可言。"
+      "bodyMarkdown": "比较两个无穷小看它们的比值极限：比值为 0 说明前者是高阶无穷小，为非零常数说明同阶，为 1 说明等价，为 c≠0 时 α 是 β 的 k 阶无穷小。\n\n### 解题步骤\n\n1. 写出比值 α/β\n2. 求比值极限\n3. 按极限值判断阶的关系\n\n### 易错点\n\n把等价无穷小写成相等（只能说「∼」，比值极限为 1）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1098,51 +1086,47 @@
       "sectionId": "m2-p1-c1-s4",
       "sectionTitle": "无穷小与无穷大",
       "title": "常用等价无穷小",
-      "summary": "等价无穷小的本质是两个量的比值趋于 1，因此乘除结构中可以直接替换主部。",
+      "summary": "x→0 时的常用等价无穷小是一张速查表：sin x、tan x、arcsin x、arctan x、ln(1+x)、eˣ−1 都与 x 等价，1−cos x 与 x²/2 等价。",
       "tags": [
-        "只替换主部"
+        "乘除结构可替换"
       ],
       "sortOrder": 220,
-      "estimatedMinutes": 6,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "x→0：sin x∼x，tan x∼x，arcsin x∼x，arctan x∼x，ln(1+x)∼x，eˣ−1∼x，aˣ−1∼x ln a，1−cos x∼x²/2，(1+x)ᵅ−1∼αx；差函数：x−sin x∼x³/6，tan x−x∼x³/3，x−arctan x∼x³/3，arcsin x−x∼x³/6",
-        "caption": "等价无穷小的本质是两个量的比值趋于 1，因此乘除结构中可以直接替换主部。"
+        "content": "sin x∼x（x→0）",
+        "caption": "x→0 时的常用等价无穷小是一张速查表：sin x、tan x、arcsin x、arctan x、ln(1+x)"
       },
       "keyPoints": [
         {
-          "id": "xian-que-ren-qu-jin-guo-cheng-tong-0d1ine",
-          "title": "先确认趋近过程（通常是 x→0）",
-          "bodyMarkdown": "先确认趋近过程（通常是 x→0）"
+          "id": "ji-ben-zu-sin-x-tan-x-arcsin-x-arctan-x-0jzxau",
+          "title": "基本组：sin x∼tan x∼arcsin x",
+          "bodyMarkdown": "基本组：sin x∼tan x∼arcsin x∼arctan x∼ln(1+x)∼eˣ−1∼x"
         },
         {
-          "id": "cheng-chu-jie-gou-ke-yi-zhi-jie-ti-huan-052dp0",
-          "title": "乘除结构可以直接替换",
-          "bodyMarkdown": "乘除结构可以直接替换，加减结构先判断是否抵消"
+          "id": "1-cos-x-x-2-1-x-1-x",
+          "title": "1−cos x∼x²/2",
+          "bodyMarkdown": "1−cos x∼x²/2，(1+x)^α−1∼αx"
         },
         {
-          "id": "guang-yi-hua-gong-shi-li-de-x-ke-huan-0i1w1m",
-          "title": "广义化：公式里的 x 可换成任何趋近于 0 的函",
-          "bodyMarkdown": "广义化：公式里的 x 可换成任何趋近于 0 的函数"
+          "id": "zhi-zai-cheng-chu-jie-gou-zhong-shi-yong",
+          "title": "只在乘除结构中使用",
+          "bodyMarkdown": "只在乘除结构中使用"
         }
       ],
       "examples": [
         {
-          "id": "lim-sin-3x-5x-3-5-ba-009h26",
+          "id": "lim-x-0-ln-1-x-x-1",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀ sin(3x)/(5x)=3/5：把 sin(3x) 换成 3x。"
+          "bodyMarkdown": "lim_{x→0} ln(1+x)/x=1。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "等价无穷小的本质是两个量的比值趋于 1，因此乘除结构中可以直接替换主部。需要记牢的完整清单（x→0）：sin x∼tan x∼arcsin x∼arctan x∼ln(1+x)∼eˣ−1∼x，aˣ−1∼x ln a，1−cos x∼½x²，(1+x)ᵅ−1∼αx；使用时要广义化——把 x 换成任意趋近于 0 的“狗”：lim sin（狗）/狗=1。加减结构不能机械替换，低阶抵消时改用差函数系列或泰勒展开。\n\n### 解题步骤\n\n1. 确定趋近点与阶数\n2. 识别乘除结构\n3. 替换后重新检查未定式\n\n### 易错点\n\nsin x−x 不能换成 x−x=0；加减结构要用差函数系列（x−sin x∼⅙x³）或泰勒展开。"
+      "bodyMarkdown": "x→0 时的常用等价无穷小是一张速查表：sin x、tan x、arcsin x、arctan x、ln(1+x)、eˣ−1 都与 x 等价，1−cos x 与 x²/2 等价。\n\n### 解题步骤\n\n1. 确认变量趋于 0\n2. 判断是乘除还是加减结构\n3. 乘除结构直接替换\n\n### 易错点\n\n把等价替换用到加减结构上。"
     },
     {
       "schemaVersion": "1.0",
@@ -1153,47 +1137,47 @@
       "sectionId": "m2-p1-c1-s5",
       "sectionTitle": "两个重要极限",
       "title": "lim(x→0) sin x/x = 1",
-      "summary": "第一重要极限把 sin x 在 x=0 附近的一阶行为固定下来。",
+      "summary": "lim_{x→0} sin x/x=1 是三角函数极限的基准，它说明 x→0 时 sin x 与 x 是同阶等价的无穷小。",
       "tags": [
-        "三角极限基准"
+        "三角函数的基准极限"
       ],
       "sortOrder": 230,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "limₓ→0 sin x/x=1",
-        "caption": "第一重要极限把 sin x 在 x=0 附近的一阶行为固定下来。"
+        "format": "latex",
+        "content": "lim_{x→0} sin x/x=1",
+        "caption": "lim_{x→0} sin x/x=1 是三角函数极限的基准，它说明 x→0 时 sin x 与 x 是同阶等价的无穷小。"
       },
       "keyPoints": [
         {
-          "id": "qu-jin-bian-liang-bi-xu-yong-hu-du-zhi",
-          "title": "趋近变量必须用弧度制",
-          "bodyMarkdown": "趋近变量必须用弧度制"
+          "id": "lim-x-0-sin-x-x-1",
+          "title": "lim_{x→0} sin x/x=1",
+          "bodyMarkdown": "lim_{x→0} sin x/x=1"
         },
         {
-          "id": "xian-zhi-zao-sin-u-u-de-jie-gou",
-          "title": "先制造 sin u/u 的结构",
-          "bodyMarkdown": "先制造 sin u/u 的结构"
+          "id": "yu-deng-jia-wu-qiong-xiao-sin-x-x-shi-12zj66",
+          "title": "与等价无穷小 sin x∼x 是同一件事的两种说",
+          "bodyMarkdown": "与等价无穷小 sin x∼x 是同一件事的两种说法"
         },
         {
-          "id": "fu-he-jiao-de-xi-shu-hui-liu-xia-lai",
-          "title": "复合角的系数会留下来",
-          "bodyMarkdown": "复合角的系数会留下来"
+          "id": "chang-yong-yu-han-san-jiao-han-shu-de-0-0yd980",
+          "title": "常用于含三角函数的 0/0 型",
+          "bodyMarkdown": "常用于含三角函数的 0/0 型"
         }
       ],
       "examples": [
         {
-          "id": "lim-sin-3x-5x-3-5",
+          "id": "lim-x-0-sin-5x-2x-5-2",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀ sin(3x)/(5x)=3/5。"
+          "bodyMarkdown": "lim_{x→0} sin 5x/(2x)=5/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第一重要极限把 sin x 在 x=0 附近的一阶行为固定下来。遇到 sin(g(x)) 时，先把表达式整理成 sin(g(x))/g(x) 与 g(x) 的乘积，再使用这个基准。\n\n### 解题步骤\n\n1. 设 u 为三角函数的整体自变量\n2. 乘除出 sin u/u\n3. 分别计算剩余因子\n\n### 易错点\n\n角度用度数时不能直接套用 1；极限题默认弧度制。"
+      "bodyMarkdown": "lim_{x→0} sin x/x=1 是三角函数极限的基准，它说明 x→0 时 sin x 与 x 是同阶等价的无穷小。\n\n### 解题步骤\n\n1. 把式子凑成 sin(□)/□\n2. 确认 □→0\n3. 得到极限为 1\n\n### 易错点\n\n忘记把系数一起处理。"
     },
     {
       "schemaVersion": "1.0",
@@ -1204,47 +1188,47 @@
       "sectionId": "m2-p1-c1-s5",
       "sectionTitle": "两个重要极限",
       "title": "lim(x→0)(1+x)^(1/x)=e",
-      "summary": "第二重要极限描述底数趋近 1、指数趋向无穷时的稳定增长。做题时把复杂式子变成 (1+u)^(1/u) 的形式，指数中的剩余因子决定最终是 e 的几次方。",
+      "summary": "lim_{x→0}(1+x)^{1/x}=e 是处理 1^∞ 型未定式的标准结构，也可以用 lim_{x→∞}(1+1/x)ˣ=e 的等价形式。",
       "tags": [
-        "指数极限基准"
+        "1^∞ 型的标准结构"
       ],
       "sortOrder": 240,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "limₓ→0(1+x)^(1/x)=e",
-        "caption": "第二重要极限描述底数趋近 1、指数趋向无穷时的稳定增长。"
+        "format": "latex",
+        "content": "lim_{x→0}(1+x)^{1/x}=e",
+        "caption": "lim_{x→0}(1+x)^{1/x}=e 是处理 1^∞ 型未定式的标准结构，也可以用 lim_{x→∞}(1+1/x)ˣ=e 的等价形式。"
       },
       "keyPoints": [
         {
-          "id": "u-bi-xu-qu-yu-0",
-          "title": "u 必须趋于 0",
-          "bodyMarkdown": "u 必须趋于 0"
+          "id": "lim-x-0-1-x-1-x-e",
+          "title": "lim_{x→0}(1+x)^{1/x}=e",
+          "bodyMarkdown": "lim_{x→0}(1+x)^{1/x}=e"
         },
         {
-          "id": "di-shu-yao-zheng-li-cheng-1-u",
-          "title": "底数要整理成 1+u",
-          "bodyMarkdown": "底数要整理成 1+u"
+          "id": "deng-jia-xing-shi-lim-x-1-1-x-e",
+          "title": "等价形式 lim_{x→∞}(1+1/x)ˣ=e",
+          "bodyMarkdown": "等价形式 lim_{x→∞}(1+1/x)ˣ=e"
         },
         {
-          "id": "zhi-shu-he-u-de-cheng-ji-jue-ding-e-de-0ytq8z",
-          "title": "指数和 u 的乘积决定 e 的指数",
-          "bodyMarkdown": "指数和 u 的乘积决定 e 的指数"
+          "id": "cou-jie-gou-shi-kuo-hao-nei-qu-yu-1-zhi-18bnfq",
+          "title": "凑结构时括号内趋于 1、指数趋于 ∞ 且互为倒数",
+          "bodyMarkdown": "凑结构时括号内趋于 1、指数趋于 ∞ 且互为倒数"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-2x-3-x-e",
+          "id": "lim-x-0-1-2x-1-x-e-2",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1+2x)^(3/x)=e⁶。"
+          "bodyMarkdown": "lim_{x→0}(1−2x)^{1/x}=e^{−2}。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "第二重要极限描述底数趋近 1、指数趋向无穷时的稳定增长。做题时把复杂式子变成 (1+u)^(1/u) 的形式，指数中的剩余因子决定最终是 e 的几次方。\n\n### 解题步骤\n\n1. 设 u 为底数的微小增量\n2. 补出 1/u 的幂\n3. 把剩余因子放到 e 的指数上\n\n### 易错点\n\n只看到 1 的底数就套公式，必须先确认指数与底数增量匹配。"
+      "bodyMarkdown": "lim_{x→0}(1+x)^{1/x}=e 是处理 1^∞ 型未定式的标准结构，也可以用 lim_{x→∞}(1+1/x)ˣ=e 的等价形式。\n\n### 解题步骤\n\n1. 确认是 1^∞ 型\n2. 凑成 (1+α)^{1/α} 的形式\n3. 结果为 e\n\n### 易错点\n\n把括号内的系数漏掉。"
     },
     {
       "schemaVersion": "1.0",
@@ -1255,47 +1239,47 @@
       "sectionId": "m2-p1-c1-s5",
       "sectionTitle": "两个重要极限",
       "title": "常见复合变形",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "重要极限常需要先变形：提取常数、换元、凑倒数结构，或把 1^∞ 型写成 e^{lim v(u−1)} 的形式；变形的目标是让式子与标准结构一致。",
       "tags": [
-        "逼近而非代入"
+        "先凑结构再套结论"
       ],
       "sortOrder": 250,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "format": "latex",
+        "content": "lim u^v=e^{lim v(u−1)}（1^∞ 型）",
+        "caption": "重要极限常需要先变形：提取常数、换元、凑倒数结构，或把 1^∞ 型写成 e^{lim v(u−1)} 的形式；变形的目标是让式子与标准结构一致。"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "xian-cou-cheng-biao-zhun-jie-gou-zai-1uomn7",
+          "title": "先凑成标准结构",
+          "bodyMarkdown": "先凑成标准结构，再套结论"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "1-xing-ke-yong-lim-u-v-e-lim-v-u-1",
+          "title": "1^∞ 型可用 lim u^v=e^{lim v",
+          "bodyMarkdown": "1^∞ 型可用 lim u^v=e^{lim v(u−1)}"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "huan-yuan-hou-ji-xian-guo-cheng-yao-yi-162g45",
+          "title": "换元后极限过程要一起换",
+          "bodyMarkdown": "换元后极限过程要一起换"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "lim-x-0-cos-x-1-x-e-1-2",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "lim_{x→0}(cos x)^{1/x²}=e^{−1/2}。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "bodyMarkdown": "重要极限常需要先变形：提取常数、换元、凑倒数结构，或把 1^∞ 型写成 e^{lim v(u−1)} 的形式；变形的目标是让式子与标准结构一致。\n\n### 解题步骤\n\n1. 识别属于哪种标准结构\n2. 用提取、换元、取对数凑结构\n3. 套用结论\n\n### 易错点\n\n只变形指数而忘记同步处理底数。"
     },
     {
       "schemaVersion": "1.0",
@@ -1306,47 +1290,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "0/0",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "0/0 型是最常见的未定式，处理思路是「把导致为 0 的因子约掉」：因式分解、有理化、等价无穷小替换、洛必达或泰勒都可以，按结构选最省力的。",
       "tags": [
-        "不定式处理"
+        "约去零因子"
       ],
       "sortOrder": 260,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "lim f/g（f→0，g→0）",
+        "caption": "0/0 型是最常见的未定式，处理思路是「把导致为 0 的因子约掉」：因式分解、有理化、等价无穷小替换、洛必达或泰勒都可以，按结构选最省力的。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "he-xin-shi-yue-qu-gong-gong-de-ling-yin-0pss13",
+          "title": "核心是约去公共的零因子",
+          "bodyMarkdown": "核心是约去公共的零因子"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "yin-shi-fen-jie-yu-you-li-hua-zui-zhi-1a86pq",
+          "title": "因式分解与有理化最直接",
+          "bodyMarkdown": "因式分解与有理化最直接"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "fu-za-jie-gou-yong-deng-jia-ti-huan-huo-1e4ky9",
+          "title": "复杂结构用等价替换或泰勒展开",
+          "bodyMarkdown": "复杂结构用等价替换或泰勒展开"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-2-x-4-x-2-lim-x-2-0lz0r6",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→2}(x²−4)/(x−2)=lim(x+2)=4。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "0/0 型是最常见的未定式，处理思路是「把导致为 0 的因子约掉」：因式分解、有理化、等价无穷小替换、洛必达或泰勒都可以，按结构选最省力的。\n\n### 解题步骤\n\n1. 分解分子分母找公因子\n2. 约去后重新代入\n3. 仍为 0/0 则改用洛必达或泰勒\n\n### 易错点\n\n把 0/0 当成 0 或 1。"
     },
     {
       "schemaVersion": "1.0",
@@ -1357,47 +1341,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "∞/∞",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "∞/∞ 型的思路是「比较分子分母的增长速度」：多项式比值看最高次项，指数、幂函数、对数按增长速度排序。",
       "tags": [
-        "不定式处理"
+        "比较最高阶"
       ],
       "sortOrder": 270,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "lim (aₙxⁿ+…)/(bₘxᵐ+…) = aₙ/bₘ（n=m）",
+        "caption": "∞/∞ 型的思路是「比较分子分母的增长速度」：多项式比值看最高次项，指数、幂函数、对数按增长速度排序。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "duo-xiang-shi-bi-jiao-fen-zi-fen-mu-de-0qwwg1",
+          "title": "多项式：比较分子分母的最高次数",
+          "bodyMarkdown": "多项式：比较分子分母的最高次数"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "zeng-zhang-su-du-ln-x-x-a-a-1",
+          "title": "增长速度",
+          "bodyMarkdown": "增长速度：ln x ≪ xᵏ ≪ aˣ（a>1）"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "ye-ke-yi-yong-luo-bi-da-man-zu-tiao-0mm87a",
+          "title": "也可以用洛必达（满足条件时）",
+          "bodyMarkdown": "也可以用洛必达（满足条件时）"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-3x-x-x-1-3",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→∞}(3x²+x)/(x²−1)=3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "∞/∞ 型的思路是「比较分子分母的增长速度」：多项式比值看最高次项，指数、幂函数、对数按增长速度排序。\n\n### 解题步骤\n\n1. 提取最高阶项\n2. 比较次数或增长速度\n3. 得出 0、∞ 或常数\n\n### 易错点\n\n忘记 n>m 时极限为 ∞ 而不是常数。"
     },
     {
       "schemaVersion": "1.0",
@@ -1408,47 +1392,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "0·∞",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "0·∞ 型要化成商：把其中一个因子取倒数放到分母，变成 0/0 或 ∞/∞，再用相应方法处理。",
       "tags": [
-        "不定式处理"
+        "化成商的形式"
       ],
       "sortOrder": 280,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "0·∞ ⇒ f/(1/g)",
+        "caption": "0·∞ 型要化成商：把其中一个因子取倒数放到分母，变成 0/0 或 ∞/∞，再用相应方法处理。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "bian-xing-mu-biao-0-0-huo",
+          "title": "变形目标",
+          "bodyMarkdown": "变形目标：0/0 或 ∞/∞"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "xuan-ze-bian-yu-qiu-dao-de-yin-zi-fang-08790j",
+          "title": "选择便于求导的因子放到分母",
+          "bodyMarkdown": "选择便于求导的因子放到分母"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "dui-shu-yu-mi-han-shu-xiang-cheng-shi-0hwltr",
+          "title": "对数与幂函数相乘时",
+          "bodyMarkdown": "对数与幂函数相乘时，通常把对数留在分子"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-x-ln-x-lim-ln-x-1jkn5i",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0⁺} x ln x=lim (ln x)/(1/x)=0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "0·∞ 型要化成商：把其中一个因子取倒数放到分母，变成 0/0 或 ∞/∞，再用相应方法处理。选择哪个因子放分母，取决于求导后是否更简单。\n\n### 解题步骤\n\n1. 写成 f/(1/g) 的形式\n2. 判断新的类型\n3. 按 0/0 或 ∞/∞ 处理\n\n### 易错点\n\n直接把 0·∞ 当成 0。"
     },
     {
       "schemaVersion": "1.0",
@@ -1459,47 +1443,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "∞-∞",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "∞−∞ 型先通分（分式差）或有理化（根式差），把它变成商的形式，再看是 0/0 还是 ∞/∞；也可以提取主项比较。",
       "tags": [
-        "不定式处理"
+        "通分或有理化"
       ],
       "sortOrder": 290,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "√(x²+x)−x 有理化后求极限",
+        "caption": "∞−∞ 型先通分（分式差）或有理化（根式差），把它变成商的形式，再看是 0/0 还是 ∞/∞；也可以提取主项比较。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "fen-shi-cha-tong-fen-gen-shi-cha-you-li-1pujkf",
+          "title": "分式差通分",
+          "bodyMarkdown": "分式差通分，根式差有理化"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "ti-qu-zhu-xiang-ye-shi-chang-yong-shou-1c1ztz",
+          "title": "提取主项也是常用手段",
+          "bodyMarkdown": "提取主项也是常用手段"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "mu-biao-shi-hua-cheng-shang-de-xing-shi",
+          "title": "目标是化成商的形式",
+          "bodyMarkdown": "目标是化成商的形式"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-x-x-x-1-2",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→∞}(√(x²+x)−x)=1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "∞−∞ 型先通分（分式差）或有理化（根式差），把它变成商的形式，再看是 0/0 还是 ∞/∞；也可以提取主项比较。\n\n### 解题步骤\n\n1. 判断结构（分式差 / 根式差）\n2. 通分或有理化\n3. 按新类型求极限\n\n### 易错点\n\n直接说 ∞−∞=0。"
     },
     {
       "schemaVersion": "1.0",
@@ -1510,47 +1494,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "1^∞",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "1^∞ 型用 lim u^v=e^{lim v(u−1)} 处理，或取对数化成 0·∞ 再算；前提是底数趋于 1、指数趋于无穷。",
       "tags": [
-        "不定式处理"
+        "用第二重要极限或取对数"
       ],
       "sortOrder": 300,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "format": "latex",
+        "content": "lim u^v=e^{lim v(u−1)}",
+        "caption": "1^∞ 型用 lim u^v=e^{lim v(u−1)} 处理，或取对数化成 0·∞ 再算；前提是底数趋于 1、指数趋于无穷。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "gong-shi-lim-u-v-e-lim-v-u-1-u-1-v",
+          "title": "公式：lim u^v=e^{lim v(u−1)",
+          "bodyMarkdown": "公式：lim u^v=e^{lim v(u−1)}（u→1，v→∞）"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "ye-ke-qu-dui-shu-hua-cheng-0-chu-li",
+          "title": "也可取对数",
+          "bodyMarkdown": "也可取对数，化成 0·∞ 处理"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "jie-guo-yi-ban-shi-e-de-mou-ci-mi",
+          "title": "结果一般是 e 的某次幂",
+          "bodyMarkdown": "结果一般是 e 的某次幂"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-1-x-1-x-e",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0}(1+x)^{1/x}=e。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "1^∞ 型用 lim u^v=e^{lim v(u−1)} 处理，或取对数化成 0·∞ 再算；前提是底数趋于 1、指数趋于无穷。\n\n### 解题步骤\n\n1. 确认是 1^∞ 型\n2. 算出 lim v(u−1)=A\n3. 结果就是 e^A\n\n### 易错点\n\n把 1^∞ 当成 1。"
     },
     {
       "schemaVersion": "1.0",
@@ -1561,47 +1545,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "0^0",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "0⁰ 型取对数后变成 0·ln0（即 0·∞），再化成商的形式处理；结果通常形如 e^A。",
       "tags": [
-        "不定式处理"
+        "取对数处理"
       ],
       "sortOrder": 310,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "format": "latex",
+        "content": "u^v=e^{v ln u}",
+        "caption": "0⁰ 型取对数后变成 0·ln0（即 0·∞），再化成商的形式处理；结果通常形如 e^A。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "qu-dui-shu-ln-y-v-ln-u",
+          "title": "取对数：ln y=v ln u",
+          "bodyMarkdown": "取对数：ln y=v ln u"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "hua-cheng-0-hou-zai-hua-wei-shang",
+          "title": "化成 0·∞ 后再化为商",
+          "bodyMarkdown": "化成 0·∞ 后再化为商"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "jie-guo-xing-ru-e-a",
+          "title": "结果形如 e^A",
+          "bodyMarkdown": "结果形如 e^A"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-x-e-lim-x-ln-x-1gz5kp",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0⁺} xˣ=e^{lim x ln x}=e⁰=1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "0⁰ 型取对数后变成 0·ln0（即 0·∞），再化成商的形式处理；结果通常形如 e^A。\n\n### 解题步骤\n\n1. 设 y=u^v 并取对数\n2. 求 lim v ln u\n3. 结果取指数\n\n### 易错点\n\n把 0⁰ 直接当成 1 或 0。"
     },
     {
       "schemaVersion": "1.0",
@@ -1612,47 +1596,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "∞^0",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "∞⁰ 型同样取对数化成 0·∞（此时是 0·ln∞），再化为商求极限，结果也是 e 的某次幂。",
       "tags": [
-        "不定式处理"
+        "取对数处理"
       ],
       "sortOrder": 320,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "format": "latex",
+        "content": "u^v=e^{v ln u}",
+        "caption": "∞⁰ 型同样取对数化成 0·∞（此时是 0·ln∞），再化为商求极限，结果也是 e 的某次幂。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "yu-0-tong-fa-qu-dui-shu-0-shang",
+          "title": "与 0⁰ 同法",
+          "bodyMarkdown": "与 0⁰ 同法：取对数 → 0·∞ → 商"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "di-shu-qu-yu-shi-ln-u",
+          "title": "底数趋于 ∞ 时 ln u→∞",
+          "bodyMarkdown": "底数趋于 ∞ 时 ln u→∞"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "jie-guo-tong-chang-wei-e-a-huo-1",
+          "title": "结果通常为 e^A 或 1",
+          "bodyMarkdown": "结果通常为 e^A 或 1"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-x-1-x-e-lim-ln-x-0t080i",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→∞} x^{1/x}=e^{lim (ln x)/x}=e⁰=1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "∞⁰ 型同样取对数化成 0·∞（此时是 0·ln∞），再化为商求极限，结果也是 e 的某次幂。\n\n### 解题步骤\n\n1. 取对数\n2. 求 lim v ln u\n3. 取指数得结果\n\n### 易错点\n\n把 ∞⁰ 当成 ∞ 或 1。"
     },
     {
       "schemaVersion": "1.0",
@@ -1663,47 +1647,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "直接代入",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "把 x 的趋向值直接代入，若得到确定的数，极限就是它。这是最快的一步，而且必须先做——只有出现未定式才需要进一步处理。",
       "tags": [
-        "不定式处理"
+        "定式直接算"
       ],
       "sortOrder": 330,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "format": "latex",
+        "content": "lim_{x→a}f(x)=f(a)（f 在 a 连续时）",
+        "caption": "把 x 的趋向值直接代入，若得到确定的数，极限就是它。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "xian-dai-ru-pan-duan-lei-xing-ke-neng-03xnq3",
+          "title": "先代入判断类型",
+          "bodyMarkdown": "先代入判断类型，可能直接得到答案"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "dai-ru-de-dao-que-ding-chang-shu-shi-ji-17id5h",
+          "title": "代入得到确定常数时极限即为该常数",
+          "bodyMarkdown": "代入得到确定常数时极限即为该常数"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "zhi-you-qi-zhong-wei-ding-shi-cai-xu-0az8ue",
+          "title": "只有七种未定式才需要继续处理",
+          "bodyMarkdown": "只有七种未定式才需要继续处理"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-1-x-2x-3",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→1}(x²+2x)=3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "把 x 的趋向值直接代入，若得到确定的数，极限就是它。这是最快的一步，而且必须先做——只有出现未定式才需要进一步处理。\n\n### 解题步骤\n\n1. 把趋向值代入\n2. 若得确定值则结束\n3. 否则判断属于哪种未定式\n\n### 易错点\n\n跳过代入，直接上洛必达。"
     },
     {
       "schemaVersion": "1.0",
@@ -1714,47 +1698,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "因式分解",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "0/0 型常用因式分解：把分子分母分解成乘积，约去导致为 0 的公因子，再代入求值。",
       "tags": [
-        "不定式处理"
+        "约去零因子"
       ],
       "sortOrder": 340,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "a²−b²=(a−b)(a+b)；a³−b³=(a−b)(a²+ab+b²)",
+        "caption": "0/0 型常用因式分解：把分子分母分解成乘积，约去导致为 0 的公因子，再代入求值。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "mu-biao-shi-zhao-chu-bing-yue-qu-gong-0c84xj",
+          "title": "目标是找出并约去公因子 (x−a)",
+          "bodyMarkdown": "目标是找出并约去公因子 (x−a)"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "chang-yong-gong-ju-ti-gong-yin-shi-ping-07q7t9",
+          "title": "常用工具",
+          "bodyMarkdown": "常用工具：提公因式、平方差、立方差、十字相乘"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "yue-qu-hou-bi-xu-chong-xin-dai-ru",
+          "title": "约去后必须重新代入",
+          "bodyMarkdown": "约去后必须重新代入"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-1-x-1-x-1-lim-x-x-195g0d",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→1}(x³−1)/(x−1)=lim(x²+x+1)=3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "0/0 型常用因式分解：把分子分母分解成乘积，约去导致为 0 的公因子，再代入求值。\n\n### 解题步骤\n\n1. 分解分子与分母\n2. 约去公因子\n3. 代入求值\n\n### 易错点\n\n只分解分子或只分解分母。"
     },
     {
       "schemaVersion": "1.0",
@@ -1765,47 +1749,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "有理化",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "遇到根式相减或分母含根号时，用共轭式有理化，把根号差变成可约的形式，常用于 0/0 与 ∞−∞ 型。",
       "tags": [
-        "不定式处理"
+        "消掉根号差"
       ],
       "sortOrder": 350,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "(√a−√b)(√a+√b)=a−b",
+        "caption": "遇到根式相减或分母含根号时，用共轭式有理化，把根号差变成可约的形式，常用于 0/0 与 ∞−∞ 型。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "gen-shi-cha-cheng-yi-gong-e-shi",
+          "title": "根式差乘以共轭式",
+          "bodyMarkdown": "根式差乘以共轭式"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "you-li-hua-hou-tong-chang-chu-xian-ke-15m5lx",
+          "title": "有理化后通常出现可约的公因子",
+          "bodyMarkdown": "有理化后通常出现可约的公因子"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "a-b-de-gong-e-shi-shi-a-b",
+          "title": "√a−√b 的共轭式是 √a+√b",
+          "bodyMarkdown": "√a−√b 的共轭式是 √a+√b"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-1-x-1-x-lim-1-1-078xnx",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0}(√(1+x)−1)/x=lim 1/(√(1+x)+1)=1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "遇到根式相减或分母含根号时，用共轭式有理化，把根号差变成可约的形式，常用于 0/0 与 ∞−∞ 型。\n\n### 解题步骤\n\n1. 找出共轭式\n2. 分子分母同乘共轭式\n3. 约简后求极限\n\n### 易错点\n\n只对分子有理化而忘记同步处理分母。"
     },
     {
       "schemaVersion": "1.0",
@@ -1816,47 +1800,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "通分",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "∞−∞ 型的分式差用通分合并成一个分式，再看是 0/0 还是 ∞/∞，然后按相应方法处理。",
       "tags": [
-        "不定式处理"
+        "分式差先合并"
       ],
       "sortOrder": 360,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "1/f−1/g=(g−f)/(fg)",
+        "caption": "∞−∞ 型的分式差用通分合并成一个分式，再看是 0/0 还是 ∞/∞，然后按相应方法处理。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "fen-shi-cha-xian-tong-fen-he-bing",
+          "title": "分式差先通分合并",
+          "bodyMarkdown": "分式差先通分合并"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "tong-fen-hou-tong-chang-bian-cheng-0-0-0mvwnj",
+          "title": "通分后通常变成 0/0 或 ∞/∞",
+          "bodyMarkdown": "通分后通常变成 0/0 或 ∞/∞"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "he-bing-hou-chang-yong-deng-jia-wu-15a6t0",
+          "title": "合并后常用等价无穷小或洛必达",
+          "bodyMarkdown": "合并后常用等价无穷小或洛必达"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-1-sin-x-1-x-0",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0}(1/sin x−1/x)=0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "∞−∞ 型的分式差用通分合并成一个分式，再看是 0/0 还是 ∞/∞，然后按相应方法处理。\n\n### 解题步骤\n\n1. 通分合并\n2. 判断新类型\n3. 按新类型求极限\n\n### 易错点\n\n通分时算错公分母或漏掉符号。"
     },
     {
       "schemaVersion": "1.0",
@@ -1867,47 +1851,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "提取最高次项",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "处理 x→∞ 的 ∞/∞ 型时，把分子分母的最高次项提出来，其余项都趋于 0，极限就由最高次项之比决定。",
       "tags": [
-        "不定式处理"
+        "无穷大比大小"
       ],
       "sortOrder": 370,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "lim (aₙxⁿ+…)/(bₘxᵐ+…)",
+        "caption": "处理 x→∞ 的 ∞/∞ 型时，把分子分母的最高次项提出来，其余项都趋于 0，极限就由最高次项之比决定。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "ti-zui-gao-ci-xiang-hou-di-ci-xiang-qu-0a48rj",
+          "title": "提最高次项后低次项趋于 0",
+          "bodyMarkdown": "提最高次项后低次项趋于 0"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "fen-zi-ci-shu-gao-ze-ji-xian-wei-di-ze-008aup",
+          "title": "分子次数高则极限为 ∞",
+          "bodyMarkdown": "分子次数高则极限为 ∞，低则为 0，相等则为系数比"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "gen-shi-li-ye-yao-ti-zui-gao-ci-xiang-1mqnbm",
+          "title": "根式里也要提最高次项（注意开方）",
+          "bodyMarkdown": "根式里也要提最高次项（注意开方）"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-2x-3-x-x-2",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→∞}(2x²+3)/(x²−x)=2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "处理 x→∞ 的 ∞/∞ 型时，把分子分母的最高次项提出来，其余项都趋于 0，极限就由最高次项之比决定。\n\n### 解题步骤\n\n1. 找出分子分母的最高次项\n2. 提出后消去\n3. 比较剩余次数\n\n### 易错点\n\n根号内提项时漏掉开方带来的影响。"
     },
     {
       "schemaVersion": "1.0",
@@ -1918,51 +1902,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "等价无穷小",
-      "summary": "等价无穷小的本质是两个量的比值趋于 1，因此乘除结构中可以直接替换主部。",
+      "summary": "在乘除结构中可以用等价无穷小替换化简（如 x→0 时 sin x∼x）；加减结构不能随便替换，否则会丢失高阶项导致错误结论。",
       "tags": [
-        "只替换主部"
+        "乘除结构可替换"
       ],
       "sortOrder": 380,
-      "estimatedMinutes": 6,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "x→0：sin x∼x，tan x∼x，arcsin x∼x，arctan x∼x，ln(1+x)∼x，eˣ−1∼x，aˣ−1∼x ln a，1−cos x∼x²/2，(1+x)ᵅ−1∼αx；差函数：x−sin x∼x³/6，tan x−x∼x³/3，x−arctan x∼x³/3，arcsin x−x∼x³/6",
-        "caption": "等价无穷小的本质是两个量的比值趋于 1，因此乘除结构中可以直接替换主部。"
+        "content": "α∼β ⇒ lim α/γ=lim β/γ（乘除结构）",
+        "caption": "在乘除结构中可以用等价无穷小替换化简（如 x→0 时 sin x∼x）；加减结构不能随便替换，否则会丢失高阶项导致错误结论。"
       },
       "keyPoints": [
         {
-          "id": "xian-que-ren-qu-jin-guo-cheng-tong-0d1ine",
-          "title": "先确认趋近过程（通常是 x→0）",
-          "bodyMarkdown": "先确认趋近过程（通常是 x→0）"
+          "id": "cheng-chu-jie-gou-ke-zhi-jie-ti-huan",
+          "title": "乘除结构可直接替换",
+          "bodyMarkdown": "乘除结构可直接替换"
         },
         {
-          "id": "cheng-chu-jie-gou-ke-yi-zhi-jie-ti-huan-052dp0",
-          "title": "乘除结构可以直接替换",
-          "bodyMarkdown": "乘除结构可以直接替换，加减结构先判断是否抵消"
+          "id": "jia-jian-jie-gou-yao-shen-yong-gai-yong-04k25p",
+          "title": "加减结构要慎用",
+          "bodyMarkdown": "加减结构要慎用，改用泰勒展开"
         },
         {
-          "id": "guang-yi-hua-gong-shi-li-de-x-ke-huan-0i1w1m",
-          "title": "广义化：公式里的 x 可换成任何趋近于 0 的函",
-          "bodyMarkdown": "广义化：公式里的 x 可换成任何趋近于 0 的函数"
+          "id": "ti-huan-qian-xian-que-ren-bian-liang-qu-1mw6ia",
+          "title": "替换前先确认变量趋于 0",
+          "bodyMarkdown": "替换前先确认变量趋于 0"
         }
       ],
       "examples": [
         {
-          "id": "lim-sin-3x-5x-3-5-ba-009h26",
+          "id": "lim-x-0-tan-x-sin-2x-0y8hs6",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀ sin(3x)/(5x)=3/5：把 sin(3x) 换成 3x。"
+          "bodyMarkdown": "lim_{x→0} tan x/sin 2x=lim x/(2x)=1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "等价无穷小的本质是两个量的比值趋于 1，因此乘除结构中可以直接替换主部。需要记牢的完整清单（x→0）：sin x∼tan x∼arcsin x∼arctan x∼ln(1+x)∼eˣ−1∼x，aˣ−1∼x ln a，1−cos x∼½x²，(1+x)ᵅ−1∼αx；使用时要广义化——把 x 换成任意趋近于 0 的“狗”：lim sin（狗）/狗=1。加减结构不能机械替换，低阶抵消时改用差函数系列或泰勒展开。\n\n### 解题步骤\n\n1. 确定趋近点与阶数\n2. 识别乘除结构\n3. 替换后重新检查未定式\n\n### 易错点\n\nsin x−x 不能换成 x−x=0；加减结构要用差函数系列（x−sin x∼⅙x³）或泰勒展开。"
+      "bodyMarkdown": "在乘除结构中可以用等价无穷小替换化简（如 x→0 时 sin x∼x）；加减结构不能随便替换，否则会丢失高阶项导致错误结论。\n\n### 解题步骤\n\n1. 确认结构与趋向\n2. 替换为等价无穷小\n3. 化简后求极限\n\n### 易错点\n\n在加减里替换，如把 x−sin x 换成 0。"
     },
     {
       "schemaVersion": "1.0",
@@ -1973,47 +1953,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "重要极限",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "两个重要极限 lim_{x→0} sin x/x=1 与 lim_{x→0}(1+x)^{1/x}=e 是处理三角函数与幂指函数极限的标准工具，使用前要把式子凑成标准结构。",
       "tags": [
-        "不定式处理"
+        "两个标准结构"
       ],
       "sortOrder": 390,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "format": "latex",
+        "content": "lim_{x→0} sin x/x=1；lim_{x→0}(1+x)^{1/x}=e",
+        "caption": "两个重要极限 lim_{x→0} sin x/x=1 与 lim_{x→0}(1+x)^{1/x}=e 是处理三角函数与"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "sin-x-x-1-x-0",
+          "title": "sin x/x → 1（x→0）",
+          "bodyMarkdown": "sin x/x → 1（x→0）"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "1-x-1-x-e-x-0",
+          "title": "(1+x)^{1/x} → e（x→0）",
+          "bodyMarkdown": "(1+x)^{1/x} → e（x→0）"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "yong-qian-xian-cou-jie-gou-bi-yao-shi-0i7mkb",
+          "title": "用前先凑结构",
+          "bodyMarkdown": "用前先凑结构，必要时换元"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-sin-2x-x-2",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0} sin 2x/x=2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "两个重要极限 lim_{x→0} sin x/x=1 与 lim_{x→0}(1+x)^{1/x}=e 是处理三角函数与幂指函数极限的标准工具，使用前要把式子凑成标准结构。\n\n### 解题步骤\n\n1. 识别结构\n2. 凑成标准形式\n3. 套用结论\n\n### 易错点\n\n结构没凑对就套公式。"
     },
     {
       "schemaVersion": "1.0",
@@ -2024,47 +2004,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "夹逼",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "夹逼准则：若 gₙ≤aₙ≤hₙ 且两侧趋于同一极限，则中间数列也趋于该极限；它常用于含 n 项和或带 n 次方的极限。",
       "tags": [
-        "不定式处理"
+        "两边夹住"
       ],
       "sortOrder": 400,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "g≤a≤h，lim g=lim h=A ⇒ lim a=A",
+        "caption": "夹逼准则：若 gₙ≤aₙ≤hₙ 且两侧趋于同一极限，则中间数列也趋于该极限；它常用于含 n 项和或带 n 次方的极限。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "liang-ce-ji-xian-bi-xu-xiang-tong",
+          "title": "两侧极限必须相同",
+          "bodyMarkdown": "两侧极限必须相同"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "fang-suo-shi-bu-deng-hao-fang-xiang-yao-0h5k7o",
+          "title": "放缩时不等号方向要一致",
+          "bodyMarkdown": "放缩时不等号方向要一致"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "chang-yong-yu-shu-lie-yu-n-xiang-he",
+          "title": "常用于数列与 n 项和",
+          "bodyMarkdown": "常用于数列与 n 项和"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-n-1-n-1-1-n-n-1",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{n→∞}(1/√(n²+1)+…+1/√(n²+n))=1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "夹逼准则：若 gₙ≤aₙ≤hₙ 且两侧趋于同一极限，则中间数列也趋于该极限；它常用于含 n 项和或带 n 次方的极限。\n\n### 解题步骤\n\n1. 对式子放缩找上下界\n2. 求两侧极限\n3. 相等则得结论\n\n### 易错点\n\n放缩后两侧极限不同却仍下结论。"
     },
     {
       "schemaVersion": "1.0",
@@ -2075,47 +2055,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "洛必达",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "洛必达法则：0/0 或 ∞/∞ 型且满足可导条件时，lim f/g=lim f′/g′。",
       "tags": [
-        "不定式处理"
+        "0/0 或 ∞/∞ 才能用"
       ],
       "sortOrder": 410,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "lim f/g=lim f′/g′",
+        "caption": "洛必达法则：0/0 或 ∞/∞ 型且满足可导条件时，lim f/g=lim f′/g′。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "zhi-shi-yong-yu-0-0-yu-xing",
+          "title": "只适用于 0/0 与 ∞/∞ 型",
+          "bodyMarkdown": "只适用于 0/0 与 ∞/∞ 型"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "yao-qiu-fen-zi-fen-mu-zai-qu-xin-lin-yu-1e4kxl",
+          "title": "要求分子分母在去心邻域内可导且分母导数不为 0",
+          "bodyMarkdown": "要求分子分母在去心邻域内可导且分母导数不为 0"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "qiu-dao-hou-reng-shi-wei-ding-shi-ke-yi-0jidu0",
+          "title": "求导后仍是未定式可以继续用",
+          "bodyMarkdown": "求导后仍是未定式可以继续用"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-e-1-x-lim-e-1-1",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0}(eˣ−1)/x=lim eˣ/1=1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "洛必达法则：0/0 或 ∞/∞ 型且满足可导条件时，lim f/g=lim f′/g′。使用前必须验证类型与条件，必要时可以连续使用。\n\n### 解题步骤\n\n1. 验证类型为 0/0 或 ∞/∞\n2. 分子分母分别求导\n3. 再求极限，必要时重复\n\n### 易错点\n\n对非未定式使用洛必达。"
     },
     {
       "schemaVersion": "1.0",
@@ -2126,47 +2106,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "泰勒",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "泰勒（麦克劳林）展开把函数写成多项式加余项，处理加减结构的未定式最可靠：展开到「分子分母最低次幂相消」所需的阶数即可。",
       "tags": [
-        "不定式处理"
+        "展开到足够阶"
       ],
       "sortOrder": 420,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "f(x)=Σ f⁽ᵏ⁾(0)xᵏ/k!+o(xⁿ)",
+        "caption": "泰勒（麦克劳林）展开把函数写成多项式加余项，处理加减结构的未定式最可靠：展开到「分子分母最低次幂相消」所需的阶数即可。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "zhan-kai-jie-shu-yao-gou-fen-mu-shi-x-1mby8l",
+          "title": "展开阶数要够",
+          "bodyMarkdown": "展开阶数要够：分母是 xᵏ 就展到 xᵏ"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "jia-jian-jie-gou-yong-tai-le-bi-deng-1iaosx",
+          "title": "加减结构用泰勒比等价替换更安全",
+          "bodyMarkdown": "加减结构用泰勒比等价替换更安全"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "chang-yong-zhan-kai-e-sin-x-cos-x-ln-1-06fi6r",
+          "title": "常用展开",
+          "bodyMarkdown": "常用展开：eˣ、sin x、cos x、ln(1+x)、(1+x)^α"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-x-sin-x-x-lim-x-174y9u",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0}(x−sin x)/x³=lim (x³/6)/x³=1/6。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "泰勒（麦克劳林）展开把函数写成多项式加余项，处理加减结构的未定式最可靠：展开到「分子分母最低次幂相消」所需的阶数即可。\n\n### 解题步骤\n\n1. 确定需要展开到的阶数\n2. 代入标准展开式\n3. 合并同次项后求极限\n\n### 易错点\n\n展开阶数不够，主项全部相消后无法判断。"
     },
     {
       "schemaVersion": "1.0",
@@ -2177,47 +2157,47 @@
       "sectionId": "m2-p1-c1-s6",
       "sectionTitle": "常见未定式与求极限方法",
       "title": "换元",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "换元能把复杂结构化成标准形式：令 t=1/x 处理 x→∞，令 t=x−a 处理 x→a；换元时极限过程必须同步替换。",
       "tags": [
-        "不定式处理"
+        "换个变量看极限"
       ],
       "sortOrder": 430,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "x→∞ 时令 t=1/x → 0",
+        "caption": "换元能把复杂结构化成标准形式：令 t=1/x 处理 x→∞，令 t=x−a 处理 x→a；换元时极限过程必须同步替换。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "huan-yuan-hou-ji-xian-guo-cheng-yao-yi-1qbrj0",
+          "title": "换元后极限过程要一起改",
+          "bodyMarkdown": "换元后极限过程要一起改"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "t-1-x-chang-ba-hua-cheng-0",
+          "title": "t=1/x 常把 ∞ 化成 0",
+          "bodyMarkdown": "t=1/x 常把 ∞ 化成 0"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "huan-yuan-hou-shi-zi-geng-jie-jin-biao-10rzdu",
+          "title": "换元后式子更接近标准结构",
+          "bodyMarkdown": "换元后式子更接近标准结构"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-x-sin-1-x-lim-t-0-0vkurs",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→∞} x sin(1/x)=lim_{t→0} sin t/t=1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "换元能把复杂结构化成标准形式：令 t=1/x 处理 x→∞，令 t=x−a 处理 x→a；换元时极限过程必须同步替换。\n\n### 解题步骤\n\n1. 选择合适的代换\n2. 同步改写极限过程\n3. 求新极限后按需换回\n\n### 易错点\n\n换了变量却忘记换极限过程。"
     },
     {
       "schemaVersion": "1.0",
@@ -2228,47 +2208,47 @@
       "sectionId": "m2-p1-c1-s7",
       "sectionTitle": "连续性",
       "title": "连续定义",
-      "summary": "函数在 x₀ 连续，意味着函数值存在、极限存在，并且极限值正好等于函数值。",
+      "summary": "f 在 x₀ 连续指 lim_{x→x₀}f(x)=f(x₀)，即函数值存在、极限存在、两者相等三条同时成立。",
       "tags": [
-        "三件事对齐"
+        "极限值等于函数值"
       ],
       "sortOrder": 440,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "limₓ→x₀f(x)=f(x₀)",
-        "caption": "函数在 x₀ 连续，意味着函数值存在、极限存在，并且极限值正好等于函数值。"
+        "format": "latex",
+        "content": "lim_{x→x₀}f(x)=f(x₀)",
+        "caption": "f 在 x₀ 连续指 lim_{x→x₀}f(x)=f(x₀)，即函数值存在、极限存在、两者相等三条同时成立。"
       },
       "keyPoints": [
         {
-          "id": "lian-xu-yao-qiu-you-zhi-you-xian-xiang-1lrdq7",
-          "title": "连续要求“有值、有限、相等”",
-          "bodyMarkdown": "连续要求“有值、有限、相等”"
+          "id": "san-tiao-f-x-you-ding-yi-ji-xian-cun-1pb3xx",
+          "title": "三条：f(x₀) 有定义、极限存在、两者相等",
+          "bodyMarkdown": "三条：f(x₀) 有定义、极限存在、两者相等"
         },
         {
-          "id": "duo-xiang-shi-he-ji-ben-chu-deng-han-0xohtm",
-          "title": "多项式和基本初等函数在各自定义域内连续",
-          "bodyMarkdown": "多项式和基本初等函数在各自定义域内连续"
+          "id": "deng-jia-xie-fa-f-x-f-x-f-x",
+          "title": "等价写法",
+          "bodyMarkdown": "等价写法：f(x₀−)=f(x₀+)=f(x₀)"
         },
         {
-          "id": "fu-he-si-ze-yun-suan-yao-ji-cheng-lian-0jvvoq",
-          "title": "复合、四则运算要继承连续条件",
-          "bodyMarkdown": "复合、四则运算要继承连续条件"
+          "id": "lian-xu-shi-zhu-dian-gai-nian-qu-jian-0uwnhn",
+          "title": "连续是逐点概念",
+          "bodyMarkdown": "连续是逐点概念，区间上连续指每一点都连续"
         }
       ],
       "examples": [
         {
-          "id": "f-x-sin-x-zai-ren-yi-1onlg2",
+          "id": "f-x-x-zai-x-1-lian-xu-18s3er",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=sin x 在任意实数处连续；分式函数要排除分母为 0 的点。"
+          "bodyMarkdown": "f(x)=x² 在 x=1 连续：极限为 1，等于 f(1)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "函数在 x₀ 连续，意味着函数值存在、极限存在，并且极限值正好等于函数值。连续是局部概念；在区间上连续则要求区间内每个点都满足相应条件，端点通常用单侧极限。\n\n### 解题步骤\n\n1. 求 f(x₀)\n2. 求 limₓ→x₀f(x)\n3. 比较两者并检查左右情况\n\n### 易错点\n\n左右极限都存在但不等于函数值时，是可去间断，不是连续。"
+      "bodyMarkdown": "f 在 x₀ 连续指 lim_{x→x₀}f(x)=f(x₀)，即函数值存在、极限存在、两者相等三条同时成立。\n\n### 解题步骤\n\n1. 求 f(x₀) 的值\n2. 求左右极限\n3. 三者相等则连续\n\n### 易错点\n\n只看极限存在就断言连续。"
     },
     {
       "schemaVersion": "1.0",
@@ -2279,51 +2259,47 @@
       "sectionId": "m2-p1-c1-s7",
       "sectionTitle": "连续性",
       "title": "间断点",
-      "summary": "讨论间断点的前提是函数在 x₀ 的某去心邻域内有定义。研究对象是三个量：左极限、右极限、函数值；",
+      "summary": "间断点按左右极限的表现分类：左右极限都存在的是第一类（可去、跳跃），至少一侧不存在的是第二类（无穷、振荡）。",
       "tags": [
-        "找到断裂原因"
+        "按左右极限分类"
       ],
       "sortOrder": 450,
-      "estimatedMinutes": 7,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "研究对象：lim(x→x₀⁻)f、lim(x→x₀⁺)f、f(x₀)；可去+跳跃=第一类，无穷+振荡=第二类",
-        "caption": "讨论间断点的前提是函数在 x₀ 的某去心邻域内有定义。"
+        "content": "第一类：左右极限都存在",
+        "caption": "间断点按左右极限的表现分类：左右极限都存在的是第一类（可去、跳跃），至少一侧不存在的是第二类（无穷、振荡）。"
       },
       "keyPoints": [
         {
-          "id": "ke-qu-zuo-you-ji-xian-xiang-deng-dan-0h67w3",
-          "title": "可去：左右极限相等但函数值缺失或不等，可补点修复",
-          "bodyMarkdown": "可去：左右极限相等但函数值缺失或不等，可补点修复"
+          "id": "ke-qu-jian-duan-dian-zuo-you-ji-xian-1ktmae",
+          "title": "可去间断点",
+          "bodyMarkdown": "可去间断点：左右极限存在且相等，但与函数值不等"
         },
         {
-          "id": "tiao-yue-zuo-you-ji-xian-dou-cun-zai-03jnmw",
-          "title": "跳跃：左右极限都存在但不相等，与 f(x₀) 取",
-          "bodyMarkdown": "跳跃：左右极限都存在但不相等，与 f(x₀) 取值无关"
+          "id": "tiao-yue-jian-duan-dian-zuo-you-ji-xian-0e04gt",
+          "title": "跳跃间断点",
+          "bodyMarkdown": "跳跃间断点：左右极限存在但不相等"
         },
         {
-          "id": "wu-qiong-zhen-dang-shu-di-er-lei-zhi-1fh072",
-          "title": "无穷/振荡属第二类",
-          "bodyMarkdown": "无穷/振荡属第二类：至少一侧没有有限极限"
+          "id": "wu-qiong-zhen-dang-jian-duan-dian-shu-1oatw2",
+          "title": "无穷 / 振荡间断点属于第二类",
+          "bodyMarkdown": "无穷 / 振荡间断点属于第二类"
         }
       ],
       "examples": [
         {
-          "id": "f-x-sin-x-x-zai-x-0-wei-0342np",
+          "id": "f-x-sin-1-x-zai-0-chu-0x4n70",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=sin x/x 在 x=0 未定义但极限为 1，补充 f(0)=1 即可去；y=sin(1/x) 在 x=0 振荡，是第二类。"
+          "bodyMarkdown": "f(x)=sin(1/x) 在 0 处是振荡间断点（第二类）。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "讨论间断点的前提是函数在 x₀ 的某去心邻域内有定义。研究对象是三个量：左极限、右极限、函数值；按它们的表现分四类——可去间断点：左右极限相等但与函数值不等（或函数值不存在），修改或补充 f(x₀) 即可修复，也叫可补间断点；跳跃间断点：左右极限都存在但不相等（与 f(x₀) 取值无关）；无穷间断点：至少一侧极限为 ∞；振荡间断点：极限振荡不存在（如 sin(1/x) 在 x=0）。可去与跳跃统称第一类，其余为第二类。\n\n### 解题步骤\n\n1. 列出无定义点与分段点\n2. 分别计算左右极限\n3. 按“相等/不等/无穷/振荡”归类\n\n### 易错点\n\n只看分母为 0 就下结论不行，必须计算左右极限；区间端点不讨论间断（单侧无邻域）。"
+      "bodyMarkdown": "间断点按左右极限的表现分类：左右极限都存在的是第一类（可去、跳跃），至少一侧不存在的是第二类（无穷、振荡）。\n\n### 解题步骤\n\n1. 求左右极限\n2. 与函数值比较\n3. 归类并说明理由\n\n### 易错点\n\n把「无定义」直接当成间断点类型。"
     },
     {
       "schemaVersion": "1.0",
@@ -2334,47 +2310,47 @@
       "sectionId": "m2-p1-c1-s7",
       "sectionTitle": "连续性",
       "title": "初等函数连续性",
-      "summary": "基本初等函数包括幂、指数、对数、三角和反三角函数；初等函数通过有限次四则、复合等运算构成。",
+      "summary": "基本初等函数在其定义域内连续，初等函数在其定义区间内连续；这条结论让求极限退化为代入求值，是最省力的一步。",
       "tags": [
-        "熟悉函数家族"
+        "定义区间内连续"
       ],
       "sortOrder": 460,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "aˣ>0；ln x 的定义域为 x>0；sin x、cos x 的定义域为 R",
-        "caption": "基本初等函数包括幂、指数、对数、三角和反三角函数；初等函数通过有限次四则、复合等运算构成。"
+        "content": "初等函数在定义区间内连续",
+        "caption": "基本初等函数在其定义域内连续，初等函数在其定义区间内连续；这条结论让求极限退化为代入求值，是最省力的一步。"
       },
       "keyPoints": [
         {
-          "id": "mi-han-shu-de-xing-zhuang-qu-jue-yu-zhi-0vzn4n",
-          "title": "幂函数的形状取决于指数",
-          "bodyMarkdown": "幂函数的形状取决于指数"
+          "id": "ji-ben-chu-deng-han-shu-zai-ding-yi-yu-0erzgr",
+          "title": "基本初等函数在定义域内连续",
+          "bodyMarkdown": "基本初等函数在定义域内连续"
         },
         {
-          "id": "zhi-shu-yu-dui-shu-hu-wei-fan-han-shu",
-          "title": "指数与对数互为反函数",
-          "bodyMarkdown": "指数与对数互为反函数"
+          "id": "chu-deng-han-shu-zai-ding-yi-qu-jian-0h03d1",
+          "title": "初等函数在定义区间内连续",
+          "bodyMarkdown": "初等函数在定义区间内连续"
         },
         {
-          "id": "san-jiao-han-shu-yao-ji-zhou-qi-ji-ou-12qls2",
-          "title": "三角函数要记周期、奇偶和定义域",
-          "bodyMarkdown": "三角函数要记周期、奇偶和定义域"
+          "id": "qiu-ji-xian-xian-chang-shi-zhi-jie-dai-0mdoro",
+          "title": "求极限先尝试直接代入",
+          "bodyMarkdown": "求极限先尝试直接代入"
         }
       ],
       "examples": [
         {
-          "id": "1-x-de-ding-yi-yu-shi-1-1hgsmc",
+          "id": "lim-x-0-e-sin-x-1",
           "title": "讲解例子",
-          "bodyMarkdown": "√(1−x²) 的定义域是 [−1,1]，而 ln(1+x) 的定义域是 x>−1。"
+          "bodyMarkdown": "lim_{x→0}(eˣ+sin x)=1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "基本初等函数包括幂、指数、对数、三角和反三角函数；初等函数通过有限次四则、复合等运算构成。掌握每一类的定义域、单调性、对称性和渐近线，才能快速判断复合表达式。\n\n### 解题步骤\n\n1. 识别函数类型\n2. 写定义域与基本性质\n3. 分析复合后的限制\n\n### 易错点\n\n只看外层符号而忽略内层定义域限制。"
+      "bodyMarkdown": "基本初等函数在其定义域内连续，初等函数在其定义区间内连续；这条结论让求极限退化为代入求值，是最省力的一步。\n\n### 解题步骤\n\n1. 确认函数是初等函数\n2. 找出定义区间\n3. 直接代入求值\n\n### 易错点\n\n把「定义域」与「定义区间」混为一谈。"
     },
     {
       "schemaVersion": "1.0",
@@ -2385,51 +2361,47 @@
       "sectionId": "m2-p1-c1-s7",
       "sectionTitle": "连续性",
       "title": "闭区间连续函数性质",
-      "summary": "设 f 在 [a,b] 上连续。有界与最值定理：f 在 [a,b] 上有界且能取到最小值 m 与最大值 M；",
+      "summary": "f 在闭区间 [a,b] 上连续，则它有界、能取到最大值与最小值，并具有介值性；特别地，f(a)·f(b)<0 时区间内必有零点（零点定理）。",
       "tags": [
-        "四大定理"
+        "有界、最值、介值、零点"
       ],
       "sortOrder": 470,
-      "estimatedMinutes": 7,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "m≤f(x)≤M；f(a)·f(b)<0 ⇒ ∃ξ∈(a,b)，f(ξ)=0；f(ξ)=[f(x₁)+…+f(xₙ)]/n",
-        "caption": "设 f 在 [a,b] 上连续。"
+        "content": "f(a)·f(b)<0 ⇒ ∃ξ∈(a,b)，f(ξ)=0",
+        "caption": "f 在闭区间 [a,b] 上连续，则它有界、能取到最大值与最小值，并具有介值性；特别地，f(a)·f(b)<0 时区间内必有零点（零点定理）。"
       },
       "keyPoints": [
         {
-          "id": "si-ge-ding-li-gong-tong-qian-ti-bi-qu-1yug55",
-          "title": "四个定理共同前提",
-          "bodyMarkdown": "四个定理共同前提：闭区间 + 连续，缺一不可"
+          "id": "you-jie-xing-yu-zui-zhi-ding-li-bi-qu-04jgun",
+          "title": "有界性与最值定理",
+          "bodyMarkdown": "有界性与最值定理：闭区间上必取到最大值、最小值"
         },
         {
-          "id": "ling-dian-ding-li-zhi-pan-cun-zai-pei-13xgvy",
-          "title": "零点定理只判存在",
-          "bodyMarkdown": "零点定理只判存在；配合单调性才能判唯一"
+          "id": "jie-zhi-ding-li-jie-yu-zui-xiao-zhi-yu-19nl2u",
+          "title": "介值定理",
+          "bodyMarkdown": "介值定理：介于最小值与最大值之间的值都能取到"
         },
         {
-          "id": "ping-jun-zhi-ding-li-ba-duo-ge-dian-de-0plr1s",
-          "title": "平均值定理把多个点的函数值“平均”收拢到一点",
-          "bodyMarkdown": "平均值定理把多个点的函数值“平均”收拢到一点，常用于凑介值条件"
+          "id": "ling-dian-ding-li-f-a-f-b-0-a-b-shi-f-0",
+          "title": "零点定理",
+          "bodyMarkdown": "零点定理：f(a)·f(b)<0 ⇒ ∃ξ∈(a,b) 使 f(ξ)=0"
         }
       ],
       "examples": [
         {
-          "id": "zheng-f-ling-f-x-f-x-x-1nh1g9",
+          "id": "f-x-x-x-1-zai-1-2-shang-0zfvxw",
           "title": "讲解例子",
-          "bodyMarkdown": "证 f(η)=η：令 F(x)=f(x)−x，端点值 F(½)·F(1)<0，由零点定理得证。"
+          "bodyMarkdown": "f(x)=x³−x−1 在 [1,2] 上连续且端点异号，故有零点。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第6讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "设 f 在 [a,b] 上连续。有界与最值定理：f 在 [a,b] 上有界且能取到最小值 m 与最大值 M；介值定理：对任意 μ∈[m,M]，存在 ξ∈[a,b] 使 f(ξ)=μ；平均值定理：对 a<x₁<…<xₙ<b，存在 ξ∈(x₁,xₙ) 使 f(ξ)=[f(x₁)+…+f(xₙ)]/n；零点定理：f(a)·f(b)<0 时存在 ξ∈(a,b) 使 f(ξ)=0。这组定理是证明“存在性”的基本工具。\n\n### 解题步骤\n\n1. 验证 f 在闭区间连续\n2. 按目标选定理：取中间值用介值、端点异号用零点、多点平均用平均值\n3. 需要唯一性时补单调性\n\n### 易错点\n\n区间不闭或函数有间断，结论可能整体失效；零点定理只说“至少一个根”，不说根的个数。"
+      "bodyMarkdown": "f 在闭区间 [a,b] 上连续，则它有界、能取到最大值与最小值，并具有介值性；特别地，f(a)·f(b)<0 时区间内必有零点（零点定理）。\n\n### 解题步骤\n\n1. 确认闭区间上连续\n2. 用最值定理得界\n3. 用零点或介值定理证明存在性\n\n### 易错点\n\n把闭区间条件放宽到开区间（开区间上可能取不到最值）。"
     }
   ]
 }

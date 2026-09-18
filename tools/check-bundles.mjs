@@ -63,6 +63,20 @@ function specifiersOf(source) {
   return out
 }
 
+/* ── 0. 生成物必须齐全 ───────────────────────────────────────────────
+ * `npm run build:content` 在这个环境里会**偶发** `UNKNOWN: unknown error, open <大文件>`，
+ * 而且失败的那一次可能让 `data/generated/app/` 下少生成一个文件（遇到过 politics-index.ts 丢）。
+ * 少了文件会让下面几条检查连环报 ENOENT，看着像「分包配置坏了」，其实只是没重新构建。 */
+const REQUIRED_GENERATED = ['catalog.ts', 'knowledge.ts', 'word-ids.ts', 'politics-index.ts']
+const missingGenerated = REQUIRED_GENERATED.filter(
+  (f) => !fs.existsSync(path.join(ROOT, 'data', 'generated', 'app', f)),
+)
+if (missingGenerated.length) {
+  console.log('\n=== 0. 生成物齐全 ===')
+  console.log(`  ❌ 缺 ${missingGenerated.join('、')}——重新跑 cd tools && npm run build:content（可能要跑两次）`)
+  process.exit(1)
+}
+
 console.log('\n=== 1. 主包不得引用分包 ===')
 check('主包文件没有 import 分包路径', () => {
   const bad = []
