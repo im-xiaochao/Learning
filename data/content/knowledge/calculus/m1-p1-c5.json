@@ -15,47 +15,47 @@
       "sectionId": "m1-p1-c5-s1",
       "sectionTitle": "多元函数基本概念",
       "title": "二元/多元函数",
-      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "summary": "二元函数 z=f(x,y) 有两个独立自变量、一个因变量，多元函数同理；自变量是一对有序数组 (x,y)，函数关系是「每个点对应唯一的 z」。",
       "tags": [
-        "从数轴到平面"
+        "多个自变量一个因变量"
       ],
       "sortOrder": 10,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
-        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+        "content": "z=f(x,y)，(x,y)∈D⊆R²",
+        "caption": "二元函数 z=f(x,y) 有两个独立自变量、一个因变量，多元函数同理；自变量是一对有序数组 (x,y)，函数关系是「每个点对应唯一的 z」。"
       },
       "keyPoints": [
         {
-          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
-          "title": "定义域由根号、分母和对数条件共同决定",
-          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+          "id": "zi-bian-liang-ge-shu-2-yin-bian-liang-1kf990",
+          "title": "自变量个数 ≥2、因变量只有 1 个",
+          "bodyMarkdown": "自变量个数 ≥2、因变量只有 1 个"
         },
         {
-          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
-          "title": "z=f(x",
-          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+          "id": "x-y-shi-ping-mian-shang-de-yi-dian-bu-0bueym",
+          "title": "(x₀,y₀) 是平面上的一点，不是两个数",
+          "bodyMarkdown": "(x₀,y₀) 是平面上的一点，不是两个数"
         },
         {
-          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
-          "title": "闭有界区域上的连续函数能取到最值",
-          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+          "id": "dui-ying-guan-xi-bi-xu-dan-zhi-yi-ge-0clqqx",
+          "title": "对应关系必须单值",
+          "bodyMarkdown": "对应关系必须单值：一个点只能有一个 z"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "id": "z-1-x-y-biao-shi-dan-06vmzm",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+          "bodyMarkdown": "z=√(1−x²−y²) 表示单位圆盘上的上半球面。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+      "bodyMarkdown": "二元函数 z=f(x,y) 有两个独立自变量、一个因变量，多元函数同理；自变量是一对有序数组 (x,y)，函数关系是「每个点对应唯一的 z」。\n\n### 解题步骤\n\n1. 认出自变量个数\n2. 检查对应是否单值\n3. 写出定义域（平面点集）\n\n### 易错点\n\n把 (x,y) 拆成两个独立的一元函数处理——它们是一对同时变化的坐标。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p1-c5-s1",
       "sectionTitle": "多元函数基本概念",
       "title": "定义域",
-      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "summary": "二元函数的定义域是使表达式有意义的平面点集，常见限制来自负数开偶次方、零作分母、对数真数非正；通常画出区域图再判断开闭。",
       "tags": [
-        "从数轴到平面"
+        "使表达式有意义的点集"
       ],
       "sortOrder": 20,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
-        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+        "content": "如 z=ln(y−x²) 的定义域 D={y>x²}",
+        "caption": "二元函数的定义域是使表达式有意义的平面点集，常见限制来自负数开偶次方、零作分母、对数真数非正；通常画出区域图再判断开闭。"
       },
       "keyPoints": [
         {
-          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
-          "title": "定义域由根号、分母和对数条件共同决定",
-          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+          "id": "kai-ou-ci-fang-yao-qiu-bei-kai-fang-shu-0wt6o5",
+          "title": "开偶次方要求被开方数 ≥0",
+          "bodyMarkdown": "开偶次方要求被开方数 ≥0"
         },
         {
-          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
-          "title": "z=f(x",
-          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+          "id": "fen-mu-bu-wei-0-dui-shu-zhen-shu-0",
+          "title": "分母不为 0",
+          "bodyMarkdown": "分母不为 0，对数真数 >0"
         },
         {
-          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
-          "title": "闭有界区域上的连续函数能取到最值",
-          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+          "id": "bian-jie-han-bu-han-ying-xiang-bi-qu-yu-0ezd53",
+          "title": "边界含不含影响「闭区域」与最值存在性",
+          "bodyMarkdown": "边界含不含影响「闭区域」与最值存在性"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "id": "z-4-x-y-de-ding-yi-yu-0vwxuy",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+          "bodyMarkdown": "z=√(4−x²−y²) 的定义域是闭圆盘 x²+y²≤4（含边界）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+      "bodyMarkdown": "二元函数的定义域是使表达式有意义的平面点集，常见限制来自负数开偶次方、零作分母、对数真数非正；通常画出区域图再判断开闭。\n\n### 解题步骤\n\n1. 逐条列不等式\n2. 画平面区域\n3. 标注边界是否包含\n\n### 易错点\n\n只写不等式不画图，联立时漏掉交集的形状限制。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p1-c5-s1",
       "sectionTitle": "多元函数基本概念",
       "title": "二元函数几何意义",
-      "summary": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。",
+      "summary": "z=f(x,y) 的图像是三维空间中的一张曲面：把每个定义域上的点 (x,y) 竖起高度 f(x,y) 连成曲面；截面 f(x,y₀)=c 与等值线是观察它的两个窗口。",
       "tags": [
-        "从数轴到平面"
+        "一张曲面"
       ],
       "sortOrder": 30,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "z=f(x,y)，D={(x,y):表达式有意义}",
-        "caption": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。"
+        "content": "曲面 Σ: z=f(x,y)，(x,y)∈D",
+        "caption": "z=f(x,y) 的图像是三维空间中的一张曲面：把每个定义域上的点 (x,y) 竖起高度 f(x,y) 连成曲面；"
       },
       "keyPoints": [
         {
-          "id": "ding-yi-yu-you-gen-hao-fen-mu-he-dui-084w9u",
-          "title": "定义域由根号、分母和对数条件共同决定",
-          "bodyMarkdown": "定义域由根号、分母和对数条件共同决定"
+          "id": "tu-xiang-shi-r-zhong-de-qu-mian-yi-yuan-1ic2ty",
+          "title": "图像是 R³ 中的曲面（一元函数是曲线）",
+          "bodyMarkdown": "图像是 R³ 中的曲面（一元函数是曲线）"
         },
         {
-          "id": "z-f-x-y-de-deng-zhi-xian-shi-li-jie-qu-09rfas",
-          "title": "z=f(x",
-          "bodyMarkdown": "z=f(x,y) 的等值线是理解曲面的俯视图"
+          "id": "gu-ding-y-de-ping-mian-jie-xian-kan-dan-1ei17n",
+          "title": "固定 y 得平面截线",
+          "bodyMarkdown": "固定 y 得平面截线，看单变量变化"
         },
         {
-          "id": "bi-you-jie-qu-yu-shang-de-lian-xu-han-0nvta0",
-          "title": "闭有界区域上的连续函数能取到最值",
-          "bodyMarkdown": "闭有界区域上的连续函数能取到最值"
+          "id": "deng-zhi-xian-f-x-y-c-shi-qu-mian-de-1reoy4",
+          "title": "等值线 f(x",
+          "bodyMarkdown": "等值线 f(x,y)=c 是曲面的水平切片投影"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-1-x-y-de-ding-yi-16le81",
+          "id": "z-x-y-shi-xuan-zhuan-1yswq8",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x,y)=√(1−x²−y²) 的定义域是单位圆盘，图像是上半球。"
+          "bodyMarkdown": "z=x²+y² 是旋转抛物面，等值线是一族同心圆。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "二元函数把平面区域中的点 (x,y) 映射为一个数 z，图像通常是空间曲面。定义域从数轴区间变成平面区域，判断问题要先画出这个区域。\n\n### 解题步骤\n\n1. 列出定义域不等式\n2. 画出平面区域\n3. 结合等值线或截面观察函数变化\n\n### 易错点\n\n只求出 x、y 各自范围而忽略二者的联合约束。"
+      "bodyMarkdown": "z=f(x,y) 的图像是三维空间中的一张曲面：把每个定义域上的点 (x,y) 竖起高度 f(x,y) 连成曲面；截面 f(x,y₀)=c 与等值线是观察它的两个窗口。\n\n### 解题步骤\n\n1. 画定义域\n2. 看几条截线/等值线\n3. 拼出曲面整体形状\n\n### 易错点\n\n把二元函数图像画成平面曲线——它是空间曲面。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p1-c5-s1",
       "sectionTitle": "多元函数基本概念",
       "title": "有界闭区域连续函数性质",
-      "summary": "“有界闭区域连续函数性质”是本模块中的一个具体对象。学习时不要只记名词：先说清研究对象和适用条件，再把定义转成公式或图像，最后用一个最小例子检查自己是否真的会用。",
+      "summary": "二元连续函数在有界闭区域上必有最大值与最小值，且能取到介于两者之间的一切值（介值定理）；这与一元闭区间连续函数的性质完全平行，是「最值必存在」的依据。",
       "tags": [
-        "知识拆解"
+        "最值与介值"
       ],
       "sortOrder": 40,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
-        "type": "concept",
+        "type": "formula",
         "format": "text",
-        "content": "对象是什么",
-        "caption": "“有界闭区域连续函数性质”是本模块中的一个具体对象。"
+        "content": "∃(P₁,P₂)：f(P₁)=m（最小），f(P₂)=M（最大）",
+        "caption": "二元连续函数在有界闭区域上必有最大值与最小值，且能取到介于两者之间的一切值（介值定理）；这与一元闭区间连续函数的性质完全平行，是「最值必存在」的依据。"
       },
       "keyPoints": [
         {
-          "id": "dui-xiang-shi-shen-me",
-          "title": "对象是什么",
-          "bodyMarkdown": "对象是什么"
+          "id": "you-jie-bi-zui-zhi-yi-ding-cun-zai",
+          "title": "有界 + 闭 ⇒ 最值一定存在",
+          "bodyMarkdown": "有界 + 闭 ⇒ 最值一定存在"
         },
         {
-          "id": "tiao-jian-shen-me-shi-hou-cheng-li",
-          "title": "条件什么时候成立",
-          "bodyMarkdown": "条件什么时候成立"
+          "id": "jie-zhi-xing-zui-da-zui-xiao-zhi-jian-11rpz4",
+          "title": "介值性：最大最小之间的一切值都取得到",
+          "bodyMarkdown": "介值性：最大最小之间的一切值都取得到"
         },
         {
-          "id": "jie-lun-ru-he-zai-ti-mu-zhong-luo-di",
-          "title": "结论如何在题目中落地",
-          "bodyMarkdown": "结论如何在题目中落地"
+          "id": "qian-ti-que-yi-bu-ke-kai-qu-yu-huo-wu-13i98b",
+          "title": "前提缺一不可",
+          "bodyMarkdown": "前提缺一不可：开区域或无界都不保证"
         }
       ],
       "examples": [
         {
-          "id": "xian-cong-ben-jie-de-ti-0iyg3h",
+          "id": "f-x-y-zai-bi-yuan-pan-x-1vo7md",
           "title": "讲解例子",
-          "bodyMarkdown": "先从本节的提纲项中找一个最简单的例子，再把条件逐项代入检查。"
+          "bodyMarkdown": "f=x²+y² 在闭圆盘 x²+y²≤1 上必有最小值 0 与最大值 1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "“有界闭区域连续函数性质”是本模块中的一个具体对象。学习时不要只记名词：先说清研究对象和适用条件，再把定义转成公式或图像，最后用一个最小例子检查自己是否真的会用。\n\n### 解题步骤\n\n1. 先定义对象\n2. 再整理核心关系\n3. 最后用例题和边界情况验证\n\n### 易错点\n\n只背结论不检查条件，换一个题型就容易失效。"
+      "bodyMarkdown": "二元连续函数在有界闭区域上必有最大值与最小值，且能取到介于两者之间的一切值（介值定理）；这与一元闭区间连续函数的性质完全平行，是「最值必存在」的依据。\n\n### 解题步骤\n\n1. 确认区域有界且闭\n2. 确认函数连续\n3. 在内点与边界上找最值\n\n### 易错点\n\n在开区域上也断言最值存在——如 x²+y² 在开圆盘内取不到最大值。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p1-c5-s2",
       "sectionTitle": "二元函数极限与连续",
       "title": "二重极限",
-      "summary": "二元极限要求点从任意方向、任意路径靠近目标时都趋向同一个数。",
+      "summary": "二重极限要求点 (x,y) 沿任意路径趋于 (x₀,y₀) 时函数值都趋于同一常数 A——路径无关是本质要求；这正是它与一元左右极限的根本区别。",
       "tags": [
-        "所有路径都要一致"
+        "任意路径极限一致"
       ],
       "sortOrder": 50,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim₍ₓ,ᵧ₎→(0,0)f(x,y) 必须与路径无关",
-        "caption": "二元极限要求点从任意方向、任意路径靠近目标时都趋向同一个数。"
+        "content": "lim₍ₓ,y₎→₍₀,₀₎f(x,y)=A ⇔ 沿任意路径均趋于 A",
+        "caption": "二重极限要求点 (x,y) 沿任意路径趋于 (x₀,y₀) 时函数值都趋于同一常数 A——路径无关是本质要求；这正是它与一元左右极限的根本区别。"
       },
       "keyPoints": [
         {
-          "id": "yi-tiao-lu-jing-zhi-neng-gei-bi-yao-1glfrl",
-          "title": "一条路径只能给必要条件",
-          "bodyMarkdown": "一条路径只能给必要条件"
+          "id": "qu-jin-fang-shi-ren-yi-zhi-xian-qu-xian-0bj229",
+          "title": "趋近方式任意",
+          "bodyMarkdown": "趋近方式任意：直线、曲线、螺旋都算"
         },
         {
-          "id": "liang-tiao-lu-jing-bu-tong-zu-yi-fou-0b6bt9",
-          "title": "两条路径不同足以否定极限",
-          "bodyMarkdown": "两条路径不同足以否定极限"
+          "id": "lu-jing-wu-guan-qie-dou-qu-yu-tong-yi-06055l",
+          "title": "路径无关且都趋于同一个 A",
+          "bodyMarkdown": "路径无关且都趋于同一个 A，才叫极限为 A"
         },
         {
-          "id": "ji-zuo-biao-shi-he-jie-shi-zhi-yi-lai-r-0km4h4",
-          "title": "极坐标适合揭示只依赖 r 或角度的结构",
-          "bodyMarkdown": "极坐标适合揭示只依赖 r 或角度的结构"
+          "id": "liang-tiao-lu-jing-ji-xian-bu-tong-ji-0gfvrs",
+          "title": "两条路径极限不同 ⇒ 极限不存在",
+          "bodyMarkdown": "两条路径极限不同 ⇒ 极限不存在"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-xy-x-y-yan-y-x-de-0ncdpt",
+          "id": "lim-x-y-x-y-0-x-y-x-y-y-1w4mu8",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x,y)=xy/(x²+y²) 沿 y=x 得 1/2，沿 y=−x 得 −1/2，所以极限不存在。"
+          "bodyMarkdown": "lim(x²y)/(x²+y²)=0：|x²y|≤(x²+y²)|y|→0，与路径无关。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "二元极限要求点从任意方向、任意路径靠近目标时都趋向同一个数。沿一条路径算出结果只能证明“若极限存在，它必须是这个值”；找到两条不同路径结果不同，就能直接证明不存在。\n\n### 解题步骤\n\n1. 先尝试特殊路径\n2. 若结果一致，再用不等式或极坐标证明\n3. 结果不一致时立即判不存在\n\n### 易错点\n\n只沿 x 轴和 y 轴得到相同结果，仍不能证明二元极限存在。"
+      "bodyMarkdown": "二重极限要求点 (x,y) 沿任意路径趋于 (x₀,y₀) 时函数值都趋于同一常数 A——路径无关是本质要求；这正是它与一元左右极限的根本区别。\n\n### 解题步骤\n\n1. 先试沿坐标轴趋近\n2. 再试 y=kx 等直线族\n3. 必要时用夹逼或极坐标确认\n\n### 易错点\n\n沿 x 轴、y 轴极限相等就断言极限存在——两条路径远远不够。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p1-c5-s2",
       "sectionTitle": "二元函数极限与连续",
       "title": "多路径趋近",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "多路径趋近是研究二重极限的基本手段：沿 y=kx、y=kx²、坐标轴等不同路径分别算极限；结果不一致即不存在，一致也不能下结论，只说明「值得继续验证」。",
       "tags": [
-        "逼近而非代入"
+        "用不同路径试探"
       ],
       "sortOrder": 60,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "format": "latex",
+        "content": "lim_{y=kx→0}f(x,kx) 依赖 k ⇒ 极限不存在",
+        "caption": "多路径趋近是研究二重极限的基本手段：沿 y=kx、y=kx²、坐标轴等不同路径分别算极限；"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "y-kx-yi-bu-jiu-neng-shi-chu-zhi-xian-12h8j5",
+          "title": "y=kx 一步就能试出直线方向的依赖",
+          "bodyMarkdown": "y=kx 一步就能试出直线方向的依赖"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "y-kx-neng-shi-chu-bi-zhi-xian-geng-xi-12poer",
+          "title": "y=kx² 能试出比直线更细的差异",
+          "bodyMarkdown": "y=kx² 能试出比直线更细的差异"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "ge-lu-jing-yi-zhi-hai-xu-jia-bi-ji-zuo-0m5z1u",
+          "title": "各路径一致 ⇒ 还需夹逼/极坐标确认存在",
+          "bodyMarkdown": "各路径一致 ⇒ 还需夹逼/极坐标确认存在"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "xy-x-y-yan-y-kx-de-k-1-0q0vkc",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "xy/(x²+y²) 沿 y=kx 得 k/(1+k²)，随 k 变，极限不存在。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "bodyMarkdown": "多路径趋近是研究二重极限的基本手段：沿 y=kx、y=kx²、坐标轴等不同路径分别算极限；结果不一致即不存在，一致也不能下结论，只说明「值得继续验证」。\n\n### 解题步骤\n\n1. 沿 y=0、x=0 试探\n2. 沿 y=kx 看是否含 k\n3. 含 k 则极限不存在\n\n### 易错点\n\n把「几条路径一致」当成极限存在的证明——一致的路径再多也不充分。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m1-p1-c5-s2",
       "sectionTitle": "二元函数极限与连续",
       "title": "用路径证明极限不存在",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "证明二重极限不存在的标准套路：找两条趋于该点的路径，沿它们算出的极限不相等（或其中一条不存在），即可断言极限不存在；y=kx 与 y=x² 是最常用的两条。",
       "tags": [
-        "逼近而非代入"
+        "两条路径两个答案"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "content": "lim₁≠lim₂ ⇒ 极限不存在",
+        "caption": "证明二重极限不存在的标准套路：找两条趋于该点的路径，沿它们算出的极限不相等（或其中一条不存在），即可断言极限不存在；"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "he-xin-liang-tiao-lu-jing-de-ji-xian-bu-00jhnd",
+          "title": "核心：两条路径的极限不相等",
+          "bodyMarkdown": "核心：两条路径的极限不相等"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "chang-bei-lu-jing-y-kx-y-kx-zuo-biao-0yyl3x",
+          "title": "常备路径",
+          "bodyMarkdown": "常备路径：y=kx、y=kx²、坐标轴"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "jie-lun-zhi-yong-yu-bu-cun-zai-bu-neng-15sg6e",
+          "title": "结论只用于「不存在」",
+          "bodyMarkdown": "结论只用于「不存在」，不能证存在"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "x-y-x-y-yan-y-0-de-1-1vnh9c",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "(x²−y²)/(x²+y²)：沿 y=0 得 1，沿 x=0 得 −1，极限不存在。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "bodyMarkdown": "证明二重极限不存在的标准套路：找两条趋于该点的路径，沿它们算出的极限不相等（或其中一条不存在），即可断言极限不存在；y=kx 与 y=x² 是最常用的两条。\n\n### 解题步骤\n\n1. 沿路径 1 算极限 a\n2. 沿路径 2 算极限 b\n3. a≠b ⇒ 极限不存在\n\n### 易错点\n\n用路径法「证明存在」——路径一致只能说明还没找到反例。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m1-p1-c5-s2",
       "sectionTitle": "二元函数极限与连续",
       "title": "极坐标处理二元极限",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "令 x=r cosθ、y=r sinθ 后，(x,y)→(0,0) 变成 r→0；若能把函数放缩成「只含 r 的量趋于 0 且对一切 θ 一致」，极限就存在，这是夹逼思路的极坐标版。",
       "tags": [
-        "逼近而非代入"
+        "r→0 与 θ 无关"
       ],
       "sortOrder": 80,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "content": "x²+y²=r²，|x|≤r，|y|≤r",
+        "caption": "令 x=r cosθ、y=r sinθ 后，(x,y)→(0,0) 变成 r→0；"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "x-r-cos-y-r-sin-ju-li-yong-r-du-liang",
+          "title": "x=r cosθ、y=r sinθ",
+          "bodyMarkdown": "x=r cosθ、y=r sinθ，距离用 r 度量"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "dui-yi-zhi-qu-jin-cai-zheng-ming-ji-1dtdfn",
+          "title": "对 θ 一致趋近才证明极限存在",
+          "bodyMarkdown": "对 θ 一致趋近才证明极限存在"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "liu-zai-biao-da-shi-li-shi-yao-yong-cos-14wmoj",
+          "title": "θ 留在表达式里时要用 |cosθ|、|sinθ",
+          "bodyMarkdown": "θ 留在表达式里时要用 |cosθ|、|sinθ|≤1 放缩"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "x-y-x-y-ji-zuo-biao-r-17q4g5",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "(x³+y³)/(x²+y²)：极坐标 =r(cos³θ+sin³θ)，|·|≤2r→0，极限为 0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "bodyMarkdown": "令 x=r cosθ、y=r sinθ 后，(x,y)→(0,0) 变成 r→0；若能把函数放缩成「只含 r 的量趋于 0 且对一切 θ 一致」，极限就存在，这是夹逼思路的极坐标版。\n\n### 解题步骤\n\n1. 代入极坐标\n2. 放缩成只含 r 的界\n3. 验证界对一切 θ 成立且趋于 0\n\n### 易错点\n\n只让 r→0 而不管 θ，把含 θ 的表达式误当成已求出的极限。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m1-p1-c5-s2",
       "sectionTitle": "二元函数极限与连续",
       "title": "连续性",
-      "summary": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。",
+      "summary": "f 在点 P₀ 连续 = f 在 P₀ 有定义 + 二重极限存在 + 极限值恰等于函数值；三条缺一就是间断点，多元函数的间断可以是孤点、曲线甚至整片区域。",
       "tags": [
-        "逼近而非代入"
+        "极限值等于函数值"
       ],
       "sortOrder": 90,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "limₓ→a f(x)=L ⇔ 左极限=右极限=L",
-        "caption": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。"
+        "content": "limₚ→ₚ₀ f(P)=f(P₀)",
+        "caption": "f 在点 P₀ 连续 = f 在 P₀ 有定义 + 二重极限存在 + 极限值恰等于函数值；"
       },
       "keyPoints": [
         {
-          "id": "zuo-you-ji-xian-bi-xu-fen-bie-kan",
-          "title": "左、右极限必须分别看",
-          "bodyMarkdown": "左、右极限必须分别看"
+          "id": "lian-xu-san-yao-su-you-ding-yi-ji-xian-11tyti",
+          "title": "连续三要素",
+          "bodyMarkdown": "连续三要素：有定义、极限存在、极限=函数值"
         },
         {
-          "id": "ji-xian-zhi-bu-yao-qiu-deng-yu-han-shu-1bqr9p",
-          "title": "极限值不要求等于函数值",
-          "bodyMarkdown": "极限值不要求等于函数值"
+          "id": "chu-deng-han-shu-zai-qi-ding-yi-qu-yu-15yomk",
+          "title": "初等函数在其定义区域内连续",
+          "bodyMarkdown": "初等函数在其定义区域内连续"
         },
         {
-          "id": "bu-shi-yi-ge-ke-zhi-jie-dai-ru-de-shu",
-          "title": "∞ 不是一个可直接代入的数",
-          "bodyMarkdown": "∞ 不是一个可直接代入的数"
+          "id": "jian-duan-dian-xing-tai-bi-yi-yuan-feng-15jdct",
+          "title": "间断点形态比一元丰富",
+          "bodyMarkdown": "间断点形态比一元丰富：可成曲线"
         }
       ],
       "examples": [
         {
-          "id": "lim-3x-x-1-x-4-3-fen-zi-16r1y2",
+          "id": "f-x-y-zai-0-0-lian-xu-17mh1l",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→∞(3x²−x+1)/(x²+4)=3；分子分母同除以 x²。"
+          "bodyMarkdown": "f=√(x²+y²) 在 (0,0) 连续：极限 0 恰等于函数值 0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "极限研究的是变量靠近某点时函数值的趋势，函数在该点是否有定义并不决定极限。双侧极限存在的必要条件是左右极限相等；无穷远处则比较增长速度和最高阶项。\n\n### 解题步骤\n\n1. 确认趋近方向\n2. 先做代数化简或比较\n3. 检查左右/无穷远结果是否一致\n\n### 易错点\n\n把趋近点直接代入含 0/0 的式子，或忽略单侧方向。"
+      "bodyMarkdown": "f 在点 P₀ 连续 = f 在 P₀ 有定义 + 二重极限存在 + 极限值恰等于函数值；三条缺一就是间断点，多元函数的间断可以是孤点、曲线甚至整片区域。\n\n### 解题步骤\n\n1. 查定义\n2. 求极限\n3. 比较极限与函数值\n\n### 易错点\n\n只验证极限存在就宣称连续——还要等于该点的函数值。"
     },
     {
       "schemaVersion": "1.0",
@@ -474,47 +474,47 @@
       "sectionId": "m1-p1-c5-s3",
       "sectionTitle": "偏导数",
       "title": "一阶偏导",
-      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "summary": "f_x=lim_{Δx→0}[f(x+Δx,y)−f(x,y)]/Δx：固定 y 只让 x 变化的一元导数；求偏导就是把其余变量都当常数，对目标变量按一元法则求导。",
       "tags": [
-        "局部线性化"
+        "轮流当常数求导"
       ],
       "sortOrder": 100,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
-        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+        "format": "latex",
+        "content": "f_x=lim_{Δx→0}（f(x+Δx,y)−f(x,y)）/Δx",
+        "caption": "f_x=lim_{Δx→0}[f(x+Δx,y)−f(x,y)]/Δx：固定 y 只让 x 变化的一元导数；"
       },
       "keyPoints": [
         {
-          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
-          "title": "偏导是坐标方向的变化率",
-          "bodyMarkdown": "偏导是坐标方向的变化率"
+          "id": "ding-yi-gu-ding-qi-yu-bian-liang-shi-de-0uzq34",
+          "title": "定义：固定其余变量时的差商极限",
+          "bodyMarkdown": "定义：固定其余变量时的差商极限"
         },
         {
-          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
-          "title": "全微分是所有一阶变化的线性合成",
-          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+          "id": "ji-hao-f-x-f-x-z-x-deng-jia",
+          "title": "记号 f_x、∂f/∂x、z_x 等价",
+          "bodyMarkdown": "记号 f_x、∂f/∂x、z_x 等价"
         },
         {
-          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
-          "title": "可微 ⇒ 连续",
-          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+          "id": "pian-dao-cun-zai-bu-dai-biao-han-shu-1qt916",
+          "title": "偏导存在不代表函数连续（与一元不同）",
+          "bodyMarkdown": "偏导存在不代表函数连续（与一元不同）"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "id": "f-x-y-e-xy-f-x-2xy-ye-18r5qb",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+          "bodyMarkdown": "f=x²y+e^{xy}：f_x=2xy+ye^{xy}（把 y 当常数）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+      "bodyMarkdown": "f_x=lim_{Δx→0}[f(x+Δx,y)−f(x,y)]/Δx：固定 y 只让 x 变化的一元导数；求偏导就是把其余变量都当常数，对目标变量按一元法则求导。\n\n### 解题步骤\n\n1. 认准对哪个变量求导\n2. 其余变量全当常数\n3. 按一元求导法则计算\n\n### 易错点\n\n用「偏导存在」推「连续」——多元函数偏导存在远弱于可微。"
     },
     {
       "schemaVersion": "1.0",
@@ -525,47 +525,47 @@
       "sectionId": "m1-p1-c5-s3",
       "sectionTitle": "偏导数",
       "title": "高阶偏导",
-      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "summary": "对一阶偏导再求偏导得到二阶偏导，如 z_xx、z_xy；二阶有四个（实际三类），更高阶类推，符号里字母顺序表示求导次序。",
       "tags": [
-        "局部线性化"
+        "对偏导再求偏导"
       ],
       "sortOrder": 110,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
-        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+        "content": "z_xy=(z_x)_y，z_xx=(z_x)_x",
+        "caption": "对一阶偏导再求偏导得到二阶偏导，如 z_xx、z_xy；二阶有四个（实际三类），更高阶类推，符号里字母顺序表示求导次序。"
       },
       "keyPoints": [
         {
-          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
-          "title": "偏导是坐标方向的变化率",
-          "bodyMarkdown": "偏导是坐标方向的变化率"
+          "id": "z-xy-biao-shi-xian-dui-x-zai-dui-y",
+          "title": "z_xy 表示先对 x 再对 y",
+          "bodyMarkdown": "z_xy 表示先对 x 再对 y"
         },
         {
-          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
-          "title": "全微分是所有一阶变化的线性合成",
-          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+          "id": "si-ge-er-jie-pian-dao-xx-xy-yx-yy",
+          "title": "四个二阶偏导",
+          "bodyMarkdown": "四个二阶偏导：xx、xy、yx、yy"
         },
         {
-          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
-          "title": "可微 ⇒ 连续",
-          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+          "id": "ji-suan-jiu-shi-zhu-ci-qiu-yi-jie-pian-0wi1hi",
+          "title": "计算就是逐次求一阶偏导",
+          "bodyMarkdown": "计算就是逐次求一阶偏导"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "id": "z-x-y-z-x-3x-y-z-xy-6x-1ave4l",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+          "bodyMarkdown": "z=x³y²：z_x=3x²y²，z_xy=6x²y，z_xx=6xy²。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+      "bodyMarkdown": "对一阶偏导再求偏导得到二阶偏导，如 z_xx、z_xy；二阶有四个（实际三类），更高阶类推，符号里字母顺序表示求导次序。\n\n### 解题步骤\n\n1. 先求一阶偏导\n2. 对结果再求偏导\n3. 核对下标顺序与运算次序一致\n\n### 易错点\n\n把 z_xy 误读成先 y 后 x——下标从左到右就是求导次序（教材惯例）。"
     },
     {
       "schemaVersion": "1.0",
@@ -576,47 +576,47 @@
       "sectionId": "m1-p1-c5-s3",
       "sectionTitle": "偏导数",
       "title": "混合偏导",
-      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "summary": "混合偏导 f_xy 与 f_yx 一般是先 x 后 y 与先 y 后 x 两种次序；当它们在区域内连续时二者必相等，求导次序可以自由选择，挑好算的先来。",
       "tags": [
-        "局部线性化"
+        "次序可交换"
       ],
       "sortOrder": 120,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
-        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+        "content": "f_xy=f_yx（连续时）",
+        "caption": "混合偏导 f_xy 与 f_yx 一般是先 x 后 y 与先 y 后 x 两种次序；"
       },
       "keyPoints": [
         {
-          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
-          "title": "偏导是坐标方向的变化率",
-          "bodyMarkdown": "偏导是坐标方向的变化率"
+          "id": "f-xy-yu-f-yx-zai-lian-xu-tiao-jian-xia-0u9skk",
+          "title": "f_xy 与 f_yx 在连续条件下相等",
+          "bodyMarkdown": "f_xy 与 f_yx 在连续条件下相等"
         },
         {
-          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
-          "title": "全微分是所有一阶变化的线性合成",
-          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+          "id": "ci-xu-ke-huan-tiao-jian-dan-de-ci-xu-1q8n7r",
+          "title": "次序可换 ⇒ 挑简单的次序算",
+          "bodyMarkdown": "次序可换 ⇒ 挑简单的次序算"
         },
         {
-          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
-          "title": "可微 ⇒ 连续",
-          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+          "id": "bu-lian-xu-shi-er-zhe-ke-yi-bu-xiang-1ko0tv",
+          "title": "不连续时二者可以不相等",
+          "bodyMarkdown": "不连续时二者可以不相等"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "id": "z-x-ln-xy-liang-ge-hun-1vxqxw",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+          "bodyMarkdown": "z=x ln(xy)：两个混合偏导都等于 1/y——先 x 后 y 更好算。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+      "bodyMarkdown": "混合偏导 f_xy 与 f_yx 一般是先 x 后 y 与先 y 后 x 两种次序；当它们在区域内连续时二者必相等，求导次序可以自由选择，挑好算的先来。\n\n### 解题步骤\n\n1. 算出 f_xy 与 f_yx\n2. 若含连续初等函数直接相等\n3. 挑更简单的次序省计算\n\n### 易错点\n\n拿一两个具体函数的相等当成无条件成立——相等需要连续性条件。"
     },
     {
       "schemaVersion": "1.0",
@@ -627,47 +627,47 @@
       "sectionId": "m1-p1-c5-s3",
       "sectionTitle": "偏导数",
       "title": "偏导数几何意义",
-      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "summary": "f_x(x₀,y₀) 是曲面与平面 y=y₀ 的交线在 x₀ 处的切线对 x 轴的斜率；f_y 同理对应 x=x₀ 的截线——偏导是「沿着坐标方向看曲面」的坡度。",
       "tags": [
-        "局部线性化"
+        "截线的斜率"
       ],
       "sortOrder": 130,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
-        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+        "content": "f_x(x₀,y₀)=tan α（截线切线的倾角）",
+        "caption": "f_x(x₀,y₀) 是曲面与平面 y=y₀ 的交线在 x₀ 处的切线对 x 轴的斜率；"
       },
       "keyPoints": [
         {
-          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
-          "title": "偏导是坐标方向的变化率",
-          "bodyMarkdown": "偏导是坐标方向的变化率"
+          "id": "f-x-gu-ding-y-de-jie-xian-zai-x-chu-xie-0auove",
+          "title": "f_x：固定 y₀ 的截线在 x₀ 处斜率",
+          "bodyMarkdown": "f_x：固定 y₀ 的截线在 x₀ 处斜率"
         },
         {
-          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
-          "title": "全微分是所有一阶变化的线性合成",
-          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+          "id": "f-y-gu-ding-x-de-jie-xian-zai-y-chu-xie-0w5pwe",
+          "title": "f_y：固定 x₀ 的截线在 y₀ 处斜率",
+          "bodyMarkdown": "f_y：固定 x₀ 的截线在 y₀ 处斜率"
         },
         {
-          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
-          "title": "可微 ⇒ 连续",
-          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+          "id": "ta-bu-shi-ren-yi-fang-xiang-de-po-du-na-1kiqzb",
+          "title": "它不是「任意方向」的坡度（那是方向导数）",
+          "bodyMarkdown": "它不是「任意方向」的坡度（那是方向导数）"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "id": "z-x-y-zai-1-0-chu-f-x-2-1buqdc",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+          "bodyMarkdown": "z=x²+y² 在 (1,0) 处 f_x=2：沿 x 方向的截线在该点斜率为 2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+      "bodyMarkdown": "f_x(x₀,y₀) 是曲面与平面 y=y₀ 的交线在 x₀ 处的切线对 x 轴的斜率；f_y 同理对应 x=x₀ 的截线——偏导是「沿着坐标方向看曲面」的坡度。\n\n### 解题步骤\n\n1. 固定一个变量得截线\n2. 把截线当平面曲线\n3. 读出切线斜率\n\n### 易错点\n\n把偏导当成沿任意方向的斜率——任意方向要用方向导数。"
     },
     {
       "schemaVersion": "1.0",
@@ -678,47 +678,47 @@
       "sectionId": "m1-p1-c5-s4",
       "sectionTitle": "全微分",
       "title": "可微概念",
-      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "summary": "全增量 Δz 若能写成 AΔx+BΔy+o(ρ)（ρ=√(Δx²+Δy²)），就称 f 在该点可微；可微是「能用线性函数近似增量」的严格表述，比偏导存在强得多。",
       "tags": [
-        "局部线性化"
+        "线性主部 + 高阶无穷小"
       ],
       "sortOrder": 140,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
-        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+        "content": "Δz=AΔx+BΔy+o(ρ)",
+        "caption": "全增量 Δz 若能写成 AΔx+BΔy+o(ρ)（ρ=√(Δx²+Δy²)），就称 f 在该点可微；"
       },
       "keyPoints": [
         {
-          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
-          "title": "偏导是坐标方向的变化率",
-          "bodyMarkdown": "偏导是坐标方向的变化率"
+          "id": "z-a-x-b-y-o-shi-ke-wei-de-ding-yi",
+          "title": "Δz=AΔx+BΔy+o(ρ) 是可微的定义",
+          "bodyMarkdown": "Δz=AΔx+BΔy+o(ρ) 是可微的定义"
         },
         {
-          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
-          "title": "全微分是所有一阶变化的线性合成",
-          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+          "id": "xian-xing-bu-fen-a-x-b-y-jiao-quan-wei-11ytfg",
+          "title": "线性部分 AΔx+BΔy 叫全微分",
+          "bodyMarkdown": "线性部分 AΔx+BΔy 叫全微分"
         },
         {
-          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
-          "title": "可微 ⇒ 连续",
-          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+          "id": "shi-liang-dian-ju-li-o-bi-geng-kuai-qu-1l8m5k",
+          "title": "ρ 是两点距离",
+          "bodyMarkdown": "ρ 是两点距离，o(ρ) 比 ρ 更快趋于 0"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "id": "z-xy-zai-1-1-z-x-y-x-y-16rkvc",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+          "bodyMarkdown": "z=xy 在 (1,1)：Δz=Δx+Δy+ΔxΔy，而 ΔxΔy=o(ρ)，故可微。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+      "bodyMarkdown": "全增量 Δz 若能写成 AΔx+BΔy+o(ρ)（ρ=√(Δx²+Δy²)），就称 f 在该点可微；可微是「能用线性函数近似增量」的严格表述，比偏导存在强得多。\n\n### 解题步骤\n\n1. 写全增量 Δz\n2. 验证能拆出线性主部\n3. 检查余项是 o(ρ)\n\n### 易错点\n\n把「增量近似等于线性部分」的口头说法当定义——必须验证 o(ρ)。"
     },
     {
       "schemaVersion": "1.0",
@@ -729,47 +729,47 @@
       "sectionId": "m1-p1-c5-s4",
       "sectionTitle": "全微分",
       "title": "全微分公式",
-      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "summary": "f 可微时全微分 dz=f_x dx+f_y dy；系数 A、B 恰好是两个偏导，所以「先求偏导、再按公式拼装」就是求全微分的全部工作。",
       "tags": [
-        "局部线性化"
+        "dz=偏导乘微分"
       ],
       "sortOrder": 150,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
-        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+        "content": "dz=f_x(x,y)dx+f_y(x,y)dy",
+        "caption": "f 可微时全微分 dz=f_x dx+f_y dy；系数 A、B 恰好是两个偏导，所以「先求偏导、再按公式拼装」就是求全微分的全部工作。"
       },
       "keyPoints": [
         {
-          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
-          "title": "偏导是坐标方向的变化率",
-          "bodyMarkdown": "偏导是坐标方向的变化率"
+          "id": "dz-f-x-dx-f-y-dy",
+          "title": "dz=f_x dx+f_y dy",
+          "bodyMarkdown": "dz=f_x dx+f_y dy"
         },
         {
-          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
-          "title": "全微分是所有一阶变化的线性合成",
-          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+          "id": "dx-x-dy-y-zi-bian-liang-zeng-liang",
+          "title": "dx=Δx、dy=Δy（自变量增量）",
+          "bodyMarkdown": "dx=Δx、dy=Δy（自变量增量）"
         },
         {
-          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
-          "title": "可微 ⇒ 连续",
-          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+          "id": "ke-wei-shi-gong-shi-cheng-li-de-qian-ti",
+          "title": "可微是公式成立的前提",
+          "bodyMarkdown": "可微是公式成立的前提"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "id": "z-xy-zai-1-2-dz-2dx-dy",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+          "bodyMarkdown": "z=xy 在 (1,2)：dz=2dx+dy。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+      "bodyMarkdown": "f 可微时全微分 dz=f_x dx+f_y dy；系数 A、B 恰好是两个偏导，所以「先求偏导、再按公式拼装」就是求全微分的全部工作。\n\n### 解题步骤\n\n1. 求 f_x、f_y\n2. 代入公式\n3. 代值算全微分数值\n\n### 易错点\n\n函数不可微也硬套公式——公式只在可微点成立。"
     },
     {
       "schemaVersion": "1.0",
@@ -780,47 +780,47 @@
       "sectionId": "m1-p1-c5-s4",
       "sectionTitle": "全微分",
       "title": "偏导存在与可微的关系",
-      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "summary": "可微必推出两个偏导存在，但偏导存在推不出可微（甚至推不出连续）；再加「偏导在该点连续」才足以推出可微——这条链是多元微分学的核心逻辑。",
       "tags": [
-        "局部线性化"
+        "必要不充分"
       ],
       "sortOrder": 160,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
-        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+        "content": "偏导连续 ⇒ 可微 ⇒ 偏导存在、连续",
+        "caption": "可微必推出两个偏导存在，但偏导存在推不出可微（甚至推不出连续）；再加「偏导在该点连续」才足以推出可微——这条链是多元微分学的核心逻辑。"
       },
       "keyPoints": [
         {
-          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
-          "title": "偏导是坐标方向的变化率",
-          "bodyMarkdown": "偏导是坐标方向的变化率"
+          "id": "ke-wei-pian-dao-dou-cun-zai",
+          "title": "可微 ⇒ 偏导都存在",
+          "bodyMarkdown": "可微 ⇒ 偏导都存在"
         },
         {
-          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
-          "title": "全微分是所有一阶变化的线性合成",
-          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+          "id": "pian-dao-cun-zai-ke-wei-ye-lian-xu",
+          "title": "偏导存在 ⇏ 可微、也 ⇏ 连续",
+          "bodyMarkdown": "偏导存在 ⇏ 可微、也 ⇏ 连续"
         },
         {
-          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
-          "title": "可微 ⇒ 连续",
-          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+          "id": "pian-dao-lian-xu-ke-wei-chong-fen-tiao-198c0m",
+          "title": "偏导连续 ⇒ 可微（充分条件）",
+          "bodyMarkdown": "偏导连续 ⇒ 可微（充分条件）"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "id": "f-xy-x-y-yuan-dian-bu-0-1n58xy",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+          "bodyMarkdown": "f=xy/(x²+y²)（原点补 0）在原点两个偏导都存在，但极限不存在故不连续、更不可微。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+      "bodyMarkdown": "可微必推出两个偏导存在，但偏导存在推不出可微（甚至推不出连续）；再加「偏导在该点连续」才足以推出可微——这条链是多元微分学的核心逻辑。\n\n### 解题步骤\n\n1. 记牢单向箭头\n2. 反例记 xy/(x²+y²) 型函数\n3. 判断题按链上位置作答\n\n### 易错点\n\n把「偏导存在」当「可微」——一元的直觉在多元不成立。"
     },
     {
       "schemaVersion": "1.0",
@@ -831,47 +831,47 @@
       "sectionId": "m1-p1-c5-s4",
       "sectionTitle": "全微分",
       "title": "可微与连续的关系",
-      "summary": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。",
+      "summary": "可微的函数必连续：增量能写成线性主部加 o(ρ)，则 Δz→0，连续性立即成立；反向不成立，如 f=√(x²+y²) 在原点连续但不可微。",
       "tags": [
-        "局部线性化"
+        "可微必连续"
       ],
       "sortOrder": 170,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "dz=fₓdx+fᵧdy；Δz=dz+o(√(dx²+dy²))",
-        "caption": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。"
+        "content": "Δz→0 ⇔ 连续；可微 ⇒ Δz=AΔx+BΔy+o(ρ)→0",
+        "caption": "可微的函数必连续：增量能写成线性主部加 o(ρ)，则 Δz→0，连续性立即成立；反向不成立，如 f=√(x²+y²) 在原点连续但不可微。"
       },
       "keyPoints": [
         {
-          "id": "pian-dao-shi-zuo-biao-fang-xiang-de-0kvrsa",
-          "title": "偏导是坐标方向的变化率",
-          "bodyMarkdown": "偏导是坐标方向的变化率"
+          "id": "ke-wei-lian-xu-fan-zhi-bu-ran",
+          "title": "可微 ⇒ 连续（反之不然）",
+          "bodyMarkdown": "可微 ⇒ 连续（反之不然）"
         },
         {
-          "id": "quan-wei-fen-shi-suo-you-yi-jie-bian-0go3p8",
-          "title": "全微分是所有一阶变化的线性合成",
-          "bodyMarkdown": "全微分是所有一阶变化的线性合成"
+          "id": "lian-xu-pian-dao-cun-zai-geng-ke-wei",
+          "title": "连续 ⇏ 偏导存在",
+          "bodyMarkdown": "连续 ⇏ 偏导存在，更 ⇏ 可微"
         },
         {
-          "id": "ke-wei-lian-xu-dan-pian-dao-cun-zai-ke-0oneuy",
-          "title": "可微 ⇒ 连续",
-          "bodyMarkdown": "可微 ⇒ 连续，但偏导存在 ⇏ 可微"
+          "id": "x-y-shi-lian-xu-bu-ke-wei-de-biao-zhun-06zeoj",
+          "title": "√(x²+y²) 是「连续不可微」的标准反例",
+          "bodyMarkdown": "√(x²+y²) 是「连续不可微」的标准反例"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-dian-1-2-de-1b1iek",
+          "id": "f-x-y-zai-0-0-lian-xu-1f05fh",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²y 在点 (1,2) 的全微分为 dz=4dx+dy。"
+          "bodyMarkdown": "f=√(x²+y²) 在 (0,0) 连续，但沿 x 方向增量/Δx=|Δx|/Δx 无极限，不可微。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "偏导数只让一个变量变化，其他变量暂时固定；可微则要求所有方向的总增量都能被同一个线性表达式统一近似。连续偏导是常用的充分条件，但“偏导存在”本身通常不够。\n\n### 解题步骤\n\n1. 分别求偏导\n2. 写出全微分\n3. 检查连续性或余项是否为高阶小量\n\n### 易错点\n\n混合偏导相等通常需要连续性条件，不是任何函数都能直接交换次序。"
+      "bodyMarkdown": "可微的函数必连续：增量能写成线性主部加 o(ρ)，则 Δz→0，连续性立即成立；反向不成立，如 f=√(x²+y²) 在原点连续但不可微。\n\n### 解题步骤\n\n1. 从 Δz=o(ρ) 出发\n2. 令 (Δx,Δy)→0 得 Δz→0\n3. 结论连续；反例单独记\n\n### 易错点\n\n认为「连续必可微」——一元里都不成立，多元更不成立。"
     },
     {
       "schemaVersion": "1.0",
@@ -882,47 +882,47 @@
       "sectionId": "m1-p1-c5-s5",
       "sectionTitle": "多元复合函数求导",
       "title": "链式法则",
-      "summary": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。",
+      "summary": "多元复合求导沿用「沿线相乘、分线相加」：z 对每个中间变量求偏导、中间变量再对自变量求偏导，把所有路径的乘积加起来；树状图是防漏项的工具。",
       "tags": [
-        "链式法则"
+        "分线相加、沿线相乘"
       ],
       "sortOrder": 180,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "d[f(g(x))]/dx=f′(g(x))g′(x)",
-        "caption": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。"
+        "content": "z=f(u,v)，u=u(x,y)，v=v(x,y)：z_x=f_u u_x+f_v v_x",
+        "caption": "多元复合求导沿用「沿线相乘、分线相加」：z 对每个中间变量求偏导、中间变量再对自变量求偏导，把所有路径的乘积加起来；树状图是防漏项的工具。"
       },
       "keyPoints": [
         {
-          "id": "xian-bian-ren-zui-wai-ceng",
-          "title": "先辨认最外层",
-          "bodyMarkdown": "先辨认最外层"
+          "id": "mei-tiao-lu-jing-gong-xian-yi-ge-cheng-10bvyh",
+          "title": "每条路径贡献一个乘积",
+          "bodyMarkdown": "每条路径贡献一个乘积"
         },
         {
-          "id": "mei-yi-ceng-dou-yao-cheng-xia-yi-ceng-092wo7",
-          "title": "每一层都要乘下一层导数",
-          "bodyMarkdown": "每一层都要乘下一层导数"
+          "id": "z-x-f-u-u-x-f-v-v-x-liang-tiao-lu-jing-0whwxo",
+          "title": "z_x=f_u·u_x+f_v·v_x（两条路径",
+          "bodyMarkdown": "z_x=f_u·u_x+f_v·v_x（两条路径两条乘积）"
         },
         {
-          "id": "zui-hou-zai-an-xu-yao-zhan-kai",
-          "title": "最后再按需要展开",
-          "bodyMarkdown": "最后再按需要展开"
+          "id": "xian-hua-shu-zhuang-tu-zai-dong-bi-fang-1e1iuy",
+          "title": "先画树状图再动笔",
+          "bodyMarkdown": "先画树状图再动笔，防漏乘"
         }
       ],
       "examples": [
         {
-          "id": "y-sin-x-1-shi-y-cos-x-1-1553wz",
+          "id": "z-u-v-u-x-y-v-xy-z-x-2u-1ikpc9",
           "title": "讲解例子",
-          "bodyMarkdown": "y=sin(x²+1) 时，y′=cos(x²+1)·2x。"
+          "bodyMarkdown": "z=u²v，u=x+y，v=xy：z_x=2u·1+v·y=2(x+y)+xy²。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。外层导数先保留内层整体，再乘以内层导数；多层复合就继续沿路径相乘。\n\n### 解题步骤\n\n1. 标出内外层\n2. 由外向内求导\n3. 乘上所有中间导数\n\n### 易错点\n\n只求外层导数不乘内层导数，是链式法则最典型的漏项。"
+      "bodyMarkdown": "多元复合求导沿用「沿线相乘、分线相加」：z 对每个中间变量求偏导、中间变量再对自变量求偏导，把所有路径的乘积加起来；树状图是防漏项的工具。\n\n### 解题步骤\n\n1. 画变量关系树\n2. 逐路径写「上乘下」\n3. 各路径乘积相加\n\n### 易错点\n\n复合后仍把 f_u 写成 z 的函数记号混乱——先给中间层偏导起名再代入。"
     },
     {
       "schemaVersion": "1.0",
@@ -933,47 +933,47 @@
       "sectionId": "m1-p1-c5-s5",
       "sectionTitle": "多元复合函数求导",
       "title": "多中间变量",
-      "summary": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。",
+      "summary": "当中间变量都只依赖同一个自变量 t（如 z=f(u(t),v(t))），复合后 z=f(u(t),v(t)) 是 t 的一元函数，对 t 的导数叫全导数：dz/dt=f_u u′+f_v v′。",
       "tags": [
-        "链式法则"
+        "全导数"
       ],
       "sortOrder": 190,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "d[f(g(x))]/dx=f′(g(x))g′(x)",
-        "caption": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。"
+        "content": "dz/dt=f_u·u′(t)+f_v·v′(t)",
+        "caption": "当中间变量都只依赖同一个自变量 t（如 z=f(u(t),v(t))），复合后 z=f(u(t),v(t)) 是 t 的"
       },
       "keyPoints": [
         {
-          "id": "xian-bian-ren-zui-wai-ceng",
-          "title": "先辨认最外层",
-          "bodyMarkdown": "先辨认最外层"
+          "id": "quan-bu-zhong-jian-bian-liang-gua-zai-05p4j2",
+          "title": "全部中间变量挂在同一个 t 上",
+          "bodyMarkdown": "全部中间变量挂在同一个 t 上"
         },
         {
-          "id": "mei-yi-ceng-dou-yao-cheng-xia-yi-ceng-092wo7",
-          "title": "每一层都要乘下一层导数",
-          "bodyMarkdown": "每一层都要乘下一层导数"
+          "id": "dz-dt-f-u-u-t-f-v-v-t",
+          "title": "dz/dt=f_u·u′(t)+f_v·v′(t",
+          "bodyMarkdown": "dz/dt=f_u·u′(t)+f_v·v′(t)"
         },
         {
-          "id": "zui-hou-zai-an-xu-yao-zhan-kai",
-          "title": "最后再按需要展开",
-          "bodyMarkdown": "最后再按需要展开"
+          "id": "jie-guo-shi-pu-tong-yi-yuan-dao-shu-bu-1ir5yq",
+          "title": "结果是普通一元导数",
+          "bodyMarkdown": "结果是普通一元导数，不是偏导"
         }
       ],
       "examples": [
         {
-          "id": "y-sin-x-1-shi-y-cos-x-1-1553wz",
+          "id": "z-uv-u-e-v-sin-t-dz-dt-011vih",
           "title": "讲解例子",
-          "bodyMarkdown": "y=sin(x²+1) 时，y′=cos(x²+1)·2x。"
+          "bodyMarkdown": "z=uv，u=eᵗ，v=sin t：dz/dt=eᵗ sin t+eᵗ cos t。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。外层导数先保留内层整体，再乘以内层导数；多层复合就继续沿路径相乘。\n\n### 解题步骤\n\n1. 标出内外层\n2. 由外向内求导\n3. 乘上所有中间导数\n\n### 易错点\n\n只求外层导数不乘内层导数，是链式法则最典型的漏项。"
+      "bodyMarkdown": "当中间变量都只依赖同一个自变量 t（如 z=f(u(t),v(t))），复合后 z=f(u(t),v(t)) 是 t 的一元函数，对 t 的导数叫全导数：dz/dt=f_u u′+f_v v′。\n\n### 解题步骤\n\n1. 确认中间变量都只含 t\n2. 逐条路径求导相加\n3. 代入中间变量化简\n\n### 易错点\n\n把全导数写成偏导记号 ∂z/∂t——单自变量时就是普通导数 dz/dt。"
     },
     {
       "schemaVersion": "1.0",
@@ -984,47 +984,47 @@
       "sectionId": "m1-p1-c5-s5",
       "sectionTitle": "多元复合函数求导",
       "title": "树状关系",
-      "summary": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。",
+      "summary": "复合关系复杂时先画树状图：根是因变量，枝是中间变量，叶是自变量；从根到叶每条路径对应一个乘积因子，所有路径相加——图不对，导数必错。",
       "tags": [
-        "链式法则"
+        "先画图再求导"
       ],
       "sortOrder": 200,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "d[f(g(x))]/dx=f′(g(x))g′(x)",
-        "caption": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。"
+        "content": "路径数 = 乘积项数",
+        "caption": "复合关系复杂时先画树状图：根是因变量，枝是中间变量，叶是自变量；从根到叶每条路径对应一个乘积因子，所有路径相加——图不对，导数必错。"
       },
       "keyPoints": [
         {
-          "id": "xian-bian-ren-zui-wai-ceng",
-          "title": "先辨认最外层",
-          "bodyMarkdown": "先辨认最外层"
+          "id": "shu-de-ceng-shu-fu-he-de-ceng-shu",
+          "title": "树的层数 = 复合的层数",
+          "bodyMarkdown": "树的层数 = 复合的层数"
         },
         {
-          "id": "mei-yi-ceng-dou-yao-cheng-xia-yi-ceng-092wo7",
-          "title": "每一层都要乘下一层导数",
-          "bodyMarkdown": "每一层都要乘下一层导数"
+          "id": "yi-tiao-lu-jing-yi-ge-cheng-ji-xiang",
+          "title": "一条路径 = 一个乘积项",
+          "bodyMarkdown": "一条路径 = 一个乘积项"
         },
         {
-          "id": "zui-hou-zai-an-xu-yao-zhan-kai",
-          "title": "最后再按需要展开",
-          "bodyMarkdown": "最后再按需要展开"
+          "id": "zi-bian-liang-you-ji-ge-jie-guo-jiu-you-09gzw8",
+          "title": "自变量有几个",
+          "bodyMarkdown": "自变量有几个，结果就有几组偏导"
         }
       ],
       "examples": [
         {
-          "id": "y-sin-x-1-shi-y-cos-x-1-1553wz",
+          "id": "z-f-u-x-u-xy-shu-gei-071ur9",
           "title": "讲解例子",
-          "bodyMarkdown": "y=sin(x²+1) 时，y′=cos(x²+1)·2x。"
+          "bodyMarkdown": "z=f(u,x)，u=xy：树给出 z_x=f_u·y+f_x（两条路径）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。外层导数先保留内层整体，再乘以内层导数；多层复合就继续沿路径相乘。\n\n### 解题步骤\n\n1. 标出内外层\n2. 由外向内求导\n3. 乘上所有中间导数\n\n### 易错点\n\n只求外层导数不乘内层导数，是链式法则最典型的漏项。"
+      "bodyMarkdown": "复合关系复杂时先画树状图：根是因变量，枝是中间变量，叶是自变量；从根到叶每条路径对应一个乘积因子，所有路径相加——图不对，导数必错。\n\n### 解题步骤\n\n1. 从因变量向下画枝\n2. 标出每层变量\n3. 按路径逐条求导相加\n\n### 易错点\n\n中间变量与自变量同名（如 f(u,x)、u=x²y）时漏掉「同路径」的 f_x 项。"
     },
     {
       "schemaVersion": "1.0",
@@ -1035,47 +1035,47 @@
       "sectionId": "m1-p1-c5-s6",
       "sectionTitle": "隐函数求导",
       "title": "一个方程确定一个隐函数",
-      "summary": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。",
+      "summary": "方程 F(x,y,z)=0 在某点附近确定隐函数 z=z(x,y) 时，对 x 求导（z 视为 x 的函数）得 z_x=−F_x/F_z；公式来自「移项后解出」，分母是 z 的偏导。",
       "tags": [
-        "方程约束下求变化"
+        "F=0 解出函数"
       ],
       "sortOrder": 210,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Fₓ+Fᵧy′=0；y′=−Fₓ/Fᵧ（Fᵧ≠0）",
-        "caption": "隐函数由方程约束而不是显式公式给出。"
+        "content": "z_x=−F_x/F_z",
+        "caption": "方程 F(x,y,z)=0 在某点附近确定隐函数 z=z(x,y) 时，对 x 求导（z 视为 x 的函数）得 z_x="
       },
       "keyPoints": [
         {
-          "id": "yi-yuan-yin-han-shu-qiu-dao-yao-ba-y-1u40t8",
-          "title": "一元隐函数求导要把 y 当成 y(x)",
-          "bodyMarkdown": "一元隐函数求导要把 y 当成 y(x)"
+          "id": "z-x-f-x-f-z-z-y-f-y-f-z",
+          "title": "z_x=−F_x/F_z",
+          "bodyMarkdown": "z_x=−F_x/F_z，z_y=−F_y/F_z"
         },
         {
-          "id": "duo-yuan-yin-han-shu-yao-jian-cha-ya-ke-13r7bo",
-          "title": "多元隐函数要检查雅可比条件",
-          "bodyMarkdown": "多元隐函数要检查雅可比条件"
+          "id": "tui-dao-f-x-y-z-x-y-0-liang-bian-qiu-14ag84",
+          "title": "推导：F(x,y,z(x,y))≡0 两边求偏导",
+          "bodyMarkdown": "推导：F(x,y,z(x,y))≡0 两边求偏导"
         },
         {
-          "id": "jie-guo-bao-liu-y-huo-qi-ta-bian-liang-0udoyb",
-          "title": "结果保留 y 或其他变量是正常的",
-          "bodyMarkdown": "结果保留 y 或其他变量是正常的"
+          "id": "gong-shi-zhi-zai-f-z-0-de-dian-ke-yong",
+          "title": "公式只在 F_z≠0 的点可用",
+          "bodyMarkdown": "公式只在 F_z≠0 的点可用"
         }
       ],
       "examples": [
         {
-          "id": "x-y-1-gei-chu-y-x-y-zai-08jt6k",
+          "id": "x-y-z-1-z-x-x-z-zai-z-0-0fwbbn",
           "title": "讲解例子",
-          "bodyMarkdown": "x²+y²=1 给出 y′=−x/y；在上半圆上 y>0。"
+          "bodyMarkdown": "x²+y²+z²=1：z_x=−x/z，在 z≠0 处成立。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。\n\n### 解题步骤\n\n1. 写出约束方程\n2. 对所有项求全导数\n3. 整理目标导数并代入点\n\n### 易错点\n\n忘记含 y 的项要乘 y′，或在 Fᵧ=0 处强行套公式。"
+      "bodyMarkdown": "方程 F(x,y,z)=0 在某点附近确定隐函数 z=z(x,y) 时，对 x 求导（z 视为 x 的函数）得 z_x=−F_x/F_z；公式来自「移项后解出」，分母是 z 的偏导。\n\n### 解题步骤\n\n1. 确认方程能定隐函数（F_z≠0）\n2. 套公式或直接两边求导\n3. 代入点的坐标\n\n### 易错点\n\n求 z_x 时忘把 z 看成 x 的函数（漏链式法则里的 z_x 因子）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1086,47 +1086,47 @@
       "sectionId": "m1-p1-c5-s6",
       "sectionTitle": "隐函数求导",
       "title": "方程组确定多个隐函数",
-      "summary": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。",
+      "summary": "方程组 F(x,y,u,v)=0、G(x,y,u,v)=0 在条件下确定 u、v 是 x、y 的隐函数；对 x 求导得到含 u_x、v_x 的线性方程组，用雅可比行列式（克莱姆法则）解出。",
       "tags": [
-        "方程约束下求变化"
+        "两个方程两个隐函数"
       ],
       "sortOrder": 220,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Fₓ+Fᵧy′=0；y′=−Fₓ/Fᵧ（Fᵧ≠0）",
-        "caption": "隐函数由方程约束而不是显式公式给出。"
+        "content": "J=|F_u F_v; G_u G_v|≠0",
+        "caption": "方程组 F(x,y,u,v)=0、G(x,y,u,v)=0 在条件下确定 u、v 是 x、y 的隐函数；"
       },
       "keyPoints": [
         {
-          "id": "yi-yuan-yin-han-shu-qiu-dao-yao-ba-y-1u40t8",
-          "title": "一元隐函数求导要把 y 当成 y(x)",
-          "bodyMarkdown": "一元隐函数求导要把 y 当成 y(x)"
+          "id": "ji-ge-fang-cheng-que-ding-ji-ge-yin-han-0rhjfg",
+          "title": "几个方程确定几个隐函数",
+          "bodyMarkdown": "几个方程确定几个隐函数"
         },
         {
-          "id": "duo-yuan-yin-han-shu-yao-jian-cha-ya-ke-13r7bo",
-          "title": "多元隐函数要检查雅可比条件",
-          "bodyMarkdown": "多元隐函数要检查雅可比条件"
+          "id": "dui-x-huo-y-qiu-dao-hou-jie-er-yuan-0lvvae",
+          "title": "对 x（或 y）求导后解二元线性方程组",
+          "bodyMarkdown": "对 x（或 y）求导后解二元线性方程组"
         },
         {
-          "id": "jie-guo-bao-liu-y-huo-qi-ta-bian-liang-0udoyb",
-          "title": "结果保留 y 或其他变量是正常的",
-          "bodyMarkdown": "结果保留 y 或其他变量是正常的"
+          "id": "xi-shu-xing-lie-shi-j-f-g-u-v-0-bao-0rz125",
+          "title": "系数行列式 J=∂(F",
+          "bodyMarkdown": "系数行列式 J=∂(F,G)/∂(u,v)≠0 保证可解"
         }
       ],
       "examples": [
         {
-          "id": "x-y-1-gei-chu-y-x-y-zai-08jt6k",
+          "id": "f-u-v-x-g-uv-y-dui-x-1blzf8",
           "title": "讲解例子",
-          "bodyMarkdown": "x²+y²=1 给出 y′=−x/y；在上半圆上 y>0。"
+          "bodyMarkdown": "F=u+v−x、G=uv−y：对 x 求导解线性方程组得 u_x=u/(u−v)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。\n\n### 解题步骤\n\n1. 写出约束方程\n2. 对所有项求全导数\n3. 整理目标导数并代入点\n\n### 易错点\n\n忘记含 y 的项要乘 y′，或在 Fᵧ=0 处强行套公式。"
+      "bodyMarkdown": "方程组 F(x,y,u,v)=0、G(x,y,u,v)=0 在条件下确定 u、v 是 x、y 的隐函数；对 x 求导得到含 u_x、v_x 的线性方程组，用雅可比行列式（克莱姆法则）解出。\n\n### 解题步骤\n\n1. 方程组两边对 x 求导\n2. 整理成 u_x、v_x 的线性方程组\n3. 用行列式解出\n\n### 易错点\n\n只对「含目标变量的方程」求导——方程组每一条都要同时求导。"
     },
     {
       "schemaVersion": "1.0",
@@ -1137,47 +1137,47 @@
       "sectionId": "m1-p1-c5-s6",
       "sectionTitle": "隐函数求导",
       "title": "隐函数存在条件的理解",
-      "summary": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。",
+      "summary": "F 在点 P₀ 满足偏导连续且 F_z(P₀)≠0 时，方程 F=0 在 P₀ 附近唯一确定连续可微的隐函数 z(x,y)——「F_z≠0」保证能对 z 解出来，这是局部存在性定理。",
       "tags": [
-        "方程约束下求变化"
+        "偏导不为零是保证"
       ],
       "sortOrder": 230,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Fₓ+Fᵧy′=0；y′=−Fₓ/Fᵧ（Fᵧ≠0）",
-        "caption": "隐函数由方程约束而不是显式公式给出。"
+        "content": "F_z(P₀)≠0 ⇒ 存在邻域内唯一 z(x,y)",
+        "caption": "F 在点 P₀ 满足偏导连续且 F_z(P₀)≠0 时，方程 F=0 在 P₀ 附近唯一确定连续可微的隐函数 z(x,y"
       },
       "keyPoints": [
         {
-          "id": "yi-yuan-yin-han-shu-qiu-dao-yao-ba-y-1u40t8",
-          "title": "一元隐函数求导要把 y 当成 y(x)",
-          "bodyMarkdown": "一元隐函数求导要把 y 当成 y(x)"
+          "id": "f-z-p-0-shi-ju-bu-cun-zai-wei-yi-de-0pqdv8",
+          "title": "F_z(P₀)≠0 是局部存在唯一的关键",
+          "bodyMarkdown": "F_z(P₀)≠0 是局部存在唯一的关键"
         },
         {
-          "id": "duo-yuan-yin-han-shu-yao-jian-cha-ya-ke-13r7bo",
-          "title": "多元隐函数要检查雅可比条件",
-          "bodyMarkdown": "多元隐函数要检查雅可比条件"
+          "id": "jie-lun-shi-ju-bu-de-zhi-zai-p-fu-jin-1ccrc8",
+          "title": "结论是局部的",
+          "bodyMarkdown": "结论是局部的：只在 P₀ 附近成立"
         },
         {
-          "id": "jie-guo-bao-liu-y-huo-qi-ta-bian-liang-0udoyb",
-          "title": "结果保留 y 或其他变量是正常的",
-          "bodyMarkdown": "结果保留 y 或其他变量是正常的"
+          "id": "shun-dai-gei-chu-yin-han-shu-lian-xu-ke-000e11",
+          "title": "顺带给出隐函数连续可微（可求偏导）",
+          "bodyMarkdown": "顺带给出隐函数连续可微（可求偏导）"
         }
       ],
       "examples": [
         {
-          "id": "x-y-1-gei-chu-y-x-y-zai-08jt6k",
+          "id": "x-y-z-1-zai-0-0-1-f-z-0vx0zk",
           "title": "讲解例子",
-          "bodyMarkdown": "x²+y²=1 给出 y′=−x/y；在上半圆上 y>0。"
+          "bodyMarkdown": "x²+y²+z²=1 在 (0,0,1)：F_z=2z=2≠0，附近可解出 z=√(1−x²−y²)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。\n\n### 解题步骤\n\n1. 写出约束方程\n2. 对所有项求全导数\n3. 整理目标导数并代入点\n\n### 易错点\n\n忘记含 y 的项要乘 y′，或在 Fᵧ=0 处强行套公式。"
+      "bodyMarkdown": "F 在点 P₀ 满足偏导连续且 F_z(P₀)≠0 时，方程 F=0 在 P₀ 附近唯一确定连续可微的隐函数 z(x,y)——「F_z≠0」保证能对 z 解出来，这是局部存在性定理。\n\n### 解题步骤\n\n1. 找点 P₀ 并验证方程成立\n2. 算 F_z(P₀) 是否非零\n3. 下结论：局部存在唯一\n\n### 易错点\n\n在 F_z=0 的点（如球的赤道）硬解 z——那里上下两叶交接，无法唯一确定。"
     },
     {
       "schemaVersion": "1.0",
@@ -1188,47 +1188,47 @@
       "sectionId": "m1-p1-c5-s7",
       "sectionTitle": "方向导数与梯度",
       "title": "方向导数定义",
-      "summary": "方向导数测量函数沿指定单位方向的变化率。所有方向导数组成一个余弦关系，最大值出现在梯度方向；梯度同时垂直于等值线或等值面。",
+      "summary": "方向导数是函数沿单位方向 e 的变化率 ∂f/∂e=lim_{t→0⁺}[f(P₀+te)−f(P₀)]/t；可微时它等于梯度与单位方向的点积 ∇f·e，把「任意方向的坡度」数量化。",
       "tags": [
-        "最陡上升方向"
+        "沿指定方向的变化率"
       ],
       "sortOrder": 240,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Dᵤf=∇f·u；max Dᵤf=|∇f|",
-        "caption": "方向导数测量函数沿指定单位方向的变化率。"
+        "content": "∂f/∂e=∇f·e=f_x cos α+f_y cos β",
+        "caption": "方向导数是函数沿单位方向 e 的变化率 ∂f/∂e=lim_{t→0⁺}[f(P₀+te)−f(P₀)]/t；"
       },
       "keyPoints": [
         {
-          "id": "fang-xiang-xiang-liang-bi-xu-dan-wei-hua",
-          "title": "方向向量必须单位化",
-          "bodyMarkdown": "方向向量必须单位化"
+          "id": "ding-yi-yan-fang-xiang-e-jie-xian-de-18k9s1",
+          "title": "定义：沿方向 e 截线的差商极限",
+          "bodyMarkdown": "定义：沿方向 e 截线的差商极限"
         },
         {
-          "id": "f-zhi-xiang-zeng-zhang-zui-kuai-fang-1uf9vk",
-          "title": "∇f 指向增长最快方向",
-          "bodyMarkdown": "∇f 指向增长最快方向"
+          "id": "ke-wei-shi-f-e-f-e-dian-ji",
+          "title": "可微时 ∂f/∂e=∇f·e（点积）",
+          "bodyMarkdown": "可微时 ∂f/∂e=∇f·e（点积）"
         },
         {
-          "id": "zui-da-fang-xiang-dao-shu-deng-yu-f",
-          "title": "最大方向导数等于 |∇f|",
-          "bodyMarkdown": "最大方向导数等于 |∇f|"
+          "id": "pian-dao-shi-yan-zuo-biao-zhou-fang-16qxei",
+          "title": "偏导是沿坐标轴方向的方向导数",
+          "bodyMarkdown": "偏导是沿坐标轴方向的方向导数"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-1-2-de-ti-du-07in5f",
+          "id": "f-x-y-zai-1-1-yan-e-1-2-0dqpct",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²+y² 在 (1,2) 的梯度为 (2,4)，增长最快方向是 (1,2) 方向。"
+          "bodyMarkdown": "f=x²+y² 在 (1,1) 沿 e=(1/√2,1/√2)：∇f=(2,2)，方向导数=4/√2=2√2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "方向导数测量函数沿指定单位方向的变化率。所有方向导数组成一个余弦关系，最大值出现在梯度方向；梯度同时垂直于等值线或等值面。\n\n### 解题步骤\n\n1. 求梯度\n2. 把方向向量单位化\n3. 计算点积并解释正负\n\n### 易错点\n\n直接拿未单位化方向向量做点积，会把方向长度也算进结果。"
+      "bodyMarkdown": "方向导数是函数沿单位方向 e 的变化率 ∂f/∂e=lim_{t→0⁺}[f(P₀+te)−f(P₀)]/t；可微时它等于梯度与单位方向的点积 ∇f·e，把「任意方向的坡度」数量化。\n\n### 解题步骤\n\n1. 把方向单位化\n2. 按定义或点积公式\n3. 代点计算数值\n\n### 易错点\n\n方向向量没单位化就点积——长度不为 1 时数值不等于方向导数。"
     },
     {
       "schemaVersion": "1.0",
@@ -1239,47 +1239,47 @@
       "sectionId": "m1-p1-c5-s7",
       "sectionTitle": "方向导数与梯度",
       "title": "单位方向向量",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "方向只用「朝向」描述，因此要除以自身长度得单位向量 e=(cos α, cos β)；方向导数公式里的 cos α、cos β 就是单位向量的分量，这一步漏了数值必错。",
       "tags": [
-        "用坐标描述方向"
+        "长度必须为 1"
       ],
       "sortOrder": 250,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "e=(cos α, cos β)=l/|l|",
+        "caption": "方向只用「朝向」描述，因此要除以自身长度得单位向量 e=(cos α, cos β)；"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "e-fang-xiang-xiang-liang-fang-xiang-0mx116",
+          "title": "e=方向向量/|方向向量|",
+          "bodyMarkdown": "e=方向向量/|方向向量|"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "e-de-fen-liang-ping-fang-he-wei-1",
+          "title": "e² 的分量平方和为 1",
+          "bodyMarkdown": "e² 的分量平方和为 1"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "xiang-fan-fang-xiang-de-fang-xiang-dao-0jf7z6",
+          "title": "相反方向的方向导数互为相反数",
+          "bodyMarkdown": "相反方向的方向导数互为相反数"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "fang-xiang-3-4-dan-wei-1hpc1t",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "方向 (3,4) 单位化 e=(3/5,4/5)，方向导数 ∂f/∂e=3f_x/5+4f_y/5。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "方向只用「朝向」描述，因此要除以自身长度得单位向量 e=(cos α, cos β)；方向导数公式里的 cos α、cos β 就是单位向量的分量，这一步漏了数值必错。\n\n### 解题步骤\n\n1. 写出方向向量 l\n2. 算长度 |l|\n3. 除以长度得 e 并代公式\n\n### 易错点\n\n把 (1,1) 直接当单位方向——长度是 √2，结果会大 √2 倍。"
     },
     {
       "schemaVersion": "1.0",
@@ -1290,47 +1290,47 @@
       "sectionId": "m1-p1-c5-s7",
       "sectionTitle": "方向导数与梯度",
       "title": "梯度",
-      "summary": "方向导数测量函数沿指定单位方向的变化率。所有方向导数组成一个余弦关系，最大值出现在梯度方向；梯度同时垂直于等值线或等值面。",
+      "summary": "梯度 grad f=∇f=(f_x, f_y) 是把各偏导排成的向量；它是个「向量场」，每一点的梯度指向该点函数上升最快的方向，长度就是最大变化率。",
       "tags": [
-        "最陡上升方向"
+        "偏导排成的向量"
       ],
       "sortOrder": 260,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Dᵤf=∇f·u；max Dᵤf=|∇f|",
-        "caption": "方向导数测量函数沿指定单位方向的变化率。"
+        "content": "grad f=∇f=(f_x, f_y)",
+        "caption": "梯度 grad f=∇f=(f_x, f_y) 是把各偏导排成的向量；它是个「向量场」，每一点的梯度指向该点函数上升最快的方向，长度就是最大变化率。"
       },
       "keyPoints": [
         {
-          "id": "fang-xiang-xiang-liang-bi-xu-dan-wei-hua",
-          "title": "方向向量必须单位化",
-          "bodyMarkdown": "方向向量必须单位化"
+          "id": "f-f-x-f-y-er-yuan-shi-liang-ge-fen-liang",
+          "title": "∇f=(f_x",
+          "bodyMarkdown": "∇f=(f_x, f_y)（二元时两个分量）"
         },
         {
-          "id": "f-zhi-xiang-zeng-zhang-zui-kuai-fang-1uf9vk",
-          "title": "∇f 指向增长最快方向",
-          "bodyMarkdown": "∇f 指向增长最快方向"
+          "id": "ti-du-shi-xiang-liang-you-fang-xiang-04b1i4",
+          "title": "梯度是向量",
+          "bodyMarkdown": "梯度是向量：有方向有大小"
         },
         {
-          "id": "zui-da-fang-xiang-dao-shu-deng-yu-f",
-          "title": "最大方向导数等于 |∇f|",
-          "bodyMarkdown": "最大方向导数等于 |∇f|"
+          "id": "fang-xiang-dao-shu-f-dian-ji-dan-wei-0bj6b5",
+          "title": "方向导数 = ∇f 点积单位方向",
+          "bodyMarkdown": "方向导数 = ∇f 点积单位方向"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-1-2-de-ti-du-07in5f",
+          "id": "f-x-xy-zai-1-1-f-3-2",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²+y² 在 (1,2) 的梯度为 (2,4)，增长最快方向是 (1,2) 方向。"
+          "bodyMarkdown": "f=x²+xy 在 (1,1)：∇f=(3,2)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "方向导数测量函数沿指定单位方向的变化率。所有方向导数组成一个余弦关系，最大值出现在梯度方向；梯度同时垂直于等值线或等值面。\n\n### 解题步骤\n\n1. 求梯度\n2. 把方向向量单位化\n3. 计算点积并解释正负\n\n### 易错点\n\n直接拿未单位化方向向量做点积，会把方向长度也算进结果。"
+      "bodyMarkdown": "梯度 grad f=∇f=(f_x, f_y) 是把各偏导排成的向量；它是个「向量场」，每一点的梯度指向该点函数上升最快的方向，长度就是最大变化率。\n\n### 解题步骤\n\n1. 求全部偏导\n2. 按自变量顺序排成向量\n3. 代点得具体梯度\n\n### 易错点\n\n把梯度写成数而不是向量——它必须带方向（分量形式）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1341,47 +1341,47 @@
       "sectionId": "m1-p1-c5-s7",
       "sectionTitle": "方向导数与梯度",
       "title": "梯度与等值线法向关系",
-      "summary": "方向导数测量函数沿指定单位方向的变化率。所有方向导数组成一个余弦关系，最大值出现在梯度方向；梯度同时垂直于等值线或等值面。",
+      "summary": "在等值线 f(x,y)=c 上函数值不变，所以沿等值线方向的方向导数为 0，由点积公式得梯度与等值线的切向垂直——梯度就是等值线的法线方向，且指向高值侧。",
       "tags": [
-        "最陡上升方向"
+        "梯度垂直等值线"
       ],
       "sortOrder": 270,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Dᵤf=∇f·u；max Dᵤf=|∇f|",
-        "caption": "方向导数测量函数沿指定单位方向的变化率。"
+        "content": "∇f ∥ 法向量，∇f·τ=0（τ 为等值线切向）",
+        "caption": "在等值线 f(x,y)=c 上函数值不变，所以沿等值线方向的方向导数为 0"
       },
       "keyPoints": [
         {
-          "id": "fang-xiang-xiang-liang-bi-xu-dan-wei-hua",
-          "title": "方向向量必须单位化",
-          "bodyMarkdown": "方向向量必须单位化"
+          "id": "ti-du-deng-zhi-xian-qie-xian-fang-xiang",
+          "title": "梯度 ⊥ 等值线（切线方向）",
+          "bodyMarkdown": "梯度 ⊥ 等值线（切线方向）"
         },
         {
-          "id": "f-zhi-xiang-zeng-zhang-zui-kuai-fang-1uf9vk",
-          "title": "∇f 指向增长最快方向",
-          "bodyMarkdown": "∇f 指向增长最快方向"
+          "id": "ti-du-zhi-xiang-han-shu-zhi-zeng-da-zui-0ihmkw",
+          "title": "梯度指向函数值增大最快的方向",
+          "bodyMarkdown": "梯度指向函数值增大最快的方向"
         },
         {
-          "id": "zui-da-fang-xiang-dao-shu-deng-yu-f",
-          "title": "最大方向导数等于 |∇f|",
-          "bodyMarkdown": "最大方向导数等于 |∇f|"
+          "id": "f-zhi-xiang-xia-jiang-zui-kuai-ti-du-0uhw6t",
+          "title": "−∇f 指向下降最快（梯度下降的依据）",
+          "bodyMarkdown": "−∇f 指向下降最快（梯度下降的依据）"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-1-2-de-ti-du-07in5f",
+          "id": "f-x-y-de-deng-zhi-xian-0ze38l",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²+y² 在 (1,2) 的梯度为 (2,4)，增长最快方向是 (1,2) 方向。"
+          "bodyMarkdown": "f=x²+y² 的等值线是圆，梯度 (2x,2y) 沿半径方向，恰是圆的法向。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "方向导数测量函数沿指定单位方向的变化率。所有方向导数组成一个余弦关系，最大值出现在梯度方向；梯度同时垂直于等值线或等值面。\n\n### 解题步骤\n\n1. 求梯度\n2. 把方向向量单位化\n3. 计算点积并解释正负\n\n### 易错点\n\n直接拿未单位化方向向量做点积，会把方向长度也算进结果。"
+      "bodyMarkdown": "在等值线 f(x,y)=c 上函数值不变，所以沿等值线方向的方向导数为 0，由点积公式得梯度与等值线的切向垂直——梯度就是等值线的法线方向，且指向高值侧。\n\n### 解题步骤\n\n1. 写出等值线方程\n2. 求梯度向量\n3. 验证点积 ∇f·切向量=0\n\n### 易错点\n\n认为梯度沿等值线方向——沿等值线函数值不变，变化率是 0。"
     },
     {
       "schemaVersion": "1.0",
@@ -1392,47 +1392,47 @@
       "sectionId": "m1-p1-c5-s7",
       "sectionTitle": "方向导数与梯度",
       "title": "最大方向导数",
-      "summary": "方向导数测量函数沿指定单位方向的变化率。所有方向导数组成一个余弦关系，最大值出现在梯度方向；梯度同时垂直于等值线或等值面。",
+      "summary": "方向导数 ∂f/∂e=|∇f|cosθ 随方向变化，θ=0（沿梯度方向）时最大，等于 |∇f|；反方向最小，垂直方向为 0——梯度方向就是「最陡上坡」。",
       "tags": [
-        "最陡上升方向"
+        "沿梯度方向取最大"
       ],
       "sortOrder": 280,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Dᵤf=∇f·u；max Dᵤf=|∇f|",
-        "caption": "方向导数测量函数沿指定单位方向的变化率。"
+        "content": "max ∂f/∂e=|∇f|=√(f_x²+f_y²)",
+        "caption": "方向导数 ∂f/∂e=|∇f|cosθ 随方向变化，θ=0（沿梯度方向）时最大，等于 |∇f|；"
       },
       "keyPoints": [
         {
-          "id": "fang-xiang-xiang-liang-bi-xu-dan-wei-hua",
-          "title": "方向向量必须单位化",
-          "bodyMarkdown": "方向向量必须单位化"
+          "id": "zui-da-fang-xiang-dao-shu-f-fang-xiang-1gxtfw",
+          "title": "最大方向导数 = |∇f|",
+          "bodyMarkdown": "最大方向导数 = |∇f|，方向为梯度方向"
         },
         {
-          "id": "f-zhi-xiang-zeng-zhang-zui-kuai-fang-1uf9vk",
-          "title": "∇f 指向增长最快方向",
-          "bodyMarkdown": "∇f 指向增长最快方向"
+          "id": "zui-xiao-zhi-f-yan-fu-ti-du-fang-xiang",
+          "title": "最小值 −|∇f| 沿负梯度方向",
+          "bodyMarkdown": "最小值 −|∇f| 沿负梯度方向"
         },
         {
-          "id": "zui-da-fang-xiang-dao-shu-deng-yu-f",
-          "title": "最大方向导数等于 |∇f|",
-          "bodyMarkdown": "最大方向导数等于 |∇f|"
+          "id": "wei-0-de-fang-xiang-yu-ti-du-chui-zhi",
+          "title": "为 0 的方向与梯度垂直",
+          "bodyMarkdown": "为 0 的方向与梯度垂直"
         }
       ],
       "examples": [
         {
-          "id": "f-x-y-zai-1-2-de-ti-du-07in5f",
+          "id": "f-x-y-zai-1-2-f-2-4-2-5-0digi9",
           "title": "讲解例子",
-          "bodyMarkdown": "f=x²+y² 在 (1,2) 的梯度为 (2,4)，增长最快方向是 (1,2) 方向。"
+          "bodyMarkdown": "f=x²+y² 在 (1,2)：|∇f|=|(2,4)|=2√5，沿 (1,2) 方向最陡。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "方向导数测量函数沿指定单位方向的变化率。所有方向导数组成一个余弦关系，最大值出现在梯度方向；梯度同时垂直于等值线或等值面。\n\n### 解题步骤\n\n1. 求梯度\n2. 把方向向量单位化\n3. 计算点积并解释正负\n\n### 易错点\n\n直接拿未单位化方向向量做点积，会把方向长度也算进结果。"
+      "bodyMarkdown": "方向导数 ∂f/∂e=|∇f|cosθ 随方向变化，θ=0（沿梯度方向）时最大，等于 |∇f|；反方向最小，垂直方向为 0——梯度方向就是「最陡上坡」。\n\n### 解题步骤\n\n1. 求该点梯度\n2. 算模长 |∇f|\n3. 回答「最大值与取得它的方向」\n\n### 易错点\n\n答「最大方向导数是梯度」——最大值是数 |∇f|，梯度是取到它的方向。"
     },
     {
       "schemaVersion": "1.0",
@@ -1443,47 +1443,47 @@
       "sectionId": "m1-p1-c5-s8",
       "sectionTitle": "多元微分几何应用",
       "title": "空间曲线切线与法平面",
-      "summary": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。",
+      "summary": "曲线 Γ: x=x(t), y=y(t), z=z(t) 在 t₀ 处的切向量 T=(x′(t₀), y′(t₀), z′(t₀))；",
       "tags": [
-        "用法向量确定平面"
+        "切向量定一切"
       ],
       "sortOrder": 290,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "n·[(x,y,z)−(x₀,y₀,z₀)]=0",
-        "caption": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。"
+        "format": "latex",
+        "content": "T=(x′,y′,z′)|_{t₀}",
+        "caption": "曲线 Γ: x=x(t), y=y(t), z=z(t) 在 t₀ 处的切向量 T=(x′(t₀), y′(t₀), z"
       },
       "keyPoints": [
         {
-          "id": "yi-ban-shi-ax-by-cz-d-0-de-fa-xiang-09p5nx",
-          "title": "一般式 Ax+By+Cz+D=0 的法向量是 (",
-          "bodyMarkdown": "一般式 Ax+By+Cz+D=0 的法向量是 (A,B,C)"
+          "id": "qie-xiang-liang-can-shu-dao-shu-san-0gfjxr",
+          "title": "切向量 = 参数导数三元组",
+          "bodyMarkdown": "切向量 = 参数导数三元组"
         },
         {
-          "id": "tong-yi-ping-mian-fang-cheng-zheng-ti-1yo0wh",
-          "title": "同一平面方程整体乘非零常数不变",
-          "bodyMarkdown": "同一平面方程整体乘非零常数不变"
+          "id": "qie-xian-dui-chen-shi-x-x-x-y-y-y-z-z-z",
+          "title": "切线：对称式 (x−x₀)/x′=(y−y₀)/",
+          "bodyMarkdown": "切线：对称式 (x−x₀)/x′=(y−y₀)/y′=(z−z₀)/z′"
         },
         {
-          "id": "xie-fang-cheng-bi-xu-tong-shi-you-yi-ge-006zyd",
-          "title": "写方程必须同时有一个平面点和一个法向方向",
-          "bodyMarkdown": "写方程必须同时有一个平面点和一个法向方向"
+          "id": "fa-ping-mian-x-x-x-y-y-y-z-z-z-0",
+          "title": "法平面：x′(x−x₀)+y′(y−y₀)+z′",
+          "bodyMarkdown": "法平面：x′(x−x₀)+y′(y−y₀)+z′(z−z₀)=0"
         }
       ],
       "examples": [
         {
-          "id": "guo-dian-1-0-0-fa-xiang-10tpcm",
+          "id": "luo-xuan-xian-x-cos-t-y-1iddws",
           "title": "讲解例子",
-          "bodyMarkdown": "过点 (1,0,0)、法向量 (2,−1,3) 的平面为 2(x−1)−y+3z=0。"
+          "bodyMarkdown": "螺旋线 x=cos t、y=sin t、z=t 在 t=0：T=(0,1,1)，切线 x=0, (y−0)/1=(z−0)/1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "平面方程的本质是：平面内任意位移向量都与固定法向量垂直。点法式最能体现几何意义，其他形式只是展开或参数化后的不同写法。\n\n### 解题步骤\n\n1. 找平面上的点\n2. 找法向量\n3. 代入点法式并化成题目要求的形式\n\n### 易错点\n\n只有一个点不能确定平面；三个点还要检查是否共线。"
+      "bodyMarkdown": "曲线 Γ: x=x(t), y=y(t), z=z(t) 在 t₀ 处的切向量 T=(x′(t₀), y′(t₀), z′(t₀))；切线过该点以 T 为方向，法平面以 T 为法向量——一个向量管两个方程。\n\n### 解题步骤\n\n1. 求 t₀ 处的坐标与导数\n2. 写出切向量 T\n3. 分别套切线与法平面方程\n\n### 易错点\n\n参数导数在某分量为 0 时，切线对称式要单独处理（不能瞎约分）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1494,47 +1494,47 @@
       "sectionId": "m1-p1-c5-s8",
       "sectionTitle": "多元微分几何应用",
       "title": "曲面切平面与法线",
-      "summary": "空间曲面在一点附近可以用切平面作一阶线性近似。曲面方程 F(x,y,z)=0 的梯度给出法向量；切平面负责贴近曲面，法线则沿梯度方向穿出。",
+      "summary": "曲面 F(x,y,z)=0 在点 P₀ 的法向量 n=(F_x, F_y, F_z)|_{P₀}；切平面以 n 为法向，法线以 n 为方向——先求三偏导，其余都是平面与直线的老套路。",
       "tags": [
-        "切平面与法线"
+        "法向量 = 三偏导"
       ],
       "sortOrder": 300,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Fₓ(P)(x−x₀)+Fᵧ(P)(y−y₀)+F𝓏(P)(z−z₀)=0；r=P+t∇F(P)",
-        "caption": "空间曲面在一点附近可以用切平面作一阶线性近似。"
+        "content": "切平面：F_x(x−x₀)+F_y(y−y₀)+F_z(z−z₀)=0",
+        "caption": "曲面 F(x,y,z)=0 在点 P₀ 的法向量 n=(F_x, F_y, F_z)|_{P₀}；"
       },
       "keyPoints": [
         {
-          "id": "f-p-shi-qie-ping-mian-de-fa-xiang-liang",
-          "title": "∇F(P) 是切平面的法向量",
-          "bodyMarkdown": "∇F(P) 是切平面的法向量"
+          "id": "n-f-x-f-y-f-z-zai-gai-dian-de-zhi",
+          "title": "n=(F_x",
+          "bodyMarkdown": "n=(F_x, F_y, F_z) 在该点的值"
         },
         {
-          "id": "qie-ping-mian-fang-cheng-you-fa-xiang-0anfzh",
-          "title": "切平面方程由法向量和过点条件确定",
-          "bodyMarkdown": "切平面方程由法向量和过点条件确定"
+          "id": "qie-ping-mian-f-x-x-x-f-y-y-y-f-z-z-z-0",
+          "title": "切平面：F_x(x−x₀)+F_y(y−y₀)+",
+          "bodyMarkdown": "切平面：F_x(x−x₀)+F_y(y−y₀)+F_z(z−z₀)=0"
         },
         {
-          "id": "fa-xian-fang-xiang-ke-qu-ti-du-de-can-1734gy",
-          "title": "法线方向可取梯度的参数式",
-          "bodyMarkdown": "法线方向可取梯度的参数式"
+          "id": "xian-shi-qu-mian-z-f-x-y-0-shi-n-f-x-f-1wjprk",
+          "title": "显式曲面 z−f(x",
+          "bodyMarkdown": "显式曲面 z−f(x,y)=0 时 n=(f_x, f_y, −1)"
         }
       ],
       "examples": [
         {
-          "id": "zai-x-y-z-9-de-dian-1-2-0q2fk8",
+          "id": "z-x-y-ji-f-x-y-z-zai-1-0uafd4",
           "title": "讲解例子",
-          "bodyMarkdown": "在 x²+y²+z²=9 的点 (1,2,2) 处，法向量为 (2,4,4)，切平面为 x+2y+2z=9。"
+          "bodyMarkdown": "z=x²+y² 即 F=x²+y²−z：在 (1,1,2) 的 n=(2,2,−1)，切平面 2x+2y−z=2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "空间曲面在一点附近可以用切平面作一阶线性近似。曲面方程 F(x,y,z)=0 的梯度给出法向量；切平面负责贴近曲面，法线则沿梯度方向穿出。\n\n### 解题步骤\n\n1. 把曲面写成 F=0\n2. 求梯度并代入目标点\n3. 写切平面与法线方程并检查点在平面上\n\n### 易错点\n\n梯度必须在目标点取值；把曲面上的法向量误当成切平面内方向。"
+      "bodyMarkdown": "曲面 F(x,y,z)=0 在点 P₀ 的法向量 n=(F_x, F_y, F_z)|_{P₀}；切平面以 n 为法向，法线以 n 为方向——先求三偏导，其余都是平面与直线的老套路。\n\n### 解题步骤\n\n1. 把曲面写成 F=0\n2. 求三偏导得 n\n3. 套平面/直线方程\n\n### 易错点\n\n显式曲面忘了化成 F=z−f(x,y)，法向量分量符号弄反。"
     },
     {
       "schemaVersion": "1.0",
@@ -1545,47 +1545,47 @@
       "sectionId": "m1-p1-c5-s9",
       "sectionTitle": "多元函数极值",
       "title": "无条件极值",
-      "summary": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。",
+      "summary": "极值是比较函数在该点某个邻域内的取值：f(P₀)≥邻域内一切值即极大值；极值是局部概念，最大值是整体概念，二者没有必然包含关系。",
       "tags": [
-        "多元极值判定"
+        "邻域内比大小"
       ],
       "sortOrder": 310,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∇f=λ∇g；H=fₓₓfᵧᵧ−fₓᵧ²",
-        "caption": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。"
+        "content": "∃U(P₀)：f(P)≤f(P₀) 对 P∈U",
+        "caption": "极值是比较函数在该点某个邻域内的取值：f(P₀)≥邻域内一切值即极大值；极值是局部概念，最大值是整体概念，二者没有必然包含关系。"
       },
       "keyPoints": [
         {
-          "id": "zhu-dian-shi-bi-yao-hou-xuan-bu-shi-jie-1btpd1",
-          "title": "驻点是必要候选",
-          "bodyMarkdown": "驻点是必要候选，不是结论"
+          "id": "ji-zhi-kan-lin-yu-zui-zhi-kan-zheng-ge-1bi3sp",
+          "title": "极值看邻域",
+          "bodyMarkdown": "极值看邻域，最值看整个区域"
         },
         {
-          "id": "er-jie-pan-bie-yao-kan-hessian-hang-lie-18oig9",
-          "title": "二阶判别要看 Hessian 行列式和主元",
-          "bodyMarkdown": "二阶判别要看 Hessian 行列式和主元"
+          "id": "ji-da-zhi-ke-neng-xiao-yu-mou-ge-ji-0z8j7n",
+          "title": "极大值可能小于某个极小值（不同邻域）",
+          "bodyMarkdown": "极大值可能小于某个极小值（不同邻域）"
         },
         {
-          "id": "yue-shu-ji-zhi-bi-xu-tong-shi-man-zu-03oa0m",
-          "title": "约束极值必须同时满足约束方程",
-          "bodyMarkdown": "约束极值必须同时满足约束方程"
+          "id": "ji-zhi-dian-zai-ding-yi-yu-nei-bu-cai-1g5puo",
+          "title": "极值点在定义域内部才有意义",
+          "bodyMarkdown": "极值点在定义域内部才有意义"
         }
       ],
       "examples": [
         {
-          "id": "zai-x-y-1-shang-qiu-xy-08461j",
+          "id": "z-x-y-zai-0-0-qu-ji-06y8vs",
           "title": "讲解例子",
-          "bodyMarkdown": "在 x²+y²=1 上求 xy 的极值，可令 ∇(xy)=λ∇(x²+y²)。"
+          "bodyMarkdown": "z=x²+y² 在 (0,0) 取极小值 0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。无约束问题看局部二次型，约束问题把约束曲线上的变化压缩到可行方向，拉格朗日乘数把两者的梯度联系起来。\n\n### 解题步骤\n\n1. 求一阶偏导并解驻点\n2. 计算二阶信息或列拉格朗日方程\n3. 比较候选点和边界值\n\n### 易错点\n\n只求偏导为零而忽略边界/约束，会漏掉真正的最值。"
+      "bodyMarkdown": "极值是比较函数在该点某个邻域内的取值：f(P₀)≥邻域内一切值即极大值；极值是局部概念，最大值是整体概念，二者没有必然包含关系。\n\n### 解题步骤\n\n1. 锁定内部候选点\n2. 比较邻域取值\n3. 区分极大/极小\n\n### 易错点\n\n把边界点算进极值候选——极值只讨论定义域的内点。"
     },
     {
       "schemaVersion": "1.0",
@@ -1596,47 +1596,47 @@
       "sectionId": "m1-p1-c5-s9",
       "sectionTitle": "多元函数极值",
       "title": "必要条件",
-      "summary": "“必要条件”是本模块中的一个具体对象。学习时不要只记名词：先说清研究对象和适用条件，再把定义转成公式或图像，最后用一个最小例子检查自己是否真的会用。",
+      "summary": "可微函数在极值点处两个偏导都必须为 0（驻点）；但驻点未必是极值点——马鞍面 z=xy 在原点驻点却非极值，驻点只是候选。",
       "tags": [
-        "知识拆解"
+        "极值点偏导为零"
       ],
       "sortOrder": 320,
       "estimatedMinutes": 3,
       "anchor": {
-        "type": "concept",
+        "type": "formula",
         "format": "text",
-        "content": "对象是什么",
-        "caption": "“必要条件”是本模块中的一个具体对象。"
+        "content": "f_x(P₀)=0 且 f_y(P₀)=0",
+        "caption": "可微函数在极值点处两个偏导都必须为 0（驻点）；但驻点未必是极值点——马鞍面 z=xy 在原点驻点却非极值，驻点只是候选。"
       },
       "keyPoints": [
         {
-          "id": "dui-xiang-shi-shen-me",
-          "title": "对象是什么",
-          "bodyMarkdown": "对象是什么"
+          "id": "ji-zhi-dian-f-x-f-y-0-ke-wei-shi",
+          "title": "极值点 ⇒ f_x=f_y=0（可微时）",
+          "bodyMarkdown": "极值点 ⇒ f_x=f_y=0（可微时）"
         },
         {
-          "id": "tiao-jian-shen-me-shi-hou-cheng-li",
-          "title": "条件什么时候成立",
-          "bodyMarkdown": "条件什么时候成立"
+          "id": "zhu-dian-ji-zhi-dian",
+          "title": "驻点 ⇏ 极值点",
+          "bodyMarkdown": "驻点 ⇏ 极值点"
         },
         {
-          "id": "jie-lun-ru-he-zai-ti-mu-zhong-luo-di",
-          "title": "结论如何在题目中落地",
-          "bodyMarkdown": "结论如何在题目中落地"
+          "id": "pian-dao-bu-cun-zai-de-dian-ye-ke-neng-08h5e3",
+          "title": "偏导不存在的点也可能是极值点",
+          "bodyMarkdown": "偏导不存在的点也可能是极值点"
         }
       ],
       "examples": [
         {
-          "id": "xian-cong-ben-jie-de-ti-0iyg3h",
+          "id": "z-xy-zhu-dian-0-0-dan-0efdcx",
           "title": "讲解例子",
-          "bodyMarkdown": "先从本节的提纲项中找一个最简单的例子，再把条件逐项代入检查。"
+          "bodyMarkdown": "z=xy：驻点 (0,0)，但 AC−B²=−1<0，不是极值点。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "“必要条件”是本模块中的一个具体对象。学习时不要只记名词：先说清研究对象和适用条件，再把定义转成公式或图像，最后用一个最小例子检查自己是否真的会用。\n\n### 解题步骤\n\n1. 先定义对象\n2. 再整理核心关系\n3. 最后用例题和边界情况验证\n\n### 易错点\n\n只背结论不检查条件，换一个题型就容易失效。"
+      "bodyMarkdown": "可微函数在极值点处两个偏导都必须为 0（驻点）；但驻点未必是极值点——马鞍面 z=xy 在原点驻点却非极值，驻点只是候选。\n\n### 解题步骤\n\n1. 解 f_x=f_y=0 得全部驻点\n2. 逐点用充分条件判别\n3. 别漏不可导点\n\n### 易错点\n\n解出驻点就宣布是极值点——必须再用二阶充分条件判别。"
     },
     {
       "schemaVersion": "1.0",
@@ -1647,47 +1647,47 @@
       "sectionId": "m1-p1-c5-s9",
       "sectionTitle": "多元函数极值",
       "title": "二阶充分条件",
-      "summary": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。",
+      "summary": "记 A=f_xx、B=f_xy、C=f_yy（在驻点处取值）：AC−B²>0 时是极值（A<0 极大、A>0 极小）；AC−B²<0 不是极值；=0 时判别失效，需另想办法。",
       "tags": [
-        "多元极值判定"
+        "AC−B² 判别"
       ],
       "sortOrder": 330,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∇f=λ∇g；H=fₓₓfᵧᵧ−fₓᵧ²",
-        "caption": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。"
+        "content": "Δ=AC−B²",
+        "caption": "记 A=f_xx、B=f_xy、C=f_yy（在驻点处取值）：AC−B²>0 时是极值（A<0 极大、A>0 极小）；"
       },
       "keyPoints": [
         {
-          "id": "zhu-dian-shi-bi-yao-hou-xuan-bu-shi-jie-1btpd1",
-          "title": "驻点是必要候选",
-          "bodyMarkdown": "驻点是必要候选，不是结论"
+          "id": "ac-b-0-qie-a-0-ji-xiao",
+          "title": "AC−B²>0 且 A>0 ⇒ 极小",
+          "bodyMarkdown": "AC−B²>0 且 A>0 ⇒ 极小"
         },
         {
-          "id": "er-jie-pan-bie-yao-kan-hessian-hang-lie-18oig9",
-          "title": "二阶判别要看 Hessian 行列式和主元",
-          "bodyMarkdown": "二阶判别要看 Hessian 行列式和主元"
+          "id": "ac-b-0-qie-a-0-ji-da",
+          "title": "AC−B²>0 且 A<0 ⇒ 极大",
+          "bodyMarkdown": "AC−B²>0 且 A<0 ⇒ 极大"
         },
         {
-          "id": "yue-shu-ji-zhi-bi-xu-tong-shi-man-zu-03oa0m",
-          "title": "约束极值必须同时满足约束方程",
-          "bodyMarkdown": "约束极值必须同时满足约束方程"
+          "id": "ac-b-0-fei-ji-zhi-0-shi-xiao",
+          "title": "AC−B²<0 非极值",
+          "bodyMarkdown": "AC−B²<0 非极值；=0 失效"
         }
       ],
       "examples": [
         {
-          "id": "zai-x-y-1-shang-qiu-xy-08461j",
+          "id": "z-x-y-a-2-b-0-c-2-ac-b-0gwgz2",
           "title": "讲解例子",
-          "bodyMarkdown": "在 x²+y²=1 上求 xy 的极值，可令 ∇(xy)=λ∇(x²+y²)。"
+          "bodyMarkdown": "z=x²+y²：A=2、B=0、C=2，AC−B²=4>0 且 A>0，(0,0) 是极小值点。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。无约束问题看局部二次型，约束问题把约束曲线上的变化压缩到可行方向，拉格朗日乘数把两者的梯度联系起来。\n\n### 解题步骤\n\n1. 求一阶偏导并解驻点\n2. 计算二阶信息或列拉格朗日方程\n3. 比较候选点和边界值\n\n### 易错点\n\n只求偏导为零而忽略边界/约束，会漏掉真正的最值。"
+      "bodyMarkdown": "记 A=f_xx、B=f_xy、C=f_yy（在驻点处取值）：AC−B²>0 时是极值（A<0 极大、A>0 极小）；AC−B²<0 不是极值；=0 时判别失效，需另想办法。\n\n### 解题步骤\n\n1. 求 A、B、C\n2. 算 AC−B²\n3. 分情况下结论\n\n### 易错点\n\nAC−B²=0 时硬套结论——失效情形要回到定义直接比较。"
     },
     {
       "schemaVersion": "1.0",
@@ -1698,47 +1698,47 @@
       "sectionId": "m1-p1-c5-s9",
       "sectionTitle": "多元函数极值",
       "title": "最大值最小值",
-      "summary": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。",
+      "summary": "有界闭区域上连续函数必有最值：把内部驻点（及不可导点）的函数值与边界上的最值放在一起比大小，最大者即最大值；实际问题若内部唯一驻点且知最值存在，可直接断定。",
       "tags": [
-        "同时描述两个随机量"
+        "内部驻点比边界"
       ],
       "sortOrder": 340,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "F(x,y)=P(X≤x,Y≤y)；独立时 f₍X,Y₎=fₓfᵧ",
-        "caption": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。"
+        "content": "M=max{内部候选值, 边界最大值}",
+        "caption": "有界闭区域上连续函数必有最值：把内部驻点（及不可导点）的函数值与边界上的最值放在一起比大小，最大者即最大值；"
       },
       "keyPoints": [
         {
-          "id": "li-san-bian-yuan-fen-bu-yong-qiu-he-0t9dvx",
-          "title": "离散边缘分布用求和",
-          "bodyMarkdown": "离散边缘分布用求和，连续边缘分布用积分"
+          "id": "hou-xuan-nei-bu-zhu-dian-bian-jie-zui-0i8m3x",
+          "title": "候选：内部驻点 + 边界最值点",
+          "bodyMarkdown": "候选：内部驻点 + 边界最值点"
         },
         {
-          "id": "du-li-lian-he-bian-yuan-cheng-ji",
-          "title": "独立 ⇔ 联合 = 边缘乘积",
-          "bodyMarkdown": "独立 ⇔ 联合 = 边缘乘积"
+          "id": "bi-jiao-suo-you-hou-xuan-de-han-shu-zhi",
+          "title": "比较所有候选的函数值",
+          "bodyMarkdown": "比较所有候选的函数值"
         },
         {
-          "id": "he-de-fen-bu-chang-tong-guo-juan-ji-huo-0306go",
-          "title": "和的分布常通过卷积或分布函数法得到",
-          "bodyMarkdown": "和的分布常通过卷积或分布函数法得到"
+          "id": "ying-yong-ti-wei-yi-zhu-dian-zui-zhi-bi-12mz7i",
+          "title": "应用题：唯一驻点 + 最值必存在 ⇒ 即最值点",
+          "bodyMarkdown": "应用题：唯一驻点 + 最值必存在 ⇒ 即最值点"
         }
       ],
       "examples": [
         {
-          "id": "ruo-x-y-du-li-e-x-y-e-x-028z3a",
+          "id": "f-x-y-zai-x-y-1-nei-bu-0s44e3",
           "title": "讲解例子",
-          "bodyMarkdown": "若 X、Y 独立，E(X+Y)=E(X)+E(Y)，而 X+Y 的密度可用卷积计算。"
+          "bodyMarkdown": "f=x²+y² 在 x²+y²≤1：内部驻点 (0,0) 值 0，边界最大 1，故最大值 1 最小值 0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "联合分布记录 X、Y 一起取值的规律；边缘分布是把另一个变量求和或积分消去，条件分布是在已知一个变量后重新归一化。独立时联合分布可以拆成边缘分布的乘积。\n\n### 解题步骤\n\n1. 写联合对象与支持区域\n2. 求和/积分得到边缘\n3. 按乘积关系检查独立性\n\n### 易错点\n\n联合密度的积分区域不是整个平面时，边缘积分上下限要随区域变化。"
+      "bodyMarkdown": "有界闭区域上连续函数必有最值：把内部驻点（及不可导点）的函数值与边界上的最值放在一起比大小，最大者即最大值；实际问题若内部唯一驻点且知最值存在，可直接断定。\n\n### 解题步骤\n\n1. 求内部驻点\n2. 边界化为一元（或拉格朗日）求最值\n3. 统一比较\n\n### 易错点\n\n只比较内部驻点漏了边界——最值常在边界上取得。"
     },
     {
       "schemaVersion": "1.0",
@@ -1749,47 +1749,47 @@
       "sectionId": "m1-p1-c5-s10",
       "sectionTitle": "条件极值",
       "title": "拉格朗日乘数法",
-      "summary": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。",
+      "summary": "求 f 在约束 φ=0 下的极值，构造 L=f+λφ，令 L 的全部偏导为零解出驻点；它把「约束下的极值」化成无条件的方程组，数一数二通用。",
       "tags": [
-        "多元极值判定"
+        "条件极值的标准工具"
       ],
       "sortOrder": 350,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∇f=λ∇g；H=fₓₓfᵧᵧ−fₓᵧ²",
-        "caption": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。"
+        "content": "f_x+λφ_x=0，f_y+λφ_y=0，φ=0",
+        "caption": "求 f 在约束 φ=0 下的极值，构造 L=f+λφ，令 L 的全部偏导为零解出驻点；它把「约束下的极值」化成无条件的方程组，数一数二通用。"
       },
       "keyPoints": [
         {
-          "id": "zhu-dian-shi-bi-yao-hou-xuan-bu-shi-jie-1btpd1",
-          "title": "驻点是必要候选",
-          "bodyMarkdown": "驻点是必要候选，不是结论"
+          "id": "l-x-y-f-x-y-x-y",
+          "title": "L(x,y,λ)=f(x,y)+λφ(x,y)",
+          "bodyMarkdown": "L(x,y,λ)=f(x,y)+λφ(x,y)"
         },
         {
-          "id": "er-jie-pan-bie-yao-kan-hessian-hang-lie-18oig9",
-          "title": "二阶判别要看 Hessian 行列式和主元",
-          "bodyMarkdown": "二阶判别要看 Hessian 行列式和主元"
+          "id": "lian-li-l-x-l-y-l-0",
+          "title": "联立 L_x=L_y=L_λ=0",
+          "bodyMarkdown": "联立 L_x=L_y=L_λ=0"
         },
         {
-          "id": "yue-shu-ji-zhi-bi-xu-tong-shi-man-zu-03oa0m",
-          "title": "约束极值必须同时满足约束方程",
-          "bodyMarkdown": "约束极值必须同时满足约束方程"
+          "id": "jie-chu-de-dian-zai-an-shi-ji-wen-ti-0sv6jc",
+          "title": "解出的点再按实际问题判别",
+          "bodyMarkdown": "解出的点再按实际问题判别"
         }
       ],
       "examples": [
         {
-          "id": "zai-x-y-1-shang-qiu-xy-08461j",
+          "id": "qiu-x-y-zai-x-y-1-shang-1l452u",
           "title": "讲解例子",
-          "bodyMarkdown": "在 x²+y²=1 上求 xy 的极值，可令 ∇(xy)=λ∇(x²+y²)。"
+          "bodyMarkdown": "求 x+y 在 x²+y²=1 上的最值：L=x+y+λ(x²+y²−1) 解得 (±1/√2,±1/√2)，最值 ±√2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。无约束问题看局部二次型，约束问题把约束曲线上的变化压缩到可行方向，拉格朗日乘数把两者的梯度联系起来。\n\n### 解题步骤\n\n1. 求一阶偏导并解驻点\n2. 计算二阶信息或列拉格朗日方程\n3. 比较候选点和边界值\n\n### 易错点\n\n只求偏导为零而忽略边界/约束，会漏掉真正的最值。"
+      "bodyMarkdown": "求 f 在约束 φ=0 下的极值，构造 L=f+λφ，令 L 的全部偏导为零解出驻点；它把「约束下的极值」化成无条件的方程组，数一数二通用。\n\n### 解题步骤\n\n1. 写出目标与约束\n2. 构造 L 并求偏导\n3. 解方程组并比较函数值\n\n### 易错点\n\n忘写约束方程 φ=0 进方程组——三个未知数只有两个方程，解不动。"
     },
     {
       "schemaVersion": "1.0",
@@ -1800,47 +1800,47 @@
       "sectionId": "m1-p1-c5-s10",
       "sectionTitle": "条件极值",
       "title": "一个约束",
-      "summary": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。",
+      "summary": "一个约束 φ(x,y)=0 时，拉格朗日函数只有乘数 λ：未知数是 x、y、λ 三个，三个方程联立；解出的 (x,y) 代回 f 比较即得条件极值。",
       "tags": [
-        "多元极值判定"
+        "二元加一个乘数"
       ],
       "sortOrder": 360,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∇f=λ∇g；H=fₓₓfᵧᵧ−fₓᵧ²",
-        "caption": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。"
+        "content": "L_x=0，L_y=0，φ=0",
+        "caption": "一个约束 φ(x,y)=0 时，拉格朗日函数只有乘数 λ：未知数是 x、y、λ 三个，三个方程联立；解出的 (x,y) 代回 f 比较即得条件极值。"
       },
       "keyPoints": [
         {
-          "id": "zhu-dian-shi-bi-yao-hou-xuan-bu-shi-jie-1btpd1",
-          "title": "驻点是必要候选",
-          "bodyMarkdown": "驻点是必要候选，不是结论"
+          "id": "wei-zhi-shu-ge-shu-2-yue-shu-ge-shu",
+          "title": "未知数个数 = 2 + 约束个数",
+          "bodyMarkdown": "未知数个数 = 2 + 约束个数"
         },
         {
-          "id": "er-jie-pan-bie-yao-kan-hessian-hang-lie-18oig9",
-          "title": "二阶判别要看 Hessian 行列式和主元",
-          "bodyMarkdown": "二阶判别要看 Hessian 行列式和主元"
+          "id": "fang-cheng-zu-mu-biao-pian-dao-2-tiao-0qb7lh",
+          "title": "方程组 = 目标偏导 2 条 + 约束 1 条",
+          "bodyMarkdown": "方程组 = 目标偏导 2 条 + 约束 1 条"
         },
         {
-          "id": "yue-shu-ji-zhi-bi-xu-tong-shi-man-zu-03oa0m",
-          "title": "约束极值必须同时满足约束方程",
-          "bodyMarkdown": "约束极值必须同时满足约束方程"
+          "id": "li-yong-yue-shu-xian-hua-jian-zai-jie-1jfz19",
+          "title": "利用约束先化简再解更快",
+          "bodyMarkdown": "利用约束先化简再解更快"
         }
       ],
       "examples": [
         {
-          "id": "zai-x-y-1-shang-qiu-xy-08461j",
+          "id": "f-xy-zai-x-y-1-l-xy-x-y-0f79jr",
           "title": "讲解例子",
-          "bodyMarkdown": "在 x²+y²=1 上求 xy 的极值，可令 ∇(xy)=λ∇(x²+y²)。"
+          "bodyMarkdown": "f=xy 在 x+y=1：L=xy+λ(x+y−1) 解得 x=y=1/2，最大值 1/4。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。无约束问题看局部二次型，约束问题把约束曲线上的变化压缩到可行方向，拉格朗日乘数把两者的梯度联系起来。\n\n### 解题步骤\n\n1. 求一阶偏导并解驻点\n2. 计算二阶信息或列拉格朗日方程\n3. 比较候选点和边界值\n\n### 易错点\n\n只求偏导为零而忽略边界/约束，会漏掉真正的最值。"
+      "bodyMarkdown": "一个约束 φ(x,y)=0 时，拉格朗日函数只有乘数 λ：未知数是 x、y、λ 三个，三个方程联立；解出的 (x,y) 代回 f 比较即得条件极值。\n\n### 解题步骤\n\n1. 设 L=f+λφ\n2. 对 x、y、λ 求偏导\n3. 消 λ 解点后代回 f\n\n### 易错点\n\n解出多个候选点不比较函数值就下结论——必须代回 f 排序。"
     },
     {
       "schemaVersion": "1.0",
@@ -1851,47 +1851,47 @@
       "sectionId": "m1-p1-c5-s10",
       "sectionTitle": "条件极值",
       "title": "多个约束的基本思想",
-      "summary": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。",
+      "summary": "多个约束（如 φ=0 且 ψ=0）时，每个约束配一个乘数：L=f+λφ+μψ，未知数与方程同步增加；思想不变——把条件极值化成无条件方程组。",
       "tags": [
-        "多元极值判定"
+        "每个约束一个乘数"
       ],
       "sortOrder": 370,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∇f=λ∇g；H=fₓₓfᵧᵧ−fₓᵧ²",
-        "caption": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。"
+        "content": "L_x=L_y=L_z=λφ 项 + μψ 项 = 0，φ=0，ψ=0",
+        "caption": "多个约束（如 φ=0 且 ψ=0）时，每个约束配一个乘数：L=f+λφ+μψ，未知数与方程同步增加；思想不变——把条件极值化成无条件方程组。"
       },
       "keyPoints": [
         {
-          "id": "zhu-dian-shi-bi-yao-hou-xuan-bu-shi-jie-1btpd1",
-          "title": "驻点是必要候选",
-          "bodyMarkdown": "驻点是必要候选，不是结论"
+          "id": "cheng-shu-ge-shu-yue-shu-ge-shu",
+          "title": "乘数个数 = 约束个数",
+          "bodyMarkdown": "乘数个数 = 约束个数"
         },
         {
-          "id": "er-jie-pan-bie-yao-kan-hessian-hang-lie-18oig9",
-          "title": "二阶判别要看 Hessian 行列式和主元",
-          "bodyMarkdown": "二阶判别要看 Hessian 行列式和主元"
+          "id": "l-f-quan-bu-pian-dao-zhi-ling",
+          "title": "L=f+λφ+μψ",
+          "bodyMarkdown": "L=f+λφ+μψ，全部偏导置零"
         },
         {
-          "id": "yue-shu-ji-zhi-bi-xu-tong-shi-man-zu-03oa0m",
-          "title": "约束极值必须同时满足约束方程",
-          "bodyMarkdown": "约束极值必须同时满足约束方程"
+          "id": "fang-cheng-ge-shu-bian-liang-ge-shu-han-0kc25e",
+          "title": "方程个数 = 变量个数（含乘数）",
+          "bodyMarkdown": "方程个数 = 变量个数（含乘数）"
         }
       ],
       "examples": [
         {
-          "id": "zai-x-y-1-shang-qiu-xy-08461j",
+          "id": "qiu-x-y-z-dao-yuan-dian-1r80u3",
           "title": "讲解例子",
-          "bodyMarkdown": "在 x²+y²=1 上求 xy 的极值，可令 ∇(xy)=λ∇(x²+y²)。"
+          "bodyMarkdown": "求 (x,y,z) 到原点距离在 x+y+z=1 与 x−y=0 下的极值：L=x²+y²+z²+λ(x+y+z−1)+μ(x−y)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。无约束问题看局部二次型，约束问题把约束曲线上的变化压缩到可行方向，拉格朗日乘数把两者的梯度联系起来。\n\n### 解题步骤\n\n1. 求一阶偏导并解驻点\n2. 计算二阶信息或列拉格朗日方程\n3. 比较候选点和边界值\n\n### 易错点\n\n只求偏导为零而忽略边界/约束，会漏掉真正的最值。"
+      "bodyMarkdown": "多个约束（如 φ=0 且 ψ=0）时，每个约束配一个乘数：L=f+λφ+μψ，未知数与方程同步增加；思想不变——把条件极值化成无条件方程组。\n\n### 解题步骤\n\n1. 按约束个数设乘数\n2. 构造 L 求全部偏导\n3. 解方程组并检验\n\n### 易错点\n\n两个约束只用一个乘数——每个约束独立，乘数不能合并。"
     },
     {
       "schemaVersion": "1.0",
@@ -1902,47 +1902,47 @@
       "sectionId": "m1-p1-c5-s10",
       "sectionTitle": "条件极值",
       "title": "实际应用",
-      "summary": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。",
+      "summary": "条件极值的应用题先写出目标函数与约束（几何、物理或成本条件），再用拉格朗日乘数法求解；若实际问题保证最值存在且解出唯一候选点，该点即所求最值点。",
       "tags": [
-        "多元极值判定"
+        "建模 + 唯一驻点"
       ],
       "sortOrder": 380,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∇f=λ∇g；H=fₓₓfᵧᵧ−fₓᵧ²",
-        "caption": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。"
+        "content": "max/min f s.t. φ=0",
+        "caption": "条件极值的应用题先写出目标函数与约束（几何、物理或成本条件），再用拉格朗日乘数法求解；若实际问题保证最值存在且解出唯一候选点，该点即所求最值点。"
       },
       "keyPoints": [
         {
-          "id": "zhu-dian-shi-bi-yao-hou-xuan-bu-shi-jie-1btpd1",
-          "title": "驻点是必要候选",
-          "bodyMarkdown": "驻点是必要候选，不是结论"
+          "id": "mu-biao-han-shu-yu-yue-shu-dou-lai-zi-1t7fd1",
+          "title": "目标函数与约束都来自题意",
+          "bodyMarkdown": "目标函数与约束都来自题意"
         },
         {
-          "id": "er-jie-pan-bie-yao-kan-hessian-hang-lie-18oig9",
-          "title": "二阶判别要看 Hessian 行列式和主元",
-          "bodyMarkdown": "二阶判别要看 Hessian 行列式和主元"
+          "id": "jie-chu-wei-yi-hou-xuan-zui-zhi-bi-cun-1sw565",
+          "title": "解出唯一候选 + 最值必存在 ⇒ 即最值",
+          "bodyMarkdown": "解出唯一候选 + 最值必存在 ⇒ 即最值"
         },
         {
-          "id": "yue-shu-ji-zhi-bi-xu-tong-shi-man-zu-03oa0m",
-          "title": "约束极值必须同时满足约束方程",
-          "bodyMarkdown": "约束极值必须同时满足约束方程"
+          "id": "zui-hou-hui-da-ti-mu-di-liang-bie-ting-167i6l",
+          "title": "最后回答题目的量（别停在驻点坐标）",
+          "bodyMarkdown": "最后回答题目的量（别停在驻点坐标）"
         }
       ],
       "examples": [
         {
-          "id": "zai-x-y-1-shang-qiu-xy-08461j",
+          "id": "zhou-chang-yi-ding-de-00rubz",
           "title": "讲解例子",
-          "bodyMarkdown": "在 x²+y²=1 上求 xy 的极值，可令 ∇(xy)=λ∇(x²+y²)。"
+          "bodyMarkdown": "周长一定的矩形面积最大：约束 x+y=常数，解得 x=y（正方形）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "多元极值先找梯度为零的驻点，再用 Hessian 或约束方法判断。无约束问题看局部二次型，约束问题把约束曲线上的变化压缩到可行方向，拉格朗日乘数把两者的梯度联系起来。\n\n### 解题步骤\n\n1. 求一阶偏导并解驻点\n2. 计算二阶信息或列拉格朗日方程\n3. 比较候选点和边界值\n\n### 易错点\n\n只求偏导为零而忽略边界/约束，会漏掉真正的最值。"
+      "bodyMarkdown": "条件极值的应用题先写出目标函数与约束（几何、物理或成本条件），再用拉格朗日乘数法求解；若实际问题保证最值存在且解出唯一候选点，该点即所求最值点。\n\n### 解题步骤\n\n1. 设变量写目标\n2. 写约束方程\n3. 拉格朗日求解并作答\n\n### 易错点\n\n漏掉「最值存在性」的说明，唯一驻点直接当答案在理论上不严谨（应用题可由实际意义补足）。"
     }
   ]
 }
