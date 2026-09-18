@@ -1,0 +1,43 @@
+肖四答案键 · 双路径交叉验证合并结果
+  参与比对客观题      132 题
+  ✅ 一致（双路径）    100 题
+  ✅ 一致（单路径）    32 题
+  ❌ 不一致            0 题
+  ⚠️ 两路径冲突        0 题
+  ⚠️ 未覆盖            0 题
+
+===== 仅单路径覆盖 =====
+  q-maozhongte-12        源「ABCD」 / PDF「ABCD」  （路径二）
+  q-maozhongte-13        源「ABCD」 / PDF「ABCD」  （路径二）
+  q-maozhongte-20        源「A」 / PDF「A」  （路径一）
+  q-maozhongte-21        源「BC」 / PDF「BC」  （路径一）
+  q-maozhongte-29        源「C」 / PDF「C」  （路径一）
+  q-maozhongte-3         源「A」 / PDF「A」  （路径二）
+  q-maozhongte-35        源「ABCD」 / PDF「ABCD」  （路径一）
+  q-maozhongte-36        源「ABC」 / PDF「ABC」  （路径一）
+  q-maozhongte-37        源「ABCD」 / PDF「ABCD」  （路径一）
+  q-maozhongte-47        源「ABC」 / PDF「ABC」  （路径二）
+  q-maozhongte-9         源「ACD」 / PDF「ACD」  （路径一）
+  q-mayuan-18            源「BCD」 / PDF「BCD」  （路径一）
+  q-mayuan-19            源「ACD」 / PDF「ACD」  （路径一）
+  q-mayuan-24            源「D」 / PDF「D」  （路径一）
+  q-mayuan-27            源「ABD」 / PDF「ABD」  （路径一）
+  q-mayuan-28            源「AB」 / PDF「AB」  （路径二）
+  q-mayuan-32            源「C」 / PDF「C」  （路径一）
+  q-mayuan-36            源「ACD」 / PDF「ACD」  （路径一）
+  q-shigang-11           源「D」 / PDF「D」  （路径一）
+  q-shigang-12           源「AD」 / PDF「AD」  （路径一）
+  q-shigang-22           源「ABC」 / PDF「ABC」  （路径一）
+  q-shigang-26           源「B」 / PDF「B」  （路径二）
+  q-shigang-28           源「ABC」 / PDF「ABC」  （路径一）
+  q-shigang-6            源「ABC」 / PDF「ABC」  （路径一）
+  q-shigang-7            源「ACD」 / PDF「ACD」  （路径一）
+  q-shizheng-13          源「ABC」 / PDF「ABC」  （路径一）
+  q-shizheng-2           源「ACD」 / PDF「ACD」  （路径一）
+  q-shizheng-3           源「ABCD」 / PDF「ABCD」  （路径一）
+  q-shizheng-9           源「A」 / PDF「A」  （路径一）
+  q-sixiu-12             源「A」 / PDF「A」  （路径一）
+  q-sixiu-5              源「ABC」 / PDF「ABC」  （路径二）
+  q-sixiu-7              源「B」 / PDF「B」  （路径一）
+
+结论：132 道客观题中 132 道经至少一条独立路径核对与源一致，0 道存在矛盾，0 道未覆盖。
