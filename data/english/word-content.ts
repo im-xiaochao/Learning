@@ -83,6 +83,23 @@ export const BATCHES: { id: string; label: string; words: string[] }[] = [
     'detect', 'diminish', 'distinguish', 'distribute', 'diverse', 'elaborate',
     'eliminate', 'equivalent',
     ],
+  },  {
+    id: 'batch-4',
+    label: '高频词第三批（动词与学术常用词）',
+    words: [
+    'enforce', 'engage', 'ensure', 'estimate', 'evolve', 'exaggerate',
+    'exceed', 'exclude', 'exert', 'exhibit', 'expand', 'expend',
+    'explicit', 'explore', 'expose', 'extend', 'extract', 'fluctuate',
+    'formulate', 'fulfill', 'fundamental', 'generate', 'gradual', 'hypothesis',
+    'ignore', 'illustrate', 'imitate', 'immense', 'implement', 'impose',
+    'impress', 'incentive', 'incline', 'incorporate', 'induce', 'inevitable',
+    'infer', 'inherit', 'initiate', 'install', 'institute', 'insulate',
+    'integrate', 'intense', 'interpret', 'intervene', 'isolate', 'justify',
+    'manipulate', 'motivate', 'negotiate', 'occupy', 'occur', 'oppose',
+    'participate', 'persuade', 'precede', 'precise', 'prefer', 'prejudice',
+    'premise', 'prevail', 'proceed', 'prohibit', 'provoke', 'qualify',
+    'reinforce', 'sustain', 'tolerate',
+    ],
   },
 ]
 
@@ -1129,6 +1146,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "emphasize the need for", meaningZh: "强调……的必要性" },
     ],
   },
+  engage: {
+    root: { display: "en-（使）+ gage（抵押、承诺）", explanation: "gage 有「质押、担保」之意；把自己押进去，即参与、投入。" },
+    mnemonic: "engage in（参与）；be engaged in（正忙于）；engaged 还有「已订婚」。",
+    examples: [
+      { sentence: "Students who engage in discussion remember more.", translationZh: "参与讨论的学生记得更牢。" },
+    ],
+    collocations: [
+      { phrase: "engage in", meaningZh: "参与" },
+    ],
+  },
+  enforce: {
+    root: { display: "en-（使）+ force（力量）", explanation: "使规则带上力量，即强制执行。" },
+    mnemonic: "enforce 是「强制执行（规定）」，reinforce 是「加强」——前缀不同，别混。",
+    examples: [
+      { sentence: "The school enforces a strict deadline for every assignment.", translationZh: "学校对每份作业都执行严格的截止时间。" },
+    ],
+    collocations: [
+      { phrase: "enforce a rule", meaningZh: "执行规定" },
+    ],
+  },
   enhance: {
     root: { display: "en-（使……）+ hance（高）", explanation: "hance 源自拉丁语 altus（高），enhance 即「使更高」——提升已有之物。" },
     mnemonic: "enhance 是「锦上添花」，在原有基础上加值，不是从无到有。",
@@ -1137,6 +1174,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "enhance the quality of", meaningZh: "提升……的质量" },
+    ],
+  },
+  ensure: {
+    root: { display: "en-（使）+ sure（确定）", explanation: "使某事确定下来，即确保。" },
+    mnemonic: "ensure that…（确保某事）；assure 的宾语必须是人（assure sb. that…）。",
+    examples: [
+      { sentence: "Set a fixed time to ensure that review actually happens.", translationZh: "固定一个时间，确保复习真的发生。" },
+    ],
+    collocations: [
+      { phrase: "ensure that", meaningZh: "确保" },
     ],
   },
   equivalent: {
@@ -1169,6 +1216,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "establish a relationship", meaningZh: "建立关系" },
     ],
   },
+  estimate: {
+    root: { display: "aestim（估价）", explanation: "源自拉丁语 aestimare「估价」，即估计、估算。" },
+    mnemonic: "estimate 后接名词或 that 从句，不接 to do。",
+    examples: [
+      { sentence: "Experts estimate the cost at around two million.", translationZh: "专家估计成本在两百万左右。" },
+    ],
+    collocations: [
+      { phrase: "estimate the cost", meaningZh: "估算成本" },
+    ],
+  },
   evaluate: {
     root: { display: "value（价值）→ evaluate", explanation: "通过 value 这一词形关联，记住「判断价值」的核心含义。" },
     mnemonic: "先看事实，再判断价值，就是 evaluate。",
@@ -1189,6 +1246,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "evidence for/of", meaningZh: "……的证据" },
     ],
   },
+  exaggerate: {
+    root: { display: "ex-（加强）+ agger（堆积）+ -ate", explanation: "agger 表「堆」（如 exaggerate 本义「往上堆」），即夸大。" },
+    mnemonic: "exaggerate 是「说得比事实大」，overstate 是「说得比事实重」。",
+    examples: [
+      { sentence: "The report exaggerates the benefits of the new method.", translationZh: "报告夸大了新方法的好处。" },
+    ],
+    collocations: [
+      { phrase: "exaggerate the effect", meaningZh: "夸大效果" },
+    ],
+  },
+  evolve: {
+    root: { display: "e-（向外）+ volv（滚、转）", explanation: "volv 表「滚动」（如 revolve、involve）：向外滚开，即逐渐展开、演变。" },
+    mnemonic: "evolve from（由……演变而来）；evolve into（演变成）。",
+    examples: [
+      { sentence: "The method evolved from a much older technique.", translationZh: "这种方法由一种更古老的技术演变而来。" },
+    ],
+    collocations: [
+      { phrase: "evolve into", meaningZh: "演变成" },
+    ],
+  },
   examine: {
     root: { display: "exam（秤、衡量）→ examine", explanation: "源自 examen（天平），本义「称量」，引申为仔细检查。" },
     mnemonic: "examine 是「细看、体检、考问」，比 check 更深入。",
@@ -1197,6 +1274,116 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "examine the evidence", meaningZh: "审查证据" },
+    ],
+  },
+  extract: {
+    root: { display: "ex-（向外）+ tract（拉）", explanation: "tract 表「拉」（如 attract、abstract）：拉出来，即提取。" },
+    mnemonic: "extract A from B；名词 extraction 同理。",
+    examples: [
+      { sentence: "Researchers extracted DNA from the samples.", translationZh: "研究人员从样本中提取了 DNA。" },
+    ],
+    collocations: [
+      { phrase: "extract from", meaningZh: "从……提取" },
+    ],
+  },
+  extend: {
+    root: { display: "ex-（向外）+ tend（伸展）", explanation: "tend / tens 表「拉、伸」（如 intend、intense）：向外拉长，即延长。" },
+    mnemonic: "extend a deadline（延长期限）；extend thanks（致谢）。",
+    examples: [
+      { sentence: "The deadline was extended by two weeks.", translationZh: "截止日期延长了两周。" },
+    ],
+    collocations: [
+      { phrase: "extend a deadline", meaningZh: "延长期限" },
+    ],
+  },
+  expose: {
+    root: { display: "ex-（向外）+ pose（放置）", explanation: "pos / pon 表「放」（如 propose、expose）：放在外面，即暴露、使接触。" },
+    mnemonic: "be exposed to 后接「接触到的东西」，to 是介词。",
+    examples: [
+      { sentence: "Children exposed to two languages switch tasks faster.", translationZh: "接触两种语言的孩子转换任务更快。" },
+    ],
+    collocations: [
+      { phrase: "be exposed to", meaningZh: "接触到" },
+    ],
+  },
+  explore: {
+    root: { display: "ex-（向外）+ plor（探查、呼喊）", explanation: "源自拉丁语 explorare「搜索、探查」（猎人呼喊着搜寻猎物），即探索。" },
+    mnemonic: "explore 后可接「问题、可能性」，不一定是真的地理探索。",
+    examples: [
+      { sentence: "The chapter explores how memory actually works.", translationZh: "这一章探讨记忆究竟如何运作。" },
+    ],
+    collocations: [
+      { phrase: "explore a possibility", meaningZh: "探索可能性" },
+    ],
+  },
+  explicit: {
+    root: { display: "ex-（向外）+ plic（折叠）", explanation: "plic 表「折」（如 imply、complicate）：把折着的部分摊开，即明确的。" },
+    mnemonic: "explicit（明说的）对 implicit（隐含的），阅读题常考这对。",
+    examples: [
+      { sentence: "The instructions are explicit about the word limit.", translationZh: "说明对字数限制讲得很明确。" },
+    ],
+    collocations: [
+      { phrase: "explicit instructions", meaningZh: "明确的指示" },
+    ],
+  },
+  expend: {
+    root: { display: "ex-（出去）+ pend（称量、支付）", explanation: "pend / pens 表「称量、付出」（如 compensate、expensive）：称出去，即花费。" },
+    mnemonic: "expend 多用于时间、精力等正式语境；日常用 spend。",
+    examples: [
+      { sentence: "They expended enormous effort on a single experiment.", translationZh: "他们在一个实验上投入了巨大精力。" },
+    ],
+    collocations: [
+      { phrase: "expend energy", meaningZh: "耗费精力" },
+    ],
+  },
+  expand: {
+    root: { display: "ex-（向外）+ pand（展开）", explanation: "pand 表「铺开」（如 expand 本义「摊开」），即扩大、扩张。" },
+    mnemonic: "expand on sth. 是「就某事展开说明」，不是「扩大某物」。",
+    examples: [
+      { sentence: "The company plans to expand into three new cities.", translationZh: "公司计划扩张到三座新城市。" },
+    ],
+    collocations: [
+      { phrase: "expand into", meaningZh: "扩展到" },
+    ],
+  },
+  exhibit: {
+    root: { display: "ex-（向外）+ hibit（拿、持有）", explanation: "hibit 表「持有」（如 prohibit、inhibit）：拿出来给人看，即展出、表现出。" },
+    mnemonic: "exhibit 作动词常接「特征、模式」；作名词是「展品」。",
+    examples: [
+      { sentence: "The samples exhibit the same pattern.", translationZh: "这些样本表现出同样的模式。" },
+    ],
+    collocations: [
+      { phrase: "exhibit a pattern", meaningZh: "表现出某种模式" },
+    ],
+  },
+  exert: {
+    root: { display: "ex-（向外）+ sert（加入、施加）", explanation: "sert 表「加入、排列」（如 insert、assert）：把力量加出去，即施加。" },
+    mnemonic: "exert influence / pressure on sb.，介词用 on。",
+    examples: [
+      { sentence: "Parents exert a strong influence on reading habits.", translationZh: "父母对阅读习惯有很大影响。" },
+    ],
+    collocations: [
+      { phrase: "exert influence on", meaningZh: "对……施加影响" },
+    ],
+  },
+  exclude: {
+    root: { display: "ex-（向外）+ clud（关闭）", explanation: "clud / clus 表「关」（如 include、conclude）：关在门外，即排除。" },
+    mnemonic: "exclude A from B；名词 exclusion 同样接 from。",
+    examples: [
+      { sentence: "Two studies were excluded from the final analysis.", translationZh: "两项研究被排除在最终分析之外。" },
+    ],
+    collocations: [
+      { phrase: "exclude from", meaningZh: "把……排除在外" },
+    ],
+  },
+  exceed: {
+    root: { display: "ex-（超出）+ ceed（走）", explanation: "ceed / cess 表「走」（如 proceed、access）：走出界，即超过。" },
+    mnemonic: "exceed 是及物动词，后面直接接宾语，不加 than。",
+    examples: [
+      { sentence: "The result exceeded all our expectations.", translationZh: "结果超出了我们所有的预期。" },
+    ],
+    collocations: [
+      { phrase: "exceed expectations", meaningZh: "超出预期" },
     ],
   },
   facilitate: {
@@ -1219,6 +1406,36 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "a key factor in", meaningZh: "……的关键因素" },
     ],
   },
+  fulfill: {
+    root: { display: "full（满）+ fill（填满）", explanation: "两个「满」叠在一起：把要求填满，即实现、履行。" },
+    mnemonic: "fulfil（英式）与 fulfill（美式）都对，别写成 fullfill。",
+    examples: [
+      { sentence: "The programme fulfils the requirements of most majors.", translationZh: "这个项目满足多数专业的要求。" },
+    ],
+    collocations: [
+      { phrase: "fulfil a requirement", meaningZh: "满足要求" },
+    ],
+  },
+  formulate: {
+    root: { display: "form（形式、模型）+ -ulate", explanation: "给想法一个成形的外壳，即制定、系统表述。" },
+    mnemonic: "formulate 比 make 正式，宾语多是 plan、rule、theory。",
+    examples: [
+      { sentence: "She formulated the rule in one clear sentence.", translationZh: "她用一句清楚的话把规则表述出来。" },
+    ],
+    collocations: [
+      { phrase: "formulate a plan", meaningZh: "制定计划" },
+    ],
+  },
+  fluctuate: {
+    root: { display: "fluct（波动）+ -ate", explanation: "fluctus 是拉丁语「波浪」，即起伏、波动。" },
+    mnemonic: "fluctuate between A and B；主语通常是价格、数量、成绩。",
+    examples: [
+      { sentence: "Prices fluctuated wildly during the first quarter.", translationZh: "第一季度价格剧烈波动。" },
+    ],
+    collocations: [
+      { phrase: "fluctuate between", meaningZh: "在……之间波动" },
+    ],
+  },
   function: {
     root: { display: "funct（履行、执行）+ -ion（名词后缀）", explanation: "源自 fungi（履行）：事物所履行的职责，即功能。" },
     mnemonic: "function as（充当）/ a function of（是……的函数）——数学与日常义通用。",
@@ -1227,6 +1444,46 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "function as", meaningZh: "起……的作用" },
+    ],
+  },
+  hypothesis: {
+    root: { display: "hypo-（在下）+ thesis（放置）", explanation: "thesis 表「放置、命题」（如 thesis、synthesis）：垫在下面的命题，即假说。" },
+    mnemonic: "复数是 hypotheses，不是 hypothesises。",
+    examples: [
+      { sentence: "The data support the hypothesis rather than disprove it.", translationZh: "数据支持这个假说，而不是推翻它。" },
+    ],
+    collocations: [
+      { phrase: "test a hypothesis", meaningZh: "检验假说" },
+    ],
+  },
+  gradual: {
+    root: { display: "grad（台阶、级）+ -ual", explanation: "grad 表「步、级」（如 grade、graduate）：一级一级的，即逐渐的。" },
+    mnemonic: "gradual 强调「慢而有过程」，不用于突然的变化。",
+    examples: [
+      { sentence: "Progress is gradual, but it is still progress.", translationZh: "进步是渐进的，但它依然是进步。" },
+    ],
+    collocations: [
+      { phrase: "a gradual change", meaningZh: "渐进的变化" },
+    ],
+  },
+  generate: {
+    root: { display: "gener（产生、种类）+ -ate", explanation: "gen 表「生」（如 gene、genius）：生出来，即产生。" },
+    mnemonic: "generate 多用于「产生数据、收入、想法」，不用于「制造实物」。",
+    examples: [
+      { sentence: "The model generates a score for each answer.", translationZh: "模型为每份答案生成一个分数。" },
+    ],
+    collocations: [
+      { phrase: "generate income", meaningZh: "产生收入" },
+    ],
+  },
+  fundamental: {
+    root: { display: "fund（底部、基础）+ -amental", explanation: "fund 表「基底」（如 fund、found、profound）：打底的，即根本的。" },
+    mnemonic: "fundamental to 后接名词或 doing，to 是介词。",
+    examples: [
+      { sentence: "Reading is fundamental to every other skill.", translationZh: "阅读是其他一切技能的根本。" },
+    ],
+    collocations: [
+      { phrase: "fundamental to", meaningZh: "对……至关重要" },
     ],
   },
   identify: {
@@ -1239,6 +1496,46 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "identify with", meaningZh: "认同；与……有同感" },
     ],
   },
+  immense: {
+    root: { display: "im-（不）+ mens（测量）", explanation: "mens / meter 表「测量」（如 measure、dimension）：大到量不出来，即巨大的。" },
+    mnemonic: "immense 修饰程度（an immense amount of），不修饰具体尺寸。",
+    examples: [
+      { sentence: "The change required an immense amount of revision.", translationZh: "这个改动需要极大量的修订。" },
+    ],
+    collocations: [
+      { phrase: "an immense amount of", meaningZh: "大量的" },
+    ],
+  },
+  imitate: {
+    root: { display: "im（相像、模仿）+ -itate", explanation: "im 表「像」（如 image、imitate）：照着样子来，即模仿。" },
+    mnemonic: "imitate 中性；mimic 常带「滑稽地学样」的意味。",
+    examples: [
+      { sentence: "Children imitate the way adults speak.", translationZh: "孩子模仿大人说话的方式。" },
+    ],
+    collocations: [
+      { phrase: "imitate a style", meaningZh: "模仿风格" },
+    ],
+  },
+  illustrate: {
+    root: { display: "il-（进入）+ lustr（照亮）", explanation: "lustr 表「光」（如 illustrate 本义「照亮」）：照亮道理，即说明。" },
+    mnemonic: "illustrate with 后接「用什么例子说明」。",
+    examples: [
+      { sentence: "Let me illustrate this with a simple example.", translationZh: "让我用一个简单的例子说明这一点。" },
+    ],
+    collocations: [
+      { phrase: "illustrate with", meaningZh: "用……说明" },
+    ],
+  },
+  ignore: {
+    root: { display: "i-（= in-，不）+ gnor（知道）", explanation: "gn / gno 表「知道」（如 know、recognize）：不去知道，即忽视。" },
+    mnemonic: "ignore 是「明知而有意不理」；be ignorant of 是「压根不知道」。",
+    examples: [
+      { sentence: "Do not ignore the words you keep forgetting.", translationZh: "别忽略那些你总记不住的词。" },
+    ],
+    collocations: [
+      { phrase: "ignore a warning", meaningZh: "无视警告" },
+    ],
+  },
   impact: {
     root: { display: "im-（向内）+ pact（压紧）", explanation: "pact 表「压紧」（如 compact 紧凑），本义「撞击、压入」，引申为冲击与影响。" },
     mnemonic: "impact 比 influence 更「重」——强调冲击力和力度。",
@@ -1247,6 +1544,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "have an impact on", meaningZh: "对……产生影响" },
+    ],
+  },
+  implement: {
+    root: { display: "im-（进入）+ ple（填满）", explanation: "ple 表「填满」（如 complete、supplement）：把计划填上细节去做，即实施。" },
+    mnemonic: "名词「工具」和动词「实施」同形，看句子里缺的是「物」还是「动作」。",
+    examples: [
+      { sentence: "The school implemented the new timetable in September.", translationZh: "学校在九月实施了新的课表。" },
+    ],
+    collocations: [
+      { phrase: "implement a policy", meaningZh: "执行政策" },
     ],
   },
   imply: {
@@ -1270,6 +1577,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "play an important role in", meaningZh: "在……中起重要作用" },
     ],
   },
+  impress: {
+    root: { display: "im-（在上）+ press（压）", explanation: "press 表「压」（如 pressure、compress）：压上印记，即使印象深刻。" },
+    mnemonic: "be impressed by / with；impress sth. on sb. 是「使某人铭记」。",
+    examples: [
+      { sentence: "She impressed the examiners with a clear structure.", translationZh: "她以清晰的结构给考官留下印象。" },
+    ],
+    collocations: [
+      { phrase: "be impressed by", meaningZh: "对……印象深刻" },
+    ],
+  },
+  impose: {
+    root: { display: "im-（在……上）+ pose（放置）", explanation: "pos / pon 表「放」（如 compose、oppose）：放到别人身上，即强加。" },
+    mnemonic: "impose sth. on sb.；impose on sb. 也有「打扰」的意思。",
+    examples: [
+      { sentence: "The rule imposes a heavy burden on new students.", translationZh: "这条规定给新生带来沉重负担。" },
+    ],
+    collocations: [
+      { phrase: "impose on", meaningZh: "把……强加于" },
+    ],
+  },
   improve: {
     root: { display: "im-（进入）+ prove（检验、证明）", explanation: "prove 古义有「检验」，improve 原指「耕作使土地变好」，后泛指改善。" },
     mnemonic: "improve 是「变得更好」，对象可以是能力、条件、关系。",
@@ -1278,6 +1605,36 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "improve on/upon", meaningZh: "对……加以改进" },
+    ],
+  },
+  incorporate: {
+    root: { display: "in-（进入）+ corpor（身体）+ -ate", explanation: "corpor 表「身体」（如 corporation）：纳入同一个身体，即包含、合并。" },
+    mnemonic: "incorporate A into B；形容词 incorporated 常缩写为 Inc.（公司）。",
+    examples: [
+      { sentence: "The final version incorporates three of her suggestions.", translationZh: "最终版本吸收了她的三条建议。" },
+    ],
+    collocations: [
+      { phrase: "incorporate into", meaningZh: "并入" },
+    ],
+  },
+  incline: {
+    root: { display: "in-（朝向）+ clin（倾斜）", explanation: "clin 表「倾斜」（如 decline、climate）：朝某方向倾斜，即倾向。" },
+    mnemonic: "be inclined to do sth.（倾向于），to 是不定式符号。",
+    examples: [
+      { sentence: "Examiners are inclined to reward clear structure.", translationZh: "考官往往会给结构清晰的答案更高分。" },
+    ],
+    collocations: [
+      { phrase: "be inclined to", meaningZh: "倾向于" },
+    ],
+  },
+  incentive: {
+    root: { display: "in-（进入）+ cant（歌唱）+ -ive", explanation: "cant / cent 表「唱」（如 chant、accent）：原指「唱歌招徕、激励」，即动机、激励。" },
+    mnemonic: "an incentive to do sth.；tax incentive 是「税收优惠」。",
+    examples: [
+      { sentence: "Small rewards give students an incentive to keep going.", translationZh: "小小的奖励给学生继续下去的动力。" },
+    ],
+    collocations: [
+      { phrase: "an incentive to", meaningZh: "……的动力" },
     ],
   },
   increase: {
@@ -1300,6 +1657,36 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "indicate that…", meaningZh: "表明……" },
     ],
   },
+  infer: {
+    root: { display: "in-（向内）+ fer（带来）", explanation: "fer 表「携带」（如 refer、transfer）：把意思带进来，即推断。" },
+    mnemonic: "infer（读者推断出）对 imply（作者暗示）——阅读题高频考点。",
+    examples: [
+      { sentence: "From the tone we can infer that the author disagrees.", translationZh: "从语气可以推断作者不同意。" },
+    ],
+    collocations: [
+      { phrase: "infer from", meaningZh: "从……推断" },
+    ],
+  },
+  inevitable: {
+    root: { display: "in-（不）+ evit（避免）+ -able", explanation: "evit 表「躲开」（与 avoid 同源）：躲不开的，即不可避免的。" },
+    mnemonic: "It is inevitable that…；注意 inevitable 没有「必然正确」的意思。",
+    examples: [
+      { sentence: "Some forgetting is inevitable; review is the answer.", translationZh: "遗忘不可避免，复习才是解药。" },
+    ],
+    collocations: [
+      { phrase: "it is inevitable that", meaningZh: "……不可避免" },
+    ],
+  },
+  induce: {
+    root: { display: "in-（向内）+ duc（引导）", explanation: "duc 表「引导」（如 conduct、deduce）：引导进来，即引起、诱导。" },
+    mnemonic: "induce sb. to do sth.（劝使）；induce a change（引起变化）。",
+    examples: [
+      { sentence: "Poor sleep induces errors even in simple tasks.", translationZh: "睡眠不足连简单任务都会出错。" },
+    ],
+    collocations: [
+      { phrase: "induce a change", meaningZh: "引起变化" },
+    ],
+  },
   influence: {
     root: { display: "in-（流入）+ flu（流）+ -ence", explanation: "flu 表「流」（如 fluent），本义是「流进来」——像水一样渗入并改变。" },
     mnemonic: "influence 是潜移默化的影响，effect 是已经发生的结果。",
@@ -1308,6 +1695,116 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "have an influence on", meaningZh: "对……有影响" },
+    ],
+  },
+  justify: {
+    root: { display: "just（公正）+ -ify（使……化）", explanation: "使变得正当，即证明……有理、为……辩护。" },
+    mnemonic: "justify doing sth.（不接 to do）；排版里「两端对齐」也是这个词。",
+    examples: [
+      { sentence: "Nothing justifies skipping the review session.", translationZh: "没有什么能为跳过复习开脱。" },
+    ],
+    collocations: [
+      { phrase: "justify a decision", meaningZh: "为决定辩护" },
+    ],
+  },
+  isolate: {
+    root: { display: "isol（岛屿）+ -ate", explanation: "与 insulate 同源：变成一座岛，即孤立、隔离。" },
+    mnemonic: "isolate A from B；实验语境里指「把变量单独拿出来」。",
+    examples: [
+      { sentence: "Isolate the variable you want to test.", translationZh: "把你要检验的变量单独隔离出来。" },
+    ],
+    collocations: [
+      { phrase: "isolate from", meaningZh: "把……与……隔离" },
+    ],
+  },
+  intervene: {
+    root: { display: "inter-（在……之间）+ ven（来）", explanation: "ven / vent 表「来」（如 prevent、event）：来到中间，即干预、介入。" },
+    mnemonic: "intervene in sth.（介入某事）；名词 intervention。",
+    examples: [
+      { sentence: "Teachers intervened before the gap widened.", translationZh: "差距扩大之前，老师就介入了。" },
+    ],
+    collocations: [
+      { phrase: "intervene in", meaningZh: "干预" },
+    ],
+  },
+  interpret: {
+    root: { display: "inter-（在……之间）+ pret（传递、价值）", explanation: "在双方之间传话，于是有了「口译」与「解释」两义。" },
+    mnemonic: "interpret A as B（把 A 理解为 B）；口译员也叫 interpreter。",
+    examples: [
+      { sentence: "Different readers interpret the ending differently.", translationZh: "不同读者对结尾有不同解读。" },
+    ],
+    collocations: [
+      { phrase: "interpret as", meaningZh: "把……理解为" },
+    ],
+  },
+  intense: {
+    root: { display: "in-（加强）+ tens（拉紧）", explanation: "tend / tens 表「拉」（如 extend、tension）：拉到很紧，即强烈的。" },
+    mnemonic: "intense 修饰「程度高」的事物（heat、pressure、competition）。",
+    examples: [
+      { sentence: "Intense revision works only if you sleep enough.", translationZh: "只有睡够了，高强度复习才有效。" },
+    ],
+    collocations: [
+      { phrase: "intense pressure", meaningZh: "巨大的压力" },
+    ],
+  },
+  integrate: {
+    root: { display: "integer（完整、未触碰）", explanation: "in-（不）+ tang（触碰）：没被碰破的、完整的，即使成一体、整合。" },
+    mnemonic: "integrate A into / with B；形容词 integrated 是「融合的」。",
+    examples: [
+      { sentence: "Try to integrate new words into sentences you actually use.", translationZh: "试着把新词用到你真会说的句子里。" },
+    ],
+    collocations: [
+      { phrase: "integrate into", meaningZh: "融入" },
+    ],
+  },
+  insulate: {
+    root: { display: "insul（岛屿）+ -ate", explanation: "insula 是拉丁语「岛」：变成孤岛，即隔离、使隔绝。" },
+    mnemonic: "insulate A from B（使 A 免受 B 影响）；物理义是「绝缘」。",
+    examples: [
+      { sentence: "Good habits insulate you from last-minute panic.", translationZh: "好习惯能让你免于临考前的慌乱。" },
+    ],
+    collocations: [
+      { phrase: "insulate from", meaningZh: "使免于" },
+    ],
+  },
+  institute: {
+    root: { display: "in-（在上）+ stit（设立、站立）", explanation: "stit 表「设立」（如 constitute、substitute）：立起来，即设立、制定。" },
+    mnemonic: "institute 是动词「设立」；institution 是名词「机构/制度」。",
+    examples: [
+      { sentence: "The university instituted a new reading requirement last year.", translationZh: "这所大学去年设立了新的阅读要求。" },
+    ],
+    collocations: [
+      { phrase: "institute a rule", meaningZh: "制定规则" },
+    ],
+  },
+  install: {
+    root: { display: "in-（在内）+ stall（位置）", explanation: "stall 表「位置、摊位」（如 stall）：放到位置上安置好，即安装、安置。" },
+    mnemonic: "install software（装软件）；install sb. in office（使就职）。",
+    examples: [
+      { sentence: "Install the app before the first class.", translationZh: "第一次课前装好这个应用。" },
+    ],
+    collocations: [
+      { phrase: "install software", meaningZh: "安装软件" },
+    ],
+  },
+  initiate: {
+    root: { display: "in-（进入）+ it（走）+ -iate", explanation: "it 表「走」（如 initial、exit）：走进去开头，即发起、开始。" },
+    mnemonic: "initiate 比 start 正式，宾语多是 programme、talks、process。",
+    examples: [
+      { sentence: "She initiated a weekly review session for the class.", translationZh: "她为班级发起了一个每周一次的复习。" },
+    ],
+    collocations: [
+      { phrase: "initiate a programme", meaningZh: "启动项目" },
+    ],
+  },
+  inherit: {
+    root: { display: "in-（在内）+ her（继承人）", explanation: "her 表「继承」（如 heritage、heir）：接过来成为自己的，即继承。" },
+    mnemonic: "inherit sth. from sb.；计算机语境里指「继承父类特性」。",
+    examples: [
+      { sentence: "The system inherits several features from the old design.", translationZh: "这个系统继承了旧设计的若干特性。" },
+    ],
+    collocations: [
+      { phrase: "inherit a feature", meaningZh: "继承特性" },
     ],
   },
   maintain: {
@@ -1320,6 +1817,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "maintain a balance", meaningZh: "保持平衡" },
     ],
   },
+  manipulate: {
+    root: { display: "man（手）+ pul（填充、操作）+ -ate", explanation: "man 表「手」（如 manual、manufacture）：用手摆弄，即操作、操纵。" },
+    mnemonic: "manipulate 作「操纵」时多带贬义（manipulate data / public opinion）。",
+    examples: [
+      { sentence: "The study manipulated two variables at a time.", translationZh: "该研究一次操纵两个变量。" },
+    ],
+    collocations: [
+      { phrase: "manipulate data", meaningZh: "操纵数据" },
+    ],
+  },
   method: {
     root: { display: "meta-（沿着）+ hod（路）", explanation: "源自希腊语 methodos（追寻之路）：通往目标的路径，即方法。" },
     mnemonic: "method 偏「系统化的做法」，way 更口语。",
@@ -1330,6 +1837,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "a method of doing", meaningZh: "做……的方法" },
     ],
   },
+  motivate: {
+    root: { display: "mot（移动）+ -ivate", explanation: "mot / mov 表「动」（如 motion、move）：让人动起来，即激励。" },
+    mnemonic: "motivate sb. to do sth.；名词 motivation 常与 lose / lack 搭配。",
+    examples: [
+      { sentence: "Clear progress motivates students more than praise.", translationZh: "明确的进步比表扬更能激励学生。" },
+    ],
+    collocations: [
+      { phrase: "motivate sb. to", meaningZh: "激励某人做" },
+    ],
+  },
   necessary: {
     root: { display: "necess（不可避免）+ -ary（形容词后缀）", explanation: "necessity 是「必然性、必需」，necessary 即「不得不有的」。" },
     mnemonic: "necessary 说的是「非有不可」，比 important 强、跟 essential 近。",
@@ -1338,6 +1855,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "if necessary", meaningZh: "如果有必要" },
+    ],
+  },
+  negotiate: {
+    root: { display: "neg-（不）+ oti（闲暇）", explanation: "negotium 本是「没有闲暇（即忙于事务）」，后指「谈生意、协商」。" },
+    mnemonic: "negotiate with sb. over / for sth.；不加 about。",
+    examples: [
+      { sentence: "They negotiated a longer deadline with the supervisor.", translationZh: "他们和导师谈成了更长的期限。" },
+    ],
+    collocations: [
+      { phrase: "negotiate with", meaningZh: "与……协商" },
     ],
   },
   observe: {
@@ -1360,6 +1887,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "obtain information", meaningZh: "获取信息" },
     ],
   },
+  occur: {
+    root: { display: "oc-（朝向）+ cur（跑）", explanation: "cur / curs 表「跑」（如 current、recur）：跑过来出现，即发生。" },
+    mnemonic: "occur 没有被动语态；it occurs to sb. that… 是「某人想到」。",
+    examples: [
+      { sentence: "The same error occurs in three of her essays.", translationZh: "同样的错误在她三篇作文里出现。" },
+    ],
+    collocations: [
+      { phrase: "occur to", meaningZh: "被想到" },
+    ],
+  },
+  occupy: {
+    root: { display: "oc-（= ob-，朝向）+ cup（抓取）", explanation: "cap / cup 表「抓、拿」（如 capture、accept）：抓住不放，即占据、占用。" },
+    mnemonic: "be occupied with sth.（忙于某事）；occupy 不用于进行时被动。",
+    examples: [
+      { sentence: "Revision occupies most of my weekends.", translationZh: "复习占了我周末的大部分时间。" },
+    ],
+    collocations: [
+      { phrase: "occupy a position", meaningZh: "占据位置" },
+    ],
+  },
   opportunity: {
     root: { display: "opportun（顺风入港）+ -ity", explanation: "ob-（朝向）+ port（港口）：船顺风进港，正是「好时机」。" },
     mnemonic: "opportunity 强调「时机恰当」，chance 更偏「偶然」。",
@@ -1368,6 +1915,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "take the opportunity to", meaningZh: "借机做某事" },
+    ],
+  },
+  participate: {
+    root: { display: "part（部分）+ cip（取）+ -ate", explanation: "cip / cap 表「拿」（如 accept、anticipate）：拿走一份，即参与。" },
+    mnemonic: "participate in，不加 to；名词 participation 也接 in。",
+    examples: [
+      { sentence: "Students who participate in class retain more.", translationZh: "课上参与的学生记得更多。" },
+    ],
+    collocations: [
+      { phrase: "participate in", meaningZh: "参与" },
+    ],
+  },
+  oppose: {
+    root: { display: "op-（= ob-，相对）+ pose（放置）", explanation: "pos / pon 表「放」（如 propose、expose）：放在对立面，即反对。" },
+    mnemonic: "be opposed to 里 to 是介词，后接 doing，不是 to do。",
+    examples: [
+      { sentence: "She opposed changing the exam format.", translationZh: "她反对改变考试形式。" },
+    ],
+    collocations: [
+      { phrase: "oppose a plan", meaningZh: "反对计划" },
     ],
   },
   perceive: {
@@ -1390,6 +1957,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "persist in doing sth.", meaningZh: "坚持做某事" },
     ],
   },
+  persuade: {
+    root: { display: "per-（彻底）+ suad（劝说）", explanation: "suad / suas 表「劝」（如 persuasion、dissuade）：劝到对方点头，即说服。" },
+    mnemonic: "persuade sb. to do / into doing；劝阻是 dissuade sb. from doing。",
+    examples: [
+      { sentence: "No one persuaded him to change his method.", translationZh: "没人说服他改变方法。" },
+    ],
+    collocations: [
+      { phrase: "persuade sb. to", meaningZh: "说服某人做" },
+    ],
+  },
   potential: {
     root: { display: "potent（有力量的）+ -ial（形容词后缀）", explanation: "potent 是「强有力的」，potential 指力量尚未释放出来的状态。" },
     mnemonic: "潜力是「还没发生的力量」——所以它既可能是收益，也可能是风险。",
@@ -1400,6 +1977,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "have the potential to", meaningZh: "有……的可能" },
     ],
   },
+  precise: {
+    root: { display: "pre-（预先）+ cis（切）", explanation: "cis / cid 表「切」（如 decide、concise）：预先切得整齐，即精确的。" },
+    mnemonic: "precise 强调「分毫不差」，accurate 强调「与事实相符」。",
+    examples: [
+      { sentence: "Give precise figures, not rounded ones.", translationZh: "给出精确数字，不要取整。" },
+    ],
+    collocations: [
+      { phrase: "precise figures", meaningZh: "精确的数字" },
+    ],
+  },
+  precede: {
+    root: { display: "pre-（在前）+ cede（走）", explanation: "ced / cess 表「走」（如 proceed、exceed）：走在前面，即先于。" },
+    mnemonic: "precede（先于）与 proceed（继续）只差一个字母，写作时最易写混。",
+    examples: [
+      { sentence: "A short outline precedes the main argument.", translationZh: "主要论证之前有一段简短提纲。" },
+    ],
+    collocations: [
+      { phrase: "precede with", meaningZh: "以……开头" },
+    ],
+  },
   predict: {
     root: { display: "pre-（预先）+ dict（说）", explanation: "dict 表「说」（如 dictate）：预先说出，即预测。" },
     mnemonic: "predict 是「基于依据的预判」，forecast 多用于天气、经济数据。",
@@ -1408,6 +2005,46 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "predict that…", meaningZh: "预测……" },
+    ],
+  },
+  prevail: {
+    root: { display: "pre-（在前）+ vail（力量）", explanation: "val / vail 表「强、有价值」（如 value、valid）：力量占先，即盛行、获胜。" },
+    mnemonic: "prevail over（胜过）；prevail on sb.（说服某人）。",
+    examples: [
+      { sentence: "Common sense prevailed over the original plan.", translationZh: "常识最终胜过了原定计划。" },
+    ],
+    collocations: [
+      { phrase: "prevail over", meaningZh: "战胜／压过" },
+    ],
+  },
+  premise: {
+    root: { display: "pre-（在前）+ mis（送、放）", explanation: "mit / mis 表「送」（如 promise、submit）：先送出来的那句话，即前提。" },
+    mnemonic: "on the premise that…（在……前提下）；注意与 premises（房屋）区分。",
+    examples: [
+      { sentence: "The whole argument rests on a single premise.", translationZh: "整个论证建立在一个前提上。" },
+    ],
+    collocations: [
+      { phrase: "on the premise that", meaningZh: "在……前提下" },
+    ],
+  },
+  prejudice: {
+    root: { display: "pre-（预先）+ judic（判断）", explanation: "judic 表「判断」（如 judge、judicial）：在了解之前就下了判断，即偏见。" },
+    mnemonic: "prejudice against（对……的偏见）；without prejudice to（不影响）。",
+    examples: [
+      { sentence: "Prejudice against new methods slows everything down.", translationZh: "对新方法的偏见让一切都变慢。" },
+    ],
+    collocations: [
+      { phrase: "prejudice against", meaningZh: "对……的偏见" },
+    ],
+  },
+  prefer: {
+    root: { display: "pre-（在前）+ fer（携带）", explanation: "fer 表「带」（如 refer、transfer）：优先带到前面，即更喜欢。" },
+    mnemonic: "prefer doing A to doing B；prefer to do rather than do。",
+    examples: [
+      { sentence: "Most learners prefer short sessions to long ones.", translationZh: "多数学习者宁可短学多次，也不要一次学很久。" },
+    ],
+    collocations: [
+      { phrase: "prefer A to B", meaningZh: "比起 B 更喜欢 A" },
     ],
   },
   prevent: {
@@ -1430,6 +2067,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "in principle", meaningZh: "原则上" },
     ],
   },
+  proceed: {
+    root: { display: "pro-（向前）+ ceed（走）", explanation: "ceed / cess 表「走」（如 exceed、access）：往前走，即继续进行。" },
+    mnemonic: "proceed to do / proceed with sth.；名词 process 与它不同源但同源族。",
+    examples: [
+      { sentence: "Once the outline is ready, proceed to the first draft.", translationZh: "提纲一准备好，就继续写初稿。" },
+    ],
+    collocations: [
+      { phrase: "proceed with", meaningZh: "继续进行" },
+    ],
+  },
   process: {
     root: { display: "pro-（向前）+ cess（走）", explanation: "cess 表「走」（如 proceed、excess）：一步一步往前走，即为过程。" },
     mnemonic: "in the process of（在……过程中）；动词义是「处理（数据/申请）」。",
@@ -1438,6 +2085,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "in the process of", meaningZh: "在……的过程中" },
+    ],
+  },
+  prohibit: {
+    root: { display: "pro-（在前）+ hibit（持有）", explanation: "hibit 表「持有」（如 exhibit、inhibit）：在前面拦住不让你持有，即禁止。" },
+    mnemonic: "prohibit sb. from doing；名词 prohibition 也接 against。",
+    examples: [
+      { sentence: "The rules prohibit students from using phones in class.", translationZh: "规定禁止学生在课堂上使用手机。" },
+    ],
+    collocations: [
+      { phrase: "prohibit from", meaningZh: "禁止做" },
     ],
   },
   promote: {
@@ -1470,6 +2127,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "provide sb. with sth.", meaningZh: "向某人提供某物" },
     ],
   },
+  provoke: {
+    root: { display: "pro-（向前）+ vok（呼喊）", explanation: "voc / vok 表「声音、叫」（如 advocate、vocal）：朝前喊出来，即激起、引发。" },
+    mnemonic: "provoke 多接 reaction、discussion、anger，常带负面结果。",
+    examples: [
+      { sentence: "His question provoked a long discussion.", translationZh: "他的问题引发了一场长讨论。" },
+    ],
+    collocations: [
+      { phrase: "provoke a reaction", meaningZh: "引起反应" },
+    ],
+  },
   pursue: {
     root: { display: "pur-（向前）+ sue（跟随）", explanation: "sue 表「跟随」（如 sue 起诉、ensue 接着发生）：一路跟上去，即追求。" },
     mnemonic: "pursue 的对象常是「目标、事业、学位」这类长期之物。",
@@ -1478,6 +2145,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "pursue a goal", meaningZh: "追求目标" },
+    ],
+  },
+  qualify: {
+    root: { display: "qual（性质、种类）+ -ify（使……化）", explanation: "qual 表「什么样」（如 quality）：使具备某种性质，即取得资格。" },
+    mnemonic: "qualify for（有资格获得）；qualify as（取得……资格）。",
+    examples: [
+      { sentence: "Two more credits qualify you for the advanced class.", translationZh: "再修两个学分你就有资格上高级班。" },
+    ],
+    collocations: [
+      { phrase: "qualify for", meaningZh: "有资格获得" },
     ],
   },
   recognize: {
@@ -1508,6 +2185,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "reflect on", meaningZh: "反思；思考" },
+    ],
+  },
+  reinforce: {
+    root: { display: "re-（再）+ in-（使）+ force（力量）", explanation: "再次给它加上力量，即加强、强化。" },
+    mnemonic: "reinforce 是「加强」，enforce 是「强制执行」——前缀决定意思。",
+    examples: [
+      { sentence: "Weekly tests reinforce what you revised on Sunday.", translationZh: "每周测验能强化你周日复习的内容。" },
+    ],
+    collocations: [
+      { phrase: "reinforce a habit", meaningZh: "强化习惯" },
     ],
   },
   reject: {
@@ -1700,6 +2387,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "suggest doing sth.", meaningZh: "建议做某事" },
     ],
   },
+  sustain: {
+    root: { display: "sus-（= sub-，在下）+ tain（握住）", explanation: "tain 表「拿住」（如 maintain、retain）：在下面托住，即维持、支撑。" },
+    mnemonic: "sustain 强调「长时间撑住」，maintain 强调「保持原状」。",
+    examples: [
+      { sentence: "Few students sustain that pace for a whole term.", translationZh: "很少有学生能整个学期保持那个节奏。" },
+    ],
+    collocations: [
+      { phrase: "sustain growth", meaningZh: "维持增长" },
+    ],
+  },
   theory: {
     root: { display: "theor（观看、思辨）+ -y（名词后缀）", explanation: "源自希腊语 theoria（观看、思辨），指系统化的看法。" },
     mnemonic: "in theory 是「理论上」——常与 in practice 对照出现。",
@@ -1708,6 +2405,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "in theory", meaningZh: "理论上" },
+    ],
+  },
+  tolerate: {
+    root: { display: "toler（忍受、承担）+ -ate", explanation: "源自拉丁语 tolerare「承受、忍耐」，即容忍、容许。" },
+    mnemonic: "tolerate 后接名词或 doing，不接 to do。",
+    examples: [
+      { sentence: "The system tolerates small errors but not big ones.", translationZh: "这个系统容许小错误，但不能有大错。" },
+    ],
+    collocations: [
+      { phrase: "tolerate errors", meaningZh: "容许错误" },
     ],
   },
   transform: {
