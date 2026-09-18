@@ -15,47 +15,47 @@
       "sectionId": "m1-p1-c2-s1",
       "sectionTitle": "导数与微分",
       "title": "导数定义",
-      "summary": "导数把区间上的平均变化率压缩到一个点：先取点 P 与邻近点 Q 的割线斜率，再让 Q 无限靠近 P。",
+      "summary": "导数 f′(x₀)=lim_{Δx→0}[f(x₀+Δx)−f(x₀)]/Δx 是函数在一点处的瞬时变化率，它由差商的极限定义。",
       "tags": [
-        "瞬时变化率"
+        "差商的极限"
       ],
       "sortOrder": 10,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "f′(x₀)=limₕ→0[f(x₀+h)−f(x₀)]/h",
-        "caption": "导数把区间上的平均变化率压缩到一个点：先取点 P 与邻近点 Q 的割线斜率，再让 Q 无限靠近 P。"
+        "format": "latex",
+        "content": "f′(x₀)=lim_{Δx→0}[f(x₀+Δx)−f(x₀)]/Δx",
+        "caption": "导数 f′(x₀)=lim_{Δx→0}[f(x₀+Δx)−f(x₀)]/Δx 是函数在一点处的瞬时变化率，它由差商的极限定义。"
       },
       "keyPoints": [
         {
-          "id": "cha-shang-shi-ping-jun-bian-hua-l",
-          "title": "差商是平均变化率",
-          "bodyMarkdown": "差商是平均变化率"
+          "id": "dao-shu-shi-cha-shang-de-ji-xian-bu-shi-0jgje3",
+          "title": "导数是差商的极限",
+          "bodyMarkdown": "导数是差商的极限，不是「变化量相除」"
         },
         {
-          "id": "ji-xian-hou-de-jie-guo-shi-shun-shi-0bxbbf",
-          "title": "极限后的结果是瞬时变化率",
-          "bodyMarkdown": "极限后的结果是瞬时变化率"
+          "id": "fen-duan-dian-chu-yao-yong-ding-yi-suan-11226e",
+          "title": "分段点处要用定义算左右导数",
+          "bodyMarkdown": "分段点处要用定义算左右导数，不能直接用求导公式"
         },
         {
-          "id": "zuo-you-dao-shu-xiang-deng-shi-ke-dao-1y1hfl",
-          "title": "左右导数相等是可导条件",
-          "bodyMarkdown": "左右导数相等是可导条件"
+          "id": "ke-dao-de-deng-jia-xing-shi-f-x-x-f-x-f-05wwzh",
+          "title": "可导的等价形式",
+          "bodyMarkdown": "可导的等价形式：f(x₀+Δx)−f(x₀)=f′(x₀)Δx+o(Δx)"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-zai-x-1-chu-cha-1wyqdd",
+          "id": "f-x-x-zai-0-chu-zuo-you-0r6zh1",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=x² 在 x₀=1 处，差商为 2+h，故 f′(1)=2。"
+          "bodyMarkdown": "f(x)=|x| 在 0 处：左右导数分别为 −1 与 1，故不可导。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "导数把区间上的平均变化率压缩到一个点：先取点 P 与邻近点 Q 的割线斜率，再让 Q 无限靠近 P。左右差商都存在且相等，函数在该点才可导。\n\n### 解题步骤\n\n1. 写出增量比\n2. 分别检查左右极限\n3. 令步长趋于 0\n\n### 易错点\n\n差商存在不等于导数存在；尖点处左右差商可能不同。"
+      "bodyMarkdown": "导数 f′(x₀)=lim_{Δx→0}[f(x₀+Δx)−f(x₀)]/Δx 是函数在一点处的瞬时变化率，它由差商的极限定义。判断分段函数在分段点是否可导，必须回到这个定义式算左右导数。\n\n### 解题步骤\n\n1. 写出差商 [f(x₀+Δx)−f(x₀)]/Δx\n2. 求 Δx→0 的极限\n3. 分段点分别算左右导数\n\n### 易错点\n\n用求导公式代替定义去判断分段点的可导性。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p1-c2-s1",
       "sectionTitle": "导数与微分",
       "title": "导数几何意义",
-      "summary": "曲线上的割线在第二个点逼近第一个点时，最终趋向切线。导数就是切线相对 x 轴的斜率，它描述的是局部一阶趋势，而不是整段区间的平均走势。",
+      "summary": "f′(x₀) 就是曲线 y=f(x) 在点 (x₀,f(x₀)) 处切线的斜率，于是切线方程为 y−f(x₀)=f′(x₀)(x−x₀)；法线斜率为 −1/f′(x₀)。",
       "tags": [
         "切线斜率"
       ],
       "sortOrder": 20,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
         "content": "y−f(x₀)=f′(x₀)(x−x₀)",
-        "caption": "曲线上的割线在第二个点逼近第一个点时，最终趋向切线。"
+        "caption": "f′(x₀) 就是曲线 y=f(x) 在点 (x₀,f(x₀)) 处切线的斜率"
       },
       "keyPoints": [
         {
-          "id": "f-0-biao-shi-ju-bu-xiang-you-shang-sheng",
-          "title": "f′>0 表示局部向右上升",
-          "bodyMarkdown": "f′>0 表示局部向右上升"
+          "id": "f-x-shi-qie-xian-xie-l-ke-dao-you-fei-1jg93t",
+          "title": "f′(x₀) 是切线斜率",
+          "bodyMarkdown": "f′(x₀) 是切线斜率，可导 ⇔ 有非竖直切线"
         },
         {
-          "id": "f-0-biao-shi-ju-bu-xiang-you-xia-jiang",
-          "title": "f′<0 表示局部向右下降",
-          "bodyMarkdown": "f′<0 表示局部向右下降"
+          "id": "qie-xian-fang-cheng-y-f-x-f-x-x-x",
+          "title": "切线方程 y−f(x₀)=f′(x₀)(x−x₀",
+          "bodyMarkdown": "切线方程 y−f(x₀)=f′(x₀)(x−x₀)"
         },
         {
-          "id": "f-0-zhi-biao-shi-qie-xian-shui-ping",
-          "title": "f′=0 只表示切线水平",
-          "bodyMarkdown": "f′=0 只表示切线水平"
+          "id": "fa-xian-xie-l-shi-1-f-x-f-x-0",
+          "title": "法线斜率是 −1/f′(x₀)（f′(x₀)≠0",
+          "bodyMarkdown": "法线斜率是 −1/f′(x₀)（f′(x₀)≠0）"
         }
       ],
       "examples": [
         {
-          "id": "y-x-zai-1-1-de-qie-xian-1mh5ok",
+          "id": "y-x-zai-x-1-chu-f-1-1-f-0e0o64",
           "title": "讲解例子",
-          "bodyMarkdown": "y=x² 在 (1,1) 的切线为 y−1=2(x−1)，法线斜率为 −1/2。"
+          "bodyMarkdown": "y=x² 在 x=1 处：f(1)=1、f′(1)=2，切线为 y−1=2(x−1)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "曲线上的割线在第二个点逼近第一个点时，最终趋向切线。导数就是切线相对 x 轴的斜率，它描述的是局部一阶趋势，而不是整段区间的平均走势。\n\n### 解题步骤\n\n1. 取曲线上一点\n2. 写割线斜率\n3. 取极限得到切线与法线\n\n### 易错点\n\n导数为零不自动意味着极值，还要看附近导数变号或更高阶信息。"
+      "bodyMarkdown": "f′(x₀) 就是曲线 y=f(x) 在点 (x₀,f(x₀)) 处切线的斜率，于是切线方程为 y−f(x₀)=f′(x₀)(x−x₀)；法线斜率为 −1/f′(x₀)。\n\n### 解题步骤\n\n1. 求出 f(x₀) 与 f′(x₀)\n2. 代入点斜式得切线方程\n3. 需要时再写法线方程\n\n### 易错点\n\n把切线斜率写成 Δy/Δx（那是割线斜率）。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p1-c2-s1",
       "sectionTitle": "导数与微分",
       "title": "导数物理意义",
-      "summary": "导数在物理中表示瞬时变化率：位移对时间的导数是速度，速度对时间的导数是加速度。",
+      "summary": "导数是变化率：位移对时间的导数是速度，速度对时间的导数是加速度。",
       "tags": [
-        "瞬时变化率"
+        "变化率"
       ],
       "sortOrder": 30,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "v(t)=s′(t)，a(t)=v′(t)=s″(t)",
-        "caption": "导数在物理中表示瞬时变化率：位移对时间的导数是速度，速度对时间的导数是加速度。"
+        "content": "v(t)=s′(t)，a(t)=s″(t)",
+        "caption": "导数是变化率：位移对时间的导数是速度，速度对时间的导数是加速度。"
       },
       "keyPoints": [
         {
-          "id": "wei-zhi-s-t-de-dao-shu-shi-su-du-v-t",
-          "title": "位置 s(t) 的导数是速度 v(t)",
-          "bodyMarkdown": "位置 s(t) 的导数是速度 v(t)"
+          "id": "v-t-s-t-a-t-v-t-s-t",
+          "title": "v(t)=s′(t)",
+          "bodyMarkdown": "v(t)=s′(t)，a(t)=v′(t)=s″(t)"
         },
         {
-          "id": "su-du-v-t-de-dao-shu-shi-jia-su-du-a-t",
-          "title": "速度 v(t) 的导数是加速度 a(t)",
-          "bodyMarkdown": "速度 v(t) 的导数是加速度 a(t)"
+          "id": "dao-shu-de-zheng-fu-biao-shi-zeng-huo-1xttaf",
+          "title": "导数的正负表示增或减",
+          "bodyMarkdown": "导数的正负表示增或减，绝对值表示变化快慢"
         },
         {
-          "id": "dao-shu-dan-wei-deng-yu-yuan-liang-dan-0rqajv",
-          "title": "导数单位等于原量单位除以自变量单位",
-          "bodyMarkdown": "导数单位等于原量单位除以自变量单位"
+          "id": "su-l-shi-su-du-de-jue-dui-zhi",
+          "title": "「速率」是速度的绝对值",
+          "bodyMarkdown": "「速率」是速度的绝对值"
         }
       ],
       "examples": [
         {
-          "id": "s-t-t-3t-shi-v-t-3t-3-a-1h3jh0",
+          "id": "s-t-t-3t-ze-v-t-3t-3-t-125weu",
           "title": "讲解例子",
-          "bodyMarkdown": "s(t)=t³−3t 时，v(t)=3t²−3，a(t)=6t。"
+          "bodyMarkdown": "s(t)=t³−3t，则 v(t)=3t²−3，t=2 时 v=9。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "导数在物理中表示瞬时变化率：位移对时间的导数是速度，速度对时间的导数是加速度。它把一个量在很短时间内的平均变化，理想化为某一时刻的瞬时变化。\n\n### 解题步骤\n\n1. 建立物理量函数\n2. 按自变量求导\n3. 带入时刻并解释单位\n\n### 易错点\n\n平均速度不能直接当作任意时刻的瞬时速度。"
+      "bodyMarkdown": "导数是变化率：位移对时间的导数是速度，速度对时间的导数是加速度。凡是「某量关于另一量的变化快慢」，都可以用导数描述。\n\n### 解题步骤\n\n1. 写出函数关系\n2. 对自变量求导\n3. 按物理含义解释符号与大小\n\n### 易错点\n\n把速度与加速度混用（加速度是速度的导数，不是位移的导数）。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p1-c2-s1",
       "sectionTitle": "导数与微分",
       "title": "可导与连续",
-      "summary": "可导要求差商有极限，因此比连续更强：可导一定连续，但连续函数可能有尖点、角点或竖直切线而不可导。",
+      "summary": "可导一定连续，但连续不一定可导（如 y=|x| 在 0 处）。",
       "tags": [
-        "强弱关系"
+        "可导必连续，反之不然"
       ],
       "sortOrder": 40,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "可导 ⇒ 连续；连续 ⇏ 可导",
-        "caption": "可导要求差商有极限，因此比连续更强：可导一定连续，但连续函数可能有尖点、角点或竖直切线而不可导。"
+        "content": "可导 ⇒ 连续",
+        "caption": "可导一定连续，但连续不一定可导（如 y=|x| 在 0 处）。"
       },
       "keyPoints": [
         {
-          "id": "ke-dao-lian-xu",
+          "id": "ke-dao-lian-xu-lian-xu-ke-dao",
           "title": "可导 ⇒ 连续",
-          "bodyMarkdown": "可导 ⇒ 连续"
+          "bodyMarkdown": "可导 ⇒ 连续；连续 ⇏ 可导"
         },
         {
-          "id": "lian-xu-ke-dao",
-          "title": "连续 ⇏ 可导",
-          "bodyMarkdown": "连续 ⇏ 可导"
+          "id": "bu-lian-xu-yi-ding-bu-ke-dao-fan-xiang-0qj60n",
+          "title": "不连续 ⇒ 一定不可导（反向用）",
+          "bodyMarkdown": "不连续 ⇒ 一定不可导（反向用）"
         },
         {
-          "id": "zuo-you-dao-shu-xiang-deng-hai-yao-jian-01vtpm",
-          "title": "左右导数相等还要建立在函数连续的基础上",
-          "bodyMarkdown": "左右导数相等还要建立在函数连续的基础上"
+          "id": "lian-xu-dan-jian-dian-huo-shu-zhi-qie-0obnyu",
+          "title": "连续但「尖点」或「竖直切线」处不可导",
+          "bodyMarkdown": "连续但「尖点」或「竖直切线」处不可导"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-zai-0-lian-xu-dan-11vs69",
+          "id": "y-x-zai-0-chu-lian-xu-1izk7z",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=|x| 在 0 连续，但左导数 −1、右导数 1，所以不可导。"
+          "bodyMarkdown": "y=|x| 在 0 处连续但不可导，说明连续不是充分条件。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "可导要求差商有极限，因此比连续更强：可导一定连续，但连续函数可能有尖点、角点或竖直切线而不可导。判断题应按“先连续、后可导”的顺序进行。\n\n### 解题步骤\n\n1. 先求左右极限判断连续\n2. 再求左右导数\n3. 比较导数并定位不可导原因\n\n### 易错点\n\n把连续性当成可导性的充分条件，会漏掉尖点反例。"
+      "bodyMarkdown": "可导一定连续，但连续不一定可导（如 y=|x| 在 0 处）。所以「连续」是可导的必要条件，判断不可导时可以先用连续性排除。\n\n### 解题步骤\n\n1. 先判断是否连续\n2. 不连续则直接不可导\n3. 连续时再用定义算左右导数\n\n### 易错点\n\n由连续直接断言可导。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m1-p1-c2-s1",
       "sectionTitle": "导数与微分",
       "title": "微分",
-      "summary": "微分是函数增量的线性主部。当 dx 足够小时，dy=f′(x)dx 能用最简单的线性变化近似真实增量 Δy。",
+      "summary": "微分 dy=f′(x)dx 是函数增量 Δy 的线性主部：Δy=dy+o(dx)。",
       "tags": [
-        "线性近似"
+        "增量的线性主部"
       ],
       "sortOrder": 50,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
         "content": "dy=f′(x)dx；Δy=dy+o(dx)",
-        "caption": "微分是函数增量的线性主部。"
+        "caption": "微分 dy=f′(x)dx 是函数增量 Δy 的线性主部：Δy=dy+o(dx)。"
       },
       "keyPoints": [
         {
-          "id": "dx-shi-zi-bian-liang-de-wei-xiao-bian-0oezgw",
-          "title": "dx 是自变量的微小变化",
-          "bodyMarkdown": "dx 是自变量的微小变化"
+          "id": "dy-f-x-dx-shi-y-de-xian-xing-zhu-bu",
+          "title": "dy=f′(x)dx",
+          "bodyMarkdown": "dy=f′(x)dx，是 Δy 的线性主部"
         },
         {
-          "id": "dy-shi-y-de-yi-jie-jin-si",
-          "title": "dy 是 Δy 的一阶近似",
-          "bodyMarkdown": "dy 是 Δy 的一阶近似"
+          "id": "y-dy-o-dx-wu-cha-shi-dx-de-gao-jie-wu-1gmb3l",
+          "title": "Δy=dy+o(dx)",
+          "bodyMarkdown": "Δy=dy+o(dx)，误差是 dx 的高阶无穷小"
         },
         {
-          "id": "wu-cha-tong-chang-shi-bi-dx-geng-gao-01trqr",
-          "title": "误差通常是比 dx 更高阶的小量",
-          "bodyMarkdown": "误差通常是比 dx 更高阶的小量"
+          "id": "ke-wei-yu-ke-dao-deng-jia-yi-yuan-han-1x3upl",
+          "title": "可微与可导等价（一元函数）",
+          "bodyMarkdown": "可微与可导等价（一元函数）"
         }
       ],
       "examples": [
         {
-          "id": "4-04-4-1-4-0-04-2-01",
+          "id": "1-02-1-0-02-2-1-01-qu-f-1koxzb",
           "title": "讲解例子",
-          "bodyMarkdown": "√(4.04)≈√4+(1/4)·0.04=2.01。"
+          "bodyMarkdown": "√(1.02)≈1+0.02/2=1.01（取 f(x)=√x，x₀=1）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分是函数增量的线性主部。当 dx 足够小时，dy=f′(x)dx 能用最简单的线性变化近似真实增量 Δy。它既是导数的另一种表达，也常用于误差估计。\n\n### 解题步骤\n\n1. 确定基准点与 dx\n2. 计算 f′(x)dx\n3. 用 dy 估计函数值或误差\n\n### 易错点\n\ndy 与真实增量 Δy 不完全相等；只有在一阶近似语境下才能替代。"
+      "bodyMarkdown": "微分 dy=f′(x)dx 是函数增量 Δy 的线性主部：Δy=dy+o(dx)。用它可以做近似计算 f(x₀+Δx)≈f(x₀)+f′(x₀)Δx。\n\n### 解题步骤\n\n1. 求 f′(x)\n2. 写出 dy=f′(x)dx\n3. 近似计算时用 dy 代替 Δy\n\n### 易错点\n\n把 dx 与 Δx 当成不同的东西（一元函数里 dx=Δx）。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m1-p1-c2-s2",
       "sectionTitle": "求导法则",
       "title": "基本导数公式",
-      "summary": "基本导数公式来自极限定义，是后续四则、复合、隐函数和参数求导的积木。",
+      "summary": "基本导数公式必须背熟：(xᵃ)′=αxᵃ⁻¹、(eˣ)′=eˣ、(ln x)′=1/x、(sin x)′=cos x、(cos x)′=−sin x、(arctan x)′=1/(1+x²) 等。",
       "tags": [
-        "熟练使用基本表"
+        "导数速查表"
       ],
       "sortOrder": 60,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "(x^α)′=αx^(α−1)；(eˣ)′=eˣ；(ln x)′=1/x",
-        "caption": "基本导数公式来自极限定义，是后续四则、复合、隐函数和参数求导的积木。"
+        "content": "(xᵃ)′=αxᵃ⁻¹；(eˣ)′=eˣ；(ln x)′=1/x",
+        "caption": "基本导数公式必须背熟：(xᵃ)′=αxᵃ⁻¹、(eˣ)′=eˣ、(ln x)′=1/x、(sin x)′=cos x"
       },
       "keyPoints": [
         {
-          "id": "chang-shu-dao-shu-wei-0",
-          "title": "常数导数为 0",
-          "bodyMarkdown": "常数导数为 0"
+          "id": "mi-zhi-dui-san-jiao-fan-san-jiao-wu-lei-1sfu2p",
+          "title": "幂、指、对、三角、反三角五类都要记",
+          "bodyMarkdown": "幂、指、对、三角、反三角五类都要记"
         },
         {
-          "id": "x-x-1",
-          "title": "(x^α)′=αx^(α−1)",
-          "bodyMarkdown": "(x^α)′=αx^(α−1)"
+          "id": "ln-x-1-x-zhu-yi-jue-dui-zhi",
+          "title": "(ln|x|)′=1/x",
+          "bodyMarkdown": "(ln|x|)′=1/x，注意绝对值"
         },
         {
-          "id": "ln-x-1-x-zhi-zai-x-0-de-shi-han-shu-yu-13fqbd",
-          "title": "(ln x)′=1/x 只在 x>0 的实函数语",
-          "bodyMarkdown": "(ln x)′=1/x 只在 x>0 的实函数语境成立"
+          "id": "arcsin-x-1-1-x-arctan-x-1-1-x",
+          "title": "(arcsin x)′=1/√(1−x²)",
+          "bodyMarkdown": "(arcsin x)′=1/√(1−x²)，(arctan x)′=1/(1+x²)"
         }
       ],
       "examples": [
         {
-          "id": "y-3x-2cos-x-de-dao-shu-09fz3j",
+          "id": "x-x-1-2-1-2-x",
           "title": "讲解例子",
-          "bodyMarkdown": "y=3x⁴−2cos x 的导数为 12x³+2sin x。"
+          "bodyMarkdown": "(√x)′=(x^{1/2})′=1/(2√x)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "基本导数公式来自极限定义，是后续四则、复合、隐函数和参数求导的积木。记公式时同时记定义域和常数因子，尤其注意 ln x、反三角函数的适用范围。\n\n### 解题步骤\n\n1. 拆出常数与基本函数\n2. 逐项匹配公式\n3. 检查定义域和符号\n\n### 易错点\n\n把复合函数当作基本函数直接求导，漏掉内层导数。"
+      "bodyMarkdown": "基本导数公式必须背熟：(xᵃ)′=αxᵃ⁻¹、(eˣ)′=eˣ、(ln x)′=1/x、(sin x)′=cos x、(cos x)′=−sin x、(arctan x)′=1/(1+x²) 等。\n\n### 解题步骤\n\n1. 识别函数类型\n2. 套用对应公式\n3. 注意符号与定义域\n\n### 易错点\n\n把 (ln x)′ 与 (aˣ)′ 记混（ln x 的导数是 1/x，不是 ln x）。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,51 +321,47 @@
       "sectionId": "m1-p1-c2-s2",
       "sectionTitle": "求导法则",
       "title": "四则运算",
-      "summary": "和差积商求导：(u±v)′=u′±v′；(uv)′=u′v+uv′；(u/v)′=(u′v−uv′)/v²（v≠0），微分形式同样成立。",
+      "summary": "(u±v)′=u′±v′，(uv)′=u′v+uv′，(u/v)′=(u′v−uv′)/v²（v≠0）；这些法则要求各部分可导。",
       "tags": [
-        "求导法则"
+        "和差积商求导"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 7,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "(uv)'=u'v+uv'；(u/v)'=(u'v−uv')/v²",
-        "caption": "和差积商求导：(u±v)′=u′±v′；(uv)′=u′v+uv′；(u/v)′=(u′v−uv′)/v²（v≠0），微分形式同样成立。"
+        "content": "(uv)′=u′v+uv′；(u/v)′=(u′v−uv′)/v²",
+        "caption": "(u±v)′=u′±v′，(uv)′=u′v+uv′，(u/v)′=(u′v−uv′)/v²（v≠0）；这些法则要求各部分可导。"
       },
       "keyPoints": [
         {
-          "id": "ji-fa-ze-shi-zhu-xiang-lun-huan-uv-u-v-1ffzlu",
-          "title": "积法则是逐项轮换",
-          "bodyMarkdown": "积法则是逐项轮换：(uv)′=u′v+uv′，不是 u′v′"
+          "id": "uv-u-v-uv-bu-yao-xie-cheng-u-v",
+          "title": "(uv)′=u′v+uv′",
+          "bodyMarkdown": "(uv)′=u′v+uv′，不要写成 u′v′"
         },
         {
-          "id": "shang-fa-ze-fen-zi-wei-u-v-uv-shun-xu-0j9rhy",
-          "title": "商法则分子为 u′v−uv′",
-          "bodyMarkdown": "商法则分子为 u′v−uv′，顺序不能反，分母是 v²"
+          "id": "u-v-de-fen-mu-shi-v-fen-zi-shi-u-v-uv",
+          "title": "(u/v)′ 的分母是 v²",
+          "bodyMarkdown": "(u/v)′ 的分母是 v²，分子是 u′v−uv′"
         },
         {
-          "id": "duo-yin-zi-cheng-ji-xian-fen-li-zai-te-1kpdeo",
-          "title": "多因子乘积先分离在特殊点取零的因子",
-          "bodyMarkdown": "多因子乘积先分离在特殊点取零的因子，化两项再求导"
+          "id": "shang-fa-ze-ke-you-cheng-ji-fa-ze-tui-01h8r3",
+          "title": "商法则可由乘积法则推出",
+          "bodyMarkdown": "商法则可由乘积法则推出"
         }
       ],
       "examples": [
         {
-          "id": "f-x-tan-x-4-n-ling-u-1n15kf",
+          "id": "x-sin-x-sin-x-x-cos-x",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=Πₙ₌₁..₁₀₀(tan(πxⁿ/4)−n)：令 u=tan(πx/4)−1（在 x=1 处为 0），v 为其余 99 项之积，则 f′(1)=u′(1)v(1)=−π·99!/2。"
+          "bodyMarkdown": "(x sin x)′=sin x+x cos x。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第4讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "和差积商求导：(u±v)′=u′±v′；(uv)′=u′v+uv′；(u/v)′=(u′v−uv′)/v²（v≠0），微分形式同样成立。要注意：遇到因式超过三个的乘积不要硬展开求导，要把“特立独行”的因子分离出来，凑成 u·v 两项的经典形式再套乘法法则。\n\n### 解题步骤\n\n1. 识别运算结构（和/积/商/多因子）\n2. 乘积逐项轮换、商按口诀上导下不导减上不导下导除以下方\n3. 多因子先分离再套两项法则\n\n### 易错点\n\n(uv)′≠u′v′；商法则漏除 v²、分子两项写反，是改卷里最常见的丢分点。"
+      "bodyMarkdown": "(u±v)′=u′±v′，(uv)′=u′v+uv′，(u/v)′=(u′v−uv′)/v²（v≠0）；这些法则要求各部分可导。\n\n### 解题步骤\n\n1. 识别运算类型\n2. 套用对应法则\n3. 化简并整理\n\n### 易错点\n\n把乘积的导数写成两个导数相乘。"
     },
     {
       "schemaVersion": "1.0",
@@ -376,7 +372,7 @@
       "sectionId": "m1-p1-c2-s2",
       "sectionTitle": "求导法则",
       "title": "复合函数求导",
-      "summary": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。",
+      "summary": "复合函数求导的核心是链式法则：[f(g(x))]′=f′(g(x))·g′(x)。",
       "tags": [
         "链式法则"
       ],
@@ -385,38 +381,38 @@
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "d[f(g(x))]/dx=f′(g(x))g′(x)",
-        "caption": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。"
+        "content": "dy/dx=dy/du·du/dx",
+        "caption": "复合函数求导的核心是链式法则：[f(g(x))]′=f′(g(x))·g′(x)。"
       },
       "keyPoints": [
         {
-          "id": "xian-bian-ren-zui-wai-ceng",
-          "title": "先辨认最外层",
-          "bodyMarkdown": "先辨认最外层"
+          "id": "lian-shi-fa-ze-wai-dao-cheng-nei-dao",
+          "title": "链式法则",
+          "bodyMarkdown": "链式法则：外导乘内导"
         },
         {
-          "id": "mei-yi-ceng-dou-yao-cheng-xia-yi-ceng-092wo7",
-          "title": "每一层都要乘下一层导数",
-          "bodyMarkdown": "每一层都要乘下一层导数"
+          "id": "duo-ceng-fu-he-zhu-ceng-xiang-cheng-bu-1led59",
+          "title": "多层复合逐层相乘",
+          "bodyMarkdown": "多层复合逐层相乘，不要漏层"
         },
         {
-          "id": "zui-hou-zai-an-xu-yao-zhan-kai",
-          "title": "最后再按需要展开",
-          "bodyMarkdown": "最后再按需要展开"
+          "id": "fu-he-han-shu-de-gao-jie-dao-shu-tong-1yqhk0",
+          "title": "复合函数的高阶导数同样要按链式法则处理",
+          "bodyMarkdown": "复合函数的高阶导数同样要按链式法则处理"
         }
       ],
       "examples": [
         {
-          "id": "y-sin-x-1-shi-y-cos-x-1-1553wz",
+          "id": "e-x-e-x-2x",
           "title": "讲解例子",
-          "bodyMarkdown": "y=sin(x²+1) 时，y′=cos(x²+1)·2x。"
+          "bodyMarkdown": "(e^{x²})′=e^{x²}·2x。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "复合函数的变化要沿着“输入 → 内层 → 外层”的路径传递。外层导数先保留内层整体，再乘以内层导数；多层复合就继续沿路径相乘。\n\n### 解题步骤\n\n1. 标出内外层\n2. 由外向内求导\n3. 乘上所有中间导数\n\n### 易错点\n\n只求外层导数不乘内层导数，是链式法则最典型的漏项。"
+      "bodyMarkdown": "复合函数求导的核心是链式法则：[f(g(x))]′=f′(g(x))·g′(x)。它来自「变化率相乘」的直觉——内层变化带动外层变化。\n\n### 解题步骤\n\n1. 识别复合结构\n2. 写外层导数\n3. 乘内层导数并化简\n\n### 易错点\n\n把 f(g(x)) 的导数写成 f′(g(x)) 就停下。"
     },
     {
       "schemaVersion": "1.0",
@@ -427,47 +423,47 @@
       "sectionId": "m1-p1-c2-s2",
       "sectionTitle": "求导法则",
       "title": "反函数求导",
-      "summary": "原函数和反函数在对应点关于 y=x 对称。交换 x、y 后，两个方向的增量互换，所以在原导数非零时，反函数导数等于原导数的倒数。",
+      "summary": "反函数的导数等于原函数导数的倒数：(f⁻¹)′(y)=1/f′(x)，其中 y=f(x)。",
       "tags": [
-        "反向斜率"
+        "导数取倒数"
       ],
       "sortOrder": 90,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "(f⁻¹)′(y)=1/f′(x)，x=f⁻¹(y)",
-        "caption": "原函数和反函数在对应点关于 y=x 对称。"
+        "content": "(f⁻¹)′(y)=1/f′(x)",
+        "caption": "反函数的导数等于原函数导数的倒数：(f⁻¹)′(y)=1/f′(x)，其中 y=f(x)。"
       },
       "keyPoints": [
         {
-          "id": "dui-ying-dian-bi-xu-pei-dui",
-          "title": "对应点必须配对",
-          "bodyMarkdown": "对应点必须配对"
+          "id": "f-y-1-f-x-f-x-0",
+          "title": "(f⁻¹)′(y)=1/f′(x)（f′(x)≠",
+          "bodyMarkdown": "(f⁻¹)′(y)=1/f′(x)（f′(x)≠0）"
         },
         {
-          "id": "yuan-han-shu-dao-shu-bu-neng-wei-0",
-          "title": "原函数导数不能为 0",
-          "bodyMarkdown": "原函数导数不能为 0"
+          "id": "fan-han-shu-de-ding-yi-yu-shi-yuan-han-0npopw",
+          "title": "反函数的定义域是原函数的值域",
+          "bodyMarkdown": "反函数的定义域是原函数的值域"
         },
         {
-          "id": "qiu-fan-han-shu-er-jie-dao-shi-yao-ji-09trpc",
-          "title": "求反函数二阶导时要继续用链式法则",
-          "bodyMarkdown": "求反函数二阶导时要继续用链式法则"
+          "id": "arcsin-arctan-de-dao-shu-gong-shi-dou-1m9age",
+          "title": "arcsin、arctan 的导数公式都由它推出",
+          "bodyMarkdown": "arcsin、arctan 的导数公式都由它推出"
         }
       ],
       "examples": [
         {
-          "id": "sin-x-zai-3-chu-dao-shu-1p9sv8",
+          "id": "y-e-de-fan-han-shu-x-ln-02bn73",
           "title": "讲解例子",
-          "bodyMarkdown": "sin x 在 π/3 处导数为 1/2，所以 arcsin x 在 √3/2 处导数为 2。"
+          "bodyMarkdown": "y=eˣ 的反函数 x=ln y，导数为 1/eˣ=1/y。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "原函数和反函数在对应点关于 y=x 对称。交换 x、y 后，两个方向的增量互换，所以在原导数非零时，反函数导数等于原导数的倒数。\n\n### 解题步骤\n\n1. 找到原函数对应点\n2. 计算原函数导数\n3. 取倒数并代入对应变量\n\n### 易错点\n\n把反函数的自变量和原函数的自变量混用。"
+      "bodyMarkdown": "反函数的导数等于原函数导数的倒数：(f⁻¹)′(y)=1/f′(x)，其中 y=f(x)。它常用于求反三角函数的导数。\n\n### 解题步骤\n\n1. 确认原函数可导且导数不为 0\n2. 写出 y=f(x) 并解出 x\n3. 取倒数得到反函数导数\n\n### 易错点\n\n忘记把结果用 y 表示（或漏掉定义域）。"
     },
     {
       "schemaVersion": "1.0",
@@ -478,47 +474,47 @@
       "sectionId": "m1-p1-c2-s2",
       "sectionTitle": "求导法则",
       "title": "隐函数求导",
-      "summary": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。",
+      "summary": "方程 F(x,y)=0 确定隐函数时，两边同时对 x 求导，把 y 视为 x 的函数（用链式法则），再解出 y′；结果一般同时含 x 与 y。",
       "tags": [
-        "方程约束下求变化"
+        "把 y 看成 x 的函数"
       ],
       "sortOrder": 100,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "Fₓ+Fᵧy′=0；y′=−Fₓ/Fᵧ（Fᵧ≠0）",
-        "caption": "隐函数由方程约束而不是显式公式给出。"
+        "content": "F(x,y)=0 ⇒ y′=−Fₓ/Fᵧ（Fᵧ≠0）",
+        "caption": "方程 F(x,y)=0 确定隐函数时，两边同时对 x 求导，把 y 视为 x 的函数（用链式法则），再解出 y′；结果一般同时含 x 与 y。"
       },
       "keyPoints": [
         {
-          "id": "yi-yuan-yin-han-shu-qiu-dao-yao-ba-y-1u40t8",
-          "title": "一元隐函数求导要把 y 当成 y(x)",
-          "bodyMarkdown": "一元隐函数求导要把 y 当成 y(x)"
+          "id": "liang-bian-dui-x-qiu-dao-yu-y-de-xiang-1aki10",
+          "title": "两边对 x 求导",
+          "bodyMarkdown": "两边对 x 求导，遇 y 的项要乘 y′"
         },
         {
-          "id": "duo-yuan-yin-han-shu-yao-jian-cha-ya-ke-13r7bo",
-          "title": "多元隐函数要检查雅可比条件",
-          "bodyMarkdown": "多元隐函数要检查雅可比条件"
+          "id": "qiu-dao-hou-ba-han-y-de-xiang-ji-zhong-1qwgmw",
+          "title": "求导后把含 y′ 的项集中解出",
+          "bodyMarkdown": "求导后把含 y′ 的项集中解出"
         },
         {
-          "id": "jie-guo-bao-liu-y-huo-qi-ta-bian-liang-0udoyb",
-          "title": "结果保留 y 或其他变量是正常的",
-          "bodyMarkdown": "结果保留 y 或其他变量是正常的"
+          "id": "gao-jie-dao-shu-yao-zai-ci-ji-chu-shang-1dsbrg",
+          "title": "高阶导数要在此基础上继续求导",
+          "bodyMarkdown": "高阶导数要在此基础上继续求导"
         }
       ],
       "examples": [
         {
-          "id": "x-y-1-gei-chu-y-x-y-zai-08jt6k",
+          "id": "x-y-1-2x-2yy-0-y-x-y",
           "title": "讲解例子",
-          "bodyMarkdown": "x²+y²=1 给出 y′=−x/y；在上半圆上 y>0。"
+          "bodyMarkdown": "x²+y²=1 ⇒ 2x+2yy′=0 ⇒ y′=−x/y。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "隐函数由方程约束而不是显式公式给出。把关系式看成 F(x,y)=0，沿曲线变化时总微分为零；多元情形还要检查关于待求变量的偏导不为零，才能局部解出函数。\n\n### 解题步骤\n\n1. 写出约束方程\n2. 对所有项求全导数\n3. 整理目标导数并代入点\n\n### 易错点\n\n忘记含 y 的项要乘 y′，或在 Fᵧ=0 处强行套公式。"
+      "bodyMarkdown": "方程 F(x,y)=0 确定隐函数时，两边同时对 x 求导，把 y 视为 x 的函数（用链式法则），再解出 y′；结果一般同时含 x 与 y。\n\n### 解题步骤\n\n1. 方程两边对 x 求导\n2. 把 y′ 的项集中到一侧\n3. 解出 y′（必要时再求二阶）\n\n### 易错点\n\n对 y² 求导时写成 2y 而不是 2yy′。"
     },
     {
       "schemaVersion": "1.0",
@@ -529,47 +525,47 @@
       "sectionId": "m1-p1-c2-s2",
       "sectionTitle": "求导法则",
       "title": "参数方程求导",
-      "summary": "参数方程没有直接写出 y=f(x)，但 x、y 都随 t 变化。",
+      "summary": "参数方程 x=x(t)、y=y(t) 的导数 dy/dx=(dy/dt)/(dx/dt)；二阶导数是 d²y/dx²=[d/dt(dy/dx)]/(dx/dt)，注意再除一次 dx/dt。",
       "tags": [
-        "用参数追踪曲线"
+        "分子分母都除以 dt"
       ],
       "sortOrder": 110,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "dy/dx=(dy/dt)/(dx/dt)；d²y/dx²=(d/dt(dy/dx))/(dx/dt)",
-        "caption": "参数方程没有直接写出 y=f(x)，但 x、y 都随 t 变化。"
+        "content": "dy/dx=(dy/dt)/(dx/dt)；d²y/dx²=[d/dt(dy/dx)]/(dx/dt)",
+        "caption": "参数方程 x=x(t)、y=y(t) 的导数 dy/dx=(dy/dt)/(dx/dt)；"
       },
       "keyPoints": [
         {
-          "id": "yao-qiu-dx-dt-0-cai-neng-xie-dy-dx",
-          "title": "要求 dx/dt≠0 才能写 dy/dx",
-          "bodyMarkdown": "要求 dx/dt≠0 才能写 dy/dx"
+          "id": "dy-dx-dy-dt-dx-dt-yao-qiu-dx-dt-0",
+          "title": "dy/dx=(dy/dt)/(dx/dt)",
+          "bodyMarkdown": "dy/dx=(dy/dt)/(dx/dt)，要求 dx/dt≠0"
         },
         {
-          "id": "qie-xian-shu-zhi-shi-dx-dt-0-yao-dan-du-1kjgz0",
-          "title": "切线竖直时 dx/dt=0 要单独判断",
-          "bodyMarkdown": "切线竖直时 dx/dt=0 要单独判断"
+          "id": "er-jie-dao-shu-yao-dui-dy-dx-zai-dui-t-1i8szc",
+          "title": "二阶导数要对 dy/dx 再对 t 求导",
+          "bodyMarkdown": "二阶导数要对 dy/dx 再对 t 求导，再除以 dx/dt"
         },
         {
-          "id": "er-jie-dao-shu-bu-neng-zhi-jie-ba-d-y-0s3k0e",
-          "title": "二阶导数不能直接把 d²y/dt² 除以 d²x",
-          "bodyMarkdown": "二阶导数不能直接把 d²y/dt² 除以 d²x/dt²"
+          "id": "bai-xian-xing-xing-xian-deng-chang-kao-14691g",
+          "title": "摆线、星形线等常考参数方程求导",
+          "bodyMarkdown": "摆线、星形线等常考参数方程求导"
         }
       ],
       "examples": [
         {
-          "id": "x-cos-t-y-sin-t-miao-0abl0x",
+          "id": "x-t-y-t-shi-dy-dx-3t-2t-0ovaz4",
           "title": "讲解例子",
-          "bodyMarkdown": "x=cos t，y=sin t 描述单位圆；dy/dx=−cot t。"
+          "bodyMarkdown": "x=t²、y=t³ 时 dy/dx=3t²/(2t)=3t/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "参数方程没有直接写出 y=f(x)，但 x、y 都随 t 变化。用 dy/dx=(dy/dt)/(dx/dt) 消去参数；二阶导数还要再对 t 求导并除以 dx/dt。\n\n### 解题步骤\n\n1. 求 dx/dt 与 dy/dt\n2. 作比得到 dy/dx\n3. 再对 t 求导并乘 d/dx\n\n### 易错点\n\n把参数 t 当成 x，或忘记二阶导数还要除一次 dx/dt。"
+      "bodyMarkdown": "参数方程 x=x(t)、y=y(t) 的导数 dy/dx=(dy/dt)/(dx/dt)；二阶导数是 d²y/dx²=[d/dt(dy/dx)]/(dx/dt)，注意再除一次 dx/dt。\n\n### 解题步骤\n\n1. 分别求 dy/dt 与 dx/dt\n2. 相除得 dy/dx\n3. 求二阶时再对 t 求导并除以 dx/dt\n\n### 易错点\n\n二阶导数忘记再除以 dx/dt（直接对 t 求导两次）。"
     },
     {
       "schemaVersion": "1.0",
@@ -580,47 +576,47 @@
       "sectionId": "m1-p1-c2-s2",
       "sectionTitle": "求导法则",
       "title": "对数求导法",
-      "summary": "当底数和指数都含变量，或表达式由多个乘积、商和幂组成时，先取对数能把乘法变加法、幂变乘法。",
+      "summary": "对幂指函数 u(x)^{v(x)} 或多项连乘除的式子，先取对数把乘除变成加减，再两边求导，最后乘回原函数：y′=y·(ln y)′。",
       "tags": [
-        "把乘幂变成加法"
+        "先取对数再求导"
       ],
       "sortOrder": 120,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "latex",
-        "content": "y=u(x)^{v(x)} ⇒ y′=y[v′ln u+v·u′/u]",
-        "caption": "当底数和指数都含变量，或表达式由多个乘积、商和幂组成时，先取对数能把乘法变加法、幂变乘法。"
+        "format": "text",
+        "content": "y=u^v ⇒ y′=y(v′ln u+v·u′/u)",
+        "caption": "对幂指函数 u(x)^{v(x)} 或多项连乘除的式子，先取对数把乘除变成加减，再两边求导，最后乘回原函数：y′=y·(ln y)′。"
       },
       "keyPoints": [
         {
-          "id": "shi-shu-qu-dui-shu-tong-chang-yao-qiu-y-0cfjje",
-          "title": "实数取对数通常要求 y>0",
-          "bodyMarkdown": "实数取对数通常要求 y>0"
+          "id": "shi-yong-yu-mi-zhi-han-shu-yu-lian-1av9md",
+          "title": "适用于幂指函数与连乘除结构",
+          "bodyMarkdown": "适用于幂指函数与连乘除结构"
         },
         {
-          "id": "ln-ab-ln-a-ln-b",
-          "title": "ln(ab)=ln a+ln b",
-          "bodyMarkdown": "ln(ab)=ln a+ln b"
+          "id": "qu-dui-shu-hou-qiu-dao-zui-hou-yao-04dfsr",
+          "title": "取对数后求导",
+          "bodyMarkdown": "取对数后求导，最后要乘回 y"
         },
         {
-          "id": "zui-hou-yao-hui-fu-y",
-          "title": "最后要恢复 y",
-          "bodyMarkdown": "最后要恢复 y"
+          "id": "mi-zhi-han-shu-ye-ke-xie-cheng-e-v-ln-u-1hx7uz",
+          "title": "幂指函数也可写成 e^{v ln u} 再求导",
+          "bodyMarkdown": "幂指函数也可写成 e^{v ln u} 再求导"
         }
       ],
       "examples": [
         {
-          "id": "y-x-ln-y-xln-x-gu-y-x-0mmpxb",
+          "id": "y-x-ln-y-x-ln-x-y-x-ln-0mm86h",
           "title": "讲解例子",
-          "bodyMarkdown": "y=xˣ：ln y=xln x，故 y′=xˣ(ln x+1)。"
+          "bodyMarkdown": "y=xˣ ⇒ ln y=x ln x ⇒ y′=xˣ(ln x+1)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "当底数和指数都含变量，或表达式由多个乘积、商和幂组成时，先取对数能把乘法变加法、幂变乘法。求导后一定乘回原来的 y。\n\n### 解题步骤\n\n1. 两边取 ln\n2. 展开对数法则并求导\n3. 乘回 y 并整理\n\n### 易错点\n\n漏乘 y，或忽略底数/函数值的正性条件。"
+      "bodyMarkdown": "对幂指函数 u(x)^{v(x)} 或多项连乘除的式子，先取对数把乘除变成加减，再两边求导，最后乘回原函数：y′=y·(ln y)′。\n\n### 解题步骤\n\n1. 两边取对数\n2. 两边对 x 求导\n3. 把结果乘上 y 还原\n\n### 易错点\n\n取对数后忘记乘回原函数 y。"
     },
     {
       "schemaVersion": "1.0",
@@ -631,47 +627,47 @@
       "sectionId": "m1-p1-c2-s2",
       "sectionTitle": "求导法则",
       "title": "分段函数求导",
-      "summary": "分段函数在每个开区间内部按普通公式求导，但分界点必须回到导数定义，或比较左右导数。",
+      "summary": "分段函数在每段内部按普通公式求导，但在分界点必须回到导数定义，或比较左右导数是否相等；左右导数不相等就不可导。",
       "tags": [
-        "逐段求导，接点复核"
+        "分界点回定义"
       ],
       "sortOrder": 130,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f′(a−)=f′(a+)=f′(a)",
-        "caption": "分段函数在每个开区间内部按普通公式求导，但分界点必须回到导数定义，或比较左右导数。"
+        "content": "f′(a−)=f′(a+) ⇒ f 在 a 可导",
+        "caption": "分段函数在每段内部按普通公式求导，但在分界点必须回到导数定义，或比较左右导数是否相等；左右导数不相等就不可导。"
       },
       "keyPoints": [
         {
-          "id": "fen-jie-dian-zhi-lai-zi-ti-mu-zhi-ding-131eaw",
-          "title": "分界点值来自题目指定分支",
-          "bodyMarkdown": "分界点值来自题目指定分支"
+          "id": "ge-duan-nei-bu-zhi-jie-yong-qiu-dao-1dme0n",
+          "title": "各段内部直接用求导公式",
+          "bodyMarkdown": "各段内部直接用求导公式"
         },
         {
-          "id": "zuo-you-dao-shu-cun-zai-qie-xiang-deng-1h1fjy",
-          "title": "左右导数存在且相等才可导",
-          "bodyMarkdown": "左右导数存在且相等才可导"
+          "id": "fen-jie-dian-bi-xu-yong-ding-yi-huo-zuo-13rjdi",
+          "title": "分界点必须用定义或左右导数判断",
+          "bodyMarkdown": "分界点必须用定义或左右导数判断"
         },
         {
-          "id": "duan-dian-tong-chang-zhi-tao-lun-dan-ce-1fina2",
-          "title": "端点通常只讨论单侧导数",
-          "bodyMarkdown": "端点通常只讨论单侧导数"
+          "id": "zuo-you-dao-shu-xiang-deng-cai-ke-dao-0u5uk1",
+          "title": "左右导数相等才可导",
+          "bodyMarkdown": "左右导数相等才可导，且导数值为该公共值"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-x-0-x-x-0-zai-0-0kcqbl",
+          "id": "f-x-x-x-0-x-x-0-zai-0-0jneqm",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=x²（x<0），x²（x≥0）在 0 可导；若右段改为 2x+1，则先检查接点连续性。"
+          "bodyMarkdown": "f(x)=x²（x≥0）、x（x<0）在 0 处左右导数为 0 与 1，故不可导。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "分段函数在每个开区间内部按普通公式求导，但分界点必须回到导数定义，或比较左右导数。先连续只是必要准备，还要确认两侧斜率一致。\n\n### 解题步骤\n\n1. 分别求各段导数\n2. 计算分界点左右导数\n3. 同时检查连续与可导\n\n### 易错点\n\n只比较分段公式在接点的函数值，不能替代左右导数。"
+      "bodyMarkdown": "分段函数在每段内部按普通公式求导，但在分界点必须回到导数定义，或比较左右导数是否相等；左右导数不相等就不可导。\n\n### 解题步骤\n\n1. 各段分别求导\n2. 在分界点算左右导数\n3. 比较是否相等并下结论\n\n### 易错点\n\n对分界点直接套某一段的求导公式。"
     },
     {
       "schemaVersion": "1.0",
@@ -682,47 +678,47 @@
       "sectionId": "m1-p1-c2-s3",
       "sectionTitle": "高阶导数",
       "title": "二阶、三阶、n 阶导数",
-      "summary": "高阶导数继续描述前一阶变化率如何变化。面对多次求导，先找周期、递推和乘积结构，再决定直接求导还是使用莱布尼茨公式，重点是保持结构而不是展开所有项。",
+      "summary": "高阶导数是对导数再求导；求 n 阶导数常用「先算前几阶找规律再归纳」的办法，乘积结构用莱布尼茨公式，有理分式先拆项。",
       "tags": [
-        "变化率的变化率"
+        "逐阶求导与归纳"
       ],
       "sortOrder": 140,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "(uv)⁽ⁿ⁾=Σₖ₌₀ⁿ Cₙᵏu⁽ᵏ⁾v⁽ⁿ⁻ᵏ⁾",
-        "caption": "高阶导数继续描述前一阶变化率如何变化。"
+        "content": "f⁽ⁿ⁾(x)=dⁿf/dxⁿ",
+        "caption": "高阶导数是对导数再求导；求 n 阶导数常用「先算前几阶找规律再归纳」的办法，乘积结构用莱布尼茨公式，有理分式先拆项。"
       },
       "keyPoints": [
         {
-          "id": "er-jie-dao-shu-chang-yong-yu-pan-duan-0c2zb4",
-          "title": "二阶导数常用于判断凹凸和极值",
-          "bodyMarkdown": "二阶导数常用于判断凹凸和极值"
+          "id": "er-jie-dao-shu-shi-dao-shu-de-dao-shu-062paz",
+          "title": "二阶导数是导数的导数",
+          "bodyMarkdown": "二阶导数是导数的导数，记作 f″"
         },
         {
-          "id": "zhou-qi-han-shu-de-gao-jie-dao-shu-ke-1sekdi",
-          "title": "周期函数的高阶导数可能循环出现",
-          "bodyMarkdown": "周期函数的高阶导数可能循环出现"
+          "id": "qiu-n-jie-dao-shu-de-tao-lu-suan-qian-0lz2x0",
+          "title": "求 n 阶导数的套路",
+          "bodyMarkdown": "求 n 阶导数的套路：算前几阶 → 找规律 → 归纳"
         },
         {
-          "id": "cheng-ji-de-n-jie-dao-shu-xu-yao-er-0s7sq1",
-          "title": "乘积的 n 阶导数需要二项式系数",
-          "bodyMarkdown": "乘积的 n 阶导数需要二项式系数"
+          "id": "cheng-ji-de-n-jie-dao-shu-yong-lai-bu-0pvwge",
+          "title": "乘积的 n 阶导数用莱布尼茨公式",
+          "bodyMarkdown": "乘积的 n 阶导数用莱布尼茨公式"
         }
       ],
       "examples": [
         {
-          "id": "y-e-sin-x-ke-li-yong-1epqql",
+          "id": "y-1-1-x-de-n-jie-dao-1gtxou",
           "title": "讲解例子",
-          "bodyMarkdown": "y=eˣsin x 可利用 sin、cos 的导数循环，按周期整理 y⁽ⁿ⁾。"
+          "bodyMarkdown": "y=1/(1+x) 的 n 阶导数为 (−1)ⁿn!/(1+x)^{n+1}。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "高阶导数继续描述前一阶变化率如何变化。面对多次求导，先找周期、递推和乘积结构，再决定直接求导还是使用莱布尼茨公式，重点是保持结构而不是展开所有项。\n\n### 解题步骤\n\n1. 识别函数结构\n2. 写出导数循环或递推\n3. 用公式整理并检查阶数\n\n### 易错点\n\n把 n 阶导数误写成只保留首尾两项，或漏掉组合数。"
+      "bodyMarkdown": "高阶导数是对导数再求导；求 n 阶导数常用「先算前几阶找规律再归纳」的办法，乘积结构用莱布尼茨公式，有理分式先拆项。\n\n### 解题步骤\n\n1. 求一阶、二阶导数\n2. 观察结构找规律\n3. 写出 n 阶导数的通式\n\n### 易错点\n\n不找规律，硬算高阶导数。"
     },
     {
       "schemaVersion": "1.0",
@@ -733,47 +729,47 @@
       "sectionId": "m1-p1-c2-s3",
       "sectionTitle": "高阶导数",
       "title": "常见函数高阶导数周期规律",
-      "summary": "高阶导数继续描述前一阶变化率如何变化。面对多次求导，先找周期、递推和乘积结构，再决定直接求导还是使用莱布尼茨公式，重点是保持结构而不是展开所有项。",
+      "summary": "sin x、cos x 的导数每四阶循环一次，e^{ax} 的 n 阶导数是 aⁿe^{ax}，1/(ax+b) 的 n 阶导数带 (−1)ⁿn!",
       "tags": [
-        "变化率的变化率"
+        "按周期循环"
       ],
       "sortOrder": 150,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "(uv)⁽ⁿ⁾=Σₖ₌₀ⁿ Cₙᵏu⁽ᵏ⁾v⁽ⁿ⁻ᵏ⁾",
-        "caption": "高阶导数继续描述前一阶变化率如何变化。"
+        "content": "(sin x)⁽ⁿ⁾=sin(x+nπ/2)",
+        "caption": "sin x、cos x 的导数每四阶循环一次，e^{ax} 的 n 阶导数是 aⁿe^{ax}，1/(ax+b) 的 n 阶导数带 (−1)ⁿn!"
       },
       "keyPoints": [
         {
-          "id": "er-jie-dao-shu-chang-yong-yu-pan-duan-0c2zb4",
-          "title": "二阶导数常用于判断凹凸和极值",
-          "bodyMarkdown": "二阶导数常用于判断凹凸和极值"
+          "id": "sin-x-sin-x-n-2-cos-x-cos-x-n-2",
+          "title": "(sin x)⁽ⁿ⁾=sin(x+nπ/2)",
+          "bodyMarkdown": "(sin x)⁽ⁿ⁾=sin(x+nπ/2)，(cos x)⁽ⁿ⁾=cos(x+nπ/2)"
         },
         {
-          "id": "zhou-qi-han-shu-de-gao-jie-dao-shu-ke-1sekdi",
-          "title": "周期函数的高阶导数可能循环出现",
-          "bodyMarkdown": "周期函数的高阶导数可能循环出现"
+          "id": "e-ax-a-e-ax",
+          "title": "(e^{ax})⁽ⁿ⁾=aⁿe^{ax}",
+          "bodyMarkdown": "(e^{ax})⁽ⁿ⁾=aⁿe^{ax}"
         },
         {
-          "id": "cheng-ji-de-n-jie-dao-shu-xu-yao-er-0s7sq1",
-          "title": "乘积的 n 阶导数需要二项式系数",
-          "bodyMarkdown": "乘积的 n 阶导数需要二项式系数"
+          "id": "1-ax-b-1-a-n-ax-b-n-1",
+          "title": "(1/(ax+b))⁽ⁿ⁾=(−1)ⁿaⁿn!/",
+          "bodyMarkdown": "(1/(ax+b))⁽ⁿ⁾=(−1)ⁿaⁿn!/(ax+b)^{n+1}"
         }
       ],
       "examples": [
         {
-          "id": "y-e-sin-x-ke-li-yong-1epqql",
+          "id": "y-sin-x-de-4-jie-dao-1kv0t7",
           "title": "讲解例子",
-          "bodyMarkdown": "y=eˣsin x 可利用 sin、cos 的导数循环，按周期整理 y⁽ⁿ⁾。"
+          "bodyMarkdown": "y=sin x 的 4 阶导数仍是 sin x。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "高阶导数继续描述前一阶变化率如何变化。面对多次求导，先找周期、递推和乘积结构，再决定直接求导还是使用莱布尼茨公式，重点是保持结构而不是展开所有项。\n\n### 解题步骤\n\n1. 识别函数结构\n2. 写出导数循环或递推\n3. 用公式整理并检查阶数\n\n### 易错点\n\n把 n 阶导数误写成只保留首尾两项，或漏掉组合数。"
+      "bodyMarkdown": "sin x、cos x 的导数每四阶循环一次，e^{ax} 的 n 阶导数是 aⁿe^{ax}，1/(ax+b) 的 n 阶导数带 (−1)ⁿn!；掌握这些规律可以快速写出 n 阶导数。\n\n### 解题步骤\n\n1. 识别函数类型\n2. 套用对应的 n 阶公式\n3. 必要时用 n=1,2 验证\n\n### 易错点\n\n把相位写成 nπ 而不是 nπ/2。"
     },
     {
       "schemaVersion": "1.0",
@@ -784,47 +780,47 @@
       "sectionId": "m1-p1-c2-s3",
       "sectionTitle": "高阶导数",
       "title": "莱布尼茨公式",
-      "summary": "高阶导数继续描述前一阶变化率如何变化。面对多次求导，先找周期、递推和乘积结构，再决定直接求导还是使用莱布尼茨公式，重点是保持结构而不是展开所有项。",
+      "summary": "乘积的 n 阶导数用莱布尼茨公式：(uv)⁽ⁿ⁾=Σₖ₌₀ⁿ Cₙᵏu⁽ᵏ⁾v⁽ⁿ⁻ᵏ⁾，结构与二项式展开完全对应；当其中一个因子是低次多项式时，求和项数很少。",
       "tags": [
-        "变化率的变化率"
+        "乘积的 n 阶导数"
       ],
       "sortOrder": 160,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
         "content": "(uv)⁽ⁿ⁾=Σₖ₌₀ⁿ Cₙᵏu⁽ᵏ⁾v⁽ⁿ⁻ᵏ⁾",
-        "caption": "高阶导数继续描述前一阶变化率如何变化。"
+        "caption": "乘积的 n 阶导数用莱布尼茨公式：(uv)⁽ⁿ⁾=Σₖ₌₀ⁿ Cₙᵏu⁽ᵏ⁾v⁽ⁿ⁻ᵏ⁾，结构与二项式展开完全对应；"
       },
       "keyPoints": [
         {
-          "id": "er-jie-dao-shu-chang-yong-yu-pan-duan-0c2zb4",
-          "title": "二阶导数常用于判断凹凸和极值",
-          "bodyMarkdown": "二阶导数常用于判断凹凸和极值"
+          "id": "uv-c-u-v-xi-shu-shi-zu-he-shu",
+          "title": "(uv)⁽ⁿ⁾=Σₖ₌₀ⁿ Cₙᵏu⁽ᵏ⁾v⁽ⁿ",
+          "bodyMarkdown": "(uv)⁽ⁿ⁾=Σₖ₌₀ⁿ Cₙᵏu⁽ᵏ⁾v⁽ⁿ⁻ᵏ⁾，系数是组合数"
         },
         {
-          "id": "zhou-qi-han-shu-de-gao-jie-dao-shu-ke-1sekdi",
-          "title": "周期函数的高阶导数可能循环出现",
-          "bodyMarkdown": "周期函数的高阶导数可能循环出现"
+          "id": "ruo-qi-zhong-yi-ge-shi-k-ci-duo-xiang-1jv6nr",
+          "title": "若其中一个是 k 次多项式",
+          "bodyMarkdown": "若其中一个是 k 次多项式，只需求到 k 阶"
         },
         {
-          "id": "cheng-ji-de-n-jie-dao-shu-xu-yao-er-0s7sq1",
-          "title": "乘积的 n 阶导数需要二项式系数",
-          "bodyMarkdown": "乘积的 n 阶导数需要二项式系数"
+          "id": "yu-er-xiang-shi-ding-li-a-b-de-jie-gou-0v09hw",
+          "title": "与二项式定理 (a+b)ⁿ 的结构一致",
+          "bodyMarkdown": "与二项式定理 (a+b)ⁿ 的结构一致"
         }
       ],
       "examples": [
         {
-          "id": "y-e-sin-x-ke-li-yong-1epqql",
+          "id": "x-e-x-e-3-2xe-3-2e-e-x-00ntlu",
           "title": "讲解例子",
-          "bodyMarkdown": "y=eˣsin x 可利用 sin、cos 的导数循环，按周期整理 y⁽ⁿ⁾。"
+          "bodyMarkdown": "(x²eˣ)‴=x²eˣ+3·2xeˣ+3·2eˣ=eˣ(x²+6x+6)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "高阶导数继续描述前一阶变化率如何变化。面对多次求导，先找周期、递推和乘积结构，再决定直接求导还是使用莱布尼茨公式，重点是保持结构而不是展开所有项。\n\n### 解题步骤\n\n1. 识别函数结构\n2. 写出导数循环或递推\n3. 用公式整理并检查阶数\n\n### 易错点\n\n把 n 阶导数误写成只保留首尾两项，或漏掉组合数。"
+      "bodyMarkdown": "乘积的 n 阶导数用莱布尼茨公式：(uv)⁽ⁿ⁾=Σₖ₌₀ⁿ Cₙᵏu⁽ᵏ⁾v⁽ⁿ⁻ᵏ⁾，结构与二项式展开完全对应；当其中一个因子是低次多项式时，求和项数很少。\n\n### 解题步骤\n\n1. 确认是乘积结构\n2. 选一个因子作 u（多项式更好）\n3. 按公式求和\n\n### 易错点\n\n漏掉中间的组合数系数，只保留首尾两项。"
     },
     {
       "schemaVersion": "1.0",
@@ -835,47 +831,47 @@
       "sectionId": "m1-p1-c2-s4",
       "sectionTitle": "微分中值定理",
       "title": "费马定理",
-      "summary": "可导函数在内点取得局部极值时，左右两侧的变化趋势必须从上升转下降或从下降转上升，因此切线水平、导数为零。",
+      "summary": "费马定理：若 x₀ 是 f 的内点极值点且 f 在 x₀ 可导，则 f′(x₀)=0。",
       "tags": [
-        "极值必要条件"
+        "极值点导数为零"
       ],
       "sortOrder": 170,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "x₀ 为内点极值且可导 ⇒ f′(x₀)=0",
-        "caption": "可导函数在内点取得局部极值时，左右两侧的变化趋势必须从上升转下降或从下降转上升，因此切线水平、导数为零。"
+        "content": "f′(x₀)=0",
+        "caption": "费马定理：若 x₀ 是 f 的内点极值点且 f 在 x₀ 可导，则 f′(x₀)=0。"
       },
       "keyPoints": [
         {
-          "id": "dian-bi-xu-shi-ding-yi-yu-nei-dian",
-          "title": "点必须是定义域内点",
-          "bodyMarkdown": "点必须是定义域内点"
+          "id": "tiao-jian-nei-dian-ji-zhi-ke-dao-f-x-0",
+          "title": "条件：内点 + 极值 + 可导 ⇒ f′(x₀)",
+          "bodyMarkdown": "条件：内点 + 极值 + 可导 ⇒ f′(x₀)=0"
         },
         {
-          "id": "dian-chu-bi-xu-ke-dao",
-          "title": "点处必须可导",
-          "bodyMarkdown": "点处必须可导"
+          "id": "ni-ming-ti-bu-cheng-li-f-x-0-bu-yi-ding-1qy28r",
+          "title": "逆命题不成立（f′(x₀)=0 不一定是极值",
+          "bodyMarkdown": "逆命题不成立（f′(x₀)=0 不一定是极值，如 y=x³）"
         },
         {
-          "id": "f-0-hai-yao-ji-xu-pan-duan",
-          "title": "f′=0 还要继续判断",
-          "bodyMarkdown": "f′=0 还要继续判断"
+          "id": "duan-dian-ji-zhi-bu-shou-ci-yue-shu",
+          "title": "端点极值不受此约束",
+          "bodyMarkdown": "端点极值不受此约束"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-zai-0-chu-dao-shu-0colh5",
+          "id": "y-x-zai-0-chu-dao-shu-1dc0pd",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=x³ 在 0 处导数为 0，但函数仍严格递增，所以 0 不是极值。"
+          "bodyMarkdown": "y=x³ 在 0 处导数为 0，但不是极值点，说明逆命题不成立。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "可导函数在内点取得局部极值时，左右两侧的变化趋势必须从上升转下降或从下降转上升，因此切线水平、导数为零。它只提供候选点，不提供充分性。\n\n### 解题步骤\n\n1. 求导并找驻点\n2. 结合一阶导数变号或二阶导数\n3. 排除仅水平拐点的情况\n\n### 易错点\n\n端点极值不必满足 f′=0；端点要单独检查。"
+      "bodyMarkdown": "费马定理：若 x₀ 是 f 的内点极值点且 f 在 x₀ 可导，则 f′(x₀)=0。它是罗尔定理的出发点，也说明「极值点若不是端点就是驻点」。\n\n### 解题步骤\n\n1. 确认是内点极值\n2. 确认可导\n3. 得出导数为 0\n\n### 易错点\n\n把「导数为 0」当成极值点的充分条件。"
     },
     {
       "schemaVersion": "1.0",
@@ -886,9 +882,9 @@
       "sectionId": "m1-p1-c2-s4",
       "sectionTitle": "微分中值定理",
       "title": "罗尔定理",
-      "summary": "罗尔定理把“连续、可导、两端等高”转化成内部至少存在一个水平切点。",
+      "summary": "罗尔定理：f 在 [a,b] 上连续、(a,b) 内可导且 f(a)=f(b)，则存在 ξ∈(a,b) 使 f′(ξ)=0。",
       "tags": [
-        "水平切线存在"
+        "两端相等必有驻点"
       ],
       "sortOrder": 180,
       "estimatedMinutes": 3,
@@ -896,37 +892,37 @@
         "type": "formula",
         "format": "text",
         "content": "f(a)=f(b) ⇒ ∃ξ∈(a,b)，f′(ξ)=0",
-        "caption": "罗尔定理把“连续、可导、两端等高”转化成内部至少存在一个水平切点。"
+        "caption": "罗尔定理：f 在 [a,b] 上连续、(a,b) 内可导且 f(a)=f(b)，则存在 ξ∈(a,b) 使 f′(ξ)=0。"
       },
       "keyPoints": [
         {
-          "id": "bi-qu-jian-lian-xu",
-          "title": "闭区间连续",
-          "bodyMarkdown": "闭区间连续"
+          "id": "san-ge-tiao-jian-bi-qu-jian-lian-xu-kai-12e7g8",
+          "title": "三个条件",
+          "bodyMarkdown": "三个条件：闭区间连续、开区间可导、端点值相等"
         },
         {
-          "id": "kai-qu-jian-ke-dao",
-          "title": "开区间可导",
-          "bodyMarkdown": "开区间可导"
+          "id": "jie-lun-nei-bu-cun-zai-yi-dian-dao-shu-1hkkme",
+          "title": "结论：内部存在一点导数为 0",
+          "bodyMarkdown": "结论：内部存在一点导数为 0"
         },
         {
-          "id": "liang-duan-han-shu-zhi-xiang-deng",
-          "title": "两端函数值相等",
-          "bodyMarkdown": "两端函数值相等"
+          "id": "chang-yong-zuo-gou-zao-fu-zhu-han-shu-134tm6",
+          "title": "常用作构造辅助函数后证明存在性",
+          "bodyMarkdown": "常用作构造辅助函数后证明存在性"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-1-zai-1-1-man-zu-1g4pvw",
+          "id": "f-x-x-x-zai-0-1-shang-1ou0d4",
           "title": "讲解例子",
-          "bodyMarkdown": "F(x)=x²−1 在 [−1,1] 满足条件，ξ=0。"
+          "bodyMarkdown": "f(x)=x²−x 在 [0,1] 上满足条件，ξ=1/2 处导数为 0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "罗尔定理把“连续、可导、两端等高”转化成内部至少存在一个水平切点。做题最重要的不是背结论，而是逐条核对三项条件，再把问题转成 f′(ξ)=0。\n\n### 解题步骤\n\n1. 验证三项条件\n2. 写出存在 ξ 的结论\n3. 解 f′(ξ)=0 并筛选区间\n\n### 易错点\n\n区间内有尖点或断点时不能直接套用。"
+      "bodyMarkdown": "罗尔定理：f 在 [a,b] 上连续、(a,b) 内可导且 f(a)=f(b)，则存在 ξ∈(a,b) 使 f′(ξ)=0。它常用来证明方程根的存在性。\n\n### 解题步骤\n\n1. 验证三个条件\n2. 用最值定理找内部极值点\n3. 由费马定理得 f′(ξ)=0\n\n### 易错点\n\n忽略端点值相等这一条。"
     },
     {
       "schemaVersion": "1.0",
@@ -937,47 +933,47 @@
       "sectionId": "m1-p1-c2-s4",
       "sectionTitle": "微分中值定理",
       "title": "拉格朗日中值定理",
-      "summary": "拉格朗日中值定理说明：一段曲线两端的平均变化率，必然在内部某一点被瞬时变化率准确实现。",
+      "summary": "拉格朗日中值定理：f 在 [a,b] 上连续、(a,b) 内可导，则存在 ξ∈(a,b) 使 f(b)−f(a)=f′(ξ)(b−a)；它是「用导数研究函数整体变化」的桥梁。",
       "tags": [
-        "平均变化率"
+        "差商等于某点导数"
       ],
       "sortOrder": 190,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f′(ξ)=[f(b)−f(a)]/(b−a)",
-        "caption": "拉格朗日中值定理说明：一段曲线两端的平均变化率，必然在内部某一点被瞬时变化率准确实现。"
+        "content": "f(b)−f(a)=f′(ξ)(b−a)",
+        "caption": "拉格朗日中值定理：f 在 [a,b] 上连续、(a,b) 内可导，则存在 ξ∈(a,b) 使 f(b)−f(a)=f′("
       },
       "keyPoints": [
         {
-          "id": "lian-xu-tiao-jian-dao-bi-qu-jian",
-          "title": "连续条件到闭区间",
-          "bodyMarkdown": "连续条件到闭区间"
+          "id": "gong-shi-f-b-f-a-f-b-a",
+          "title": "公式：f(b)−f(a)=f′(ξ)(b−a)",
+          "bodyMarkdown": "公式：f(b)−f(a)=f′(ξ)(b−a)"
         },
         {
-          "id": "ke-dao-tiao-jian-zhi-zai-kai-qu-jian",
-          "title": "可导条件只在开区间",
-          "bodyMarkdown": "可导条件只在开区间"
+          "id": "ke-xie-cheng-f-f-b-f-a-b-a-ji-ge-xian-087nun",
+          "title": "可写成 f′(ξ)=[f(b)−f(a)]/(b",
+          "bodyMarkdown": "可写成 f′(ξ)=[f(b)−f(a)]/(b−a)，即割线斜率等于某点切线斜率"
         },
         {
-          "id": "yi-ding-zai-a-b-nei",
-          "title": "ξ 一定在 (a",
-          "bodyMarkdown": "ξ 一定在 (a,b) 内"
+          "id": "chang-yong-lai-zheng-ming-bu-deng-shi-04q0pi",
+          "title": "常用来证明不等式与估计增量",
+          "bodyMarkdown": "常用来证明不等式与估计增量"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-zai-1-3-de-ping-02q02x",
+          "id": "f-x-x-zai-1-2-shang-4-1-05j8nc",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=x² 在 [1,3] 的平均斜率为 4，解 2ξ=4 得 ξ=2。"
+          "bodyMarkdown": "f(x)=x² 在 [1,2] 上：4−1=f′(ξ)(2−1) ⇒ ξ=3/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "拉格朗日中值定理说明：一段曲线两端的平均变化率，必然在内部某一点被瞬时变化率准确实现。几何上是存在一条切线与端点弦平行。\n\n### 解题步骤\n\n1. 验证连续与可导\n2. 计算端点弦斜率\n3. 令 f′(ξ) 等于弦斜率\n\n### 易错点\n\n不要把 ξ 写成端点，也不要遗漏连续或可导条件。"
+      "bodyMarkdown": "拉格朗日中值定理：f 在 [a,b] 上连续、(a,b) 内可导，则存在 ξ∈(a,b) 使 f(b)−f(a)=f′(ξ)(b−a)；它是「用导数研究函数整体变化」的桥梁。\n\n### 解题步骤\n\n1. 验证两个条件\n2. 写出中值公式\n3. 由公式推出所需结论\n\n### 易错点\n\n把 ξ 当成端点或认为 ξ 可以任意选取。"
     },
     {
       "schemaVersion": "1.0",
@@ -988,51 +984,47 @@
       "sectionId": "m1-p1-c2-s4",
       "sectionTitle": "微分中值定理",
       "title": "柯西中值定理",
-      "summary": "设 f(x)、g(x) 在 [a,b] 上连续，在 (a,b) 内可导，且 g′(x)≠0，则存在 ξ∈(a,b)，使 [f(b)−f(a)]/[g(b)−g(a)] = f′(ξ)/g′(ξ)。",
+      "summary": "柯西中值定理：f、g 在 [a,b] 上连续、(a,b) 内可导且 g′(x)≠0，则 [f(b)−f(a)]/[g(b)−g(a)]=f′(ξ)/g′(ξ)。",
       "tags": [
-        "两函数增量比"
+        "两个函数的差商相等"
       ],
       "sortOrder": 200,
-      "estimatedMinutes": 6,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "[f(b)−f(a)]/[g(b)−g(a)] = f′(ξ)/g′(ξ)",
-        "caption": "设 f(x)、g(x) 在 [a,b] 上连续，在 (a,b) 内可导，且 g′(x)≠0，则存在 ξ∈(a,b)"
+        "content": "[f(b)−f(a)]/[g(b)−g(a)]=f′(ξ)/g′(ξ)",
+        "caption": "柯西中值定理：f、g 在 [a,b] 上连续、(a,b) 内可导且 g′(x)≠0"
       },
       "keyPoints": [
         {
-          "id": "liang-ge-han-shu-san-ge-tiao-jian-g-0-1bs6pu",
-          "title": "两个函数、三个条件",
-          "bodyMarkdown": "两个函数、三个条件，g′≠0 保证分母有意义"
+          "id": "gong-shi-f-b-f-a-g-b-g-a-f-g",
+          "title": "公式：[f(b)−f(a)]/[g(b)−g(a",
+          "bodyMarkdown": "公式：[f(b)−f(a)]/[g(b)−g(a)]=f′(ξ)/g′(ξ)"
         },
         {
-          "id": "fen-zi-fen-mu-de-zhong-zhi-dian-shi-06hehq",
-          "title": "分子分母的中值点是同一个 ξ",
-          "bodyMarkdown": "分子分母的中值点是同一个 ξ，不能分别用拉格朗日再相除"
+          "id": "yao-qiu-g-x-0-fou-ze-fen-mu-wu-yi-yi",
+          "title": "要求 g′(x)≠0（否则分母无意义）",
+          "bodyMarkdown": "要求 g′(x)≠0（否则分母无意义）"
         },
         {
-          "id": "chang-yong-yu-zheng-ming-han-liang-ge-0jzw3d",
-          "title": "常用于证明含两个函数增量之比的等式",
-          "bodyMarkdown": "常用于证明含两个函数增量之比的等式"
+          "id": "qu-g-x-x-ji-tui-hua-wei-la-ge-lang-ri-12fhrr",
+          "title": "取 g(x)=x 即退化为拉格朗日中值定理",
+          "bodyMarkdown": "取 g(x)=x 即退化为拉格朗日中值定理"
         }
       ],
       "examples": [
         {
-          "id": "qu-g-x-ln-x-cun-zai-a-b-1dl2m3",
+          "id": "qu-g-x-x-ke-tui-chu-f-b-153t7o",
           "title": "讲解例子",
-          "bodyMarkdown": "取 g(x)=ln x：存在 ξ∈(a,b) 使 f(b)−f(a)=ξ·ln(b/a)·f′(ξ)。"
+          "bodyMarkdown": "取 g(x)=x² 可推出 [f(b)−f(a)]/(b²−a²)=f′(ξ)/(2ξ)。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第6讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "设 f(x)、g(x) 在 [a,b] 上连续，在 (a,b) 内可导，且 g′(x)≠0，则存在 ξ∈(a,b)，使 [f(b)−f(a)]/[g(b)−g(a)] = f′(ξ)/g′(ξ)。取 g(x)=x 就退化为拉格朗日中值定理；几何上它是参数方程曲线版本的“弦与切线平行”。注意分子分母用的是同一个 ξ。\n\n### 解题步骤\n\n1. 验证两函数连续可导且 g′≠0\n2. 把结论整理成增量比结构\n3. 写出同一个 ξ 的比例式\n\n### 易错点\n\n对 f、g 分别用拉格朗日中值定理再相除是错的——两次得到的中间值未必相同。"
+      "bodyMarkdown": "柯西中值定理：f、g 在 [a,b] 上连续、(a,b) 内可导且 g′(x)≠0，则 [f(b)−f(a)]/[g(b)−g(a)]=f′(ξ)/g′(ξ)。它是拉格朗日中值定理的推广（取 g(x)=x）。\n\n### 解题步骤\n\n1. 验证条件\n2. 写出柯西中值公式\n3. 代入具体函数求解\n\n### 易错点\n\n忘记验证 g′(x)≠0。"
     },
     {
       "schemaVersion": "1.0",
@@ -1043,47 +1035,47 @@
       "sectionId": "m1-p1-c2-s5",
       "sectionTitle": "泰勒公式",
       "title": "泰勒定理",
-      "summary": "泰勒定理把函数在展开点附近的行为拆成常数项、一次项、二次项等逐层信息。",
+      "summary": "泰勒定理把 f(x) 在 x₀ 附近写成「n 次多项式 + 余项」：f(x)=Σ f⁽ᵏ⁾(x₀)(x−x₀)ᵏ/k!",
       "tags": [
-        "用多项式看函数"
+        "用多项式逼近函数"
       ],
       "sortOrder": 210,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f(x)=Σₖ₌₀ⁿ f⁽ᵏ⁾(a)(x−a)ᵏ/k!+Rₙ(x)",
-        "caption": "泰勒定理把函数在展开点附近的行为拆成常数项、一次项、二次项等逐层信息。"
+        "content": "f(x)=Σₖ₌₀ⁿ f⁽ᵏ⁾(x₀)(x−x₀)ᵏ/k!+Rₙ(x)",
+        "caption": "泰勒定理把 f(x) 在 x₀ 附近写成「n 次多项式 + 余项」：f(x)=Σ f⁽ᵏ⁾(x₀)(x−x₀)ᵏ/k!"
       },
       "keyPoints": [
         {
-          "id": "zhan-kai-dian-jue-ding-xi-shu",
-          "title": "展开点决定系数",
-          "bodyMarkdown": "展开点决定系数"
+          "id": "tai-le-gong-shi-duo-xiang-shi-bu-fen-yu-1apb8r",
+          "title": "泰勒公式 = 多项式部分 + 余项",
+          "bodyMarkdown": "泰勒公式 = 多项式部分 + 余项"
         },
         {
-          "id": "bao-liu-dao-ji-jie-qu-jue-yu-jing-du-he-1w134v",
-          "title": "保留到几阶取决于精度和首个非零项",
-          "bodyMarkdown": "保留到几阶取决于精度和首个非零项"
+          "id": "yu-xiang-you-liang-zhong-pi-ya-nuo-ding-00kje8",
+          "title": "余项有两种",
+          "bodyMarkdown": "余项有两种：皮亚诺（定性，用于求极限）与拉格朗日（定量，用于估计）"
         },
         {
-          "id": "yu-xiang-bu-neng-sui-yi-sheng-l-e",
-          "title": "余项不能随意省略",
-          "bodyMarkdown": "余项不能随意省略"
+          "id": "zai-x-0-chu-zhan-kai-jiu-shi-mai-ke-lao-08liii",
+          "title": "在 x₀=0 处展开就是麦克劳林公式",
+          "bodyMarkdown": "在 x₀=0 处展开就是麦克劳林公式"
         }
       ],
       "examples": [
         {
-          "id": "e-zai-0-fu-jin-ke-yong-05mgjp",
+          "id": "e-zai-0-chu-zhan-kai-1-0t4prm",
           "title": "讲解例子",
-          "bodyMarkdown": "eˣ 在 0 附近可用 1+x+x²/2 近似；x 越接近 0，误差越小。"
+          "bodyMarkdown": "eˣ 在 0 处展开：1+x+x²/2!+…+xⁿ/n!+o(xⁿ)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "泰勒定理把函数在展开点附近的行为拆成常数项、一次项、二次项等逐层信息。多项式给出可计算的近似，余项告诉我们截断后还差多少，以及近似在哪个邻域可信。\n\n### 解题步骤\n\n1. 确定展开点\n2. 计算各阶导数\n3. 用余项或阶数控制误差\n\n### 易错点\n\n局部展开式不是无条件的全局恒等式。"
+      "bodyMarkdown": "泰勒定理把 f(x) 在 x₀ 附近写成「n 次多项式 + 余项」：f(x)=Σ f⁽ᵏ⁾(x₀)(x−x₀)ᵏ/k!+Rₙ(x)，余项形式有皮亚诺与拉格朗日两种。\n\n### 解题步骤\n\n1. 确定展开点与阶数\n2. 写出各阶导数与系数\n3. 按需要选择余项形式\n\n### 易错点\n\n混淆两种余项的用途（求极限用皮亚诺，估计误差用拉格朗日）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1094,47 +1086,47 @@
       "sectionId": "m1-p1-c2-s5",
       "sectionTitle": "泰勒公式",
       "title": "麦克劳林公式",
-      "summary": "麦克劳林公式是 a=0 的泰勒公式。它是处理等价无穷小、极限和近似计算的主力工具；遇到减法抵消时，要继续展开到第一个没有被抵消的非零项。",
+      "summary": "麦克劳林公式是泰勒公式在 x₀=0 时的特例：f(x)=f(0)+f′(0)x+f″(0)x²/2!",
       "tags": [
-        "展开点为零"
+        "在 0 处展开"
       ],
       "sortOrder": 220,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "eˣ=1+x+x²/2!+…；sin x=x−x³/3!+…；cos x=1−x²/2!+…",
-        "caption": "麦克劳林公式是 a=0 的泰勒公式。"
+        "content": "f(x)=Σₖ₌₀ⁿ f⁽ᵏ⁾(0)xᵏ/k!+o(xⁿ)",
+        "caption": "麦克劳林公式是泰勒公式在 x₀=0 时的特例：f(x)=f(0)+f′(0)x+f″(0)x²/2!"
       },
       "keyPoints": [
         {
-          "id": "e-zhi-han-zheng-ci-mi",
-          "title": "eˣ 只含正次幂",
-          "bodyMarkdown": "eˣ 只含正次幂"
+          "id": "e-1-x-x-2-sin-x-x-x-3-x-5",
+          "title": "eˣ=1+x+x²/2!+…",
+          "bodyMarkdown": "eˣ=1+x+x²/2!+…；sin x=x−x³/3!+x⁵/5!−…"
         },
         {
-          "id": "sin-x-shi-ji-han-shu-zhi-chu-xian-qi-ci-010h39",
-          "title": "sin x 是奇函数",
-          "bodyMarkdown": "sin x 是奇函数，只出现奇次项"
+          "id": "cos-x-1-x-2-x-4-ln-1-x-x-x-2-x-3",
+          "title": "cos x=1−x²/2!+x⁴/4!−…",
+          "bodyMarkdown": "cos x=1−x²/2!+x⁴/4!−…；ln(1+x)=x−x²/2+x³/3−…"
         },
         {
-          "id": "cos-x-shi-ou-han-shu-zhi-chu-xian-ou-ci-0ff4dp",
-          "title": "cos x 是偶函数",
-          "bodyMarkdown": "cos x 是偶函数，只出现偶次项"
+          "id": "1-x-1-x-1-x-2",
+          "title": "(1+x)^α=1+αx+α(α−1)x²/2!",
+          "bodyMarkdown": "(1+x)^α=1+αx+α(α−1)x²/2!+…"
         }
       ],
       "examples": [
         {
-          "id": "1-cos-x-x-2-lai-zi-cos-04awqe",
+          "id": "e-x-1-x-x-2-o-x",
           "title": "讲解例子",
-          "bodyMarkdown": "1−cos x∼x²/2 来自 cos x=1−x²/2+o(x²)。"
+          "bodyMarkdown": "e^x=1+x+x²/2+o(x²)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "麦克劳林公式是 a=0 的泰勒公式。它是处理等价无穷小、极限和近似计算的主力工具；遇到减法抵消时，要继续展开到第一个没有被抵消的非零项。\n\n### 解题步骤\n\n1. 写出熟悉的基础展开\n2. 按题目精度截断\n3. 比较首个非零项\n\n### 易错点\n\n展开阶数不足时，首项抵消后会得到错误的极限阶数。"
+      "bodyMarkdown": "麦克劳林公式是泰勒公式在 x₀=0 时的特例：f(x)=f(0)+f′(0)x+f″(0)x²/2!+…；常用的五个展开式（eˣ、sin x、cos x、ln(1+x)、(1+x)^α）必须记牢。\n\n### 解题步骤\n\n1. 写出 f 的各阶导数在 0 处的值\n2. 按公式组装\n3. 注明余项形式\n\n### 易错点\n\n把 ln(1+x) 的展开写成 x+x²/2（符号应交替）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1145,51 +1137,47 @@
       "sectionId": "m1-p1-c2-s5",
       "sectionTitle": "泰勒公式",
       "title": "应用",
-      "summary": "泰勒公式的应用关键在于“展开到几阶”：求极限时按分母阶数展开（上下同阶原则）；判断无穷小阶数时展开到首个非零项（幂次最低原则）。",
+      "summary": "泰勒（麦克劳林）展开的典型用途：求复杂极限、确定无穷小的阶、做近似计算、证明不等式；把函数展开到合适阶数是关键。",
       "tags": [
-        "泰勒展开"
+        "泰勒公式的四个用途"
       ],
       "sortOrder": 230,
-      "estimatedMinutes": 6,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "eˣ=1+x+x²/2!+o(x²)；sin x=x−x³/3!+o(x³)；ln(1+x)=x−x²/2+o(x²)；x−sin x∼x³/6",
-        "caption": "泰勒公式的应用关键在于“展开到几阶”：求极限时按分母阶数展开（上下同阶原则）；判断无穷小阶数时展开到首个非零项（幂次最低原则）。"
+        "content": "f(x)=Pₙ(x)+Rₙ(x)",
+        "caption": "泰勒（麦克劳林）展开的典型用途：求复杂极限、确定无穷小的阶、做近似计算、证明不等式；把函数展开到合适阶数是关键。"
       },
       "keyPoints": [
         {
-          "id": "shang-xia-tong-jie-fen-mu-shi-ji-jie-1sqqmi",
-          "title": "上下同阶",
-          "bodyMarkdown": "上下同阶：分母是几阶，分子就展到几阶"
+          "id": "qiu-ji-xian-zhan-kai-dao-fen-mu-tong-jie",
+          "title": "求极限：展开到分母同阶",
+          "bodyMarkdown": "求极限：展开到分母同阶"
         },
         {
-          "id": "mi-ci-zui-di-zhan-kai-dao-xi-shu-bu-1fxmw6",
-          "title": "幂次最低",
-          "bodyMarkdown": "幂次最低：展开到系数不全为零的最低次项"
+          "id": "ding-jie-shu-kan-di-yi-ge-fei-ling-xiang",
+          "title": "定阶数：看第一个非零项",
+          "bodyMarkdown": "定阶数：看第一个非零项"
         },
         {
-          "id": "cha-han-shu-xi-lie-shi-jia-jian-jie-gou-174805",
-          "title": "差函数系列是加减结构求极限的救场工具",
-          "bodyMarkdown": "差函数系列是加减结构求极限的救场工具"
+          "id": "jin-si-yu-bu-deng-shi-kao-yu-xiang-fu-1scvsr",
+          "title": "近似与不等式",
+          "bodyMarkdown": "近似与不等式：靠余项符号与大小"
         }
       ],
       "examples": [
         {
-          "id": "lim-x-0-1-ln-1-x-1-x-ln-18q559",
+          "id": "lim-x-0-x-sin-x-x-1-6-1s187d",
           "title": "讲解例子",
-          "bodyMarkdown": "lim(x→0)[1/ln(1+x)−1/x]：ln(1+x)=x−x²/2+o(x²) 代入化简得 1/2（泰勒法）。"
+          "bodyMarkdown": "lim_{x→0}(x−sin x)/x³=1/6 就是靠展开到三阶得到的。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第1讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "泰勒公式的应用关键在于“展开到几阶”：求极限时按分母阶数展开（上下同阶原则）；判断无穷小阶数时展开到首个非零项（幂次最低原则）。加减结构不能直接等价替换时，用泰勒把每一项写成多项式——差函数系列 x−sin x∼⅙x³、tan x−x∼⅓x³ 正是这么来的。o 的运算规则：o(xᵐ)±o(xⁿ)=o(x^{min})，乘法时阶数累加，非零常数不改变阶数。\n\n### 解题步骤\n\n1. 判断题型：求极限还是定阶数\n2. 按分母或目标阶数确定展开深度\n3. 代入展开式，合并同次项后取极限\n\n### 易错点\n\n展开阶数不够会得到 0/0 的“假死”，阶数过高则徒增计算；先看分母阶数再定深度。"
+      "bodyMarkdown": "泰勒（麦克劳林）展开的典型用途：求复杂极限、确定无穷小的阶、做近似计算、证明不等式；把函数展开到合适阶数是关键。\n\n### 解题步骤\n\n1. 确定展开点与阶数\n2. 写出展开式\n3. 按用途处理（比较阶数 / 估计误差）\n\n### 易错点\n\n展开阶数不足，导致主项相消后无法判断。"
     },
     {
       "schemaVersion": "1.0",
@@ -1200,47 +1188,47 @@
       "sectionId": "m1-p1-c2-s6",
       "sectionTitle": "洛必达法则",
       "title": "0/0 型",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "0/0 型是洛必达最常见的适用场景；但能用因式分解、等价无穷小或泰勒时，往往比洛必达更快、更稳。",
       "tags": [
-        "不定式处理"
+        "洛必达的典型场景"
       ],
       "sortOrder": 240,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "lim f/g=lim f′/g′",
+        "caption": "0/0 型是洛必达最常见的适用场景；但能用因式分解、等价无穷小或泰勒时，往往比洛必达更快、更稳。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "xian-yong-deng-jia-ti-huan-huo-hua-jian-0wtxac",
+          "title": "先用等价替换或化简",
+          "bodyMarkdown": "先用等价替换或化简，再考虑洛必达"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "mei-ci-qiu-dao-hou-dou-yao-chong-xin-1uhj96",
+          "title": "每次求导后都要重新验证类型",
+          "bodyMarkdown": "每次求导后都要重新验证类型"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "luo-bi-da-bu-shi-yong-shi-gai-yong-tai-1jqjxl",
+          "title": "洛必达不适用时改用泰勒展开",
+          "bodyMarkdown": "洛必达不适用时改用泰勒展开"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-e-1-x-1-deng-0xvcwb",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0}(eˣ−1)/x=1，等价替换一步即可。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "0/0 型是洛必达最常见的适用场景；但能用因式分解、等价无穷小或泰勒时，往往比洛必达更快、更稳。\n\n### 解题步骤\n\n1. 判断是否为 0/0\n2. 尝试化简与等价替换\n3. 仍不易处理时用洛必达\n\n### 易错点\n\n一上来就连用洛必达，越算越复杂。"
     },
     {
       "schemaVersion": "1.0",
@@ -1251,47 +1239,47 @@
       "sectionId": "m1-p1-c2-s6",
       "sectionTitle": "洛必达法则",
       "title": "∞/∞ 型",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "∞/∞ 型可以比较分子分母的增长阶（ln x ≪ xᵏ ≪ aˣ），也可以用洛必达；两者都要求结构清楚。",
       "tags": [
-        "不定式处理"
+        "比较增长阶或用洛必达"
       ],
       "sortOrder": 250,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "lim xⁿ/eˣ=0（n 为任意正数）",
+        "caption": "∞/∞ 型可以比较分子分母的增长阶（ln x ≪ xᵏ ≪ aˣ），也可以用洛必达；两者都要求结构清楚。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "zeng-zhang-jie-ln-x-x-a-a-1",
+          "title": "增长阶：ln x ≪ xᵏ ≪ aˣ（a>1）",
+          "bodyMarkdown": "增长阶：ln x ≪ xᵏ ≪ aˣ（a>1）"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "luo-bi-da-yao-qiu-ke-dao-qie-fen-mu-dao-0p4c4e",
+          "title": "洛必达要求可导且分母导数不为 0",
+          "bodyMarkdown": "洛必达要求可导且分母导数不为 0"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "duo-xiang-shi-bi-da-xiao-kan-zui-gao-ci-0s9slf",
+          "title": "多项式比大小看最高次项",
+          "bodyMarkdown": "多项式比大小看最高次项"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-x-e-lim-1-e-0",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→∞} x/eˣ=lim 1/eˣ=0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "∞/∞ 型可以比较分子分母的增长阶（ln x ≪ xᵏ ≪ aˣ），也可以用洛必达；两者都要求结构清楚。\n\n### 解题步骤\n\n1. 判断结构（多项式 / 指数 / 对数）\n2. 比较增长阶或用洛必达\n3. 得出 0、∞ 或常数\n\n### 易错点\n\n忘记「指数增长快于幂函数」这一结论。"
     },
     {
       "schemaVersion": "1.0",
@@ -1302,47 +1290,47 @@
       "sectionId": "m1-p1-c2-s6",
       "sectionTitle": "洛必达法则",
       "title": "其他未定式转化",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "0·∞ 化成商、∞−∞ 通分或有理化、1^∞/0⁰/∞⁰ 取对数，都能把未定式转化为 0/0 或 ∞/∞ 再处理。",
       "tags": [
-        "不定式处理"
+        "先化成 0/0 或 ∞/∞"
       ],
       "sortOrder": 260,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "format": "latex",
+        "content": "1^∞：u^v=e^{v ln u}",
+        "caption": "0·∞ 化成商、∞−∞ 通分或有理化、1^∞/0⁰/∞⁰ 取对数，都能把未定式转化为 0/0 或 ∞/∞ 再处理。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "0-f-1-g-hua-cheng-shang",
+          "title": "0·∞ ⇒ f/(1/g) 化成商",
+          "bodyMarkdown": "0·∞ ⇒ f/(1/g) 化成商"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "tong-fen-huo-you-li-hua",
+          "title": "∞−∞ ⇒ 通分或有理化",
+          "bodyMarkdown": "∞−∞ ⇒ 通分或有理化"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "1-0-qu-dui-shu-hua-cheng-0",
+          "title": "1^∞、0⁰、∞⁰ ⇒ 取对数化成 0·∞",
+          "bodyMarkdown": "1^∞、0⁰、∞⁰ ⇒ 取对数化成 0·∞"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-x-ln-x-lim-ln-x-1jkn5i",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0⁺} x ln x=lim (ln x)/(1/x)=0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "0·∞ 化成商、∞−∞ 通分或有理化、1^∞/0⁰/∞⁰ 取对数，都能把未定式转化为 0/0 或 ∞/∞ 再处理。\n\n### 解题步骤\n\n1. 识别未定式类型\n2. 按对应方式转化\n3. 再用 0/0 或 ∞/∞ 的方法\n\n### 易错点\n\n不做转化就直接对原式用洛必达。"
     },
     {
       "schemaVersion": "1.0",
@@ -1353,47 +1341,47 @@
       "sectionId": "m1-p1-c2-s6",
       "sectionTitle": "洛必达法则",
       "title": "连续多次使用",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "洛必达法则可以连续使用：只要每次求导后仍是 0/0 或 ∞/∞ 型且条件满足，就可以继续用，直到求出极限。",
       "tags": [
-        "不定式处理"
+        "可以反复求导"
       ],
       "sortOrder": 270,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "lim f/g=lim f′/g′=lim f″/g″…",
+        "caption": "洛必达法则可以连续使用：只要每次求导后仍是 0/0 或 ∞/∞ 型且条件满足，就可以继续用，直到求出极限。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "mei-ci-qiu-dao-hou-dou-yao-chong-xin-1uhj96",
+          "title": "每次求导后都要重新验证类型",
+          "bodyMarkdown": "每次求导后都要重新验证类型"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "lian-xu-shi-yong-shi-yao-bao-zheng-mei-0dtj6a",
+          "title": "连续使用时要保证每一步条件都成立",
+          "bodyMarkdown": "连续使用时要保证每一步条件都成立"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "neng-hua-jian-shi-xian-hua-jian-jian-1aoqmq",
+          "title": "能化简时先化简",
+          "bodyMarkdown": "能化简时先化简，减少求导次数"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-1-cos-x-x-lim-0j5ivv",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0}(1−cos x)/x²=lim sin x/(2x)=lim cos x/2=1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "洛必达法则可以连续使用：只要每次求导后仍是 0/0 或 ∞/∞ 型且条件满足，就可以继续用，直到求出极限。\n\n### 解题步骤\n\n1. 求导一次并验证类型\n2. 仍是未定式则继续\n3. 直到不再是未定式\n\n### 易错点\n\n求导后已经不是未定式却继续用洛必达。"
     },
     {
       "schemaVersion": "1.0",
@@ -1404,47 +1392,47 @@
       "sectionId": "m1-p1-c2-s6",
       "sectionTitle": "洛必达法则",
       "title": "不适用或使用后更复杂的情况",
-      "summary": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。",
+      "summary": "有些极限用洛必达会越算越复杂，或求导后极限不存在（此时洛必达失效）；这类情形应改用等价无穷小、泰勒展开、夹逼或直接变形。",
       "tags": [
-        "不定式处理"
+        "该换方法就换"
       ],
       "sortOrder": 280,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "lim f(x)/g(x)=lim f′(x)/g′(x)",
-        "caption": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。"
+        "content": "洛必达失效时改用其它方法",
+        "caption": "有些极限用洛必达会越算越复杂，或求导后极限不存在（此时洛必达失效）；这类情形应改用等价无穷小、泰勒展开、夹逼或直接变形。"
       },
       "keyPoints": [
         {
-          "id": "0-0-yu-shi-zhi-jie-shi-yong-xing-bie",
-          "title": "0/0 与 ∞/∞ 是直接适用型别",
-          "bodyMarkdown": "0/0 与 ∞/∞ 是直接适用型别"
+          "id": "qiu-dao-hou-ji-xian-bu-cun-zai-luo-bi-1bl86v",
+          "title": "求导后极限不存在 ⇒ 洛必达失效",
+          "bodyMarkdown": "求导后极限不存在 ⇒ 洛必达失效，不能据此断言原极限不存在"
         },
         {
-          "id": "0-1-deng-yao-xian-bian-xing",
-          "title": "0·∞、∞−∞、1∞ 等要先变形",
-          "bodyMarkdown": "0·∞、∞−∞、1∞ 等要先变形"
+          "id": "han-zhen-dang-yin-zi-ru-sin-1-x-shi-luo-0fgxsn",
+          "title": "含振荡因子（如 sin(1/x)）时洛必达常失效",
+          "bodyMarkdown": "含振荡因子（如 sin(1/x)）时洛必达常失效"
         },
         {
-          "id": "mei-yong-yi-ci-dou-yao-chong-xin-jian-0gio7o",
-          "title": "每用一次都要重新检查分母导数与极限",
-          "bodyMarkdown": "每用一次都要重新检查分母导数与极限"
+          "id": "deng-jia-ti-huan-yu-tai-le-tong-chang-0ahhzt",
+          "title": "等价替换与泰勒通常更省力",
+          "bodyMarkdown": "等价替换与泰勒通常更省力"
         }
       ],
       "examples": [
         {
-          "id": "lim-1-cos-x-x-ke-yong-1gaau6",
+          "id": "lim-x-0-x-sin-1-x-x-0-0m81rq",
           "title": "讲解例子",
-          "bodyMarkdown": "limₓ→₀(1−cos x)/x² 可用洛必达一次得到 lim sin x/(2x)=1/2。"
+          "bodyMarkdown": "lim_{x→0} x²sin(1/x)/x=0 用夹逼，洛必达会失效。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "洛必达法则处理的是某些导数比值极限，而不是“复杂就求导”。先代入确认确实是 0/0 或 ∞/∞，再检查条件；求导后要重新判断极限类型，必要时才继续。\n\n### 解题步骤\n\n1. 代入判断型别\n2. 变形成可用的比值\n3. 求导并重新判断\n\n### 易错点\n\n普通分式已经能直接算出时滥用洛必达，会增加计算量并掩盖结构。"
+      "bodyMarkdown": "有些极限用洛必达会越算越复杂，或求导后极限不存在（此时洛必达失效）；这类情形应改用等价无穷小、泰勒展开、夹逼或直接变形。\n\n### 解题步骤\n\n1. 观察是否含振荡或复杂因子\n2. 优先尝试等价替换/泰勒\n3. 必要时用夹逼\n\n### 易错点\n\n洛必达算不出来就断言极限不存在。"
     },
     {
       "schemaVersion": "1.0",
@@ -1455,47 +1443,47 @@
       "sectionId": "m1-p1-c2-s7",
       "sectionTitle": "导数应用",
       "title": "单调性",
-      "summary": "单调性比较的是任意两个有序输入的输出关系。可导时，导数符号把“逐点比较”转成“局部变化率判断”：f′≥0 给出单调不减，严格单调通常需要进一步排除导数恒为零的区间。",
+      "summary": "f′>0 的区间上 f 单调递增，f′<0 的区间上单调递减；导数为 0 的点是分界点，需要判断符号是否变化。",
       "tags": [
-        "比较输出变化"
+        "看导数符号"
       ],
       "sortOrder": 290,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "x₁<x₂ ⇒ f(x₁)≤f(x₂)（单调不减）",
-        "caption": "单调性比较的是任意两个有序输入的输出关系。"
+        "content": "f′>0 ⇒ f 递增",
+        "caption": "f′>0 的区间上 f 单调递增，f′<0 的区间上单调递减；导数为 0 的点是分界点，需要判断符号是否变化。"
       },
       "keyPoints": [
         {
-          "id": "dan-diao-qu-jian-yao-xie-qing-chu-kai-1ozggh",
-          "title": "单调区间要写清楚开闭端点",
-          "bodyMarkdown": "单调区间要写清楚开闭端点"
+          "id": "f-0-di-zeng-f-0-di-jian-zai-qu-jian-1gful0",
+          "title": "f′>0 ⇒ 递增",
+          "bodyMarkdown": "f′>0 ⇒ 递增；f′<0 ⇒ 递减（在区间上）"
         },
         {
-          "id": "dao-shu-wei-ling-de-gu-li-dian-bu-po-0v74g5",
-          "title": "导数为零的孤立点不破坏严格单调",
-          "bodyMarkdown": "导数为零的孤立点不破坏严格单调"
+          "id": "f-0-f-wei-chang-shu",
+          "title": "f′≡0 ⇒ f 为常数",
+          "bodyMarkdown": "f′≡0 ⇒ f 为常数"
         },
         {
-          "id": "fen-duan-han-shu-yao-fen-bie-pan-duan-072onl",
-          "title": "分段函数要分别判断各段并检查接点",
-          "bodyMarkdown": "分段函数要分别判断各段并检查接点"
+          "id": "qiu-dan-diao-qu-jian-yao-xian-qiu-ding-1dohtq",
+          "title": "求单调区间要先求定义域",
+          "bodyMarkdown": "求单调区间要先求定义域，再解 f′ 的符号"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-de-dao-shu-3x-0-0su5w6",
+          "id": "f-x-x-3x-f-3x-3-zai-1-1ir4lg",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=x³ 的导数 3x²≥0，且除 x=0 外为正，所以 f 在实轴上严格递增。"
+          "bodyMarkdown": "f(x)=x³−3x：f′=3x²−3，在 (−∞,−1) 与 (1,+∞) 递增。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "单调性比较的是任意两个有序输入的输出关系。可导时，导数符号把“逐点比较”转成“局部变化率判断”：f′≥0 给出单调不减，严格单调通常需要进一步排除导数恒为零的区间。\n\n### 解题步骤\n\n1. 求导并找出定义域内的临界点\n2. 按临界点分区间判断导数符号\n3. 把符号表翻译成单调区间\n\n### 易错点\n\n某一点 f′=0 不能直接推出该点是极值，也不能直接否定严格单调。"
+      "bodyMarkdown": "f′>0 的区间上 f 单调递增，f′<0 的区间上单调递减；导数为 0 的点是分界点，需要判断符号是否变化。\n\n### 解题步骤\n\n1. 求定义域与 f′\n2. 解 f′=0 找分界点\n3. 列表判断各区间上 f′ 的符号\n\n### 易错点\n\n只看 f′=0 的点就下结论，不判断符号变化。"
     },
     {
       "schemaVersion": "1.0",
@@ -1506,47 +1494,47 @@
       "sectionId": "m1-p1-c2-s7",
       "sectionTitle": "导数应用",
       "title": "极值",
-      "summary": "极值是局部比较概念：在某个邻域内，函数值不再比该点更大或更小。",
+      "summary": "极值是局部概念：f′ 由正变负处取极大值，由负变正处取极小值；f′(x₀)=0 只是必要条件，还要看符号变化或二阶导数。",
       "tags": [
-        "局部转折"
+        "局部最大最小"
       ],
       "sortOrder": 300,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f′由正变负 ⇒ 极大；f′由负变正 ⇒ 极小",
-        "caption": "极值是局部比较概念：在某个邻域内，函数值不再比该点更大或更小。"
+        "content": "f′ 由正变负 ⇒ 极大值",
+        "caption": "极值是局部概念：f′ 由正变负处取极大值，由负变正处取极小值；f′(x₀)=0 只是必要条件，还要看符号变化或二阶导数。"
       },
       "keyPoints": [
         {
-          "id": "zhu-dian-he-bu-ke-dao-dian-dou-shi-hou-1r0up4",
-          "title": "驻点和不可导点都是候选点",
-          "bodyMarkdown": "驻点和不可导点都是候选点"
+          "id": "di-yi-chong-fen-tiao-jian-f-bian-hao-ji-04828u",
+          "title": "第一充分条件",
+          "bodyMarkdown": "第一充分条件：f′ 变号（+→− 极大，−→+ 极小）"
         },
         {
-          "id": "ji-da-ji-xiao-shi-ju-bu-gai-nian",
-          "title": "极大/极小是局部概念",
-          "bodyMarkdown": "极大/极小是局部概念"
+          "id": "di-er-chong-fen-tiao-jian-f-x-0-qie-f-x-1efffn",
+          "title": "第二充分条件",
+          "bodyMarkdown": "第二充分条件：f′(x₀)=0 且 f″(x₀)<0 为极大，>0 为极小"
         },
         {
-          "id": "yan-ge-ji-zhi-yu-fei-yan-ge-ji-zhi-yao-1b9ggl",
-          "title": "严格极值与非严格极值要区分",
-          "bodyMarkdown": "严格极值与非严格极值要区分"
+          "id": "f-x-0-dan-bu-shi-ji-zhi-de-li-zi-y-x",
+          "title": "f′(x₀)=0 但不是极值的例子",
+          "bodyMarkdown": "f′(x₀)=0 但不是极值的例子：y=x³"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-3x-de-zhu-dian-0klhxj",
+          "id": "y-x-3x-zai-x-1-qu-ji-da-0u9842",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=x³−3x 的驻点为 ±1，结合符号可判 −1 为极大、1 为极小。"
+          "bodyMarkdown": "y=x³−3x 在 x=−1 取极大值 2，在 x=1 取极小值 −2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "极值是局部比较概念：在某个邻域内，函数值不再比该点更大或更小。导数符号变化最直观，二阶导数只在条件满足时提供更快的判别。\n\n### 解题步骤\n\n1. 找定义域内候选点\n2. 制作导数符号表\n3. 比较左右变化或函数值\n\n### 易错点\n\n只解 f′=0 而不做符号判断，无法完成极值判定。"
+      "bodyMarkdown": "极值是局部概念：f′ 由正变负处取极大值，由负变正处取极小值；f′(x₀)=0 只是必要条件，还要看符号变化或二阶导数。\n\n### 解题步骤\n\n1. 求 f′ 并解 f′=0\n2. 判断符号变化或用 f″\n3. 写出极值点与极值\n\n### 易错点\n\n把 f′=0 的点都当成极值点。"
     },
     {
       "schemaVersion": "1.0",
@@ -1557,47 +1545,47 @@
       "sectionId": "m1-p1-c2-s7",
       "sectionTitle": "导数应用",
       "title": "最大值与最小值",
-      "summary": "最值是在整个指定范围内比较得到的最大或最小函数值。闭区间连续函数一定能取到最值，实际计算要把内部临界点、不可导点和端点全部列入候选集合。",
+      "summary": "闭区间上求最值：算出所有驻点、不可导点与端点的函数值，比较大小即可；实际问题中若只有一个驻点且函数先增后减，该点就是最大值点。",
       "tags": [
-        "全局比较"
+        "比较驻点与端点"
       ],
       "sortOrder": 310,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "连续于[a,b] ⇒ 最大值、最小值都能在[a,b]取到",
-        "caption": "最值是在整个指定范围内比较得到的最大或最小函数值。"
+        "content": "M=max{f(候选点)}",
+        "caption": "闭区间上求最值：算出所有驻点、不可导点与端点的函数值，比较大小即可；实际问题中若只有一个驻点且函数先增后减，该点就是最大值点。"
       },
       "keyPoints": [
         {
-          "id": "bi-qu-jian-duan-dian-bu-neng-lou",
-          "title": "闭区间端点不能漏",
-          "bodyMarkdown": "闭区间端点不能漏"
+          "id": "hou-xuan-dian-zhu-dian-bu-ke-dao-dian-00516g",
+          "title": "候选点：驻点、不可导点、区间端点",
+          "bodyMarkdown": "候选点：驻点、不可导点、区间端点"
         },
         {
-          "id": "wu-jie-qu-jian-bu-yi-ding-neng-qu-dao-0f4otv",
-          "title": "无界区间不一定能取到最值",
-          "bodyMarkdown": "无界区间不一定能取到最值"
+          "id": "bi-qu-jian-lian-xu-yi-ding-you-zui-da-1k8h7v",
+          "title": "闭区间连续 ⇒ 一定有最大值与最小值",
+          "bodyMarkdown": "闭区间连续 ⇒ 一定有最大值与最小值"
         },
         {
-          "id": "ju-bu-ji-zhi-bu-yi-ding-shi-quan-ju-zui-0hwkjb",
-          "title": "局部极值不一定是全局最值",
-          "bodyMarkdown": "局部极值不一定是全局最值"
+          "id": "shi-ji-wen-ti-ke-yong-wei-yi-zhu-dian-079ya2",
+          "title": "实际问题可用「唯一驻点 + 单调性」直接判定",
+          "bodyMarkdown": "实际问题可用「唯一驻点 + 单调性」直接判定"
         }
       ],
       "examples": [
         {
-          "id": "f-x-x-3x-zai-2-2-shang-08apkm",
+          "id": "f-x-x-3x-zai-0-2-shang-0o7n7r",
           "title": "讲解例子",
-          "bodyMarkdown": "f(x)=x³−3x 在 [−2,2] 上，把 −1、1、−2、2 的函数值放在一起比较。"
+          "bodyMarkdown": "f(x)=x³−3x 在 [0,2] 上：比较 f(0)=0、f(1)=−2、f(2)=2，最大 2、最小 −2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "最值是在整个指定范围内比较得到的最大或最小函数值。闭区间连续函数一定能取到最值，实际计算要把内部临界点、不可导点和端点全部列入候选集合。\n\n### 解题步骤\n\n1. 找临界点与不可导点\n2. 加入所有端点\n3. 逐一代入比较函数值\n\n### 易错点\n\n只比较驻点、不比较端点，会漏掉真正的全局最值。"
+      "bodyMarkdown": "闭区间上求最值：算出所有驻点、不可导点与端点的函数值，比较大小即可；实际问题中若只有一个驻点且函数先增后减，该点就是最大值点。\n\n### 解题步骤\n\n1. 求出所有候选点\n2. 计算各点函数值\n3. 比较得出最大值与最小值\n\n### 易错点\n\n只比较驻点，漏掉端点。"
     },
     {
       "schemaVersion": "1.0",
@@ -1608,51 +1596,47 @@
       "sectionId": "m1-p1-c2-s7",
       "sectionTitle": "导数应用",
       "title": "凹凸性",
-      "summary": "大纲定义：f 在区间 I 上连续，若对任意 x₁≠x₂ 恒有 f((x₁+x₂)/2) < [f(x₁)+f(x₂)]/2，则图形为凹（弦在中点上方）；反之为凸。",
+      "summary": "f″>0 时曲线是凹的（下凸），f″<0 时是凸的（上凸）；凹凸性也可以用弦与曲线的高低关系定义。",
       "tags": [
-        "两种定义"
+        "看二阶导数符号"
       ],
       "sortOrder": 320,
-      "estimatedMinutes": 7,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "凹 ⇔ f((x₁+x₂)/2)<[f(x₁)+f(x₂)]/2 ⇔（二阶可导时）f″(x)>0",
-        "caption": "大纲定义：f 在区间 I 上连续，若对任意 x₁≠x₂ 恒有 f((x₁+x₂)/2) < [f(x₁)+f(x₂)]/"
+        "content": "f″>0 ⇒ 凹",
+        "caption": "f″>0 时曲线是凹的（下凸），f″<0 时是凸的（上凸）；凹凸性也可以用弦与曲线的高低关系定义。"
       },
       "keyPoints": [
         {
-          "id": "da-gang-ding-yi-bi-jiao-xian-zhong-dian-1iw0zd",
-          "title": "大纲定义比较弦中点与弧中点的高度",
-          "bodyMarkdown": "大纲定义比较弦中点与弧中点的高度"
+          "id": "f-0-ao-xia-tu-f-0-tu-shang-tu",
+          "title": "f″>0 ⇒ 凹（下凸）",
+          "bodyMarkdown": "f″>0 ⇒ 凹（下凸），f″<0 ⇒ 凸（上凸）"
         },
         {
-          "id": "qie-xian-ding-yi-ao-hu-zong-zai-qi-ren-158dvn",
-          "title": "切线定义",
-          "bodyMarkdown": "切线定义：凹弧总在其任一切线的上方"
+          "id": "deng-jia-ding-yi-ao-f-x-x-2-f-x-f-x-2",
+          "title": "等价定义",
+          "bodyMarkdown": "等价定义：凹 ⇔ f((x₁+x₂)/2)<[f(x₁)+f(x₂)]/2"
         },
         {
-          "id": "pan-bie-yong-f-fu-hao-xian-que-ren-er-0gi1p2",
-          "title": "判别用 f″ 符号",
-          "bodyMarkdown": "判别用 f″ 符号；先确认二阶可导再套判别法"
+          "id": "ao-tu-xing-yu-yi-jie-dao-shu-wu-guan",
+          "title": "凹凸性与一阶导数无关",
+          "bodyMarkdown": "凹凸性与一阶导数无关"
         }
       ],
       "examples": [
         {
-          "id": "y-x-chu-chu-f-2-0-tu-0j8von",
+          "id": "y-x-de-f-2-0-gu-qu-xian-0vivoy",
           "title": "讲解例子",
-          "bodyMarkdown": "y=x² 处处 f″=2>0，图形为凹；y=ln x 在 (0,+∞) 上 f″=−1/x²<0，图形为凸。"
+          "bodyMarkdown": "y=x² 的 f″=2>0，故曲线凹（开口向上）。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第5讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "大纲定义：f 在区间 I 上连续，若对任意 x₁≠x₂ 恒有 f((x₁+x₂)/2) < [f(x₁)+f(x₂)]/2，则图形为凹（弦在中点上方）；反之为凸。可导时还有切线定义：f(x₀)+f′(x₀)(x−x₀) ≤ f(x)，即曲线总在任一点切线的上方（凹）。二阶可导时判别最方便：f″>0 为凹，f″<0 为凸。定义还可加权广义化：f(λ₁x₁+λ₂x₂) ≤ λ₁f(x₁)+λ₂f(x₂)（λ₁+λ₂=1）。\n\n### 解题步骤\n\n1. 求 f″(x)\n2. 按 f″ 符号划分凹凸区间\n3. 端点和不可导点结合定义验证\n\n### 易错点\n\n“凹/凸”以大纲定义为准，不要按生活直觉；f″ 不存在时要回到弦与弧的原始定义。"
+      "bodyMarkdown": "f″>0 时曲线是凹的（下凸），f″<0 时是凸的（上凸）；凹凸性也可以用弦与曲线的高低关系定义。\n\n### 解题步骤\n\n1. 求 f″\n2. 解 f″ 的符号区间\n3. 按符号判断凹凸\n\n### 易错点\n\n把「凹」与「凸」的中文习惯说法弄反（按教材定义：f″>0 为凹）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1663,51 +1647,47 @@
       "sectionId": "m1-p1-c2-s7",
       "sectionTitle": "导数应用",
       "title": "拐点",
-      "summary": "连续曲线凹弧与凸弧的分界点称为拐点。拐点只要求连续，不要求可导——f″ 不存在的点也可能是拐点，如 y=∛x 在 x=0 处。",
+      "summary": "拐点是曲线凹凸性改变的点：f″ 在该点两侧变号；f″(x₀)=0 只是候选条件，必须验证符号确实变化。",
       "tags": [
-        "凹凸分界"
+        "凹凸性改变的点"
       ],
       "sortOrder": 330,
-      "estimatedMinutes": 6,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f″(x₀)=0 且 f″ 左右变号 ⇒ 拐点；或 f″(x₀)=0 且 f‴(x₀)≠0 ⇒ 拐点",
-        "caption": "连续曲线凹弧与凸弧的分界点称为拐点。"
+        "content": "f″ 变号 ⇒ 拐点",
+        "caption": "拐点是曲线凹凸性改变的点：f″ 在该点两侧变号；f″(x₀)=0 只是候选条件，必须验证符号确实变化。"
       },
       "keyPoints": [
         {
-          "id": "guai-dian-xie-zuo-biao-x-f-x-ji-zhi-0bfv12",
-          "title": "拐点写坐标 (x₀",
-          "bodyMarkdown": "拐点写坐标 (x₀,f(x₀))，极值点只写横坐标"
+          "id": "pan-ju-f-zai-x-liang-ce-bian-hao",
+          "title": "判据：f″ 在 x₀ 两侧变号",
+          "bodyMarkdown": "判据：f″ 在 x₀ 两侧变号"
         },
         {
-          "id": "f-x-0-zhi-shi-bi-yao-tiao-jian-bi-xu-0lbfi6",
-          "title": "f″(x₀)=0 只是必要条件",
-          "bodyMarkdown": "f″(x₀)=0 只是必要条件，必须再验证左右变号"
+          "id": "f-x-0-bu-yi-ding-shi-guai-dian-ru-y-x-0c1dyz",
+          "title": "f″(x₀)=0 不一定是拐点（如 y=x⁴ 在",
+          "bodyMarkdown": "f″(x₀)=0 不一定是拐点（如 y=x⁴ 在 0 处）"
         },
         {
-          "id": "f-bu-cun-zai-de-dian-tong-yang-ke-neng-067txj",
-          "title": "f″ 不存在的点同样可能是拐点",
-          "bodyMarkdown": "f″ 不存在的点同样可能是拐点，别漏"
+          "id": "f-x-0-qie-f-x-0-shi-guai-dian",
+          "title": "f″(x₀)=0 且 f‴(x₀)≠0 ⇒ 是拐",
+          "bodyMarkdown": "f″(x₀)=0 且 f‴(x₀)≠0 ⇒ 是拐点"
         }
       ],
       "examples": [
         {
-          "id": "y-x-zai-0-0-f-6x-zuo-12ksx8",
+          "id": "y-x-zai-0-chu-f-6x-bian-1ria85",
           "title": "讲解例子",
-          "bodyMarkdown": "y=x³ 在 (0,0)：f″=6x 左右变号，是拐点；y=x⁴ 在 x=0 处 f″=0 但不变号，不是拐点。"
+          "bodyMarkdown": "y=x³ 在 0 处 f″=6x 变号，故 (0,0) 是拐点。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第5讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "连续曲线凹弧与凸弧的分界点称为拐点。拐点只要求连续，不要求可导——f″ 不存在的点也可能是拐点，如 y=∛x 在 x=0 处。判别链条：二阶可导时 f″(x₀)=0 是必要条件；第一充分条件是 f″ 在 x₀ 左右邻域变号；第二充分条件是 f″(x₀)=0 且 f‴(x₀)≠0。注意拐点写在曲线上，必须写 (x₀, f(x₀))，这与极值点只写 x=x₀ 不同。\n\n### 解题步骤\n\n1. 找候选点：f″=0 或 f″ 不存在\n2. 检查曲线在该点连续\n3. 验证左右邻域 f″ 变号\n\n### 易错点\n\n间断点不可能是拐点；只凭 f″(x₀)=0 下结论是最常见错误。"
+      "bodyMarkdown": "拐点是曲线凹凸性改变的点：f″ 在该点两侧变号；f″(x₀)=0 只是候选条件，必须验证符号确实变化。\n\n### 解题步骤\n\n1. 求 f″ 并解 f″=0\n2. 检查两侧符号是否变化\n3. 写出拐点坐标\n\n### 易错点\n\n把 f″=0 的点都当成拐点。"
     },
     {
       "schemaVersion": "1.0",
@@ -1718,51 +1698,47 @@
       "sectionId": "m1-p1-c2-s7",
       "sectionTitle": "导数应用",
       "title": "渐近线",
-      "summary": "按固定顺序找渐近线：先铅直——lim(x→x₀±)f(x)=∞，则 x=x₀ 为铅直渐近线，x₀ 取自无定义点、定义区间端点或分段点；",
+      "summary": "渐近线有三类：铅直（x→x₀ 时 f→∞）、水平（x→∞ 时 f→b）、斜（f(x)−(ax+b)→0，其中 a=lim f(x)/x、b=lim[f(x)−ax]）。",
       "tags": [
-        "铅直→水平→斜"
+        "曲线远处的走向"
       ],
       "sortOrder": 340,
-      "estimatedMinutes": 7,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "斜渐近线：a=lim(x→∞) f(x)/x ≠0，b=lim(x→∞) [f(x)−ax]",
-        "caption": "按固定顺序找渐近线：先铅直——lim(x→x₀±)f(x)=∞，则 x=x₀ 为铅直渐近线，x₀ 取自无定义点"
+        "format": "latex",
+        "content": "a=lim_{x→∞} f(x)/x，b=lim_{x→∞}[f(x)−ax]",
+        "caption": "渐近线有三类：铅直（x→x₀ 时 f→∞）、水平（x→∞ 时 f→b）、斜（f(x)−(ax+b)→0"
       },
       "keyPoints": [
         {
-          "id": "shun-xu-gu-ding-qian-zhi-shui-ping-xie-0wt19a",
-          "title": "顺序固定",
-          "bodyMarkdown": "顺序固定：铅直、水平、斜，按流程走不遗漏"
+          "id": "qian-zhi-jian-jin-xian-chu-xian-zai-han-13k1kf",
+          "title": "铅直渐近线出现在函数的无穷间断点处",
+          "bodyMarkdown": "铅直渐近线出现在函数的无穷间断点处"
         },
         {
-          "id": "tong-yi-fang-xiang-shang-shui-ping-yu-01p09n",
-          "title": "同一方向上水平与斜渐近线互斥",
-          "bodyMarkdown": "同一方向上水平与斜渐近线互斥"
+          "id": "shui-ping-jian-jin-xian-shi-x-shi-de-ji-0efiun",
+          "title": "水平渐近线是 x→∞ 时的极限值",
+          "bodyMarkdown": "水平渐近线是 x→∞ 时的极限值"
         },
         {
-          "id": "x-yu-x-liang-ce-ke-neng-bu-tong-bi-xu-0byvzf",
-          "title": "x→+∞ 与 x→−∞ 两侧可能不同",
-          "bodyMarkdown": "x→+∞ 与 x→−∞ 两侧可能不同，必须分别求"
+          "id": "xie-jian-jin-xian-yao-xian-qiu-a-lim-f-0iksdj",
+          "title": "斜渐近线要先求 a=lim f(x)/x",
+          "bodyMarkdown": "斜渐近线要先求 a=lim f(x)/x，再求 b"
         }
       ],
       "examples": [
         {
-          "id": "y-1-x-ln-1-e-qian-zhi-x-0c7382",
+          "id": "y-x-1-x-you-qian-zhi-0fffmd",
           "title": "讲解例子",
-          "bodyMarkdown": "y=1/x+ln(1+eˣ)：铅直 x=0；x→−∞ 得水平 y=0；x→+∞ 得斜渐近线 y=x。"
+          "bodyMarkdown": "y=x+1/x 有铅直渐近线 x=0 与斜渐近线 y=x。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第5讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "按固定顺序找渐近线：先铅直——lim(x→x₀±)f(x)=∞，则 x=x₀ 为铅直渐近线，x₀ 取自无定义点、定义区间端点或分段点；再水平——lim(x→+∞或−∞)f(x)=y₀，则 y=y₀ 为水平渐近线；最后斜——a=lim f(x)/x≠0 且 b=lim[f(x)−ax] 都存在，则 y=ax+b 为斜渐近线。x→+∞ 与 x→−∞ 要分开讨论：两侧可能不同（如 arctan x），且同一方向上有水平就没有斜。\n\n### 解题步骤\n\n1. 找无定义点/端点，验证极限为 ∞ 定铅直\n2. 算 x→±∞ 的极限定水平\n3. 无水平的方向上算 a=lim f/x 与 b=lim(f−ax) 定斜\n\n### 易错点\n\n漏掉分侧讨论是高频错误；求斜渐近线时 a、b 两个极限都要验证存在。"
+      "bodyMarkdown": "渐近线有三类：铅直（x→x₀ 时 f→∞）、水平（x→∞ 时 f→b）、斜（f(x)−(ax+b)→0，其中 a=lim f(x)/x、b=lim[f(x)−ax]）。\n\n### 解题步骤\n\n1. 找无穷间断点 → 铅直渐近线\n2. 求 x→∞ 的极限 → 水平渐近线\n3. 若极限为 ∞，再算 a、b 求斜渐近线\n\n### 易错点\n\n把「有极限」与「有渐近线」混为一谈（水平与斜渐近线互斥）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1773,47 +1749,47 @@
       "sectionId": "m1-p1-c2-s7",
       "sectionTitle": "导数应用",
       "title": "函数图形描绘",
-      "summary": "函数作图不是凭感觉画曲线，而是把定义域、对称性、零点、单调、极值、凹凸、渐近线和端点行为按顺序拼起来。",
+      "summary": "描绘函数图形按固定步骤：定义域与奇偶周期性 → 一阶导数定单调与极值 → 二阶导数定凹凸与拐点 → 渐近线 → 描点连线。",
       "tags": [
-        "用性质重建图像"
+        "按步骤画图"
       ],
       "sortOrder": 350,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f′>0 上升，f′<0 下降；f″>0 上凸，f″<0 下凸",
-        "caption": "函数作图不是凭感觉画曲线，而是把定义域、对称性、零点、单调、极值、凹凸、渐近线和端点行为按顺序拼起来。"
+        "content": "定义域 → f′ → f″ → 渐近线 → 描点",
+        "caption": "描绘函数图形按固定步骤：定义域与奇偶周期性 → 一阶导数定单调与极值 → 二阶导数定凹凸与拐点 → 渐近线 → 描点连线。"
       },
       "keyPoints": [
         {
-          "id": "xian-ding-ding-yi-yu-he-te-shu-dian",
-          "title": "先定定义域和特殊点",
-          "bodyMarkdown": "先定定义域和特殊点"
+          "id": "xian-ding-ding-yi-yu-yu-dui-chen-xing-1d4153",
+          "title": "先定定义域与对称性",
+          "bodyMarkdown": "先定定义域与对称性，能少算一半"
         },
         {
-          "id": "fu-hao-biao-bi-ju-bu-zhi-jue-ke-kao",
-          "title": "符号表比局部直觉可靠",
-          "bodyMarkdown": "符号表比局部直觉可靠"
+          "id": "f-ding-dan-diao-qu-jian-yu-ji-zhi",
+          "title": "f′ 定单调区间与极值",
+          "bodyMarkdown": "f′ 定单调区间与极值"
         },
         {
-          "id": "jian-jin-xian-zhi-miao-shu-qu-jin-qu-158jvr",
-          "title": "渐近线只描述趋近趋势",
-          "bodyMarkdown": "渐近线只描述趋近趋势，不一定与图像相交禁止"
+          "id": "f-ding-ao-tu-yu-guai-dian-zui-hou-bu-19jgli",
+          "title": "f″ 定凹凸与拐点",
+          "bodyMarkdown": "f″ 定凹凸与拐点，最后补渐近线"
         }
       ],
       "examples": [
         {
-          "id": "y-x-1-x-1-zai-x-1-shi-0a1xm3",
+          "id": "y-x-3x-de-tu-xing-liang-1nqfow",
           "title": "讲解例子",
-          "bodyMarkdown": "y=(x²−1)/(x−1) 在 x≠1 时等于 x+1，但 x=1 仍是可去间断点。"
+          "bodyMarkdown": "y=x³−3x 的图形：两个极值点、一个拐点、无渐近线。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "函数作图不是凭感觉画曲线，而是把定义域、对称性、零点、单调、极值、凹凸、渐近线和端点行为按顺序拼起来。导数给一阶趋势，二阶导数给弯曲方向。\n\n### 解题步骤\n\n1. 找定义域、零点和渐近线\n2. 做一阶/二阶导数符号表\n3. 按区间趋势绘制并检查\n\n### 易错点\n\n约分后忘记原定义域，会把图像中的空点错误地补上。"
+      "bodyMarkdown": "描绘函数图形按固定步骤：定义域与奇偶周期性 → 一阶导数定单调与极值 → 二阶导数定凹凸与拐点 → 渐近线 → 描点连线。\n\n### 解题步骤\n\n1. 求定义域、奇偶性、周期性\n2. 列表分析 f′ 与 f″ 的符号\n3. 补渐近线并描图\n\n### 易错点\n\n跳过符号表直接描点，漏掉极值与拐点。"
     },
     {
       "schemaVersion": "1.0",
@@ -1824,9 +1800,9 @@
       "sectionId": "m1-p1-c2-s8",
       "sectionTitle": "曲率",
       "title": "弧微分",
-      "summary": "把曲线切得足够碎，每一小段都近似成直线段：横向走 dx，纵向变化 dy=y′dx，斜边就是这一小段的长度 ds。",
+      "summary": "把曲线切得足够碎，每一小段都近似成直线段：横向走 dx、纵向变化 dy=y′dx，斜边就是这一小段的长度 ds，因此 ds=√(1+y′²)dx。",
       "tags": [
-        "把曲线切成小段"
+        "弧长的线性主部"
       ],
       "sortOrder": 360,
       "estimatedMinutes": 4,
@@ -1834,37 +1810,37 @@
         "type": "formula",
         "format": "text",
         "content": "ds=√(1+y′²)dx；参数式 ds=√(x′²+y′²)dt",
-        "caption": "把曲线切得足够碎，每一小段都近似成直线段：横向走 dx，纵向变化 dy=y′dx，斜边就是这一小段的长度 ds。"
+        "caption": "把曲线切得足够碎，每一小段都近似成直线段：横向走 dx、纵向变化 dy=y′dx，斜边就是这一小段的长度 ds，因此 ds=√(1+y′²)dx。"
       },
       "keyPoints": [
         {
-          "id": "xian-qu-heng-xiang-zeng-liang-dx",
-          "title": "先取横向增量 dx",
-          "bodyMarkdown": "先取横向增量 dx"
+          "id": "ds-dx-dy-1-y-dx",
+          "title": "ds=√(dx²+dy²)=√(1+y′²)dx",
+          "bodyMarkdown": "ds=√(dx²+dy²)=√(1+y′²)dx"
         },
         {
-          "id": "zong-xiang-zeng-liang-shi-y-dx",
-          "title": "纵向增量是 y′dx",
-          "bodyMarkdown": "纵向增量是 y′dx"
+          "id": "can-shu-shi-ds-x-y-dt",
+          "title": "参数式：ds=√(x′²+y′²)dt",
+          "bodyMarkdown": "参数式：ds=√(x′²+y′²)dt"
         },
         {
-          "id": "yong-gou-gu-ding-li-he-cheng-xie-bian",
-          "title": "用勾股定理合成斜边",
-          "bodyMarkdown": "用勾股定理合成斜边"
+          "id": "hu-wei-fen-shi-chang-du-yuan-su-yu-qu-l-1vjq27",
+          "title": "弧微分是长度元素",
+          "bodyMarkdown": "弧微分是长度元素，与曲率（方向变化率）是两回事"
         }
       ],
       "examples": [
         {
-          "id": "y-x-shi-y-2x-gu-ds-1-4x-0gpj8o",
+          "id": "y-x-shi-ds-1-4x-dx-x-0-1sn20p",
           "title": "讲解例子",
-          "bodyMarkdown": "y=x² 时 y′=2x，故 ds=√(1+4x²)dx；在 x=0 处 ds=dx，曲线局部与切线重合。"
+          "bodyMarkdown": "y=x² 时 ds=√(1+4x²)dx；x=0 处 ds=dx。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "把曲线切得足够碎，每一小段都近似成直线段：横向走 dx，纵向变化 dy=y′dx，斜边就是这一小段的长度 ds。因此 ds=√(dx²+dy²)=√(1+y′²)dx，它是弧长的线性主部。\n\n### 解题步骤\n\n1. 写出 ds=√(dx²+dy²)\n2. 代入 dy=y′dx\n3. 整理成 ds=√(1+y′²)dx\n\n### 易错点\n\n别把 ds 与曲率 κ 混为一谈：弧微分是长度元素，曲率是切线方向的变化率。"
+      "bodyMarkdown": "把曲线切得足够碎，每一小段都近似成直线段：横向走 dx、纵向变化 dy=y′dx，斜边就是这一小段的长度 ds，因此 ds=√(1+y′²)dx。\n\n### 解题步骤\n\n1. 写出 ds=√(dx²+dy²)\n2. 代入 dy=y′dx\n3. 整理成标准形式\n\n### 易错点\n\n把弧微分与曲率混为一谈。"
     },
     {
       "schemaVersion": "1.0",
@@ -1875,47 +1851,47 @@
       "sectionId": "m1-p1-c2-s8",
       "sectionTitle": "曲率",
       "title": "曲率定义",
-      "summary": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。",
+      "summary": "曲率的定义是「切线倾角的改变量除以弧长改变量」的极限：κ=|dα/ds|，其中 α 是切线倾角、s 是弧长。",
       "tags": [
-        "曲线弯曲程度"
+        "转角与弧长之比"
       ],
       "sortOrder": 370,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "κ=|y″|/(1+y′²)^(3/2)，ρ=1/κ",
-        "caption": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。"
+        "content": "κ=|dα/ds|",
+        "caption": "曲率的定义是「切线倾角的改变量除以弧长改变量」的极限：κ=|dα/ds|，其中 α 是切线倾角、s 是弧长。"
       },
       "keyPoints": [
         {
-          "id": "qu-l-yu-can-shu-hua-fang-shi-wu-guan",
-          "title": "曲率与参数化方式无关",
-          "bodyMarkdown": "曲率与参数化方式无关"
+          "id": "d-ds-wei-qie-xian-qing-jiao",
+          "title": "κ=|dα/ds|",
+          "bodyMarkdown": "κ=|dα/ds|，α 为切线倾角"
         },
         {
-          "id": "zhi-xian-qu-l-wei-0-qu-l-ban-jing-qu-yu-1xtra2",
-          "title": "直线曲率为 0",
-          "bodyMarkdown": "直线曲率为 0，曲率半径趋于无穷"
+          "id": "qu-l-yu-can-shu-hua-wu-guan-shi-qu-xian-0hi97m",
+          "title": "曲率与参数化无关",
+          "bodyMarkdown": "曲率与参数化无关，是曲线的内蕴性质"
         },
         {
-          "id": "ji-zhi-he-guai-dian-pan-duan-yao-jie-he-1o8lxb",
-          "title": "极值和拐点判断要结合曲率符号或变化",
-          "bodyMarkdown": "极值和拐点判断要结合曲率符号或变化"
+          "id": "yuan-shang-mei-dian-qu-l-dou-shi-1-r",
+          "title": "圆上每点曲率都是 1/R",
+          "bodyMarkdown": "圆上每点曲率都是 1/R"
         }
       ],
       "examples": [
         {
-          "id": "y-x-zai-yuan-dian-qu-l-00nkig",
+          "id": "zhi-xian-qing-jiao-bu-17mude",
           "title": "讲解例子",
-          "bodyMarkdown": "y=x² 在原点曲率较大，远离原点后分母增大，曲线相对变平。"
+          "bodyMarkdown": "直线倾角不变，dα=0，故曲率为 0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。曲率半径是曲率的倒数，曲率圆用来刻画该点附近最贴近的圆。\n\n### 解题步骤\n\n1. 求一阶、二阶导数或参数导数\n2. 代入曲率公式\n3. 解释曲率半径与凹凸方向\n\n### 易错点\n\n把曲率 κ 与曲率半径 ρ 混为同一个量，或忘记参数曲线的速度因子。"
+      "bodyMarkdown": "曲率的定义是「切线倾角的改变量除以弧长改变量」的极限：κ=|dα/ds|，其中 α 是切线倾角、s 是弧长。\n\n### 解题步骤\n\n1. 写出切线倾角 α 与弧长 s 的关系\n2. 求 dα/ds\n3. 取绝对值得到曲率\n\n### 易错点\n\n把曲率当成角度本身，而不是角度变化率。"
     },
     {
       "schemaVersion": "1.0",
@@ -1926,47 +1902,47 @@
       "sectionId": "m1-p1-c2-s8",
       "sectionTitle": "曲率",
       "title": "曲率公式",
-      "summary": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。",
+      "summary": "当曲线由 y=y(x) 给出时，曲率的计算公式是 κ=|y″|/(1+y′²)^{3/2}；由参数方程给出时用 κ=|x′y″−x″y′|/(x′²+y′²)^{3/2}。",
       "tags": [
-        "曲线弯曲程度"
+        "用导数算曲率"
       ],
       "sortOrder": 380,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "κ=|y″|/(1+y′²)^(3/2)，ρ=1/κ",
-        "caption": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。"
+        "format": "latex",
+        "content": "κ=|y″|/(1+y′²)^{3/2}",
+        "caption": "当曲线由 y=y(x) 给出时，曲率的计算公式是 κ=|y″|/(1+y′²)^{3/2}；"
       },
       "keyPoints": [
         {
-          "id": "qu-l-yu-can-shu-hua-fang-shi-wu-guan",
-          "title": "曲率与参数化方式无关",
-          "bodyMarkdown": "曲率与参数化方式无关"
+          "id": "zhi-jiao-zuo-biao-y-1-y-3-2",
+          "title": "直角坐标",
+          "bodyMarkdown": "直角坐标：κ=|y″|/(1+y′²)^{3/2}"
         },
         {
-          "id": "zhi-xian-qu-l-wei-0-qu-l-ban-jing-qu-yu-1xtra2",
-          "title": "直线曲率为 0",
-          "bodyMarkdown": "直线曲率为 0，曲率半径趋于无穷"
+          "id": "can-shu-shi-x-y-x-y-x-y-3-2",
+          "title": "参数式：κ=|x′y″−x″y′|/(x′²+y",
+          "bodyMarkdown": "参数式：κ=|x′y″−x″y′|/(x′²+y′²)^{3/2}"
         },
         {
-          "id": "ji-zhi-he-guai-dian-pan-duan-yao-jie-he-1o8lxb",
-          "title": "极值和拐点判断要结合曲率符号或变化",
-          "bodyMarkdown": "极值和拐点判断要结合曲率符号或变化"
+          "id": "fen-mu-de-san-ci-fang-lai-zi-hu-wei-fen",
+          "title": "分母的三次方来自弧微分",
+          "bodyMarkdown": "分母的三次方来自弧微分"
         }
       ],
       "examples": [
         {
-          "id": "y-x-zai-yuan-dian-qu-l-00nkig",
+          "id": "y-x-zai-x-0-chu-y-0-y-2-1b6aet",
           "title": "讲解例子",
-          "bodyMarkdown": "y=x² 在原点曲率较大，远离原点后分母增大，曲线相对变平。"
+          "bodyMarkdown": "y=x² 在 x=0 处：y′=0、y″=2，κ=2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。曲率半径是曲率的倒数，曲率圆用来刻画该点附近最贴近的圆。\n\n### 解题步骤\n\n1. 求一阶、二阶导数或参数导数\n2. 代入曲率公式\n3. 解释曲率半径与凹凸方向\n\n### 易错点\n\n把曲率 κ 与曲率半径 ρ 混为同一个量，或忘记参数曲线的速度因子。"
+      "bodyMarkdown": "当曲线由 y=y(x) 给出时，曲率的计算公式是 κ=|y″|/(1+y′²)^{3/2}；由参数方程给出时用 κ=|x′y″−x″y′|/(x′²+y′²)^{3/2}。\n\n### 解题步骤\n\n1. 求出所需导数\n2. 判断坐标形式\n3. 代入对应公式\n\n### 易错点\n\n分母忘记 3/2 次方（写成 1+y′²）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1977,47 +1953,47 @@
       "sectionId": "m1-p1-c2-s8",
       "sectionTitle": "曲率",
       "title": "曲率半径",
-      "summary": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。",
+      "summary": "曲率半径 ρ=1/κ 是「与该点弯曲程度相当的圆的半径」：曲率越大，曲率半径越小。",
       "tags": [
-        "曲线弯曲程度"
+        "曲率的倒数"
       ],
       "sortOrder": 390,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "κ=|y″|/(1+y′²)^(3/2)，ρ=1/κ",
-        "caption": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。"
+        "content": "ρ=1/κ",
+        "caption": "曲率半径 ρ=1/κ 是「与该点弯曲程度相当的圆的半径」：曲率越大，曲率半径越小。"
       },
       "keyPoints": [
         {
-          "id": "qu-l-yu-can-shu-hua-fang-shi-wu-guan",
-          "title": "曲率与参数化方式无关",
-          "bodyMarkdown": "曲率与参数化方式无关"
+          "id": "1-yu-qu-l-hu-wei-dao-shu",
+          "title": "ρ=1/κ",
+          "bodyMarkdown": "ρ=1/κ，与曲率互为倒数"
         },
         {
-          "id": "zhi-xian-qu-l-wei-0-qu-l-ban-jing-qu-yu-1xtra2",
-          "title": "直线曲率为 0",
-          "bodyMarkdown": "直线曲率为 0，曲率半径趋于无穷"
+          "id": "zhi-xian-de-qu-l-ban-jing-wei-wu-qiong-0v6xln",
+          "title": "直线的曲率半径为无穷大",
+          "bodyMarkdown": "直线的曲率半径为无穷大"
         },
         {
-          "id": "ji-zhi-he-guai-dian-pan-duan-yao-jie-he-1o8lxb",
-          "title": "极值和拐点判断要结合曲率符号或变化",
-          "bodyMarkdown": "极值和拐点判断要结合曲率符号或变化"
+          "id": "yuan-de-qu-l-ban-jing-jiu-shi-ta-de-ban-1o5vhx",
+          "title": "圆的曲率半径就是它的半径",
+          "bodyMarkdown": "圆的曲率半径就是它的半径"
         }
       ],
       "examples": [
         {
-          "id": "y-x-zai-yuan-dian-qu-l-00nkig",
+          "id": "y-x-zai-x-0-chu-2-gu-1-2",
           "title": "讲解例子",
-          "bodyMarkdown": "y=x² 在原点曲率较大，远离原点后分母增大，曲线相对变平。"
+          "bodyMarkdown": "y=x² 在 x=0 处 κ=2，故 ρ=1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。曲率半径是曲率的倒数，曲率圆用来刻画该点附近最贴近的圆。\n\n### 解题步骤\n\n1. 求一阶、二阶导数或参数导数\n2. 代入曲率公式\n3. 解释曲率半径与凹凸方向\n\n### 易错点\n\n把曲率 κ 与曲率半径 ρ 混为同一个量，或忘记参数曲线的速度因子。"
+      "bodyMarkdown": "曲率半径 ρ=1/κ 是「与该点弯曲程度相当的圆的半径」：曲率越大，曲率半径越小。\n\n### 解题步骤\n\n1. 先求曲率 κ\n2. 取倒数得到 ρ\n3. 注意 κ=0 时 ρ 为 ∞\n\n### 易错点\n\n把曲率半径写成 κ 的平方或 1/κ²。"
     },
     {
       "schemaVersion": "1.0",
@@ -2028,47 +2004,47 @@
       "sectionId": "m1-p1-c2-s8",
       "sectionTitle": "曲率",
       "title": "曲率圆",
-      "summary": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。",
+      "summary": "曲率圆（密切圆）是与曲线在该点有相同切线、相同曲率的圆，圆心在曲线的凹侧、半径为曲率半径；它给出了曲线在该点附近的圆形近似。",
       "tags": [
-        "曲线弯曲程度"
+        "最贴合的圆"
       ],
       "sortOrder": 400,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "κ=|y″|/(1+y′²)^(3/2)，ρ=1/κ",
-        "caption": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。"
+        "content": "圆心 = 该点沿法线方向移动 ρ",
+        "caption": "曲率圆（密切圆）是与曲线在该点有相同切线、相同曲率的圆，圆心在曲线的凹侧、半径为曲率半径；它给出了曲线在该点附近的圆形近似。"
       },
       "keyPoints": [
         {
-          "id": "qu-l-yu-can-shu-hua-fang-shi-wu-guan",
-          "title": "曲率与参数化方式无关",
-          "bodyMarkdown": "曲率与参数化方式无关"
+          "id": "qu-l-yuan-yu-qu-xian-zai-gai-dian-xiang-0a3tpf",
+          "title": "曲率圆与曲线在该点相切且曲率相同",
+          "bodyMarkdown": "曲率圆与曲线在该点相切且曲率相同"
         },
         {
-          "id": "zhi-xian-qu-l-wei-0-qu-l-ban-jing-qu-yu-1xtra2",
-          "title": "直线曲率为 0",
-          "bodyMarkdown": "直线曲率为 0，曲率半径趋于无穷"
+          "id": "yuan-xin-zai-fa-xian-shang-wei-yu-ao-ce-1z12hk",
+          "title": "圆心在法线上、位于凹侧",
+          "bodyMarkdown": "圆心在法线上、位于凹侧，半径 ρ=1/κ"
         },
         {
-          "id": "ji-zhi-he-guai-dian-pan-duan-yao-jie-he-1o8lxb",
-          "title": "极值和拐点判断要结合曲率符号或变化",
-          "bodyMarkdown": "极值和拐点判断要结合曲率符号或变化"
+          "id": "yong-yuan-jin-si-qu-xian-shi-qu-l-yuan-1jx4d3",
+          "title": "用圆近似曲线是曲率圆的实际意义",
+          "bodyMarkdown": "用圆近似曲线是曲率圆的实际意义"
         }
       ],
       "examples": [
         {
-          "id": "y-x-zai-yuan-dian-qu-l-00nkig",
+          "id": "y-x-zai-x-0-chu-qu-l-1thx67",
           "title": "讲解例子",
-          "bodyMarkdown": "y=x² 在原点曲率较大，远离原点后分母增大，曲线相对变平。"
+          "bodyMarkdown": "y=x² 在 x=0 处曲率圆为 x²+(y−1/2)²=1/4。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "曲率描述切线方向随弧长变化的快慢：同样走过一小段弧长，切线转得越快，曲率越大。曲率半径是曲率的倒数，曲率圆用来刻画该点附近最贴近的圆。\n\n### 解题步骤\n\n1. 求一阶、二阶导数或参数导数\n2. 代入曲率公式\n3. 解释曲率半径与凹凸方向\n\n### 易错点\n\n把曲率 κ 与曲率半径 ρ 混为同一个量，或忘记参数曲线的速度因子。"
+      "bodyMarkdown": "曲率圆（密切圆）是与曲线在该点有相同切线、相同曲率的圆，圆心在曲线的凹侧、半径为曲率半径；它给出了曲线在该点附近的圆形近似。\n\n### 解题步骤\n\n1. 求出该点坐标与切线\n2. 沿法线朝凹侧量出 ρ\n3. 得到圆心与曲率圆方程\n\n### 易错点\n\n圆心方向取反（应在凹侧）。"
     }
   ]
 }
