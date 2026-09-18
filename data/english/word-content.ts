@@ -100,6 +100,22 @@ export const BATCHES: { id: string; label: string; words: string[] }[] = [
     'premise', 'prevail', 'proceed', 'prohibit', 'provoke', 'qualify',
     'reinforce', 'sustain', 'tolerate',
     ],
+  },  {
+    id: 'batch-5',
+    label: '高频词第四批（re-/sub-/trans- 族与常用抽象词）',
+    words: [
+    'quantify', 'quote', 'radical', 'ratio', 'react', 'recall',
+    'recover', 'recruit', 'refer', 'refine', 'regulate', 'remain',
+    'remove', 'renew', 'reproduce', 'reserve', 'resist', 'resolve',
+    'restrict', 'reverse', 'revise', 'rigid', 'satisfy', 'secure',
+    'segregate', 'select', 'sequence', 'severe', 'simulate', 'solve',
+    'specify', 'sponsor', 'state', 'stimulate', 'submit', 'subsequent',
+    'succeed', 'summarize', 'superior', 'supervise', 'supplement', 'suppose',
+    'suppress', 'symbol', 'sympathy', 'synthesis', 'temporary', 'terminate',
+    'testify', 'transfer', 'transmit', 'ultimate', 'undergo', 'undermine',
+    'undertake', 'uniform', 'unique', 'utilize', 'vary', 'verify',
+    'violate', 'virtual', 'vital', 'volunteer', 'witness', 'yield',
+    ],
   },
 ]
 
@@ -2157,6 +2173,66 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "qualify for", meaningZh: "有资格获得" },
     ],
   },
+  recall: {
+    root: { display: "re-（回）+ call（叫）", explanation: "把记忆叫回来，即回忆、回想。" },
+    mnemonic: "recall 后接名词或 doing，不接 to do（recall seeing it）。",
+    examples: [
+      { sentence: "Few students recall the words they only read once.", translationZh: "只读过一遍的词，很少有学生想得起来。" },
+    ],
+    collocations: [
+      { phrase: "recall doing", meaningZh: "记得做过" },
+    ],
+  },
+  react: {
+    root: { display: "re-（反）+ act（做）", explanation: "act 表「做、行动」（如 action、active）：反过来做，即反应。" },
+    mnemonic: "react to（对……作出反应）；react against（反抗）。",
+    examples: [
+      { sentence: "Readers react strongly to an unclear thesis.", translationZh: "读者对含糊的中心论点反应强烈。" },
+    ],
+    collocations: [
+      { phrase: "react to", meaningZh: "对……作出反应" },
+    ],
+  },
+  ratio: {
+    root: { display: "rat（计算、判断）", explanation: "reri 是拉丁语「计算、认为」，算出来的比，即比率。" },
+    mnemonic: "the ratio of A to B（A 与 B 之比）；rate 是「速率/比率」，别混。",
+    examples: [
+      { sentence: "The ratio of new words to reviews is about one to two.", translationZh: "新词与复习词的比例约为一比二。" },
+    ],
+    collocations: [
+      { phrase: "the ratio of A to B", meaningZh: "A 与 B 之比" },
+    ],
+  },
+  radical: {
+    root: { display: "radic（根）+ -al", explanation: "radix 是拉丁语「根」（如 radish、eradicate）：动到根上，即根本的、激进的。" },
+    mnemonic: "radical 可褒可贬：radical reform（彻底的改革）／radical idea（激进的想法）。",
+    examples: [
+      { sentence: "A radical change of method rarely helps in exam week.", translationZh: "考前一周大改方法很少有帮助。" },
+    ],
+    collocations: [
+      { phrase: "a radical change", meaningZh: "根本性的改变" },
+    ],
+  },
+  quote: {
+    root: { display: "quot（多少）", explanation: "quot 表「多少、第几」（如 quota、quotient）：按编号引述原文，即引用。" },
+    mnemonic: "quote 是「照原话引」，cite 是「举出出处」，两者不同。",
+    examples: [
+      { sentence: "She quotes two lines from the original report.", translationZh: "她引用了原报告中的两行。" },
+    ],
+    collocations: [
+      { phrase: "quote from", meaningZh: "引用……的话" },
+    ],
+  },
+  quantify: {
+    root: { display: "quant（多少）+ -ify（使）", explanation: "quantus 是拉丁语「多大、多少」：把程度变成数字，即量化。" },
+    mnemonic: "quantify 的宾语是「影响、收益、风险」这类抽象事物。",
+    examples: [
+      { sentence: "Quantify your progress: words per day, not feelings.", translationZh: "把进步量化：每天多少词，而不是凭感觉。" },
+    ],
+    collocations: [
+      { phrase: "quantify the impact", meaningZh: "量化影响" },
+    ],
+  },
   recognize: {
     root: { display: "re-（再次）+ cogn（知道）", explanation: "cogn 表「知道」（如 cognition 认知），认出即「再次知道」。" },
     mnemonic: "recognize 是「认出来」，不是「承认」——后者是 admit/acknowledge。",
@@ -2165,6 +2241,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "recognize sb. as", meaningZh: "承认某人是……" },
+    ],
+  },
+  recruit: {
+    root: { display: "re-（再）+ cresc（生长）", explanation: "cresc / cret 表「生长」（如 increase、concrete）：让队伍重新长起来，即招募。" },
+    mnemonic: "recruit 的宾语可以是「人」，也可以是「成员、志愿者」。",
+    examples: [
+      { sentence: "The lab recruits ten assistants every spring.", translationZh: "实验室每年春天招十名助理。" },
+    ],
+    collocations: [
+      { phrase: "recruit staff", meaningZh: "招募人员" },
+    ],
+  },
+  recover: {
+    root: { display: "re-（回）+ cover（取得、覆盖）", explanation: "重新拿回来，即恢复、找回。" },
+    mnemonic: "recover from（从……中恢复）；recover 自己恢复，不说 recover sb.。",
+    examples: [
+      { sentence: "She recovered from a bad first mock exam.", translationZh: "她从一次糟糕的模考中恢复过来。" },
+    ],
+    collocations: [
+      { phrase: "recover from", meaningZh: "从……恢复" },
     ],
   },
   reduce: {
@@ -2177,6 +2273,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "reduce sth. to", meaningZh: "把……降到" },
     ],
   },
+  refine: {
+    root: { display: "re-（反复）+ fin（完成、边界）", explanation: "fin 表「界限、完成」（如 define、final）：反复打磨到边界，即精炼、改进。" },
+    mnemonic: "refine 强调「在原基础上改好」，不是推倒重来。",
+    examples: [
+      { sentence: "Refine your outline before you start writing.", translationZh: "动笔前先把提纲打磨好。" },
+    ],
+    collocations: [
+      { phrase: "refine a method", meaningZh: "改进方法" },
+    ],
+  },
+  refer: {
+    root: { display: "re-（回）+ fer（带）", explanation: "fer 表「携带」（如 transfer、infer）：把话题带回去，即提到、参考。" },
+    mnemonic: "refer to（提到 / 查阅）；refer sb. to（把某人介绍给……）。",
+    examples: [
+      { sentence: "The author refers to two earlier studies.", translationZh: "作者提到了两项早前的研究。" },
+    ],
+    collocations: [
+      { phrase: "refer to", meaningZh: "提到／查阅" },
+    ],
+  },
   reflect: {
     root: { display: "re-（向后）+ flect（弯折）", explanation: "flect 表「弯折」（如 flexible）：光折回来是反射，思绪折回来是反思。" },
     mnemonic: "reflect on（反思）/ reflect（反映）——一个向内，一个向外。",
@@ -2185,6 +2301,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "reflect on", meaningZh: "反思；思考" },
+    ],
+  },
+  regulate: {
+    root: { display: "reg（引导、统治）+ -ulate", explanation: "reg 表「引导、管」（如 region、regime）：按规则引导，即管理、调节。" },
+    mnemonic: "regulate 多用于「机制、生理、市场」的自我调节。",
+    examples: [
+      { sentence: "Sleep regulates how well you retain new words.", translationZh: "睡眠调节你对新词的记忆效果。" },
+    ],
+    collocations: [
+      { phrase: "regulate a process", meaningZh: "规范流程" },
     ],
   },
   reinforce: {
@@ -2227,6 +2353,36 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "be relevant to", meaningZh: "与……相关" },
     ],
   },
+  renew: {
+    root: { display: "re-（再）+ new（新）", explanation: "使重新变新，即续借、更新、恢复。" },
+    mnemonic: "renew a book（续借图书）；renew effort（重新发力）。",
+    examples: [
+      { sentence: "Renew your notes the day after each class.", translationZh: "每堂课后第二天更新笔记。" },
+    ],
+    collocations: [
+      { phrase: "renew a subscription", meaningZh: "续订" },
+    ],
+  },
+  remove: {
+    root: { display: "re-（离开）+ move（移动）", explanation: "移开、拿走，即移除。" },
+    mnemonic: "remove A from B；remove 比 delete 正式，也可指「免职」。",
+    examples: [
+      { sentence: "Remove the sentences that repeat your point.", translationZh: "删掉那些重复论点的句子。" },
+    ],
+    collocations: [
+      { phrase: "remove from", meaningZh: "从……移除" },
+    ],
+  },
+  remain: {
+    root: { display: "re-（向后）+ main（停留）", explanation: "main 源自拉丁语 manere「留下」：留在原处，即仍然是、剩余。" },
+    mnemonic: "remain 是系动词，不接宾语，也没有进行时（不说 is remaining）。",
+    examples: [
+      { sentence: "Three chapters remain unread.", translationZh: "还有三章没读。" },
+    ],
+    collocations: [
+      { phrase: "remain silent", meaningZh: "保持沉默" },
+    ],
+  },
   replace: {
     root: { display: "re-（再）+ place（放置）", explanation: "重新放一个到原位，即替换。" },
     mnemonic: "replace A with B（用 B 替换 A）——with 引出「新的那个」。",
@@ -2245,6 +2401,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "represent a change", meaningZh: "代表一种变化" },
+    ],
+  },
+  reproduce: {
+    root: { display: "re-（再）+ produce（生产）", explanation: "再次生产出来，即复制、再现；生物语境指繁殖。" },
+    mnemonic: "reproduce 在论文里常指「结果可复现」。",
+    examples: [
+      { sentence: "Try to reproduce the result with a second sample.", translationZh: "试着用第二份样本复现这个结果。" },
+    ],
+    collocations: [
+      { phrase: "reproduce a result", meaningZh: "复现结果" },
     ],
   },
   require: {
@@ -2267,6 +2433,36 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "conduct research on", meaningZh: "对……开展研究" },
     ],
   },
+  resolve: {
+    root: { display: "re-（彻底）+ solv（松开）", explanation: "solv 表「松开、解开」（如 solve、dissolve）：把结解开，即解决、下决心。" },
+    mnemonic: "resolve to do（下定决心做）；resolve a problem（解决问题）。",
+    examples: [
+      { sentence: "She resolved to review thirty words every morning.", translationZh: "她下定决心每天早晨复习三十个词。" },
+    ],
+    collocations: [
+      { phrase: "resolve a conflict", meaningZh: "化解冲突" },
+    ],
+  },
+  resist: {
+    root: { display: "re-（反）+ sist（站立）", explanation: "sist 表「站」（如 persist、insist）：站在对立面，即抵抗。" },
+    mnemonic: "resist 后接名词或 doing：resist checking your phone。",
+    examples: [
+      { sentence: "Resist reading the passage before the question.", translationZh: "忍住别先读文章，先看题。" },
+    ],
+    collocations: [
+      { phrase: "resist the urge to", meaningZh: "忍住想……" },
+    ],
+  },
+  reserve: {
+    root: { display: "re-（回）+ serv（保持）", explanation: "serv 表「保持」（如 preserve、conserve）：留着不用，即保留、预订。" },
+    mnemonic: "reserve 是「预留/预订」；preserve 是「保存、保护」，别混。",
+    examples: [
+      { sentence: "Reserve the last hour of the day for review.", translationZh: "把一天最后一小时留给复习。" },
+    ],
+    collocations: [
+      { phrase: "reserve for", meaningZh: "为……保留" },
+    ],
+  },
   respond: {
     root: { display: "re-（向后）+ spond（承诺、许诺）", explanation: "spond 表「许诺」（如 sponsor、spouse）：作出回应，即答应。" },
     mnemonic: "respond to（对……作出回应）；名词 response，形容词 responsible（负责任的）。",
@@ -2275,6 +2471,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "respond to", meaningZh: "回应；对……作出反应" },
+    ],
+  },
+  restrict: {
+    root: { display: "re-（加强）+ strict（拉紧）", explanation: "strict 表「拉紧」（如 strict、constrain）：拉紧到一定范围，即限制。" },
+    mnemonic: "restrict A to B（把 A 限制在 B 之内）。",
+    examples: [
+      { sentence: "Restrict each paragraph to one idea.", translationZh: "每段只讲一个意思。" },
+    ],
+    collocations: [
+      { phrase: "restrict to", meaningZh: "限定在" },
     ],
   },
   retain: {
@@ -2297,6 +2503,96 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "reveal that…", meaningZh: "揭示出……" },
     ],
   },
+  severe: {
+    root: { display: "sever（严肃、严格）", explanation: "severus 是拉丁语「严格的」，即严厉的、严重的。" },
+    mnemonic: "severe 修饰「程度重」：severe shortage、severe weather、severe pain。",
+    examples: [
+      { sentence: "A severe cold cost her two weeks of revision.", translationZh: "一场重感冒让她丢了两周复习时间。" },
+    ],
+    collocations: [
+      { phrase: "severe shortage", meaningZh: "严重短缺" },
+    ],
+  },
+  sequence: {
+    root: { display: "sequ（跟随）+ -ence", explanation: "sequ / secut 表「跟随」（如 consequence、subsequent）：一个跟一个，即顺序。" },
+    mnemonic: "in sequence（按顺序）；sequence of tenses 是「时态一致」。",
+    examples: [
+      { sentence: "Learn the words in the sequence they appear.", translationZh: "按出现的顺序学这些词。" },
+    ],
+    collocations: [
+      { phrase: "in sequence", meaningZh: "按顺序" },
+    ],
+  },
+  select: {
+    root: { display: "se-（分开）+ lect（挑选）", explanation: "lect 表「选、读」（如 collect、elect）：挑出来，即选择。" },
+    mnemonic: "select 比 choose 正式；select from 后接「从哪个范围里挑」。",
+    examples: [
+      { sentence: "Select twenty words you keep forgetting.", translationZh: "挑出二十个你总记不住的词。" },
+    ],
+    collocations: [
+      { phrase: "select from", meaningZh: "从……中挑选" },
+    ],
+  },
+  segregate: {
+    root: { display: "se-（分开）+ greg（群）", explanation: "greg 表「群」（如 gregarious、aggregate）：从群里分出去，即隔离、分开。" },
+    mnemonic: "segregate A from B；日常更常说 separate A from B。",
+    examples: [
+      { sentence: "Segregate the words you know from the ones you do not.", translationZh: "把会的词和不会的词分开。" },
+    ],
+    collocations: [
+      { phrase: "segregate from", meaningZh: "与……分开" },
+    ],
+  },
+  secure: {
+    root: { display: "se-（分开）+ cur（担心、照料）", explanation: "cur 表「关心」（如 cure、accurate）：无需担心，即安全的；作动词「争取到」。" },
+    mnemonic: "secure 形容词「安全的」，动词「（好不容易）争取到」。",
+    examples: [
+      { sentence: "Secure a quiet desk before you start.", translationZh: "开始前先占一张安静的桌子。" },
+    ],
+    collocations: [
+      { phrase: "secure a place", meaningZh: "争取到位置" },
+    ],
+  },
+  satisfy: {
+    root: { display: "satis（足够）+ -fy（使）", explanation: "使足够，即满足、使满意。" },
+    mnemonic: "be satisfied with（对……满意）；satisfy a requirement（满足要求）。",
+    examples: [
+      { sentence: "One example rarely satisfies a strict examiner.", translationZh: "一个例子很难让严格的考官满意。" },
+    ],
+    collocations: [
+      { phrase: "satisfy a requirement", meaningZh: "满足要求" },
+    ],
+  },
+  rigid: {
+    root: { display: "rig（僵硬、伸直）", explanation: "rig 表「僵硬」（如 rigid 本义「僵直的」）：僵住的，即严格的、死板的。" },
+    mnemonic: "rigid 多带贬义（死板）；strict 可褒可贬。",
+    examples: [
+      { sentence: "A rigid timetable breaks on the first bad day.", translationZh: "死板的计划表在第一个糟糕的日子就崩了。" },
+    ],
+    collocations: [
+      { phrase: "rigid rules", meaningZh: "死板的规定" },
+    ],
+  },
+  revise: {
+    root: { display: "re-（再）+ vis（看）", explanation: "vis / vid 表「看」（如 review、evident）：再看一遍，即修订、复习。" },
+    mnemonic: "英式英语里 revise 就是「复习」，美式更常说 review。",
+    examples: [
+      { sentence: "Revise the words you got wrong, not the whole list.", translationZh: "复习你做错的词，而不是整张表。" },
+    ],
+    collocations: [
+      { phrase: "revise for", meaningZh: "为……复习" },
+    ],
+  },
+  reverse: {
+    root: { display: "re-（回）+ vers（转）", explanation: "vers / vert 表「转」（如 convert、diverse）：转回去，即反转、撤销。" },
+    mnemonic: "reverse a decision（撤销决定）；in reverse order（倒序）。",
+    examples: [
+      { sentence: "One careless week can reverse a month of progress.", translationZh: "一周的疏忽能让一个月的进展倒退。" },
+    ],
+    collocations: [
+      { phrase: "reverse a decision", meaningZh: "撤销决定" },
+    ],
+  },
   significant: {
     root: { display: "sign（记号）+ -ificant（做出……的）", explanation: "本义是「做出记号的」，引申为值得被记下、值得注意的。" },
     mnemonic: "值得记一笔的差别，才是 significant，不只是「有点大」。",
@@ -2317,6 +2613,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "be similar to", meaningZh: "与……相似" },
     ],
   },
+  solve: {
+    root: { display: "solv（松开、解开）", explanation: "把缠住的结解开，即解决。" },
+    mnemonic: "solve a problem（解题）；resolve 更强调「彻底化解矛盾」。",
+    examples: [
+      { sentence: "Solve the easiest question first to warm up.", translationZh: "先做最简单的题热热身。" },
+    ],
+    collocations: [
+      { phrase: "solve a problem", meaningZh: "解决问题" },
+    ],
+  },
+  simulate: {
+    root: { display: "simul（相似）+ -ate", explanation: "simul 表「相同、相似」（如 similar、simultaneous）：做得像真的，即模拟。" },
+    mnemonic: "simulate 强调「仿照真实过程」，imitate 只是「学样」。",
+    examples: [
+      { sentence: "The program simulates a real exam room.", translationZh: "这个程序模拟真实考场。" },
+    ],
+    collocations: [
+      { phrase: "simulate a situation", meaningZh: "模拟情境" },
+    ],
+  },
   specific: {
     root: { display: "spec（看）+ -ific（使……的）", explanation: "spec 表「看」（如 inspect、spectacle）：看得清、指向明确的，即具体的。" },
     mnemonic: "specific 是「明确指向某个」，比 particular 更强调「不含糊」。",
@@ -2327,6 +2643,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "be specific about", meaningZh: "对……有明确说明" },
     ],
   },
+  sponsor: {
+    root: { display: "spons（承诺、担保）", explanation: "spons 表「承诺」（如 respond、responsible）：作出承诺支持，即赞助、主办。" },
+    mnemonic: "sponsor 既能指「出钱的赞助方」，也能指「提案的发起人」。",
+    examples: [
+      { sentence: "The department sponsored her field study.", translationZh: "系里资助了她的实地研究。" },
+    ],
+    collocations: [
+      { phrase: "sponsor a project", meaningZh: "赞助项目" },
+    ],
+  },
+  specify: {
+    root: { display: "speci（种类、看）+ -fy（使）", explanation: "spec 表「看、种类」（如 specific、species）：一件件看清楚，即明确说明。" },
+    mnemonic: "specify 后接名词或 that 从句，不接 to do。",
+    examples: [
+      { sentence: "Specify how many words you will review each day.", translationZh: "明确说明你每天要复习多少词。" },
+    ],
+    collocations: [
+      { phrase: "specify a number", meaningZh: "明确数字" },
+    ],
+  },
   stable: {
     root: { display: "sta（站立）+ -ble（能够）", explanation: "sta 表「站立」（如 stand、status）：站得住，即稳定。" },
     mnemonic: "stable 强调「不动摇」；steady 强调「持续均匀」。",
@@ -2335,6 +2671,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "a stable environment", meaningZh: "稳定的环境" },
+    ],
+  },
+  stimulate: {
+    root: { display: "stimul（刺棒、刺激）+ -ate", explanation: "stimulus 本义是「赶牲口的刺棒」，刺激一下就动起来，即激发。" },
+    mnemonic: "stimulate interest / growth / discussion。",
+    examples: [
+      { sentence: "Short quizzes stimulate recall better than re-reading.", translationZh: "小测验比重读更能唤起回忆。" },
+    ],
+    collocations: [
+      { phrase: "stimulate interest", meaningZh: "激发兴趣" },
+    ],
+  },
+  state: {
+    root: { display: "st（站立）+ -ate", explanation: "st 表「站」（如 stable、constant）：站定的样子即「状态」；说出来即「陈述」。" },
+    mnemonic: "state 名词「状态 / 国家」，动词「陈述」；statement 是「陈述、声明」。",
+    examples: [
+      { sentence: "State your conclusion in the first sentence.", translationZh: "把结论写在第一句。" },
+    ],
+    collocations: [
+      { phrase: "state a conclusion", meaningZh: "陈述结论" },
     ],
   },
   strategy: {
@@ -2357,6 +2713,26 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "the structure of", meaningZh: "……的结构" },
     ],
   },
+  subsequent: {
+    root: { display: "sub-（下面、之后）+ sequ（跟随）", explanation: "sequ 表「跟随」（如 sequence、consequence）：跟在后面的，即随后的。" },
+    mnemonic: "subsequent to 是正式说法，写作里可用 after 代替。",
+    examples: [
+      { sentence: "Subsequent chapters build on this one.", translationZh: "后续章节建立在这一章之上。" },
+    ],
+    collocations: [
+      { phrase: "subsequent to", meaningZh: "在……之后" },
+    ],
+  },
+  submit: {
+    root: { display: "sub-（自下）+ mit（送）", explanation: "mit / miss 表「送」（如 admit、transmit）：从下往上送，即提交、服从。" },
+    mnemonic: "submit sth. to sb.（提交）；submit to sb.（屈服于）。",
+    examples: [
+      { sentence: "Submit the draft at least a day early.", translationZh: "至少提前一天交初稿。" },
+    ],
+    collocations: [
+      { phrase: "submit an essay", meaningZh: "提交作文" },
+    ],
+  },
   substantial: {
     root: { display: "substance（实质）+ -ial", explanation: "从名词 substance 联想，既可以形容有实质，也可以表示数量可观。" },
     mnemonic: "不是薄薄一层，而是有分量、可观的内容。",
@@ -2365,6 +2741,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "substantial progress", meaningZh: "显著进步" },
+    ],
+  },
+  succeed: {
+    root: { display: "suc-（= sub-，自下）+ ceed（走）", explanation: "ceed / cess 表「走」（如 proceed、exceed）：一路走下去成了，即成功；也指继承。" },
+    mnemonic: "succeed in doing（成功做成）；succeed to the throne（继承王位）。",
+    examples: [
+      { sentence: "She succeeded in finishing the whole list.", translationZh: "她成功背完了整张表。" },
+    ],
+    collocations: [
+      { phrase: "succeed in doing", meaningZh: "成功做成" },
     ],
   },
   sufficient: {
@@ -2387,6 +2773,66 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "suggest doing sth.", meaningZh: "建议做某事" },
     ],
   },
+  suppress: {
+    root: { display: "sup-（= sub-，在下）+ press（压）", explanation: "press 表「压」（如 pressure、impress）：往下压住，即压制、抑制。" },
+    mnemonic: "suppress 强调「强行压下去」，repress 多用于心理。",
+    examples: [
+      { sentence: "Do not suppress the questions that confuse you.", translationZh: "别把你困惑的问题压下去。" },
+    ],
+    collocations: [
+      { phrase: "suppress a feeling", meaningZh: "抑制情绪" },
+    ],
+  },
+  suppose: {
+    root: { display: "sup-（= sub-，在下）+ pose（放置）", explanation: "pos / pon 表「放」（如 propose、oppose）：把话放在下面作基础，即假设、认为。" },
+    mnemonic: "be supposed to（应该）；suppose 一般不用于进行时。",
+    examples: [
+      { sentence: "You are supposed to review before the next class.", translationZh: "你应该在下节课前复习。" },
+    ],
+    collocations: [
+      { phrase: "be supposed to", meaningZh: "应该" },
+    ],
+  },
+  supplement: {
+    root: { display: "sup-（= sub-，自下）+ ple（填满）", explanation: "ple 表「填满」（如 complete、implement）：从下面补满，即补充。" },
+    mnemonic: "supplement A with B；名词 supplement to（……的增补）。",
+    examples: [
+      { sentence: "Supplement the textbook with one short article.", translationZh: "用一篇短文补充教材内容。" },
+    ],
+    collocations: [
+      { phrase: "supplement with", meaningZh: "用……补充" },
+    ],
+  },
+  supervise: {
+    root: { display: "super-（在上方）+ vis（看）", explanation: "vis / vid 表「看」（如 revise、visible）：在上面看着，即监督、指导。" },
+    mnemonic: "supervise 强调「边看边指导」，monitor 只是「监视」。",
+    examples: [
+      { sentence: "A tutor supervises the lab session every Friday.", translationZh: "每周五有导师指导实验课。" },
+    ],
+    collocations: [
+      { phrase: "supervise a project", meaningZh: "指导项目" },
+    ],
+  },
+  superior: {
+    root: { display: "super（在上方）+ -ior（比较级后缀）", explanation: "super 表「上」（如 supervise、superficial）：在上面，即更好的、上级。" },
+    mnemonic: "superior to（优于），介词用 to，不用 than。",
+    examples: [
+      { sentence: "This method proved superior to rote repetition.", translationZh: "这个方法被证明优于死记硬背。" },
+    ],
+    collocations: [
+      { phrase: "superior to", meaningZh: "优于" },
+    ],
+  },
+  summarize: {
+    root: { display: "summ（总和、要点）+ -arize", explanation: "summa 是拉丁语「总和、要点」：抓出要点，即总结。" },
+    mnemonic: "summarize 后直接接宾语，不加 about（不说 summarize about the text）。",
+    examples: [
+      { sentence: "Summarize each chapter in two sentences.", translationZh: "用两句话总结每一章。" },
+    ],
+    collocations: [
+      { phrase: "summarize a text", meaningZh: "总结文本" },
+    ],
+  },
   sustain: {
     root: { display: "sus-（= sub-，在下）+ tain（握住）", explanation: "tain 表「拿住」（如 maintain、retain）：在下面托住，即维持、支撑。" },
     mnemonic: "sustain 强调「长时间撑住」，maintain 强调「保持原状」。",
@@ -2395,6 +2841,66 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "sustain growth", meaningZh: "维持增长" },
+    ],
+  },
+  testify: {
+    root: { display: "test（证人）+ -ify（使）", explanation: "testis 是拉丁语「证人」：以证人身份说话，即作证、证明。" },
+    mnemonic: "testify to sth.（表明/证明）；testify against sb.（作不利证词）。",
+    examples: [
+      { sentence: "Two witnesses testified at the hearing.", translationZh: "两名证人在听证会上作证。" },
+    ],
+    collocations: [
+      { phrase: "testify to", meaningZh: "证明／表明" },
+    ],
+  },
+  terminate: {
+    root: { display: "termin（边界、终点）+ -ate", explanation: "termin 表「界限」（如 terminal、determine）：走到边界，即终止。" },
+    mnemonic: "terminate 是正式用语，日常用 end 或 stop。",
+    examples: [
+      { sentence: "The contract terminates at the end of June.", translationZh: "合同六月底终止。" },
+    ],
+    collocations: [
+      { phrase: "terminate a contract", meaningZh: "终止合同" },
+    ],
+  },
+  temporary: {
+    root: { display: "tempor（时间）+ -ary", explanation: "tempor 表「时间」（如 contemporary）：只管一段时间的，即暂时的。" },
+    mnemonic: "temporary 对 permanent；缩写 temp 也指「临时工」。",
+    examples: [
+      { sentence: "A timetable is temporary; the habit is permanent.", translationZh: "计划表是临时的，习惯才长久。" },
+    ],
+    collocations: [
+      { phrase: "a temporary solution", meaningZh: "权宜之计" },
+    ],
+  },
+  synthesis: {
+    root: { display: "syn-（共同）+ thesis（放置）", explanation: "thesis 表「放置、命题」（如 hypothesis）：把各家说法放到一起，即综合。" },
+    mnemonic: "synthesis（综合）对 analysis（分析），阅读题常成对出现。",
+    examples: [
+      { sentence: "The final chapter offers a synthesis of both views.", translationZh: "最后一章对两种观点作了综合。" },
+    ],
+    collocations: [
+      { phrase: "a synthesis of", meaningZh: "……的综合" },
+    ],
+  },
+  sympathy: {
+    root: { display: "sym-（共同）+ path（感受）", explanation: "path 表「感受」（如 sympathy、pathetic）：共同感受，即同情、共鸣。" },
+    mnemonic: "sympathy for / with sb.；动词是 sympathize with。",
+    examples: [
+      { sentence: "She had little sympathy for last-minute excuses.", translationZh: "她对临阵磨枪的借口没什么同情。" },
+    ],
+    collocations: [
+      { phrase: "sympathy for", meaningZh: "对……的同情" },
+    ],
+  },
+  symbol: {
+    root: { display: "sym-（共同）+ bol（投掷）", explanation: "symbolon 本是「分成两半的信物」，合起来验证身份，引申为符号、象征。" },
+    mnemonic: "a symbol of（……的象征）；symbol for（……的记号）。",
+    examples: [
+      { sentence: "A tick is the symbol for a checked answer.", translationZh: "对勾是已核对答案的记号。" },
+    ],
+    collocations: [
+      { phrase: "a symbol of", meaningZh: "……的象征" },
     ],
   },
   theory: {
@@ -2417,6 +2923,16 @@ export const WORD_CONTENT: Record<string, WordContent> = {
       { phrase: "tolerate errors", meaningZh: "容许错误" },
     ],
   },
+  transfer: {
+    root: { display: "trans-（跨越）+ fer（带）", explanation: "fer 表「携带」（如 refer、infer）：从这里带到那里，即转移、转学。" },
+    mnemonic: "名词重音在前 /ˈtrænsfɜː/，动词在后 /trænsˈfɜː/。",
+    examples: [
+      { sentence: "Transfer your notes into one notebook.", translationZh: "把笔记都转到一个本子上。" },
+    ],
+    collocations: [
+      { phrase: "transfer to", meaningZh: "转移到" },
+    ],
+  },
   transform: {
     root: { display: "trans-（横过、改变）+ form（形状）", explanation: "改变形状本身，即彻底转变。" },
     mnemonic: "transform 是「形变」，比 change 更彻底、更结构性。",
@@ -2425,6 +2941,166 @@ export const WORD_CONTENT: Record<string, WordContent> = {
     ],
     collocations: [
       { phrase: "transform sth. into", meaningZh: "把……转变为" },
+    ],
+  },
+  yield: {
+    root: { display: "yield（回报、产出）", explanation: "源自古英语 gieldan「支付、回报」，即产生（结果）、让出。" },
+    mnemonic: "yield to（屈服于 / 让行）；yield results（产生结果）。",
+    examples: [
+      { sentence: "Twenty minutes a day yields better results than Sunday marathons.", translationZh: "每天二十分钟比周日突击更有效。" },
+    ],
+    collocations: [
+      { phrase: "yield results", meaningZh: "产生结果" },
+    ],
+  },
+  witness: {
+    root: { display: "wit（知道）+ -ness", explanation: "wit 表「知道、看见」（如 wit、aware）：亲眼知道的人，即目击者；作动词「目睹」。" },
+    mnemonic: "witness 作动词时主语常是「时间、地点」：The decade witnessed…",
+    examples: [
+      { sentence: "The past decade witnessed a shift in teaching methods.", translationZh: "过去十年见证了教学方法的转变。" },
+    ],
+    collocations: [
+      { phrase: "witness a change", meaningZh: "见证变化" },
+    ],
+  },
+  volunteer: {
+    root: { display: "volunt（意愿）+ -eer", explanation: "voluntas 是拉丁语「意愿」：出于自愿的人，即志愿者；作动词「自愿做」。" },
+    mnemonic: "volunteer to do sth. / volunteer for sth.。",
+    examples: [
+      { sentence: "Two students volunteered to check the data.", translationZh: "两名学生自愿核对数据。" },
+    ],
+    collocations: [
+      { phrase: "volunteer to do", meaningZh: "自愿做" },
+    ],
+  },
+  vital: {
+    root: { display: "vit（生命）+ -al", explanation: "vita 是拉丁语「生命」（如 vitamin、vivid）：关乎生命的，即至关重要的。" },
+    mnemonic: "vital to / for；It is vital that… 后接 (should) do。",
+    examples: [
+      { sentence: "Sleep is vital to memory.", translationZh: "睡眠对记忆至关重要。" },
+    ],
+    collocations: [
+      { phrase: "vital to", meaningZh: "对……至关重要" },
+    ],
+  },
+  virtual: {
+    root: { display: "virt（力量、德行）+ -ual", explanation: "virtus 本义「力量、效能」：实质上具有那种力量，即事实上的；也指虚拟的。" },
+    mnemonic: "virtual 两义都要认识：「虚拟的」与「实质上的（ virtually = 几乎）」。",
+    examples: [
+      { sentence: "The two versions are virtually identical.", translationZh: "两个版本几乎完全一样。" },
+    ],
+    collocations: [
+      { phrase: "virtually impossible", meaningZh: "几乎不可能" },
+    ],
+  },
+  violate: {
+    root: { display: "viol（力量、暴力）+ -ate", explanation: "violare 本义「以强力对待」，即违反、侵犯。" },
+    mnemonic: "violate a rule / law / agreement；violation 是名词。",
+    examples: [
+      { sentence: "Do not violate the word limit in the summary.", translationZh: "摘要不要超出字数限制。" },
+    ],
+    collocations: [
+      { phrase: "violate a rule", meaningZh: "违反规定" },
+    ],
+  },
+  verify: {
+    root: { display: "ver（真实）+ -ify（使）", explanation: "ver 表「真实」（如 very、verdict）：确认为真，即核实。" },
+    mnemonic: "verify 是「查证是否属实」，confirm 是「确认已定之事」。",
+    examples: [
+      { sentence: "Verify every figure before you quote it.", translationZh: "引用前核实每一个数字。" },
+    ],
+    collocations: [
+      { phrase: "verify a figure", meaningZh: "核实数字" },
+    ],
+  },
+  vary: {
+    root: { display: "vari（变化）", explanation: "varius 是拉丁语「多样的」，即变化、不同。" },
+    mnemonic: "vary from A to B / vary with；形容词 various，名词 variety。",
+    examples: [
+      { sentence: "Scores vary from class to class.", translationZh: "各班分数不一样。" },
+    ],
+    collocations: [
+      { phrase: "vary from", meaningZh: "因……而异" },
+    ],
+  },
+  utilize: {
+    root: { display: "uti（使用）+ -ize", explanation: "uti 表「用」（如 utility、use）：拿来用，即利用。" },
+    mnemonic: "utilize 比 use 正式，写作里可用来避免重复；别滥用。",
+    examples: [
+      { sentence: "Utilize the five minutes before class for a quick review.", translationZh: "利用课前五分钟快速复习。" },
+    ],
+    collocations: [
+      { phrase: "utilize resources", meaningZh: "利用资源" },
+    ],
+  },
+  unique: {
+    root: { display: "uni-（单一）+ -que", explanation: "unus 是拉丁语「一」：只有一个，即独特的。" },
+    mnemonic: "unique to（为……所独有）；unique 本身就含「最」，没有 more unique。",
+    examples: [
+      { sentence: "This error is unique to beginners.", translationZh: "这个错误是初学者特有的。" },
+    ],
+    collocations: [
+      { phrase: "unique to", meaningZh: "为……独有" },
+    ],
+  },
+  uniform: {
+    root: { display: "uni-（单一）+ form（形状）", explanation: "form 表「形状」（如 reform、transform）：一个形状，即统一的；也指制服。" },
+    mnemonic: "uniform 作形容词「一致的」，作名词「制服」。",
+    examples: [
+      { sentence: "The format is uniform across all three papers.", translationZh: "三份试卷的格式是统一的。" },
+    ],
+    collocations: [
+      { phrase: "a uniform standard", meaningZh: "统一标准" },
+    ],
+  },
+  undertake: {
+    root: { display: "under（在……之下）+ take（承担）", explanation: "把事情担到自己身上，即着手做、承担。" },
+    mnemonic: "undertake 是及物：undertake a task / study，不加 about。",
+    examples: [
+      { sentence: "She undertook a full review of the reading list.", translationZh: "她着手全面梳理了阅读清单。" },
+    ],
+    collocations: [
+      { phrase: "undertake a study", meaningZh: "开展研究" },
+    ],
+  },
+  undermine: {
+    root: { display: "under（在……之下）+ mine（挖掘）", explanation: "在下面挖空地基，即逐渐削弱、损害。" },
+    mnemonic: "undermine 强调「暗暗地、逐渐地削弱」，不是一次性摧毁。",
+    examples: [
+      { sentence: "Skipping sleep undermines everything you revised.", translationZh: "不睡觉会削弱你复习的一切。" },
+    ],
+    collocations: [
+      { phrase: "undermine confidence", meaningZh: "削弱信心" },
+    ],
+  },
+  undergo: {
+    root: { display: "under（在……之下）+ go（走）", explanation: "在下面走一遭，即经历、接受（变化、治疗）。" },
+    mnemonic: "undergo 是及物，直接接宾语，不加 with。",
+    examples: [
+      { sentence: "The course underwent a full rewrite last year.", translationZh: "这门课去年经历了一次全面重写。" },
+    ],
+    collocations: [
+      { phrase: "undergo a change", meaningZh: "经历变化" },
+    ],
+  },
+  ultimate: {
+    root: { display: "ultim（最后）+ -ate", explanation: "ultimus 是拉丁语「最后的」，即最终的、根本的。" },
+    mnemonic: "the ultimate goal（最终目标）；ultimately（最终）。",
+    examples: [
+      { sentence: "The ultimate goal is recall, not recognition.", translationZh: "最终目标是能回忆，而不是看着眼熟。" },
+    ],
+    collocations: [
+      { phrase: "the ultimate goal", meaningZh: "最终目标" },
+    ],
+  },
+  transmit: {
+    root: { display: "trans-（跨越）+ mit（送）", explanation: "mit 表「送」（如 submit、admit）：送过去，即传输、传播。" },
+    mnemonic: "transmit 多用于信号、数据、疾病；carry 更泛。",
+    examples: [
+      { sentence: "The device transmits data every ten seconds.", translationZh: "这个设备每十秒传一次数据。" },
+    ],
+    collocations: [
+      { phrase: "transmit information", meaningZh: "传输信息" },
     ],
   },
 }
