@@ -285,7 +285,11 @@ function buildBodyMarkdown(lec: LectureLike): string {
     blocks.push(`### 解题步骤\n\n${steps.map((s, i) => `${i + 1}. ${plain(s)}`).join('\n')}`)
   }
   if (lec.trap) blocks.push(`### 易错点\n\n${plain(lec.trap)}`)
-  if (lec.source) blocks.push(`> 来源：${plain(lec.source)}`)
+  /*
+   * 这里原来会把 `lec.source`（形如「张宇基础30讲·线代第1讲」）拼成一行「> 来源：…」渲染给用户看。
+   * 那是对具体商业课程与作者的标注，属于合规风险，也不再出现在产品文案里——**不渲染**。
+   * 溯源信息仍保留在知识点的 `sources` 字段（详情页不展示），要不要对外标注由产品决定。
+   */
   return blocks.filter(Boolean).join('\n\n')
 }
 
