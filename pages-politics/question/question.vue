@@ -117,6 +117,37 @@ const isCorrect = computed(() => isChoiceLike.value && quiz.picked.value === ans
 
 const canSubmit = computed(() => Boolean(isChoiceLike.value && quiz.picked.value))
 
+/**
+ * 材料题的「解析」在数据里常常就是「采分点」整段拼接（转档时把同一份参考答案存了两遍），
+ * 两个区块都渲染会让用户看到同一段答案两遍。
+ * 这里按 4-gram 重合度判断：重合 ≥ 90% 就只显示采分点；解析若是额外的答题提示（如样例题）照常显示。
+ */
+const EXPLAIN_DUP_THRESHOLD = 0.9
+function cleanText(s: string) {
+  return (s || '').replace(/[\s，。、；：（）“”‘’《》,.;:()"'?!！？①②③④\-—]/g, '')
+}
+const showExplanation = computed(() => {
+  const q: any = question.value
+  if (!q) return false
+  const pts: string[] | undefined = q.answerPoints
+  const ex: string = q.explanation || ''
+  if (q.type !== 'material' || !pts || !pts.length) return Boolean(ex)
+  if (!ex) return false
+  const a = cleanText(pts.join(''))
+  const b = cleanText(ex)
+  const n = 4
+  if (a.length < n || b.length < n) return true
+  const setB = new Set<string>()
+  for (let i = 0; i + n <= b.length; i++) setB.add(b.slice(i, i + n))
+  let hit = 0
+  let total = 0
+  for (let i = 0; i + n <= a.length; i++) {
+    total++
+    if (setB.has(a.slice(i, i + n))) hit++
+  }
+  return total ? hit / total < EXPLAIN_DUP_THRESHOLD : true
+})
+
 function goNext() {
   if (quiz.isLast.value) {
     uni.redirectTo({ url: '/pages-politics/result/result' })
@@ -216,8 +247,8 @@ const typeLabel = computed(() => {
           </view>
         </view>
 
-        <!-- 解析 -->
-        <view class="explain-box">
+        <!-- 解析（材料题若与采分点重复则不重复显示） -->
+        <view v-if="showExplanation" class="explain-box">
           <text class="ex-label">解析</text>
           <text class="ex-body">{{ question.explanation }}</text>
         </view>
