@@ -19,7 +19,20 @@ const { state, saveGoals } = useLearning()
 const yearIndex = ref(Math.max(0, EXAM_YEARS.indexOf(state.value.settings.examYear)))
 const englishIndex = ref(Math.max(0, ENGLISH_EXAMS.indexOf(state.value.settings.englishExam)))
 const mathIndex = ref(Math.max(0, MATH_EXAMS.indexOf(state.value.settings.mathExam)))
-const wordIndex = ref(Math.max(0, DAILY_WORD_OPTIONS.indexOf(state.value.goalHistory[state.value.goalHistory.length - 1]?.dailyWords ?? 50)))
+/**
+ * 当前单词总量落在哪个预设上。
+ * 计划设定里可以自定义（总量可能不是预设值，比如 35 + 40 = 75），此时 indexOf 返回 -1，
+ * 若直接 Math.max(0, -1) 会**显示成 20 并在保存时把它写回去**——所以退到最接近的一档。
+ */
+function nearestIndex(options: number[], value: number): number {
+  let best = 0
+  for (let i = 1; i < options.length; i++) {
+    if (Math.abs(options[i] - value) < Math.abs(options[best] - value)) best = i
+  }
+  return best
+}
+const lastGoal = state.value.goalHistory[state.value.goalHistory.length - 1]
+const wordIndex = ref(nearestIndex(DAILY_WORD_OPTIONS, lastGoal?.dailyWords ?? 50))
 const knowledgeIndex = ref(
   Math.max(0, DAILY_KNOWLEDGE_OPTIONS.indexOf(state.value.goalHistory[state.value.goalHistory.length - 1]?.dailyKnowledgePoints ?? 3)),
 )
@@ -105,7 +118,10 @@ function onSave() {
             </picker>
           </view>
         </view>
-        <text class="goal-helper">新的学习量从明天起生效，今天继续按原计划完成。目标保存在本机。</text>
+        <text class="goal-helper">
+          新的学习量从明天起生效，今天继续按原计划完成。目标保存在本机。<br />
+          单词这里是每天的总量；新学与复习怎么拆，去「单词 · 计划设定」里调（那边改完立即生效）。
+        </text>
       </view>
 
       <button class="primary-button mt20" hover-class="hover-press" @tap="onSave">

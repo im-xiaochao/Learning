@@ -134,16 +134,38 @@ check('点开单词能看到词根与助记区块', () => {
   if (!detail.includes('deepTotal')) throw new Error('没说明深度内容覆盖了多少词')
   return true
 })
-check('计划设定可以改每天学多少个单词', () => {
-  if (!wordPlan.includes('setDailyWords')) throw new Error('没有调用 setDailyWords')
-  if (!wordPlan.includes('DAILY_WORD_OPTIONS')) throw new Error('选项不是来自 DAILY_WORD_OPTIONS')
+check('计划设定有两张卡：新学 + 复习（与原型一致）', () => {
+  if (!wordPlan.includes('每天新学多少个单词')) throw new Error('缺「每天新学多少个单词」卡')
+  if (!wordPlan.includes('每天复习多少个单词')) throw new Error('缺「每天复习多少个单词」卡')
+  if (!wordPlan.includes('DAILY_NEW_OPTIONS') || !wordPlan.includes('DAILY_REVIEW_OPTIONS')) throw new Error('预设选项不对')
   return true
 })
-check('store 提供 wordTargets / setDailyWords 并已导出', () => {
-  for (const name of ['wordTargets', 'setDailyWords', 'todayNewWords', 'todayReviewWords']) {
+check('两张卡都支持自定义数量', () => {
+  const custom = wordPlan.match(/'自定义'/g) || []
+  if (custom.length < 2) throw new Error(`自定义入口应有 2 个，实际 ${custom.length}`)
+  if (!wordPlan.includes('type="number"')) throw new Error('没有数字输入框')
+  if (!wordPlan.includes('WORD_PLAN_MAX')) throw new Error('没有范围上限（应夹到 1~300）')
+  return true
+})
+check('设置单词量时不弹轻提示', () => {
+  if (/showToast/.test(stripComments(wordPlan))) throw new Error('计划设定页里还留着 showToast')
+  if (/setWordPlan[\s\S]{0,600}showToast/.test(store)) throw new Error('setWordPlan 里弹提示了')
+  return true
+})
+check('口径不变量：新学 = 总量 − 复习，且复习夹在 [0, 总量]', () => {
+  // 这三条是「静默出错」的地方：算反了不会报错，只会让今日新词变成负数或永远为 0
+  if (!/newWords:\s*Math\.max\(0,\s*total - review\)/.test(store)) throw new Error('新学量不是「总量 − 复习」')
+  if (!/Math\.min\(Math\.max\(0,\s*Math\.round\(stored\)\),\s*total\)/.test(store)) throw new Error('复习量没有夹在 [0, 总量]')
+  if (!/dailyWords:\s*n \+ r,\s*dailyReview:\s*r/.test(store)) throw new Error('setWordPlan 没写回「总量 = 新学 + 复习」')
+  if (!/prevReview <= input\.dailyWords/.test(store)) throw new Error('saveGoals 没处理「复习量超过新总量」')
+  return true
+})
+check('store 提供 wordTargets / setWordPlan 并已导出', () => {
+  for (const name of ['wordTargets', 'setWordPlan', 'todayNewWords', 'todayReviewWords']) {
     if (!store.includes(`export const ${name}`) && !store.includes(`export function ${name}`)) throw new Error(`缺 ${name}`)
     if (!new RegExp(`\\n\\s+${name},`).test(store) && !new RegExp(`\\n\\s+${name},?\\n`).test(store)) throw new Error(`${name} 没进 useLearning()`)
   }
+  if (/setDailyWords/.test(store)) throw new Error('setDailyWords 应已被 setWordPlan 取代')
   return true
 })
 

@@ -75,6 +75,11 @@ const SHIM_NAMES = [
   'reviewIndex',
   'reviewMode',
   'wordFilter',
+  'setWordPlan',
+  'wordPlanNum',
+  'wordPlanCustom',
+  'WORD_PLAN_MIN',
+  'WORD_PLAN_MAX',
 ]
 
 const shim = [

@@ -349,6 +349,12 @@ input::placeholder { color: var(--muted); opacity: 1; }
 .src-chip small { font-size:9px; font-weight:400; opacity:.85; }
 .src-chip.active { background:var(--primary); color:var(--surface); }
 .src-chip.active small { opacity:.8; }
+/* 自定义数量：预设 chip 之外的内联输入行（输入框 + 范围提示 + 确定 / 取消） */
+.plan-custom { display:flex; align-items:center; gap:8px; margin-top:12px; }
+.plan-custom input { flex:1 1 80px; min-width:0; height:42px; padding:0 12px; border:1px solid var(--border); border-radius:10px; background:var(--surface); color:var(--fg); font:600 14px var(--body); }
+.plan-custom .plan-hint { font-size:9px; color:var(--muted); flex:0 0 auto; }
+.plan-custom .secondary-button { width:auto; min-height:42px; padding:0 14px; font-size:12px; }
+.plan-custom .text-button { flex:0 0 auto; }
 .paper-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; margin-top:4px; }
 .paper-card { display:flex; flex-direction:column; align-items:flex-start; gap:5px; text-align:left; width:100%; min-height:118px; padding:15px 14px; border:1px solid var(--border); border-radius:18px; background:var(--surface); box-shadow:0 3px 9px var(--shadow); position:relative; overflow:hidden; }
 .paper-card::after { content:""; position:absolute; right:-18px; top:-18px; width:64px; height:64px; border-radius:50%; background:var(--primary-soft); opacity:.6; }
@@ -517,7 +523,7 @@ delete state.solved;
 delete state.wrong;
 delete state.goals.math;
 if (![1,2,3,5].includes(Number(state.goals.knowledge))) state.goals.knowledge=defaults.goals.knowledge;
-let route='home', historyStack=[], subjectIndex=0, chartMode='words', searchTerm='', wordFilter='all';
+let route='home', historyStack=[], subjectIndex=0, chartMode='words', searchTerm='', wordFilter='all', wordPlanCustom='';
 const subjectCursor = {math:0, library:0};
 let reviewQueue=[], reviewIndex=0, reviewGrade=null, revealMeaning=true, detailWord=0, detailTopic=2, reviewMode='new';
 let quizSource='x4', quizModule='', quizCursor=0, quizRevealed=false, quizPicked='';
@@ -528,7 +534,14 @@ function persist() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(stat
  * 每日单词计划。newTotal=每天新学多少个，reviewTotal=每天复习多少个，
  * 与「学习目标」页的「单词目标」共用 state.goals.words，避免两个地方各说一套。
  */
-function wordPlan() { const g=state.goals||{}; const pick=(v,fallback,allowed)=>allowed.includes(Number(v))?Number(v):fallback; return {newTotal:pick(g.words,20,[10,20,30,50]), reviewTotal:pick(g.review,30,[20,30,50,80])}; }
+/**
+ * 每日单词计划。
+ * 除了预设值，还支持自定义，所以这里按**范围**（5~200）校验，不再比对白名单——
+ * 否则自定义填 35 会被 pick() 悄悄打回默认 20，界面上看不出任何异常。
+ */
+const WORD_PLAN_MIN = 5, WORD_PLAN_MAX = 200;
+function wordPlanNum(value, fallback) { const n=Math.round(Number(value)); return Number.isFinite(n) && n>=WORD_PLAN_MIN && n<=WORD_PLAN_MAX ? n : fallback; }
+function wordPlan() { const g=state.goals||{}; return {newTotal:wordPlanNum(g.words,20), reviewTotal:wordPlanNum(g.review,30)}; }
 function wordPlanTotal() { const p=wordPlan(); return p.newTotal+p.reviewTotal; }
 function todayKey() { const d=new Date(); return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(); }
 /** 今日进度：跨天自动归零。learned=今天新学的词，reviewed=今天复习的词 */
@@ -656,11 +669,26 @@ function wordbookPage() {
   <div class="src-switch mt20" role="tablist" aria-label="按学习状态筛选" data-od-id="word-book-filter">${[['all','全部'],['new','未学习'],['familiar','已熟悉'],['weak','需巩固']].map(([v,t])=>`<button class="src-chip ${wordFilter===v?'active':''}" role="tab" aria-selected="${wordFilter===v}" data-action="word-filter" data-value="${v}" data-od-id="word-filter-${v}">${t}</button>`).join('')}</div>
   <div class="word-list mt20" data-od-id="word-book-list">${list.length?list.map(({w,i,g})=>`<button class="word-list-row" data-action="word-detail" data-word="${i}" data-od-id="wordbook-${w.word}"><span><strong lang="en">${w.word}</strong><small>${w.part} ${w.meaning}</small></span><span class="pill ${g==='familiar'?'':'orange'}">${status(g)}</span></button>`).join(''):'<p class="subtext" style="padding:18px 0">这个分类下还没有单词。</p>'}</div><p class="quiet-note">点开单词，可以看到词根与助记。</p></section>`;
 }
+/** 设置每日单词量（预设 chip 与自定义输入共用）。不做轻提示：数字就在卡片上，用户看得到 */
+function setWordPlan(field, value) {
+  const n = Math.round(Number(value));
+  if (!Number.isFinite(n)) return false;
+  const clamped = Math.max(WORD_PLAN_MIN, Math.min(WORD_PLAN_MAX, n));
+  state.goals = field === 'newTotal' ? { ...state.goals, words: clamped } : { ...state.goals, review: clamped };
+  wordPlanCustom = '';
+  persist();
+  render();
+  return true;
+}
 function wordPlanPage() {
-  const plan=wordPlan();
-  const row=(field,label,options,current)=>`<div class="panel mt16" data-od-id="word-plan-${field}"><h2 style="font-size:14px">${label}</h2><div class="src-switch" role="group" aria-label="${label}">${options.map(v=>`<button class="src-chip ${v===current?'active':''}" aria-pressed="${v===current}" data-action="word-plan" data-field="${field}" data-value="${v}" data-od-id="word-plan-${field}-${v}">${v}<small>个 / 天</small></button>`).join('')}</div></div>`;
+  const plan = wordPlan();
+  const row = (field, label, options, current) => {
+    const custom = !options.includes(current);
+    const form = `<form class="plan-custom" data-plan-field="${field}" data-od-id="word-plan-${field}-custom-form"><input type="number" inputmode="numeric" min="${WORD_PLAN_MIN}" max="${WORD_PLAN_MAX}" step="5" value="${current}" aria-label="${label}自定义数量" data-od-id="word-plan-${field}-input"><span class="plan-hint">${WORD_PLAN_MIN}~${WORD_PLAN_MAX} 个</span><button type="submit" class="secondary-button" data-od-id="word-plan-${field}-apply">确定</button><button type="button" class="text-button" data-action="word-plan-cancel" data-field="${field}" data-od-id="word-plan-${field}-cancel">取消</button></form>`;
+    return `<div class="panel mt16" data-od-id="word-plan-${field}"><h2 style="font-size:14px">${label}</h2><div class="src-switch" role="group" aria-label="${label}">${options.map(v => `<button class="src-chip ${v === current ? 'active' : ''}" aria-pressed="${v === current}" data-action="word-plan" data-field="${field}" data-value="${v}" data-od-id="word-plan-${field}-${v}">${v}<small>个 / 天</small></button>`).join('')}<button class="src-chip ${custom ? 'active' : ''}" aria-pressed="${custom}" data-action="word-plan-custom" data-field="${field}" data-od-id="word-plan-${field}-custom">${custom ? current : '自定义'}<small>个 / 天</small></button></div>${wordPlanCustom === field ? form : ''}</div>`;
+  };
   return `<section class="page" data-od-id="word-plan-settings"><p class="eyebrow">按自己的节奏来</p><h1 class="page-title" data-od-id="word-plan-title">目标刚刚好，才走得远。</h1><p class="subtext mt12">现在每天新学 ${plan.newTotal} 个、复习 ${plan.reviewTotal} 个，共 ${wordPlanTotal()} 个。</p>
-  ${row('newTotal','每天新学多少个单词',[10,20,30,50],plan.newTotal)}${row('reviewTotal','每天复习多少个单词',[20,30,50,80],plan.reviewTotal)}
+  ${row('newTotal', '每天新学多少个单词', [10, 20, 30, 50], plan.newTotal)}${row('reviewTotal', '每天复习多少个单词', [20, 30, 50, 80], plan.reviewTotal)}
   <p class="quiet-note">修改后立即生效，今日进度会按新的目标重新计算。<br>复习量不少于新词量，记得更牢。</p><button class="primary-button mt20" data-action="back" data-od-id="word-plan-back">返回背单词${icon('arrow')}</button></section>`;
 }
 // ── 政治刷题 ────────────────────────────────────────────────────────
@@ -880,7 +908,9 @@ function handleLearningAction(action,el) {
   else if(action==='word-detail') { detailWord=Number(el.dataset.word); if(vocabulary[detailWord]) navigate('word-detail'); }
   else if(action==='favorite') { const index=Number(el.dataset.word); if(!vocabulary[index])return; const exists=state.favorites.includes(index); state.favorites=exists?state.favorites.filter(i=>i!==index):[...state.favorites,index]; persist(); const scroll=main.scrollTop; render(); main.scrollTop=scroll; showToast(exists?'已取消收藏':'已收藏，可在「我的」中查看'); }
   else if(action==='word-filter') { wordFilter=el.dataset.value||'all'; render(); }
-  else if(action==='word-plan') { const field=el.dataset.field, value=Number(el.dataset.value), allowed=field==='newTotal'?[10,20,30,50]:[20,30,50,80]; if(!allowed.includes(value)) return; state.goals=field==='newTotal'?{...state.goals,words:value}:{...state.goals,review:value}; persist(); render(); showToast(field==='newTotal'?`每天新学 ${value} 个单词`:`每天复习 ${value} 个单词`); }
+  else if(action==='word-plan') { setWordPlan(el.dataset.field, el.dataset.value); }
+  else if(action==='word-plan-custom') { wordPlanCustom=el.dataset.field; render(); const input=document.getElementById('word-plan-'+el.dataset.field+'-input'); if(input) { input.focus(); if(input.select) input.select(); } }
+  else if(action==='word-plan-cancel') { wordPlanCustom=''; render(); }
   else if(action==='quiz') { quizSource='x4'; quizModule=''; quizCursor=0; quizPicked=[]; quizRevealed=false; navigate('quiz'); }
   else if(action==='quiz-source') { quizSource=el.dataset.source; quizModule=''; quizCursor=0; quizPicked=[]; quizRevealed=false; render(); main.scrollTop=0; }
   else if(action==='quiz-paper') { quizModule=el.dataset.paper; quizCursor=0; quizPicked=[]; quizRevealed=false; navigate('quiz-paper'); }
@@ -908,7 +938,7 @@ function saveGoals(form) {
   showToast('目标已保存，一起稳稳向前');
 }
 document.addEventListener('click', event=>{ const el=event.target.closest('[data-action]'); if(el && !el.disabled) handleAction(el.dataset.action,el); });
-document.addEventListener('submit',event=>{ if(event.target.id==='goal-form') { event.preventDefault(); saveGoals(event.target); } });
+document.addEventListener('submit',event=>{ if(event.target.id==='goal-form') { event.preventDefault(); saveGoals(event.target); } else if(event.target.dataset.planField) { event.preventDefault(); const input=event.target.querySelector('input'); setWordPlan(event.target.dataset.planField, input ? input.value : ''); } });
 document.addEventListener('input',event=>{ if(event.target.id==='knowledge-search') { searchTerm=event.target.value.trim(); document.getElementById('knowledge-results').innerHTML=knowledgeResults(); stampInspectable(main); } });
 document.getElementById('overlay').addEventListener('click',event=>{ if(event.target===event.currentTarget) { closeSheet(); if(sheetOpener) sheetOpener.focus(); } });
 document.addEventListener('keydown',event=>{ const overlay=document.getElementById('overlay'); if(!overlay.hidden) { if(event.key==='Escape') { closeSheet(); if(sheetOpener) sheetOpener.focus(); } if(event.key==='Tab') { const items=[...overlay.querySelectorAll('button, input, select')], first=items[0], last=items[items.length-1]; if(event.shiftKey && document.activeElement===first) { event.preventDefault(); last.focus(); } else if(!event.shiftKey && document.activeElement===last) { event.preventDefault(); first.focus(); } } } });

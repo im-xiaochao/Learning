@@ -242,6 +242,55 @@ check('改成每天 30 个后，背单词页同步为 / 30', () => {
   return true
 })
 
+console.log('\n【计划设定：自定义数量 + 不弹轻提示】')
+check('两张卡都带「自定义」入口', () => {
+  go('word-plan')
+  const h = html()
+  const custom = h.match(/data-action="word-plan-custom"/g) || []
+  if (custom.length !== 2) throw new Error(`自定义入口应有 2 个（新词 / 复习），实际 ${custom.length}`)
+  if (!h.includes('每天复习多少个单词')) throw new Error('缺「每天复习多少个单词」卡')
+  return true
+})
+check('点「自定义」展开输入框（带 5~200 范围提示）', () => {
+  click('word-plan-custom', { field: 'newTotal' })
+  const h = html()
+  if (!h.includes('id="word-plan-newTotal-input"') && !h.includes('data-od-id="word-plan-newTotal-input"')) {
+    throw new Error('没展开输入框')
+  }
+  if (!/min="5" max="200"/.test(h)) throw new Error('输入框没有 5~200 范围')
+  if (!h.includes('确定')) throw new Error('没有「确定」按钮')
+  return true
+})
+check('自定义值真的生效，且不被白名单打回默认', () => {
+  G.setWordPlan('newTotal', 35)
+  if (G.state.goals.words !== 35) throw new Error(`goals.words=${G.state.goals.words}`)
+  go('words')
+  if (!html().includes('<strong>0</strong> / 35 个')) throw new Error('背单词页没跟着变成 / 35')
+  return true
+})
+check('超出范围会被夹到 5~200', () => {
+  G.setWordPlan('reviewTotal', 999)
+  if (G.state.goals.review !== 200) throw new Error(`上界没夹住：${G.state.goals.review}`)
+  G.setWordPlan('reviewTotal', 1)
+  if (G.state.goals.review !== 5) throw new Error(`下界没夹住：${G.state.goals.review}`)
+  G.setWordPlan('reviewTotal', 30)
+  return true
+})
+check('设置时不再弹轻提示', () => {
+  const toast = getEl('toast')
+  toast.hidden = true
+  G.setWordPlan('newTotal', 40)
+  if (!toast.hidden) throw new Error('又弹轻提示了')
+  if (/setWordPlan[\s\S]{0,400}showToast/.test(src)) throw new Error('setWordPlan 里还留着 showToast')
+  G.setWordPlan('newTotal', 20)
+  return true
+})
+check('自定义数量走表单提交（回车也能确定）', () => {
+  if (!/data-plan-field="\$\{field\}"/.test(src)) throw new Error('表单没有 data-plan-field')
+  if (!/dataset\.planField/.test(src)) throw new Error('submit 监听没处理自定义表单')
+  return true
+})
+
 console.log('\n【学习一个词之后的计数】')
 check('新词计入「今日新词」，按钮变「继续学习」', () => {
   Object.keys(G.state.answered).forEach((k) => delete G.state.answered[k])

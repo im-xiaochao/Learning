@@ -19,7 +19,13 @@ export type PlanStatus = 'pending' | 'completed'
 
 export interface GoalEntry {
   effectiveFrom: string
+  /** 每天单词**总量**（新学 + 复习），首页进度环与「学习目标」页用的就是这个数 */
   dailyWords: number
+  /**
+   * 每天复习量。新学量 = dailyWords − dailyReview。
+   * 计划设定页会把两个数一起写回；老数据没有这个字段，读时按 60% 兜底（见 wordTargets）。
+   */
+  dailyReview?: number
   dailyKnowledgePoints: number
 }
 
@@ -93,7 +99,12 @@ export interface LearningState {
   updatedAt: string
 }
 
+/** 每天单词**总量**（学习目标页用；= 新学 + 复习） */
 export const DAILY_WORD_OPTIONS = [20, 30, 50, 80]
+/** 计划设定页：每天新学量的预设（与原型一致，也支持自定义输入） */
+export const DAILY_NEW_OPTIONS = [10, 20, 30, 50]
+/** 计划设定页：每天复习量的预设 */
+export const DAILY_REVIEW_OPTIONS = [20, 30, 50, 80]
 export const DAILY_KNOWLEDGE_OPTIONS = [1, 2, 3, 5]
 export const EXAM_YEARS = [2027, 2028, 2029]
 export const ENGLISH_EXAMS = ['英语一', '英语二']
@@ -230,13 +241,21 @@ export const todayNewWords = computed(() => {
 export const todayReviewWords = computed(() => Math.max(0, todayWords.value - todayNewWords.value))
 
 /**
- * 今日单词目标拆分：新词 40% / 复习 60%。
- * 与原型口径一致（每天 50 → 新词 20 + 复习 30），且复习量不少于新词量。
+ * 今日单词目标拆分：新学 + 复习 = 总量。
+ *
+ * 两个数都由「单词 · 计划设定」显式写回（见 setWordPlan）；只有老数据没有 dailyReview 时
+ * 才按 40% / 60% 兜底（每天 50 → 新学 20 + 复习 30，与原型默认值一致）。
+ * 复习量读时夹在 [0, 总量] 内——「学习目标」页改总量时可能把复习量顶到总量之上。
  */
 export const wordTargets = computed(() => {
   const total = Math.max(1, currentGoal.value.dailyWords)
-  const newWords = Math.max(1, Math.round(total * 0.4))
-  return { newWords, review: Math.max(0, total - newWords) }
+  const stored = currentGoal.value.dailyReview
+  const fallbackNew = Math.max(1, Math.round(total * 0.4))
+  const review =
+    typeof stored === 'number' && Number.isFinite(stored)
+      ? Math.min(Math.max(0, Math.round(stored)), total)
+      : Math.max(0, total - fallbackNew)
+  return { newWords: Math.max(0, total - review), review }
 })
 
 /** 累计学习量：全部历史事件按内容 ID 去重 */
@@ -436,34 +455,51 @@ export function togglePlan(knowledgeId: string): boolean {
   return true
 }
 
-/** 保存目标：同一生效日只保留一条；新目标从次日生效（文档约定） */
+/**
+ * 保存目标：同一生效日只保留一条；新目标从次日生效（文档约定）。
+ *
+ * 这里改的是单词**总量**。原来设的复习量如果超过了新总量（比如复习 80、总量调到 20），
+ * 就按 40% / 60% 重新拆一次，别留下「新学量为负」的目标。
+ */
 export function saveGoals(input: { examYear: number; englishExam: string; mathExam: string; dailyWords: number; dailyKnowledgePoints: number }): void {
   const tomorrow = new Date()
   tomorrow.setDate(tomorrow.getDate() + 1)
   const effectiveFrom = localDate(tomorrow)
+  const prevReview = currentGoal.value.dailyReview
+  const review =
+    typeof prevReview === 'number' && prevReview <= input.dailyWords
+      ? prevReview
+      : Math.max(0, input.dailyWords - Math.max(1, Math.round(input.dailyWords * 0.4)))
   state.value.settings = { examYear: input.examYear, englishExam: input.englishExam, mathExam: input.mathExam }
   state.value.goalHistory = [
     ...state.value.goalHistory.filter((g) => g.effectiveFrom !== effectiveFrom),
-    { effectiveFrom, dailyWords: input.dailyWords, dailyKnowledgePoints: input.dailyKnowledgePoints },
+    { effectiveFrom, dailyWords: input.dailyWords, dailyReview: review, dailyKnowledgePoints: input.dailyKnowledgePoints },
   ]
   touch()
 }
 
 /**
- * 只改「每天学多少个单词」：**今天立即生效**。
+ * 设置每日单词计划：新学 + 复习两个数一起写回（总量 = 两者之和），**今天立即生效**。
  *
  * 与 saveGoals 的「次日生效」不同——单词页的「计划设定」改完，今日新词/复习的目标
  * 要立刻跟着变，否则用户会以为没保存上。顺带把今天之后还没生效的目标一并对齐，
  * 不然明天会被旧值顶回去（goalHistory 取的是 effectiveFrom 最晚的那条）。
+ *
+ * 数值按 [1, 300] 夹取：界面里可以自定义输入，别让 0 或 9999 混进目标历史。
  */
-export function setDailyWords(dailyWords: number): void {
-  if (!DAILY_WORD_OPTIONS.includes(dailyWords)) return
+export const WORD_PLAN_MAX = 300
+export function setWordPlan(newWords: number, review: number): void {
+  const clamp = (v: number): number => Math.max(1, Math.min(WORD_PLAN_MAX, Math.round(Number(v) || 0)))
+  const r = clamp(review)
+  const n = clamp(newWords)
   const today = localDate()
   const current = currentGoal.value
-  const next = state.value.goalHistory.map((g) => (g.effectiveFrom < today ? g : { ...g, dailyWords }))
+  const next = state.value.goalHistory.map((g) =>
+    g.effectiveFrom < today ? g : { ...g, dailyWords: n + r, dailyReview: r },
+  )
   state.value.goalHistory = next.some((g) => g.effectiveFrom === today)
     ? next
-    : [...next, { effectiveFrom: today, dailyWords, dailyKnowledgePoints: current.dailyKnowledgePoints }]
+    : [...next, { effectiveFrom: today, dailyWords: n + r, dailyReview: r, dailyKnowledgePoints: current.dailyKnowledgePoints }]
   touch()
 }
 
@@ -500,6 +536,6 @@ export function useLearning() {
     toggleFavorite,
     togglePlan,
     saveGoals,
-    setDailyWords,
+    setWordPlan,
   }
 }
