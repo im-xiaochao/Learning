@@ -15,47 +15,47 @@
       "sectionId": "m2-p1-c6-s1",
       "sectionTitle": "基本概念",
       "title": "微分方程",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "微分方程是联系自变量、未知函数及其导数的方程，未知函数是一元函数时叫常微分方程；方程里出现导数，解它就是求函数而不是求数。",
       "tags": [
-        "用变化率建模"
+        "含导数的方程"
       ],
       "sortOrder": 10,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "y′=f(x,y) 或 F(x,y,y′,…,y⁽ⁿ⁾)=0",
+        "caption": "微分方程是联系自变量、未知函数及其导数的方程，未知函数是一元函数时叫常微分方程；方程里出现导数，解它就是求函数而不是求数。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "fang-cheng-bi-xu-han-wei-zhi-han-shu-de-0jxmbu",
+          "title": "方程必须含未知函数的导数",
+          "bodyMarkdown": "方程必须含未知函数的导数，否则只是普通方程"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "wei-zhi-han-shu-shi-yi-yuan-de-jiao-1i8ejr",
+          "title": "未知函数是一元的叫常微分方程（本册范围）",
+          "bodyMarkdown": "未知函数是一元的叫常微分方程（本册范围）"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "jie-wei-fen-fang-cheng-you-han-dao-shu-1pm59a",
+          "title": "解微分方程 = 由含导数的关系式求出未知函数",
+          "bodyMarkdown": "解微分方程 = 由含导数的关系式求出未知函数"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-2x-shi-zui-jian-dan-0jh46r",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y′=2x 是最简单的微分方程，解为 y=x²+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "微分方程是联系自变量、未知函数及其导数的方程，未知函数是一元函数时叫常微分方程；方程里出现导数，解它就是求函数而不是求数。\n\n### 解题步骤\n\n1. 认出未知函数与它的导数\n2. 判断方程类型\n3. 按类型选解法\n\n### 易错点\n\n把 y′=2x 当普通方程瞎凑，而不是按「两边积分」求解。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m2-p1-c6-s1",
       "sectionTitle": "基本概念",
       "title": "阶",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "微分方程的阶就是方程中出现的最高阶导数的阶数；n 阶方程的通解里应含 n 个独立的任意常数，阶数与常数个数要对上。",
       "tags": [
-        "用变化率建模"
+        "最高阶导数的阶数"
       ],
       "sortOrder": 20,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "y″+2y′+y=0 是二阶方程",
+        "caption": "微分方程的阶就是方程中出现的最高阶导数的阶数；n 阶方程的通解里应含 n 个独立的任意常数，阶数与常数个数要对上。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "kan-zui-gao-jie-dao-shu-ding-jie-bu-shi-0ds7wb",
+          "title": "看最高阶导数定阶",
+          "bodyMarkdown": "看最高阶导数定阶，不是看项数或次数"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "y-chu-xian-ji-zhi-shao-n-jie",
+          "title": "y⁽ⁿ⁾ 出现即至少 n 阶",
+          "bodyMarkdown": "y⁽ⁿ⁾ 出现即至少 n 阶"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "n-jie-fang-cheng-tong-jie-han-n-ge-du-1rdx1h",
+          "title": "n 阶方程通解含 n 个独立常数",
+          "bodyMarkdown": "n 阶方程通解含 n 个独立常数"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-y-y-shi-san-jie-fang-15u2b6",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y⁽³⁾+(y″)⁴=y′ 是三阶方程——虽然 y″ 有四次方，阶只看导数的最高阶数。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "微分方程的阶就是方程中出现的最高阶导数的阶数；n 阶方程的通解里应含 n 个独立的任意常数，阶数与常数个数要对上。\n\n### 解题步骤\n\n1. 找出所有出现的导数\n2. 取最高阶数\n3. 检查通解常数个数是否等于阶数\n\n### 易错点\n\n把 (y″)⁴ 的「4 次」当成四阶——阶由导数阶数决定，与乘方次数无关。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m2-p1-c6-s1",
       "sectionTitle": "基本概念",
       "title": "解",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "微分方程的解是代入方程后两端恒等的函数；解可以显式写成 y=f(x)，也可以由隐式方程 Φ(x,y)=0 确定，两者都算解。",
       "tags": [
-        "用变化率建模"
+        "代入使方程恒等"
       ],
       "sortOrder": 30,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "把 y=φ(x) 代入，要求 F≡0",
+        "caption": "微分方程的解是代入方程后两端恒等的函数；解可以显式写成 y=f(x)，也可以由隐式方程 Φ(x,y)=0 确定，两者都算解。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "yan-zheng-jie-qiu-dao-dai-ru-yao-qiu-1ppbme",
+          "title": "验证解：求导代入，要求两端恒等",
+          "bodyMarkdown": "验证解：求导代入，要求两端恒等"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "xian-shi-jie-y-f-x-yu-yin-shi-jie-x-y-0-0w9atm",
+          "title": "显式解 y=f(x) 与隐式解 Φ(x",
+          "bodyMarkdown": "显式解 y=f(x) 与隐式解 Φ(x,y)=0 都可以"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "jie-shi-han-shu-bu-shi-yi-ge-shu",
+          "title": "解是函数",
+          "bodyMarkdown": "解是函数，不是一个数"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-e-shi-y-4y-0-de-jie-190dnq",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y=e²ˣ 是 y″−4y=0 的解：4e²ˣ−4e²ˣ=0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "微分方程的解是代入方程后两端恒等的函数；解可以显式写成 y=f(x)，也可以由隐式方程 Φ(x,y)=0 确定，两者都算解。\n\n### 解题步骤\n\n1. 把候选函数求导\n2. 代入方程两端\n3. 检查是否对区间内一切 x 恒等\n\n### 易错点\n\n只代一个点验证相等就宣称是解——必须在整个区间上恒等。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m2-p1-c6-s1",
       "sectionTitle": "基本概念",
       "title": "通解",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "n 阶微分方程的通解是含 n 个相互独立任意常数的解；「独立」指常数不能合并。",
       "tags": [
-        "用变化率建模"
+        "含 n 个独立常数"
       ],
       "sortOrder": 40,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "二阶通解形如 y=C₁y₁(x)+C₂y₂(x)",
+        "caption": "n 阶微分方程的通解是含 n 个相互独立任意常数的解；「独立」指常数不能合并。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "tong-jie-han-n-ge-du-li-ren-yi-chang-0lqcl4",
+          "title": "通解含 n 个独立任意常数（n=方程阶数）",
+          "bodyMarkdown": "通解含 n 个独立任意常数（n=方程阶数）"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "chang-shu-du-li-he-bing-hou-zhi-sheng-1y9ta7",
+          "title": "常数独立",
+          "bodyMarkdown": "常数独立：合并后只剩一个就不算"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "tong-jie-wei-bi-shi-quan-bu-jie-ke-neng-04t51u",
+          "title": "通解未必是全部解（可能漏奇解）",
+          "bodyMarkdown": "通解未必是全部解（可能漏奇解）"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-y-0-de-tong-jie-y-c-0smhen",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y″+y=0 的通解 y=C₁cos x+C₂sin x 恰含 2 个独立常数。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "n 阶微分方程的通解是含 n 个相互独立任意常数的解；「独立」指常数不能合并。注意线代「线性方程组」也讲通解（解向量组），两者含义不同，别混。\n\n### 解题步骤\n\n1. 解出含常数的解族\n2. 数独立常数的个数\n3. 与方程阶数核对\n\n### 易错点\n\n常数写得再多但不独立（如 C₁eˣ+C₂eˣ 实际只含一个自由度），仍不是通解。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,47 +219,47 @@
       "sectionId": "m2-p1-c6-s1",
       "sectionTitle": "基本概念",
       "title": "特解",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "特解是不含任意常数的解，通常由初始条件把通解中的常数确定后得到；题目问「满足某条件的解」就是要找特解。",
       "tags": [
-        "用变化率建模"
+        "定了常数的解"
       ],
       "sortOrder": 50,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "由 y(x₀)=y₀ 定 C",
+        "caption": "特解是不含任意常数的解，通常由初始条件把通解中的常数确定后得到；题目问「满足某条件的解」就是要找特解。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "te-jie-bu-han-ren-yi-chang-shu",
+          "title": "特解不含任意常数",
+          "bodyMarkdown": "特解不含任意常数"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "you-chu-shi-tiao-jian-ding-chu-tong-jie-1prq42",
+          "title": "由初始条件定出通解的常数",
+          "bodyMarkdown": "由初始条件定出通解的常数"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "ji-he-shang-shi-cong-tong-jie-qu-xian-1fpr1g",
+          "title": "几何上是从通解曲线族中选出一条",
+          "bodyMarkdown": "几何上是从通解曲线族中选出一条"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "tong-jie-y-ce-jia-tiao-0bhy9z",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "通解 y=Ceˣ 加条件 y(0)=3 得特解 y=3eˣ。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "特解是不含任意常数的解，通常由初始条件把通解中的常数确定后得到；题目问「满足某条件的解」就是要找特解。\n\n### 解题步骤\n\n1. 先求通解\n2. 代初始条件解出常数\n3. 写回得特解\n\n### 易错点\n\n把通解直接当答案交卷，没有用初始条件定常数。"
     },
     {
       "schemaVersion": "1.0",
@@ -270,47 +270,47 @@
       "sectionId": "m2-p1-c6-s1",
       "sectionTitle": "基本概念",
       "title": "初始条件",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "初始条件是在某一点处给出的函数值与各阶导数值，如 y(x₀)=y₀、y′(x₀)=y₁；n 阶方程需要 n 个条件才能确定通解中的 n 个常数。",
       "tags": [
-        "用变化率建模"
+        "定常数的条件"
       ],
       "sortOrder": 60,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "y(x₀)=y₀，y′(x₀)=y₁，…",
+        "caption": "初始条件是在某一点处给出的函数值与各阶导数值，如 y(x₀)=y₀、y′(x₀)=y₁；n 阶方程需要 n 个条件才能确定通解中的 n 个常数。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "n-jie-fang-cheng-pei-n-ge-chu-shi-tiao-0gq4fm",
+          "title": "n 阶方程配 n 个初始条件",
+          "bodyMarkdown": "n 阶方程配 n 个初始条件"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "tiao-jian-dou-gei-zai-tong-yi-dian-x-chu",
+          "title": "条件都给在同一点 x₀ 处",
+          "bodyMarkdown": "条件都给在同一点 x₀ 处"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "yi-jie-gei-han-shu-zhi-er-jie-zai-jia-07hgsy",
+          "title": "一阶给函数值",
+          "bodyMarkdown": "一阶给函数值，二阶再加导数值"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-y-0-pei-y-0-1-y-0-0-0z0sko",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y″+y=0 配 y(0)=1、y′(0)=0 得特解 y=cos x。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "初始条件是在某一点处给出的函数值与各阶导数值，如 y(x₀)=y₀、y′(x₀)=y₁；n 阶方程需要 n 个条件才能确定通解中的 n 个常数。\n\n### 解题步骤\n\n1. 读出 x₀ 处的函数值\n2. 必要时读出导数值\n3. 逐个代进通解定常数\n\n### 易错点\n\n条件个数不够或互相矛盾，都无法唯一确定特解。"
     },
     {
       "schemaVersion": "1.0",
@@ -321,47 +321,47 @@
       "sectionId": "m2-p1-c6-s2",
       "sectionTitle": "可分离变量方程",
       "title": "变量分离",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "变量分离是把方程整理成「一端只含 y 与 dy、另一端只含 x 与 dx」的过程；能不能分离，取决于方程能否写成 f(x)dx=g(y)dy 的形状。",
       "tags": [
-        "用变化率建模"
+        "各回各端"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "dy/dx=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
+        "caption": "变量分离是把方程整理成「一端只含 y 与 dy、另一端只含 x 与 dx」的过程；能不能分离，取决于方程能否写成 f(x)dx=g(y)dy 的形状。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "han-y-de-yin-zi-yu-han-x-de-yin-zi-fen-1tq1zp",
+          "title": "含 y 的因子与含 x 的因子分到两端",
+          "bodyMarkdown": "含 y 的因子与含 x 的因子分到两端"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "cheng-ji-xing-shi-dy-dx-f-x-g-y-bi-ke-1htqoe",
+          "title": "乘积形式 dy/dx=f(x)g(y) 必可分离",
+          "bodyMarkdown": "乘积形式 dy/dx=f(x)g(y) 必可分离"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "fen-li-hou-liang-duan-ge-zi-ji-fen",
+          "title": "分离后两端各自积分",
+          "bodyMarkdown": "分离后两端各自积分"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "dy-dx-e-y-fen-li-de-dy-0cwlm8",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "dy/dx=eˣ·y 分离得 dy/y=eˣdx。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "变量分离是把方程整理成「一端只含 y 与 dy、另一端只含 x 与 dx」的过程；能不能分离，取决于方程能否写成 f(x)dx=g(y)dy 的形状。\n\n### 解题步骤\n\n1. 因式分解右端\n2. 把 g(y) 除到左边\n3. 写成两端微分形式\n\n### 易错点\n\n和差形式硬拆乘积——dy/dx=x+y 不能直接分离（按线性方程解）。"
     },
     {
       "schemaVersion": "1.0",
@@ -372,47 +372,47 @@
       "sectionId": "m2-p1-c6-s2",
       "sectionTitle": "可分离变量方程",
       "title": "两边积分",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "分离变量后对两端分别积分，得到通解；一端积出 ln|y| 之类时，要及时解成显式并把常数写成统一的 C。",
       "tags": [
-        "用变化率建模"
+        "分离之后积分"
       ],
       "sortOrder": 80,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "∫dy/g(y)=∫f(x)dx+C",
+        "caption": "分离变量后对两端分别积分，得到通解；一端积出 ln|y| 之类时，要及时解成显式并把常数写成统一的 C。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "liang-duan-ge-ji-ge-de-chang-shu-zhi-0r9ubo",
+          "title": "两端各积各的",
+          "bodyMarkdown": "两端各积各的，常数只写一个 C"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "chu-xian-ln-y-shi-jie-cheng-y-ce",
+          "title": "出现 ln|y| 时解成 y=Ce^{…}",
+          "bodyMarkdown": "出现 ln|y| 时解成 y=Ce^{…}"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "ji-bu-chu-chu-deng-shi-shi-yin-shi-jie-0irimh",
+          "title": "积不出初等式时隐式解也算结果",
+          "bodyMarkdown": "积不出初等式时隐式解也算结果"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "dy-y-2x-dx-ln-y-x-c-y-0c9xa5",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "∫dy/y=∫2x dx ⇒ ln|y|=x²+C ⇒ y=Ce^{x²}。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "分离变量后对两端分别积分，得到通解；一端积出 ln|y| 之类时，要及时解成显式并把常数写成统一的 C。\n\n### 解题步骤\n\n1. 左端对 y 积分\n2. 右端对 x 积分\n3. 整理并统一常数\n\n### 易错点\n\n两端各写一个常数 C₁、C₂——合并成一个即可。"
     },
     {
       "schemaVersion": "1.0",
@@ -423,47 +423,47 @@
       "sectionId": "m2-p1-c6-s2",
       "sectionTitle": "可分离变量方程",
       "title": "常数解检查",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "分离变量时要除以 g(y)，这一步会把 g(y)=0 对应的常数解丢掉；解完必须回头检查这些常数解是否也满足原方程，缺了要补上。",
       "tags": [
-        "用变化率建模"
+        "除法会丢解"
       ],
       "sortOrder": 90,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "如 y′=y²：除以 y² 丢了 y≡0",
+        "caption": "分离变量时要除以 g(y)，这一步会把 g(y)=0 对应的常数解丢掉；解完必须回头检查这些常数解是否也满足原方程，缺了要补上。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "chu-yi-g-y-de-qian-ti-shi-g-y-0",
+          "title": "除以 g(y) 的前提是 g(y)≠0",
+          "bodyMarkdown": "除以 g(y) 的前提是 g(y)≠0"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "g-y-0-de-y-chang-gei-chu-chang-shu-jie-1h7j3a",
+          "title": "g(y)=0 的 y₀ 常给出常数解 y≡y₀",
+          "bodyMarkdown": "g(y)=0 的 y₀ 常给出常数解 y≡y₀"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "chang-shu-jie-ke-neng-qu-bu-dao-tong-0yvtno",
+          "title": "常数解可能取不到通解的任何 C 值",
+          "bodyMarkdown": "常数解可能取不到通解的任何 C 值"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-y-you-chang-shu-jie-y-01gwhx",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y′=y² 有常数解 y≡0，而通解 y=−1/(x+C) 怎么取 C 都得不到它。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "分离变量时要除以 g(y)，这一步会把 g(y)=0 对应的常数解丢掉；解完必须回头检查这些常数解是否也满足原方程，缺了要补上。\n\n### 解题步骤\n\n1. 检查除过的因子\n2. 令该因子为零验证是否为解\n3. 把它并入完整答案\n\n### 易错点\n\n解完通解就交卷，漏掉藏在「除法」里的常数解。"
     },
     {
       "schemaVersion": "1.0",
@@ -474,47 +474,47 @@
       "sectionId": "m2-p1-c6-s3",
       "sectionTitle": "齐次微分方程",
       "title": "y'=f(y/x) 类型",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "方程右端能写成只含 y/x 的函数时就是齐次型；分子分母同幂次的分式（如 (x+y)/(x−y)）同除以 x 就能化成这种形状，认出后立即换元 u=y/x。",
       "tags": [
-        "用变化率建模"
+        "比值型方程的标志"
       ],
       "sortOrder": 100,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "y′=f(y/x)，如 y′=(x+y)/(x−y)=(1+u)/(1−u)",
+        "caption": "方程右端能写成只含 y/x 的函数时就是齐次型；分子分母同幂次的分式（如 (x+y)/(x−y)）同除以 x 就能化成这"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "biao-zhi-you-duan-zheng-li-hou-zhi-han-1y6lsa",
+          "title": "标志：右端整理后只含 y/x",
+          "bodyMarkdown": "标志：右端整理后只含 y/x"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "fen-zi-fen-mu-tong-mi-ci-de-fen-shi-shi-0vzf59",
+          "title": "分子分母同幂次的分式是常见伪装",
+          "bodyMarkdown": "分子分母同幂次的分式是常见伪装"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "ren-chu-hou-ling-u-y-x",
+          "title": "认出后令 u=y/x",
+          "bodyMarkdown": "认出后令 u=y/x"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-x-y-xy-tong-chu-x-de-024lqq",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y′=(x²+y²)/(xy) 同除 x² 得 y′=(1+u²)/u（u=y/x），是齐次型。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "方程右端能写成只含 y/x 的函数时就是齐次型；分子分母同幂次的分式（如 (x+y)/(x−y)）同除以 x 就能化成这种形状，认出后立即换元 u=y/x。\n\n### 解题步骤\n\n1. 把右端通分/约分\n2. 看能否只留 y/x\n3. 能则按齐次型换元\n\n### 易错点\n\n右端同时含 x、y 的独立项（如 x+y²）就不是齐次型，别硬换元。"
     },
     {
       "schemaVersion": "1.0",
@@ -525,47 +525,47 @@
       "sectionId": "m2-p1-c6-s3",
       "sectionTitle": "齐次微分方程",
       "title": "u=y/x 换元",
-      "summary": "换元积分的目标是把“外层函数和内层导数”配成一个整体。换元不是单纯替换字母，必须同时处理 dx；定积分还要把上下限一起换掉，避免回代时出错。",
+      "summary": "解齐次型方程令 y=ux，则 y′=u+xu′，代入后方程变成 xu′=f(u)−u——关于 u 与 x 的可分离变量方程；解出 u 再回代 y=ux。",
       "tags": [
-        "换变量降复杂度"
+        "齐次型化可分离"
       ],
       "sortOrder": 110,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫f(g(x))g′(x)dx=∫f(u)du",
-        "caption": "换元积分的目标是把“外层函数和内层导数”配成一个整体。"
+        "content": "du/(f(u)−u)=dx/x",
+        "caption": "解齐次型方程令 y=ux，则 y′=u+xu′，代入后方程变成 xu′=f(u)−u——关于 u 与 x 的可分离变量方"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-huan-yuan-chang-jian-yu-cou-17le6n",
-          "title": "第一类换元常见于凑微分",
-          "bodyMarkdown": "第一类换元常见于凑微分"
+          "id": "ling-y-ux-y-u-xu-cheng-ji-qiu-dao",
+          "title": "令 y=ux",
+          "bodyMarkdown": "令 y=ux，y′=u+xu′（乘积求导）"
         },
         {
-          "id": "di-er-lei-huan-yuan-yao-rang-xin-bian-0wvnat",
-          "title": "第二类换元要让新变量后的积分更简单",
-          "bodyMarkdown": "第二类换元要让新变量后的积分更简单"
+          "id": "dai-huan-hou-xu-f-u-u-ke-fen-li",
+          "title": "代换后 xu′=f(u)−u",
+          "bodyMarkdown": "代换后 xu′=f(u)−u，可分离"
         },
         {
-          "id": "ding-ji-fen-huan-yuan-hou-you-xian-huan-099u0a",
-          "title": "定积分换元后优先换上下限",
-          "bodyMarkdown": "定积分换元后优先换上下限"
+          "id": "jie-chu-u-hou-hui-dai-u-y-x",
+          "title": "解出 u 后回代 u=y/x",
+          "bodyMarkdown": "解出 u 后回代 u=y/x"
         }
       ],
       "examples": [
         {
-          "id": "2x-cos-x-dx-ling-u-x-1qtp3q",
+          "id": "y-y-x-1-xu-1-u-ln-x-c-y-1rc3g6",
           "title": "讲解例子",
-          "bodyMarkdown": "∫2x cos(x²)dx，令 u=x² 后得到 ∫cos u du=sin(x²)+C。"
+          "bodyMarkdown": "y′=y/x+1：xu′=1 ⇒ u=ln|x|+C ⇒ y=x ln|x|+Cx。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "换元积分的目标是把“外层函数和内层导数”配成一个整体。换元不是单纯替换字母，必须同时处理 dx；定积分还要把上下限一起换掉，避免回代时出错。\n\n### 解题步骤\n\n1. 寻找可整体代换的内层\n2. 令 u=g(x) 并换 dx\n3. 检查新积分和上下限\n\n### 易错点\n\n只换了被积式却没换 dx，或定积分上下限仍使用旧变量。"
+      "bodyMarkdown": "解齐次型方程令 y=ux，则 y′=u+xu′，代入后方程变成 xu′=f(u)−u——关于 u 与 x 的可分离变量方程；解出 u 再回代 y=ux。\n\n### 解题步骤\n\n1. 设 y=ux\n2. 代入化简成 xu′=f(u)−u\n3. 分离变量解 u，回代得 y\n\n### 易错点\n\n代换后求导漏掉 u′ 项（把 y′ 直接写成 u），整题全错。"
     },
     {
       "schemaVersion": "1.0",
@@ -576,47 +576,47 @@
       "sectionId": "m2-p1-c6-s4",
       "sectionTitle": "一阶线性微分方程",
       "title": "y'+P(x)y=Q(x)",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "把一阶方程整理成 y′+P(x)y=Q(x) 的标准形是解题第一步——认出 P、Q 才能套通解公式；整理时先把 y′ 的系数除成 1。",
       "tags": [
-        "用变化率建模"
+        "一阶线性的标准形"
       ],
       "sortOrder": 120,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "y′+P(x)y=Q(x)",
+        "caption": "把一阶方程整理成 y′+P(x)y=Q(x) 的标准形是解题第一步——认出 P、Q 才能套通解公式；整理时先把 y′ 的系数除成 1。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "y-de-xi-shu-bi-xu-xian-hua-cheng-1",
+          "title": "y′ 的系数必须先化成 1",
+          "bodyMarkdown": "y′ 的系数必须先化成 1"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "p-x-shi-y-de-xi-shu-lian-tong-fu-hao-q-0zqy1l",
+          "title": "P(x) 是 y 的系数（连同符号）",
+          "bodyMarkdown": "P(x) 是 y 的系数（连同符号），Q(x) 是右端"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "zheng-li-ben-shen-jiu-shi-jie-ti-de-yi-0efbjl",
+          "title": "整理本身就是解题的一半",
+          "bodyMarkdown": "整理本身就是解题的一半"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "xy-y-x-xian-chu-x-y-y-x-1p8vxq",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "xy′+y=x² 先除 x：y′+y/x=x，得 P=1/x、Q=x。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "把一阶方程整理成 y′+P(x)y=Q(x) 的标准形是解题第一步——认出 P、Q 才能套通解公式；整理时先把 y′ 的系数除成 1。\n\n### 解题步骤\n\n1. 移项让 y′ 单独在左\n2. 两边除以 y′ 的系数\n3. 抄下 P(x)、Q(x)\n\n### 易错点\n\n没把 y′ 的系数化成 1 就读 P、Q，公式直接用错。"
     },
     {
       "schemaVersion": "1.0",
@@ -627,47 +627,47 @@
       "sectionId": "m2-p1-c6-s4",
       "sectionTitle": "一阶线性微分方程",
       "title": "通解公式",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "一阶线性方程 y′+P(x)y=Q(x) 的通解公式为 y=e^{−∫Pdx}(∫Qe^{∫Pdx}dx+C)；结构可记成「积分因子乘（一个特解加常数）」。",
       "tags": [
-        "用变化率建模"
+        "一乘一加"
       ],
       "sortOrder": 130,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "format": "latex",
+        "content": "y=e^{−∫Pdx}(∫Qe^{∫Pdx}dx+C)",
+        "caption": "一阶线性方程 y′+P(x)y=Q(x) 的通解公式为 y=e^{−∫Pdx}(∫Qe^{∫Pdx}dx+C)；"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "gong-shi-y-e-pdx-qe-pdx-dx-c",
+          "title": "公式 y=e^{−∫Pdx}(∫Qe^{∫Pdx",
+          "bodyMarkdown": "公式 y=e^{−∫Pdx}(∫Qe^{∫Pdx}dx+C)"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "e-pdx-shi-ji-fen-yin-zi-xian-ji-p-cheng-0e7oqe",
+          "title": "e^{∫Pdx} 是积分因子",
+          "bodyMarkdown": "e^{∫Pdx} 是积分因子：先积 P，乘进去"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "nei-ceng-ji-fen-bu-jia-c-zui-wai-ceng-18k8it",
+          "title": "内层积分不加 C",
+          "bodyMarkdown": "内层积分不加 C，最外层统一加"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-y-x-x-e-dx-x-x-x-x-dx-0c8tyq",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y′+y/x=x²：e^{∫dx/x}=x，∫x²·x dx=x⁴/4，通解 y=x³/4+C/x。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "一阶线性方程 y′+P(x)y=Q(x) 的通解公式为 y=e^{−∫Pdx}(∫Qe^{∫Pdx}dx+C)；结构可记成「积分因子乘（一个特解加常数）」。\n\n### 解题步骤\n\n1. 算 ∫P dx\n2. 算 ∫Qe^{∫Pdx}dx\n3. 套公式并加 C\n\n### 易错点\n\n公式正负号用反：外面是 e^{−∫Pdx}，里面是 e^{+∫Pdx}。"
     },
     {
       "schemaVersion": "1.0",
@@ -678,47 +678,47 @@
       "sectionId": "m2-p1-c6-s4",
       "sectionTitle": "一阶线性微分方程",
       "title": "初值问题",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "初值问题由微分方程和初始条件一起构成，求的是满足条件的特解；考试里的应用题几乎都是初值问题：先列方程，再给条件定常数。",
       "tags": [
-        "用变化率建模"
+        "方程 + 初始条件"
       ],
       "sortOrder": 140,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "y′=f(x,y)，y(x₀)=y₀",
+        "caption": "初值问题由微分方程和初始条件一起构成，求的是满足条件的特解；考试里的应用题几乎都是初值问题：先列方程，再给条件定常数。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "chu-zhi-wen-ti-fang-cheng-chu-shi-tiao-0rsdvm",
+          "title": "初值问题 = 方程 + 初始条件",
+          "bodyMarkdown": "初值问题 = 方程 + 初始条件"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "mu-biao-shi-te-jie-bu-shi-tong-jie",
+          "title": "目标是特解",
+          "bodyMarkdown": "目标是特解，不是通解"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "bu-zhou-jie-tong-jie-ding-chang-shu-xie-1eub8q",
+          "title": "步骤：解通解 → 定常数 → 写特解",
+          "bodyMarkdown": "步骤：解通解 → 定常数 → 写特解"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-y-y-0-2-y-2e",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y′=y，y(0)=2 ⇒ y=2eˣ。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "初值问题由微分方程和初始条件一起构成，求的是满足条件的特解；考试里的应用题几乎都是初值问题：先列方程，再给条件定常数。\n\n### 解题步骤\n\n1. 解出通解\n2. 代入初始条件定常数\n3. 写出特解作答\n\n### 易错点\n\n解出通解就停笔，忘了代初始条件。"
     },
     {
       "schemaVersion": "1.0",
@@ -729,47 +729,47 @@
       "sectionId": "m2-p1-c6-s5",
       "sectionTitle": "可降阶高阶方程",
       "title": "y''=f(x)",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "y″=f(x) 直接积分两次，每积一次出一个常数；这是可降阶方程里最简单的一类，也是「积分一次降一阶」思想的原型。",
       "tags": [
-        "用变化率建模"
+        "右端只含 x：积分两次"
       ],
       "sortOrder": 150,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "y″=f(x) ⇒ y=∫(∫f dx)dx+C₁x+C₂",
+        "caption": "y″=f(x) 直接积分两次，每积一次出一个常数；这是可降阶方程里最简单的一类，也是「积分一次降一阶」思想的原型。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "di-yi-ci-ji-fen-de-y-f-x-dx-c",
+          "title": "第一次积分得 y′=∫f(x)dx+C₁",
+          "bodyMarkdown": "第一次积分得 y′=∫f(x)dx+C₁"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "di-er-ci-ji-fen-de-y-f-dx-dx-c-x-c",
+          "title": "第二次积分得 y=∫(∫f dx)dx+C₁x+",
+          "bodyMarkdown": "第二次积分得 y=∫(∫f dx)dx+C₁x+C₂"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "liang-ge-chu-shi-tiao-jian-fen-bie-ding-13a9wh",
+          "title": "两个初始条件分别定 C₁、C₂",
+          "bodyMarkdown": "两个初始条件分别定 C₁、C₂"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-6x-y-3x-c-y-x-c-x-c",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y″=6x ⇒ y′=3x²+C₁ ⇒ y=x³+C₁x+C₂。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "y″=f(x) 直接积分两次，每积一次出一个常数；这是可降阶方程里最简单的一类，也是「积分一次降一阶」思想的原型。\n\n### 解题步骤\n\n1. 积分一次加 C₁\n2. 再积分一次加 C₂\n3. 有初始条件则定常数\n\n### 易错点\n\n积分一次就当成通解——必须积到 y 并带齐两个常数。"
     },
     {
       "schemaVersion": "1.0",
@@ -780,47 +780,47 @@
       "sectionId": "m2-p1-c6-s5",
       "sectionTitle": "可降阶高阶方程",
       "title": "y''=f(x,y')",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "方程不含 y 时（y″=f(x,y′)），令 p=y′ 把它降为关于 p 的一阶方程 p′=f(x,p)，解出 p=y′ 后再积分一次得 y；口诀「缺谁不设谁」。",
       "tags": [
-        "用变化率建模"
+        "缺 y：令 p=y′"
       ],
       "sortOrder": 160,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "p′=f(x,p)，y=∫p dx+C",
+        "caption": "方程不含 y 时（y″=f(x,y′)），令 p=y′ 把它降为关于 p 的一阶方程 p′=f(x,p)"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "que-y-ling-p-y-ci-shi-y-p",
+          "title": "缺 y ⇒ 令 p=y′",
+          "bodyMarkdown": "缺 y ⇒ 令 p=y′，此时 y″=p′"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "xian-jie-yi-jie-fang-cheng-p-f-x-p",
+          "title": "先解一阶方程 p′=f(x",
+          "bodyMarkdown": "先解一阶方程 p′=f(x,p)"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "zai-ji-p-dy-dx-de-y",
+          "title": "再积 p=dy/dx 得 y",
+          "bodyMarkdown": "再积 p=dy/dx 得 y"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "xy-y-0-ling-p-y-xp-p-0-0lh2ex",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "xy″+y′=0 令 p=y′：xp′+p=0 ⇒ p=C₁/x ⇒ y=C₁ ln|x|+C₂。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "方程不含 y 时（y″=f(x,y′)），令 p=y′ 把它降为关于 p 的一阶方程 p′=f(x,p)，解出 p=y′ 后再积分一次得 y；口诀「缺谁不设谁」。\n\n### 解题步骤\n\n1. 确认方程不含 y\n2. 令 p=y′ 降阶\n3. 解 p 再积分回 y\n\n### 易错点\n\n缺 y 却去设 p=y″——代换原则是缺 y 时令 p=y′。"
     },
     {
       "schemaVersion": "1.0",
@@ -831,47 +831,47 @@
       "sectionId": "m2-p1-c6-s5",
       "sectionTitle": "可降阶高阶方程",
       "title": "y''=f(y,y')",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "方程不含 x 时（y″=f(y,y′)），令 p=y′ 并用链式法则把 y″ 写成 p·dp/dy，方程降为 p 关于 y 的一阶方程；解出 p(y) 后再解 dy/dx=p(y)。",
       "tags": [
-        "用变化率建模"
+        "缺 x：p 看成 y 的函数"
       ],
       "sortOrder": 170,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "y″=p·dp/dy（链式法则）",
+        "caption": "方程不含 x 时（y″=f(y,y′)），令 p=y′ 并用链式法则把 y″ 写成 p·dp/dy"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "que-x-ling-p-y-qie-y-p-dp-dy",
+          "title": "缺 x ⇒ 令 p=y′",
+          "bodyMarkdown": "缺 x ⇒ 令 p=y′，且 y″=p·dp/dy"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "xian-jie-p-guan-yu-y-de-yi-jie-fang-1d577v",
+          "title": "先解 p 关于 y 的一阶方程",
+          "bodyMarkdown": "先解 p 关于 y 的一阶方程"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "zai-jie-dy-dx-p-y-ke-fen-li",
+          "title": "再解 dy/dx=p(y)（可分离）",
+          "bodyMarkdown": "再解 dy/dx=p(y)（可分离）"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-2yy-ling-p-y-p-dp-dy-06bj55",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y″=2yy′ 令 p=y′：p dp/dy=2yp ⇒ p=y²+C₁，再解 dy/dx=y²+C₁。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "方程不含 x 时（y″=f(y,y′)），令 p=y′ 并用链式法则把 y″ 写成 p·dp/dy，方程降为 p 关于 y 的一阶方程；解出 p(y) 后再解 dy/dx=p(y)。\n\n### 解题步骤\n\n1. 确认方程不含 x\n2. 令 p=y′，写 y″=p dp/dy\n3. 解 p(y) 后分离变量求 y\n\n### 易错点\n\n缺 x 时仍写 y″=dp/dx——p 已是 y 的函数，必须用 p dp/dy。"
     },
     {
       "schemaVersion": "1.0",
@@ -882,47 +882,47 @@
       "sectionId": "m2-p1-c6-s6",
       "sectionTitle": "二阶线性微分方程解的结构",
       "title": "齐次解线性组合",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "两个线性无关的齐次解做线性组合 C₁y₁+C₂y₂ 就得到二阶齐次方程的通解；判断无关最常用「之比是否恒为常数」。",
       "tags": [
-        "用变化率建模"
+        "无关解拼通解"
       ],
       "sortOrder": 180,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "y=C₁y₁+C₂y₂",
+        "caption": "两个线性无关的齐次解做线性组合 C₁y₁+C₂y₂ 就得到二阶齐次方程的通解；判断无关最常用「之比是否恒为常数」。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "c-y-c-y-shi-tong-jie-y-y-wu-guan",
+          "title": "C₁y₁+C₂y₂ 是通解 ⇔ y₁、y₂ 无关",
+          "bodyMarkdown": "C₁y₁+C₂y₂ 是通解 ⇔ y₁、y₂ 无关"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "wu-guan-pan-ju-y-y-chang-shu",
+          "title": "无关判据",
+          "bodyMarkdown": "无关判据：y₁/y₂ ≢ 常数"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "zu-he-hou-qia-hao-han-liang-ge-du-li-0o096n",
+          "title": "组合后恰好含两个独立常数",
+          "bodyMarkdown": "组合后恰好含两个独立常数"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "e-yu-e-zhi-bi-e-x-bu-1vjhiv",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "e²ˣ 与 e³ˣ 之比 e^{−x} 不是常数，故 y=C₁e²ˣ+C₂e³ˣ 是 y″−5y′+6y=0 的通解。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "两个线性无关的齐次解做线性组合 C₁y₁+C₂y₂ 就得到二阶齐次方程的通解；判断无关最常用「之比是否恒为常数」。\n\n### 解题步骤\n\n1. 求两个特解\n2. 验证线性无关\n3. 写线性组合\n\n### 易错点\n\n把成比例的两个解（如 e²ˣ、3e²ˣ）线性组合当作通解。"
     },
     {
       "schemaVersion": "1.0",
@@ -933,47 +933,47 @@
       "sectionId": "m2-p1-c6-s6",
       "sectionTitle": "二阶线性微分方程解的结构",
       "title": "非齐次通解结构",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "非齐次方程的通解必须写全：对应齐次通解（含全部任意常数）加上本方程的一个特解；验证时把它代回方程，齐次部分抵消，只剩非齐次项。",
       "tags": [
-        "用变化率建模"
+        "常数全在齐次部分"
       ],
       "sortOrder": 190,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "y=C₁y₁+C₂y₂+y*",
+        "caption": "非齐次方程的通解必须写全：对应齐次通解（含全部任意常数）加上本方程的一个特解；验证时把它代回方程，齐次部分抵消，只剩非齐次项。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "jie-gou-y-c-y-c-y-y",
+          "title": "结构：y=C₁y₁+C₂y₂+y*",
+          "bodyMarkdown": "结构：y=C₁y₁+C₂y₂+y*"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "ren-yi-chang-shu-quan-bu-lai-zi-qi-ci-1lmgpy",
+          "title": "任意常数全部来自齐次部分",
+          "bodyMarkdown": "任意常数全部来自齐次部分"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "te-jie-yong-dai-ding-xi-shu-fa-qiu-bu-0cdi7y",
+          "title": "特解用待定系数法求（不含 C）",
+          "bodyMarkdown": "特解用待定系数法求（不含 C）"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "y-y-e-qi-ci-tong-jie-c-1rupzc",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "y″−y=eˣ：齐次通解 C₁eˣ+C₂e^{−x}，特解 y*=(x/2)eˣ，两者相加。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "非齐次方程的通解必须写全：对应齐次通解（含全部任意常数）加上本方程的一个特解；验证时把它代回方程，齐次部分抵消，只剩非齐次项。\n\n### 解题步骤\n\n1. 解齐次得 C₁y₁+C₂y₂\n2. 找一个特解 y*\n3. 相加写通解\n\n### 易错点\n\n特解里混入任意常数——待定系数只定数字，不定 C。"
     },
     {
       "schemaVersion": "1.0",
@@ -984,47 +984,47 @@
       "sectionId": "m2-p1-c6-s7",
       "sectionTitle": "二阶常系数齐次线性方程",
       "title": "特征方程",
-      "summary": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。",
+      "summary": "对常系数齐次方程 y″+py′+qy=0 试指数解 y=e^{rx}，约去 e^{rx} 得代数方程 r²+pr+q=0，叫特征方程；微分方程的求解就此化为代数方程求根。",
       "tags": [
-        "根决定解的形状"
+        "导数换 r 的幂"
       ],
       "sortOrder": 200,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y″+py′+qy=0 ⇒ r²+pr+q=0",
-        "caption": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。"
+        "content": "r²+pr+q=0，r=(−p±√(p²−4q))/2",
+        "caption": "对常系数齐次方程 y″+py′+qy=0 试指数解 y=e^{rx}，约去 e^{rx} 得代数方程 r²+pr+q=0"
       },
       "keyPoints": [
         {
-          "id": "gen-de-zhong-shu-jue-ding-shi-fou-cheng-0qfrxp",
-          "title": "根的重数决定是否乘 x 的次数",
-          "bodyMarkdown": "根的重数决定是否乘 x 的次数"
+          "id": "shi-y-e-rx-yue-qu-e-rx-de-te-zheng-fang-1no4v4",
+          "title": "试 y=e^{rx}",
+          "bodyMarkdown": "试 y=e^{rx}，约去 e^{rx} 得特征方程"
         },
         {
-          "id": "fu-gen-i-dui-ying-e-x-c-cos-x-c-sin-x",
-          "title": "复根 α±βi 对应 e^{αx}(C₁cosβ",
-          "bodyMarkdown": "复根 α±βi 对应 e^{αx}(C₁cosβx+C₂sinβx)"
+          "id": "te-zheng-fang-cheng-r-pr-q-0",
+          "title": "特征方程 r²+pr+q=0",
+          "bodyMarkdown": "特征方程 r²+pr+q=0"
         },
         {
-          "id": "te-zheng-jie-yao-zu-cheng-xian-xing-wu-0w7dsn",
-          "title": "特征解要组成线性无关组",
-          "bodyMarkdown": "特征解要组成线性无关组"
+          "id": "gen-de-san-zhong-qing-kuang-dui-ying-1xsdiq",
+          "title": "根的三种情况对应三种解形",
+          "bodyMarkdown": "根的三种情况对应三种解形"
         }
       ],
       "examples": [
         {
-          "id": "y-3y-2y-0-de-gen-wei-1-1yi4zh",
+          "id": "y-5y-6y-0-de-te-zheng-0kqba9",
           "title": "讲解例子",
-          "bodyMarkdown": "y″−3y′+2y=0 的根为 1、2，通解 y=C₁eˣ+C₂e²ˣ。"
+          "bodyMarkdown": "y″−5y′+6y=0 的特征方程 r²−5r+6=0，根 r=2、3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。\n\n### 解题步骤\n\n1. 写特征方程\n2. 分类求根\n3. 按根的类型写通解并代初值\n\n### 易错点\n\n重根只写一个 e^{rx}，或复根漏掉 e^{αx} 包络。"
+      "bodyMarkdown": "对常系数齐次方程 y″+py′+qy=0 试指数解 y=e^{rx}，约去 e^{rx} 得代数方程 r²+pr+q=0，叫特征方程；微分方程的求解就此化为代数方程求根。\n\n### 解题步骤\n\n1. 写出特征方程\n2. 求根（求根公式/因式分解）\n3. 按根型写解\n\n### 易错点\n\n特征方程漏写一次项系数 p（错写成 r²+q=0）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1035,47 +1035,47 @@
       "sectionId": "m2-p1-c6-s7",
       "sectionTitle": "二阶常系数齐次线性方程",
       "title": "不同实根",
-      "summary": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。",
+      "summary": "特征方程有两个不相等实根时，每个根各出一个指数解，它们线性无关，线性组合即通解；这是三种根型里最基本的一种。",
       "tags": [
-        "根决定解的形状"
+        "一个根一个指数"
       ],
       "sortOrder": 210,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "y″+py′+qy=0 ⇒ r²+pr+q=0",
-        "caption": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。"
+        "format": "latex",
+        "content": "y=C₁e^{r₁x}+C₂e^{r₂x}",
+        "caption": "特征方程有两个不相等实根时，每个根各出一个指数解，它们线性无关，线性组合即通解；这是三种根型里最基本的一种。"
       },
       "keyPoints": [
         {
-          "id": "gen-de-zhong-shu-jue-ding-shi-fou-cheng-0qfrxp",
-          "title": "根的重数决定是否乘 x 的次数",
-          "bodyMarkdown": "根的重数决定是否乘 x 的次数"
+          "id": "r-r-y-c-e-r-x-c-e-r-x",
+          "title": "r₁≠r₂ ⇒ y=C₁e^{r₁x}+C₂e^",
+          "bodyMarkdown": "r₁≠r₂ ⇒ y=C₁e^{r₁x}+C₂e^{r₂x}"
         },
         {
-          "id": "fu-gen-i-dui-ying-e-x-c-cos-x-c-sin-x",
-          "title": "复根 α±βi 对应 e^{αx}(C₁cosβ",
-          "bodyMarkdown": "复根 α±βi 对应 e^{αx}(C₁cosβx+C₂sinβx)"
+          "id": "liang-jie-zhi-bi-bu-shi-chang-shu-xian-1ev9nc",
+          "title": "两解之比不是常数",
+          "bodyMarkdown": "两解之比不是常数，线性无关"
         },
         {
-          "id": "te-zheng-jie-yao-zu-cheng-xian-xing-wu-0w7dsn",
-          "title": "特征解要组成线性无关组",
-          "bodyMarkdown": "特征解要组成线性无关组"
+          "id": "xian-qiu-gen-zai-an-gen-xing-xie-jie",
+          "title": "先求根，再按根型写解",
+          "bodyMarkdown": "先求根，再按根型写解"
         }
       ],
       "examples": [
         {
-          "id": "y-3y-2y-0-de-gen-wei-1-1yi4zh",
+          "id": "r-3r-2-0-gen-1-2-y-c-e-1bbgtv",
           "title": "讲解例子",
-          "bodyMarkdown": "y″−3y′+2y=0 的根为 1、2，通解 y=C₁eˣ+C₂e²ˣ。"
+          "bodyMarkdown": "r²−3r+2=0 根 1、2，y=C₁eˣ+C₂e²ˣ。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。\n\n### 解题步骤\n\n1. 写特征方程\n2. 分类求根\n3. 按根的类型写通解并代初值\n\n### 易错点\n\n重根只写一个 e^{rx}，或复根漏掉 e^{αx} 包络。"
+      "bodyMarkdown": "特征方程有两个不相等实根时，每个根各出一个指数解，它们线性无关，线性组合即通解；这是三种根型里最基本的一种。\n\n### 解题步骤\n\n1. 解特征方程\n2. 区分三种根型\n3. 按两实根公式写通解\n\n### 易错点\n\n根求对但指数符号写反（r=−1 写成 eˣ）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1086,47 +1086,47 @@
       "sectionId": "m2-p1-c6-s7",
       "sectionTitle": "二阶常系数齐次线性方程",
       "title": "重根",
-      "summary": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。",
+      "summary": "特征方程出现重根 r 时，重复的根不会自动给出第二个无关解，必须补 xe^{rx}；通解写成形如 (C₁+C₂x)e^{rx}。",
       "tags": [
-        "根决定解的形状"
+        "补 x 项凑齐两解"
       ],
       "sortOrder": 220,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "y″+py′+qy=0 ⇒ r²+pr+q=0",
-        "caption": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。"
+        "format": "latex",
+        "content": "y=(C₁+C₂x)e^{rx}",
+        "caption": "特征方程出现重根 r 时，重复的根不会自动给出第二个无关解，必须补 xe^{rx}；通解写成形如 (C₁+C₂x)e^{rx}。"
       },
       "keyPoints": [
         {
-          "id": "gen-de-zhong-shu-jue-ding-shi-fou-cheng-0qfrxp",
-          "title": "根的重数决定是否乘 x 的次数",
-          "bodyMarkdown": "根的重数决定是否乘 x 的次数"
+          "id": "er-chong-gen-y-c-c-x-e-rx",
+          "title": "二重根 ⇒ y=(C₁+C₂x)e^{rx}",
+          "bodyMarkdown": "二重根 ⇒ y=(C₁+C₂x)e^{rx}"
         },
         {
-          "id": "fu-gen-i-dui-ying-e-x-c-cos-x-c-sin-x",
-          "title": "复根 α±βi 对应 e^{αx}(C₁cosβ",
-          "bodyMarkdown": "复根 α±βi 对应 e^{αx}(C₁cosβx+C₂sinβx)"
+          "id": "bu-de-xe-rx-bao-zheng-xian-xing-wu-guan",
+          "title": "补的 xe^{rx} 保证线性无关",
+          "bodyMarkdown": "补的 xe^{rx} 保证线性无关"
         },
         {
-          "id": "te-zheng-jie-yao-zu-cheng-xian-xing-wu-0w7dsn",
-          "title": "特征解要组成线性无关组",
-          "bodyMarkdown": "特征解要组成线性无关组"
+          "id": "k-zhong-gen-bu-dao-x-k-1-e-rx",
+          "title": "k 重根补到 x^{k−1}e^{rx}",
+          "bodyMarkdown": "k 重根补到 x^{k−1}e^{rx}"
         }
       ],
       "examples": [
         {
-          "id": "y-3y-2y-0-de-gen-wei-1-1yi4zh",
+          "id": "r-2r-1-0-shuang-gen-1-y-15ljnm",
           "title": "讲解例子",
-          "bodyMarkdown": "y″−3y′+2y=0 的根为 1、2，通解 y=C₁eˣ+C₂e²ˣ。"
+          "bodyMarkdown": "r²+2r+1=0 双根 −1，y=(C₁+C₂x)e^{−x}。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。\n\n### 解题步骤\n\n1. 写特征方程\n2. 分类求根\n3. 按根的类型写通解并代初值\n\n### 易错点\n\n重根只写一个 e^{rx}，或复根漏掉 e^{αx} 包络。"
+      "bodyMarkdown": "特征方程出现重根 r 时，重复的根不会自动给出第二个无关解，必须补 xe^{rx}；通解写成形如 (C₁+C₂x)e^{rx}。\n\n### 解题步骤\n\n1. 确认根的重数\n2. 写 e^{rx} 加幂次补项\n3. 按 (C₁+C₂x)e^{rx} 组合\n\n### 易错点\n\n补项写成 x²e^{rx}——二重根只补到 x 的一次。"
     },
     {
       "schemaVersion": "1.0",
@@ -1137,47 +1137,47 @@
       "sectionId": "m2-p1-c6-s7",
       "sectionTitle": "二阶常系数齐次线性方程",
       "title": "共轭复根",
-      "summary": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。",
+      "summary": "特征根为共轭复数 α±βi 时，齐次通解写成实形式 y=e^{αx}(C₁cos βx+C₂sin βx)；实部 α 控制衰减或增长，虚部 β 控制振荡快慢。",
       "tags": [
-        "根决定解的形状"
+        "复根出振荡解"
       ],
       "sortOrder": 230,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "y″+py′+qy=0 ⇒ r²+pr+q=0",
-        "caption": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。"
+        "format": "latex",
+        "content": "r=α±βi ⇒ y=e^{αx}(C₁cos βx+C₂sin βx)",
+        "caption": "特征根为共轭复数 α±βi 时，齐次通解写成实形式 y=e^{αx}(C₁cos βx+C₂sin βx)；"
       },
       "keyPoints": [
         {
-          "id": "gen-de-zhong-shu-jue-ding-shi-fou-cheng-0qfrxp",
-          "title": "根的重数决定是否乘 x 的次数",
-          "bodyMarkdown": "根的重数决定是否乘 x 的次数"
+          "id": "y-e-x-c-cos-x-c-sin-x",
+          "title": "y=e^{αx}(C₁cos βx+C₂sin ",
+          "bodyMarkdown": "y=e^{αx}(C₁cos βx+C₂sin βx)"
         },
         {
-          "id": "fu-gen-i-dui-ying-e-x-c-cos-x-c-sin-x",
-          "title": "复根 α±βi 对应 e^{αx}(C₁cosβ",
-          "bodyMarkdown": "复根 α±βi 对应 e^{αx}(C₁cosβx+C₂sinβx)"
+          "id": "shi-zhen-dang-jiao-pin-l-shi-shuai-jian-1qcltp",
+          "title": "β 是振荡角频率",
+          "bodyMarkdown": "β 是振荡角频率，α 是衰减率"
         },
         {
-          "id": "te-zheng-jie-yao-zu-cheng-xian-xing-wu-0w7dsn",
-          "title": "特征解要组成线性无关组",
-          "bodyMarkdown": "特征解要组成线性无关组"
+          "id": "pan-bie-shi-p-4q-0-shi-fa-sheng",
+          "title": "判别式 p²−4q<0 时发生",
+          "bodyMarkdown": "判别式 p²−4q<0 时发生"
         }
       ],
       "examples": [
         {
-          "id": "y-3y-2y-0-de-gen-wei-1-1yi4zh",
+          "id": "y-4y-0-r-2i-0-2-y-c-cos-1pgw61",
           "title": "讲解例子",
-          "bodyMarkdown": "y″−3y′+2y=0 的根为 1、2，通解 y=C₁eˣ+C₂e²ˣ。"
+          "bodyMarkdown": "y″+4y=0：r=±2i，α=0、β=2，y=C₁cos 2x+C₂sin 2x。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。\n\n### 解题步骤\n\n1. 写特征方程\n2. 分类求根\n3. 按根的类型写通解并代初值\n\n### 易错点\n\n重根只写一个 e^{rx}，或复根漏掉 e^{αx} 包络。"
+      "bodyMarkdown": "特征根为共轭复数 α±βi 时，齐次通解写成实形式 y=e^{αx}(C₁cos βx+C₂sin βx)；实部 α 控制衰减或增长，虚部 β 控制振荡快慢。\n\n### 解题步骤\n\n1. 求出 α、β\n2. 写 e^{αx} 因子\n3. 配 cos βx 与 sin βx 两项\n\n### 易错点\n\n把 β 当频率——它是角频率，周期是 2π/β。"
     },
     {
       "schemaVersion": "1.0",
@@ -1188,47 +1188,47 @@
       "sectionId": "m2-p1-c6-s7",
       "sectionTitle": "二阶常系数齐次线性方程",
       "title": "某些高阶常系数齐次方程",
-      "summary": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。",
+      "summary": "高阶常系数齐次方程的特征方程可能同时出现单实根、重根与复根，按各自规则写出对应解，个数凑齐阶数 n，线性组合就是通解。",
       "tags": [
-        "根决定解的形状"
+        "根全找齐解就齐"
       ],
       "sortOrder": 240,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y″+py′+qy=0 ⇒ r²+pr+q=0",
-        "caption": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。"
+        "content": "n 阶通解 = n 个线性无关解的组合",
+        "caption": "高阶常系数齐次方程的特征方程可能同时出现单实根、重根与复根，按各自规则写出对应解，个数凑齐阶数 n，线性组合就是通解。"
       },
       "keyPoints": [
         {
-          "id": "gen-de-zhong-shu-jue-ding-shi-fou-cheng-0qfrxp",
-          "title": "根的重数决定是否乘 x 的次数",
-          "bodyMarkdown": "根的重数决定是否乘 x 的次数"
+          "id": "dan-gen-chu-e-rx-zhong-gen-jia-mi-fu-0leyd5",
+          "title": "单根出 e^{rx}",
+          "bodyMarkdown": "单根出 e^{rx}，重根加幂，复根出振荡"
         },
         {
-          "id": "fu-gen-i-dui-ying-e-x-c-cos-x-c-sin-x",
-          "title": "复根 α±βi 对应 e^{αx}(C₁cosβ",
-          "bodyMarkdown": "复根 α±βi 对应 e^{αx}(C₁cosβx+C₂sinβx)"
+          "id": "jie-de-zong-shu-bi-xu-deng-yu-jie-shu-n",
+          "title": "解的总数必须等于阶数 n",
+          "bodyMarkdown": "解的总数必须等于阶数 n"
         },
         {
-          "id": "te-zheng-jie-yao-zu-cheng-xian-xing-wu-0w7dsn",
-          "title": "特征解要组成线性无关组",
-          "bodyMarkdown": "特征解要组成线性无关组"
+          "id": "zui-hou-tong-yi-xian-xing-zu-he",
+          "title": "最后统一线性组合",
+          "bodyMarkdown": "最后统一线性组合"
         }
       ],
       "examples": [
         {
-          "id": "y-3y-2y-0-de-gen-wei-1-1yi4zh",
+          "id": "y-y-0-te-zheng-gen-1-i-0ug0n8",
           "title": "讲解例子",
-          "bodyMarkdown": "y″−3y′+2y=0 的根为 1、2，通解 y=C₁eˣ+C₂e²ˣ。"
+          "bodyMarkdown": "y⁽⁴⁾−y=0 特征根 ±1、±i，通解 C₁eˣ+C₂e^{−x}+C₃cos x+C₄sin x。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。\n\n### 解题步骤\n\n1. 写特征方程\n2. 分类求根\n3. 按根的类型写通解并代初值\n\n### 易错点\n\n重根只写一个 e^{rx}，或复根漏掉 e^{αx} 包络。"
+      "bodyMarkdown": "高阶常系数齐次方程的特征方程可能同时出现单实根、重根与复根，按各自规则写出对应解，个数凑齐阶数 n，线性组合就是通解。\n\n### 解题步骤\n\n1. 写特征方程并求全部根\n2. 按根型逐个写解\n3. 凑齐 n 个后线性组合\n\n### 易错点\n\n复根只写 cos 不写 sin——一个共轭复根对应两个实解。"
     },
     {
       "schemaVersion": "1.0",
@@ -1239,47 +1239,47 @@
       "sectionId": "m2-p1-c6-s8",
       "sectionTitle": "二阶常系数非齐次线性方程",
       "title": "多项式",
-      "summary": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。",
+      "summary": "右端是多项式 Pₘ(x) 时，设特解 y*=x^kQₘ(x)：Qₘ 是同次待定多项式，k 按「0 是不是特征根、是单根还是重根」取 0、1、2。",
       "tags": [
-        "根决定解的形状"
+        "按 0 是否特征根补 x^k"
       ],
       "sortOrder": 250,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y″+py′+qy=0 ⇒ r²+pr+q=0",
-        "caption": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。"
+        "content": "y*=x^k(aₘxᵐ+…+a₀)",
+        "caption": "右端是多项式 Pₘ(x) 时，设特解 y*=x^kQₘ(x)：Qₘ 是同次待定多项式，k 按「0 是不是特征根、是单根还是重根」取 0、1、2。"
       },
       "keyPoints": [
         {
-          "id": "gen-de-zhong-shu-jue-ding-shi-fou-cheng-0qfrxp",
-          "title": "根的重数决定是否乘 x 的次数",
-          "bodyMarkdown": "根的重数决定是否乘 x 的次数"
+          "id": "y-x-kq-x-q-yu-p-tong-ci",
+          "title": "y*=x^kQₘ(x)",
+          "bodyMarkdown": "y*=x^kQₘ(x)，Qₘ 与 Pₘ 同次"
         },
         {
-          "id": "fu-gen-i-dui-ying-e-x-c-cos-x-c-sin-x",
-          "title": "复根 α±βi 对应 e^{αx}(C₁cosβ",
-          "bodyMarkdown": "复根 α±βi 对应 e^{αx}(C₁cosβx+C₂sinβx)"
+          "id": "0-fei-te-zheng-gen-k-0-dan-gen-k-1-1rk0oh",
+          "title": "0 非特征根 k=0",
+          "bodyMarkdown": "0 非特征根 k=0；单根 k=1；重根 k=2"
         },
         {
-          "id": "te-zheng-jie-yao-zu-cheng-xian-xing-wu-0w7dsn",
-          "title": "特征解要组成线性无关组",
-          "bodyMarkdown": "特征解要组成线性无关组"
+          "id": "dai-ru-bi-jiao-xi-shu-ding-chu-q",
+          "title": "代入比较系数定出 Qₘ",
+          "bodyMarkdown": "代入比较系数定出 Qₘ"
         }
       ],
       "examples": [
         {
-          "id": "y-3y-2y-0-de-gen-wei-1-1yi4zh",
+          "id": "y-2y-x-0-shi-dan-te-0bksh6",
           "title": "讲解例子",
-          "bodyMarkdown": "y″−3y′+2y=0 的根为 1、2，通解 y=C₁eˣ+C₂e²ˣ。"
+          "bodyMarkdown": "y″−2y′=x²：0 是单特征根，设 y*=x(ax²+bx+c)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。\n\n### 解题步骤\n\n1. 写特征方程\n2. 分类求根\n3. 按根的类型写通解并代初值\n\n### 易错点\n\n重根只写一个 e^{rx}，或复根漏掉 e^{αx} 包络。"
+      "bodyMarkdown": "右端是多项式 Pₘ(x) 时，设特解 y*=x^kQₘ(x)：Qₘ 是同次待定多项式，k 按「0 是不是特征根、是单根还是重根」取 0、1、2。\n\n### 解题步骤\n\n1. 检查 0 是否特征根\n2. 设带 x^k 修正的同次多项式\n3. 代回比较系数\n\n### 易错点\n\n不乘 x^k 直接设多项式，待定系数怎么都凑不平。"
     },
     {
       "schemaVersion": "1.0",
@@ -1290,47 +1290,47 @@
       "sectionId": "m2-p1-c6-s8",
       "sectionTitle": "二阶常系数非齐次线性方程",
       "title": "指数函数",
-      "summary": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。",
+      "summary": "右端为 e^{λx}Pₘ(x) 时设特解 y*=x^ke^{λx}Qₘ(x)，k 是 λ 作为特征根的重数（不是根取 0）；与多项式情形相比只是整体多乘 e^{λx}。",
       "tags": [
-        "根决定解的形状"
+        "λ 是不是特征根"
       ],
       "sortOrder": 260,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "y″+py′+qy=0 ⇒ r²+pr+q=0",
-        "caption": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。"
+        "format": "latex",
+        "content": "y*=x^k e^{λx}(aₘxᵐ+…+a₀)",
+        "caption": "右端为 e^{λx}Pₘ(x) 时设特解 y*=x^ke^{λx}Qₘ(x)"
       },
       "keyPoints": [
         {
-          "id": "gen-de-zhong-shu-jue-ding-shi-fou-cheng-0qfrxp",
-          "title": "根的重数决定是否乘 x 的次数",
-          "bodyMarkdown": "根的重数决定是否乘 x 的次数"
+          "id": "y-x-k-e-x-q-x",
+          "title": "y*=x^k e^{λx}Qₘ(x)",
+          "bodyMarkdown": "y*=x^k e^{λx}Qₘ(x)"
         },
         {
-          "id": "fu-gen-i-dui-ying-e-x-c-cos-x-c-sin-x",
-          "title": "复根 α±βi 对应 e^{αx}(C₁cosβ",
-          "bodyMarkdown": "复根 α±βi 对应 e^{αx}(C₁cosβx+C₂sinβx)"
+          "id": "k-de-te-zheng-gen-zhong-shu-fei-gen-0-0z9mij",
+          "title": "k=λ 的特征根重数",
+          "bodyMarkdown": "k=λ 的特征根重数：非根 0、单根 1、二重根 2"
         },
         {
-          "id": "te-zheng-jie-yao-zu-cheng-xian-xing-wu-0w7dsn",
-          "title": "特征解要组成线性无关组",
-          "bodyMarkdown": "特征解要组成线性无关组"
+          "id": "q-reng-shi-tong-ci-dai-ding-duo-xiang-0bn45g",
+          "title": "Qₘ 仍是同次待定多项式",
+          "bodyMarkdown": "Qₘ 仍是同次待定多项式"
         }
       ],
       "examples": [
         {
-          "id": "y-3y-2y-0-de-gen-wei-1-1yi4zh",
+          "id": "y-y-e-1-shi-dan-te-05ngh9",
           "title": "讲解例子",
-          "bodyMarkdown": "y″−3y′+2y=0 的根为 1、2，通解 y=C₁eˣ+C₂e²ˣ。"
+          "bodyMarkdown": "y″−y=eˣ：λ=1 是单特征根，设 y*=axeˣ，代回解得 a=1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。\n\n### 解题步骤\n\n1. 写特征方程\n2. 分类求根\n3. 按根的类型写通解并代初值\n\n### 易错点\n\n重根只写一个 e^{rx}，或复根漏掉 e^{αx} 包络。"
+      "bodyMarkdown": "右端为 e^{λx}Pₘ(x) 时设特解 y*=x^ke^{λx}Qₘ(x)，k 是 λ 作为特征根的重数（不是根取 0）；与多项式情形相比只是整体多乘 e^{λx}。\n\n### 解题步骤\n\n1. 把 λ 代入特征方程看是否为根\n2. 确定重数 k\n3. 设特解并比较系数\n\n### 易错点\n\nλ 恰是特征根时忘了乘 x^k，待定系数法直接失效。"
     },
     {
       "schemaVersion": "1.0",
@@ -1341,47 +1341,47 @@
       "sectionId": "m2-p1-c6-s8",
       "sectionTitle": "二阶常系数非齐次线性方程",
       "title": "正弦",
-      "summary": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。",
+      "summary": "右端为 A sin ωx 时，特解设 y*=M cos ωx+N sin ωx，两个待定系数一起上；若 ±ωi 已是特征根，则改为 y*=x(M cos ωx+N sin ωx)。",
       "tags": [
-        "拆成谐波"
+        "sin ωx 型右端"
       ],
       "sortOrder": 270,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "f(x)∼a₀/2+Σ[aₙcos(nπx/L)+bₙsin(nπx/L)]",
-        "caption": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。"
+        "content": "y*=x^k(M cos ωx+N sin ωx)",
+        "caption": "右端为 A sin ωx 时，特解设 y*=M cos ωx+N sin ωx，两个待定系数一起上；"
       },
       "keyPoints": [
         {
-          "id": "zhou-qi-jue-ding-ji-pin",
-          "title": "周期决定基频",
-          "bodyMarkdown": "周期决定基频"
+          "id": "te-jie-tong-shi-she-cos-yu-sin-liang-19cpls",
+          "title": "特解同时设 cos 与 sin 两项",
+          "bodyMarkdown": "特解同时设 cos 与 sin 两项"
         },
         {
-          "id": "ji-ou-xing-ke-yi-rang-yi-ban-xi-shu-zhi-0rm382",
-          "title": "奇偶性可以让一半系数直接为零",
-          "bodyMarkdown": "奇偶性可以让一半系数直接为零"
+          "id": "i-shi-te-zheng-gen-shi-te-jie-cheng-x",
+          "title": "±ωi 是特征根时特解乘 x",
+          "bodyMarkdown": "±ωi 是特征根时特解乘 x"
         },
         {
-          "id": "shou-lian-dian-de-zhi-yu-zuo-you-ji-1x6pij",
-          "title": "收敛点的值与左右极限平均有关",
-          "bodyMarkdown": "收敛点的值与左右极限平均有关"
+          "id": "dai-ru-bi-jiao-xi-shu-jie-chu-m-n",
+          "title": "代入比较系数解出 M、N",
+          "bodyMarkdown": "代入比较系数解出 M、N"
         }
       ],
       "examples": [
         {
-          "id": "ou-han-shu-zai-dui-chen-0oi0c4",
+          "id": "y-y-sin-2x-2i-bu-shi-te-0px76l",
           "title": "讲解例子",
-          "bodyMarkdown": "偶函数在对称区间上只需计算余弦系数；奇函数只保留正弦项。"
+          "bodyMarkdown": "y″+y=sin 2x：±2i 不是特征根，设 y*=M cos 2x+N sin 2x，解得 M=0、N=−1/3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "傅里叶级数把周期函数分解成不同频率的正弦和余弦。系数是函数与对应基函数的内积，增加的谐波越多，部分和通常越接近原函数，但跳跃点附近可能出现过冲。\n\n### 解题步骤\n\n1. 确定周期与展开区间\n2. 利用奇偶性简化系数\n3. 计算系数并解释收敛\n\n### 易错点\n\n把傅里叶级数在跳跃点的收敛值写成单侧函数值，而不是左右平均。"
+      "bodyMarkdown": "右端为 A sin ωx 时，特解设 y*=M cos ωx+N sin ωx，两个待定系数一起上；若 ±ωi 已是特征根，则改为 y*=x(M cos ωx+N sin ωx)。\n\n### 解题步骤\n\n1. 检查 ±ωi 是否特征根\n2. 设 y*=M cos ωx+N sin ωx\n3. 比较系数定 M、N\n\n### 易错点\n\n特解只设 N sin ωx，系数方程出现矛盾。"
     },
     {
       "schemaVersion": "1.0",
@@ -1392,47 +1392,47 @@
       "sectionId": "m2-p1-c6-s8",
       "sectionTitle": "二阶常系数非齐次线性方程",
       "title": "余弦",
-      "summary": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。",
+      "summary": "右端为 A cos ωx 时的设法与正弦完全相同：特解设 M cos ωx+N sin ωx 两项（多设的那项解出 0 没关系）；共振（±ωi 为特征根）时乘 x。",
       "tags": [
-        "根决定解的形状"
+        "cos ωx 型右端"
       ],
       "sortOrder": 280,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y″+py′+qy=0 ⇒ r²+pr+q=0",
-        "caption": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。"
+        "content": "y*=x^k(M cos ωx+N sin ωx)",
+        "caption": "右端为 A cos ωx 时的设法与正弦完全相同：特解设 M cos ωx+N sin ωx 两项（多设的那项解出 0 "
       },
       "keyPoints": [
         {
-          "id": "gen-de-zhong-shu-jue-ding-shi-fou-cheng-0qfrxp",
-          "title": "根的重数决定是否乘 x 的次数",
-          "bodyMarkdown": "根的重数决定是否乘 x 的次数"
+          "id": "yu-sin-xing-tong-yi-tao-she-fa",
+          "title": "与 sin 型同一套设法",
+          "bodyMarkdown": "与 sin 型同一套设法"
         },
         {
-          "id": "fu-gen-i-dui-ying-e-x-c-cos-x-c-sin-x",
-          "title": "复根 α±βi 对应 e^{αx}(C₁cosβ",
-          "bodyMarkdown": "复根 α±βi 对应 e^{αx}(C₁cosβx+C₂sinβx)"
+          "id": "jie-chu-mou-ge-xi-shu-wei-0-shi-zheng-1ehtky",
+          "title": "解出某个系数为 0 是正常的",
+          "bodyMarkdown": "解出某个系数为 0 是正常的"
         },
         {
-          "id": "te-zheng-jie-yao-zu-cheng-xian-xing-wu-0w7dsn",
-          "title": "特征解要组成线性无关组",
-          "bodyMarkdown": "特征解要组成线性无关组"
+          "id": "i-shi-te-zheng-gen-shi-gai-she-x-m-cos-15c5ee",
+          "title": "±ωi 是特征根时改设 x(M cos ωx+N",
+          "bodyMarkdown": "±ωi 是特征根时改设 x(M cos ωx+N sin ωx)"
         }
       ],
       "examples": [
         {
-          "id": "y-3y-2y-0-de-gen-wei-1-1yi4zh",
+          "id": "y-4y-cos-x-she-y-m-cos-156ohh",
           "title": "讲解例子",
-          "bodyMarkdown": "y″−3y′+2y=0 的根为 1、2，通解 y=C₁eˣ+C₂e²ˣ。"
+          "bodyMarkdown": "y″+4y=cos x：设 y*=M cos x+N sin x，解得 M=1/3、N=0。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。\n\n### 解题步骤\n\n1. 写特征方程\n2. 分类求根\n3. 按根的类型写通解并代初值\n\n### 易错点\n\n重根只写一个 e^{rx}，或复根漏掉 e^{αx} 包络。"
+      "bodyMarkdown": "右端为 A cos ωx 时的设法与正弦完全相同：特解设 M cos ωx+N sin ωx 两项（多设的那项解出 0 没关系）；共振（±ωi 为特征根）时乘 x。\n\n### 解题步骤\n\n1. 检查 ±ωi 是否特征根\n2. 设两项特解\n3. 比较系数（可能有一项为 0）\n\n### 易错点\n\n看到解出 N=0 就以为「当初不该设它」——不设就推不出这个结论。"
     },
     {
       "schemaVersion": "1.0",
@@ -1443,47 +1443,47 @@
       "sectionId": "m2-p1-c6-s8",
       "sectionTitle": "二阶常系数非齐次线性方程",
       "title": "上述函数的和与积",
-      "summary": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。",
+      "summary": "右端是几种类型之和时，按叠加原理分别设特解再相加；右端是乘积（如 x eˣ、x²sin x）时，按 e^{λx}×多项式×三角 的整体形状设一个待定式。",
       "tags": [
-        "根决定解的形状"
+        "和拆项、积整体设"
       ],
       "sortOrder": 290,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y″+py′+qy=0 ⇒ r²+pr+q=0",
-        "caption": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。"
+        "content": "y*=y₁*+y₂*（和的情形）",
+        "caption": "右端是几种类型之和时，按叠加原理分别设特解再相加；右端是乘积（如 x eˣ、x²sin x）时"
       },
       "keyPoints": [
         {
-          "id": "gen-de-zhong-shu-jue-ding-shi-fou-cheng-0qfrxp",
-          "title": "根的重数决定是否乘 x 的次数",
-          "bodyMarkdown": "根的重数决定是否乘 x 的次数"
+          "id": "he-f-f-de-te-jie-ge-zi-te-jie-zhi-he",
+          "title": "和：f₁+f₂ 的特解 = 各自特解之和",
+          "bodyMarkdown": "和：f₁+f₂ 的特解 = 各自特解之和"
         },
         {
-          "id": "fu-gen-i-dui-ying-e-x-c-cos-x-c-sin-x",
-          "title": "复根 α±βi 对应 e^{αx}(C₁cosβ",
-          "bodyMarkdown": "复根 α±βi 对应 e^{αx}(C₁cosβx+C₂sinβx)"
+          "id": "ji-an-cheng-ji-de-zheng-ti-xing-zhuang-0zawls",
+          "title": "积：按乘积的整体形状设待定式",
+          "bodyMarkdown": "积：按乘积的整体形状设待定式"
         },
         {
-          "id": "te-zheng-jie-yao-zu-cheng-xian-xing-wu-0w7dsn",
-          "title": "特征解要组成线性无关组",
-          "bodyMarkdown": "特征解要组成线性无关组"
+          "id": "ge-bu-fen-zi-ji-de-x-k-xiu-zheng-zhao-01yl2r",
+          "title": "各部分自己的 x^k 修正照常生效",
+          "bodyMarkdown": "各部分自己的 x^k 修正照常生效"
         }
       ],
       "examples": [
         {
-          "id": "y-3y-2y-0-de-gen-wei-1-1yi4zh",
+          "id": "y-y-x-sin-x-she-y-ax-bx-0mr6uv",
           "title": "讲解例子",
-          "bodyMarkdown": "y″−3y′+2y=0 的根为 1、2，通解 y=C₁eˣ+C₂e²ˣ。"
+          "bodyMarkdown": "y″+y=x+sin x：设 y*=(ax²+bx+c)+x(M cos x+N sin x) 两部分相加。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "常系数齐次方程用指数试探解把微分运算转成代数特征方程。不同实根对应两条指数模式，重根需要乘 x，复根则对应带指数包络的正弦余弦振荡。\n\n### 解题步骤\n\n1. 写特征方程\n2. 分类求根\n3. 按根的类型写通解并代初值\n\n### 易错点\n\n重根只写一个 e^{rx}，或复根漏掉 e^{αx} 包络。"
+      "bodyMarkdown": "右端是几种类型之和时，按叠加原理分别设特解再相加；右端是乘积（如 x eˣ、x²sin x）时，按 e^{λx}×多项式×三角 的整体形状设一个待定式。\n\n### 解题步骤\n\n1. 把右端拆成类型之和\n2. 逐个设特解\n3. 相加后代回统一比较系数\n\n### 易错点\n\n把乘积右端拆成「多项式特解」乘「三角特解」——待定系数法没有这种乘法规则。"
     },
     {
       "schemaVersion": "1.0",
@@ -1494,47 +1494,47 @@
       "sectionId": "m2-p1-c6-s9",
       "sectionTitle": "微分方程应用",
       "title": "运动",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "直线运动用 a=x″(t) 表示加速度，牛顿第二定律给出 mx″=F(t,x,x′)；力只依赖时间或速度时是一阶（对 v）或二阶（对 x）方程，逐级求解。",
       "tags": [
-        "用变化率建模"
+        "牛顿定律列方程"
       ],
       "sortOrder": 300,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "content": "m x″=F(t,x,x′)",
+        "caption": "直线运动用 a=x″(t) 表示加速度，牛顿第二定律给出 mx″=F(t,x,x′)；"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "a-x-ba-f-xie-cheng-t-x-x-de-han-shu",
+          "title": "a=x″",
+          "bodyMarkdown": "a=x″，把 F 写成 t、x、x′ 的函数"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "mx-f-shi-er-jie-fang-cheng-huo-xian-dui-1b8vy1",
+          "title": "mx″=F 是二阶方程（或先对 v=x′ 解一阶",
+          "bodyMarkdown": "mx″=F 是二阶方程（或先对 v=x′ 解一阶）"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "chu-shi-wei-zhi-yu-chu-su-du-jiu-shi-1crqgw",
+          "title": "初始位置与初速度就是初始条件",
+          "bodyMarkdown": "初始位置与初速度就是初始条件"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "zhi-shou-zu-li-kv-mv-kv-16r1l4",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "只受阻力 −kv：mv′=−kv ⇒ v=v₀e^{−kt/m}，速度按指数衰减。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "直线运动用 a=x″(t) 表示加速度，牛顿第二定律给出 mx″=F(t,x,x′)；力只依赖时间或速度时是一阶（对 v）或二阶（对 x）方程，逐级求解。\n\n### 解题步骤\n\n1. 选未知函数（x 或 v）\n2. 按牛顿定律列方程\n3. 解方程代初始条件\n\n### 易错点\n\n速度 v=x′ 与位移 x 的导数关系没理清，方程列错对象。"
     },
     {
       "schemaVersion": "1.0",
@@ -1545,47 +1545,47 @@
       "sectionId": "m2-p1-c6-s9",
       "sectionTitle": "微分方程应用",
       "title": "增长/衰减",
-      "summary": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。",
+      "summary": "增长率与当前量成正比时 dN/dt=λN，解为 N=N₀e^{λt}：λ>0 指数增长、λ<0 指数衰减；人口增长、放射衰变、复利都是这一族模型。",
       "tags": [
-        "用变化率建模"
+        "指数模型"
       ],
       "sortOrder": 310,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "y′=f(x)g(y) ⇒ dy/g(y)=f(x)dx",
-        "caption": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。"
+        "format": "latex",
+        "content": "N(t)=N₀e^{λt}",
+        "caption": "增长率与当前量成正比时 dN/dt=λN，解为 N=N₀e^{λt}：λ>0 指数增长、λ<0 指数衰减；人口增长、放射衰变、复利都是这一族模型。"
       },
       "keyPoints": [
         {
-          "id": "jie-shu-you-zui-gao-jie-dao-shu-jue-ding",
-          "title": "阶数由最高阶导数决定",
-          "bodyMarkdown": "阶数由最高阶导数决定"
+          "id": "fang-cheng-dn-dt-n-jie-n-n-e-t",
+          "title": "方程 dN/dt=λN",
+          "bodyMarkdown": "方程 dN/dt=λN，解 N=N₀e^{λt}"
         },
         {
-          "id": "tong-jie-han-ren-yi-chang-shu-chu-zhi-0lov8j",
-          "title": "通解含任意常数",
-          "bodyMarkdown": "通解含任意常数，初值用来确定常数"
+          "id": "de-fu-hao-jue-ding-zeng-zhang-hai-shi-0jw0i8",
+          "title": "λ 的符号决定增长还是衰减",
+          "bodyMarkdown": "λ 的符号决定增长还是衰减"
         },
         {
-          "id": "fen-li-bian-liang-shi-yao-zhu-yi-diu-1oavin",
-          "title": "分离变量时要注意丢失的常数解",
-          "bodyMarkdown": "分离变量时要注意丢失的常数解"
+          "id": "shuai-jian-qing-xing-ban-shuai-qi-t-ln2",
+          "title": "衰减情形半衰期 t=ln2/|λ|",
+          "bodyMarkdown": "衰减情形半衰期 t=ln2/|λ|"
         }
       ],
       "examples": [
         {
-          "id": "y-ky-de-jie-wei-y-ce-kx-0ws86h",
+          "id": "fang-she-shuai-bian-ln2-1frwpa",
           "title": "讲解例子",
-          "bodyMarkdown": "y′=ky 的解为 y=Ce^{kx}；给 y(0)=2 后得到 y=2e^{kx}。"
+          "bodyMarkdown": "放射衰变 λ=−ln2/30 时，物质质量每 30 天减半。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "微分方程不是直接求一个公式，而是寻找满足变化率关系的函数族。先判断阶、线性和可分离结构，再通过初始条件从通解中选出唯一特解。\n\n### 解题步骤\n\n1. 识别方程类型\n2. 求通解\n3. 代入初始条件并验证\n\n### 易错点\n\n分离变量除以 g(y) 可能漏掉 g(y)=0 的常数解。"
+      "bodyMarkdown": "增长率与当前量成正比时 dN/dt=λN，解为 N=N₀e^{λt}：λ>0 指数增长、λ<0 指数衰减；人口增长、放射衰变、复利都是这一族模型。\n\n### 解题步骤\n\n1. 列 dN/dt=λN\n2. 分离变量求解\n3. 用初始量定 N₀、用速率定 λ\n\n### 易错点\n\n把「每段时间减半」理解成线性递减，而不是乘 e^{λt}。"
     },
     {
       "schemaVersion": "1.0",
@@ -1596,47 +1596,47 @@
       "sectionId": "m2-p1-c6-s9",
       "sectionTitle": "微分方程应用",
       "title": "简单几何与物理模型",
-      "summary": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。",
+      "summary": "简单建模的套路一致：把条件写成导数等式，按类型选解法（可分离/齐次/线性/二阶常系数），最后用题目给定的状态定常数。",
       "tags": [
-        "用坐标描述方向"
+        "条件 → 方程 → 特解"
       ],
       "sortOrder": 320,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "|a|=√(a₁²+…+aₙ²)，e=a/|a|",
-        "caption": "向量同时包含大小和方向。"
+        "content": "条件 → 方程 → 通解 → 特解",
+        "caption": "简单建模的套路一致：把条件写成导数等式，按类型选解法（可分离/齐次/线性/二阶常系数），最后用题目给定的状态定常数。"
       },
       "keyPoints": [
         {
-          "id": "xiang-liang-xiang-deng-yao-qiu-dui-ying-1n0sa1",
-          "title": "向量相等要求对应分量都相等",
-          "bodyMarkdown": "向量相等要求对应分量都相等"
+          "id": "di-yi-bu-yong-yuan-shi-ba-tiao-jian-fan-11omd7",
+          "title": "第一步永远是「把条件翻译成 y′、y″」",
+          "bodyMarkdown": "第一步永远是「把条件翻译成 y′、y″」"
         },
         {
-          "id": "mo-wei-ling-de-xiang-liang-mei-you-fang-0mkk5v",
-          "title": "模为零的向量没有方向",
-          "bodyMarkdown": "模为零的向量没有方向"
+          "id": "an-fang-cheng-lei-xing-xuan-jie-fa",
+          "title": "按方程类型选解法",
+          "bodyMarkdown": "按方程类型选解法"
         },
         {
-          "id": "dan-wei-hua-yao-chu-yi-fei-ling-xiang-0bmgwt",
-          "title": "单位化要除以非零向量的模",
-          "bodyMarkdown": "单位化要除以非零向量的模"
+          "id": "chang-shu-yong-ti-mu-gei-ding-de-chu-0cr40b",
+          "title": "常数用题目给定的初始状态确定",
+          "bodyMarkdown": "常数用题目给定的初始状态确定"
         }
       ],
       "examples": [
         {
-          "id": "a-3-4-de-mo-wei-5-dan-1rfwmb",
+          "id": "wu-ti-leng-que-t-k-t-20-01ycm5",
           "title": "讲解例子",
-          "bodyMarkdown": "a=(3,4) 的模为 5，单位向量为 (3/5,4/5)。"
+          "bodyMarkdown": "物体冷却：T′=−k(T−20)，T(0)=100 ⇒ T=20+80e^{−kt}。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "向量同时包含大小和方向。坐标表示让加减、数乘和长度计算变成代数运算；单位向量只保留方向，是建立方向余弦、投影和空间直线方程的基础。\n\n### 解题步骤\n\n1. 写出分量\n2. 计算模或归一化\n3. 根据题意比较方向关系\n\n### 易错点\n\n把点的坐标和位移向量混为一谈，或对零向量做单位化。"
+      "bodyMarkdown": "简单建模的套路一致：把条件写成导数等式，按类型选解法（可分离/齐次/线性/二阶常系数），最后用题目给定的状态定常数。\n\n### 解题步骤\n\n1. 设变量列方程\n2. 按类型求解\n3. 定常数并检验合理性\n\n### 易错点\n\n解到通解就结束，没代初始状态——答案是函数族而不是模型预测。"
     }
   ]
 }

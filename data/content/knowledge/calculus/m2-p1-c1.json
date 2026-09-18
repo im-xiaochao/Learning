@@ -525,47 +525,47 @@
       "sectionId": "m2-p1-c1-s1",
       "sectionTitle": "函数",
       "title": "基本初等函数",
-      "summary": "基本初等函数包括幂、指数、对数、三角和反三角函数；初等函数通过有限次四则、复合等运算构成。",
+      "summary": "幂函数、指数函数、对数函数、三角函数、反三角函数合称五类基本初等函数，其余函数大多由它们运算、复合而来；用它们之前先过一遍定义域、值域、奇偶性与周期性。",
       "tags": [
-        "熟悉函数家族"
+        "函数家族的五类根基"
       ],
       "sortOrder": 110,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 5,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "aˣ>0；ln x 的定义域为 x>0；sin x、cos x 的定义域为 R",
-        "caption": "基本初等函数包括幂、指数、对数、三角和反三角函数；初等函数通过有限次四则、复合等运算构成。"
+        "content": "aˣ>0；logₐx 要求 x>0；tan x 在 x=kπ+π/2 无定义",
+        "caption": "幂函数、指数函数、对数函数、三角函数、反三角函数合称五类基本初等函数，其余函数大多由它们运算、复合而来；"
       },
       "keyPoints": [
         {
-          "id": "mi-han-shu-de-xing-zhuang-qu-jue-yu-zhi-0vzn4n",
-          "title": "幂函数的形状取决于指数",
-          "bodyMarkdown": "幂函数的形状取决于指数"
+          "id": "wu-lei-ji-ben-chu-deng-han-shu-mi-zhi-0s2yk3",
+          "title": "五类基本初等函数",
+          "bodyMarkdown": "五类基本初等函数：幂、指、对、三角、反三角"
         },
         {
-          "id": "zhi-shu-yu-dui-shu-hu-wei-fan-han-shu",
-          "title": "指数与对数互为反函数",
-          "bodyMarkdown": "指数与对数互为反函数"
+          "id": "zhi-dui-hu-wei-fan-han-shu-y-a-yu-y-log-07ouhq",
+          "title": "指对互为反函数",
+          "bodyMarkdown": "指对互为反函数：y=aˣ 与 y=logₐx 图像关于 y=x 对称"
         },
         {
-          "id": "san-jiao-han-shu-yao-ji-zhou-qi-ji-ou-12qls2",
-          "title": "三角函数要记周期、奇偶和定义域",
-          "bodyMarkdown": "三角函数要记周期、奇偶和定义域"
+          "id": "fu-he-huo-si-ze-zhi-hou-ding-yi-yu-qu-0mkj2g",
+          "title": "复合或四则之后",
+          "bodyMarkdown": "复合或四则之后，定义域取「能同时成立」的交集"
         }
       ],
       "examples": [
         {
-          "id": "1-x-de-ding-yi-yu-shi-1-1hgsmc",
+          "id": "y-1-x-ding-yi-yu-1-1-y-1n2sjd",
           "title": "讲解例子",
-          "bodyMarkdown": "√(1−x²) 的定义域是 [−1,1]，而 ln(1+x) 的定义域是 x>−1。"
+          "bodyMarkdown": "y=√(1−x²) 定义域 [−1,1]；y=ln(1+x) 定义域 x>−1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "基本初等函数包括幂、指数、对数、三角和反三角函数；初等函数通过有限次四则、复合等运算构成。掌握每一类的定义域、单调性、对称性和渐近线，才能快速判断复合表达式。\n\n### 解题步骤\n\n1. 识别函数类型\n2. 写定义域与基本性质\n3. 分析复合后的限制\n\n### 易错点\n\n只看外层符号而忽略内层定义域限制。"
+      "bodyMarkdown": "幂函数、指数函数、对数函数、三角函数、反三角函数合称五类基本初等函数，其余函数大多由它们运算、复合而来；用它们之前先过一遍定义域、值域、奇偶性与周期性。\n\n### 解题步骤\n\n1. 认出函数由哪几类构成\n2. 逐层写定义域再取交集\n3. 按各类的性质判断图像与单调性\n\n### 易错点\n\n只看外层表达式，忽略内层函数带来的定义域限制（如 ln(sin x) 还要求 sin x>0）。"
     },
     {
       "schemaVersion": "1.0",
