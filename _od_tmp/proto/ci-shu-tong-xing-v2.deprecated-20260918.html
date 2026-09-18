@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>词数同行 · 每一步，都算数</title>
+<style>
+:root {
+  --bg: oklch(0.977 0.006 92); --surface: oklch(1 0 0); --fg: oklch(0.265 0.025 191);
+  --muted: oklch(0.48 0.022 190); --border: oklch(0.9 0.012 180);
+  --primary: oklch(0.43 0.079 185); --primary-hover: oklch(0.35 0.07 185); --primary-soft: oklch(0.943 0.023 174);
+  --accent: oklch(0.67 0.137 39); --accent-ink: oklch(0.46 0.11 36); --accent-soft: oklch(0.955 0.027 40);
+  --ring: oklch(0.81 0.103 42); --desk: oklch(0.925 0.012 177); --shadow: oklch(0.24 0.027 190 / 0.055);
+  --display: "Songti SC", "STSong", "SimSun", serif;
+  --body: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --mono: "SFMono-Regular", Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100dvh; display: grid; place-items: center; padding: 24px; background: var(--desk); color: var(--fg); font-family: var(--body); font-size: 14px; -webkit-font-smoothing: antialiased; }
+button, input, select { font: inherit; }
+button { color: inherit; border: 0; padding: 0; cursor: pointer; background: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+button:disabled { cursor: default; }
+button, a, input, select { outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--accent-ink); }
+button:disabled { background: var(--border); color: var(--muted); box-shadow: none; }
+button:not(:disabled):active { transform: translateY(1px); }
+h1, h2, h3, p { margin: 0; }
+p { text-wrap: pretty; }
+svg { width: 22px; height: 22px; flex: 0 0 auto; vertical-align: middle; }
+.device { position: relative; width: 406px; padding: 7px; border: 1px solid oklch(0.56 0.015 185); border-radius: 53px; background: oklch(0.22 0.008 185); box-shadow: 0 30px 70px oklch(0.24 0.025 180 / 0.2), 0 4px 12px oklch(0.24 0.025 180 / 0.12), inset 0 0 0 2px oklch(0.63 0.015 180); }
+.device::before, .device::after { content: ""; position: absolute; width: 3px; background: oklch(0.43 0.01 180); border-radius: 2px; }
+.device::before { left: -3px; top: 145px; height: 62px; box-shadow: 0 76px 0 oklch(0.43 0.01 180); }
+.device::after { right: -3px; top: 204px; height: 86px; }
+.screen { width: 390px; height: 844px; border-radius: 45px; background: var(--bg); overflow: hidden; display: grid; grid-template-rows: 43px 45px minmax(0, 1fr) 80px; position: relative; isolation: isolate; }
+.status-bar { display: flex; align-items: center; justify-content: space-between; padding: 5px 27px 0; font-size: 14px; font-weight: 650; user-select: none; }
+.island { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 104px; height: 27px; border-radius: 20px; background: oklch(0.12 0.004 190); }
+.status-icons { display: flex; gap: 5px; align-items: center; }
+.status-icons svg { width: 16px; height: 16px; }
+.battery { width: 23px; height: 11px; border: 1px solid currentColor; border-radius: 3px; position: relative; padding: 1.5px; margin-left: 1px; }
+.battery::before { content: ""; display: block; height: 100%; background: var(--fg); border-radius: 1px; }
+.battery::after { content: ""; position: absolute; width: 2px; height: 4px; top: 2.5px; right: -4px; background: var(--fg); border-radius: 1px; }
+.app-bar { padding: 0 17px 0 19px; display: flex; align-items: center; justify-content: space-between; gap: 7px; }
+.brand { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; letter-spacing: 1px; min-width: 0; }
+.brand-logo { color: var(--primary); width: 27px; height: 27px; }
+.brand.sub { letter-spacing: 0; font-size: 15px; gap: 2px; }
+.back-button { width: 44px; height: 44px; display: grid; place-items: center; margin-left: -9px; margin-right: 3px; }
+.capsule { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 20px; background: oklch(1 0 0 / 0.65); height: 32px; flex: 0 0 auto; }
+.capsule button { width: 44px; height: 44px; display: grid; place-items: center; }
+.capsule button svg { width: 20px; height: 20px; }
+.capsule .divider { height: 16px; width: 1px; background: var(--border); }
+.viewport { min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: none; padding: 19px 20px 22px; }
+.viewport::-webkit-scrollbar { display: none; }
+.page { animation: enter 180ms ease-out; }
+@keyframes enter { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.eyebrow { font-size: 11px; color: var(--muted); line-height: 1.6; letter-spacing: 0.6px; }
+.page-title { font-family: var(--display); font-weight: 700; font-size: 27px; line-height: 1.45; letter-spacing: -0.4px; margin-top: 4px; text-wrap: balance; }
+.subtext { color: var(--muted); line-height: 1.7; font-size: 12px; }
+.streak { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 600; color: var(--accent-ink); background: var(--accent-soft); border-radius: 20px; padding: 6px 9px; flex: 0 0 auto; }
+.streak svg { width: 13px; height: 13px; }
+.daily-card { margin-top: 14px; background: var(--primary); color: var(--surface); border-radius: 23px; padding: 17px 20px; min-height: 140px; display: flex; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 7px 15px oklch(0.35 0.07 185 / 0.09); }
+.daily-card .eyebrow { color: oklch(0.89 0.027 176); font-size: 10px; letter-spacing: 1.5px; }
+.daily-card h2 { font-family: var(--display); font-size: 22px; line-height: 1.35; margin: 6px 0 8px; letter-spacing: 0.5px; }
+.daily-meta { display: flex; align-items: center; gap: 5px; font-size: 10px; color: oklch(0.94 0.01 176); }
+.daily-meta svg { width: 12px; height: 12px; }
+.progress-ring { position: relative; width: 100px; height: 100px; flex: 0 0 auto; display: grid; place-items: center; }
+.progress-ring svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring-track { fill: none; stroke: oklch(0.66 0.045 182 / 0.55); stroke-width: 7; }
+.ring-fill { fill: none; stroke: var(--ring); stroke-width: 7; stroke-linecap: round; transition: stroke-dashoffset 400ms ease; }
+.ring-label { text-align: center; }
+.ring-label strong { font-family: var(--body); font-size: 26px; font-weight: 600; letter-spacing: -1px; }
+.ring-label strong span { font-size: 13px; margin-left: 1px; }
+.ring-label small { display: block; font-size: 9px; color: oklch(0.94 0.01 176); margin-top: 3px; }
+.section-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 21px 0 11px; min-height: 23px; }
+.section-head h2 { font-size: 16px; font-weight: 650; letter-spacing: 0.2px; }
+.section-head > span { color: var(--muted); font-size: 10px; }
+.section-head .text-button { margin: -10px -2px -10px 0; }
+.learning-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 12px; }
+.study-card { text-align: left; padding: 13px; background: var(--surface); border: 1px solid var(--border); border-radius: 19px; min-height: 151px; box-shadow: 0 3px 9px var(--shadow); transition: border-color 150ms, box-shadow 150ms; }
+.study-card .card-icon { color: var(--primary); width: 22px; height: 22px; }
+.card-kicker { font-size: 9px; color: var(--muted); }
+.study-card h3 { font-size: 15px; font-weight: 650; margin: 8px 0 3px; }
+.study-numbers { font-size: 12px; color: var(--muted); }
+.study-numbers strong { font-size: 23px; color: var(--fg); font-weight: 600; letter-spacing: -0.8px; margin-right: 3px; }
+.study-card .small-progress { margin: 6px 0 7px; }
+.small-progress { height: 4px; background: var(--primary-soft); border-radius: 5px; overflow: hidden; }
+.small-progress > span { display: block; height: 100%; background: var(--primary); border-radius: inherit; transition: width 250ms; }
+.card-link { color: var(--primary); display: flex; align-items: center; justify-content: space-between; font-size: 11px; font-weight: 600; min-height: 18px; }
+.card-link svg { width: 15px; height: 15px; }
+.recent-card { display: flex; align-items: center; gap: 12px; padding: 12px; width: 100%; min-height: 68px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; text-align: left; }
+.recent-formula { width: 42px; height: 42px; background: var(--primary-soft); border-radius: 12px; display: grid; place-items: center; font: italic 23px Georgia, serif; color: var(--primary); flex: 0 0 auto; }
+.recent-text { flex: 1; min-width: 0; }
+.recent-text strong { font-size: 12px; display: block; margin-bottom: 5px; font-weight: 600; }
+.recent-text small { font-size: 10px; color: var(--muted); }
+.recent-card > svg { width: 17px; height: 17px; color: var(--muted); }
+.tabbar { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); padding: 6px 9px 20px; background: var(--surface); border-top: 1px solid var(--border); z-index: 3; }
+.tabbar::after { content: ""; position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); height: 4px; width: 117px; border-radius: 5px; background: var(--fg); }
+.tab { min-height: 50px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--muted); font-size: 10px; position: relative; }
+.tab-icon { width: 42px; height: 28px; display: grid; place-items: center; border-radius: 10px; }
+.tab svg { width: 22px; height: 22px; }
+.tab.active { color: var(--primary); font-weight: 700; }
+.tab.active .tab-icon { background: var(--primary-soft); }
+.primary-button, .secondary-button { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 49px; border-radius: 14px; padding: 12px 16px; font-weight: 600; font-size: 14px; line-height: 1.5; transition: background 150ms, border-color 150ms; }
+.primary-button { color: var(--surface); background: var(--primary); }
+.secondary-button { color: var(--primary); background: var(--surface); border: 1px solid var(--border); }
+.text-button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; color: var(--primary); font-size: 11px; min-height: 44px; padding: 5px 2px; }
+.text-button svg { width: 15px; height: 15px; }
+.icon-button { width: 44px; height: 44px; display: inline-grid; place-items: center; flex: 0 0 auto; border-radius: 12px; color: var(--muted); }
+.icon-button.saved { color: var(--accent-ink); background: var(--accent-soft); }
+.icon-button.saved svg { fill: currentColor; }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 21px; padding: 20px; box-shadow: 0 3px 12px var(--shadow); }
+.mt12 { margin-top: 12px; } .mt16 { margin-top: 16px; } .mt20 { margin-top: 20px; } .mt24 { margin-top: 24px; }
+.pill { display: inline-flex; align-items: center; gap: 4px; border-radius: 20px; padding: 5px 8px; font-size: 10px; line-height: 1.5; background: var(--primary-soft); color: var(--primary); }
+.pill svg { width: 12px; height: 12px; }
+.pill.orange { background: var(--accent-soft); color: var(--accent-ink); }
+.big-number { font-size: 36px; font-weight: 600; letter-spacing: -1px; }
+.big-number small { font-size: 16px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.task-list { display: grid; gap: 11px; }
+.task { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 83px; padding: 14px; border: 1px solid var(--border); border-radius: 17px; background: var(--surface); text-align: left; }
+.task .task-icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; background: var(--primary-soft); color: var(--primary); flex: 0 0 auto; }
+.task-content { flex: 1; min-width: 0; }
+.task-content h3 { font-size: 14px; font-weight: 600; line-height: 1.5; }
+.task-content p { margin-top: 4px; font-size: 11px; color: var(--muted); line-height: 1.5; }
+.task > svg { width: 17px; height: 17px; color: var(--muted); }
+.progress-split { font-size: 10px; color: var(--muted); margin-top: 11px; }
+.quiet-note { text-align: center; color: var(--muted); font-size: 11px; line-height: 1.8; margin-top: 15px; }
+.search-box { display: flex; align-items: center; gap: 9px; background: var(--surface); border: 1px solid var(--border); border-radius: 13px; padding: 0 13px; height: 46px; margin-top: 16px; }
+.search-box svg { width: 18px; height: 18px; color: var(--muted); }
+.search-box input { width: 100%; min-width: 0; height: 44px; border: 0; background: transparent; color: var(--fg); font-size: 12px; outline-offset: 0; }
+input::placeholder { color: var(--muted); opacity: 1; }
+.subject-tabs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 5px; margin-top: 11px; border-bottom: 1px solid var(--border); }
+.subject-tabs button { min-height: 46px; font-size: 12px; color: var(--muted); position: relative; }
+.subject-tabs button.active { color: var(--primary); font-weight: 700; }
+.subject-tabs button.active::after { content: ""; position: absolute; width: 25px; height: 3px; bottom: -1px; left: calc(50% - 12.5px); background: var(--primary); border-radius: 3px; }
+.math-feature { position: relative; background: var(--primary-soft); border: 1px solid oklch(0.88 0.027 175); border-radius: 20px; padding: 17px 18px; margin-top: 17px; width: 100%; text-align: left; min-height: 157px; }
+.math-feature h2 { font-family: var(--display); font-size: 24px; line-height: 1.4; margin: 9px 0 4px; }
+.math-feature .feature-text { position: relative; z-index: 1; max-width: 205px; }
+.math-feature .eyebrow { font-size: 10px; color: var(--primary); }
+.math-feature .chapter-foot { display: flex; align-items: center; gap: 11px; margin-top: 16px; }
+.chapter-foot .small-progress { width: 94px; background: oklch(0.86 0.03 174); }
+.chapter-foot .small-progress span { background: var(--primary); }
+.chapter-foot span { font-size: 10px; color: var(--primary); }
+.feature-art { position: absolute; right: 15px; bottom: 39px; width: 93px; height: 82px; color: var(--primary); opacity: 0.5; }
+.feature-art svg { width: 100%; height: 100%; }
+.feature-arrow { position: absolute; right: 15px; bottom: 13px; width: 28px; height: 28px; border-radius: 50%; background: var(--surface); display: grid; place-items: center; color: var(--primary); }
+.feature-arrow svg { width: 16px; height: 16px; }
+.knowledge-list { display: grid; gap: 8px; }
+.knowledge-row { width: 100%; display: flex; align-items: center; gap: 11px; text-align: left; padding: 11px 12px; min-height: 67px; border-radius: 14px; border: 1px solid var(--border); background: var(--surface); }
+.knowledge-number { color: var(--muted); width: 26px; font: 15px var(--display); }
+.knowledge-row .knowledge-content { flex: 1; min-width: 0; }
+.knowledge-content h3 { font-size: 12px; font-weight: 600; line-height: 1.6; }
+.knowledge-content p { color: var(--muted); font-size: 10px; margin-top: 3px; }
+.knowledge-row > svg { width: 16px; height: 16px; color: var(--muted); }
+.daily-question { padding: 15px 16px; margin-top: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; }
+.daily-question h2 { font-size: 14px; }
+.daily-question .question-preview { margin: 14px 0; font-family: Georgia, var(--display); font-size: 22px; line-height: 1.7; text-align: center; }
+.daily-question .primary-button { min-height: 44px; padding: 10px 12px; font-size: 12px; border-radius: 12px; }
+.lim { display: inline-flex; flex-direction: column; align-items: center; font-style: normal; vertical-align: middle; line-height: 1.1; margin-right: 6px; font-size: 0.9em; }
+.lim small { font-size: 0.44em; margin-top: 3px; }
+.fraction { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.35; margin: 0 4px; }
+.fraction > span:first-child { border-bottom: 1px solid currentColor; padding: 0 7px 2px; }
+.fraction > span:last-child { padding-top: 2px; }
+.math { font-family: Georgia, "Times New Roman", var(--display); }
+.profile-head { display: flex; gap: 13px; align-items: center; padding: 4px 0 0; }
+.avatar { width: 58px; height: 58px; flex: 0 0 auto; border-radius: 20px; background: var(--primary); color: var(--surface); display: grid; place-items: center; font-family: var(--display); font-size: 28px; }
+.profile-head h1 { font-size: 21px; font-weight: 600; margin-bottom: 6px; }
+.profile-head p { font-size: 11px; color: var(--muted); }
+.demo-label { margin-left: auto; align-self: flex-start; margin-top: 4px; font-size: 9px; border: 1px solid var(--border); padding: 4px 6px; border-radius: 5px; color: var(--muted); }
+.stats-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); margin-top: 22px; padding: 18px 4px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.stats-grid > div { text-align: center; }
+.stats-grid > div + div { border-left: 1px solid var(--border); }
+.stats-grid strong { font-size: 27px; font-weight: 600; letter-spacing: -1px; }
+.stats-grid small { color: var(--muted); font-size: 11px; display: block; margin-top: 5px; }
+.chart-switch { display: flex; background: var(--bg); border-radius: 9px; padding: 2px; }
+.chart-switch button { min-width: 48px; min-height: 44px; font-size: 10px; color: var(--muted); border-radius: 7px; }
+.chart-switch button.active { background: var(--primary-soft); color: var(--primary); font-weight: 600; }
+.week-chart { display: flex; align-items: end; justify-content: space-between; height: 130px; gap: 13px; padding: 18px 0 0; }
+.chart-day { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 5px; min-width: 0; font-size: 9px; color: var(--muted); }
+.chart-day .bar { width: 100%; max-width: 23px; background: var(--primary-soft); border-radius: 6px 6px 3px 3px; min-height: 4px; }
+.chart-day.today .bar { background: var(--accent); }
+.chart-day.today { color: var(--accent-ink); font-weight: 700; }
+.chart-caption { font-size: 10px; margin-top: 13px; color: var(--muted); line-height: 1.7; }
+.menu-list { border: 1px solid var(--border); background: var(--surface); border-radius: 18px; padding: 0 15px; margin-top: 17px; }
+.menu-row { display: flex; align-items: center; gap: 11px; width: 100%; min-height: 55px; text-align: left; }
+.menu-row + .menu-row { border-top: 1px solid var(--border); }
+.menu-row > svg { width: 19px; height: 19px; color: var(--primary); }
+.menu-row strong { font-size: 12px; flex: 1; font-weight: 500; }
+.menu-row small { color: var(--muted); font-size: 10px; }
+.menu-row > svg:last-child { width: 15px; height: 15px; color: var(--muted); }
+.toast { position: absolute; bottom: 99px; left: 24px; right: 24px; background: var(--fg); color: var(--surface); font-size: 12px; line-height: 1.6; padding: 12px 17px; border-radius: 13px; z-index: 20; text-align: center; box-shadow: 0 8px 25px oklch(0.2 0.02 190 / 0.2); pointer-events: none; }
+.toast[hidden], .overlay[hidden] { display: none; }
+.overlay { position: absolute; inset: 43px 0 0; background: oklch(0.15 0.02 190 / 0.3); z-index: 15; display: flex; align-items: flex-end; }
+.sheet { width: 100%; padding: 20px 22px 32px; background: var(--bg); border-radius: 26px 26px 0 0; box-shadow: 0 -10px 45px oklch(0.2 0.02 190 / 0.12); }
+.sheet h2 { font-size: 19px; }
+.sheet .sheet-handle { width: 32px; height: 4px; background: var(--border); margin: -10px auto 10px; border-radius: 4px; }
+.review-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.review-top strong { font-size: 13px; font-weight: 600; }
+.review-top span { color: var(--muted); font-size: 11px; }
+.review-top span b { font-weight: 600; color: var(--primary); }
+.review-hint { margin: 15px 0 12px; font-size: 11px; color: var(--muted); text-align: center; line-height: 1.7; }
+.word-card { border: 1px solid var(--border); border-radius: 24px; padding: 14px 23px 20px; background: var(--surface); box-shadow: 0 7px 22px var(--shadow); }
+.word-card > .row { margin-right: -10px; }
+.word-label { text-transform: uppercase; letter-spacing: 2px; font-size: 9px; color: var(--muted); }
+.word-heading { font-family: Georgia, "Times New Roman", serif; font-size: clamp(34px, 9vw, 41px); font-weight: 500; letter-spacing: -1px; line-height: 1.3; margin: 16px 0 5px; overflow-wrap: anywhere; }
+.pronunciation { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; color: var(--muted); font-size: 13px; padding: 0 10px; border-radius: 12px; margin-left: -10px; }
+.pronunciation svg { width: 17px; height: 17px; color: var(--primary); }
+.pronunciation .accent-label { font-size: 9px; border-left: 1px solid var(--border); padding-left: 9px; }
+.word-definition { border-top: 1px solid var(--border); padding-top: 19px; margin-top: 13px; min-height: 70px; }
+.word-definition p { font-size: 18px; font-weight: 550; line-height: 1.7; }
+.word-definition .part { font: italic 15px Georgia, serif; color: var(--muted); margin-right: 8px; }
+.word-definition .text-button { margin-top: -4px; }
+.example { margin-top: 19px; padding: 15px; background: var(--bg); border-radius: 14px; }
+.example .label { color: var(--muted); letter-spacing: 1px; font-size: 9px; margin-bottom: 8px; }
+.example .english { font-family: Georgia, serif; font-size: 16px; line-height: 1.65; }
+.example .chinese { margin-top: 8px; font-size: 11px; line-height: 1.8; color: var(--muted); }
+.example mark { background: transparent; color: var(--primary); font-weight: 700; }
+.review-tools { display: flex; justify-content: space-between; align-items: center; margin-top: 7px; }
+.review-tools button { font-size: 10px; }
+.rating-label { color: var(--muted); font-size: 11px; text-align: center; margin: 15px 0 11px; }
+.ratings { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 9px; }
+.rate-button { min-height: 62px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; padding: 9px 4px; border-radius: 15px; background: var(--surface); border: 1px solid var(--border); font-size: 13px; font-weight: 600; }
+.rate-button small { font-size: 9px; font-weight: 400; }
+.rate-button.unknown { background: var(--accent-soft); border-color: oklch(0.87 0.05 40); color: var(--accent-ink); }
+.rate-button.familiar { background: var(--primary); border-color: var(--primary); color: var(--surface); }
+.review-feedback { padding: 14px 15px; background: var(--primary-soft); border-radius: 16px; margin-top: 13px; }
+.review-feedback.needs-work { background: var(--accent-soft); }
+.feedback-title { display: flex; gap: 8px; align-items: center; font-size: 13px; font-weight: 600; color: var(--primary); }
+.needs-work .feedback-title { color: var(--accent-ink); }
+.feedback-title svg { width: 18px; height: 18px; }
+.review-feedback p { color: var(--muted); font-size: 11px; line-height: 1.7; margin: 6px 0 12px; }
+.review-feedback .primary-button { min-height: 44px; font-size: 12px; }
+.detail-hero { text-align: center; padding: 7px 0 20px; }
+.detail-hero .word-heading { margin-top: 8px; }
+.detail-hero .definition { margin-top: 9px; font-size: 15px; line-height: 1.7; }
+.detail-section { border: 1px solid var(--border); border-radius: 18px; background: var(--surface); padding: 18px; margin-top: 13px; }
+.detail-section h2 { font-size: 13px; font-weight: 650; margin-bottom: 11px; }
+.detail-section p { font-size: 12px; line-height: 1.9; }
+.root-parts { color: var(--primary); font-family: Georgia, var(--body); font-size: 17px; font-weight: 600; margin-bottom: 7px; line-height: 1.7; }
+.memory-note { background: var(--primary-soft); border-color: oklch(0.89 0.027 175); }
+.word-list { border: 1px solid var(--border); border-radius: 17px; background: var(--surface); padding: 0 14px; }
+.word-list-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 13px 0; min-height: 63px; width: 100%; text-align: left; }
+.word-list-row + .word-list-row { border-top: 1px solid var(--border); }
+.word-list-row strong { display: block; font: 18px Georgia, serif; }
+.word-list-row small { display: block; font-size: 10px; color: var(--muted); margin-top: 5px; }
+.word-list-row > svg { color: var(--muted); width: 16px; height: 16px; }
+.result-hero { text-align: center; padding: 15px 0 3px; }
+.result-mark { width: 68px; height: 68px; margin: 0 auto 17px; display: grid; place-items: center; background: var(--primary-soft); color: var(--primary); border-radius: 24px; transform: rotate(-5deg); }
+.result-mark svg { width: 34px; height: 34px; transform: rotate(5deg); }
+.result-hero h1 { font-family: var(--display); font-size: 27px; margin-bottom: 11px; }
+.result-counts { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 19px; padding: 19px 9px; margin: 23px 0; }
+.result-counts > div { text-align: center; }
+.result-counts strong { font-size: 25px; font-weight: 600; }
+.result-counts small { display: block; color: var(--muted); font-size: 11px; margin-top: 6px; }
+.result-counts > div + div { border-left: 1px solid var(--border); }
+.empty { text-align: center; padding: 65px 20px 30px; }
+.empty-symbol { width: 78px; height: 78px; display: grid; place-items: center; background: var(--primary-soft); color: var(--primary); border-radius: 27px; margin: 0 auto 24px; }
+.empty-symbol svg { width: 34px; height: 34px; }
+.empty h1 { font-size: 22px; font-family: var(--display); margin-bottom: 12px; }
+.empty p { font-size: 12px; color: var(--muted); line-height: 1.9; text-wrap: balance; }
+.empty .primary-button { margin-top: 28px; }
+.topic-lead { color: var(--muted); font-size: 12px; line-height: 1.8; margin-top: 9px; }
+.formula-box { padding: 22px 15px; background: var(--primary-soft); color: var(--primary); border-radius: 17px; text-align: center; font: 23px/1.65 Georgia, var(--display); margin-top: 19px; overflow-wrap: anywhere; }
+.formula-caption { font-family: var(--body); display: block; font-size: 10px; margin-top: 13px; line-height: 1.7; }
+.concept-step { display: flex; align-items: flex-start; gap: 10px; margin-top: 12px; }
+.concept-step > span { display: grid; place-items: center; min-width: 21px; height: 21px; background: var(--primary-soft); color: var(--primary); border-radius: 7px; font-size: 10px; margin-top: 1px; }
+.concept-step p { flex: 1; font-size: 12px; line-height: 1.9; }
+.action-stack { display: grid; gap: 10px; margin-top: 20px; }
+.question-type { margin: 6px 0 17px; }
+.question-heading { font-size: 20px; font-family: var(--display); line-height: 1.6; margin-bottom: 11px; }
+.problem { font-size: 16px; line-height: 2; margin: 19px 0 22px; }
+.problem .math { font-size: 23px; }
+.answer-options { display: grid; gap: 10px; }
+.answer-option { display: flex; align-items: center; gap: 13px; padding: 12px 15px; border: 1px solid var(--border); border-radius: 13px; width: 100%; min-height: 53px; text-align: left; background: var(--surface); }
+.option-letter { display: grid; place-items: center; width: 26px; height: 26px; border: 1px solid var(--border); border-radius: 50%; font: 12px var(--body); flex: 0 0 auto; }
+.answer-option > .math { flex: 1; font-size: 19px; }
+.answer-option.selected, .answer-option.correct { color: var(--primary); border-color: var(--primary); background: var(--primary-soft); }
+.answer-option.selected .option-letter, .answer-option.correct .option-letter { background: var(--primary); color: var(--surface); border-color: var(--primary); }
+.answer-option.incorrect { background: var(--accent-soft); color: var(--accent-ink); border-color: var(--accent-ink); }
+.answer-option[aria-disabled="true"] { cursor: default; }
+.answer-option > svg { width: 18px; height: 18px; }
+.answer-feedback { margin-top: 18px; padding: 17px; border-radius: 17px; background: var(--primary-soft); }
+.answer-feedback.incorrect { background: var(--accent-soft); }
+.answer-feedback h2 { font-size: 14px; color: var(--primary); line-height: 1.7; }
+.answer-feedback.incorrect h2 { color: var(--accent-ink); }
+.answer-feedback p { font-size: 12px; line-height: 1.9; margin-top: 8px; }
+.answer-feedback .math { margin: 14px 0; font-size: 19px; line-height: 1.9; text-align: center; overflow-wrap: anywhere; }
+.field { display: block; margin-top: 21px; }
+.field > span { display: block; margin-bottom: 9px; font-size: 13px; font-weight: 600; }
+.field select { width: 100%; min-height: 47px; padding: 11px 13px; color: var(--fg); border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.goal-helper { font-size: 11px; color: var(--muted); line-height: 1.9; margin-top: 17px; }
+.form-status { font-size: 12px; color: var(--primary); line-height: 1.7; margin-top: 14px; }
+@media (hover: hover) {
+  .rate-button.familiar:hover { background: var(--primary-hover); color: var(--surface); }
+  .rate-button.unknown:hover { background: oklch(0.895 0.027 40); color: oklch(0.38 0.1 36); }
+  .rate-button:not(.unknown):not(.familiar):hover { background: var(--surface); color: var(--fg); border-color: var(--primary); }
+  .pronunciation:hover { background: var(--primary-soft); color: var(--primary-hover); }
+  .answer-option:not([aria-disabled="true"]):hover { border-color: var(--primary); }
+  .word-list-row:hover { background: var(--surface); color: var(--fg); box-shadow: inset 0 -2px 0 var(--primary); }
+}
+@media (max-width: 375px) {
+  .page-title { font-size: 24px; }
+  .study-card { padding: 11px; }
+  .card-kicker { font-size: 9px; }
+  .daily-card { padding: 17px 15px; gap: 7px; }
+  .daily-card h2 { font-size: 20px; }
+  .progress-ring { width: 89px; height: 89px; }
+  .word-card { padding-left: 19px; padding-right: 19px; }
+  .feature-art { width: 74px; opacity: 0.25; }
+  .math-feature .feature-text { max-width: 185px; }
+}
+@media (hover: hover) {
+  .primary-button:not(:disabled):hover { background: var(--primary-hover); color: var(--surface); }
+  .study-card:hover, .recent-card:hover, button.task:hover, .knowledge-row:hover { border-color: var(--primary); box-shadow: 0 4px 14px var(--shadow); }
+  .secondary-button:hover, .icon-button:hover, .text-button:hover, .tab:hover { background: var(--primary-soft); color: var(--primary-hover); }
+  .menu-row:hover, .capsule button:hover, .back-button:hover { background: var(--surface); color: var(--fg); box-shadow: inset 0 0 0 1px var(--border); border-radius: 9px; }
+  .subject-tabs button:hover { color: var(--primary-hover); background: var(--primary-soft); }
+  .math-feature:hover { border-color: var(--primary); }
+}
+@media (max-width: 460px) {
+  body { padding: 8px 0; }
+  .device { width: calc(100% - 12px); max-width: 406px; padding: 5px; border-radius: 46px; }
+  .screen { width: 100%; border-radius: 40px; height: min(844px, calc(100dvh - 28px)); min-height: 600px; }
+  .device::before, .device::after { display: none; }
+  .viewport { padding-left: 18px; padding-right: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="device" data-od-id="phone-device">
+  <div class="screen" data-od-id="mini-program">
+    <div class="status-bar" aria-hidden="true"><span>9:41</span><div class="island"></div><div class="status-icons"><svg viewBox="0 0 20 18" fill="currentColor"><rect x="1" y="11" width="3" height="5" rx=".6"/><rect x="6" y="8" width="3" height="8" rx=".6"/><rect x="11" y="4" width="3" height="12" rx=".6"/><rect x="16" y="1" width="3" height="15" rx=".6"/></svg><svg viewBox="0 0 20 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 6.5a12 12 0 0 1 16 0M5 10a7 7 0 0 1 10 0M8 13a3 3 0 0 1 4 0"/><circle cx="10" cy="15.5" r=".7" fill="currentColor" stroke="none"/></svg><div class="battery"></div></div></div>
+    <header class="app-bar" data-od-id="app-header"><div id="app-brand" class="brand"></div><div class="capsule"><button data-action="menu" aria-label="小程序菜单" data-od-id="mini-program-menu"></button><span class="divider"></span><button data-action="home" aria-label="返回学习首页" data-od-id="mini-program-home"></button></div></header>
+    <main class="viewport" id="content" data-od-id="page-content" tabindex="-1"></main>
+    <nav class="tabbar" id="tabbar" aria-label="底部导航" data-od-id="bottom-navigation"></nav>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <div class="overlay" id="overlay" hidden></div>
+  </div>
+</div>
+<script>
+'use strict';
+const iconPaths = {
+  home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/>',
+  book:'<path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v14M6 9h3M6 12h3M15 9h3M15 12h3"/>',
+  math:'<rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 7h8M8 12h2m-1-1v2M14 12h2M8 17h2M14 16l2 2m0-2-2 2"/>',
+  user:'<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
+  arrow:'<path d="M4 12h15m-5-5 5 5-5 5"/>', chevron:'<path d="m9 5 7 7-7 7"/>', back:'<path d="m15 5-7 7 7 7"/>',
+  flame:'<path d="M13 3c1 5-4 5-2 9 2-1 3-3 3-5 4 3 6 6 5 10a7 7 0 0 1-14-1c0-4 3-6 5-9-1 4 1 5 1 5"/>',
+  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', check:'<path d="m5 12 4 4L19 6"/>',
+  circleCheck:'<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>',
+  star:'<path d="m12 3 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.6l-5.7 3 1.1-6.4L2.8 9.7l6.4-.9Z"/>',
+  sound:'<path d="M11 4 5 9H2v6h3l6 5ZM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',
+  search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
+  refresh:'<path d="M20 7v5h-5M4 17v-5h5M5.4 7a8 8 0 0 1 13.2-1L20 8M4 16l1.4 2A8 8 0 0 0 19 17"/>',
+  target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+  plan:'<rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4m8-4v4M4 11h16m-11 5h6"/>',
+  plus:'<path d="M12 5v14M5 12h14"/>', close:'<path d="m6 6 12 12M6 18 18 6"/>',
+  eye:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+  flag:'<path d="M5 21V4m0 0c5-4 9 4 14 0v10c-5 4-9-4-14 0"/>',
+  more:'<circle cx="5" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="19" cy="12" r="1" fill="currentColor"/>',
+  mini:'<circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/>',
+  logo:'<path d="M3 5c4-1 7 1 9 3 2-2 5-4 9-3v13c-4-1-7 1-9 3-2-2-5-4-9-3Z"/><path d="M12 8v13M6 10c1 0 2 1 3 2m6 0c1-1 2-2 3-2"/>',
+  folder:'<path d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>',
+  info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/>'
+};
+const icon = (name, cls='') => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${iconPaths[name] || iconPaths.book}</svg>`;
+const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const lim = (numerator='sin 3x', denominator='x') => `<span class="lim">lim<small>x → 0</small></span><span class="fraction"><span>${numerator}</span><span>${denominator}</span></span>`;
+const subjects = [
+  {id:'calculus', name:'高等数学', short:'高数', chapter:'函数与极限', progress:3, total:8, intro:'从直觉出发，理解变化', topics:['函数极限的概念','两个重要极限','极限的四则运算'], notes:['理解“无限接近”的含义','从基本形式，找到解题入口','拆分、代入与等价替换'], question:`求 ${lim()} 的值。`, preview:`${lim()} = ?`, options:['0','1','3','不存在'], correct:2, answer:'3', explain:'先把分母配成 3x，再用第一个重要极限。', steps:`${lim()} = 3 × ${lim('sin 3x','3x')} = 3`, tip:'当 x → 0 时，3x 也趋于 0，因此 sin(3x) / (3x) → 1。'},
+  {id:'algebra', name:'线性代数', short:'线代', chapter:'矩阵与线性方程组', progress:2, total:7, intro:'看清结构，让运算更有章法', topics:['矩阵的运算','矩阵的秩','逆矩阵与初等变换'], notes:['乘法的顺序不能随意交换','从线性无关理解矩阵的秩','用初等行变换求逆矩阵'], question:'已知二阶矩阵 A 的两行为 (1, 2)、(3, 4)，求行列式 |A|。', preview:'A = [ 1, 2 ; 3, 4 ]，|A| = ?', options:['−2','2','10','−10'], correct:0, answer:'−2', explain:'二阶行列式等于主对角线乘积减去副对角线乘积。', steps:'|A| = 1 × 4 − 2 × 3 = −2', tip:'行列式的结果是一个数；注意两项相减的顺序。'},
+  {id:'probability', name:'概率统计', short:'概率', chapter:'随机事件与概率', progress:1, total:6, intro:'从不确定中，找到确定的规律', topics:['条件概率','事件的独立性','全概率公式'], notes:['条件变化后，样本空间也会变化','独立事件满足概率乘法关系','按互斥且完备的事件划分'], question:'设事件 A 与 B 相互独立，P(A) = 0.5，P(B) = 0.4，求 P(AB)。', preview:'A、B 独立，P(AB) = ?', options:['0.9','0.1','0.5','0.2'], correct:3, answer:'0.2', explain:'相互独立事件同时发生的概率，等于各自概率的乘积。', steps:'P(AB) = P(A) × P(B) = 0.2', tip:'“独立”与“互斥”不同：这里 A 与 B 可以同时发生。'}
+];
+const vocabulary = [
+  {word:'persist',ipa:'pəˈsɪst',part:'v.',meaning:'坚持；持续',sentence:'If you persist in your efforts, you will make progress.',translation:'如果坚持努力，你就会取得进步。',root:'per-（贯穿）+ sist（站立）',rootNote:'源自拉丁语 persistere，有“持续站立、坚持”的含义。',memory:'把自己想成一棵站稳的树：风会来，但你依然坚持。',collocation:'persist in doing sth. · 坚持做某事'},
+  {word:'acquire',ipa:'əˈkwaɪə',part:'v.',meaning:'获得；学到',sentence:'We acquire new skills through practice.',translation:'我们通过练习掌握新的技能。',root:'ac-（趋向）+ quir（寻求）',rootNote:'与 require、inquire 中表示“寻求”的词根相关。',memory:'主动去寻找，才会真正获得。把 acquire 与“逐步习得”一起记。',collocation:'acquire knowledge · 获取知识'},
+  {word:'crucial',ipa:'ˈkruːʃəl',part:'adj.',meaning:'至关重要的；关键的',sentence:'Regular revision is crucial to long-term learning.',translation:'定期复习对长期学习至关重要。',root:'cruc（十字）+ -ial（形容词后缀）',rootNote:'词源与“十字”相关，可联想决定方向的十字路口。',memory:'站在十字路口，需要做出关键选择。',collocation:'be crucial to · 对……至关重要'},
+  {word:'derive',ipa:'dɪˈraɪv',part:'v.',meaning:'获得；源自',sentence:'Many English words derive from Latin.',translation:'许多英语单词源自拉丁语。',root:'de-（从）+ riv（水流）',rootNote:'词源中的意象是“引出水流”，引申为从某处获得或起源。',memory:'沿着河流向上找，就能找到事物的来源。',collocation:'derive from · 源于'},
+  {word:'evaluate',ipa:'ɪˈvæljueɪt',part:'v.',meaning:'评价；评估',sentence:'We need to evaluate the results carefully.',translation:'我们需要仔细评估这些结果。',root:'value（价值）→ evaluate',rootNote:'通过 value 这一词形关联，记住“判断价值”的核心含义。',memory:'先看事实，再判断价值，就是 evaluate。',collocation:'evaluate the impact · 评估影响'},
+  {word:'facilitate',ipa:'fəˈsɪlɪteɪt',part:'v.',meaning:'促进；使便利',sentence:'Clear instructions facilitate learning.',translation:'清晰的指引有助于学习。',root:'facil（容易）+ -itate（动词后缀）',rootNote:'源自表示“容易”的词形，核心含义是让事情更容易。',memory:'好的工具不替你走路，却让这条路更好走。',collocation:'facilitate communication · 促进沟通'},
+  {word:'imply',ipa:'ɪmˈplaɪ',part:'v.',meaning:'暗示；意味着',sentence:'Silence does not always imply agreement.',translation:'沉默并不总是意味着同意。',root:'im-（向内）+ ply（折叠）',rootNote:'词源意象是“折在里面”，意思藏在话里，没有直接说出。',memory:'把意思折进句子里，让听者自己展开。',collocation:'imply that… · 暗示……'},
+  {word:'maintain',ipa:'meɪnˈteɪn',part:'v.',meaning:'维持；保养；坚持认为',sentence:'It is important to maintain a healthy routine.',translation:'保持健康的作息很重要。',root:'main（手）+ tain（保持）',rootNote:'词源意象为“用手保持”，引申为维持与维护。',memory:'用手稳稳托住一种状态，让它保持下去。',collocation:'maintain a balance · 保持平衡'},
+  {word:'perceive',ipa:'pəˈsiːv',part:'v.',meaning:'察觉；理解；看待',sentence:'People may perceive the same event differently.',translation:'人们对同一事件可能有不同的看法。',root:'per-（完全）+ ceive（拿取）',rootNote:'与 receive 共享表示“拿取”的词根；可理解为用感官捕捉。',memory:'感官先捕捉到信息，头脑才形成理解。',collocation:'perceive…as… · 将……视为……'},
+  {word:'relevant',ipa:'ˈreləvənt',part:'adj.',meaning:'相关的；切题的',sentence:'Choose evidence that is relevant to your argument.',translation:'选择与你的论点相关的证据。',root:'relevant → relevance',rootNote:'以词形关联记忆：relevance 是“相关性”，irrelevant 是“不相关的”。',memory:'写论证时留下与主题有联系的内容，就是 relevant。',collocation:'be relevant to · 与……相关'},
+  {word:'retain',ipa:'rɪˈteɪn',part:'v.',meaning:'保留；保持；记住',sentence:'Spaced practice helps us retain information.',translation:'间隔练习帮助我们记住信息。',root:'re-（向后）+ tain（保持）',rootNote:'与 contain、maintain 的词根相关，强调把事物保留下来。',memory:'知识走过脑海时，伸手把它留下。',collocation:'retain information · 记住信息'},
+  {word:'substantial',ipa:'səbˈstænʃəl',part:'adj.',meaning:'大量的；重大的；实质的',sentence:'The project requires a substantial amount of time.',translation:'这项工作需要大量时间。',root:'substance（实质）+ -ial',rootNote:'从名词 substance 联想，既可以形容有实质，也可以表示数量可观。',memory:'不是薄薄一层，而是有分量、可观的内容。',collocation:'substantial progress · 显著进步'},
+  {word:'demonstrate',ipa:'ˈdemənstreɪt',part:'v.',meaning:'证明；演示；表明',sentence:'The experiment demonstrates the effect of temperature.',translation:'这项实验展示了温度产生的影响。',root:'de-（强调）+ monstr（展示）',rootNote:'核心含义是把事物清晰展示出来，可引申为证明。',memory:'只说还不够，把过程演示出来。',collocation:'demonstrate the ability · 展示能力'},
+  {word:'emerge',ipa:'ɪˈmɜːdʒ',part:'v.',meaning:'出现；浮现',sentence:'New questions emerged during the discussion.',translation:'讨论中出现了新的问题。',root:'e-（向外）+ merg（浸入）',rootNote:'与 immerse 的词根相关，词源意象是从水中浮出。',memory:'答案像水中的石头，随着水位下降逐渐显现。',collocation:'emerge from · 从……中出现'},
+  {word:'contribute',ipa:'kənˈtrɪbjuːt',part:'v.',meaning:'贡献；促成；投稿',sentence:'Small habits contribute to lasting change.',translation:'小习惯有助于带来持久的改变。',root:'con-（一起）+ tribut（给予）',rootNote:'表示共同给予，既可贡献资源，也可促成一种结果。',memory:'每个人添上一点，就能共同完成一件事。',collocation:'contribute to · 有助于；促成'},
+  {word:'assess',ipa:'əˈses',part:'v.',meaning:'评估；估算',sentence:'The test is designed to assess your understanding.',translation:'这项测试旨在评估你的理解程度。',root:'as-（朝向）+ sess（坐）',rootNote:'历史词源与“坐在旁边协助判断”相关，现代常用义是评估。',memory:'坐下来，依据证据给出判断。',collocation:'assess the situation · 评估形势'},
+  {word:'consistent',ipa:'kənˈsɪstənt',part:'adj.',meaning:'一致的；始终如一的',sentence:'Consistent effort matters more than a perfect start.',translation:'持续的努力比完美的开始更重要。',root:'con-（一起）+ sist（站立）',rootNote:'与 persist 共享 sist 词根；一起站稳，联想到一致与稳定。',memory:'让今天和明天的行动朝着同一个方向。',collocation:'be consistent with · 与……一致'},
+  {word:'approach',ipa:'əˈprəʊtʃ',part:'n. / v.',meaning:'方法；接近',sentence:'A different approach may make the problem easier.',translation:'换一种方法也许会让问题更容易解决。',root:'approach → approachable',rootNote:'approachable 表示“平易近人的”；通过“容易接近”记住核心含义。',memory:'走近一道难题的路线，也就是解决它的方法。',collocation:'an approach to · ……的方法'}
+];
+const concepts = [
+  [
+    {formula:'lim f(x) = A',caption:'x 趋于 x₀ 时，f(x) 无限接近 A',steps:['观察自变量的变化方向：趋于某一点，还是趋于无穷。','判断函数值是否接近同一个确定的数。','函数在该点是否有定义，不影响极限是否存在。'],example:'例如 f(x) = (x² − 1)/(x − 1)，虽然在 x = 1 处没有定义，但当 x → 1 时，f(x) → 2。'},
+    {formula:`${lim('sin x','x')} = 1`,caption:'另一个重要极限：(1 + 1/x)ˣ → e（x → ∞）',steps:['第一个重要极限中，角度需要使用弧度制。','遇到 sin(ax)/x，可以把分母配成 ax 后再乘以 a。','先判断极限的形式和条件，再选择可以使用的公式。'],example:'例如 sin(3x)/x = 3 · sin(3x)/(3x)，当 x → 0 时，结果为 3。'},
+    {formula:'lim [f(x) + g(x)] = A + B',caption:'前提：lim f(x) = A、lim g(x) = B，且 A、B 均为有限值',steps:['和、差、积的极限，可以分别求出各项极限后再运算。','商的极限等于极限的商，但分母的极限必须不为 0。','出现 0/0 型时，先因式分解或作等价变形，不能直接相除。'],example:'当 x → 1 时，(x² − 1)/(x − 1) 可化成 x + 1，因此极限为 2。注意约分时 x ≠ 1。'}
+  ],
+  [
+    {formula:'(AB)ᵀ = BᵀAᵀ',caption:'矩阵乘积转置时，乘法顺序需要反过来',steps:['只有同型矩阵才能相加。','A 的列数等于 B 的行数时，AB 才有意义。','矩阵乘法一般不满足交换律，即 AB 不一定等于 BA。'],example:'若 A 为 2 × 3 矩阵，B 为 3 × 2 矩阵，则 AB 为 2 × 2 矩阵，BA 为 3 × 3 矩阵。'},
+    {formula:'r(A) ≤ min(m, n)',caption:'A 为 m × n 矩阵时，秩不超过行数与列数的较小值',steps:['矩阵的秩等于最大线性无关行向量组中的向量个数。','行秩与列秩相等。','把矩阵化为行阶梯形后，非零行的个数就是矩阵的秩。'],example:'若一个 3 × 3 矩阵化为行阶梯形后有两行非零、一行全零，则它的秩为 2。'},
+    {formula:'AA⁻¹ = A⁻¹A = I',caption:'方阵 A 可逆，当且仅当 |A| ≠ 0',steps:['先判断 A 是否为方阵，再判断行列式是否非零。','将 A 与单位矩阵 I 拼成增广矩阵 [A | I]。','对增广矩阵做初等行变换，若左侧化为 I，右侧就是 A⁻¹。'],example:'对角矩阵 diag(2, 3) 的逆矩阵为 diag(1/2, 1/3)，两者相乘得到单位矩阵。'}
+  ],
+  [
+    {formula:'P(A|B) = P(AB) / P(B)',caption:'前提：P(B) > 0',steps:['已知 B 发生后，把 B 看作新的条件范围。','分子表示 A 与 B 同时发生的概率。','不能混淆 P(A|B) 与 P(B|A)，两者一般不相等。'],example:'若 P(AB) = 0.2，P(B) = 0.4，则 P(A|B) = 0.2 / 0.4 = 0.5。'},
+    {formula:'P(AB) = P(A)P(B)',caption:'相互独立的判定与计算公式',steps:['一个事件发生，不改变另一个事件发生的概率。','当 P(B) > 0 时，独立意味着 P(A|B) = P(A)。','独立不等于互斥；两个概率均非零的互斥事件不独立。'],example:'若 A 与 B 相互独立，且 P(A) = 0.5、P(B) = 0.4，则 P(AB) = 0.2。'},
+    {formula:'P(A) = ∑ P(Bᵢ)P(A|Bᵢ)',caption:'Bᵢ 两两互斥且覆盖整个样本空间，并满足 P(Bᵢ) > 0',steps:['把可能发生的原因划分成一组互斥且完备的事件。','分别求每种原因出现的概率和对应的条件概率。','将各条路径的概率相乘，再把结果相加。'],example:'两条产线各占产量的一半，不合格率分别为 1% 和 3%，随机抽取产品的不合格概率为 0.5 × 1% + 0.5 × 3% = 2%。'}
+  ]
+];
+const STORAGE_KEY = 'cishu-learning-prototype-v1';
+const defaults = {answered:{}, favorites:[], planned:[], solved:[], wrong:[], goals:{words:50, math:5, english:'英语一', subject:'数学一', year:'2027'}};
+let saved = {};
+try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') || {}; } catch (_) {}
+const state = {...defaults, ...saved, goals:{...defaults.goals,...saved.goals}};
+for (const field of ['favorites','planned','solved','wrong']) if (!Array.isArray(state[field])) state[field]=[];
+if (!state.answered || typeof state.answered !== 'object' || Array.isArray(state.answered)) state.answered={};
+let route='home', historyStack=[], subjectIndex=0, chartMode='words', searchTerm='';
+let reviewQueue=[], reviewIndex=0, reviewGrade=null, revealMeaning=true, detailWord=0, detailTopic=2, selectedAnswer=null, submitted=false;
+let toastTimer, sheetOpener;
+const main = document.getElementById('content');
+function persist() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (_) {} }
+function wordCount() { return Math.min(50,32 + Object.keys(state.answered).length); }
+function mathCount() { return 3 + state.solved.length; }
+function showToast(message) { const el=document.getElementById('toast'); el.textContent=message; el.hidden=false; clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.hidden=true,2400); }
+function navigate(next, push=true) { if(push && next!==route) historyStack.push({route,subjectIndex,detailTopic,detailWord,scroll:main.scrollTop}); route=next; closeSheet(); render(); main.scrollTop=0; }
+function goBack() { const previous=historyStack.pop(); if(previous) { route=previous.route; subjectIndex=previous.subjectIndex; detailTopic=previous.detailTopic; detailWord=previous.detailWord; render(); main.scrollTop=previous.scroll; } else navigate('home',false); }
+function activeTab() { if(['words','review','result','word-detail','favorites'].includes(route)) return 'words'; if(['math','topic','question'].includes(route)) return 'math'; if(['my','goals','wrong','plan'].includes(route)) return 'my'; return 'home'; }
+function progressBar(value) { return `<div class="small-progress"><span style="width:${Math.max(0,Math.min(100,value))}%"></span></div>`; }
+function homePage() {
+  const wc=wordCount(), mc=mathCount(), pct=Math.round((wc+Math.min(5,mc))/55*100), pending=(wc<50?1:0)+(mc<5?1:0);
+  return `<section class="page" data-od-id="learning-overview">
+    <div class="row"><p class="eyebrow">9 月 14 日 · 星期一</p><span class="streak">${icon('flame')}连续学习 7 天</span></div>
+    <h1 class="page-title" data-od-id="home-greeting">今天，也向前一步。</h1>
+    <section class="daily-card" data-od-id="today-progress"><div><p class="eyebrow">每一步，都算数</p><h2>${pending?'把坚持，变成<br>自己的底气。':'今天的目标，<br>都做到了。'}</h2><p class="daily-meta">${icon('circleCheck')}${pending?`今日还有 ${pending} 项学习待完成`:'好好休息，明天继续同行'}</p></div><div class="progress-ring" role="img" aria-label="今日进度 ${pct}%"><svg viewBox="0 0 108 108"><circle class="ring-track" cx="54" cy="54" r="45"/><circle class="ring-fill" cx="54" cy="54" r="45" stroke-dasharray="282.74" stroke-dashoffset="${282.74*(1-pct/100)}"/></svg><div class="ring-label"><strong>${pct}<span>%</span></strong><small>今日进度</small></div></div></section>
+    <div class="section-head"><h2 data-od-id="today-tasks-heading">今日学习</h2><span>${pending?`${pending} 项待办`:'全部完成'}</span></div>
+    <div class="learning-grid"><button class="study-card" data-action="nav" data-route="words" data-od-id="home-vocabulary-card"><div class="row">${icon('book','card-icon')}<span class="card-kicker">考研英语</span></div><h3>今日单词</h3><p class="study-numbers"><strong>${wc}</strong> / 50 个</p>${progressBar(wc*2)}<span class="card-link">${wc===50?'查看复习成果':'继续背词'}${icon(wc===50?'check':'arrow')}</span></button>
+    <button class="study-card" data-action="nav" data-route="math" data-od-id="home-math-card"><div class="row">${icon('math','card-icon')}<span class="card-kicker">考研数学</span></div><h3>高数极限</h3><p class="study-numbers"><strong>${mc}</strong> / 5 题</p>${progressBar(mc*20)}<span class="card-link">${mc>=5?'今日练习已完成':'继续学数学'}${icon(mc>=5?'check':'arrow')}</span></button></div>
+    <div class="section-head"><h2 data-od-id="recent-learning-heading">接着上次学</h2><span>把知识，再往前推一点</span></div>
+    <button class="recent-card" data-action="topic" data-subject="0" data-topic="2" data-od-id="recent-limit-topic"><span class="recent-formula">lim</span><span class="recent-text"><strong>极限的四则运算</strong><small>高等数学 · 第一章 · 上次读到例题</small></span>${icon('chevron')}</button>
+  </section>`;
+}
+function wordsPage() {
+  const done=wordCount()===50, left=50-wordCount();
+  return `<section class="page" data-od-id="vocabulary-home"><p class="eyebrow">考研英语 · 核心词汇</p><h1 class="page-title" data-od-id="vocabulary-title">让每个单词，留得更久。</h1>
+  <div class="panel mt20" data-od-id="vocabulary-progress"><div class="row"><div><p class="eyebrow">今日单词</p><p class="big-number">${wordCount()} <small>/ 50</small></p></div><span class="pill">${icon(done?'check':'clock')}${done?'今日已完成':`还剩 ${left} 个`}</span></div><div class="mt16">${progressBar(wordCount()*2)}</div><div class="row progress-split"><span>新词 20 / 20</span><span>复习 ${wordCount()-20} / 30</span></div></div>
+  <div class="section-head"><h2 data-od-id="vocabulary-tasks-heading">今日任务</h2><span>一点点，记得更牢</span></div><div class="task-list">
+  <button class="task" data-action="review-start" data-od-id="review-task"><span class="task-icon">${icon(done?'circleCheck':'refresh')}</span><span class="task-content"><h3>记忆巩固 <span class="pill">${done?'已完成':'进行中'}</span></h3><p>${done?'30 个单词，完成今天的复习':`待复习 ${left} 个 · 按熟悉程度巩固`}</p></span>${icon('chevron')}</button>
+  <div class="task" data-od-id="new-words-completed"><span class="task-icon">${icon('check')}</span><span class="task-content"><h3>新词初识</h3><p>20 个新词，今天都见过了</p></span><span class="pill">已完成</span></div></div>
+  <button class="primary-button mt20" data-action="review-start" data-od-id="start-word-review">${done?'查看复习结果':`继续复习 · ${left} 个单词`}${icon('arrow')}</button><p class="quiet-note">不必一次记住，重要的是一次次相遇。</p>
+  </section>`;
+}
+function mathArt() { return `<svg viewBox="0 0 100 82" fill="none"><path d="M5 61h90M26 76V5" stroke="currentColor" stroke-width="1"/><path d="M10 70C28 70 25 14 45 14S60 67 91 21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="m91 58 4 3-4 3M23 9l3-4 3 4" stroke="currentColor"/><circle cx="45" cy="14" r="3" fill="currentColor"/></svg>`; }
+function knowledgeRows(items) { return items.map(({s,i,j})=>`<button class="knowledge-row" data-action="topic" data-subject="${i}" data-topic="${j}" data-od-id="knowledge-${s.id}-${j}"><span class="knowledge-number">${String(j+1).padStart(2,'0')}</span><span class="knowledge-content"><h3>${s.topics[j]}</h3><p>${searchTerm?s.name+' · ':''}${s.notes[j]}</p></span>${icon(state.planned.includes(s.id+'-'+j)?'plan':'chevron')}</button>`).join(''); }
+function mathResults() {
+  const s=subjects[subjectIndex];
+  if(searchTerm) { const results=subjects.flatMap((s,i)=>s.topics.map((_,j)=>({s,i,j}))).filter(x=>(x.s.topics[x.j]+x.s.name+x.s.notes[x.j]).includes(searchTerm)); return `<div class="section-head"><h2>搜索结果</h2><span>${results.length} 个知识点</span></div><div class="knowledge-list">${results.length?knowledgeRows(results):`<div class="panel"><h3>暂时没有找到“${esc(searchTerm)}”</h3><p class="subtext mt12">试试“极限”“矩阵”或“概率”。</p><button class="text-button" data-action="clear-search" data-od-id="clear-search">清空搜索</button></div>`}</div>`; }
+  return `<button class="math-feature" data-action="topic" data-subject="${subjectIndex}" data-topic="${subjectIndex===0?2:0}" data-od-id="current-math-chapter"><div class="feature-text"><p class="eyebrow">正在学习 · 第一章</p><h2>${s.chapter}</h2><p class="subtext">${s.intro}</p><div class="chapter-foot">${progressBar(s.progress/s.total*100)}<span>已学 ${s.progress} / ${s.total} 节</span></div></div><span class="feature-art" aria-hidden="true">${mathArt()}</span><span class="feature-arrow">${icon('arrow')}</span></button>
+  <div class="section-head"><h2 data-od-id="knowledge-section-heading">知识点，逐个击破</h2><button class="text-button" data-action="nav" data-route="plan" data-od-id="open-math-plan">我的计划${icon('chevron')}</button></div><div class="knowledge-list">${knowledgeRows(s.topics.slice(0,2).map((_,j)=>({s,i:subjectIndex,j})))}</div>
+  <section class="daily-question" data-od-id="daily-question-card"><div class="row"><h2>每日一题</h2><span class="pill orange">${state.solved.includes(s.id)?'已练习':'基础巩固'}</span></div><div class="question-preview">${s.preview}</div><button class="primary-button" data-action="question" data-od-id="start-daily-practice">${state.solved.includes(s.id)?'再次练习':'开始练习'}${icon('arrow')}</button></section>`;
+}
+function mathPage() { return `<section class="page" data-od-id="math-library"><p class="eyebrow">${esc(state.goals.subject)} · 基础巩固</p><h1 class="page-title" data-od-id="math-title">让每一步，都有解。</h1><label class="search-box" data-od-id="knowledge-search">${icon('search')}<input id="knowledge-search" type="search" placeholder="搜索知识点，如：极限" value="${esc(searchTerm)}" aria-label="搜索数学知识点" autocomplete="off"></label><div class="subject-tabs" role="tablist" aria-label="数学科目">${subjects.map((s,i)=>`<button role="tab" aria-selected="${i===subjectIndex}" class="${i===subjectIndex?'active':''}" data-action="subject" data-value="${i}" data-od-id="subject-${s.id}">${s.name}</button>`).join('')}</div><div id="math-results">${mathResults()}</div></section>`; }
+function myPage() {
+  const values=chartMode==='words'?[38,50,42,50,46,50,wordCount()]:[3,5,4,5,5,4,mathCount()], max=Math.max(...values), days=['二','三','四','五','六','日','一'];
+  return `<section class="page" data-od-id="my-learning"><div class="profile-head"><span class="avatar" aria-hidden="true">同</span><div><h1 data-od-id="profile-title">同行同学</h1><p>${esc(state.goals.year)} 考研 · ${esc(state.goals.english)} · ${esc(state.goals.subject)}</p></div><span class="demo-label">体验账号</span></div><div class="stats-grid" data-od-id="learning-totals"><div><strong>${(1248+Object.keys(state.answered).length).toLocaleString()}</strong><small>已学习单词</small></div><div><strong>${128+state.solved.length}</strong><small>已练习数学题</small></div></div>
+  <div class="panel mt20" data-od-id="weekly-learning-chart"><div class="row"><div><h2 style="font-size:15px">每一天，都有收获</h2><p class="subtext" style="margin-top:4px">连续学习 7 天</p></div><div class="chart-switch" aria-label="学习记录类型"><button class="${chartMode==='words'?'active':''}" aria-pressed="${chartMode==='words'}" data-action="chart" data-value="words" data-od-id="chart-words">单词</button><button class="${chartMode==='math'?'active':''}" aria-pressed="${chartMode==='math'}" data-action="chart" data-value="math" data-od-id="chart-math">数学</button></div></div><div class="week-chart" role="img" aria-label="最近七天${chartMode==='words'?'单词量':'数学题量'}：${values.join('、')}">${values.map((n,i)=>`<div class="chart-day ${i===6?'today':''}"><span>${n}</span><div class="bar" style="height:${n/max*72}px"></div><span>${i===6?'今天':days[i]}</span></div>`).join('')}</div><p class="chart-caption">近 7 天共${chartMode==='words'?'学习':'练习'} ${values.reduce((a,b)=>a+b,0)} ${chartMode==='words'?'个单词':'道题'}，坚持正在悄悄发生。</p></div>
+  <div class="menu-list">${[['wrong','folder','我的错题',state.wrong.length+' 道题'],['favorites','star','收藏单词',state.favorites.length+' 个'],['plan','plan','学习计划',state.planned.length+' 个知识点'],['goals','target','目标设置',state.goals.words+' 词 / '+state.goals.math+' 题']].map(([r,i,t,v])=>`<button class="menu-row" data-action="nav" data-route="${r}" data-od-id="my-${r}">${icon(i)}<strong>${t}</strong><small>${v}</small>${icon('chevron')}</button>`).join('')}</div><p class="quiet-note">学习数据为体验示例 · 操作进度保存在本机</p></section>`;
+}
+function wordExample(w, translation=true) { return `<div class="example"><p class="label">语境例句</p><p class="english" lang="en">${esc(w.sentence).replace(new RegExp('\\b'+w.word+'\\b','gi'),'<mark>$&</mark>')}</p>${translation?`<p class="chinese">${w.translation}</p>`:''}</div>`; }
+function favoriteButton(index, id) { const saved=state.favorites.includes(index); return `<button class="icon-button ${saved?'saved':''}" data-action="favorite" data-word="${index}" aria-label="${saved?'取消收藏':'收藏单词'}" aria-pressed="${saved}" data-od-id="${id}">${icon('star')}</button>`; }
+function speakButton(index) { return `<button class="pronunciation" data-action="pronounce" data-word="${index}" aria-label="播放 ${vocabulary[index].word} 英式发音" data-od-id="word-pronunciation">${icon('sound')}<span lang="en">/${vocabulary[index].ipa}/</span><span class="accent-label">英音</span></button>`; }
+function reviewPage() {
+  const index=reviewQueue[reviewIndex], w=vocabulary[index];
+  if(!w) return resultPage();
+  const g=reviewGrade, feedback={familiar:['记住了，继续保持。','本次已标记为熟悉，可以在复习结果中回看。'],fuzzy:['有点印象，也是进步。','已记入薄弱词，完成本组后可以再练一遍。'],unknown:['没关系，再认识一次。','先读一遍释义和例句，再试着用自己的话记住它。']};
+  return `<section class="page" data-od-id="word-review"><div class="review-top"><strong>记忆巩固</strong><span><b>${String(reviewIndex+1).padStart(2,'0')}</b> / ${String(reviewQueue.length).padStart(2,'0')}</span></div>${progressBar((reviewIndex+(g?1:0))/reviewQueue.length*100)}<p class="review-hint">${g?'每一次回想，都在加深记忆。':'先回想一下，再判断你对它的熟悉程度。'}</p>
+  <article class="word-card" data-od-id="review-word-card"><div class="row"><span class="word-label">考研核心词汇</span>${favoriteButton(index,'review-favorite')}</div><h1 class="word-heading" lang="en" data-od-id="review-word">${w.word}</h1>${speakButton(index)}<div class="word-definition" data-od-id="review-definition">${revealMeaning?`<p><span class="part">${w.part}</span>${w.meaning}</p>`:`<button class="text-button" data-action="reveal" data-od-id="reveal-word-meaning">${icon('eye')}想好了吗？点此查看释义</button>`}</div>${wordExample(w,revealMeaning)}</article>
+  <div class="review-tools"><button class="text-button" data-action="reveal" data-od-id="toggle-word-meaning">${icon('eye')}${revealMeaning?'隐藏释义，试着回想':'显示中文释义'}</button><button class="text-button" data-action="word-detail" data-word="${index}" data-od-id="open-word-detail">词根与助记${icon('chevron')}</button></div>
+  ${g?`<div class="review-feedback ${g==='familiar'?'':'needs-work'}" role="status" data-od-id="word-rating-feedback"><div class="feedback-title">${icon(g==='familiar'?'circleCheck':'refresh')}${feedback[g][0]}</div><p>${feedback[g][1]}</p><button class="primary-button" data-action="review-next" data-od-id="next-review-word">${reviewIndex===reviewQueue.length-1?'查看复习结果':'下一个单词'}${icon('arrow')}</button></div>`:`<p class="rating-label">这个单词，你记住了吗？</p><div class="ratings" data-od-id="word-rating-actions"><button class="rate-button unknown" data-action="grade" data-value="unknown" data-od-id="rate-unknown">不认识<small>再认识一次</small></button><button class="rate-button" data-action="grade" data-value="fuzzy" data-od-id="rate-fuzzy">模糊<small>还需巩固</small></button><button class="rate-button familiar" data-action="grade" data-value="familiar" data-od-id="rate-familiar">熟悉<small>已经记住</small></button></div>`}</section>`;
+}
+function wordDetailPage() {
+  const w=vocabulary[detailWord];
+  return `<section class="page" data-od-id="word-detail"><div class="row"><span class="pill">考研核心词汇</span>${favoriteButton(detailWord,'detail-favorite')}</div><div class="detail-hero"><h1 class="word-heading" lang="en" data-od-id="word-detail-title">${w.word}</h1>${speakButton(detailWord)}<p class="definition"><span class="math">${w.part}</span> ${w.meaning}</p></div><section class="detail-section" data-od-id="word-root"><h2>从词根，读懂单词</h2><div class="root-parts">${w.root}</div><p class="subtext">${w.rootNote}</p></section><section class="detail-section memory-note" data-od-id="word-mnemonic"><h2>给记忆一个落脚点</h2><p>${w.memory}</p></section>${wordExample(w)}<section class="detail-section" data-od-id="word-collocation"><h2>把它放进表达里</h2><p>${w.collocation}</p></section><button class="primary-button mt20" data-action="back" data-od-id="return-from-word-detail">${historyStack.at(-1)?.route==='review'?'返回复习':'返回单词列表'}${icon('arrow')}</button></section>`;
+}
+function resultPage() {
+  const items=vocabulary.map((w,i)=>({w,i,g:state.answered[w.word]})).filter(x=>x.g), counts=['familiar','fuzzy','unknown'].map(g=>items.filter(x=>x.g===g).length), weak=counts[1]+counts[2];
+  return `<section class="page" data-od-id="review-result"><div class="result-hero"><div class="result-mark">${icon('check')}</div><h1 data-od-id="review-result-title">${wordCount()===50?'今天的单词，拿下了。':'这一组，记得更牢了。'}</h1><p class="subtext">已复习 ${items.length} 个单词，每一次回想都算数。<br>${weak?`还有 ${weak} 个词值得再见一面。`:'这一轮都记住了，保持你的学习节奏。'}</p></div><div class="result-counts" data-od-id="review-grade-summary">${['熟悉','模糊','不认识'].map((t,i)=>`<div><strong>${counts[i]}</strong><small>${t}</small></div>`).join('')}</div><button class="primary-button" data-action="${weak?'review-weak':'home'}" data-od-id="review-result-primary">${weak?`再练薄弱单词 · ${weak} 个`:'回到学习首页'}${icon('arrow')}</button>${weak?'<button class="text-button" style="width:100%" data-action="home" data-od-id="review-result-home">今天先到这里</button>':''}<div class="section-head"><h2>这次复习的单词</h2><span>点开查看词根与助记</span></div><div class="word-list">${items.map(({w,i,g})=>`<button class="word-list-row" data-action="word-detail" data-word="${i}" data-od-id="result-word-${w.word}"><span><strong lang="en">${w.word}</strong><small>${w.meaning}</small></span><span class="pill ${g==='familiar'?'':'orange'}">${{familiar:'熟悉',fuzzy:'模糊',unknown:'不认识'}[g]}</span></button>`).join('')}</div></section>`;
+}
+function emptyPage(symbol,title,copy,action,label,id) { return `<section class="page empty" data-od-id="${id}"><div class="empty-symbol">${icon(symbol)}</div><h1 data-od-id="${id}-heading">${title}</h1><p>${copy}</p><button class="primary-button" data-action="${action}" data-od-id="${id}-action">${label}${icon('arrow')}</button></section>`; }
+function favoritesPage() {
+  const items=state.favorites.filter(i=>vocabulary[i]);
+  if(!items.length) return emptyPage('star','留住值得再看一遍的词','遇到想收藏的单词，点一下星标。<br>下一次，它们就在这里等你。','review-start','去复习单词','favorites-empty');
+  return `<section class="page" data-od-id="favorites-list"><p class="eyebrow">我的单词本</p><h1 class="page-title" data-od-id="favorites-title">值得，再见一面。</h1><p class="subtext mt12">已收藏 ${items.length} 个单词</p><div class="word-list mt20">${items.map(i=>`<button class="word-list-row" data-action="word-detail" data-word="${i}" data-od-id="favorite-${vocabulary[i].word}"><span><strong lang="en">${vocabulary[i].word}</strong><small>${vocabulary[i].meaning}</small></span>${icon('chevron')}</button>`).join('')}</div></section>`;
+}
+function topicPage() {
+  const s=subjects[subjectIndex], c=concepts[subjectIndex][detailTopic], added=state.planned.includes(s.id+'-'+detailTopic);
+  return `<section class="page" data-od-id="math-knowledge-detail"><p class="eyebrow">${s.name} / 第一章 / 知识点 ${String(detailTopic+1).padStart(2,'0')}</p><h1 class="page-title" data-od-id="knowledge-detail-title">${s.topics[detailTopic]}</h1><p class="topic-lead">${s.notes[detailTopic]}。先理解，再动手。</p><div class="formula-box" data-od-id="knowledge-key-formula">${c.formula}<span class="formula-caption">${c.caption}</span></div><section class="detail-section" data-od-id="knowledge-method"><h2>抓住这三个要点</h2>${c.steps.map((p,i)=>`<div class="concept-step" data-od-id="knowledge-step-${i+1}"><span>${i+1}</span><p>${p}</p></div>`).join('')}</section><section class="detail-section" data-od-id="knowledge-example"><h2>放进例子里理解</h2><p>${c.example}</p></section><div class="action-stack"><button class="primary-button" data-action="question" data-od-id="topic-start-practice">开始练习${icon('arrow')}</button><button class="secondary-button" data-action="toggle-plan" aria-pressed="${added}" data-od-id="add-topic-to-plan">${icon(added?'check':'plus')}${added?'已加入计划 · 点击移除':'加入学习计划'}</button></div><p class="quiet-note">理解得慢一点，也是在认真向前。</p></section>`;
+}
+function questionPage() {
+  const s=subjects[subjectIndex], correct=selectedAnswer===s.correct;
+  return `<section class="page" data-od-id="math-question"><div class="row question-type"><span class="pill">${s.name} · 基础题</span><span class="eyebrow">单项选择</span></div><h1 class="question-heading" data-od-id="question-title">${subjectIndex===0?'从一个极限，检验理解。':subjectIndex===1?'一步运算，看清矩阵。':'把概率，算得更明白。'}</h1><p class="subtext">先独立思考，再查看解析。</p><div class="problem" data-od-id="question-stem">${subjectIndex===0?`<span class="math">${s.question}</span>`:s.question}</div><div class="answer-options" role="radiogroup" aria-label="选择答案">${s.options.map((option,i)=>`<button class="answer-option ${submitted?(i===s.correct?'correct':i===selectedAnswer?'incorrect':''):i===selectedAnswer?'selected':''}" role="radio" aria-checked="${selectedAnswer===i}" ${submitted?'aria-disabled="true"':''} data-action="answer" data-value="${i}" data-od-id="answer-${i}"><span class="option-letter">${String.fromCharCode(65+i)}</span><span class="math">${option}</span>${submitted&&i===s.correct?icon('check'):submitted&&i===selectedAnswer?icon('close'):''}</button>`).join('')}</div>
+  ${submitted?`<section class="answer-feedback ${correct?'':'incorrect'}" id="answer-feedback" role="status" data-od-id="answer-feedback"><h2>${correct?'答对了，思路很清晰。':'差一点，把这一步弄懂。'}</h2><p>${correct?'':'正确答案为 '+String.fromCharCode(65+s.correct)+'（'+s.answer+'）。'}${s.explain}</p><div class="math">${s.steps}</div><p>${s.tip}</p>${!correct?'<p>本题已收入「我的错题」，答对后会自动移出。</p>':''}</section><button class="primary-button mt16" data-action="finish-question" data-od-id="finish-question">完成本题${icon('check')}</button><button class="text-button" style="width:100%" data-action="retry-question" data-od-id="retry-question">再独立做一次</button>`:`<button class="primary-button mt20" data-action="submit-answer" ${selectedAnswer===null?'disabled':''} data-od-id="submit-math-answer">提交答案</button><p class="quiet-note">${selectedAnswer===null?'请选择一个答案':'已选择 '+String.fromCharCode(65+selectedAnswer)+'，准备好后提交'}</p>`}</section>`;
+}
+function wrongPage() {
+  if(!state.wrong.length) return emptyPage('circleCheck','这里，暂时还是空的。','还没有收录错题。<br>继续练习，把理解变成自己的能力。','question','去做每日一题','wrong-empty');
+  return `<section class="page" data-od-id="wrong-question-list"><p class="eyebrow">错题也是学习的路标</p><h1 class="page-title" data-od-id="wrong-list-title">再想一次，向前一步。</h1><p class="subtext mt12">${state.wrong.length} 道题待巩固 · 答对后自动移出</p><div class="task-list mt20">${state.wrong.map(id=>{const i=subjects.findIndex(s=>s.id===id),s=subjects[i]; if(!s)return '';return `<button class="task" data-action="question" data-subject="${i}" data-od-id="wrong-${id}"><span class="task-icon">${icon('refresh')}</span><span class="task-content"><h3>${s.name} · ${['极限计算','行列式计算','独立事件概率'][i]}</h3><p>基础题 · 再做一次，巩固理解</p></span>${icon('chevron')}</button>`;}).join('')}</div></section>`;
+}
+function planPage() {
+  if(!state.planned.length) return emptyPage('plan','给下一步，留个位置。','把想攻克的知识点加入计划。<br>每次打开，就知道从哪里继续。','math-home','去数学资料库','plan-empty');
+  return `<section class="page" data-od-id="learning-plan"><p class="eyebrow">按自己的节奏学习</p><h1 class="page-title" data-od-id="plan-title">下一步，已经安排好。</h1><p class="subtext mt12">${state.planned.length} 个知识点待学习</p><div class="knowledge-list mt20">${state.planned.map(key=>{const [id,n]=key.split('-'),i=subjects.findIndex(s=>s.id===id),j=Number(n); return i>=0 && subjects[i].topics[j]?knowledgeRows([{s:subjects[i],i,j}]):'';}).join('')}</div><p class="quiet-note">进入知识点后，可再次点击计划按钮移除。</p></section>`;
+}
+function goalsPage() {
+  const select=(name,label,options)=>`<label class="field"><span>${label}</span><select name="${name}" data-od-id="goal-${name}">${options.map(([v,t])=>`<option value="${v}" ${String(state.goals[name])===String(v)?'selected':''}>${t}</option>`).join('')}</select></label>`;
+  return `<section class="page" data-od-id="learning-goals"><p class="eyebrow">找到可以坚持的节奏</p><h1 class="page-title" data-od-id="goals-title">目标刚刚好，才能走更远。</h1><form id="goal-form"><div class="panel mt20"><h2 style="font-size:14px">我的考研目标</h2>${select('year','考研年份',[['2027','2027 考研'],['2028','2028 考研'],['2029','2029 考研']])}<div class="form-grid">${select('english','英语科目',[['英语一','英语一'],['英语二','英语二']])}${select('subject','数学科目',[['数学一','数学一'],['数学二','数学二'],['数学三','数学三']])}</div></div><div class="panel mt16"><h2 style="font-size:14px">每日学习量</h2><div class="form-grid">${select('words','单词目标',[[20,'20 个'],[30,'30 个'],[50,'50 个'],[80,'80 个']])}${select('math','数学题量',[[3,'3 道'],[5,'5 道'],[10,'10 道']])}</div><p class="goal-helper">新的学习量从明天起生效，今天继续按原计划完成。科目与考研年份保存后更新。</p></div><button type="submit" class="primary-button mt20" data-od-id="save-learning-goals">保存目标${icon('check')}</button><p class="form-status" id="goal-save-status" role="status"></p></form></section>`;
+}
+function render() {
+  const tab=activeTab(), titles={'review':'单词复习','result':'复习结果','word-detail':'单词详情','topic':'知识点','question':'每日一题','goals':'目标设置','favorites':'收藏单词','wrong':'我的错题','plan':'学习计划'};
+  document.getElementById('app-brand').className='brand'+(titles[route]?' sub':'');
+  document.getElementById('app-brand').innerHTML=titles[route]?`<button class="back-button" data-action="back" aria-label="返回上一页" data-od-id="page-back">${icon('back')}</button><span>${titles[route]}</span>`:`${icon('logo','brand-logo')}<span>词数同行</span>`;
+  document.getElementById('tabbar').innerHTML=[['home','home','学习'],['words','book','单词'],['math','math','数学'],['my','user','我的']].map(([r,i,t])=>`<button class="tab ${tab===r?'active':''}" data-action="tab" data-route="${r}" data-od-id="tab-${r}" ${tab===r?'aria-current="page"':''}><span class="tab-icon">${icon(i)}</span><span>${t}</span></button>`).join('');
+  const pages={home:homePage,words:wordsPage,math:mathPage,my:myPage,...extraPages};
+  main.innerHTML=(pages[route] || homePage)();
+  stampInspectable(main);
+}
+function stampInspectable(root) { root.querySelectorAll('h1,h2,h3,button,input,select,section,article,form').forEach((node,i)=>{ if(!node.hasAttribute('data-od-id')) node.setAttribute('data-od-id',`${route}-${node.tagName.toLowerCase()}-${i+1}`); }); }
+const extraPages={'review':reviewPage,'word-detail':wordDetailPage,'result':resultPage,'favorites':favoritesPage,'topic':topicPage,'question':questionPage,'wrong':wrongPage,'plan':planPage,'goals':goalsPage};
+function closeSheet() { document.getElementById('overlay').hidden=true; }
+function openMenu() { sheetOpener=document.activeElement; const overlay=document.getElementById('overlay'); overlay.innerHTML=`<section class="sheet" role="dialog" aria-modal="true" aria-labelledby="menu-heading"><div class="sheet-handle"></div><div class="row"><h2 id="menu-heading">词数同行</h2><button class="icon-button" data-action="close-sheet" aria-label="关闭菜单" data-od-id="close-menu">${icon('close')}</button></div><p class="subtext">背好每个单词，解开每一道难题。</p><div class="menu-list"><button class="menu-row" data-action="nav" data-route="goals" data-od-id="menu-goals">${icon('target')}<strong>调整学习目标</strong>${icon('chevron')}</button><button class="menu-row" data-action="nav" data-route="favorites" data-od-id="menu-favorites">${icon('star')}<strong>查看收藏单词</strong>${icon('chevron')}</button></div><p class="quiet-note">词数同行 · 考研学习原型<br>体验数据仅保存在当前浏览器。</p></section>`; overlay.hidden=false; overlay.querySelector('button').focus(); }
+function handleAction(action, el) {
+  if(action==='tab') { historyStack=[]; if(el.dataset.route==='math') searchTerm=''; navigate(el.dataset.route,false); }
+  else if(action==='nav') navigate(el.dataset.route);
+  else if(action==='home') { historyStack=[]; navigate('home',false); }
+  else if(action==='back') goBack();
+  else if(action==='menu') openMenu();
+  else if(action==='close-sheet') { closeSheet(); if(sheetOpener) sheetOpener.focus(); }
+  else if(action==='subject') { subjectIndex=Number(el.dataset.value); searchTerm=''; render(); }
+  else if(action==='clear-search') { searchTerm=''; render(); document.getElementById('knowledge-search').focus(); }
+  else if(action==='chart') { chartMode=el.dataset.value; render(); }
+  else handleLearningAction(action,el);
+}
+function startReview(weak=false) {
+  if(!weak && reviewQueue.length && reviewIndex<reviewQueue.length) { navigate('review'); return; }
+  reviewQueue=vocabulary.map((w,i)=>({w,i})).filter(({w})=>weak?(state.answered[w.word] && state.answered[w.word]!=='familiar'):!state.answered[w.word]).map(x=>x.i);
+  reviewIndex=0; reviewGrade=null; revealMeaning=true;
+  if(!reviewQueue.length) navigate('result'); else navigate('review',route!=='result');
+}
+function openQuestion(index=subjectIndex) { subjectIndex=index; selectedAnswer=null; submitted=false; navigate('question'); }
+function pronounce(index) {
+  if(!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance==='undefined') { showToast('当前浏览器不支持语音朗读，可参考单词音标'); return; }
+  window.speechSynthesis.cancel(); const utterance=new SpeechSynthesisUtterance(vocabulary[index].word); utterance.lang='en-GB'; utterance.rate=0.82;
+  const voice=window.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase()==='en-gb'); if(voice) utterance.voice=voice;
+  utterance.onerror=()=>showToast('暂时无法播放发音，可参考单词音标'); window.speechSynthesis.speak(utterance);
+}
+function handleLearningAction(action,el) {
+  if(action==='review-start') startReview();
+  else if(action==='review-weak') startReview(true);
+  else if(action==='reveal') { revealMeaning=!revealMeaning; render(); }
+  else if(action==='grade') {
+    if(reviewGrade || !['familiar','fuzzy','unknown'].includes(el.dataset.value)) return;
+    const w=vocabulary[reviewQueue[reviewIndex]]; if(!w) return;
+    reviewGrade=el.dataset.value; state.answered[w.word]=reviewGrade; revealMeaning=true; persist(); render(); main.scrollTop=Math.max(0,main.scrollHeight-main.clientHeight);
+  }
+  else if(action==='review-next') { if(!reviewGrade) return; reviewIndex++; reviewGrade=null; revealMeaning=true; if(reviewIndex>=reviewQueue.length) navigate('result',false); else { render(); main.scrollTop=0; } }
+  else if(action==='word-detail') { detailWord=Number(el.dataset.word); if(vocabulary[detailWord]) navigate('word-detail'); }
+  else if(action==='favorite') { const index=Number(el.dataset.word); if(!vocabulary[index])return; const exists=state.favorites.includes(index); state.favorites=exists?state.favorites.filter(i=>i!==index):[...state.favorites,index]; persist(); const scroll=main.scrollTop; render(); main.scrollTop=scroll; showToast(exists?'已取消收藏':'已收藏，可在「我的」中查看'); }
+  else if(action==='pronounce') pronounce(Number(el.dataset.word));
+  else if(action==='topic') { subjectIndex=Number(el.dataset.subject); detailTopic=Number(el.dataset.topic); navigate('topic'); }
+  else if(action==='math-home') navigate('math');
+  else if(action==='toggle-plan') { const key=subjects[subjectIndex].id+'-'+detailTopic, exists=state.planned.includes(key); state.planned=exists?state.planned.filter(k=>k!==key):[...state.planned,key]; persist(); const scroll=main.scrollTop; render(); main.scrollTop=scroll; showToast(exists?'已从学习计划中移除':'已加入计划，下一次接着学'); }
+  else if(action==='question') openQuestion(el.dataset.subject===undefined?subjectIndex:Number(el.dataset.subject));
+  else if(action==='answer' && !submitted) { selectedAnswer=Number(el.dataset.value); const scroll=main.scrollTop; render(); main.scrollTop=scroll; main.querySelector(`[data-od-id="answer-${selectedAnswer}"]`).focus({preventScroll:true}); }
+  else if(action==='submit-answer') {
+    if(selectedAnswer===null || submitted) return; submitted=true; const s=subjects[subjectIndex];
+    if(!state.solved.includes(s.id)) state.solved.push(s.id);
+    if(selectedAnswer===s.correct) state.wrong=state.wrong.filter(id=>id!==s.id); else if(!state.wrong.includes(s.id)) state.wrong.push(s.id);
+    persist(); render(); const feedback=document.getElementById('answer-feedback'); main.scrollTop=Math.max(0,feedback.offsetTop-main.offsetTop-18);
+  }
+  else if(action==='retry-question') { selectedAnswer=null; submitted=false; render(); main.scrollTop=0; }
+  else if(action==='finish-question') { navigate('math'); showToast('本题已计入今日学习记录'); }
+}
+function saveGoals(form) {
+  const data=Object.fromEntries(new FormData(form));
+  if(![20,30,50,80].includes(Number(data.words)) || ![3,5,10].includes(Number(data.math))) { showToast('请选择有效的学习目标'); return; }
+  state.goals={words:Number(data.words),math:Number(data.math),english:data.english,subject:data.subject,year:data.year}; persist();
+  document.getElementById('goal-save-status').textContent=`已保存：每天 ${data.words} 个单词、${data.math} 道题，从明天开始执行。`;
+  showToast('目标已保存，一起稳稳向前');
+}
+document.addEventListener('click', event=>{ const el=event.target.closest('[data-action]'); if(el && !el.disabled) handleAction(el.dataset.action,el); });
+document.addEventListener('submit',event=>{ if(event.target.id==='goal-form') { event.preventDefault(); saveGoals(event.target); } });
+document.addEventListener('input',event=>{ if(event.target.id==='knowledge-search') { searchTerm=event.target.value.trim(); document.getElementById('math-results').innerHTML=mathResults(); stampInspectable(main); } });
+document.getElementById('overlay').addEventListener('click',event=>{ if(event.target===event.currentTarget) { closeSheet(); if(sheetOpener) sheetOpener.focus(); } });
+document.addEventListener('keydown',event=>{ const overlay=document.getElementById('overlay'); if(!overlay.hidden) { if(event.key==='Escape') { closeSheet(); if(sheetOpener) sheetOpener.focus(); } if(event.key==='Tab') { const items=[...overlay.querySelectorAll('button, input, select')], first=items[0], last=items[items.length-1]; if(event.shiftKey && document.activeElement===first) { event.preventDefault(); last.focus(); } else if(!event.shiftKey && document.activeElement===last) { event.preventDefault(); first.focus(); } } return; } if(route==='question' && !submitted && event.target.getAttribute('role')==='radio' && ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(event.key)) { event.preventDefault(); selectedAnswer=((selectedAnswer??0)+(['ArrowLeft','ArrowUp'].includes(event.key)?3:1))%4; render(); main.querySelector(`[data-od-id="answer-${selectedAnswer}"]`).focus({preventScroll:true}); } });
+document.querySelector('[data-action="menu"]').innerHTML=icon('more');
+document.querySelector('[data-action="home"]').innerHTML=icon('mini');
+render();
+</script>
+</body>
+</html>

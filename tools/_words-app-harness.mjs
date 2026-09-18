@@ -81,6 +81,18 @@ check('底部不再有「我的收藏」', () => {
   return true
 })
 
+console.log('\n【单词页整体往下移】')
+check('单词页有 .words-page 钩子，且只在它上面加顶部留白', () => {
+  if (!wordsCode.includes('class="page words-page"')) throw new Error('单词页没有 .words-page 钩子类')
+  if (!/\.words-page\s+\.viewport\s*\{[^}]*padding-top/.test(words)) throw new Error('没有给单词页加顶部留白')
+  if (!/padding-top:\s*39px/.test(words)) throw new Error('留白数值不是 39px（19px 全局 + 20px 下移）')
+  // 反向断言：App.vue 的全局 .viewport 不能被改，否则其它页面跟着动
+  const appViewport = read('App.vue').match(/\.viewport\s*\{[^}]*\}/)
+  if (!appViewport) throw new Error('App.vue 里找不到 .viewport')
+  if (!/padding:\s*19px\s+20px\s+28px/.test(appViewport[0])) throw new Error('App.vue 的 .viewport 被改动了')
+  return true
+})
+
 console.log('\n【音标保留 + 去掉读音】')
 check('复习页 / 详情页：音标还在', () => {
   for (const [name, src] of [['复习页', review], ['详情页', detail]]) {

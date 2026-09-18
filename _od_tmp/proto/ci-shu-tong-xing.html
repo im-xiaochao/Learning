@@ -51,6 +51,8 @@ svg { width: 22px; height: 22px; flex: 0 0 auto; vertical-align: middle; }
 .viewport { min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: none; padding: 19px 20px 22px; }
 .viewport::-webkit-scrollbar { display: none; }
 .page { animation: enter 180ms ease-out; }
+/* 单词页内容整体往下移：只动这一页，不动 .viewport 的全局内边距 */
+.words-page { padding-top: 20px; }
 @keyframes enter { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .eyebrow { font-size: 11px; color: var(--muted); line-height: 1.6; letter-spacing: 0.6px; }
@@ -569,7 +571,7 @@ function wordsPage() {
   const learned=Math.min(plan.newTotal,Number(today.learned)||0), reviewed=Math.min(plan.reviewTotal,Number(today.reviewed)||0);
   const newLeft=plan.newTotal-learned, reviewLeft=plan.reviewTotal-reviewed, left=newLeft+reviewLeft, started=learned+reviewed>0;
   const statCard=(id,iconName,kicker,title,done,total,rest,doneNote)=>`<div class="study-card" data-od-id="${id}"><div class="row">${icon(iconName,'card-icon')}<span class="card-kicker">${kicker}</span></div><h3>${title}</h3><p class="study-numbers"><strong>${done}</strong> / ${total} 个</p>${progressBar(total?done/total*100:0)}<span class="card-link">${rest?`还剩 ${rest} 个`:doneNote}</span></div>`;
-  return `<section class="page" data-od-id="vocabulary-home"><p class="eyebrow">考研英语 · 核心词汇</p><h1 class="page-title" data-od-id="vocabulary-title">让每个单词，留得更久。</h1>
+  return `<section class="page words-page" data-od-id="vocabulary-home"><p class="eyebrow">考研英语 · 核心词汇</p><h1 class="page-title" data-od-id="vocabulary-title">让每个单词，留得更久。</h1>
   <div class="learning-grid mt20" data-od-id="vocabulary-today">${statCard('today-new-words','book','今日计划','今日新词',learned,plan.newTotal,newLeft,'今日新词已完成')}${statCard('today-review-words','refresh','温故知新','今日复习',reviewed,plan.reviewTotal,reviewLeft,'今日复习已完成')}</div>
   <button class="primary-button mt20" data-action="review-start" data-od-id="start-word-review">${started?(left?`继续学习 · 还剩 ${left} 个`:'今日已完成 · 再练一组'):'开始学习'}${icon('arrow')}</button><p class="quiet-note">不必一次记住，重要的是一次次相遇。</p>
   <div class="section-head"><h2 data-od-id="vocabulary-tools-heading">单词工具</h2><span>按自己的节奏来</span></div>

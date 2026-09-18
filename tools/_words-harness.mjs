@@ -96,6 +96,20 @@ function check(label, fn) {
   }
 }
 
+/**
+ * 样式表：脚本里没有 CSS，但「整体往下移」这种改动只能从 CSS 验。
+ * 约定：同目录同名 .html（od-words3.js → od-words3.html）里读 <style>；读不到就跳过。
+ */
+let CSS = ''
+{
+  const htmlPath = process.argv[2].replace(/\.js$/, '.html')
+  if (fs.existsSync(htmlPath)) {
+    const m = fs.readFileSync(htmlPath, 'utf8').match(/<style>([\s\S]*?)<\/style>/)
+    if (m) CSS = m[1]
+  }
+}
+console.log(`（样式表：${CSS ? `已加载 ${CSS.length} 字符` : '未找到同名 .html，CSS 断言会失败'}）`)
+
 const html = () => main.innerHTML
 const go = (route) => { G.navigate(route, false) }
 /** 模拟点击：直接调 handleAction，dataset 传按钮上的值 */
@@ -138,6 +152,12 @@ check('开始学习下方有「计划设定」卡', () => {
   if (!h.includes('data-route="word-plan"')) throw new Error('没有计划设定入口')
   if (!h.includes('>计划设定<')) throw new Error('卡片标题不是「计划设定」')
   if (h.indexOf('data-route="word-plan"') < h.indexOf('>开始学习<')) throw new Error('计划设定卡不在下方')
+  return true
+})
+
+check('单词页内容整体往下移（.words-page 顶部留白）', () => {
+  if (!html().includes('class="page words-page"')) throw new Error('单词页没有 .words-page 钩子类')
+  if (!/\.words-page\s*\{[^}]*padding-top/.test(CSS)) throw new Error('CSS 里没有 .words-page 的 padding-top')
   return true
 })
 

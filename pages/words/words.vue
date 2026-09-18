@@ -48,7 +48,7 @@ function goWordPlan() {
 </script>
 
 <template>
-  <view class="page">
+  <view class="page words-page">
     <AppHeader />
 
     <view class="viewport fade-in">
@@ -130,7 +130,14 @@ function goWordPlan() {
           </view>
         </button>
       </view>
-
     </view>
   </view>
 </template>
+
+<style scoped>
+/* 单词页内容整体往下移：只在单词页加顶部留白（.viewport 全局是 19px，这里补到 39px），
+   不动 App.vue 里 .viewport 的公共定义，其它页面不受影响。 */
+.words-page .viewport {
+  padding-top: 39px;
+}
+</style>
