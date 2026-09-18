@@ -46,6 +46,9 @@ const root = computed(() => word.value?.root)
 const mnemonic = computed(() => word.value?.mnemonic || '')
 const collocations = computed(() => word.value?.collocations || [])
 
+/** 深度内容的覆盖进度：目前只收录了一部分词，空态要把这个事实讲清楚，别让人以为坏了 */
+const deepTotal = appWords.filter((w) => w.root || w.mnemonic).length
+
 /**
  * 例句里高亮当前单词。用词边界匹配，避免 "approach" 命中 "approaches" 之外的
  * 无关子串；大小写不敏感（句首大写、专有名词形变）。
@@ -128,7 +131,9 @@ function onFavorite() {
             <view class="root-parts"><text>{{ root.display }}</text></view>
             <text class="section-body">{{ root.explanation }}</text>
           </template>
-          <text v-else class="section-body">这个词的词根与词源还没有收录。</text>
+          <text v-else class="section-body">
+            这个词的词根与词源还没有收录。回单词本按「有详解」筛选，可以看到已收录的词。
+          </text>
         </view>
 
         <view class="detail-section memory-note">
@@ -166,7 +171,8 @@ function onFavorite() {
         </view>
 
         <text class="quiet-note">
-          词根 / 助记 / 例句 / 搭配来自 data/english/word-content.ts，尚未覆盖全部词条。
+          词根 / 助记 / 例句 / 搭配来自 data/english/word-content.ts，已收录 {{ deepTotal }} /
+          {{ appWords.length }} 个词，其余会陆续补充——不为了填满界面编造内容。
         </text>
       </template>
 

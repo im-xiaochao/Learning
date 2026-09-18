@@ -109,6 +109,19 @@ check('单词本列出全部单词并带学习状态', () => {
   if (!wordbook.includes('limit')) throw new Error('5493 个词没做分批渲染')
   return true
 })
+check('有词根/助记的词标出来、可筛选（否则点开都是空态）', () => {
+  if (!/'有详解'/.test(wordbook)) throw new Error('没有「有详解」筛选')
+  if (!/deepIds|hasDeep/.test(wordbook)) throw new Error('没有按深度内容筛')
+  if (!wordbook.includes('wl-tag')) throw new Error('列表里没有「详解」标记')
+  return true
+})
+check('点开单词能看到词根与助记区块', () => {
+  if (!detail.includes('从词根，读懂单词')) throw new Error('没有词根区块')
+  if (!detail.includes('给记忆一个落脚点')) throw new Error('没有助记区块')
+  if (!/root\.display/.test(detail) || !/\{\{\s*mnemonic\s*\}\}/.test(detail)) throw new Error('没有渲染词根/助记内容')
+  if (!detail.includes('deepTotal')) throw new Error('没说明深度内容覆盖了多少词')
+  return true
+})
 check('计划设定可以改每天学多少个单词', () => {
   if (!wordPlan.includes('setDailyWords')) throw new Error('没有调用 setDailyWords')
   if (!wordPlan.includes('DAILY_WORD_OPTIONS')) throw new Error('选项不是来自 DAILY_WORD_OPTIONS')

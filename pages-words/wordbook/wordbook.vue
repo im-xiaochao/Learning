@@ -12,14 +12,23 @@ import { appWords } from '../words'
 
 const { getFamiliarity } = useLearning()
 
-type Filter = 'all' | 'new' | 'familiar' | 'fuzzy' | 'unknown'
+type Filter = 'all' | 'new' | 'familiar' | 'fuzzy' | 'unknown' | 'deep'
 const FILTERS: { value: Filter; label: string }[] = [
   { value: 'all', label: '全部' },
   { value: 'new', label: '未学习' },
   { value: 'familiar', label: '熟悉' },
   { value: 'fuzzy', label: '模糊' },
   { value: 'unknown', label: '不认识' },
+  { value: 'deep', label: '有详解' },
 ]
+
+/**
+ * 有词根 / 助记的词（深度内容）目前只覆盖了一小部分词库（数据来自
+ * data/english/word-content.ts，不能为了填满界面编造）。列表里给它们单独标出来、
+ * 并提供「有详解」筛选，否则用户随机点开几个都是空态，会以为功能没做。
+ */
+const deepIds: Set<string> = new Set(appWords.filter((w) => w.root || w.mnemonic).map((w) => w.id))
+const hasDeep = (id: string): boolean => deepIds.has(id)
 
 const LABELS: Record<string, string> = { familiar: '熟悉', fuzzy: '模糊', unknown: '不认识' }
 
@@ -54,11 +63,12 @@ const counts = computed(() => {
     learned += 1
     if (f !== 'familiar') weak += 1
   }
-  return { total: appWords.length, learned, weak }
+  return { total: appWords.length, learned, weak, deep: deepIds.size }
 })
 
 const matched = computed(() => {
   if (filter.value === 'all') return appWords
+  if (filter.value === 'deep') return appWords.filter((w) => deepIds.has(w.id))
   return appWords.filter((w) => {
     const f = getFamiliarity(w.id)
     if (filter.value === 'new') return f === undefined
@@ -88,6 +98,7 @@ function openDetail(id: string) {
       <text class="subtext mt12">
         共 {{ counts.total }} 个单词 · 已学 {{ counts.learned }} 个 · 待巩固 {{ counts.weak }} 个
       </text>
+      <text class="subtext">词根 / 助记已收录 {{ counts.deep }} 个，点开带「详解」标记的词可以看到。</text>
 
       <view class="src-switch">
         <button
@@ -114,8 +125,11 @@ function openDetail(id: string) {
             <text class="wl-word">{{ w.word }}</text>
             <text class="wl-meaning">{{ w.pos }} {{ w.meaning }}</text>
           </view>
-          <view class="pill" :class="{ orange: isPending(w.id) }">
-            <text>{{ statusLabel(w.id) }}</text>
+          <view class="wl-tail">
+            <text v-if="hasDeep(w.id)" class="wl-tag">详解</text>
+            <view class="pill" :class="{ orange: isPending(w.id) }">
+              <text>{{ statusLabel(w.id) }}</text>
+            </view>
           </view>
         </button>
       </view>
@@ -130,7 +144,26 @@ function openDetail(id: string) {
         <image src="/static/icons/chevron.png" mode="aspectFit" />
       </button>
 
-      <text class="quiet-note">点开单词，可以看到词根与助记。</text>
+      <text class="quiet-note">点开带「详解」标记的词，可以看到词根与助记。</text>
     </view>
   </view>
 </template>
+
+<style scoped>
+.wl-tail {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+}
+/* 「详解」= 这个词收录了词根 / 助记。没有这个词库里绝大多数词点开都是空态，
+   必须先让用户看得出哪些词有内容，否则等于功能不可发现。 */
+.wl-tag {
+  font-size: 9px;
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 5px;
+  line-height: 1.4;
+}
+</style>
