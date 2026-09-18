@@ -15,47 +15,47 @@
       "sectionId": "m1-p1-c3-s1",
       "sectionTitle": "原函数与不定积分",
       "title": "原函数定义",
-      "summary": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。",
+      "summary": "若在区间 I 上处处有 F′(x)=f(x)，就称 F(x) 是 f(x) 在 I 上的一个原函数。",
       "tags": [
-        "原函数族"
+        "导数的逆运算"
       ],
       "sortOrder": 10,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "F′(x)=f(x) ⇒ ∫f(x)dx=F(x)+C",
-        "caption": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。"
+        "content": "F′(x)=f(x) ⇒ F 为 f 的原函数",
+        "caption": "若在区间 I 上处处有 F′(x)=f(x)，就称 F(x) 是 f(x) 在 I 上的一个原函数。"
       },
       "keyPoints": [
         {
-          "id": "xian-que-ren-bei-ji-han-shu-zai-qu-jian-1ru5xm",
-          "title": "先确认被积函数在区间上连续",
-          "bodyMarkdown": "先确认被积函数在区间上连续"
+          "id": "f-f-f-shi-f-de-yuan-han-shu-fang-xiang-13v58a",
+          "title": "F′=f ⇒ F 是 f 的原函数",
+          "bodyMarkdown": "F′=f ⇒ F 是 f 的原函数，方向不能反"
         },
         {
-          "id": "ji-fen-chang-shu-c-bu-neng-lou",
-          "title": "积分常数 C 不能漏",
-          "bodyMarkdown": "积分常数 C 不能漏"
+          "id": "yuan-han-shu-shi-qu-jian-shang-de-gai-13sopn",
+          "title": "原函数是「区间上」的概念",
+          "bodyMarkdown": "原函数是「区间上」的概念，必须处处成立"
         },
         {
-          "id": "ding-ji-fen-dai-shang-xia-xian-shi-197oc5",
-          "title": "定积分代上下限时常数会相互抵消",
-          "bodyMarkdown": "定积分代上下限时常数会相互抵消"
+          "id": "lian-xu-han-shu-yi-ding-you-yuan-han-0hbusy",
+          "title": "连续函数一定有原函数（变限积分就是构造方法）",
+          "bodyMarkdown": "连续函数一定有原函数（变限积分就是构造方法）"
         }
       ],
       "examples": [
         {
-          "id": "2x-dx-x-c-dui-jie-guo-0xgt2x",
+          "id": "sin-x-shi-cos-x-de-yuan-0sw00d",
           "title": "讲解例子",
-          "bodyMarkdown": "∫2x dx=x²+C；对结果求导可回到 2x。"
+          "bodyMarkdown": "sin x 是 cos x 的原函数，因为 (sin x)′=cos x。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。\n\n### 解题步骤\n\n1. 识别被积函数\n2. 反向使用导数公式\n3. 加上任意常数并求导验证\n\n### 易错点\n\n把不定积分当成定积分，或漏写积分常数。"
+      "bodyMarkdown": "若在区间 I 上处处有 F′(x)=f(x)，就称 F(x) 是 f(x) 在 I 上的一个原函数。原函数是「把导数倒过来」的概念，要求在整个区间上成立，不能只在个别点成立。\n\n### 解题步骤\n\n1. 验证 F′=f\n2. 确认在指定区间上处处成立\n3. 必要时用变限积分构造\n\n### 易错点\n\n把原函数与导数弄反（求原函数是积分，不是求导）。"
     },
     {
       "schemaVersion": "1.0",
@@ -66,47 +66,47 @@
       "sectionId": "m1-p1-c3-s1",
       "sectionTitle": "原函数与不定积分",
       "title": "原函数族",
-      "summary": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。",
+      "summary": "同一函数的任意两个原函数只相差一个常数，所以全部原函数构成 F(x)+C 的形式，称为原函数族；这正是不定积分要加常数 C 的原因。",
       "tags": [
-        "原函数族"
+        "相差一个常数"
       ],
       "sortOrder": 20,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "F′(x)=f(x) ⇒ ∫f(x)dx=F(x)+C",
-        "caption": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。"
+        "content": "F(x)+C",
+        "caption": "同一函数的任意两个原函数只相差一个常数，所以全部原函数构成 F(x)+C 的形式，称为原函数族；这正是不定积分要加常数 C 的原因。"
       },
       "keyPoints": [
         {
-          "id": "xian-que-ren-bei-ji-han-shu-zai-qu-jian-1ru5xm",
-          "title": "先确认被积函数在区间上连续",
-          "bodyMarkdown": "先确认被积函数在区间上连续"
+          "id": "liang-ge-yuan-han-shu-zhi-cha-bi-wei-0lz6iw",
+          "title": "两个原函数之差必为常数",
+          "bodyMarkdown": "两个原函数之差必为常数"
         },
         {
-          "id": "ji-fen-chang-shu-c-bu-neng-lou",
-          "title": "积分常数 C 不能漏",
-          "bodyMarkdown": "积分常数 C 不能漏"
+          "id": "yuan-han-shu-zu-f-x-c-c-qu-bian-shi-shu",
+          "title": "原函数族 = F(x)+C（C 取遍实数）",
+          "bodyMarkdown": "原函数族 = F(x)+C（C 取遍实数）"
         },
         {
-          "id": "ding-ji-fen-dai-shang-xia-xian-shi-197oc5",
-          "title": "定积分代上下限时常数会相互抵消",
-          "bodyMarkdown": "定积分代上下限时常数会相互抵消"
+          "id": "c-de-ren-yi-xing-lai-zi-chang-shu-dao-1bjnu2",
+          "title": "C 的任意性来自「常数导数为 0」",
+          "bodyMarkdown": "C 的任意性来自「常数导数为 0」"
         }
       ],
       "examples": [
         {
-          "id": "2x-dx-x-c-dui-jie-guo-0xgt2x",
+          "id": "x-2-x-2-3-x-2-1-dou-shi-0f2o1n",
           "title": "讲解例子",
-          "bodyMarkdown": "∫2x dx=x²+C；对结果求导可回到 2x。"
+          "bodyMarkdown": "x²/2、x²/2+3、x²/2−1 都是 x 的原函数。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。\n\n### 解题步骤\n\n1. 识别被积函数\n2. 反向使用导数公式\n3. 加上任意常数并求导验证\n\n### 易错点\n\n把不定积分当成定积分，或漏写积分常数。"
+      "bodyMarkdown": "同一函数的任意两个原函数只相差一个常数，所以全部原函数构成 F(x)+C 的形式，称为原函数族；这正是不定积分要加常数 C 的原因。\n\n### 解题步骤\n\n1. 求出一个原函数\n2. 加上任意常数 C\n3. 写成 F(x)+C 的形式\n\n### 易错点\n\n漏写常数 C，把原函数族写成一个函数。"
     },
     {
       "schemaVersion": "1.0",
@@ -117,47 +117,47 @@
       "sectionId": "m1-p1-c3-s1",
       "sectionTitle": "原函数与不定积分",
       "title": "不定积分",
-      "summary": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。",
+      "summary": "不定积分 ∫f(x)dx=F(x)+C 表示 f 的全部原函数，它的结果是函数族而不是一个函数；求不定积分就是求原函数，结果必须带常数 C。",
       "tags": [
-        "原函数族"
+        "原函数族的记号"
       ],
       "sortOrder": 30,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "F′(x)=f(x) ⇒ ∫f(x)dx=F(x)+C",
-        "caption": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。"
+        "content": "∫f(x)dx=F(x)+C",
+        "caption": "不定积分 ∫f(x)dx=F(x)+C 表示 f 的全部原函数，它的结果是函数族而不是一个函数；求不定积分就是求原函数，结果必须带常数 C。"
       },
       "keyPoints": [
         {
-          "id": "xian-que-ren-bei-ji-han-shu-zai-qu-jian-1ru5xm",
-          "title": "先确认被积函数在区间上连续",
-          "bodyMarkdown": "先确认被积函数在区间上连续"
+          "id": "f-x-dx-f-x-c-jie-guo-shi-han-shu-zu",
+          "title": "∫f(x)dx=F(x)+C",
+          "bodyMarkdown": "∫f(x)dx=F(x)+C，结果是函数族"
         },
         {
-          "id": "ji-fen-chang-shu-c-bu-neng-lou",
-          "title": "积分常数 C 不能漏",
-          "bodyMarkdown": "积分常数 C 不能漏"
+          "id": "qiu-dao-yu-ji-fen-hu-wei-ni-yun-suan-f-19bhq6",
+          "title": "求导与积分互为逆运算",
+          "bodyMarkdown": "求导与积分互为逆运算：(∫f dx)′=f"
         },
         {
-          "id": "ding-ji-fen-dai-shang-xia-xian-shi-197oc5",
-          "title": "定积分代上下限时常数会相互抵消",
-          "bodyMarkdown": "定积分代上下限时常数会相互抵消"
+          "id": "bu-ding-ji-fen-yu-ding-ji-fen-de-qu-bie-1tsaty",
+          "title": "不定积分与定积分的区别",
+          "bodyMarkdown": "不定积分与定积分的区别：前者是函数，后者是数"
         }
       ],
       "examples": [
         {
-          "id": "2x-dx-x-c-dui-jie-guo-0xgt2x",
+          "id": "2x-dx-x-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫2x dx=x²+C；对结果求导可回到 2x。"
+          "bodyMarkdown": "∫2x dx=x²+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。\n\n### 解题步骤\n\n1. 识别被积函数\n2. 反向使用导数公式\n3. 加上任意常数并求导验证\n\n### 易错点\n\n把不定积分当成定积分，或漏写积分常数。"
+      "bodyMarkdown": "不定积分 ∫f(x)dx=F(x)+C 表示 f 的全部原函数，它的结果是函数族而不是一个函数；求不定积分就是求原函数，结果必须带常数 C。\n\n### 解题步骤\n\n1. 识别被积函数类型\n2. 选择换元或分部等方法\n3. 写出结果并加 C\n\n### 易错点\n\n把不定积分的结果写成一个确定的函数（漏掉 C）。"
     },
     {
       "schemaVersion": "1.0",
@@ -168,47 +168,47 @@
       "sectionId": "m1-p1-c3-s1",
       "sectionTitle": "原函数与不定积分",
       "title": "积分常数",
-      "summary": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。",
+      "summary": "积分常数 C 表示原函数族的任意性，在不定积分里不可省略；而在定积分中，常数会在上下限相减时抵消，所以定积分结果里不写 C。",
       "tags": [
-        "原函数族"
+        "别忘了加 C"
       ],
       "sortOrder": 40,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "F′(x)=f(x) ⇒ ∫f(x)dx=F(x)+C",
-        "caption": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。"
+        "content": "∫f dx=F(x)+C",
+        "caption": "积分常数 C 表示原函数族的任意性，在不定积分里不可省略；而在定积分中，常数会在上下限相减时抵消，所以定积分结果里不写 C。"
       },
       "keyPoints": [
         {
-          "id": "xian-que-ren-bei-ji-han-shu-zai-qu-jian-1ru5xm",
-          "title": "先确认被积函数在区间上连续",
-          "bodyMarkdown": "先确认被积函数在区间上连续"
+          "id": "bu-ding-ji-fen-bi-xu-xie-c",
+          "title": "不定积分必须写 +C",
+          "bodyMarkdown": "不定积分必须写 +C"
         },
         {
-          "id": "ji-fen-chang-shu-c-bu-neng-lou",
-          "title": "积分常数 C 不能漏",
-          "bodyMarkdown": "积分常数 C 不能漏"
+          "id": "ding-ji-fen-you-f-b-f-a-de-dao-chang-08izy6",
+          "title": "定积分由 F(b)−F(a) 得到",
+          "bodyMarkdown": "定积分由 F(b)−F(a) 得到，常数自动抵消"
         },
         {
-          "id": "ding-ji-fen-dai-shang-xia-xian-shi-197oc5",
-          "title": "定积分代上下限时常数会相互抵消",
-          "bodyMarkdown": "定积分代上下限时常数会相互抵消"
+          "id": "tong-yi-ge-bu-ding-ji-fen-ke-yi-xie-1nx4qg",
+          "title": "同一个不定积分可以写成不同形式（相差常数）",
+          "bodyMarkdown": "同一个不定积分可以写成不同形式（相差常数）"
         }
       ],
       "examples": [
         {
-          "id": "2x-dx-x-c-dui-jie-guo-0xgt2x",
+          "id": "cos-x-dx-sin-x-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫2x dx=x²+C；对结果求导可回到 2x。"
+          "bodyMarkdown": "∫cos x dx=sin x+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "原函数是导数等于被积函数的函数；同一函数的所有原函数只相差一个常数，所以不定积分表示的是一族曲线，而不是一个数。\n\n### 解题步骤\n\n1. 识别被积函数\n2. 反向使用导数公式\n3. 加上任意常数并求导验证\n\n### 易错点\n\n把不定积分当成定积分，或漏写积分常数。"
+      "bodyMarkdown": "积分常数 C 表示原函数族的任意性，在不定积分里不可省略；而在定积分中，常数会在上下限相减时抵消，所以定积分结果里不写 C。\n\n### 解题步骤\n\n1. 求出原函数\n2. 补上 +C\n3. 定积分时用上下限作差\n\n### 易错点\n\n在定积分结果后面也加 C（多余且错）。"
     },
     {
       "schemaVersion": "1.0",
@@ -219,51 +219,47 @@
       "sectionId": "m1-p1-c3-s1",
       "sectionTitle": "原函数与不定积分",
       "title": "基本性质",
-      "summary": "定积分性质可以整理成六条：性质1（区间长度）∫ₐᵇ1dx=b−a；性质2（线性）∫[k₁f±k₂g]=k₁∫f±k₂∫g；",
+      "summary": "不定积分的基本性质有两条：线性性（常数可提、和差可拆）与互逆性（微分与积分互为逆运算）。",
       "tags": [
-        "累积量的规则"
+        "线性与互逆"
       ],
       "sortOrder": 50,
-      "estimatedMinutes": 7,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫ₐᵇ[k₁f±k₂g]=k₁∫ₐᵇf±k₂∫ₐᵇg；∫ₐᵇ=∫ₐᶜ+∫ᶜᵇ；|∫ₐᵇf|≤∫ₐᵇ|f|；mL≤∫ₐᵇf≤ML",
-        "caption": "定积分性质可以整理成六条：性质1（区间长度）∫ₐᵇ1dx=b−a；"
+        "content": "∫(k₁f+k₂g)dx=k₁∫f dx+k₂∫g dx",
+        "caption": "不定积分的基本性质有两条：线性性（常数可提、和差可拆）与互逆性（微分与积分互为逆运算）。"
       },
       "keyPoints": [
         {
-          "id": "bao-hao-xing-yao-qiu-xia-xian-xiao-yu-0k3fky",
-          "title": "保号性要求下限小于上限",
-          "bodyMarkdown": "保号性要求下限小于上限，方向反了要变号"
+          "id": "xian-xing-k-f-k-g-dx-k-f-dx-k-g-dx",
+          "title": "线性：∫(k₁f+k₂g)dx=k₁∫f dx+",
+          "bodyMarkdown": "线性：∫(k₁f+k₂g)dx=k₁∫f dx+k₂∫g dx"
         },
         {
-          "id": "f-f-xian-ji-fen-ke-neng-di-xiao-xian-qu-05lkny",
-          "title": "|∫f|≤∫|f|",
-          "bodyMarkdown": "|∫f|≤∫|f|：先积分可能抵消，先取绝对值只增不减"
+          "id": "hu-ni-f-dx-f-x-f-x-dx-f-x-c",
+          "title": "互逆：(∫f dx)′=f(x)，∫f′(x)d",
+          "bodyMarkdown": "互逆：(∫f dx)′=f(x)，∫f′(x)dx=f(x)+C"
         },
         {
-          "id": "gu-zhi-yu-zhong-zhi-ding-li-pei-he-xian-1eeenl",
-          "title": "估值与中值定理配合",
-          "bodyMarkdown": "估值与中值定理配合：先用最值夹住积分，再收拢到某一点"
+          "id": "mei-you-ji-de-ji-fen-deng-yu-ji-fen-zhi-0qhaaa",
+          "title": "没有「积的积分等于积分之积」这种法则",
+          "bodyMarkdown": "没有「积的积分等于积分之积」这种法则"
         }
       ],
       "examples": [
         {
-          "id": "x-2-dx-4-x-de-qi-dui-1vyyht",
+          "id": "2x-cos-x-dx-x-sin-x-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫₋₁¹(x³+2)dx=4：x³ 的奇对称部分积分为 0，只剩偶对称部分两倍一半区间。"
+          "bodyMarkdown": "∫(2x+cos x)dx=x²+sin x+C。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第8讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "定积分性质可以整理成六条：性质1（区间长度）∫ₐᵇ1dx=b−a；性质2（线性）∫[k₁f±k₂g]=k₁∫f±k₂∫g；性质3（可加性）∫ₐᵇ=∫ₐᶜ+∫ᶜᵇ，与 a、b、c 大小顺序无关；性质4（保号性）f≤g 则 ∫f≤∫g，特别地 |∫f|≤∫|f|（“亡羊补牢 ≤ 未雨绸缪”）；性质5（估值定理）mL≤∫f≤ML；性质6（中值定理）∫f=f(ξ)(b−a)。奇偶对称性还能把计算量直接减半。\n\n### 解题步骤\n\n1. 先看函数符号、对称性与区间方向\n2. 选择拆分区间或线性拆开\n3. 需要估计时用保号性、估值定理\n\n### 易错点\n\n“面积”与“定积分”不总是一回事：负值区域积分为负，求面积要分段加绝对值。"
+      "bodyMarkdown": "不定积分的基本性质有两条：线性性（常数可提、和差可拆）与互逆性（微分与积分互为逆运算）。这两条是后面所有积分技巧的基础。\n\n### 解题步骤\n\n1. 把式子拆成基本积分之和\n2. 逐项积分\n3. 合并并加 C\n\n### 易错点\n\n把 ∫fg dx 拆成 ∫f dx·∫g dx。"
     },
     {
       "schemaVersion": "1.0",
@@ -274,47 +270,47 @@
       "sectionId": "m1-p1-c3-s2",
       "sectionTitle": "基本积分公式",
       "title": "幂函数",
-      "summary": "基本积分公式是后续换元、分部和定积分计算的词典。先识别幂、指数、对数、三角或反三角结构，再把内层函数的导数补齐；遇到负指数、绝对值或定义域限制时要单独检查。",
+      "summary": "∫xᵃdx=xᵃ⁺¹/(α+1)+C（α≠−1）；α=−1 是唯一的例外，此时 ∫dx/x=ln|x|+C，不能套幂公式。",
       "tags": [
-        "基本积分表"
+        "幂的积分公式"
       ],
       "sortOrder": 60,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫xᵅdx=xᵅ⁺¹/(α+1)+C（α≠−1）；∫eˣdx=eˣ+C；∫dx/x=ln|x|+C",
-        "caption": "基本积分公式是后续换元、分部和定积分计算的词典。"
+        "content": "∫xᵃdx=xᵃ⁺¹/(α+1)+C（α≠−1）",
+        "caption": "∫xᵃdx=xᵃ⁺¹/(α+1)+C（α≠−1）；α=−1 是唯一的例外，此时 ∫dx/x=ln|x|+C，不能套幂公式。"
       },
       "keyPoints": [
         {
-          "id": "mi-han-shu-ji-fen-yao-qu-fen-zhi-shu-1-0y2use",
-          "title": "幂函数积分要区分指数 −1 的特殊情形",
-          "bodyMarkdown": "幂函数积分要区分指数 −1 的特殊情形"
+          "id": "x-dx-x-1-c-1",
+          "title": "∫xᵃdx=xᵃ⁺¹/(α+1)+C（α≠−1）",
+          "bodyMarkdown": "∫xᵃdx=xᵃ⁺¹/(α+1)+C（α≠−1）"
         },
         {
-          "id": "fu-he-jie-gou-you-xian-guan-cha-shi-fou-0cfmvx",
-          "title": "复合结构优先观察是否能凑出微分",
-          "bodyMarkdown": "复合结构优先观察是否能凑出微分"
+          "id": "1-shi-yong-dx-x-ln-x-c",
+          "title": "α=−1 时用 ∫dx/x=ln|x|+C",
+          "bodyMarkdown": "α=−1 时用 ∫dx/x=ln|x|+C"
         },
         {
-          "id": "bu-ding-ji-fen-zui-hou-yao-jia-ji-fen-1eycy2",
-          "title": "不定积分最后要加积分常数 C",
-          "bodyMarkdown": "不定积分最后要加积分常数 C"
+          "id": "fu-zhi-shu-fen-shu-zhi-shu-dou-an-tong-1j710n",
+          "title": "负指数、分数指数都按同一公式处理",
+          "bodyMarkdown": "负指数、分数指数都按同一公式处理"
         }
       ],
       "examples": [
         {
-          "id": "2x-1-2dx-2x-1-6-c-xian-0eqwy3",
+          "id": "x-dx-x-1-2-dx-2-3-x-3-2-0m2y20",
           "title": "讲解例子",
-          "bodyMarkdown": "∫(2x+1)⁵·2dx=(2x+1)⁶/6+C，先把内层导数 2 看出来。"
+          "bodyMarkdown": "∫√x dx=∫x^{1/2}dx=(2/3)x^{3/2}+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "基本积分公式是后续换元、分部和定积分计算的词典。先识别幂、指数、对数、三角或反三角结构，再把内层函数的导数补齐；遇到负指数、绝对值或定义域限制时要单独检查。\n\n### 解题步骤\n\n1. 识别基本函数类型\n2. 检查是否需要凑微分\n3. 写原函数并补上 C\n\n### 易错点\n\n把 ∫dx/x 写成 ln x 而漏掉绝对值，或忘记 α=−1 时应写 ln|x|。"
+      "bodyMarkdown": "∫xᵃdx=xᵃ⁺¹/(α+1)+C（α≠−1）；α=−1 是唯一的例外，此时 ∫dx/x=ln|x|+C，不能套幂公式。\n\n### 解题步骤\n\n1. 确认指数不等于 −1\n2. 套用幂公式（指数加 1、除以新指数）\n3. 指数为 −1 时改用对数\n\n### 易错点\n\n对 1/x 也用幂公式，导致除以 0。"
     },
     {
       "schemaVersion": "1.0",
@@ -325,47 +321,47 @@
       "sectionId": "m1-p1-c3-s2",
       "sectionTitle": "基本积分公式",
       "title": "指数函数",
-      "summary": "基本积分公式是后续换元、分部和定积分计算的词典。先识别幂、指数、对数、三角或反三角结构，再把内层函数的导数补齐；遇到负指数、绝对值或定义域限制时要单独检查。",
+      "summary": "∫eˣdx=eˣ+C，∫aˣdx=aˣ/ln a+C（a>0 且 a≠1）。",
       "tags": [
-        "基本积分表"
+        "指数积分"
       ],
       "sortOrder": 70,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫xᵅdx=xᵅ⁺¹/(α+1)+C（α≠−1）；∫eˣdx=eˣ+C；∫dx/x=ln|x|+C",
-        "caption": "基本积分公式是后续换元、分部和定积分计算的词典。"
+        "content": "∫eˣdx=eˣ+C；∫aˣdx=aˣ/ln a+C",
+        "caption": "∫eˣdx=eˣ+C，∫aˣdx=aˣ/ln a+C（a>0 且 a≠1）。"
       },
       "keyPoints": [
         {
-          "id": "mi-han-shu-ji-fen-yao-qu-fen-zhi-shu-1-0y2use",
-          "title": "幂函数积分要区分指数 −1 的特殊情形",
-          "bodyMarkdown": "幂函数积分要区分指数 −1 的特殊情形"
+          "id": "e-dx-e-c",
+          "title": "∫eˣdx=eˣ+C",
+          "bodyMarkdown": "∫eˣdx=eˣ+C"
         },
         {
-          "id": "fu-he-jie-gou-you-xian-guan-cha-shi-fou-0cfmvx",
-          "title": "复合结构优先观察是否能凑出微分",
-          "bodyMarkdown": "复合结构优先观察是否能凑出微分"
+          "id": "a-dx-a-ln-a-c-fen-mu-shi-ln-a",
+          "title": "∫aˣdx=aˣ/ln a+C",
+          "bodyMarkdown": "∫aˣdx=aˣ/ln a+C，分母是 ln a"
         },
         {
-          "id": "bu-ding-ji-fen-zui-hou-yao-jia-ji-fen-1eycy2",
-          "title": "不定积分最后要加积分常数 C",
-          "bodyMarkdown": "不定积分最后要加积分常数 C"
+          "id": "yu-dao-shu-dui-zhao-ji-qiu-dao-cheng-ln-0utelj",
+          "title": "与导数对照记",
+          "bodyMarkdown": "与导数对照记：求导乘 ln a，积分除 ln a"
         }
       ],
       "examples": [
         {
-          "id": "2x-1-2dx-2x-1-6-c-xian-0eqwy3",
+          "id": "2-dx-2-ln-2-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫(2x+1)⁵·2dx=(2x+1)⁶/6+C，先把内层导数 2 看出来。"
+          "bodyMarkdown": "∫2ˣdx=2ˣ/ln 2+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "基本积分公式是后续换元、分部和定积分计算的词典。先识别幂、指数、对数、三角或反三角结构，再把内层函数的导数补齐；遇到负指数、绝对值或定义域限制时要单独检查。\n\n### 解题步骤\n\n1. 识别基本函数类型\n2. 检查是否需要凑微分\n3. 写原函数并补上 C\n\n### 易错点\n\n把 ∫dx/x 写成 ln x 而漏掉绝对值，或忘记 α=−1 时应写 ln|x|。"
+      "bodyMarkdown": "∫eˣdx=eˣ+C，∫aˣdx=aˣ/ln a+C（a>0 且 a≠1）。指数函数积分后形式几乎不变，是最容易处理的一类。\n\n### 解题步骤\n\n1. 识别底数是否为 e\n2. 套对应公式\n3. 加 C\n\n### 易错点\n\n把 ∫aˣdx 写成 aˣln a（那是导数）。"
     },
     {
       "schemaVersion": "1.0",
@@ -376,47 +372,47 @@
       "sectionId": "m1-p1-c3-s2",
       "sectionTitle": "基本积分公式",
       "title": "三角函数",
-      "summary": "基本积分公式是后续换元、分部和定积分计算的词典。先识别幂、指数、对数、三角或反三角结构，再把内层函数的导数补齐；遇到负指数、绝对值或定义域限制时要单独检查。",
+      "summary": "常用三角积分：∫sin x dx=−cos x+C、∫cos x dx=sin x+C、∫dx/cos²x=tan x+C；遇到平方项先用降幂或倍角公式变形。",
       "tags": [
-        "基本积分表"
+        "三角积分"
       ],
       "sortOrder": 80,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫xᵅdx=xᵅ⁺¹/(α+1)+C（α≠−1）；∫eˣdx=eˣ+C；∫dx/x=ln|x|+C",
-        "caption": "基本积分公式是后续换元、分部和定积分计算的词典。"
+        "content": "∫sin x dx=−cos x+C；∫cos x dx=sin x+C",
+        "caption": "常用三角积分：∫sin x dx=−cos x+C、∫cos x dx=sin x+C"
       },
       "keyPoints": [
         {
-          "id": "mi-han-shu-ji-fen-yao-qu-fen-zhi-shu-1-0y2use",
-          "title": "幂函数积分要区分指数 −1 的特殊情形",
-          "bodyMarkdown": "幂函数积分要区分指数 −1 的特殊情形"
+          "id": "sin-x-dx-cos-x-c-zhu-yi-fu-hao",
+          "title": "∫sin x dx=−cos x+C（注意负号）",
+          "bodyMarkdown": "∫sin x dx=−cos x+C（注意负号）"
         },
         {
-          "id": "fu-he-jie-gou-you-xian-guan-cha-shi-fou-0cfmvx",
-          "title": "复合结构优先观察是否能凑出微分",
-          "bodyMarkdown": "复合结构优先观察是否能凑出微分"
+          "id": "cos-x-dx-sin-x-c",
+          "title": "∫cos x dx=sin x+C",
+          "bodyMarkdown": "∫cos x dx=sin x+C"
         },
         {
-          "id": "bu-ding-ji-fen-zui-hou-yao-jia-ji-fen-1eycy2",
-          "title": "不定积分最后要加积分常数 C",
-          "bodyMarkdown": "不定积分最后要加积分常数 C"
+          "id": "dx-cos-x-tan-x-c-ping-fang-xiang-xian-1u3ymf",
+          "title": "∫dx/cos²x=tan x+C",
+          "bodyMarkdown": "∫dx/cos²x=tan x+C；平方项先降幂"
         }
       ],
       "examples": [
         {
-          "id": "2x-1-2dx-2x-1-6-c-xian-0eqwy3",
+          "id": "sin-x-cos-x-dx-cos-x-0sq3gd",
           "title": "讲解例子",
-          "bodyMarkdown": "∫(2x+1)⁵·2dx=(2x+1)⁶/6+C，先把内层导数 2 看出来。"
+          "bodyMarkdown": "∫(sin x+cos x)dx=−cos x+sin x+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "基本积分公式是后续换元、分部和定积分计算的词典。先识别幂、指数、对数、三角或反三角结构，再把内层函数的导数补齐；遇到负指数、绝对值或定义域限制时要单独检查。\n\n### 解题步骤\n\n1. 识别基本函数类型\n2. 检查是否需要凑微分\n3. 写原函数并补上 C\n\n### 易错点\n\n把 ∫dx/x 写成 ln x 而漏掉绝对值，或忘记 α=−1 时应写 ln|x|。"
+      "bodyMarkdown": "常用三角积分：∫sin x dx=−cos x+C、∫cos x dx=sin x+C、∫dx/cos²x=tan x+C；遇到平方项先用降幂或倍角公式变形。\n\n### 解题步骤\n\n1. 识别三角类型\n2. 必要时先变形（降幂、倍角）\n3. 套公式积分\n\n### 易错点\n\n忘记 sin 的积分带负号。"
     },
     {
       "schemaVersion": "1.0",
@@ -427,47 +423,47 @@
       "sectionId": "m1-p1-c3-s2",
       "sectionTitle": "基本积分公式",
       "title": "反三角结构",
-      "summary": "基本积分公式是后续换元、分部和定积分计算的词典。先识别幂、指数、对数、三角或反三角结构，再把内层函数的导数补齐；遇到负指数、绝对值或定义域限制时要单独检查。",
+      "summary": "形如 ∫dx/(1+x²)=arctan x+C、∫dx/√(1−x²)=arcsin x+C 的积分，被积函数是反三角函数的导数形式，见到这类结构直接套用。",
       "tags": [
-        "基本积分表"
+        "看到 1+x² 想 arctan"
       ],
       "sortOrder": 90,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫xᵅdx=xᵅ⁺¹/(α+1)+C（α≠−1）；∫eˣdx=eˣ+C；∫dx/x=ln|x|+C",
-        "caption": "基本积分公式是后续换元、分部和定积分计算的词典。"
+        "content": "∫dx/(a²+x²)=(1/a)arctan(x/a)+C",
+        "caption": "形如 ∫dx/(1+x²)=arctan x+C、∫dx/√(1−x²)=arcsin x+C 的积分"
       },
       "keyPoints": [
         {
-          "id": "mi-han-shu-ji-fen-yao-qu-fen-zhi-shu-1-0y2use",
-          "title": "幂函数积分要区分指数 −1 的特殊情形",
-          "bodyMarkdown": "幂函数积分要区分指数 −1 的特殊情形"
+          "id": "dx-1-x-arctan-x-c",
+          "title": "∫dx/(1+x²)=arctan x+C",
+          "bodyMarkdown": "∫dx/(1+x²)=arctan x+C"
         },
         {
-          "id": "fu-he-jie-gou-you-xian-guan-cha-shi-fou-0cfmvx",
-          "title": "复合结构优先观察是否能凑出微分",
-          "bodyMarkdown": "复合结构优先观察是否能凑出微分"
+          "id": "dx-1-x-arcsin-x-c",
+          "title": "∫dx/√(1−x²)=arcsin x+C",
+          "bodyMarkdown": "∫dx/√(1−x²)=arcsin x+C"
         },
         {
-          "id": "bu-ding-ji-fen-zui-hou-yao-jia-ji-fen-1eycy2",
-          "title": "不定积分最后要加积分常数 C",
-          "bodyMarkdown": "不定积分最后要加积分常数 C"
+          "id": "fen-mu-dai-xi-shu-shi-ti-chu-1-a-dx-a-x-0x1fd7",
+          "title": "分母带系数时提出 1/a",
+          "bodyMarkdown": "分母带系数时提出 1/a：∫dx/(a²+x²)=(1/a)arctan(x/a)+C"
         }
       ],
       "examples": [
         {
-          "id": "2x-1-2dx-2x-1-6-c-xian-0eqwy3",
+          "id": "dx-4-x-1-2-arctan-x-2-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫(2x+1)⁵·2dx=(2x+1)⁶/6+C，先把内层导数 2 看出来。"
+          "bodyMarkdown": "∫dx/(4+x²)=(1/2)arctan(x/2)+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "基本积分公式是后续换元、分部和定积分计算的词典。先识别幂、指数、对数、三角或反三角结构，再把内层函数的导数补齐；遇到负指数、绝对值或定义域限制时要单独检查。\n\n### 解题步骤\n\n1. 识别基本函数类型\n2. 检查是否需要凑微分\n3. 写原函数并补上 C\n\n### 易错点\n\n把 ∫dx/x 写成 ln x 而漏掉绝对值，或忘记 α=−1 时应写 ln|x|。"
+      "bodyMarkdown": "形如 ∫dx/(1+x²)=arctan x+C、∫dx/√(1−x²)=arcsin x+C 的积分，被积函数是反三角函数的导数形式，见到这类结构直接套用。\n\n### 解题步骤\n\n1. 识别分母结构\n2. 凑成标准形式\n3. 套反三角公式\n\n### 易错点\n\n忘记提出分母的系数。"
     },
     {
       "schemaVersion": "1.0",
@@ -478,47 +474,47 @@
       "sectionId": "m1-p1-c3-s2",
       "sectionTitle": "基本积分公式",
       "title": "对数结构",
-      "summary": "基本积分公式是后续换元、分部和定积分计算的词典。先识别幂、指数、对数、三角或反三角结构，再把内层函数的导数补齐；遇到负指数、绝对值或定义域限制时要单独检查。",
+      "summary": "对数型积分：∫f′(x)/f(x)dx=ln|f(x)|+C。",
       "tags": [
-        "基本积分表"
+        "分子是分母的导数"
       ],
       "sortOrder": 100,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫xᵅdx=xᵅ⁺¹/(α+1)+C（α≠−1）；∫eˣdx=eˣ+C；∫dx/x=ln|x|+C",
-        "caption": "基本积分公式是后续换元、分部和定积分计算的词典。"
+        "content": "∫f′(x)/f(x)dx=ln|f(x)|+C",
+        "caption": "对数型积分：∫f′(x)/f(x)dx=ln|f(x)|+C。"
       },
       "keyPoints": [
         {
-          "id": "mi-han-shu-ji-fen-yao-qu-fen-zhi-shu-1-0y2use",
-          "title": "幂函数积分要区分指数 −1 的特殊情形",
-          "bodyMarkdown": "幂函数积分要区分指数 −1 的特殊情形"
+          "id": "f-f-dx-ln-f-x-c",
+          "title": "∫f′/f dx=ln|f(x)|+C",
+          "bodyMarkdown": "∫f′/f dx=ln|f(x)|+C"
         },
         {
-          "id": "fu-he-jie-gou-you-xian-guan-cha-shi-fou-0cfmvx",
-          "title": "复合结构优先观察是否能凑出微分",
-          "bodyMarkdown": "复合结构优先观察是否能凑出微分"
+          "id": "fen-zi-yu-fen-mu-dao-shu-cha-chang-shu-01zllw",
+          "title": "分子与分母导数差常数倍时先调整系数",
+          "bodyMarkdown": "分子与分母导数差常数倍时先调整系数"
         },
         {
-          "id": "bu-ding-ji-fen-zui-hou-yao-jia-ji-fen-1eycy2",
-          "title": "不定积分最后要加积分常数 C",
-          "bodyMarkdown": "不定积分最后要加积分常数 C"
+          "id": "jue-dui-zhi-bu-neng-sheng-ding-yi-yu-ke-0m1ucn",
+          "title": "绝对值不能省（定义域可能为负）",
+          "bodyMarkdown": "绝对值不能省（定义域可能为负）"
         }
       ],
       "examples": [
         {
-          "id": "2x-1-2dx-2x-1-6-c-xian-0eqwy3",
+          "id": "2x-x-1-dx-ln-x-1-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫(2x+1)⁵·2dx=(2x+1)⁶/6+C，先把内层导数 2 看出来。"
+          "bodyMarkdown": "∫2x/(x²+1)dx=ln(x²+1)+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "基本积分公式是后续换元、分部和定积分计算的词典。先识别幂、指数、对数、三角或反三角结构，再把内层函数的导数补齐；遇到负指数、绝对值或定义域限制时要单独检查。\n\n### 解题步骤\n\n1. 识别基本函数类型\n2. 检查是否需要凑微分\n3. 写原函数并补上 C\n\n### 易错点\n\n把 ∫dx/x 写成 ln x 而漏掉绝对值，或忘记 α=−1 时应写 ln|x|。"
+      "bodyMarkdown": "对数型积分：∫f′(x)/f(x)dx=ln|f(x)|+C。只要分子是分母的导数（或相差常数倍），积分结果就是对数。\n\n### 解题步骤\n\n1. 检查分子是否为分母的导数\n2. 调整常数倍\n3. 写成对数形式\n\n### 易错点\n\n漏掉绝对值，或忘记调整常数倍。"
     },
     {
       "schemaVersion": "1.0",
@@ -529,9 +525,9 @@
       "sectionId": "m1-p1-c3-s3",
       "sectionTitle": "换元积分法",
       "title": "第一类换元：凑微分",
-      "summary": "换元积分的目标是把“外层函数和内层导数”配成一个整体。换元不是单纯替换字母，必须同时处理 dx；定积分还要把上下限一起换掉，避免回代时出错。",
+      "summary": "第一类换元法把 ∫f(g(x))g′(x)dx 写成 ∫f(u)du：先把 g′(x)dx 凑成 dg(x)，再整体换元，积分后回代。",
       "tags": [
-        "换变量降复杂度"
+        "把微分凑出来"
       ],
       "sortOrder": 110,
       "estimatedMinutes": 4,
@@ -539,37 +535,37 @@
         "type": "formula",
         "format": "text",
         "content": "∫f(g(x))g′(x)dx=∫f(u)du",
-        "caption": "换元积分的目标是把“外层函数和内层导数”配成一个整体。"
+        "caption": "第一类换元法把 ∫f(g(x))g′(x)dx 写成 ∫f(u)du：先把 g′(x)dx 凑成 dg(x)，再整体换元，积分后回代。"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-huan-yuan-chang-jian-yu-cou-17le6n",
-          "title": "第一类换元常见于凑微分",
-          "bodyMarkdown": "第一类换元常见于凑微分"
+          "id": "f-g-x-g-x-dx-f-u-du-u-g-x",
+          "title": "∫f(g(x))g′(x)dx=∫f(u)du",
+          "bodyMarkdown": "∫f(g(x))g′(x)dx=∫f(u)du，u=g(x)"
         },
         {
-          "id": "di-er-lei-huan-yuan-yao-rang-xin-bian-0wvnat",
-          "title": "第二类换元要让新变量后的积分更简单",
-          "bodyMarkdown": "第二类换元要让新变量后的积分更简单"
+          "id": "guan-jian-shi-cou-chu-du-g-x-dx",
+          "title": "关键是「凑」出 du = g′(x)dx",
+          "bodyMarkdown": "关键是「凑」出 du = g′(x)dx"
         },
         {
-          "id": "ding-ji-fen-huan-yuan-hou-you-xian-huan-099u0a",
-          "title": "定积分换元后优先换上下限",
-          "bodyMarkdown": "定积分换元后优先换上下限"
+          "id": "huan-yuan-hou-bi-xu-hui-dai-yuan-bian-0qyqy2",
+          "title": "换元后必须回代原变量",
+          "bodyMarkdown": "换元后必须回代原变量"
         }
       ],
       "examples": [
         {
-          "id": "2x-cos-x-dx-ling-u-x-1qtp3q",
+          "id": "2x-e-x-dx-e-u-du-e-x-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫2x cos(x²)dx，令 u=x² 后得到 ∫cos u du=sin(x²)+C。"
+          "bodyMarkdown": "∫2x e^{x²}dx=∫e^u du=e^{x²}+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "换元积分的目标是把“外层函数和内层导数”配成一个整体。换元不是单纯替换字母，必须同时处理 dx；定积分还要把上下限一起换掉，避免回代时出错。\n\n### 解题步骤\n\n1. 寻找可整体代换的内层\n2. 令 u=g(x) 并换 dx\n3. 检查新积分和上下限\n\n### 易错点\n\n只换了被积式却没换 dx，或定积分上下限仍使用旧变量。"
+      "bodyMarkdown": "第一类换元法把 ∫f(g(x))g′(x)dx 写成 ∫f(u)du：先把 g′(x)dx 凑成 dg(x)，再整体换元，积分后回代。它是最常用的积分技巧。\n\n### 解题步骤\n\n1. 确定内层函数 u=g(x)\n2. 把 g′(x)dx 凑成 du\n3. 积分后回代\n\n### 易错点\n\n凑不出 du 却强行换元。"
     },
     {
       "schemaVersion": "1.0",
@@ -580,47 +576,47 @@
       "sectionId": "m1-p1-c3-s3",
       "sectionTitle": "换元积分法",
       "title": "第二类换元：变量代换",
-      "summary": "换元积分的目标是把“外层函数和内层导数”配成一个整体。换元不是单纯替换字母，必须同时处理 dx；定积分还要把上下限一起换掉，避免回代时出错。",
+      "summary": "第二类换元法令 x=φ(t)（φ 单调可导），把 ∫f(x)dx 变成 ∫f(φ(t))φ′(t)dt；它主要用于消去根号，积分完再把 t 换回 x。",
       "tags": [
-        "换变量降复杂度"
+        "令 x=φ(t)"
       ],
       "sortOrder": 120,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫f(g(x))g′(x)dx=∫f(u)du",
-        "caption": "换元积分的目标是把“外层函数和内层导数”配成一个整体。"
+        "content": "∫f(x)dx=∫f(φ(t))φ′(t)dt",
+        "caption": "第二类换元法令 x=φ(t)（φ 单调可导），把 ∫f(x)dx 变成 ∫f(φ(t))φ′(t)dt；它主要用于消去根号，积分完再把 t 换回 x。"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-huan-yuan-chang-jian-yu-cou-17le6n",
-          "title": "第一类换元常见于凑微分",
-          "bodyMarkdown": "第一类换元常见于凑微分"
+          "id": "x-t-yao-qiu-dan-diao-ke-dao-bao-zheng-0czduy",
+          "title": "x=φ(t) 要求 φ 单调可导",
+          "bodyMarkdown": "x=φ(t) 要求 φ 单调可导，保证可逆"
         },
         {
-          "id": "di-er-lei-huan-yuan-yao-rang-xin-bian-0wvnat",
-          "title": "第二类换元要让新变量后的积分更简单",
-          "bodyMarkdown": "第二类换元要让新变量后的积分更简单"
+          "id": "dx-t-dt-bu-neng-lou",
+          "title": "dx=φ′(t)dt 不能漏",
+          "bodyMarkdown": "dx=φ′(t)dt 不能漏"
         },
         {
-          "id": "ding-ji-fen-huan-yuan-hou-you-xian-huan-099u0a",
-          "title": "定积分换元后优先换上下限",
-          "bodyMarkdown": "定积分换元后优先换上下限"
+          "id": "zui-hou-bi-xu-hui-dai-t-x",
+          "title": "最后必须回代 t=φ⁻¹(x)",
+          "bodyMarkdown": "最后必须回代 t=φ⁻¹(x)"
         }
       ],
       "examples": [
         {
-          "id": "2x-cos-x-dx-ling-u-x-1qtp3q",
+          "id": "1-x-dx-ling-x-sin-t-hua-03bsru",
           "title": "讲解例子",
-          "bodyMarkdown": "∫2x cos(x²)dx，令 u=x² 后得到 ∫cos u du=sin(x²)+C。"
+          "bodyMarkdown": "∫√(1−x²)dx 令 x=sin t 化简。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "换元积分的目标是把“外层函数和内层导数”配成一个整体。换元不是单纯替换字母，必须同时处理 dx；定积分还要把上下限一起换掉，避免回代时出错。\n\n### 解题步骤\n\n1. 寻找可整体代换的内层\n2. 令 u=g(x) 并换 dx\n3. 检查新积分和上下限\n\n### 易错点\n\n只换了被积式却没换 dx，或定积分上下限仍使用旧变量。"
+      "bodyMarkdown": "第二类换元法令 x=φ(t)（φ 单调可导），把 ∫f(x)dx 变成 ∫f(φ(t))φ′(t)dt；它主要用于消去根号，积分完再把 t 换回 x。\n\n### 解题步骤\n\n1. 选择 φ(t)\n2. 换元并改写 dx\n3. 积分后回代\n\n### 易错点\n\n忘记把 dx 换成 φ′(t)dt，或忘记回代。"
     },
     {
       "schemaVersion": "1.0",
@@ -631,47 +627,47 @@
       "sectionId": "m1-p1-c3-s3",
       "sectionTitle": "换元积分法",
       "title": "三角代换",
-      "summary": "换元积分的目标是把“外层函数和内层导数”配成一个整体。换元不是单纯替换字母，必须同时处理 dx；定积分还要把上下限一起换掉，避免回代时出错。",
+      "summary": "遇到 √(a²−x²)、√(a²+x²)、√(x²−a²) 分别令 x=a sin t、x=a tan t、x=a sec t，把根号化成三角式；最后按直角三角形回代。",
       "tags": [
-        "换变量降复杂度"
+        "用三角消去根号"
       ],
       "sortOrder": 130,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫f(g(x))g′(x)dx=∫f(u)du",
-        "caption": "换元积分的目标是把“外层函数和内层导数”配成一个整体。"
+        "content": "x=a sin t ⇒ √(a²−x²)=a cos t",
+        "caption": "遇到 √(a²−x²)、√(a²+x²)、√(x²−a²) 分别令 x=a sin t、x=a tan t"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-huan-yuan-chang-jian-yu-cou-17le6n",
-          "title": "第一类换元常见于凑微分",
-          "bodyMarkdown": "第一类换元常见于凑微分"
+          "id": "a-x-x-a-sin-t",
+          "title": "√(a²−x²) ⇒ x=a sin t",
+          "bodyMarkdown": "√(a²−x²) ⇒ x=a sin t"
         },
         {
-          "id": "di-er-lei-huan-yuan-yao-rang-xin-bian-0wvnat",
-          "title": "第二类换元要让新变量后的积分更简单",
-          "bodyMarkdown": "第二类换元要让新变量后的积分更简单"
+          "id": "a-x-x-a-tan-t",
+          "title": "√(a²+x²) ⇒ x=a tan t",
+          "bodyMarkdown": "√(a²+x²) ⇒ x=a tan t"
         },
         {
-          "id": "ding-ji-fen-huan-yuan-hou-you-xian-huan-099u0a",
-          "title": "定积分换元后优先换上下限",
-          "bodyMarkdown": "定积分换元后优先换上下限"
+          "id": "x-a-x-a-sec-t",
+          "title": "√(x²−a²) ⇒ x=a sec t",
+          "bodyMarkdown": "√(x²−a²) ⇒ x=a sec t"
         }
       ],
       "examples": [
         {
-          "id": "2x-cos-x-dx-ling-u-x-1qtp3q",
+          "id": "dx-1-x-arcsin-x-c-jiu-19ig8g",
           "title": "讲解例子",
-          "bodyMarkdown": "∫2x cos(x²)dx，令 u=x² 后得到 ∫cos u du=sin(x²)+C。"
+          "bodyMarkdown": "∫dx/√(1−x²)=arcsin x+C 就是 x=sin t 的结果。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "换元积分的目标是把“外层函数和内层导数”配成一个整体。换元不是单纯替换字母，必须同时处理 dx；定积分还要把上下限一起换掉，避免回代时出错。\n\n### 解题步骤\n\n1. 寻找可整体代换的内层\n2. 令 u=g(x) 并换 dx\n3. 检查新积分和上下限\n\n### 易错点\n\n只换了被积式却没换 dx，或定积分上下限仍使用旧变量。"
+      "bodyMarkdown": "遇到 √(a²−x²)、√(a²+x²)、√(x²−a²) 分别令 x=a sin t、x=a tan t、x=a sec t，把根号化成三角式；最后按直角三角形回代。\n\n### 解题步骤\n\n1. 识别根号形式\n2. 选对应代换并确定 t 的范围\n3. 积分后画三角形回代\n\n### 易错点\n\n代换后忘记回代，或忽略 t 的取值范围（影响开方符号）。"
     },
     {
       "schemaVersion": "1.0",
@@ -682,47 +678,47 @@
       "sectionId": "m1-p1-c3-s3",
       "sectionTitle": "换元积分法",
       "title": "根式代换",
-      "summary": "换元积分的目标是把“外层函数和内层导数”配成一个整体。换元不是单纯替换字母，必须同时处理 dx；定积分还要把上下限一起换掉，避免回代时出错。",
+      "summary": "被积函数含 ⁿ√(ax+b) 时，令 t=ⁿ√(ax+b)，把根号整体换成 t，从而化成有理函数积分；换元时 x 与 dx 都要用 t 表示。",
       "tags": [
-        "换变量降复杂度"
+        "整体换掉根号"
       ],
       "sortOrder": 140,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫f(g(x))g′(x)dx=∫f(u)du",
-        "caption": "换元积分的目标是把“外层函数和内层导数”配成一个整体。"
+        "content": "t=ⁿ√(ax+b) ⇒ x=(tⁿ−b)/a",
+        "caption": "被积函数含 ⁿ√(ax+b) 时，令 t=ⁿ√(ax+b)，把根号整体换成 t，从而化成有理函数积分；换元时 x 与 dx 都要用 t 表示。"
       },
       "keyPoints": [
         {
-          "id": "di-yi-lei-huan-yuan-chang-jian-yu-cou-17le6n",
-          "title": "第一类换元常见于凑微分",
-          "bodyMarkdown": "第一类换元常见于凑微分"
+          "id": "t-ax-b-yi-ci-xiao-diao-zheng-ge-gen-hao",
+          "title": "t=ⁿ√(ax+b) 一次消掉整个根号",
+          "bodyMarkdown": "t=ⁿ√(ax+b) 一次消掉整个根号"
         },
         {
-          "id": "di-er-lei-huan-yuan-yao-rang-xin-bian-0wvnat",
-          "title": "第二类换元要让新变量后的积分更简单",
-          "bodyMarkdown": "第二类换元要让新变量后的积分更简单"
+          "id": "yao-tong-shi-jie-chu-x-t-b-a-yu-dx",
+          "title": "要同时解出 x=(tⁿ−b)/a 与 dx",
+          "bodyMarkdown": "要同时解出 x=(tⁿ−b)/a 与 dx"
         },
         {
-          "id": "ding-ji-fen-huan-yuan-hou-you-xian-huan-099u0a",
-          "title": "定积分换元后优先换上下限",
-          "bodyMarkdown": "定积分换元后优先换上下限"
+          "id": "hua-cheng-you-li-han-shu-hou-zai-yong-1aqq9l",
+          "title": "化成有理函数后再用部分分式",
+          "bodyMarkdown": "化成有理函数后再用部分分式"
         }
       ],
       "examples": [
         {
-          "id": "2x-cos-x-dx-ling-u-x-1qtp3q",
+          "id": "dx-1-x-ling-t-x-de-2t-1-0hklxh",
           "title": "讲解例子",
-          "bodyMarkdown": "∫2x cos(x²)dx，令 u=x² 后得到 ∫cos u du=sin(x²)+C。"
+          "bodyMarkdown": "∫dx/(1+√x) 令 t=√x，得 ∫2t/(1+t)dt。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "换元积分的目标是把“外层函数和内层导数”配成一个整体。换元不是单纯替换字母，必须同时处理 dx；定积分还要把上下限一起换掉，避免回代时出错。\n\n### 解题步骤\n\n1. 寻找可整体代换的内层\n2. 令 u=g(x) 并换 dx\n3. 检查新积分和上下限\n\n### 易错点\n\n只换了被积式却没换 dx，或定积分上下限仍使用旧变量。"
+      "bodyMarkdown": "被积函数含 ⁿ√(ax+b) 时，令 t=ⁿ√(ax+b)，把根号整体换成 t，从而化成有理函数积分；换元时 x 与 dx 都要用 t 表示。\n\n### 解题步骤\n\n1. 设 t 为根号整体\n2. 解出 x 与 dx\n3. 积分后回代 t\n\n### 易错点\n\n只替换根号而忘记改写 dx。"
     },
     {
       "schemaVersion": "1.0",
@@ -733,47 +729,47 @@
       "sectionId": "m1-p1-c3-s4",
       "sectionTitle": "分部积分法",
       "title": "∫u dv = uv - ∫v du",
-      "summary": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。",
+      "summary": "分部积分公式 ∫u dv=uv−∫v du 把原积分转化为另一个积分；选 u 的原则是「求导后变简单」，常用顺序是反三角 > 对数 > 幂 > 三角 > 指数。",
       "tags": [
-        "转移导数"
+        "分部积分公式"
       ],
       "sortOrder": 150,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
         "content": "∫u dv=uv−∫v du",
-        "caption": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。"
+        "caption": "分部积分公式 ∫u dv=uv−∫v du 把原积分转化为另一个积分；"
       },
       "keyPoints": [
         {
-          "id": "chang-yong-xuan-ze-shun-xu-shi-fan-san-167ufx",
-          "title": "常用选择顺序是反三角、对数、代数、三角、指数",
-          "bodyMarkdown": "常用选择顺序是反三角、对数、代数、三角、指数"
+          "id": "u-dv-uv-v-du",
+          "title": "∫u dv=uv−∫v du",
+          "bodyMarkdown": "∫u dv=uv−∫v du"
         },
         {
-          "id": "xun-huan-ji-fen-ke-yi-yi-xiang-jie-jue",
-          "title": "循环积分可以移项解决",
-          "bodyMarkdown": "循环积分可以移项解决"
+          "id": "u-an-fan-dui-mi-san-zhi-de-you-xian-ji-1c3ug7",
+          "title": "u 按「反对幂三指」的优先级选",
+          "bodyMarkdown": "u 按「反对幂三指」的优先级选"
         },
         {
-          "id": "ding-ji-fen-yao-ba-uv-zai-shang-xia-0zc589",
-          "title": "定积分要把 uv 在上下限作差",
-          "bodyMarkdown": "定积分要把 uv 在上下限作差"
+          "id": "bi-yao-shi-ke-yi-duo-ci-fen-bu",
+          "title": "必要时可以多次分部",
+          "bodyMarkdown": "必要时可以多次分部"
         }
       ],
       "examples": [
         {
           "id": "x-e-dx-x-e-e-dx-e-x-1-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫x eˣdx=x eˣ−∫eˣdx=eˣ(x−1)+C。"
+          "bodyMarkdown": "∫x eˣ dx=x eˣ−∫eˣ dx=eˣ(x−1)+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。选择 u 时优先选求导后更简单的部分，dv 则要保证 v 容易求出，并检查新积分是否真的变简单。\n\n### 解题步骤\n\n1. 选择 u 与 dv\n2. 求 du 与 v\n3. 代入公式并整理新积分\n\n### 易错点\n\nu、dv 选择不当会让新积分更复杂；不要为了套公式而套公式。"
+      "bodyMarkdown": "分部积分公式 ∫u dv=uv−∫v du 把原积分转化为另一个积分；选 u 的原则是「求导后变简单」，常用顺序是反三角 > 对数 > 幂 > 三角 > 指数。\n\n### 解题步骤\n\n1. 按优先级选 u 与 dv\n2. 算 du 与 v\n3. 代入公式处理新积分\n\n### 易错点\n\nu 选错（把指数选作 u），越算越复杂。"
     },
     {
       "schemaVersion": "1.0",
@@ -784,47 +780,47 @@
       "sectionId": "m1-p1-c3-s4",
       "sectionTitle": "分部积分法",
       "title": "多项式×指数",
-      "summary": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。",
+      "summary": "多项式乘指数时取多项式作 u、指数作 dv，一次分部就把多项式次数降一；n 次多项式最多分部 n 次即可积完。",
       "tags": [
-        "转移导数"
+        "多项式作 u"
       ],
       "sortOrder": 160,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫u dv=uv−∫v du",
-        "caption": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。"
+        "content": "∫xⁿeˣdx=xⁿeˣ−n∫xⁿ⁻¹eˣdx",
+        "caption": "多项式乘指数时取多项式作 u、指数作 dv，一次分部就把多项式次数降一；n 次多项式最多分部 n 次即可积完。"
       },
       "keyPoints": [
         {
-          "id": "chang-yong-xuan-ze-shun-xu-shi-fan-san-167ufx",
-          "title": "常用选择顺序是反三角、对数、代数、三角、指数",
-          "bodyMarkdown": "常用选择顺序是反三角、对数、代数、三角、指数"
+          "id": "u-duo-xiang-shi-dv-zhi-shu-dx",
+          "title": "u=多项式",
+          "bodyMarkdown": "u=多项式，dv=指数 dx"
         },
         {
-          "id": "xun-huan-ji-fen-ke-yi-yi-xiang-jie-jue",
-          "title": "循环积分可以移项解决",
-          "bodyMarkdown": "循环积分可以移项解决"
+          "id": "mei-fen-bu-yi-ci-ci-shu-jiang-yi",
+          "title": "每分部一次次数降一",
+          "bodyMarkdown": "每分部一次次数降一"
         },
         {
-          "id": "ding-ji-fen-yao-ba-uv-zai-shang-xia-0zc589",
-          "title": "定积分要把 uv 在上下限作差",
-          "bodyMarkdown": "定积分要把 uv 在上下限作差"
+          "id": "jiang-ci-dao-chang-shu-hou-ke-zhi-jie-1nrua1",
+          "title": "降次到常数后可直接积分",
+          "bodyMarkdown": "降次到常数后可直接积分"
         }
       ],
       "examples": [
         {
-          "id": "x-e-dx-x-e-e-dx-e-x-1-c",
+          "id": "x-e-dx-e-x-2x-2-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫x eˣdx=x eˣ−∫eˣdx=eˣ(x−1)+C。"
+          "bodyMarkdown": "∫x²eˣdx=eˣ(x²−2x+2)+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。选择 u 时优先选求导后更简单的部分，dv 则要保证 v 容易求出，并检查新积分是否真的变简单。\n\n### 解题步骤\n\n1. 选择 u 与 dv\n2. 求 du 与 v\n3. 代入公式并整理新积分\n\n### 易错点\n\nu、dv 选择不当会让新积分更复杂；不要为了套公式而套公式。"
+      "bodyMarkdown": "多项式乘指数时取多项式作 u、指数作 dv，一次分部就把多项式次数降一；n 次多项式最多分部 n 次即可积完。\n\n### 解题步骤\n\n1. 取 u=多项式\n2. 分部一次降次\n3. 重复直到多项式为常数\n\n### 易错点\n\n把指数取作 u，导致无法降次。"
     },
     {
       "schemaVersion": "1.0",
@@ -835,47 +831,47 @@
       "sectionId": "m1-p1-c3-s4",
       "sectionTitle": "分部积分法",
       "title": "多项式×三角",
-      "summary": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。",
+      "summary": "多项式乘三角函数同样取多项式作 u、三角作 dv；分部后多项式降次，注意 v 的符号（sin 积成 −cos 会带负号）。",
       "tags": [
-        "转移导数"
+        "多项式作 u"
       ],
       "sortOrder": 170,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫u dv=uv−∫v du",
-        "caption": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。"
+        "content": "∫x sin x dx=−x cos x+∫cos x dx",
+        "caption": "多项式乘三角函数同样取多项式作 u、三角作 dv；分部后多项式降次，注意 v 的符号（sin 积成 −cos 会带负号）。"
       },
       "keyPoints": [
         {
-          "id": "chang-yong-xuan-ze-shun-xu-shi-fan-san-167ufx",
-          "title": "常用选择顺序是反三角、对数、代数、三角、指数",
-          "bodyMarkdown": "常用选择顺序是反三角、对数、代数、三角、指数"
+          "id": "u-duo-xiang-shi-dv-san-jiao-han-shu-dx",
+          "title": "u=多项式",
+          "bodyMarkdown": "u=多项式，dv=三角函数 dx"
         },
         {
-          "id": "xun-huan-ji-fen-ke-yi-yi-xiang-jie-jue",
-          "title": "循环积分可以移项解决",
-          "bodyMarkdown": "循环积分可以移项解决"
+          "id": "qiu-v-shi-fu-hao-rong-yi-cuo-sin-cos",
+          "title": "求 v 时符号容易错（∫sin=−cos）",
+          "bodyMarkdown": "求 v 时符号容易错（∫sin=−cos）"
         },
         {
-          "id": "ding-ji-fen-yao-ba-uv-zai-shang-xia-0zc589",
-          "title": "定积分要把 uv 在上下限作差",
-          "bodyMarkdown": "定积分要把 uv 在上下限作差"
+          "id": "n-ci-duo-xiang-shi-zui-duo-fen-bu-n-ci",
+          "title": "n 次多项式最多分部 n 次",
+          "bodyMarkdown": "n 次多项式最多分部 n 次"
         }
       ],
       "examples": [
         {
-          "id": "x-e-dx-x-e-e-dx-e-x-1-c",
+          "id": "x-cos-x-dx-x-sin-x-cos-0rreba",
           "title": "讲解例子",
-          "bodyMarkdown": "∫x eˣdx=x eˣ−∫eˣdx=eˣ(x−1)+C。"
+          "bodyMarkdown": "∫x cos x dx=x sin x+cos x+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。选择 u 时优先选求导后更简单的部分，dv 则要保证 v 容易求出，并检查新积分是否真的变简单。\n\n### 解题步骤\n\n1. 选择 u 与 dv\n2. 求 du 与 v\n3. 代入公式并整理新积分\n\n### 易错点\n\nu、dv 选择不当会让新积分更复杂；不要为了套公式而套公式。"
+      "bodyMarkdown": "多项式乘三角函数同样取多项式作 u、三角作 dv；分部后多项式降次，注意 v 的符号（sin 积成 −cos 会带负号）。\n\n### 解题步骤\n\n1. 取 u=多项式\n2. 求 v（注意符号）\n3. 重复分部直到降完\n\n### 易错点\n\n求 v 时漏掉负号。"
     },
     {
       "schemaVersion": "1.0",
@@ -886,47 +882,47 @@
       "sectionId": "m1-p1-c3-s4",
       "sectionTitle": "分部积分法",
       "title": "多项式×对数",
-      "summary": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。",
+      "summary": "对数求导后变成 1/x，所以含对数的积分取对数作 u、其余作 dv，一次分部就把对数消掉。",
       "tags": [
-        "转移导数"
+        "对数作 u"
       ],
       "sortOrder": 180,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫u dv=uv−∫v du",
-        "caption": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。"
+        "content": "∫ln x dx=x ln x−x+C",
+        "caption": "对数求导后变成 1/x，所以含对数的积分取对数作 u、其余作 dv，一次分部就把对数消掉。"
       },
       "keyPoints": [
         {
-          "id": "chang-yong-xuan-ze-shun-xu-shi-fan-san-167ufx",
-          "title": "常用选择顺序是反三角、对数、代数、三角、指数",
-          "bodyMarkdown": "常用选择顺序是反三角、对数、代数、三角、指数"
+          "id": "u-dui-shu-han-shu-qiu-dao-hou-bian-1e5qru",
+          "title": "u=对数函数（求导后变成有理式）",
+          "bodyMarkdown": "u=对数函数（求导后变成有理式）"
         },
         {
-          "id": "xun-huan-ji-fen-ke-yi-yi-xiang-jie-jue",
-          "title": "循环积分可以移项解决",
-          "bodyMarkdown": "循环积分可以移项解决"
+          "id": "dv-qi-yu-bu-fen",
+          "title": "dv=其余部分",
+          "bodyMarkdown": "dv=其余部分"
         },
         {
-          "id": "ding-ji-fen-yao-ba-uv-zai-shang-xia-0zc589",
-          "title": "定积分要把 uv 在上下限作差",
-          "bodyMarkdown": "定积分要把 uv 在上下限作差"
+          "id": "yi-ci-fen-bu-ji-ke-qu-diao-dui-shu",
+          "title": "一次分部即可去掉对数",
+          "bodyMarkdown": "一次分部即可去掉对数"
         }
       ],
       "examples": [
         {
-          "id": "x-e-dx-x-e-e-dx-e-x-1-c",
+          "id": "x-ln-x-dx-x-2-ln-x-x-4-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫x eˣdx=x eˣ−∫eˣdx=eˣ(x−1)+C。"
+          "bodyMarkdown": "∫x ln x dx=(x²/2)ln x−x²/4+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。选择 u 时优先选求导后更简单的部分，dv 则要保证 v 容易求出，并检查新积分是否真的变简单。\n\n### 解题步骤\n\n1. 选择 u 与 dv\n2. 求 du 与 v\n3. 代入公式并整理新积分\n\n### 易错点\n\nu、dv 选择不当会让新积分更复杂；不要为了套公式而套公式。"
+      "bodyMarkdown": "对数求导后变成 1/x，所以含对数的积分取对数作 u、其余作 dv，一次分部就把对数消掉。\n\n### 解题步骤\n\n1. 取 u=ln x 类\n2. dv=其余\n3. 代入公式后处理有理式积分\n\n### 易错点\n\n把对数选作 dv（无法积分）。"
     },
     {
       "schemaVersion": "1.0",
@@ -937,47 +933,47 @@
       "sectionId": "m1-p1-c3-s4",
       "sectionTitle": "分部积分法",
       "title": "反三角函数",
-      "summary": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。",
+      "summary": "反三角函数求导后变成有理式或根式，所以含反三角的积分取它作 u、其余作 dv，一次分部就能化简。",
       "tags": [
-        "转移导数"
+        "反三角作 u"
       ],
       "sortOrder": 190,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫u dv=uv−∫v du",
-        "caption": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。"
+        "content": "∫arctan x dx=x arctan x−ln(1+x²)/2+C",
+        "caption": "反三角函数求导后变成有理式或根式，所以含反三角的积分取它作 u、其余作 dv，一次分部就能化简。"
       },
       "keyPoints": [
         {
-          "id": "chang-yong-xuan-ze-shun-xu-shi-fan-san-167ufx",
-          "title": "常用选择顺序是反三角、对数、代数、三角、指数",
-          "bodyMarkdown": "常用选择顺序是反三角、对数、代数、三角、指数"
+          "id": "u-arcsin-x-arctan-x-deng",
+          "title": "u=arcsin x / arctan x 等",
+          "bodyMarkdown": "u=arcsin x / arctan x 等"
         },
         {
-          "id": "xun-huan-ji-fen-ke-yi-yi-xiang-jie-jue",
-          "title": "循环积分可以移项解决",
-          "bodyMarkdown": "循环积分可以移项解决"
+          "id": "dv-qi-yu-bu-fen",
+          "title": "dv=其余部分",
+          "bodyMarkdown": "dv=其余部分"
         },
         {
-          "id": "ding-ji-fen-yao-ba-uv-zai-shang-xia-0zc589",
-          "title": "定积分要把 uv 在上下限作差",
-          "bodyMarkdown": "定积分要把 uv 在上下限作差"
+          "id": "fen-bu-hou-hua-cheng-you-li-shi-huo-gen-18m6wu",
+          "title": "分部后化成有理式或根式积分",
+          "bodyMarkdown": "分部后化成有理式或根式积分"
         }
       ],
       "examples": [
         {
-          "id": "x-e-dx-x-e-e-dx-e-x-1-c",
+          "id": "arcsin-x-dx-x-arcsin-x-0l2zer",
           "title": "讲解例子",
-          "bodyMarkdown": "∫x eˣdx=x eˣ−∫eˣdx=eˣ(x−1)+C。"
+          "bodyMarkdown": "∫arcsin x dx=x arcsin x+√(1−x²)+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "分部积分来自乘积求导公式：把一个因子的导数转移给另一个因子。选择 u 时优先选求导后更简单的部分，dv 则要保证 v 容易求出，并检查新积分是否真的变简单。\n\n### 解题步骤\n\n1. 选择 u 与 dv\n2. 求 du 与 v\n3. 代入公式并整理新积分\n\n### 易错点\n\nu、dv 选择不当会让新积分更复杂；不要为了套公式而套公式。"
+      "bodyMarkdown": "反三角函数求导后变成有理式或根式，所以含反三角的积分取它作 u、其余作 dv，一次分部就能化简。\n\n### 解题步骤\n\n1. 取 u=反三角\n2. dv=其余\n3. 代入公式继续积分\n\n### 易错点\n\n把反三角选作 dv（无法积分）。"
     },
     {
       "schemaVersion": "1.0",
@@ -988,47 +984,47 @@
       "sectionId": "m1-p1-c3-s5",
       "sectionTitle": "特殊积分",
       "title": "有理函数积分",
-      "summary": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。",
+      "summary": "有理函数积分的一般流程：假分式先做多项式除法化成「多项式 + 真分式」，真分式按分母因式分解拆成部分分式，再逐项积分（结果是对数或反正切）。",
       "tags": [
-        "化成基本积分"
+        "拆成部分分式"
       ],
       "sortOrder": 200,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "1/[(x−a)(x−b)]=A/(x−a)+B/(x−b)",
-        "caption": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。"
+        "content": "P/Q → 多项式 + Σ 部分分式",
+        "caption": "有理函数积分的一般流程：假分式先做多项式除法化成「多项式 + 真分式」，真分式按分母因式分解拆成部分分式，再逐项积分（结果是对数或反正切）。"
       },
       "keyPoints": [
         {
-          "id": "zhen-fen-shi-cai-shi-he-zhi-jie-bu-fen-0vv7gn",
-          "title": "真分式才适合直接部分分式分解",
-          "bodyMarkdown": "真分式才适合直接部分分式分解"
+          "id": "jia-fen-shi-fen-zi-ci-shu-fen-mu-xian-08ylv8",
+          "title": "假分式（分子次数≥分母）先做除法",
+          "bodyMarkdown": "假分式（分子次数≥分母）先做除法"
         },
         {
-          "id": "zhong-yin-shi-xu-yao-xie-chu-wan-zheng-0x9vt7",
-          "title": "重因式需要写出完整幂次项",
-          "bodyMarkdown": "重因式需要写出完整幂次项"
+          "id": "zhen-fen-shi-an-fen-mu-yin-shi-chai-bu-0p2854",
+          "title": "真分式按分母因式拆部分分式",
+          "bodyMarkdown": "真分式按分母因式拆部分分式"
         },
         {
-          "id": "dai-huan-hou-yao-jian-cha-xin-bian-0kvfib",
-          "title": "代换后要检查新变量的定义域",
-          "bodyMarkdown": "代换后要检查新变量的定义域"
+          "id": "zhu-xiang-ji-fen-de-dao-dui-shu-huo-fan-0bf9wc",
+          "title": "逐项积分得到对数或反正切",
+          "bodyMarkdown": "逐项积分得到对数或反正切"
         }
       ],
       "examples": [
         {
-          "id": "1-x-1-dx-ke-xian-fen-1lr5sg",
+          "id": "dx-x-1-1-2-ln-x-1-x-1-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫1/(x²−1)dx 可先分解为 1/2·[1/(x−1)−1/(x+1)]。"
+          "bodyMarkdown": "∫dx/(x²−1)=(1/2)ln|(x−1)/(x+1)|+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。理有理函数先看分母因式，部分分式把复杂分式拆成可积的简单项；含根式时选择能消掉根号的代换。\n\n### 解题步骤\n\n1. 先判断函数类型\n2. 做因式分解或代换\n3. 逐项积分并回代\n\n### 易错点\n\n分母有重根却只写一项，或回代时漏掉绝对值。"
+      "bodyMarkdown": "有理函数积分的一般流程：假分式先做多项式除法化成「多项式 + 真分式」，真分式按分母因式分解拆成部分分式，再逐项积分（结果是对数或反正切）。\n\n### 解题步骤\n\n1. 判断真/假分式\n2. 分解分母并设部分分式\n3. 逐项积分\n\n### 易错点\n\n跳过「假分式先除」这一步。"
     },
     {
       "schemaVersion": "1.0",
@@ -1039,9 +1035,9 @@
       "sectionId": "m1-p1-c3-s5",
       "sectionTitle": "特殊积分",
       "title": "部分分式分解",
-      "summary": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。",
+      "summary": "部分分式分解要按分母因式的类型设项：单实根设 A/(x−a)，k 重根要写 A₁/(x−a)+…+Aₖ/(x−a)ᵏ，不可约二次因式设 (Ax+B)/(x²+px+q)。",
       "tags": [
-        "化成基本积分"
+        "按因式类型设系数"
       ],
       "sortOrder": 210,
       "estimatedMinutes": 3,
@@ -1049,37 +1045,37 @@
         "type": "formula",
         "format": "text",
         "content": "1/[(x−a)(x−b)]=A/(x−a)+B/(x−b)",
-        "caption": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。"
+        "caption": "部分分式分解要按分母因式的类型设项：单实根设 A/(x−a)，k 重根要写 A₁/(x−a)+…+Aₖ/(x−a)ᵏ"
       },
       "keyPoints": [
         {
-          "id": "zhen-fen-shi-cai-shi-he-zhi-jie-bu-fen-0vv7gn",
-          "title": "真分式才适合直接部分分式分解",
-          "bodyMarkdown": "真分式才适合直接部分分式分解"
+          "id": "dan-shi-gen-a-x-a",
+          "title": "单实根：A/(x−a)",
+          "bodyMarkdown": "单实根：A/(x−a)"
         },
         {
-          "id": "zhong-yin-shi-xu-yao-xie-chu-wan-zheng-0x9vt7",
-          "title": "重因式需要写出完整幂次项",
-          "bodyMarkdown": "重因式需要写出完整幂次项"
+          "id": "k-zhong-gen-bi-xu-xie-man-k-xiang",
+          "title": "k 重根",
+          "bodyMarkdown": "k 重根：必须写满 k 项"
         },
         {
-          "id": "dai-huan-hou-yao-jian-cha-xin-bian-0kvfib",
-          "title": "代换后要检查新变量的定义域",
-          "bodyMarkdown": "代换后要检查新变量的定义域"
+          "id": "bu-ke-yue-er-ci-yin-shi-de-fen-zi-she-1wu70k",
+          "title": "不可约二次因式的分子设一次式",
+          "bodyMarkdown": "不可约二次因式的分子设一次式"
         }
       ],
       "examples": [
         {
-          "id": "1-x-1-dx-ke-xian-fen-1lr5sg",
+          "id": "1-x-1-x-2-1-3-x-1-1-3-x-1lh34j",
           "title": "讲解例子",
-          "bodyMarkdown": "∫1/(x²−1)dx 可先分解为 1/2·[1/(x−1)−1/(x+1)]。"
+          "bodyMarkdown": "1/[(x−1)(x+2)]=(1/3)/(x−1)−(1/3)/(x+2)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。理有理函数先看分母因式，部分分式把复杂分式拆成可积的简单项；含根式时选择能消掉根号的代换。\n\n### 解题步骤\n\n1. 先判断函数类型\n2. 做因式分解或代换\n3. 逐项积分并回代\n\n### 易错点\n\n分母有重根却只写一项，或回代时漏掉绝对值。"
+      "bodyMarkdown": "部分分式分解要按分母因式的类型设项：单实根设 A/(x−a)，k 重根要写 A₁/(x−a)+…+Aₖ/(x−a)ᵏ，不可约二次因式设 (Ax+B)/(x²+px+q)。\n\n### 解题步骤\n\n1. 分解分母\n2. 按因式类型设部分分式\n3. 待定系数法求系数\n\n### 易错点\n\n重根只写一项。"
     },
     {
       "schemaVersion": "1.0",
@@ -1090,47 +1086,47 @@
       "sectionId": "m1-p1-c3-s5",
       "sectionTitle": "特殊积分",
       "title": "三角函数有理式",
-      "summary": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。",
+      "summary": "三角函数有理式可用万能代换 t=tan(x/2) 化成 t 的有理函数再积分；但能用凑微分或恒等变形解决时更快，不要一上来就万能代换。",
       "tags": [
-        "化成基本积分"
+        "万能代换"
       ],
       "sortOrder": 220,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "1/[(x−a)(x−b)]=A/(x−a)+B/(x−b)",
-        "caption": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。"
+        "content": "t=tan(x/2)，dx=2dt/(1+t²)",
+        "caption": "三角函数有理式可用万能代换 t=tan(x/2) 化成 t 的有理函数再积分；但能用凑微分或恒等变形解决时更快，不要一上来就万能代换。"
       },
       "keyPoints": [
         {
-          "id": "zhen-fen-shi-cai-shi-he-zhi-jie-bu-fen-0vv7gn",
-          "title": "真分式才适合直接部分分式分解",
-          "bodyMarkdown": "真分式才适合直接部分分式分解"
+          "id": "t-tan-x-2-sin-x-2t-1-t-cos-x-1-t-1-t",
+          "title": "t=tan(x/2)",
+          "bodyMarkdown": "t=tan(x/2)：sin x=2t/(1+t²)，cos x=(1−t²)/(1+t²)"
         },
         {
-          "id": "zhong-yin-shi-xu-yao-xie-chu-wan-zheng-0x9vt7",
-          "title": "重因式需要写出完整幂次项",
-          "bodyMarkdown": "重因式需要写出完整幂次项"
+          "id": "wan-neng-dai-huan-yi-ding-ke-xing-dan-0an2d1",
+          "title": "万能代换一定可行但计算量大",
+          "bodyMarkdown": "万能代换一定可行但计算量大"
         },
         {
-          "id": "dai-huan-hou-yao-jian-cha-xin-bian-0kvfib",
-          "title": "代换后要检查新变量的定义域",
-          "bodyMarkdown": "代换后要检查新变量的定义域"
+          "id": "you-xian-chang-shi-cou-wei-fen-yu-heng-074ehi",
+          "title": "优先尝试凑微分与恒等变形",
+          "bodyMarkdown": "优先尝试凑微分与恒等变形"
         }
       ],
       "examples": [
         {
-          "id": "1-x-1-dx-ke-xian-fen-1lr5sg",
+          "id": "dx-1-cos-x-tan-x-2-c",
           "title": "讲解例子",
-          "bodyMarkdown": "∫1/(x²−1)dx 可先分解为 1/2·[1/(x−1)−1/(x+1)]。"
+          "bodyMarkdown": "∫dx/(1+cos x)=tan(x/2)+C。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。理有理函数先看分母因式，部分分式把复杂分式拆成可积的简单项；含根式时选择能消掉根号的代换。\n\n### 解题步骤\n\n1. 先判断函数类型\n2. 做因式分解或代换\n3. 逐项积分并回代\n\n### 易错点\n\n分母有重根却只写一项，或回代时漏掉绝对值。"
+      "bodyMarkdown": "三角函数有理式可用万能代换 t=tan(x/2) 化成 t 的有理函数再积分；但能用凑微分或恒等变形解决时更快，不要一上来就万能代换。\n\n### 解题步骤\n\n1. 先尝试凑微分/变形\n2. 不行再用 t=tan(x/2)\n3. 化为有理函数积分\n\n### 易错点\n\n不分情况直接上万能代换。"
     },
     {
       "schemaVersion": "1.0",
@@ -1141,47 +1137,47 @@
       "sectionId": "m1-p1-c3-s5",
       "sectionTitle": "特殊积分",
       "title": "简单无理函数积分",
-      "summary": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。",
+      "summary": "简单无理函数积分的思路是消去根号：ⁿ√(ax+b) 用根式代换，√(a²±x²) 用三角代换，化成有理函数后再积分。",
       "tags": [
-        "化成基本积分"
+        "化去根号"
       ],
       "sortOrder": 230,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "1/[(x−a)(x−b)]=A/(x−a)+B/(x−b)",
-        "caption": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。"
+        "content": "√(a²−x²) ⇒ x=a sin t",
+        "caption": "简单无理函数积分的思路是消去根号：ⁿ√(ax+b) 用根式代换，√(a²±x²) 用三角代换，化成有理函数后再积分。"
       },
       "keyPoints": [
         {
-          "id": "zhen-fen-shi-cai-shi-he-zhi-jie-bu-fen-0vv7gn",
-          "title": "真分式才适合直接部分分式分解",
-          "bodyMarkdown": "真分式才适合直接部分分式分解"
+          "id": "gen-shi-dai-huan-xiao-ax-b",
+          "title": "根式代换消 ⁿ√(ax+b)",
+          "bodyMarkdown": "根式代换消 ⁿ√(ax+b)"
         },
         {
-          "id": "zhong-yin-shi-xu-yao-xie-chu-wan-zheng-0x9vt7",
-          "title": "重因式需要写出完整幂次项",
-          "bodyMarkdown": "重因式需要写出完整幂次项"
+          "id": "san-jiao-dai-huan-chu-li-a-x-xing",
+          "title": "三角代换处理 √(a²±x²) 型",
+          "bodyMarkdown": "三角代换处理 √(a²±x²) 型"
         },
         {
-          "id": "dai-huan-hou-yao-jian-cha-xin-bian-0kvfib",
-          "title": "代换后要检查新变量的定义域",
-          "bodyMarkdown": "代换后要检查新变量的定义域"
+          "id": "mu-biao-dou-shi-hua-cheng-you-li-han-shu",
+          "title": "目标都是化成有理函数",
+          "bodyMarkdown": "目标都是化成有理函数"
         }
       ],
       "examples": [
         {
-          "id": "1-x-1-dx-ke-xian-fen-1lr5sg",
+          "id": "a-x-dx-yong-x-a-sin-t-0ijx1j",
           "title": "讲解例子",
-          "bodyMarkdown": "∫1/(x²−1)dx 可先分解为 1/2·[1/(x−1)−1/(x+1)]。"
+          "bodyMarkdown": "∫√(a²−x²)dx 用 x=a sin t 化为三角积分。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "特殊积分的共同思路是先做代数或三角变形，把被积函数化成已知基本形式。理有理函数先看分母因式，部分分式把复杂分式拆成可积的简单项；含根式时选择能消掉根号的代换。\n\n### 解题步骤\n\n1. 先判断函数类型\n2. 做因式分解或代换\n3. 逐项积分并回代\n\n### 易错点\n\n分母有重根却只写一项，或回代时漏掉绝对值。"
+      "bodyMarkdown": "简单无理函数积分的思路是消去根号：ⁿ√(ax+b) 用根式代换，√(a²±x²) 用三角代换，化成有理函数后再积分。\n\n### 解题步骤\n\n1. 识别根号形式\n2. 选根式或三角代换\n3. 化为有理函数后积分\n\n### 易错点\n\n换元后忘记回代。"
     },
     {
       "schemaVersion": "1.0",
@@ -1192,9 +1188,9 @@
       "sectionId": "m1-p1-c3-s6",
       "sectionTitle": "定积分",
       "title": "定积分定义",
-      "summary": "定积分不是“找一个原函数”的定义，而是把区间切成很多小段，用函数值乘小底长形成矩形和，再让最宽小段趋于零。",
+      "summary": "定积分 ∫ₐᵇf(x)dx 是黎曼和的极限：把区间分成 n 份，每份取一点算 f(ξᵢ)Δxᵢ，求和后让最大区间长度趋于 0。",
       "tags": [
-        "面积的极限"
+        "分割、近似、求和、取极限"
       ],
       "sortOrder": 240,
       "estimatedMinutes": 3,
@@ -1202,37 +1198,37 @@
         "type": "formula",
         "format": "text",
         "content": "∫ₐᵇf(x)dx=lim Σf(ξᵢ)Δxᵢ",
-        "caption": "定积分不是“找一个原函数”的定义，而是把区间切成很多小段，用函数值乘小底长形成矩形和，再让最宽小段趋于零。"
+        "caption": "定积分 ∫ₐᵇf(x)dx 是黎曼和的极限：把区间分成 n 份，每份取一点算 f(ξᵢ)Δxᵢ，求和后让最大区间长度趋于 0。"
       },
       "keyPoints": [
         {
-          "id": "fen-ge-yue-xi-jin-si-yue-jing-que",
-          "title": "分割越细",
-          "bodyMarkdown": "分割越细，近似越精确"
+          "id": "ding-yi-shi-fen-ge-jin-si-qiu-he-qu-ji-0dw542",
+          "title": "定义是「分割—近似—求和—取极限」四步",
+          "bodyMarkdown": "定义是「分割—近似—求和—取极限」四步"
         },
         {
-          "id": "qu-yang-dian-ke-yi-bu-tong-zhi-yao-man-17xm62",
-          "title": "取样点可以不同",
-          "bodyMarkdown": "取样点可以不同，只要满足可积条件"
+          "id": "ding-ji-fen-shi-shu-bu-shi-han-shu-zu",
+          "title": "定积分是数",
+          "bodyMarkdown": "定积分是数，不是函数族"
         },
         {
-          "id": "x-zhou-xia-fang-de-gong-xian-dai-fu-hao",
-          "title": "x 轴下方的贡献带负号",
-          "bodyMarkdown": "x 轴下方的贡献带负号"
+          "id": "ke-ji-de-chong-fen-tiao-jian-lian-xu-10mcx6",
+          "title": "可积的充分条件",
+          "bodyMarkdown": "可积的充分条件：连续，或只有有限个间断点的有界函数"
         }
       ],
       "examples": [
         {
-          "id": "x-dx-1-3-shi-y-x-yu-x-1soxnf",
+          "id": "x-dx-lim-i-n-1-n-1-2",
           "title": "讲解例子",
-          "bodyMarkdown": "∫₀¹x²dx=1/3，是 y=x² 与 x 轴围成的带符号面积。"
+          "bodyMarkdown": "∫₀¹x dx=lim Σ(i/n)(1/n)=1/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "定积分不是“找一个原函数”的定义，而是把区间切成很多小段，用函数值乘小底长形成矩形和，再让最宽小段趋于零。这个极限同时解释了带符号面积和累积量。\n\n### 解题步骤\n\n1. 分割区间\n2. 构造黎曼和\n3. 让最大分割长度趋于 0\n\n### 易错点\n\n几何面积为正时，如果函数在 x 轴下方必须先取绝对值或分段处理。"
+      "bodyMarkdown": "定积分 ∫ₐᵇf(x)dx 是黎曼和的极限：把区间分成 n 份，每份取一点算 f(ξᵢ)Δxᵢ，求和后让最大区间长度趋于 0。它是一个数，与积分变量记号无关。\n\n### 解题步骤\n\n1. 分割区间\n2. 取点求和\n3. 让分割无限细化取极限\n\n### 易错点\n\n把定积分与不定积分混为一谈。"
     },
     {
       "schemaVersion": "1.0",
@@ -1243,51 +1239,47 @@
       "sectionId": "m1-p1-c3-s6",
       "sectionTitle": "定积分",
       "title": "定积分性质",
-      "summary": "定积分性质可以整理成六条：性质1（区间长度）∫ₐᵇ1dx=b−a；性质2（线性）∫[k₁f±k₂g]=k₁∫f±k₂∫g；",
+      "summary": "定积分的性质：线性性、区间可加性、保号性（f≤g ⇒ ∫f≤∫g）、三角不等式 |∫f|≤∫|f|，以及估值定理 mL≤∫ₐᵇf≤ML。",
       "tags": [
-        "累积量的规则"
+        "线性、可加、保号"
       ],
       "sortOrder": 250,
-      "estimatedMinutes": 7,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫ₐᵇ[k₁f±k₂g]=k₁∫ₐᵇf±k₂∫ₐᵇg；∫ₐᵇ=∫ₐᶜ+∫ᶜᵇ；|∫ₐᵇf|≤∫ₐᵇ|f|；mL≤∫ₐᵇf≤ML",
-        "caption": "定积分性质可以整理成六条：性质1（区间长度）∫ₐᵇ1dx=b−a；"
+        "content": "∫ₐᵇf=∫ₐᶜf+∫ᶜᵇf；|∫ₐᵇf|≤∫ₐᵇ|f|",
+        "caption": "定积分的性质：线性性、区间可加性、保号性（f≤g ⇒ ∫f≤∫g）、三角不等式 |∫f|≤∫|f|，以及估值定理 mL≤∫ₐᵇf≤ML。"
       },
       "keyPoints": [
         {
-          "id": "bao-hao-xing-yao-qiu-xia-xian-xiao-yu-0k3fky",
-          "title": "保号性要求下限小于上限",
-          "bodyMarkdown": "保号性要求下限小于上限，方向反了要变号"
+          "id": "qu-jian-ke-jia-xing-yu-a-b-c-de-da-xiao-0hnvvn",
+          "title": "区间可加性",
+          "bodyMarkdown": "区间可加性：∫ₐᵇ=∫ₐᶜ+∫ᶜᵇ，与 a、b、c 的大小无关"
         },
         {
-          "id": "f-f-xian-ji-fen-ke-neng-di-xiao-xian-qu-05lkny",
-          "title": "|∫f|≤∫|f|",
-          "bodyMarkdown": "|∫f|≤∫|f|：先积分可能抵消，先取绝对值只增不减"
+          "id": "bao-hao-xing-f-g-f-g",
+          "title": "保号性：f≤g ⇒ ∫ₐᵇf≤∫ₐᵇg",
+          "bodyMarkdown": "保号性：f≤g ⇒ ∫ₐᵇf≤∫ₐᵇg"
         },
         {
-          "id": "gu-zhi-yu-zhong-zhi-ding-li-pei-he-xian-1eeenl",
-          "title": "估值与中值定理配合",
-          "bodyMarkdown": "估值与中值定理配合：先用最值夹住积分，再收拢到某一点"
+          "id": "f-f-deng-hao-yi-ban-bu-cheng-li",
+          "title": "|∫ₐᵇf|≤∫ₐᵇ|f|",
+          "bodyMarkdown": "|∫ₐᵇf|≤∫ₐᵇ|f|，等号一般不成立"
         }
       ],
       "examples": [
         {
-          "id": "x-2-dx-4-x-de-qi-dui-1vyyht",
+          "id": "x-dx-x-dx-yin-wei-x-x-1174dm",
           "title": "讲解例子",
-          "bodyMarkdown": "∫₋₁¹(x³+2)dx=4：x³ 的奇对称部分积分为 0，只剩偶对称部分两倍一半区间。"
+          "bodyMarkdown": "∫₀¹x²dx≤∫₀¹x dx（因为 x²≤x 在 [0,1] 上）。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第8讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "定积分性质可以整理成六条：性质1（区间长度）∫ₐᵇ1dx=b−a；性质2（线性）∫[k₁f±k₂g]=k₁∫f±k₂∫g；性质3（可加性）∫ₐᵇ=∫ₐᶜ+∫ᶜᵇ，与 a、b、c 大小顺序无关；性质4（保号性）f≤g 则 ∫f≤∫g，特别地 |∫f|≤∫|f|（“亡羊补牢 ≤ 未雨绸缪”）；性质5（估值定理）mL≤∫f≤ML；性质6（中值定理）∫f=f(ξ)(b−a)。奇偶对称性还能把计算量直接减半。\n\n### 解题步骤\n\n1. 先看函数符号、对称性与区间方向\n2. 选择拆分区间或线性拆开\n3. 需要估计时用保号性、估值定理\n\n### 易错点\n\n“面积”与“定积分”不总是一回事：负值区域积分为负，求面积要分段加绝对值。"
+      "bodyMarkdown": "定积分的性质：线性性、区间可加性、保号性（f≤g ⇒ ∫f≤∫g）、三角不等式 |∫f|≤∫|f|，以及估值定理 mL≤∫ₐᵇf≤ML。\n\n### 解题步骤\n\n1. 拆成便于计算的部分\n2. 用保号性比较大小\n3. 用估值定理估范围\n\n### 易错点\n\n把 |∫f| 与 ∫|f| 当成相等。"
     },
     {
       "schemaVersion": "1.0",
@@ -1298,51 +1290,47 @@
       "sectionId": "m1-p1-c3-s6",
       "sectionTitle": "定积分",
       "title": "定积分中值定理",
-      "summary": "设 f(x) 在 [a,b] 上连续，则至少存在一点 ξ∈[a,b]，使 ∫ₐᵇf(x)dx = f(ξ)(b−a)。",
+      "summary": "定积分中值定理：f 在 [a,b] 上连续，则存在 ξ∈[a,b] 使 ∫ₐᵇf(x)dx=f(ξ)(b−a)；它说明积分值等于某个函数值乘以区间长度。",
       "tags": [
-        "平均值等式"
+        "积分等于某点函数值乘长度"
       ],
       "sortOrder": 260,
-      "estimatedMinutes": 6,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫ₐᵇf(x)dx = f(ξ)(b−a)；平均值 f̄ = [1/(b−a)]∫ₐᵇf(x)dx",
-        "caption": "设 f(x) 在 [a,b] 上连续，则至少存在一点 ξ∈[a,b]，使 ∫ₐᵇf(x)dx = f(ξ)(b−a)。"
+        "content": "∫ₐᵇf(x)dx=f(ξ)(b−a)",
+        "caption": "定积分中值定理：f 在 [a,b] 上连续，则存在 ξ∈[a,b] 使 ∫ₐᵇf(x)dx=f(ξ)(b−a)；"
       },
       "keyPoints": [
         {
-          "id": "qian-ti-shi-bi-qu-jian-lian-xu-qu-zi-a-b",
-          "title": "前提是闭区间连续",
-          "bodyMarkdown": "前提是闭区间连续，ξ 取自 [a,b]"
+          "id": "f-f-b-a-zai-qu-jian-nei",
+          "title": "∫ₐᵇf=f(ξ)(b−a)",
+          "bodyMarkdown": "∫ₐᵇf=f(ξ)(b−a)，ξ 在区间内"
         },
         {
-          "id": "ping-jun-zhi-gong-shi-zhong-de-b-a-bu-1xees1",
-          "title": "平均值公式中的 b−a 不能漏除",
-          "bodyMarkdown": "平均值公式中的 b−a 不能漏除"
+          "id": "qian-ti-shi-f-zai-bi-qu-jian-shang-lian-1qghlw",
+          "title": "前提是 f 在闭区间上连续",
+          "bodyMarkdown": "前提是 f 在闭区间上连续"
         },
         {
-          "id": "yu-gu-zhi-ding-li-pei-he-yong-yu-ji-fen-03uzq0",
-          "title": "与估值定理配合",
-          "bodyMarkdown": "与估值定理配合，用于积分的估计与证明"
+          "id": "han-shu-ping-jun-zhi-f-1-b-a-f-jiu-shi-f",
+          "title": "函数平均值 f̄=(1/(b−a))∫ₐᵇf 就",
+          "bodyMarkdown": "函数平均值 f̄=(1/(b−a))∫ₐᵇf 就是 f(ξ)"
         }
       ],
       "examples": [
         {
-          "id": "gu-ji-e-x-dx-you-1-e-x-0aunx9",
+          "id": "x-dx-1-3-f-gu-1-3",
           "title": "讲解例子",
-          "bodyMarkdown": "估计 ∫₀¹e^{x²}dx：由 1≤e^{x²}≤e 得 1≤∫≤e；中值定理保证存在 ξ∈[0,1] 使 ∫=e^{ξ²}。"
+          "bodyMarkdown": "∫₀¹x²dx=1/3=f(ξ)，故 ξ=1/√3。"
         }
       ],
       "relatedKnowledgeIds": [],
-      "sources": [
-        {
-          "title": "张宇基础30讲·高数第8讲"
-        }
-      ],
+      "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "设 f(x) 在 [a,b] 上连续，则至少存在一点 ξ∈[a,b]，使 ∫ₐᵇf(x)dx = f(ξ)(b−a)。右端的 f(ξ)=[1/(b−a)]∫ₐᵇf(x)dx 称为 f 在 [a,b] 上的平均值——它是离散平均值定理的连续版；几何意义是曲边梯形的面积恰好等于某个同底矩形的面积。它常和估值定理 m(b−a)≤∫ₐᵇf≤M(b−a) 配合使用。\n\n### 解题步骤\n\n1. 验证 f 在 [a,b] 连续\n2. 写出 ∫ₐᵇf = f(ξ)(b−a)\n3. 配合估值或单调性进一步限定 ξ\n\n### 易错点\n\nξ 只保证存在、不一定能求出；把平均值写成 ∫ₐᵇf 而忘记除以 b−a 是常见笔误。"
+      "bodyMarkdown": "定积分中值定理：f 在 [a,b] 上连续，则存在 ξ∈[a,b] 使 ∫ₐᵇf(x)dx=f(ξ)(b−a)；它说明积分值等于某个函数值乘以区间长度。\n\n### 解题步骤\n\n1. 用最值定理得 m≤f≤M\n2. 由估值定理夹出平均值\n3. 用介值定理找到 ξ\n\n### 易错点\n\n把 ξ 当成区间中点。"
     },
     {
       "schemaVersion": "1.0",
@@ -1353,47 +1341,47 @@
       "sectionId": "m1-p1-c3-s6",
       "sectionTitle": "定积分",
       "title": "积分上限函数",
-      "summary": "积分上限函数把每个 x 对应到从固定起点累积到 x 的面积。",
+      "summary": "Φ(x)=∫ₐˣf(t)dt 称为积分上限函数，若 f 连续则 Φ′(x)=f(x)；它是构造原函数的工具，也是牛顿—莱布尼茨公式的基础。",
       "tags": [
-        "累积函数求导"
+        "变限积分求导"
       ],
       "sortOrder": 270,
       "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "F(x)=∫ₐˣf(t)dt ⇒ F′(x)=f(x)",
-        "caption": "积分上限函数把每个 x 对应到从固定起点累积到 x 的面积。"
+        "content": "Φ(x)=∫ₐˣf(t)dt ⇒ Φ′(x)=f(x)",
+        "caption": "Φ(x)=∫ₐˣf(t)dt 称为积分上限函数，若 f 连续则 Φ′(x)=f(x)；它是构造原函数的工具，也是牛顿—莱布尼茨公式的基础。"
       },
       "keyPoints": [
         {
-          "id": "ji-fen-bian-liang-shi-ya-bian-liang-0ns2y9",
-          "title": "积分变量是哑变量",
-          "bodyMarkdown": "积分变量是哑变量，常写成 t"
+          "id": "x-f-x-f-lian-xu",
+          "title": "Φ′(x)=f(x)（f 连续）",
+          "bodyMarkdown": "Φ′(x)=f(x)（f 连续）"
         },
         {
-          "id": "shang-xian-wei-x-shi-dao-shu-shi-f-x",
-          "title": "上限为 x 时导数是 f(x)",
-          "bodyMarkdown": "上限为 x 时导数是 f(x)"
+          "id": "shang-xia-xian-dou-shi-han-shu-shi-d-dx-0fh5xh",
+          "title": "上下限都是函数时",
+          "bodyMarkdown": "上下限都是函数时：d/dx∫_{u}^{v}f=f(v)v′−f(u)u′"
         },
         {
-          "id": "shang-xia-xian-dou-bian-hua-shi-yao-fen-1s5dvj",
-          "title": "上下限都变化时要分别乘导数",
-          "bodyMarkdown": "上下限都变化时要分别乘导数"
+          "id": "bei-ji-han-shu-han-x-shi-yao-xian-huan-1tslqv",
+          "title": "被积函数含 x 时要先换元或把 x 提出来",
+          "bodyMarkdown": "被积函数含 x 时要先换元或把 x 提出来"
         }
       ],
       "examples": [
         {
-          "id": "f-x-sin-t-dt-sui-ran-1yp9hw",
+          "id": "d-dx-x-sin-t-dt-sin-x-2x",
           "title": "讲解例子",
-          "bodyMarkdown": "F(x)=∫₀ˣsin(t²)dt，虽然没有初等原函数，但 F′(x)=sin(x²)。"
+          "bodyMarkdown": "d/dx∫₀^{x²}sin t dt=sin(x²)·2x。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分上限函数把每个 x 对应到从固定起点累积到 x 的面积。x 增加一点，新增面积近似 f(x)dx，所以它的导数恢复为被积函数；上下限都含 x 时还要用链式法则。\n\n### 解题步骤\n\n1. 把积分写成 F(x)\n2. 识别上下限与被积函数\n3. 使用微积分基本定理和链式法则\n\n### 易错点\n\n忘记上限导数或把 t 直接当成 x，会导致变量混淆。"
+      "bodyMarkdown": "Φ(x)=∫ₐˣf(t)dt 称为积分上限函数，若 f 连续则 Φ′(x)=f(x)；它是构造原函数的工具，也是牛顿—莱布尼茨公式的基础。\n\n### 解题步骤\n\n1. 识别积分限的形式\n2. 按公式求导\n3. 注意上下限是否含 x\n\n### 易错点\n\n上下限含 x 时忘记乘上（下）限的导数。"
     },
     {
       "schemaVersion": "1.0",
@@ -1404,33 +1392,33 @@
       "sectionId": "m1-p1-c3-s6",
       "sectionTitle": "定积分",
       "title": "牛顿—莱布尼茨公式",
-      "summary": "牛顿—莱布尼茨公式把定积分的极限定义和原函数连接起来：只要找到 F′=f，曲边区域的累积量就等于 F 在上下限的差。",
+      "summary": "牛顿—莱布尼茨公式 ∫ₐᵇf(x)dx=F(b)−F(a)（F′=f）把定积分化为原函数在端点的差，是计算定积分的基本工具。",
       "tags": [
-        "把积分算出来"
+        "用原函数算定积分"
       ],
       "sortOrder": 280,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫ₐᵇf(x)dx=F(b)−F(a)，F′(x)=f(x)",
-        "caption": "牛顿—莱布尼茨公式把定积分的极限定义和原函数连接起来：只要找到 F′=f，曲边区域的累积量就等于 F 在上下限的差。"
+        "content": "∫ₐᵇf(x)dx=F(b)−F(a)",
+        "caption": "牛顿—莱布尼茨公式 ∫ₐᵇf(x)dx=F(b)−F(a)（F′=f）把定积分化为原函数在端点的差，是计算定积分的基本工具。"
       },
       "keyPoints": [
         {
-          "id": "xian-zhao-yuan-han-shu-zai-dai-shang-0jjik5",
-          "title": "先找原函数",
-          "bodyMarkdown": "先找原函数，再代上下限"
+          "id": "f-x-dx-f-b-f-a-f-shi-f-de-ren-yi-ge-0jhmn1",
+          "title": "∫ₐᵇf(x)dx=F(b)−F(a)",
+          "bodyMarkdown": "∫ₐᵇf(x)dx=F(b)−F(a)，F 是 f 的任一个原函数"
         },
         {
-          "id": "jie-guo-shi-shang-xian-zhi-jian-xia-1qyubg",
-          "title": "结果是上限值减下限值",
-          "bodyMarkdown": "结果是上限值减下限值"
+          "id": "ba-qiu-he-qu-ji-xian-bian-cheng-liang-0j1ond",
+          "title": "把「求和取极限」变成「两点作差」",
+          "bodyMarkdown": "把「求和取极限」变成「两点作差」"
         },
         {
-          "id": "fan-chang-huo-fen-duan-qing-xing-yao-1s3okn",
-          "title": "反常或分段情形要先检查收敛与连续条件",
-          "bodyMarkdown": "反常或分段情形要先检查收敛与连续条件"
+          "id": "huan-yuan-shi-shang-xia-xian-yao-tong-159hc4",
+          "title": "换元时上下限要同步替换",
+          "bodyMarkdown": "换元时上下限要同步替换"
         }
       ],
       "examples": [
@@ -1444,7 +1432,7 @@
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "牛顿—莱布尼茨公式把定积分的极限定义和原函数连接起来：只要找到 F′=f，曲边区域的累积量就等于 F 在上下限的差。这是积分计算的核心桥梁。\n\n### 解题步骤\n\n1. 识别被积函数\n2. 求一个原函数\n3. 计算 F(b)−F(a)\n\n### 易错点\n\n忘记积分常数虽不影响定积分，但不能把上下限顺序写反。"
+      "bodyMarkdown": "牛顿—莱布尼茨公式 ∫ₐᵇf(x)dx=F(b)−F(a)（F′=f）把定积分化为原函数在端点的差，是计算定积分的基本工具。\n\n### 解题步骤\n\n1. 求出原函数 F\n2. 代入上下限作差\n3. 换元时同步改写积分限\n\n### 易错点\n\n换元后仍用原来的积分限。"
     },
     {
       "schemaVersion": "1.0",
@@ -1455,47 +1443,47 @@
       "sectionId": "m1-p1-c3-s7",
       "sectionTitle": "反常积分",
       "title": "无穷区间反常积分",
-      "summary": "反常积分的“积分号”背后其实是一个极限。无穷区间要让端点趋于无穷，无界被积函数要在奇点附近取极限；只有对应极限存在且有限，积分才收敛。",
+      "summary": "无穷区间反常积分用极限定义：∫ₐ^{+∞}f=lim_{R→+∞}∫ₐ^R f；极限存在且有限时称收敛，否则发散。",
       "tags": [
-        "先定义极限"
+        "先积后取极限"
       ],
       "sortOrder": 290,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "∫ₐ⁺∞f(x)dx=limᵣ→∞∫ₐᴿf(x)dx",
-        "caption": "反常积分的“积分号”背后其实是一个极限。"
+        "format": "latex",
+        "content": "∫ₐ^{+∞}f(x)dx=lim_{R→+∞}∫ₐ^R f(x)dx",
+        "caption": "无穷区间反常积分用极限定义：∫ₐ^{+∞}f=lim_{R→+∞}∫ₐ^R f；极限存在且有限时称收敛，否则发散。"
       },
       "keyPoints": [
         {
-          "id": "wu-qiong-qu-jian-he-wu-jie-han-shu-shi-18rkv6",
-          "title": "无穷区间和无界函数是两类不同反常积分",
-          "bodyMarkdown": "无穷区间和无界函数是两类不同反常积分"
+          "id": "f-lim-r-r-f",
+          "title": "∫ₐ^{+∞}f=lim_{R→+∞}∫ₐ^R ",
+          "bodyMarkdown": "∫ₐ^{+∞}f=lim_{R→+∞}∫ₐ^R f"
         },
         {
-          "id": "duo-ge-qi-dian-yao-chai-kai-fen-bie-pan-1undo6",
-          "title": "多个奇点要拆开分别判断",
-          "bodyMarkdown": "多个奇点要拆开分别判断"
+          "id": "p-ji-fen-dx-x-zai-p-1-shi-shou-lian-p-1-0f8po3",
+          "title": "p 积分",
+          "bodyMarkdown": "p 积分：∫₁^{+∞}dx/xᵖ 在 p>1 时收敛，p≤1 时发散"
         },
         {
-          "id": "bi-jiao-pan-bie-chang-ba-wen-ti-hua-dao-1xw75p",
-          "title": "比较判别常把问题化到 p 积分",
-          "bodyMarkdown": "比较判别常把问题化到 p 积分"
+          "id": "bi-xu-yong-ji-xian-suan-bu-neng-zhi-jie-0zfjcn",
+          "title": "必须用极限算",
+          "bodyMarkdown": "必须用极限算，不能直接代 ∞"
         }
       ],
       "examples": [
         {
-          "id": "1-x-dx-shou-lian-er-1-x-0thv0l",
+          "id": "dx-x-1-shou-lian",
           "title": "讲解例子",
-          "bodyMarkdown": "∫₁∞1/x²dx 收敛，而 ∫₁∞1/x dx 发散。"
+          "bodyMarkdown": "∫₁^{+∞}dx/x²=1，收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "反常积分的“积分号”背后其实是一个极限。无穷区间要让端点趋于无穷，无界被积函数要在奇点附近取极限；只有对应极限存在且有限，积分才收敛。\n\n### 解题步骤\n\n1. 定位无穷端点或奇点\n2. 写成极限形式\n3. 用比较或等价关系判断收敛\n\n### 易错点\n\n把反常积分当作普通原函数代入无穷端点，忽略极限存在性。"
+      "bodyMarkdown": "无穷区间反常积分用极限定义：∫ₐ^{+∞}f=lim_{R→+∞}∫ₐ^R f；极限存在且有限时称收敛，否则发散。\n\n### 解题步骤\n\n1. 先算有限区间积分\n2. 再取极限\n3. 判断收敛性\n\n### 易错点\n\n把 ∞ 当数代入原函数。"
     },
     {
       "schemaVersion": "1.0",
@@ -1506,47 +1494,47 @@
       "sectionId": "m1-p1-c3-s7",
       "sectionTitle": "反常积分",
       "title": "无界函数反常积分",
-      "summary": "反常积分的“积分号”背后其实是一个极限。无穷区间要让端点趋于无穷，无界被积函数要在奇点附近取极限；只有对应极限存在且有限，积分才收敛。",
+      "summary": "被积函数在某点无界（瑕点）时，用极限定义积分：若瑕点在 b，则 ∫ₐᵇf=lim_{ε→0⁺}∫ₐ^{b−ε}f。",
       "tags": [
-        "先定义极限"
+        "先找瑕点"
       ],
       "sortOrder": 300,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "∫ₐ⁺∞f(x)dx=limᵣ→∞∫ₐᴿf(x)dx",
-        "caption": "反常积分的“积分号”背后其实是一个极限。"
+        "format": "latex",
+        "content": "∫ₐᵇf=lim_{ε→0⁺}∫ₐ^{b−ε}f（瑕点在 b）",
+        "caption": "被积函数在某点无界（瑕点）时，用极限定义积分：若瑕点在 b，则 ∫ₐᵇf=lim_{ε→0⁺}∫ₐ^{b−ε}f。"
       },
       "keyPoints": [
         {
-          "id": "wu-qiong-qu-jian-he-wu-jie-han-shu-shi-18rkv6",
-          "title": "无穷区间和无界函数是两类不同反常积分",
-          "bodyMarkdown": "无穷区间和无界函数是两类不同反常积分"
+          "id": "xian-zhao-chu-xia-dian-han-shu-wu-jie-16h4yz",
+          "title": "先找出瑕点（函数无界的位置）",
+          "bodyMarkdown": "先找出瑕点（函数无界的位置）"
         },
         {
-          "id": "duo-ge-qi-dian-yao-chai-kai-fen-bie-pan-1undo6",
-          "title": "多个奇点要拆开分别判断",
-          "bodyMarkdown": "多个奇点要拆开分别判断"
+          "id": "zai-xia-dian-chu-qu-dan-ce-ji-xian",
+          "title": "在瑕点处取单侧极限",
+          "bodyMarkdown": "在瑕点处取单侧极限"
         },
         {
-          "id": "bi-jiao-pan-bie-chang-ba-wen-ti-hua-dao-1xw75p",
-          "title": "比较判别常把问题化到 p 积分",
-          "bodyMarkdown": "比较判别常把问题化到 p 积分"
+          "id": "p-ji-fen-dx-x-zai-p-1-shi-shou-lian",
+          "title": "p 积分",
+          "bodyMarkdown": "p 积分：∫₀¹dx/xᵖ 在 p<1 时收敛"
         }
       ],
       "examples": [
         {
-          "id": "1-x-dx-shou-lian-er-1-x-0thv0l",
+          "id": "dx-x-2-shou-lian",
           "title": "讲解例子",
-          "bodyMarkdown": "∫₁∞1/x²dx 收敛，而 ∫₁∞1/x dx 发散。"
+          "bodyMarkdown": "∫₀¹dx/√x=2，收敛。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "反常积分的“积分号”背后其实是一个极限。无穷区间要让端点趋于无穷，无界被积函数要在奇点附近取极限；只有对应极限存在且有限，积分才收敛。\n\n### 解题步骤\n\n1. 定位无穷端点或奇点\n2. 写成极限形式\n3. 用比较或等价关系判断收敛\n\n### 易错点\n\n把反常积分当作普通原函数代入无穷端点，忽略极限存在性。"
+      "bodyMarkdown": "被积函数在某点无界（瑕点）时，用极限定义积分：若瑕点在 b，则 ∫ₐᵇf=lim_{ε→0⁺}∫ₐ^{b−ε}f。\n\n### 解题步骤\n\n1. 识别瑕点\n2. 把积分写成极限\n3. 判断极限是否存在\n\n### 易错点\n\n忽略瑕点直接用牛顿—莱布尼茨公式。"
     },
     {
       "schemaVersion": "1.0",
@@ -1557,47 +1545,47 @@
       "sectionId": "m1-p1-c3-s7",
       "sectionTitle": "反常积分",
       "title": "收敛与发散",
-      "summary": "反常积分的“积分号”背后其实是一个极限。无穷区间要让端点趋于无穷，无界被积函数要在奇点附近取极限；只有对应极限存在且有限，积分才收敛。",
+      "summary": "反常积分收敛指相应的极限存在且有限，否则发散；判断时常用比较判别法，与已知敛散性的 p 积分比较。",
       "tags": [
-        "先定义极限"
+        "极限存在才收敛"
       ],
       "sortOrder": 310,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫ₐ⁺∞f(x)dx=limᵣ→∞∫ₐᴿf(x)dx",
-        "caption": "反常积分的“积分号”背后其实是一个极限。"
+        "content": "0≤f≤g 且 ∫g 收敛 ⇒ ∫f 收敛",
+        "caption": "反常积分收敛指相应的极限存在且有限，否则发散；判断时常用比较判别法，与已知敛散性的 p 积分比较。"
       },
       "keyPoints": [
         {
-          "id": "wu-qiong-qu-jian-he-wu-jie-han-shu-shi-18rkv6",
-          "title": "无穷区间和无界函数是两类不同反常积分",
-          "bodyMarkdown": "无穷区间和无界函数是两类不同反常积分"
+          "id": "shou-lian-ji-xian-cun-zai-qie-you-xian",
+          "title": "收敛 = 极限存在且有限",
+          "bodyMarkdown": "收敛 = 极限存在且有限"
         },
         {
-          "id": "duo-ge-qi-dian-yao-chai-kai-fen-bie-pan-1undo6",
-          "title": "多个奇点要拆开分别判断",
-          "bodyMarkdown": "多个奇点要拆开分别判断"
+          "id": "bi-jiao-pan-bie-fa-0-f-g-g-shou-lian-f-0885ah",
+          "title": "比较判别法",
+          "bodyMarkdown": "比较判别法：0≤f≤g，∫g 收敛 ⇒ ∫f 收敛"
         },
         {
-          "id": "bi-jiao-pan-bie-chang-ba-wen-ti-hua-dao-1xw75p",
-          "title": "比较判别常把问题化到 p 积分",
-          "bodyMarkdown": "比较判别常把问题化到 p 积分"
+          "id": "p-ji-fen-shi-zui-chang-yong-de-bi-jiao-0q5j6p",
+          "title": "p 积分是最常用的比较基准",
+          "bodyMarkdown": "p 积分是最常用的比较基准"
         }
       ],
       "examples": [
         {
-          "id": "1-x-dx-shou-lian-er-1-x-0thv0l",
+          "id": "dx-x-1-shou-lian-yu-1-x-1ixbvs",
           "title": "讲解例子",
-          "bodyMarkdown": "∫₁∞1/x²dx 收敛，而 ∫₁∞1/x dx 发散。"
+          "bodyMarkdown": "∫₁^{+∞}dx/(x²+1) 收敛（与 1/x² 比较）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "反常积分的“积分号”背后其实是一个极限。无穷区间要让端点趋于无穷，无界被积函数要在奇点附近取极限；只有对应极限存在且有限，积分才收敛。\n\n### 解题步骤\n\n1. 定位无穷端点或奇点\n2. 写成极限形式\n3. 用比较或等价关系判断收敛\n\n### 易错点\n\n把反常积分当作普通原函数代入无穷端点，忽略极限存在性。"
+      "bodyMarkdown": "反常积分收敛指相应的极限存在且有限，否则发散；判断时常用比较判别法，与已知敛散性的 p 积分比较。\n\n### 解题步骤\n\n1. 找比较对象\n2. 用比较判别法\n3. 必要时用等价无穷小确定阶\n\n### 易错点\n\n把「被积函数趋于 0」当成收敛的充分条件。"
     },
     {
       "schemaVersion": "1.0",
@@ -1608,47 +1596,47 @@
       "sectionId": "m1-p1-c3-s7",
       "sectionTitle": "反常积分",
       "title": "拆分奇点",
-      "summary": "反常积分的“积分号”背后其实是一个极限。无穷区间要让端点趋于无穷，无界被积函数要在奇点附近取极限；只有对应极限存在且有限，积分才收敛。",
+      "summary": "区间内部有瑕点时，必须以瑕点为界把积分拆成两段分别判断；只要有一段发散，整体就发散。",
       "tags": [
-        "先定义极限"
+        "以瑕点为界拆开"
       ],
       "sortOrder": 320,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫ₐ⁺∞f(x)dx=limᵣ→∞∫ₐᴿf(x)dx",
-        "caption": "反常积分的“积分号”背后其实是一个极限。"
+        "content": "∫ₐᵇ=∫ₐᶜ+∫ᶜᵇ（c 为瑕点）",
+        "caption": "区间内部有瑕点时，必须以瑕点为界把积分拆成两段分别判断；只要有一段发散，整体就发散。"
       },
       "keyPoints": [
         {
-          "id": "wu-qiong-qu-jian-he-wu-jie-han-shu-shi-18rkv6",
-          "title": "无穷区间和无界函数是两类不同反常积分",
-          "bodyMarkdown": "无穷区间和无界函数是两类不同反常积分"
+          "id": "nei-bu-xia-dian-bi-xu-chai-kai-chu-li",
+          "title": "内部瑕点必须拆开处理",
+          "bodyMarkdown": "内部瑕点必须拆开处理"
         },
         {
-          "id": "duo-ge-qi-dian-yao-chai-kai-fen-bie-pan-1undo6",
-          "title": "多个奇点要拆开分别判断",
-          "bodyMarkdown": "多个奇点要拆开分别判断"
+          "id": "liang-duan-dou-shou-lian-cai-shou-lian",
+          "title": "两段都收敛才收敛",
+          "bodyMarkdown": "两段都收敛才收敛"
         },
         {
-          "id": "bi-jiao-pan-bie-chang-ba-wen-ti-hua-dao-1xw75p",
-          "title": "比较判别常把问题化到 p 积分",
-          "bodyMarkdown": "比较判别常把问题化到 p 积分"
+          "id": "chai-fen-dian-xuan-zai-xia-dian-chu",
+          "title": "拆分点选在瑕点处",
+          "bodyMarkdown": "拆分点选在瑕点处"
         }
       ],
       "examples": [
         {
-          "id": "1-x-dx-shou-lian-er-1-x-0thv0l",
+          "id": "dx-x-chai-cheng-liang-1ra8h6",
           "title": "讲解例子",
-          "bodyMarkdown": "∫₁∞1/x²dx 收敛，而 ∫₁∞1/x dx 发散。"
+          "bodyMarkdown": "∫₋₁¹dx/x 拆成两段后都发散，故整体发散。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "反常积分的“积分号”背后其实是一个极限。无穷区间要让端点趋于无穷，无界被积函数要在奇点附近取极限；只有对应极限存在且有限，积分才收敛。\n\n### 解题步骤\n\n1. 定位无穷端点或奇点\n2. 写成极限形式\n3. 用比较或等价关系判断收敛\n\n### 易错点\n\n把反常积分当作普通原函数代入无穷端点，忽略极限存在性。"
+      "bodyMarkdown": "区间内部有瑕点时，必须以瑕点为界把积分拆成两段分别判断；只要有一段发散，整体就发散。\n\n### 解题步骤\n\n1. 找出所有瑕点\n2. 以瑕点为界拆分\n3. 分别判断敛散\n\n### 易错点\n\n不拆开直接算，得出 0 的错误结果。"
     },
     {
       "schemaVersion": "1.0",
@@ -1659,47 +1647,47 @@
       "sectionId": "m1-p1-c3-s7",
       "sectionTitle": "反常积分",
       "title": "常见比较思想",
-      "summary": "反常积分的“积分号”背后其实是一个极限。无穷区间要让端点趋于无穷，无界被积函数要在奇点附近取极限；只有对应极限存在且有限，积分才收敛。",
+      "summary": "判断反常积分敛散最常用的思路是与 p 积分比较：无穷区间用 1/xᵖ（p>1 收敛），瑕点附近用 1/xᵖ（p<1 收敛）；用等价无穷小确定阶最方便。",
       "tags": [
-        "先定义极限"
+        "与 p 积分比大小"
       ],
       "sortOrder": 330,
       "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "∫ₐ⁺∞f(x)dx=limᵣ→∞∫ₐᴿf(x)dx",
-        "caption": "反常积分的“积分号”背后其实是一个极限。"
+        "content": "∞ 处 p>1；瑕点处 p<1",
+        "caption": "判断反常积分敛散最常用的思路是与 p 积分比较：无穷区间用 1/xᵖ（p>1 收敛），瑕点附近用 1/xᵖ（p<1 收敛）；用等价无穷小确定阶最方便。"
       },
       "keyPoints": [
         {
-          "id": "wu-qiong-qu-jian-he-wu-jie-han-shu-shi-18rkv6",
-          "title": "无穷区间和无界函数是两类不同反常积分",
-          "bodyMarkdown": "无穷区间和无界函数是两类不同反常积分"
+          "id": "wu-qiong-qu-jian-dx-x-shou-lian-p-1",
+          "title": "无穷区间",
+          "bodyMarkdown": "无穷区间：∫₁^{+∞}dx/xᵖ 收敛 ⇔ p>1"
         },
         {
-          "id": "duo-ge-qi-dian-yao-chai-kai-fen-bie-pan-1undo6",
-          "title": "多个奇点要拆开分别判断",
-          "bodyMarkdown": "多个奇点要拆开分别判断"
+          "id": "xia-dian-chu-dx-x-shou-lian-p-1",
+          "title": "瑕点处：∫₀¹dx/xᵖ 收敛 ⇔ p<1",
+          "bodyMarkdown": "瑕点处：∫₀¹dx/xᵖ 收敛 ⇔ p<1"
         },
         {
-          "id": "bi-jiao-pan-bie-chang-ba-wen-ti-hua-dao-1xw75p",
-          "title": "比较判别常把问题化到 p 积分",
-          "bodyMarkdown": "比较判别常把问题化到 p 积分"
+          "id": "deng-jia-wu-qiong-xiao-yong-lai-zhao-0v6ntd",
+          "title": "等价无穷小用来找主导项",
+          "bodyMarkdown": "等价无穷小用来找主导项"
         }
       ],
       "examples": [
         {
-          "id": "1-x-dx-shou-lian-er-1-x-0thv0l",
+          "id": "dx-x-1-5-shou-lian-p-1-0r0hw2",
           "title": "讲解例子",
-          "bodyMarkdown": "∫₁∞1/x²dx 收敛，而 ∫₁∞1/x dx 发散。"
+          "bodyMarkdown": "∫₁^{+∞}dx/x^{1.5} 收敛（p=1.5>1）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "反常积分的“积分号”背后其实是一个极限。无穷区间要让端点趋于无穷，无界被积函数要在奇点附近取极限；只有对应极限存在且有限，积分才收敛。\n\n### 解题步骤\n\n1. 定位无穷端点或奇点\n2. 写成极限形式\n3. 用比较或等价关系判断收敛\n\n### 易错点\n\n把反常积分当作普通原函数代入无穷端点，忽略极限存在性。"
+      "bodyMarkdown": "判断反常积分敛散最常用的思路是与 p 积分比较：无穷区间用 1/xᵖ（p>1 收敛），瑕点附近用 1/xᵖ（p<1 收敛）；用等价无穷小确定阶最方便。\n\n### 解题步骤\n\n1. 判断场景\n2. 找等价 p 积分\n3. 按 p 判据下结论\n\n### 易错点\n\n把两个判据记反。"
     },
     {
       "schemaVersion": "1.0",
@@ -1710,47 +1698,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "平面图形面积",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "平面图形面积用「上曲线减下曲线」积分：A=∫ₐᵇ[f(x)−g(x)]dx（f≥g）；若左右边界更简单，可改对 y 积分（右减左）。",
       "tags": [
-        "把几何量切成微元"
+        "上减下积分"
       ],
       "sortOrder": 340,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "A=∫ₐᵇ[f(x)−g(x)]dx",
+        "caption": "平面图形面积用「上曲线减下曲线」积分：A=∫ₐᵇ[f(x)−g(x)]dx（f≥g）；若左右边界更简单，可改对 y 积分（右减左）。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "a-shang-xia-dx",
+          "title": "A=∫ₐᵇ(上−下)dx",
+          "bodyMarkdown": "A=∫ₐᵇ(上−下)dx"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "ye-ke-dui-y-ji-fen-you-zuo",
+          "title": "也可对 y 积分（右−左）",
+          "bodyMarkdown": "也可对 y 积分（右−左）"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "xian-hua-tu-zhao-jiao-dian-que-ding-ji-038van",
+          "title": "先画图找交点确定积分限",
+          "bodyMarkdown": "先画图找交点确定积分限"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "y-x-yu-y-x-wei-cheng-de-0pi1vf",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "y=x 与 y=x² 围成的面积 =∫₀¹(x−x²)dx=1/6。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "平面图形面积用「上曲线减下曲线」积分：A=∫ₐᵇ[f(x)−g(x)]dx（f≥g）；若左右边界更简单，可改对 y 积分（右减左）。\n\n### 解题步骤\n\n1. 画图找交点\n2. 确定上下曲线\n3. 积分求面积\n\n### 易错点\n\n不判断上下关系就相减，得到负面积。"
     },
     {
       "schemaVersion": "1.0",
@@ -1761,47 +1749,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "参数曲线面积",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "参数曲线围成的面积用换元：A=∫y dx=∫y(t)x′(t)dt，积分限换成对应的 t 值，并注意曲线走向对符号的影响。",
       "tags": [
-        "把几何量切成微元"
+        "换元到 t"
       ],
       "sortOrder": 350,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
-        "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "format": "latex",
+        "content": "A=∫_{t₁}^{t₂}y(t)x′(t)dt",
+        "caption": "参数曲线围成的面积用换元：A=∫y dx=∫y(t)x′(t)dt，积分限换成对应的 t 值，并注意曲线走向对符号的影响。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "a-y-t-x-t-dt",
+          "title": "A=∫y(t)x′(t)dt",
+          "bodyMarkdown": "A=∫y(t)x′(t)dt"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "ji-fen-xian-huan-cheng-t-de-fan-wei",
+          "title": "积分限换成 t 的范围",
+          "bodyMarkdown": "积分限换成 t 的范围"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "zhu-yi-ding-xiang-zou-xiang-dui-zheng-15p4ho",
+          "title": "注意定向（走向）对正负的影响",
+          "bodyMarkdown": "注意定向（走向）对正负的影响"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "bai-xian-yi-gong-de-1p4drg",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "摆线一拱的面积 =3πa²。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "参数曲线围成的面积用换元：A=∫y dx=∫y(t)x′(t)dt，积分限换成对应的 t 值，并注意曲线走向对符号的影响。\n\n### 解题步骤\n\n1. 写出 x(t)、y(t)\n2. 换元并改积分限\n3. 计算积分\n\n### 易错点\n\n换元后积分限仍用 x 的值。"
     },
     {
       "schemaVersion": "1.0",
@@ -1812,47 +1800,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "极坐标面积",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "极坐标下用扇形微元 dA=(1/2)r²dθ，面积 A=(1/2)∫_α^β r²(θ)dθ；关键是确定 θ 的范围，由图形边界（射线或交点）决定。",
       "tags": [
-        "把几何量切成微元"
+        "扇形微元"
       ],
       "sortOrder": 360,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "A=(1/2)∫_α^β r²(θ)dθ",
+        "caption": "极坐标下用扇形微元 dA=(1/2)r²dθ，面积 A=(1/2)∫_α^β r²(θ)dθ；关键是确定 θ 的范围，由图形边界（射线或交点）决定。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "a-1-2-r-d",
+          "title": "A=(1/2)∫_α^β r²(θ)dθ",
+          "bodyMarkdown": "A=(1/2)∫_α^β r²(θ)dθ"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "de-fan-wei-you-bian-jie-jue-ding",
+          "title": "θ 的范围由边界决定",
+          "bodyMarkdown": "θ 的范围由边界决定"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "dui-chen-tu-xing-ke-suan-yi-ban-zai-16s3hb",
+          "title": "对称图形可算一半再乘 2",
+          "bodyMarkdown": "对称图形可算一半再乘 2"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "yuan-r-2cos-de-mian-ji",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "圆 r=2cos θ 的面积 =π。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "极坐标下用扇形微元 dA=(1/2)r²dθ，面积 A=(1/2)∫_α^β r²(θ)dθ；关键是确定 θ 的范围，由图形边界（射线或交点）决定。\n\n### 解题步骤\n\n1. 画图确定 θ 范围\n2. 写出 r(θ)\n3. 代入公式积分\n\n### 易错点\n\nθ 的范围取错，导致面积成倍偏差。"
     },
     {
       "schemaVersion": "1.0",
@@ -1863,47 +1851,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "旋转体体积",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "绕 x 轴旋转的体积用圆盘法 V=π∫ₐᵇf²(x)dx；若是两曲线之间的区域旋转，则 V=π∫(f²−g²)dx。",
       "tags": [
-        "把几何量切成微元"
+        "圆盘法"
       ],
       "sortOrder": 370,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "V=π∫ₐᵇf²(x)dx",
+        "caption": "绕 x 轴旋转的体积用圆盘法 V=π∫ₐᵇf²(x)dx；若是两曲线之间的区域旋转，则 V=π∫(f²−g²)dx。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "v-f-x-dx-rao-x-zhou",
+          "title": "V=π∫ₐᵇf²(x)dx（绕 x 轴）",
+          "bodyMarkdown": "V=π∫ₐᵇf²(x)dx（绕 x 轴）"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "liang-qu-xian-zhi-jian-v-f-g-dx",
+          "title": "两曲线之间",
+          "bodyMarkdown": "两曲线之间：V=π∫(f²−g²)dx"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "rao-y-zhou-shi-gai-dui-y-ji-fen",
+          "title": "绕 y 轴时改对 y 积分",
+          "bodyMarkdown": "绕 y 轴时改对 y 积分"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "y-x-zai-0-1-rao-x-zhou-0hd6qj",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "y=√x 在 [0,1] 绕 x 轴：V=π∫₀¹x dx=π/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "绕 x 轴旋转的体积用圆盘法 V=π∫ₐᵇf²(x)dx；若是两曲线之间的区域旋转，则 V=π∫(f²−g²)dx。\n\n### 解题步骤\n\n1. 确定旋转轴与边界\n2. 写出半径函数\n3. 套圆盘法积分\n\n### 易错点\n\n忘记平方，或两曲线相减后忘记平方。"
     },
     {
       "schemaVersion": "1.0",
@@ -1914,47 +1902,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "平行截面体积",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "若垂直于某轴的截面面积 A(x) 已知，体积 V=∫ₐᵇA(x)dx；这是「切片求和」的推广，适用于非旋转体。",
       "tags": [
-        "把几何量切成微元"
+        "已知截面积积分"
       ],
       "sortOrder": 380,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "V=∫ₐᵇA(x)dx",
+        "caption": "若垂直于某轴的截面面积 A(x) 已知，体积 V=∫ₐᵇA(x)dx；这是「切片求和」的推广，适用于非旋转体。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "v-a-x-dx",
+          "title": "V=∫ₐᵇA(x)dx",
+          "bodyMarkdown": "V=∫ₐᵇA(x)dx"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "guan-jian-shi-xie-chu-jie-mian-ji-han-0qvniy",
+          "title": "关键是写出截面积函数",
+          "bodyMarkdown": "关键是写出截面积函数"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "xuan-zhuan-ti-shi-ta-de-te-li",
+          "title": "旋转体是它的特例",
+          "bodyMarkdown": "旋转体是它的特例"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "yi-zhi-zheng-san-jiao-0oiv9l",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "已知正三角形截面的立体，A(x)=(√3/4)a²(x)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "若垂直于某轴的截面面积 A(x) 已知，体积 V=∫ₐᵇA(x)dx；这是「切片求和」的推广，适用于非旋转体。\n\n### 解题步骤\n\n1. 选切片方向\n2. 写出 A(x)\n3. 积分求体积\n\n### 易错点\n\n截面积函数写错（漏乘常数）。"
     },
     {
       "schemaVersion": "1.0",
@@ -1965,47 +1953,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "曲线弧长",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "曲线弧长是弧微分的积分：s=∫ₐᵇ√(1+y′²)dx；参数式用 s=∫√(x′²+y′²)dt，极坐标用 s=∫√(r²+r′²)dθ。",
       "tags": [
-        "把几何量切成微元"
+        "弧微分积分"
       ],
       "sortOrder": 390,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "s=∫ₐᵇ√(1+y′²)dx",
+        "caption": "曲线弧长是弧微分的积分：s=∫ₐᵇ√(1+y′²)dx；参数式用 s=∫√(x′²+y′²)dt，极坐标用 s=∫√(r²+r′²)dθ。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "zhi-jiao-zuo-biao-s-1-y-dx",
+          "title": "直角坐标",
+          "bodyMarkdown": "直角坐标：s=∫ₐᵇ√(1+y′²)dx"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "can-shu-shi-s-x-y-dt",
+          "title": "参数式：s=∫√(x′²+y′²)dt",
+          "bodyMarkdown": "参数式：s=∫√(x′²+y′²)dt"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "ji-zuo-biao-s-r-r-d",
+          "title": "极坐标：s=∫√(r²+r′²)dθ",
+          "bodyMarkdown": "极坐标：s=∫√(r²+r′²)dθ"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "y-2-3-x-3-2-zai-0-3-00wmte",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "y=(2/3)x^{3/2} 在 [0,3] 上的弧长 =14/3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "曲线弧长是弧微分的积分：s=∫ₐᵇ√(1+y′²)dx；参数式用 s=∫√(x′²+y′²)dt，极坐标用 s=∫√(r²+r′²)dθ。\n\n### 解题步骤\n\n1. 选择坐标形式\n2. 写出弧微分\n3. 按区间积分\n\n### 易错点\n\n漏掉根号，或忘记乘 dx。"
     },
     {
       "schemaVersion": "1.0",
@@ -2016,47 +2004,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "旋转曲面侧面积",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "绕 x 轴旋转的侧面积 S=2π∫ₐᵇ|y|√(1+y′²)dx：把弧微元旋转成圆环，周长 2π|y| 乘弧长 ds。",
       "tags": [
-        "把几何量切成微元"
+        "弧微分乘 2πy"
       ],
       "sortOrder": 400,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "S=2π∫ₐᵇ|y|√(1+y′²)dx",
+        "caption": "绕 x 轴旋转的侧面积 S=2π∫ₐᵇ|y|√(1+y′²)dx：把弧微元旋转成圆环，周长 2π|y| 乘弧长 ds。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "s-2-y-1-y-dx",
+          "title": "S=2π∫|y|√(1+y′²)dx",
+          "bodyMarkdown": "S=2π∫|y|√(1+y′²)dx"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "bi-xu-dai-hu-wei-fen-yin-zi",
+          "title": "必须带弧微分因子",
+          "bodyMarkdown": "必须带弧微分因子"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "yu-ti-ji-gong-shi-de-qu-bie-zhe-li-shi-0ef2kk",
+          "title": "与体积公式的区别",
+          "bodyMarkdown": "与体积公式的区别：这里是一次方"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "y-x-0-x-1-rao-x-zhou-s-2",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "y=x（0≤x≤1）绕 x 轴：S=√2π。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "绕 x 轴旋转的侧面积 S=2π∫ₐᵇ|y|√(1+y′²)dx：把弧微元旋转成圆环，周长 2π|y| 乘弧长 ds。\n\n### 解题步骤\n\n1. 写出弧微分 ds\n2. 乘 2π|y| 得微元\n3. 积分求侧面积\n\n### 易错点\n\n漏掉弧微分因子（写成 2π∫y dx）。"
     },
     {
       "schemaVersion": "1.0",
@@ -2067,47 +2055,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "功",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "变力做功 W=∫ₐᵇF(x)dx；抽水做功要写清微元：每层水的重力乘以它被提升的距离。",
       "tags": [
-        "把几何量切成微元"
+        "变力做功"
       ],
       "sortOrder": 410,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "W=∫ₐᵇF(x)dx",
+        "caption": "变力做功 W=∫ₐᵇF(x)dx；抽水做功要写清微元：每层水的重力乘以它被提升的距离。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "w-f-x-dx",
+          "title": "W=∫ₐᵇF(x)dx",
+          "bodyMarkdown": "W=∫ₐᵇF(x)dx"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "chou-shui-wei-yuan-zhong-li-ga-x-dx-ti-1m18qs",
+          "title": "抽水：微元重力 ρgA(x)dx × 提升距离",
+          "bodyMarkdown": "抽水：微元重力 ρgA(x)dx × 提升距离"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "xian-xie-wei-yuan-zai-ji-fen",
+          "title": "先写微元再积分",
+          "bodyMarkdown": "先写微元再积分"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "ba-shui-chou-dao-rong-0pimep",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "把水抽到容器顶面：W=ρg∫₀ʰ(h−x)A(x)dx。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "变力做功 W=∫ₐᵇF(x)dx；抽水做功要写清微元：每层水的重力乘以它被提升的距离。\n\n### 解题步骤\n\n1. 写出微元 dW\n2. 确定积分限\n3. 积分求总功\n\n### 易错点\n\n抽水时忘记乘提升距离。"
     },
     {
       "schemaVersion": "1.0",
@@ -2118,47 +2106,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "液体压力",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "液体压力用微元法：深度 x 处压强为 ρgx，微元压力 dP=ρgx·L(x)dx，总压力 P=∫ρgx·L(x)dx。",
       "tags": [
-        "把几何量切成微元"
+        "压强乘面积"
       ],
       "sortOrder": 420,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "P=∫ρgx·L(x)dx",
+        "caption": "液体压力用微元法：深度 x 处压强为 ρgx，微元压力 dP=ρgx·L(x)dx，总压力 P=∫ρgx·L(x)dx。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "ya-qiang-gx-x-wei-shen-du",
+          "title": "压强 = ρgx（x 为深度）",
+          "bodyMarkdown": "压强 = ρgx（x 为深度）"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "dp-gx-l-x-dx",
+          "title": "dP=ρgx·L(x)dx",
+          "bodyMarkdown": "dP=ρgx·L(x)dx"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "guan-jian-shi-xie-chu-gai-shen-du-chu-0qw8ur",
+          "title": "关键是写出该深度处的宽度 L(x)",
+          "bodyMarkdown": "关键是写出该深度处的宽度 L(x)"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "kuan-b-gao-h-de-ju-xing-1savbw",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "宽 b、高 h 的矩形闸门顶与水面平齐：P=ρgbh²/2。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "液体压力用微元法：深度 x 处压强为 ρgx，微元压力 dP=ρgx·L(x)dx，总压力 P=∫ρgx·L(x)dx。\n\n### 解题步骤\n\n1. 以深度为积分变量\n2. 写宽度函数与压强\n3. 积分求总压力\n\n### 易错点\n\n把深度与高度的方向弄反。"
     },
     {
       "schemaVersion": "1.0",
@@ -2169,47 +2157,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "引力",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "细杆对质点的引力用微元法：把杆分成小段，每段质量 dm=ρdx，按万有引力定律写微元力，再沿杆积分（注意分解方向分量）。",
       "tags": [
-        "把几何量切成微元"
+        "万有引力积分"
       ],
       "sortOrder": 430,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "F=∫Gmρdx/r²（按方向分量积分）",
+        "caption": "细杆对质点的引力用微元法：把杆分成小段，每段质量 dm=ρdx，按万有引力定律写微元力，再沿杆积分（注意分解方向分量）。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "wei-yuan-zhi-liang-dm-dx",
+          "title": "微元质量 dm=ρdx",
+          "bodyMarkdown": "微元质量 dm=ρdx"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "wei-yuan-li-df-gm-dm-r",
+          "title": "微元力 dF=Gm·dm/r²",
+          "bodyMarkdown": "微元力 dF=Gm·dm/r²"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "bi-xu-fen-jie-fang-xiang-fen-liang-zai-1jmg7o",
+          "title": "必须分解方向分量再积分",
+          "bodyMarkdown": "必须分解方向分量再积分"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "xi-gan-dui-yan-chang-07ugjb",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "细杆对延长线上距端点 a 处质点的引力含 ln(1+L/a)。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "细杆对质点的引力用微元法：把杆分成小段，每段质量 dm=ρdx，按万有引力定律写微元力，再沿杆积分（注意分解方向分量）。\n\n### 解题步骤\n\n1. 建立坐标系\n2. 写微元力及分量\n3. 积分求合力\n\n### 易错点\n\n忘记分解方向，直接对模长积分。"
     },
     {
       "schemaVersion": "1.0",
@@ -2220,47 +2208,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "质心/形心",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "形心是几何图形的中心，质心是质量分布的加权平均位置；均匀物体的形心与质心重合，公式为 x̄=(1/A)∫x[f(x)−g(x)]dx。",
       "tags": [
-        "把几何量切成微元"
+        "加权平均位置"
       ],
       "sortOrder": 440,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "x̄=(1/A)∫ₐᵇx[f(x)−g(x)]dx",
+        "caption": "形心是几何图形的中心，质心是质量分布的加权平均位置；均匀物体的形心与质心重合，公式为 x̄=(1/A)∫x[f(x)−g(x)]dx。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "xing-xin-mian-ji-jia-quan-ping-jun-wei-17axvx",
+          "title": "形心 = 面积加权平均位置",
+          "bodyMarkdown": "形心 = 面积加权平均位置"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "x-1-a-x-shang-xia-dx",
+          "title": "x̄=(1/A)∫ₐᵇx(上−下)dx",
+          "bodyMarkdown": "x̄=(1/A)∫ₐᵇx(上−下)dx"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "jun-yun-wu-ti-de-zhi-xin-jiu-shi-xing-0iqkls",
+          "title": "均匀物体的质心就是形心",
+          "bodyMarkdown": "均匀物体的质心就是形心"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "san-jiao-xing-de-xing-1y5xxq",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "三角形的形心在中线交点（距底 h/3）。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "形心是几何图形的中心，质心是质量分布的加权平均位置；均匀物体的形心与质心重合，公式为 x̄=(1/A)∫x[f(x)−g(x)]dx。\n\n### 解题步骤\n\n1. 写出上下边界\n2. 按公式算 x̄、ȳ\n3. 除以面积归一化\n\n### 易错点\n\n忘记除以总面积。"
     },
     {
       "schemaVersion": "1.0",
@@ -2271,47 +2259,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "函数平均值",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "函数在 [a,b] 上的平均值 f̄=(1/(b−a))∫ₐᵇf(x)dx，几何意义是「等面积矩形的高度」，也正是定积分中值定理中的 f(ξ)。",
       "tags": [
-        "把几何量切成微元"
+        "积分除以区间长度"
       ],
       "sortOrder": 450,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "f̄=(1/(b−a))∫ₐᵇf(x)dx",
+        "caption": "函数在 [a,b] 上的平均值 f̄=(1/(b−a))∫ₐᵇf(x)dx，几何意义是「等面积矩形的高度」，也正是定积分中值定理中的 f(ξ)。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "f-1-b-a-f-x-dx",
+          "title": "f̄=(1/(b−a))∫ₐᵇf(x)dx",
+          "bodyMarkdown": "f̄=(1/(b−a))∫ₐᵇf(x)dx"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "ji-he-yi-yi-deng-mian-ji-ju-xing-de-gao-1s9wo8",
+          "title": "几何意义",
+          "bodyMarkdown": "几何意义：等面积矩形的高度"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "yu-zhong-zhi-ding-li-zhong-de-f-xiang-0jxd2a",
+          "title": "与中值定理中的 f(ξ) 相等",
+          "bodyMarkdown": "与中值定理中的 f(ξ) 相等"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "f-x-x-zai-0-2-shang-de-1g8g42",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "f(x)=x 在 [0,2] 上的平均值为 1。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "函数在 [a,b] 上的平均值 f̄=(1/(b−a))∫ₐᵇf(x)dx，几何意义是「等面积矩形的高度」，也正是定积分中值定理中的 f(ξ)。\n\n### 解题步骤\n\n1. 算定积分\n2. 除以区间长度\n3. 得到平均值\n\n### 易错点\n\n忘记除以区间长度。"
     },
     {
       "schemaVersion": "1.0",
@@ -2322,47 +2310,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "面积：扫描微元条",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "面积计算可以理解为用竖条扫描区域：每条宽 dx、高 (上−下)，面积微元 dA=(上−下)dx，全部累加就是定积分。",
       "tags": [
-        "把几何量切成微元"
+        "微元法直观"
       ],
       "sortOrder": 460,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "dA=(上−下)dx",
+        "caption": "面积计算可以理解为用竖条扫描区域：每条宽 dx、高 (上−下)，面积微元 dA=(上−下)dx，全部累加就是定积分。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "da-shang-xia-dx",
+          "title": "dA=(上−下)dx",
+          "bodyMarkdown": "dA=(上−下)dx"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "sao-miao-fang-xiang-ke-huan-heng-tiao-0cmv6i",
+          "title": "扫描方向可换（横条对应对 y 积分）",
+          "bodyMarkdown": "扫描方向可换（横条对应对 y 积分）"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "wei-yuan-fa-tong-yi-chu-li-mian-ji-ti-1kkpxf",
+          "title": "微元法统一处理面积、体积、弧长",
+          "bodyMarkdown": "微元法统一处理面积、体积、弧长"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "y-x-yu-x-zhou-zai-0-1-0dd94b",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "y=x² 与 x 轴在 [0,1] 围成的面积 =1/3。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "面积计算可以理解为用竖条扫描区域：每条宽 dx、高 (上−下)，面积微元 dA=(上−下)dx，全部累加就是定积分。\n\n### 解题步骤\n\n1. 画图选扫描方向\n2. 写微元面积\n3. 积分求和\n\n### 易错点\n\n微元漏掉 dx。"
     },
     {
       "schemaVersion": "1.0",
@@ -2373,47 +2361,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "旋转体：二维区域绕轴旋转形成三维实体",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "把平面区域绕某条直线旋转得到旋转体；垂直于旋转轴切一刀，截面是圆盘或圆环，这就是圆盘法/圆环法公式的来源。",
       "tags": [
-        "把几何量切成微元"
+        "旋转体的截面"
       ],
       "sortOrder": 470,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "V=π∫(R²−r²)dx",
+        "caption": "把平面区域绕某条直线旋转得到旋转体；垂直于旋转轴切一刀，截面是圆盘或圆环，这就是圆盘法/圆环法公式的来源。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "jie-mian-shi-yuan-pan-huo-yuan-huan",
+          "title": "截面是圆盘（或圆环）",
+          "bodyMarkdown": "截面是圆盘（或圆环）"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "yuan-pan-fa-v-r-dx",
+          "title": "圆盘法：V=π∫r²dx",
+          "bodyMarkdown": "圆盘法：V=π∫r²dx"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "yuan-huan-fa-v-r-r-dx",
+          "title": "圆环法：V=π∫(R²−r²)dx",
+          "bodyMarkdown": "圆环法：V=π∫(R²−r²)dx"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "y-x-yu-y-1-zhi-jian-de-0kyryi",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "y=x² 与 y=1 之间的区域绕 y 轴旋转用圆环法。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "把平面区域绕某条直线旋转得到旋转体；垂直于旋转轴切一刀，截面是圆盘或圆环，这就是圆盘法/圆环法公式的来源。\n\n### 解题步骤\n\n1. 确认旋转轴\n2. 写外半径与内半径\n3. 按圆盘或圆环法积分\n\n### 易错点\n\n内外半径搞反，导致体积为负。"
     },
     {
       "schemaVersion": "1.0",
@@ -2424,47 +2412,47 @@
       "sectionId": "m1-p1-c3-s8",
       "sectionTitle": "定积分应用",
       "title": "弧长：折线分段不断细化逼近曲线",
-      "summary": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。",
+      "summary": "弧长的思想是「以直代曲」：用折线逼近曲线，每段长 √(Δx²+Δy²)，分段不断细化后取极限就得到 ∫√(1+y′²)dx。",
       "tags": [
-        "把几何量切成微元"
+        "以直代曲"
       ],
       "sortOrder": 480,
-      "estimatedMinutes": 4,
+      "estimatedMinutes": 3,
       "anchor": {
         "type": "formula",
         "format": "text",
-        "content": "总量=∫微元量",
-        "caption": "积分应用的统一语言是“总量 = 微元总和的极限”。"
+        "content": "s=lim Σ√(Δx²+Δy²)=∫√(1+y′²)dx",
+        "caption": "弧长的思想是「以直代曲」：用折线逼近曲线，每段长 √(Δx²+Δy²)，分段不断细化后取极限就得到 ∫√(1+y′²)dx。"
       },
       "keyPoints": [
         {
-          "id": "mian-ji-yong-gao-kuan-ti-ji-yong-jie-0kv86w",
-          "title": "面积用高×宽",
-          "bodyMarkdown": "面积用高×宽，体积用截面积×厚度"
+          "id": "zhe-xian-bi-jin-qu-ji-xian-de-hu-chang-1tppoo",
+          "title": "折线逼近 → 取极限得弧长积分",
+          "bodyMarkdown": "折线逼近 → 取极限得弧长积分"
         },
         {
-          "id": "zhi-liang-yao-cheng-mi-du-ya-li-yao-0l2ml5",
-          "title": "质量要乘密度",
-          "bodyMarkdown": "质量要乘密度，压力要乘受力面积"
+          "id": "mei-duan-chang-du-lai-zi-gou-gu-ding-li",
+          "title": "每段长度来自勾股定理",
+          "bodyMarkdown": "每段长度来自勾股定理"
         },
         {
-          "id": "xuan-zhuan-ti-you-xian-pan-duan-yuan-1qm77a",
-          "title": "旋转体优先判断圆盘、垫片还是柱壳",
-          "bodyMarkdown": "旋转体优先判断圆盘、垫片还是柱壳"
+          "id": "zhe-jiu-shi-hu-wei-fen-ds-de-lai-yuan",
+          "title": "这就是弧微分 ds 的来源",
+          "bodyMarkdown": "这就是弧微分 ds 的来源"
         }
       ],
       "examples": [
         {
-          "id": "rao-x-zhou-xuan-zhuan-y-14z508",
+          "id": "yuan-de-zhou-chang-ke-1q04oq",
           "title": "讲解例子",
-          "bodyMarkdown": "绕 x 轴旋转 y=f(x) 得 V=π∫ₐᵇ[f(x)]²dx；若有空心要用外半径平方减内半径平方。"
+          "bodyMarkdown": "圆的周长可由弧长积分算得 2πR。"
         }
       ],
       "relatedKnowledgeIds": [],
       "sources": [],
       "status": "published",
       "updatedAt": "2026-09-18T12:45:48Z",
-      "bodyMarkdown": "积分应用的统一语言是“总量 = 微元总和的极限”。先选一个足够薄的条、壳或截面，写出微元量，再确定积分范围；坐标方向和切片方式决定公式形式。\n\n### 解题步骤\n\n1. 画区域并选切片方向\n2. 写出一个微元量\n3. 沿完整范围积分并检查单位\n\n### 易错点\n\n只写几何公式不画区域，最容易把上下限、半径和切片方向弄反。"
+      "bodyMarkdown": "弧长的思想是「以直代曲」：用折线逼近曲线，每段长 √(Δx²+Δy²)，分段不断细化后取极限就得到 ∫√(1+y′²)dx。\n\n### 解题步骤\n\n1. 把曲线分成 n 段\n2. 每段用直线近似\n3. 求和取极限\n\n### 易错点\n\n把弧长写成 ∫|y′|dx（漏掉横向分量）。"
     }
   ]
 }

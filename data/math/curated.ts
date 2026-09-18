@@ -2437,6 +2437,22 @@ const CALCULUS_FUNCTIONS_LIMITS: Record<string, LectureBody> = {
     example: 'y=ln(sin x) 是初等函数，在定义区间内连续。',
     trap: '把一切分段函数都当成初等函数（有的分段函数不是初等函数）。',
   },
+  // 数二第 1 章的点名是「基本初等函数」（不含「与初等函数」），必须单独给键才命中
+  '函数、极限与连续/基本初等函数': {
+    tag: '函数家族的五类根基',
+    explanation:
+      '幂函数、指数函数、对数函数、三角函数、反三角函数合称五类基本初等函数，其余函数大多由它们运算、复合而来；用它们之前先过一遍定义域、值域、奇偶性与周期性。',
+    keyPoints: [
+      '五类基本初等函数：幂、指、对、三角、反三角',
+      '指对互为反函数：y=aˣ 与 y=logₐx 图像关于 y=x 对称',
+      '复合或四则之后，定义域取「能同时成立」的交集',
+    ],
+    visual: 'mapping',
+    steps: ['认出函数由哪几类构成', '逐层写定义域再取交集', '按各类的性质判断图像与单调性'],
+    formula: 'aˣ>0；logₐx 要求 x>0；tan x 在 x=kπ+π/2 无定义',
+    example: 'y=√(1−x²) 定义域 [−1,1]；y=ln(1+x) 定义域 x>−1。',
+    trap: '只看外层表达式，忽略内层函数带来的定义域限制（如 ln(sin x) 还要求 sin x>0）。',
+  },
   隐函数: {
     tag: '由方程确定的函数',
     explanation:
@@ -4244,9 +4260,1069 @@ const CALCULUS_DERIVATIVES: Record<string, LectureBody> = {
   },
 }
 
+/**
+ * 高等数学 · 第 3 章「一元函数积分学」（数学一 48 点 + 数学二 43 点，2026-09-18 精编）
+ *
+ * 注意：「基本性质」在数学二同一章里出现两次（原函数与不定积分 / 定积分 两节），
+ * 必须用三段键「章节/小节/标题」区分，否则会共用同一份内容。
+ */
+const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
+  原函数定义: {
+    tag: '导数的逆运算',
+    explanation:
+      '若在区间 I 上处处有 F′(x)=f(x)，就称 F(x) 是 f(x) 在 I 上的一个原函数。原函数是「把导数倒过来」的概念，要求在整个区间上成立，不能只在个别点成立。',
+    keyPoints: [
+      'F′=f ⇒ F 是 f 的原函数，方向不能反',
+      '原函数是「区间上」的概念，必须处处成立',
+      '连续函数一定有原函数（变限积分就是构造方法）',
+    ],
+    visual: 'integral',
+    steps: ['验证 F′=f', '确认在指定区间上处处成立', '必要时用变限积分构造'],
+    formula: 'F′(x)=f(x) ⇒ F 为 f 的原函数',
+    example: 'sin x 是 cos x 的原函数，因为 (sin x)′=cos x。',
+    trap: '把原函数与导数弄反（求原函数是积分，不是求导）。',
+  },
+  原函数: {
+    tag: '导数反过来就是它',
+    explanation:
+      'f 的原函数就是「导数等于 f」的函数：F′=f。求原函数与求导互为逆运算，所以基本积分表可以从基本导数表倒着读出来。',
+    keyPoints: [
+      'F′=f 就是原函数的定义',
+      '原函数一定在某个区间上讨论',
+      '初等函数的原函数未必是初等函数（如 e^{−x²}）',
+    ],
+    visual: 'integral',
+    steps: ['想「谁的导数等于它」', '验证区间上处处成立', '必要时加常数'],
+    formula: 'F′(x)=f(x)',
+    example: 'x²/2 是 x 的原函数。',
+    trap: '以为每个函数都有初等形式的原函数。',
+  },
+  原函数族: {
+    tag: '相差一个常数',
+    explanation:
+      '同一函数的任意两个原函数只相差一个常数，所以全部原函数构成 F(x)+C 的形式，称为原函数族；这正是不定积分要加常数 C 的原因。',
+    keyPoints: [
+      '两个原函数之差必为常数',
+      '原函数族 = F(x)+C（C 取遍实数）',
+      'C 的任意性来自「常数导数为 0」',
+    ],
+    visual: 'integral',
+    steps: ['求出一个原函数', '加上任意常数 C', '写成 F(x)+C 的形式'],
+    formula: 'F(x)+C',
+    example: 'x²/2、x²/2+3、x²/2−1 都是 x 的原函数。',
+    trap: '漏写常数 C，把原函数族写成一个函数。',
+  },
+  不定积分: {
+    tag: '原函数族的记号',
+    explanation:
+      '不定积分 ∫f(x)dx=F(x)+C 表示 f 的全部原函数，它的结果是函数族而不是一个函数；求不定积分就是求原函数，结果必须带常数 C。',
+    keyPoints: [
+      '∫f(x)dx=F(x)+C，结果是函数族',
+      '求导与积分互为逆运算：(∫f dx)′=f',
+      '不定积分与定积分的区别：前者是函数，后者是数',
+    ],
+    visual: 'integral',
+    steps: ['识别被积函数类型', '选择换元或分部等方法', '写出结果并加 C'],
+    formula: '∫f(x)dx=F(x)+C',
+    example: '∫2x dx=x²+C。',
+    trap: '把不定积分的结果写成一个确定的函数（漏掉 C）。',
+  },
+  积分常数: {
+    tag: '别忘了加 C',
+    explanation:
+      '积分常数 C 表示原函数族的任意性，在不定积分里不可省略；而在定积分中，常数会在上下限相减时抵消，所以定积分结果里不写 C。',
+    keyPoints: [
+      '不定积分必须写 +C',
+      '定积分由 F(b)−F(a) 得到，常数自动抵消',
+      '同一个不定积分可以写成不同形式（相差常数）',
+    ],
+    visual: 'integral',
+    steps: ['求出原函数', '补上 +C', '定积分时用上下限作差'],
+    formula: '∫f dx=F(x)+C',
+    example: '∫cos x dx=sin x+C。',
+    trap: '在定积分结果后面也加 C（多余且错）。',
+  },
+  '一元函数积分学/原函数与不定积分/基本性质': {
+    tag: '线性与互逆',
+    explanation:
+      '不定积分的基本性质有两条：线性性（常数可提、和差可拆）与互逆性（微分与积分互为逆运算）。这两条是后面所有积分技巧的基础。',
+    keyPoints: [
+      '线性：∫(k₁f+k₂g)dx=k₁∫f dx+k₂∫g dx',
+      '互逆：(∫f dx)′=f(x)，∫f′(x)dx=f(x)+C',
+      '没有「积的积分等于积分之积」这种法则',
+    ],
+    visual: 'integral',
+    steps: ['把式子拆成基本积分之和', '逐项积分', '合并并加 C'],
+    formula: '∫(k₁f+k₂g)dx=k₁∫f dx+k₂∫g dx',
+    example: '∫(2x+cos x)dx=x²+sin x+C。',
+    trap: '把 ∫fg dx 拆成 ∫f dx·∫g dx。',
+  },
+  幂函数: {
+    tag: '幂的积分公式',
+    explanation:
+      '∫xᵃdx=xᵃ⁺¹/(α+1)+C（α≠−1）；α=−1 是唯一的例外，此时 ∫dx/x=ln|x|+C，不能套幂公式。',
+    keyPoints: [
+      '∫xᵃdx=xᵃ⁺¹/(α+1)+C（α≠−1）',
+      'α=−1 时用 ∫dx/x=ln|x|+C',
+      '负指数、分数指数都按同一公式处理',
+    ],
+    visual: 'integral',
+    steps: ['确认指数不等于 −1', '套用幂公式（指数加 1、除以新指数）', '指数为 −1 时改用对数'],
+    formula: '∫xᵃdx=xᵃ⁺¹/(α+1)+C（α≠−1）',
+    example: '∫√x dx=∫x^{1/2}dx=(2/3)x^{3/2}+C。',
+    trap: '对 1/x 也用幂公式，导致除以 0。',
+  },
+  '一元函数积分学/指数函数': {
+    tag: '指数积分',
+    explanation:
+      '∫eˣdx=eˣ+C，∫aˣdx=aˣ/ln a+C（a>0 且 a≠1）。指数函数积分后形式几乎不变，是最容易处理的一类。',
+    keyPoints: [
+      '∫eˣdx=eˣ+C',
+      '∫aˣdx=aˣ/ln a+C，分母是 ln a',
+      '与导数对照记：求导乘 ln a，积分除 ln a',
+    ],
+    visual: 'integral',
+    steps: ['识别底数是否为 e', '套对应公式', '加 C'],
+    formula: '∫eˣdx=eˣ+C；∫aˣdx=aˣ/ln a+C',
+    example: '∫2ˣdx=2ˣ/ln 2+C。',
+    trap: '把 ∫aˣdx 写成 aˣln a（那是导数）。',
+  },
+  '一元函数积分学/指数': {
+    tag: 'eˣ 与 aˣ 的积分',
+    explanation:
+      '指数函数积分：∫eˣdx=eˣ+C；底数不是 e 时要除以 ln a，∫aˣdx=aˣ/ln a+C。',
+    keyPoints: [
+      '∫eˣdx=eˣ+C，最省事',
+      '∫aˣdx=aˣ/ln a+C',
+      '与换元结合可处理 e^{kx} 型',
+    ],
+    visual: 'integral',
+    steps: ['看清底数', '套公式（注意 ln a）', '加 C'],
+    formula: '∫aˣdx=aˣ/ln a+C',
+    example: '∫e^{2x}dx=e^{2x}/2+C。',
+    trap: '∫e^{kx}dx 忘记除以 k。',
+  },
+  三角函数: {
+    tag: '三角积分',
+    explanation:
+      '常用三角积分：∫sin x dx=−cos x+C、∫cos x dx=sin x+C、∫dx/cos²x=tan x+C；遇到平方项先用降幂或倍角公式变形。',
+    keyPoints: [
+      '∫sin x dx=−cos x+C（注意负号）',
+      '∫cos x dx=sin x+C',
+      '∫dx/cos²x=tan x+C；平方项先降幂',
+    ],
+    visual: 'integral',
+    steps: ['识别三角类型', '必要时先变形（降幂、倍角）', '套公式积分'],
+    formula: '∫sin x dx=−cos x+C；∫cos x dx=sin x+C',
+    example: '∫(sin x+cos x)dx=−cos x+sin x+C。',
+    trap: '忘记 sin 的积分带负号。',
+  },
+  三角: {
+    tag: '正弦余弦的积分',
+    explanation:
+      '三角函数积分的基本组：sin 积分得 −cos，cos 积分得 sin，tan 的积分是 −ln|cos x|；组合式子逐项处理。',
+    keyPoints: [
+      '∫sin x dx=−cos x+C；∫cos x dx=sin x+C',
+      '∫tan x dx=−ln|cos x|+C',
+      '平方项用降幂公式 ∫sin²x dx=x/2−sin2x/4+C',
+    ],
+    visual: 'integral',
+    steps: ['判断是否为基本三角形式', '不是则先变形', '逐项积分'],
+    formula: '∫cos x dx=sin x+C',
+    example: '∫sin²x dx=∫(1−cos2x)/2 dx=x/2−sin2x/4+C。',
+    trap: '对 sin²x 直接套 sin 的公式。',
+  },
+  反三角结构: {
+    tag: '看到 1+x² 想 arctan',
+    explanation:
+      '形如 ∫dx/(1+x²)=arctan x+C、∫dx/√(1−x²)=arcsin x+C 的积分，被积函数是反三角函数的导数形式，见到这类结构直接套用。',
+    keyPoints: [
+      '∫dx/(1+x²)=arctan x+C',
+      '∫dx/√(1−x²)=arcsin x+C',
+      '分母带系数时提出 1/a：∫dx/(a²+x²)=(1/a)arctan(x/a)+C',
+    ],
+    visual: 'integral',
+    steps: ['识别分母结构', '凑成标准形式', '套反三角公式'],
+    formula: '∫dx/(a²+x²)=(1/a)arctan(x/a)+C',
+    example: '∫dx/(4+x²)=(1/2)arctan(x/2)+C。',
+    trap: '忘记提出分母的系数。',
+  },
+  反三角型: {
+    tag: 'arcsin 与 arctan 型积分',
+    explanation:
+      '含 √(a²−x²) 分母的积分结果是 arcsin，含 a²+x² 分母的积分结果是 arctan；这类结构要能一眼认出来。',
+    keyPoints: [
+      '∫dx/√(a²−x²)=arcsin(x/a)+C',
+      '∫dx/(a²+x²)=(1/a)arctan(x/a)+C',
+      '关键是分母是「平方和」还是「平方差开根」',
+    ],
+    visual: 'integral',
+    steps: ['判断分母形式', '提取系数 a', '套反三角公式'],
+    formula: '∫dx/√(a²−x²)=arcsin(x/a)+C',
+    example: '∫dx/√(9−x²)=arcsin(x/3)+C。',
+    trap: '把 arcsin 型与 arctan 型混用。',
+  },
+  对数结构: {
+    tag: '分子是分母的导数',
+    explanation:
+      '对数型积分：∫f′(x)/f(x)dx=ln|f(x)|+C。只要分子是分母的导数（或相差常数倍），积分结果就是对数。',
+    keyPoints: [
+      '∫f′/f dx=ln|f(x)|+C',
+      '分子与分母导数差常数倍时先调整系数',
+      '绝对值不能省（定义域可能为负）',
+    ],
+    visual: 'integral',
+    steps: ['检查分子是否为分母的导数', '调整常数倍', '写成对数形式'],
+    formula: '∫f′(x)/f(x)dx=ln|f(x)|+C',
+    example: '∫2x/(x²+1)dx=ln(x²+1)+C。',
+    trap: '漏掉绝对值，或忘记调整常数倍。',
+  },
+  对数型: {
+    tag: '凑成 f′/f',
+    explanation:
+      '对数型积分的特征是分母为 f、分子为 f′，结果就是 ln|f|；这类结构在换元法里出现频率极高，要养成「先看分子是不是分母的导数」的习惯。',
+    keyPoints: [
+      '∫f′/f dx=ln|f|+C',
+      '分子差常数倍时把常数提到积分号外',
+      '结果必须带绝对值与 C',
+    ],
+    visual: 'integral',
+    steps: ['比较分子与分母导数', '调整系数', '写成 ln|f|+C'],
+    formula: '∫dx/x=ln|x|+C',
+    example: '∫cos x/sin x dx=ln|sin x|+C。',
+    trap: '把 ∫dx/x 写成 x⁰/0。',
+  },
+  '第一类换元：凑微分': {
+    tag: '把微分凑出来',
+    explanation:
+      '第一类换元法把 ∫f(g(x))g′(x)dx 写成 ∫f(u)du：先把 g′(x)dx 凑成 dg(x)，再整体换元，积分后回代。它是最常用的积分技巧。',
+    keyPoints: [
+      '∫f(g(x))g′(x)dx=∫f(u)du，u=g(x)',
+      '关键是「凑」出 du = g′(x)dx',
+      '换元后必须回代原变量',
+    ],
+    visual: 'integral',
+    steps: ['确定内层函数 u=g(x)', '把 g′(x)dx 凑成 du', '积分后回代'],
+    formula: '∫f(g(x))g′(x)dx=∫f(u)du',
+    example: '∫2x e^{x²}dx=∫e^u du=e^{x²}+C。',
+    trap: '凑不出 du 却强行换元。',
+  },
+  第一类换元: {
+    tag: '凑微分',
+    explanation:
+      '第一类换元（凑微分）不改变变量，只是把被积表达式整理成「某个函数的微分」的形式，从而直接套用基本积分表。',
+    keyPoints: [
+      '目标：把 dx 前的东西凑成 d(内层函数)',
+      '常用凑法：xdx=d(x²)/2，dx/x=d(ln x)，cos x dx=d(sin x)',
+      '换元是「心里的」，最后要回代',
+    ],
+    visual: 'integral',
+    steps: ['识别内层结构', '凑出微分', '套基本积分表并回代'],
+    formula: 'g′(x)dx=d[g(x)]',
+    example: '∫sin 2x dx=(1/2)∫sin 2x d(2x)=−cos 2x/2+C。',
+    trap: '凑微分时系数配错（少乘或多乘）。',
+  },
+  '第二类换元：变量代换': {
+    tag: '令 x=φ(t)',
+    explanation:
+      '第二类换元法令 x=φ(t)（φ 单调可导），把 ∫f(x)dx 变成 ∫f(φ(t))φ′(t)dt；它主要用于消去根号，积分完再把 t 换回 x。',
+    keyPoints: [
+      'x=φ(t) 要求 φ 单调可导，保证可逆',
+      'dx=φ′(t)dt 不能漏',
+      '最后必须回代 t=φ⁻¹(x)',
+    ],
+    visual: 'integral',
+    steps: ['选择 φ(t)', '换元并改写 dx', '积分后回代'],
+    formula: '∫f(x)dx=∫f(φ(t))φ′(t)dt',
+    example: '∫√(1−x²)dx 令 x=sin t 化简。',
+    trap: '忘记把 dx 换成 φ′(t)dt，或忘记回代。',
+  },
+  第二类换元: {
+    tag: '换掉整个变量',
+    explanation:
+      '第二类换元主动引入新变量 t 替换 x，目的是把根式或复杂结构化成容易积分的形式；三角代换与根式代换都属于这一类。',
+    keyPoints: [
+      '三角代换处理 √(a²±x²)、√(x²−a²)',
+      '根式代换处理 ⁿ√(ax+b)',
+      '换元后积分限（定积分）要一起换',
+    ],
+    visual: 'integral',
+    steps: ['判断结构属于哪类', '选择代换', '换元、积分、回代'],
+    formula: 'x=φ(t) ⇒ dx=φ′(t)dt',
+    example: '∫dx/(1+√x) 令 t=√x。',
+    trap: '定积分换元后仍用原来的上下限。',
+  },
+  三角代换: {
+    tag: '用三角消去根号',
+    explanation:
+      '遇到 √(a²−x²)、√(a²+x²)、√(x²−a²) 分别令 x=a sin t、x=a tan t、x=a sec t，把根号化成三角式；最后按直角三角形回代。',
+    keyPoints: [
+      '√(a²−x²) ⇒ x=a sin t',
+      '√(a²+x²) ⇒ x=a tan t',
+      '√(x²−a²) ⇒ x=a sec t',
+    ],
+    visual: 'integral',
+    steps: ['识别根号形式', '选对应代换并确定 t 的范围', '积分后画三角形回代'],
+    formula: 'x=a sin t ⇒ √(a²−x²)=a cos t',
+    example: '∫dx/√(1−x²)=arcsin x+C 就是 x=sin t 的结果。',
+    trap: '代换后忘记回代，或忽略 t 的取值范围（影响开方符号）。',
+  },
+  根式代换: {
+    tag: '整体换掉根号',
+    explanation:
+      '被积函数含 ⁿ√(ax+b) 时，令 t=ⁿ√(ax+b)，把根号整体换成 t，从而化成有理函数积分；换元时 x 与 dx 都要用 t 表示。',
+    keyPoints: [
+      't=ⁿ√(ax+b) 一次消掉整个根号',
+      '要同时解出 x=(tⁿ−b)/a 与 dx',
+      '化成有理函数后再用部分分式',
+    ],
+    visual: 'integral',
+    steps: ['设 t 为根号整体', '解出 x 与 dx', '积分后回代 t'],
+    formula: 't=ⁿ√(ax+b) ⇒ x=(tⁿ−b)/a',
+    example: '∫dx/(1+√x) 令 t=√x，得 ∫2t/(1+t)dt。',
+    trap: '只替换根号而忘记改写 dx。',
+  },
+  '∫u dv = uv - ∫v du': {
+    tag: '分部积分公式',
+    explanation:
+      '分部积分公式 ∫u dv=uv−∫v du 把原积分转化为另一个积分；选 u 的原则是「求导后变简单」，常用顺序是反三角 > 对数 > 幂 > 三角 > 指数。',
+    keyPoints: [
+      '∫u dv=uv−∫v du',
+      'u 按「反对幂三指」的优先级选',
+      '必要时可以多次分部',
+    ],
+    visual: 'integral',
+    steps: ['按优先级选 u 与 dv', '算 du 与 v', '代入公式处理新积分'],
+    formula: '∫u dv=uv−∫v du',
+    example: '∫x eˣ dx=x eˣ−∫eˣ dx=eˣ(x−1)+C。',
+    trap: 'u 选错（把指数选作 u），越算越复杂。',
+  },
+  '一元函数积分学/公式': {
+    tag: '分部积分的公式',
+    explanation:
+      '分部积分的公式是 ∫u dv=uv−∫v du，它来自乘积求导公式的逆用；核心是「把不好积的部分转移成好积的部分」。',
+    keyPoints: [
+      '∫u dv=uv−∫v du',
+      '选 u 的标准：求导后更简单',
+      '出现循环时把原积分移项解出',
+    ],
+    visual: 'integral',
+    steps: ['确定 u 与 dv', '写出 du 与 v', '代入并继续积分'],
+    formula: '∫u dv=uv−∫v du',
+    example: '∫ln x dx=x ln x−x+C。',
+    trap: '忘记公式中的负号。',
+  },
+  '多项式×指数': {
+    tag: '多项式作 u',
+    explanation:
+      '多项式乘指数时取多项式作 u、指数作 dv，一次分部就把多项式次数降一；n 次多项式最多分部 n 次即可积完。',
+    keyPoints: [
+      'u=多项式，dv=指数 dx',
+      '每分部一次次数降一',
+      '降次到常数后可直接积分',
+    ],
+    visual: 'integral',
+    steps: ['取 u=多项式', '分部一次降次', '重复直到多项式为常数'],
+    formula: '∫xⁿeˣdx=xⁿeˣ−n∫xⁿ⁻¹eˣdx',
+    example: '∫x²eˣdx=eˣ(x²−2x+2)+C。',
+    trap: '把指数取作 u，导致无法降次。',
+  },
+  '多项式×三角': {
+    tag: '多项式作 u',
+    explanation:
+      '多项式乘三角函数同样取多项式作 u、三角作 dv；分部后多项式降次，注意 v 的符号（sin 积成 −cos 会带负号）。',
+    keyPoints: [
+      'u=多项式，dv=三角函数 dx',
+      '求 v 时符号容易错（∫sin=−cos）',
+      'n 次多项式最多分部 n 次',
+    ],
+    visual: 'integral',
+    steps: ['取 u=多项式', '求 v（注意符号）', '重复分部直到降完'],
+    formula: '∫x sin x dx=−x cos x+∫cos x dx',
+    example: '∫x cos x dx=x sin x+cos x+C。',
+    trap: '求 v 时漏掉负号。',
+  },
+  '多项式×对数': {
+    tag: '对数作 u',
+    explanation:
+      '对数求导后变成 1/x，所以含对数的积分取对数作 u、其余作 dv，一次分部就把对数消掉。',
+    keyPoints: [
+      'u=对数函数（求导后变成有理式）',
+      'dv=其余部分',
+      '一次分部即可去掉对数',
+    ],
+    visual: 'integral',
+    steps: ['取 u=ln x 类', 'dv=其余', '代入公式后处理有理式积分'],
+    formula: '∫ln x dx=x ln x−x+C',
+    example: '∫x ln x dx=(x²/2)ln x−x²/4+C。',
+    trap: '把对数选作 dv（无法积分）。',
+  },
+  对数函数: {
+    tag: '对数型分部积分',
+    explanation:
+      '含对数的积分一律取对数作 u：ln x 求导变成 1/x，分部后剩下的积分通常很简单。',
+    keyPoints: [
+      'u=ln x 或 ln(x+a)',
+      'dv=其余（常取 dx）',
+      '结果中一般仍含 ln，但次数降低',
+    ],
+    visual: 'integral',
+    steps: ['取 u=对数', 'dv=dx 或其余因子', '代入公式化简'],
+    formula: '∫ln x dx=x ln x−x+C',
+    example: '∫ln x dx=x ln x−x+C。',
+    trap: '忘记对数的导数 1/x。',
+  },
+  反三角函数: {
+    tag: '反三角作 u',
+    explanation:
+      '反三角函数求导后变成有理式或根式，所以含反三角的积分取它作 u、其余作 dv，一次分部就能化简。',
+    keyPoints: [
+      'u=arcsin x / arctan x 等',
+      'dv=其余部分',
+      '分部后化成有理式或根式积分',
+    ],
+    visual: 'integral',
+    steps: ['取 u=反三角', 'dv=其余', '代入公式继续积分'],
+    formula: '∫arctan x dx=x arctan x−ln(1+x²)/2+C',
+    example: '∫arcsin x dx=x arcsin x+√(1−x²)+C。',
+    trap: '把反三角选作 dv（无法积分）。',
+  },
+  有理函数积分: {
+    tag: '拆成部分分式',
+    explanation:
+      '有理函数积分的一般流程：假分式先做多项式除法化成「多项式 + 真分式」，真分式按分母因式分解拆成部分分式，再逐项积分（结果是对数或反正切）。',
+    keyPoints: [
+      '假分式（分子次数≥分母）先做除法',
+      '真分式按分母因式拆部分分式',
+      '逐项积分得到对数或反正切',
+    ],
+    visual: 'integral',
+    steps: ['判断真/假分式', '分解分母并设部分分式', '逐项积分'],
+    formula: 'P/Q → 多项式 + Σ 部分分式',
+    example: '∫dx/(x²−1)=(1/2)ln|(x−1)/(x+1)|+C。',
+    trap: '跳过「假分式先除」这一步。',
+  },
+  有理函数: {
+    tag: '先除再拆',
+    explanation:
+      '有理函数积分的关键是化成部分分式：先保证是真分式（否则做除法），再按分母的因式类型拆开，最后逐项积分。',
+    keyPoints: [
+      '真分式才能直接拆部分分式',
+      '分母因式分解是前提',
+      '结果通常含 ln 与 arctan',
+    ],
+    visual: 'integral',
+    steps: ['判断真/假分式', '分解分母', '拆部分分式并逐项积分'],
+    formula: '∫dx/(x−a)=ln|x−a|+C',
+    example: '∫dx/(x²+1)=arctan x+C。',
+    trap: '分母不能分解时硬拆。',
+  },
+  部分分式分解: {
+    tag: '按因式类型设系数',
+    explanation:
+      '部分分式分解要按分母因式的类型设项：单实根设 A/(x−a)，k 重根要写 A₁/(x−a)+…+Aₖ/(x−a)ᵏ，不可约二次因式设 (Ax+B)/(x²+px+q)。',
+    keyPoints: [
+      '单实根：A/(x−a)',
+      'k 重根：必须写满 k 项',
+      '不可约二次因式的分子设一次式',
+    ],
+    visual: 'integral',
+    steps: ['分解分母', '按因式类型设部分分式', '待定系数法求系数'],
+    formula: '1/[(x−a)(x−b)]=A/(x−a)+B/(x−b)',
+    example: '1/[(x−1)(x+2)]=(1/3)/(x−1)−(1/3)/(x+2)。',
+    trap: '重根只写一项。',
+  },
+  部分分式: {
+    tag: '把分式拆成简单项',
+    explanation:
+      '部分分式是把一个复杂分式拆成若干简单分式之和，使每一项都能直接积分；设系数时用待定系数法（代值法或比较系数法）。',
+    keyPoints: [
+      '按分母因式逐项设待定系数',
+      '重根要写全 k 项',
+      '代特殊值求系数最快',
+    ],
+    visual: 'integral',
+    steps: ['分解分母', '设部分分式形式', '待定系数求解'],
+    formula: 'P/Q=Σ(简单分式)',
+    example: '(2x+3)/[(x−1)(x+1)]=5/2/(x−1)−1/2/(x+1)。',
+    trap: '系数算错（可用代值法验算）。',
+  },
+  三角函数有理式: {
+    tag: '万能代换',
+    explanation:
+      '三角函数有理式可用万能代换 t=tan(x/2) 化成 t 的有理函数再积分；但能用凑微分或恒等变形解决时更快，不要一上来就万能代换。',
+    keyPoints: [
+      't=tan(x/2)：sin x=2t/(1+t²)，cos x=(1−t²)/(1+t²)',
+      '万能代换一定可行但计算量大',
+      '优先尝试凑微分与恒等变形',
+    ],
+    visual: 'integral',
+    steps: ['先尝试凑微分/变形', '不行再用 t=tan(x/2)', '化为有理函数积分'],
+    formula: 't=tan(x/2)，dx=2dt/(1+t²)',
+    example: '∫dx/(1+cos x)=tan(x/2)+C。',
+    trap: '不分情况直接上万能代换。',
+  },
+  简单无理函数积分: {
+    tag: '化去根号',
+    explanation:
+      '简单无理函数积分的思路是消去根号：ⁿ√(ax+b) 用根式代换，√(a²±x²) 用三角代换，化成有理函数后再积分。',
+    keyPoints: [
+      '根式代换消 ⁿ√(ax+b)',
+      '三角代换处理 √(a²±x²) 型',
+      '目标都是化成有理函数',
+    ],
+    visual: 'integral',
+    steps: ['识别根号形式', '选根式或三角代换', '化为有理函数后积分'],
+    formula: '√(a²−x²) ⇒ x=a sin t',
+    example: '∫√(a²−x²)dx 用 x=a sin t 化为三角积分。',
+    trap: '换元后忘记回代。',
+  },
+  简单无理函数: {
+    tag: '先消根号再积分',
+    explanation:
+      '含根号的积分先想办法把根号消掉（根式代换或三角代换），变成有理函数后按有理函数积分流程处理。',
+    keyPoints: [
+      '根号在分母时常用根式代换',
+      '根号形如 √(a²−x²) 时用三角代换',
+      '化成有理函数是最终目标',
+    ],
+    visual: 'integral',
+    steps: ['判断根号类型', '选择代换方式', '化成有理函数积分'],
+    formula: 't=ⁿ√(ax+b)',
+    example: '∫dx/(1+√(1+x)) 令 t=√(1+x)。',
+    trap: '不换元直接分部，越算越乱。',
+  },
+  定积分定义: {
+    tag: '分割、近似、求和、取极限',
+    explanation:
+      '定积分 ∫ₐᵇf(x)dx 是黎曼和的极限：把区间分成 n 份，每份取一点算 f(ξᵢ)Δxᵢ，求和后让最大区间长度趋于 0。它是一个数，与积分变量记号无关。',
+    keyPoints: [
+      '定义是「分割—近似—求和—取极限」四步',
+      '定积分是数，不是函数族',
+      '可积的充分条件：连续，或只有有限个间断点的有界函数',
+    ],
+    visual: 'integral',
+    steps: ['分割区间', '取点求和', '让分割无限细化取极限'],
+    formula: '∫ₐᵇf(x)dx=lim Σf(ξᵢ)Δxᵢ',
+    example: '∫₀¹x dx=lim Σ(i/n)(1/n)=1/2。',
+    trap: '把定积分与不定积分混为一谈。',
+  },
+  '一元函数积分学/定义与几何意义': {
+    tag: '曲边梯形的面积',
+    explanation:
+      '定积分的定义是黎曼和的极限，几何意义是曲边梯形的面积：f≥0 时为面积本身，f 变号时表示面积的代数和。',
+    keyPoints: [
+      'f≥0 时 ∫ₐᵇf 就是曲边梯形面积',
+      'f<0 的部分贡献负值',
+      '几何意义常用于判断积分值的正负与大小',
+    ],
+    visual: 'integral',
+    steps: ['判断 f 的符号', '按几何意义估计积分', '必要时分段处理'],
+    formula: '∫ₐᵇf(x)dx = 面积的代数和',
+    example: '∫₋₁¹x dx=0（正负面积抵消）。',
+    trap: '把有正有负的积分当成总面积。',
+  },
+  定积分性质: {
+    tag: '线性、可加、保号',
+    explanation:
+      '定积分的性质：线性性、区间可加性、保号性（f≤g ⇒ ∫f≤∫g）、三角不等式 |∫f|≤∫|f|，以及估值定理 mL≤∫ₐᵇf≤ML。',
+    keyPoints: [
+      '区间可加性：∫ₐᵇ=∫ₐᶜ+∫ᶜᵇ，与 a、b、c 的大小无关',
+      '保号性：f≤g ⇒ ∫ₐᵇf≤∫ₐᵇg',
+      '|∫ₐᵇf|≤∫ₐᵇ|f|，等号一般不成立',
+    ],
+    visual: 'integral',
+    steps: ['拆成便于计算的部分', '用保号性比较大小', '用估值定理估范围'],
+    formula: '∫ₐᵇf=∫ₐᶜf+∫ᶜᵇf；|∫ₐᵇf|≤∫ₐᵇ|f|',
+    example: '∫₀¹x²dx≤∫₀¹x dx（因为 x²≤x 在 [0,1] 上）。',
+    trap: '把 |∫f| 与 ∫|f| 当成相等。',
+  },
+  '一元函数积分学/定积分/基本性质': {
+    tag: '定积分的性质',
+    explanation:
+      '定积分的基本性质包括线性性、区间可加性与保号性；它们不依赖原函数，可以直接用来比较积分大小或做估值。',
+    keyPoints: [
+      '线性：∫(k₁f+k₂g)=k₁∫f+k₂∫g',
+      '可加：∫ₐᵇ=∫ₐᶜ+∫ᶜᵇ',
+      '保号与估值：f≤g ⇒ ∫f≤∫g；mL≤∫ₐᵇf≤ML',
+    ],
+    visual: 'integral',
+    steps: ['把积分拆开或合并', '用保号性比较', '用估值定理给出范围'],
+    formula: 'mL≤∫ₐᵇf(x)dx≤ML',
+    example: '∫₀¹x³dx≤∫₀¹x²dx。',
+    trap: '把「保号」用反（f≤g 时积分也 ≤）。',
+  },
+  定积分中值定理: {
+    tag: '积分等于某点函数值乘长度',
+    explanation:
+      '定积分中值定理：f 在 [a,b] 上连续，则存在 ξ∈[a,b] 使 ∫ₐᵇf(x)dx=f(ξ)(b−a)；它说明积分值等于某个函数值乘以区间长度。',
+    keyPoints: [
+      '∫ₐᵇf=f(ξ)(b−a)，ξ 在区间内',
+      '前提是 f 在闭区间上连续',
+      '函数平均值 f̄=(1/(b−a))∫ₐᵇf 就是 f(ξ)',
+    ],
+    visual: 'integral',
+    steps: ['用最值定理得 m≤f≤M', '由估值定理夹出平均值', '用介值定理找到 ξ'],
+    formula: '∫ₐᵇf(x)dx=f(ξ)(b−a)',
+    example: '∫₀¹x²dx=1/3=f(ξ)，故 ξ=1/√3。',
+    trap: '把 ξ 当成区间中点。',
+  },
+  积分上限函数: {
+    tag: '变限积分求导',
+    explanation:
+      'Φ(x)=∫ₐˣf(t)dt 称为积分上限函数，若 f 连续则 Φ′(x)=f(x)；它是构造原函数的工具，也是牛顿—莱布尼茨公式的基础。',
+    keyPoints: [
+      'Φ′(x)=f(x)（f 连续）',
+      '上下限都是函数时：d/dx∫_{u}^{v}f=f(v)v′−f(u)u′',
+      '被积函数含 x 时要先换元或把 x 提出来',
+    ],
+    visual: 'integral',
+    steps: ['识别积分限的形式', '按公式求导', '注意上下限是否含 x'],
+    formula: 'Φ(x)=∫ₐˣf(t)dt ⇒ Φ′(x)=f(x)',
+    example: 'd/dx∫₀^{x²}sin t dt=sin(x²)·2x。',
+    trap: '上下限含 x 时忘记乘上（下）限的导数。',
+  },
+  '牛顿—莱布尼茨公式': {
+    tag: '用原函数算定积分',
+    explanation:
+      '牛顿—莱布尼茨公式 ∫ₐᵇf(x)dx=F(b)−F(a)（F′=f）把定积分化为原函数在端点的差，是计算定积分的基本工具。',
+    keyPoints: [
+      '∫ₐᵇf(x)dx=F(b)−F(a)，F 是 f 的任一个原函数',
+      '把「求和取极限」变成「两点作差」',
+      '换元时上下限要同步替换',
+    ],
+    visual: 'integral',
+    steps: ['求出原函数 F', '代入上下限作差', '换元时同步改写积分限'],
+    formula: '∫ₐᵇf(x)dx=F(b)−F(a)',
+    example: '∫₀¹2x dx=[x²]₀¹=1。',
+    trap: '换元后仍用原来的积分限。',
+  },
+  无穷区间反常积分: {
+    tag: '先积后取极限',
+    explanation:
+      '无穷区间反常积分用极限定义：∫ₐ^{+∞}f=lim_{R→+∞}∫ₐ^R f；极限存在且有限时称收敛，否则发散。',
+    keyPoints: [
+      '∫ₐ^{+∞}f=lim_{R→+∞}∫ₐ^R f',
+      'p 积分：∫₁^{+∞}dx/xᵖ 在 p>1 时收敛，p≤1 时发散',
+      '必须用极限算，不能直接代 ∞',
+    ],
+    visual: 'integral',
+    steps: ['先算有限区间积分', '再取极限', '判断收敛性'],
+    formula: '∫ₐ^{+∞}f(x)dx=lim_{R→+∞}∫ₐ^R f(x)dx',
+    example: '∫₁^{+∞}dx/x²=1，收敛。',
+    trap: '把 ∞ 当数代入原函数。',
+  },
+  无穷区间: {
+    tag: '积分限含无穷',
+    explanation:
+      '积分限含无穷时称为无穷区间反常积分，必须按极限定义处理：∫ₐ^{+∞}f=lim_{R→+∞}∫ₐ^R f。',
+    keyPoints: [
+      '先积分再取极限，两步不能省',
+      '∫₁^{+∞}dx/xᵖ 在 p>1 时收敛',
+      '被积函数趋于 0 不是收敛的充分条件',
+    ],
+    visual: 'integral',
+    steps: ['写出有限区间的积分', '取极限', '按 p 判据或比较法判断'],
+    formula: 'lim_{R→+∞}∫ₐ^R f(x)dx',
+    example: '∫₁^{+∞}dx/x 发散（p=1）。',
+    trap: '由「被积函数趋于 0」断言收敛。',
+  },
+  无界函数反常积分: {
+    tag: '先找瑕点',
+    explanation:
+      '被积函数在某点无界（瑕点）时，用极限定义积分：若瑕点在 b，则 ∫ₐᵇf=lim_{ε→0⁺}∫ₐ^{b−ε}f。',
+    keyPoints: [
+      '先找出瑕点（函数无界的位置）',
+      '在瑕点处取单侧极限',
+      'p 积分：∫₀¹dx/xᵖ 在 p<1 时收敛',
+    ],
+    visual: 'integral',
+    steps: ['识别瑕点', '把积分写成极限', '判断极限是否存在'],
+    formula: '∫ₐᵇf=lim_{ε→0⁺}∫ₐ^{b−ε}f（瑕点在 b）',
+    example: '∫₀¹dx/√x=2，收敛。',
+    trap: '忽略瑕点直接用牛顿—莱布尼茨公式。',
+  },
+  无界被积函数: {
+    tag: '瑕点处取极限',
+    explanation:
+      '被积函数在区间内无界时（如 1/√x 在 x=0），积分要按瑕点处的极限定义；这种积分称为瑕积分。',
+    keyPoints: [
+      '瑕点可能出现在端点，也可能在内部',
+      '内部有瑕点必须拆成两段',
+      '∫₀¹dx/xᵖ 在 p<1 时收敛',
+    ],
+    visual: 'integral',
+    steps: ['找瑕点', '在瑕点处写极限', '判断收敛性'],
+    formula: 'lim_{ε→0⁺}∫_ε^b f(x)dx',
+    example: '∫₀¹dx/x^{0.5}=2 收敛；∫₀¹dx/x 发散。',
+    trap: '把瑕积分当成普通定积分。',
+  },
+  收敛与发散: {
+    tag: '极限存在才收敛',
+    explanation:
+      '反常积分收敛指相应的极限存在且有限，否则发散；判断时常用比较判别法，与已知敛散性的 p 积分比较。',
+    keyPoints: [
+      '收敛 = 极限存在且有限',
+      '比较判别法：0≤f≤g，∫g 收敛 ⇒ ∫f 收敛',
+      'p 积分是最常用的比较基准',
+    ],
+    visual: 'integral',
+    steps: ['找比较对象', '用比较判别法', '必要时用等价无穷小确定阶'],
+    formula: '0≤f≤g 且 ∫g 收敛 ⇒ ∫f 收敛',
+    example: '∫₁^{+∞}dx/(x²+1) 收敛（与 1/x² 比较）。',
+    trap: '把「被积函数趋于 0」当成收敛的充分条件。',
+  },
+  '收敛/发散': {
+    tag: '判断敛散',
+    explanation:
+      '判断反常积分的敛散要分清场景：无穷区间看 p>1，瑕点附近看 p<1；用等价无穷小找出主导项最方便。',
+    keyPoints: [
+      '无穷区间：p>1 收敛',
+      '瑕点附近：p<1 收敛',
+      '两段都收敛才算整体收敛',
+    ],
+    visual: 'integral',
+    steps: ['判断场景（无穷区间/瑕点）', '找等价 p 积分', '按 p 判据下结论'],
+    formula: '∞ 处 p>1 收敛；瑕点处 p<1 收敛',
+    example: '∫₀¹dx/x^{0.8} 收敛（p=0.8<1）。',
+    trap: '两个场景的 p 判据记反。',
+  },
+  拆分奇点: {
+    tag: '以瑕点为界拆开',
+    explanation:
+      '区间内部有瑕点时，必须以瑕点为界把积分拆成两段分别判断；只要有一段发散，整体就发散。',
+    keyPoints: [
+      '内部瑕点必须拆开处理',
+      '两段都收敛才收敛',
+      '拆分点选在瑕点处',
+    ],
+    visual: 'integral',
+    steps: ['找出所有瑕点', '以瑕点为界拆分', '分别判断敛散'],
+    formula: '∫ₐᵇ=∫ₐᶜ+∫ᶜᵇ（c 为瑕点）',
+    example: '∫₋₁¹dx/x 拆成两段后都发散，故整体发散。',
+    trap: '不拆开直接算，得出 0 的错误结果。',
+  },
+  奇点拆分: {
+    tag: '拆开再判敛散',
+    explanation:
+      '瑕点在区间内部时，把它作为拆分点把积分分成两段，逐段判断；这是避免「正负抵消得出错误结果」的必要步骤。',
+    keyPoints: [
+      '内部瑕点 → 必须拆',
+      '每段单独按极限定义判断',
+      '任一段发散 ⇒ 整体发散',
+    ],
+    visual: 'integral',
+    steps: ['定位瑕点', '拆成两段', '分别判断收敛性'],
+    formula: '∫ₐᵇ=lim∫ₐ^{c−ε}+lim∫_{c+ε}^b',
+    example: '∫₋₁¹dx/x² 在 0 处瑕点，拆开后都发散。',
+    trap: '把对称区间上的奇函数积分当成 0。',
+  },
+  常见比较思想: {
+    tag: '与 p 积分比大小',
+    explanation:
+      '判断反常积分敛散最常用的思路是与 p 积分比较：无穷区间用 1/xᵖ（p>1 收敛），瑕点附近用 1/xᵖ（p<1 收敛）；用等价无穷小确定阶最方便。',
+    keyPoints: [
+      '无穷区间：∫₁^{+∞}dx/xᵖ 收敛 ⇔ p>1',
+      '瑕点处：∫₀¹dx/xᵖ 收敛 ⇔ p<1',
+      '等价无穷小用来找主导项',
+    ],
+    visual: 'comparison',
+    steps: ['判断场景', '找等价 p 积分', '按 p 判据下结论'],
+    formula: '∞ 处 p>1；瑕点处 p<1',
+    example: '∫₁^{+∞}dx/x^{1.5} 收敛（p=1.5>1）。',
+    trap: '把两个判据记反。',
+  },
+  平面图形面积: {
+    tag: '上减下积分',
+    explanation:
+      '平面图形面积用「上曲线减下曲线」积分：A=∫ₐᵇ[f(x)−g(x)]dx（f≥g）；若左右边界更简单，可改对 y 积分（右减左）。',
+    keyPoints: [
+      'A=∫ₐᵇ(上−下)dx',
+      '也可对 y 积分（右−左）',
+      '先画图找交点确定积分限',
+    ],
+    visual: 'integral',
+    steps: ['画图找交点', '确定上下曲线', '积分求面积'],
+    formula: 'A=∫ₐᵇ[f(x)−g(x)]dx',
+    example: 'y=x 与 y=x² 围成的面积 =∫₀¹(x−x²)dx=1/6。',
+    trap: '不判断上下关系就相减，得到负面积。',
+  },
+  平面面积: {
+    tag: '上减下',
+    explanation:
+      '求平面面积先画图，确定上下（或左右）边界与交点，再按「上减下」积分；面积一定是正数，算出负值说明上下取反了。',
+    keyPoints: [
+      '面积 = ∫(上−下)dx，结果为正',
+      '交点决定积分限',
+      '必要时改对 y 积分',
+    ],
+    visual: 'integral',
+    steps: ['画图定边界', '求交点', '积分取绝对值'],
+    formula: 'A=∫ₐᵇ[f(x)−g(x)]dx',
+    example: 'y=√x 与 y=x 围成的面积 =1/6。',
+    trap: '积分限取错（没算交点）。',
+  },
+  参数曲线面积: {
+    tag: '换元到 t',
+    explanation:
+      '参数曲线围成的面积用换元：A=∫y dx=∫y(t)x′(t)dt，积分限换成对应的 t 值，并注意曲线走向对符号的影响。',
+    keyPoints: [
+      'A=∫y(t)x′(t)dt',
+      '积分限换成 t 的范围',
+      '注意定向（走向）对正负的影响',
+    ],
+    visual: 'integral',
+    steps: ['写出 x(t)、y(t)', '换元并改积分限', '计算积分'],
+    formula: 'A=∫_{t₁}^{t₂}y(t)x′(t)dt',
+    example: '摆线一拱的面积 =3πa²。',
+    trap: '换元后积分限仍用 x 的值。',
+  },
+  极坐标面积: {
+    tag: '扇形微元',
+    explanation:
+      '极坐标下用扇形微元 dA=(1/2)r²dθ，面积 A=(1/2)∫_α^β r²(θ)dθ；关键是确定 θ 的范围，由图形边界（射线或交点）决定。',
+    keyPoints: [
+      'A=(1/2)∫_α^β r²(θ)dθ',
+      'θ 的范围由边界决定',
+      '对称图形可算一半再乘 2',
+    ],
+    visual: 'integral',
+    steps: ['画图确定 θ 范围', '写出 r(θ)', '代入公式积分'],
+    formula: 'A=(1/2)∫_α^β r²(θ)dθ',
+    example: '圆 r=2cos θ 的面积 =π。',
+    trap: 'θ 的范围取错，导致面积成倍偏差。',
+  },
+  旋转体体积: {
+    tag: '圆盘法',
+    explanation:
+      '绕 x 轴旋转的体积用圆盘法 V=π∫ₐᵇf²(x)dx；若是两曲线之间的区域旋转，则 V=π∫(f²−g²)dx。',
+    keyPoints: [
+      'V=π∫ₐᵇf²(x)dx（绕 x 轴）',
+      '两曲线之间：V=π∫(f²−g²)dx',
+      '绕 y 轴时改对 y 积分',
+    ],
+    visual: 'integral',
+    steps: ['确定旋转轴与边界', '写出半径函数', '套圆盘法积分'],
+    formula: 'V=π∫ₐᵇf²(x)dx',
+    example: 'y=√x 在 [0,1] 绕 x 轴：V=π∫₀¹x dx=π/2。',
+    trap: '忘记平方，或两曲线相减后忘记平方。',
+  },
+  平行截面体积: {
+    tag: '已知截面积积分',
+    explanation:
+      '若垂直于某轴的截面面积 A(x) 已知，体积 V=∫ₐᵇA(x)dx；这是「切片求和」的推广，适用于非旋转体。',
+    keyPoints: [
+      'V=∫ₐᵇA(x)dx',
+      '关键是写出截面积函数',
+      '旋转体是它的特例',
+    ],
+    visual: 'integral',
+    steps: ['选切片方向', '写出 A(x)', '积分求体积'],
+    formula: 'V=∫ₐᵇA(x)dx',
+    example: '已知正三角形截面的立体，A(x)=(√3/4)a²(x)。',
+    trap: '截面积函数写错（漏乘常数）。',
+  },
+  曲线弧长: {
+    tag: '弧微分积分',
+    explanation:
+      '曲线弧长是弧微分的积分：s=∫ₐᵇ√(1+y′²)dx；参数式用 s=∫√(x′²+y′²)dt，极坐标用 s=∫√(r²+r′²)dθ。',
+    keyPoints: [
+      '直角坐标：s=∫ₐᵇ√(1+y′²)dx',
+      '参数式：s=∫√(x′²+y′²)dt',
+      '极坐标：s=∫√(r²+r′²)dθ',
+    ],
+    visual: 'integral',
+    steps: ['选择坐标形式', '写出弧微分', '按区间积分'],
+    formula: 's=∫ₐᵇ√(1+y′²)dx',
+    example: 'y=(2/3)x^{3/2} 在 [0,3] 上的弧长 =14/3。',
+    trap: '漏掉根号，或忘记乘 dx。',
+  },
+  旋转曲面侧面积: {
+    tag: '弧微分乘 2πy',
+    explanation:
+      '绕 x 轴旋转的侧面积 S=2π∫ₐᵇ|y|√(1+y′²)dx：把弧微元旋转成圆环，周长 2π|y| 乘弧长 ds。',
+    keyPoints: [
+      'S=2π∫|y|√(1+y′²)dx',
+      '必须带弧微分因子',
+      '与体积公式的区别：这里是一次方',
+    ],
+    visual: 'integral',
+    steps: ['写出弧微分 ds', '乘 2π|y| 得微元', '积分求侧面积'],
+    formula: 'S=2π∫ₐᵇ|y|√(1+y′²)dx',
+    example: 'y=x（0≤x≤1）绕 x 轴：S=√2π。',
+    trap: '漏掉弧微分因子（写成 2π∫y dx）。',
+  },
+  旋转体侧面积: {
+    tag: '用弧微元算侧面积',
+    explanation:
+      '旋转体侧面积要把弧微元 ds 旋转成圆环再积分：S=2π∫|y|ds，其中 ds=√(1+y′²)dx。',
+    keyPoints: [
+      'S=2π∫|y|ds',
+      'ds 不能漏（这是与体积公式最大的区别）',
+      '绕 y 轴时用 2π∫|x|ds',
+    ],
+    visual: 'integral',
+    steps: ['写弧微分 ds', '确定旋转半径', '积分'],
+    formula: 'S=2π∫|y|ds',
+    example: '球面面积 4πR² 可由半圆旋转得到。',
+    trap: '把侧面积当成 2π∫y dx（那是圆环面积，不是弧长旋转）。',
+  },
+  功: {
+    tag: '变力做功',
+    explanation:
+      '变力做功 W=∫ₐᵇF(x)dx；抽水做功要写清微元：每层水的重力乘以它被提升的距离。',
+    keyPoints: [
+      'W=∫ₐᵇF(x)dx',
+      '抽水：微元重力 ρgA(x)dx × 提升距离',
+      '先写微元再积分',
+    ],
+    visual: 'integral',
+    steps: ['写出微元 dW', '确定积分限', '积分求总功'],
+    formula: 'W=∫ₐᵇF(x)dx',
+    example: '把水抽到容器顶面：W=ρg∫₀ʰ(h−x)A(x)dx。',
+    trap: '抽水时忘记乘提升距离。',
+  },
+  液体压力: {
+    tag: '压强乘面积',
+    explanation:
+      '液体压力用微元法：深度 x 处压强为 ρgx，微元压力 dP=ρgx·L(x)dx，总压力 P=∫ρgx·L(x)dx。',
+    keyPoints: [
+      '压强 = ρgx（x 为深度）',
+      'dP=ρgx·L(x)dx',
+      '关键是写出该深度处的宽度 L(x)',
+    ],
+    visual: 'integral',
+    steps: ['以深度为积分变量', '写宽度函数与压强', '积分求总压力'],
+    formula: 'P=∫ρgx·L(x)dx',
+    example: '宽 b、高 h 的矩形闸门顶与水面平齐：P=ρgbh²/2。',
+    trap: '把深度与高度的方向弄反。',
+  },
+  引力: {
+    tag: '万有引力积分',
+    explanation:
+      '细杆对质点的引力用微元法：把杆分成小段，每段质量 dm=ρdx，按万有引力定律写微元力，再沿杆积分（注意分解方向分量）。',
+    keyPoints: [
+      '微元质量 dm=ρdx',
+      '微元力 dF=Gm·dm/r²',
+      '必须分解方向分量再积分',
+    ],
+    visual: 'integral',
+    steps: ['建立坐标系', '写微元力及分量', '积分求合力'],
+    formula: 'F=∫Gmρdx/r²（按方向分量积分）',
+    example: '细杆对延长线上距端点 a 处质点的引力含 ln(1+L/a)。',
+    trap: '忘记分解方向，直接对模长积分。',
+  },
+  '质心/形心': {
+    tag: '加权平均位置',
+    explanation:
+      '形心是几何图形的中心，质心是质量分布的加权平均位置；均匀物体的形心与质心重合，公式为 x̄=(1/A)∫x[f(x)−g(x)]dx。',
+    keyPoints: [
+      '形心 = 面积加权平均位置',
+      'x̄=(1/A)∫ₐᵇx(上−下)dx',
+      '均匀物体的质心就是形心',
+    ],
+    visual: 'integral',
+    steps: ['写出上下边界', '按公式算 x̄、ȳ', '除以面积归一化'],
+    formula: 'x̄=(1/A)∫ₐᵇx[f(x)−g(x)]dx',
+    example: '三角形的形心在中线交点（距底 h/3）。',
+    trap: '忘记除以总面积。',
+  },
+  '一元函数积分学/质心': {
+    tag: '质量加权平均',
+    explanation:
+      '质心是质量分布的加权平均位置：x̄=∫x dm/∫dm；均匀物体的密度为常数，质心退化为形心。',
+    keyPoints: [
+      '质心 = ∫x dm / ∫dm',
+      '非均匀物体要带密度函数',
+      '均匀物体：质心 = 形心',
+    ],
+    visual: 'integral',
+    steps: ['写出质量微元 dm', '算 ∫x dm 与总质量', '相除得质心'],
+    formula: 'x̄=∫x dm/M',
+    example: '均匀半圆板的质心在对称轴上距圆心 4R/(3π) 处。',
+    trap: '非均匀物体也用形心公式（漏掉密度）。',
+  },
+  形心: {
+    tag: '几何中心',
+    explanation:
+      '形心是几何图形的中心，只与形状有关：x̄=(1/A)∫x dA。均匀物体的形心就是质心。',
+    keyPoints: [
+      '形心只依赖形状',
+      'x̄=(1/A)∫x dA',
+      '有对称轴时形心在对称轴上',
+    ],
+    visual: 'integral',
+    steps: ['判断对称性', '写出面积微元', '按公式计算'],
+    formula: 'x̄=(1/A)∫x dA',
+    example: '圆、矩形的形心就在几何中心。',
+    trap: '忘记除以面积。',
+  },
+  函数平均值: {
+    tag: '积分除以区间长度',
+    explanation:
+      '函数在 [a,b] 上的平均值 f̄=(1/(b−a))∫ₐᵇf(x)dx，几何意义是「等面积矩形的高度」，也正是定积分中值定理中的 f(ξ)。',
+    keyPoints: [
+      'f̄=(1/(b−a))∫ₐᵇf(x)dx',
+      '几何意义：等面积矩形的高度',
+      '与中值定理中的 f(ξ) 相等',
+    ],
+    visual: 'integral',
+    steps: ['算定积分', '除以区间长度', '得到平均值'],
+    formula: 'f̄=(1/(b−a))∫ₐᵇf(x)dx',
+    example: 'f(x)=x 在 [0,2] 上的平均值为 1。',
+    trap: '忘记除以区间长度。',
+  },
+  '面积：扫描微元条': {
+    tag: '微元法直观',
+    explanation:
+      '面积计算可以理解为用竖条扫描区域：每条宽 dx、高 (上−下)，面积微元 dA=(上−下)dx，全部累加就是定积分。',
+    keyPoints: [
+      'dA=(上−下)dx',
+      '扫描方向可换（横条对应对 y 积分）',
+      '微元法统一处理面积、体积、弧长',
+    ],
+    visual: 'integral',
+    steps: ['画图选扫描方向', '写微元面积', '积分求和'],
+    formula: 'dA=(上−下)dx',
+    example: 'y=x² 与 x 轴在 [0,1] 围成的面积 =1/3。',
+    trap: '微元漏掉 dx。',
+  },
+  '旋转体：二维区域绕轴旋转形成三维实体': {
+    tag: '旋转体的截面',
+    explanation:
+      '把平面区域绕某条直线旋转得到旋转体；垂直于旋转轴切一刀，截面是圆盘或圆环，这就是圆盘法/圆环法公式的来源。',
+    keyPoints: [
+      '截面是圆盘（或圆环）',
+      '圆盘法：V=π∫r²dx',
+      '圆环法：V=π∫(R²−r²)dx',
+    ],
+    visual: 'integral',
+    steps: ['确认旋转轴', '写外半径与内半径', '按圆盘或圆环法积分'],
+    formula: 'V=π∫(R²−r²)dx',
+    example: 'y=x² 与 y=1 之间的区域绕 y 轴旋转用圆环法。',
+    trap: '内外半径搞反，导致体积为负。',
+  },
+  '弧长：折线分段不断细化逼近曲线': {
+    tag: '以直代曲',
+    explanation:
+      '弧长的思想是「以直代曲」：用折线逼近曲线，每段长 √(Δx²+Δy²)，分段不断细化后取极限就得到 ∫√(1+y′²)dx。',
+    keyPoints: [
+      '折线逼近 → 取极限得弧长积分',
+      '每段长度来自勾股定理',
+      '这就是弧微分 ds 的来源',
+    ],
+    visual: 'integral',
+    steps: ['把曲线分成 n 段', '每段用直线近似', '求和取极限'],
+    formula: 's=lim Σ√(Δx²+Δy²)=∫√(1+y′²)dx',
+    example: '圆的周长可由弧长积分算得 2πR。',
+    trap: '把弧长写成 ∫|y′|dx（漏掉横向分量）。',
+  },
+}
+
 export const CURATED: Record<string, LectureBody> = {
   ...CALCULUS_FUNCTIONS_LIMITS,
   ...CALCULUS_DERIVATIVES,
+  ...CALCULUS_INTEGRALS,
   ...PROBABILITY_EVENTS,
   ...PROBABILITY_VARIABLES,
   ...PROBABILITY_MULTI,
