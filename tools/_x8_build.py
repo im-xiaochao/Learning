@@ -28,6 +28,12 @@ import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+if HERE not in sys.path:
+    sys.path.insert(0, HERE)
+
+# 去掉解析/参考答案里的 **PDF 排版换行**（文本层把每行排版都保留了，渲染出来就是
+# 词中间断行）。只保留真正的段落分隔，判据见 `_nl_unwrap.py`。
+from _nl_unwrap import unwrap  # noqa: E402
 
 # —— 半角 → 全角标点（见 norm_punct） ——
 HALF2FULL = {",": "，", ";": "；", ":": "：", "?": "？", "!": "！", "(": "（", ")": "）"}
@@ -289,7 +295,7 @@ def main():
                     problems.append(f"{qid} 答案速查缺答案")
                     continue
                 typ = "choice" if num <= 16 else "multi"
-                e = apply_typos(expl.get(str(num), ""))
+                e = unwrap(apply_typos(expl.get(str(num), "")))
                 if not e:
                     problems.append(f"{qid} 缺解析")
                     e = ""
@@ -334,7 +340,7 @@ def main():
                 if not m or not m.get("paragraphs"):
                     problems.append(f"{qid} 材料题缺材料（需 OCR）")
                     continue
-                r = apply_typos(ref.get(str(num), ""))
+                r = unwrap(apply_typos(ref.get(str(num), "")))
                 if not r:
                     problems.append(f"{qid} 材料题缺参考答案")
                     continue
