@@ -182,9 +182,9 @@
       },
       "keyPoints": [
         {
-          "id": "d-d",
-          "title": "Dᵀ=D",
-          "bodyMarkdown": "Dᵀ=D"
+          "id": "dui-chen-ju-zhen-de-ding-yi-shi-d-d-07i38i",
+          "title": "对称矩阵的定义式 Dᵀ=D",
+          "bodyMarkdown": "对称矩阵的定义式 Dᵀ=D，元素关于对角线镜像"
         },
         {
           "id": "xing-de-xing-zhi-lie-de-xing-zhi",
@@ -233,14 +233,14 @@
       },
       "keyPoints": [
         {
-          "id": "yi-ci-jiao-huan-cheng-1",
-          "title": "一次交换乘 −1",
-          "bodyMarkdown": "一次交换乘 −1"
+          "id": "hang-lie-shi-yi-ci-xing-jiao-huan-cheng-0yktlx",
+          "title": "行列式一次行交换乘 −1",
+          "bodyMarkdown": "行列式一次行交换乘 −1，符号要记账"
         },
         {
-          "id": "ou-shu-ci-jiao-huan-bu-bian-hao",
+          "id": "ou-shu-ci-jiao-huan-bu-bian-hao-fu-hao-1pqjr9",
           "title": "偶数次交换不变号",
-          "bodyMarkdown": "偶数次交换不变号"
+          "bodyMarkdown": "偶数次交换不变号，符号只看交换次数奇偶"
         },
         {
           "id": "liang-hang-xiang-tong-jiao-huan-hou-d-d-1htbrb",
@@ -442,9 +442,9 @@
           "bodyMarkdown": "单行内拆分：|a+b 行| = |a 行|+|b 行|"
         },
         {
-          "id": "qi-yu-xing-bao-chi-bu-bian",
-          "title": "其余行保持不变",
-          "bodyMarkdown": "其余行保持不变"
+          "id": "chai-xing-shi-qi-yu-xing-bao-chi-bu-0tmgrd",
+          "title": "拆行时其余行保持不变",
+          "bodyMarkdown": "拆行时其余行保持不变，只拆选定的一行"
         },
         {
           "id": "duo-hang-tong-shi-chai-hui-zhi-shu-bao-1jmpv3",
@@ -697,9 +697,9 @@
           "bodyMarkdown": "三角形行列式 = 对角线乘积"
         },
         {
-          "id": "zhi-yong-bei-jia-zhi-bu-bian",
-          "title": "只用倍加",
-          "bodyMarkdown": "只用倍加，值不变"
+          "id": "hua-san-jiao-xing-quan-cheng-zhi-yong-0rv2h6",
+          "title": "化三角形全程只用倍加",
+          "bodyMarkdown": "化三角形全程只用倍加，行列式值不变"
         },
         {
           "id": "xu-yao-jiao-huan-hang-shi-ji-de-bian-hao",
@@ -748,9 +748,9 @@
           "bodyMarkdown": "展开 = 降阶的反复使用"
         },
         {
-          "id": "mei-ci-xuan-ling-zui-duo-de-hang-lie",
-          "title": "每次选零最多的行列",
-          "bodyMarkdown": "每次选零最多的行列"
+          "id": "zhan-kai-shi-mei-ci-xuan-ling-zui-duo-0odk0p",
+          "title": "展开时每次选零最多的行列",
+          "bodyMarkdown": "展开时每次选零最多的行列，项数最少"
         },
         {
           "id": "gao-jie-hang-lie-shi-de-tong-yong-shou-1fj12u",
@@ -896,9 +896,9 @@
       },
       "keyPoints": [
         {
-          "id": "yi-ci-zhi-chai-yi-hang-lie",
-          "title": "一次只拆一行（列）",
-          "bodyMarkdown": "一次只拆一行（列）"
+          "id": "chai-fen-xing-zhi-yi-ci-zhi-chai-yi-0i5bm0",
+          "title": "拆分性质一次只拆一行（列）",
+          "bodyMarkdown": "拆分性质一次只拆一行（列），其余行照抄"
         },
         {
           "id": "chai-chu-yi-ge-hao-suan-de-hang-lie-shi",

@@ -187,9 +187,9 @@
           "bodyMarkdown": "|λE−A|=0 给出全部特征值"
         },
         {
-          "id": "shou-yi-n-ci-duo-xiang-shi",
-          "title": "首一 n 次多项式",
-          "bodyMarkdown": "首一 n 次多项式"
+          "id": "te-zheng-duo-xiang-shi-shi-shou-yi-n-ci-16ip5d",
+          "title": "特征多项式是首一 n 次多项式",
+          "bodyMarkdown": "特征多项式是首一 n 次多项式，常数项含 |A|"
         },
         {
           "id": "tr-a-a-yan-suan",
@@ -275,7 +275,7 @@
         "数二的求向量方程"
       ],
       "sortOrder": 60,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -294,9 +294,9 @@
           "bodyMarkdown": "基础解系含 n−r(A−λE) 个向量"
         },
         {
-          "id": "ji-he-zhong-shu-you-ci-du-chu",
-          "title": "几何重数由此读出",
-          "bodyMarkdown": "几何重数由此读出"
+          "id": "ji-he-zhong-shu-you-ji-chu-jie-xi-ge-1yys2l",
+          "title": "几何重数由基础解系个数读出",
+          "bodyMarkdown": "几何重数由基础解系个数读出，即 n−r(A−λE)"
         }
       ],
       "examples": [
@@ -386,9 +386,9 @@
       },
       "keyPoints": [
         {
-          "id": "tr-a",
-          "title": "tr(A)=Σλᵢ",
-          "bodyMarkdown": "tr(A)=Σλᵢ"
+          "id": "ji-deng-yu-te-zheng-zhi-zhi-he-tr-a-zui-1u998r",
+          "title": "迹等于特征值之和 tr(A)=Σλᵢ",
+          "bodyMarkdown": "迹等于特征值之和 tr(A)=Σλᵢ，最快的验算"
         },
         {
           "id": "tr-ab-tr-ba-xun-huan-xing-zhi",
@@ -437,9 +437,9 @@
       },
       "keyPoints": [
         {
-          "id": "a",
-          "title": "|A|=∏λᵢ",
-          "bodyMarkdown": "|A|=∏λᵢ"
+          "id": "xing-lie-shi-deng-yu-te-zheng-zhi-lian-0korew",
+          "title": "行列式等于特征值连乘 |A|=∏λᵢ",
+          "bodyMarkdown": "行列式等于特征值连乘 |A|=∏λᵢ，判零即判可逆"
         },
         {
           "id": "0-te-zheng-zhi-bu-ke-ni",
@@ -549,9 +549,9 @@
           "bodyMarkdown": "A* 的谱 = {|A|/λᵢ}"
         },
         {
-          "id": "te-zheng-xiang-liang-quan-bu-bu-bian",
-          "title": "特征向量全部不变",
-          "bodyMarkdown": "特征向量全部不变"
+          "id": "a-a-de-te-zheng-xiang-liang-quan-bu-bu-0wyllq",
+          "title": "A⁻¹、A* 的特征向量全部不变",
+          "bodyMarkdown": "A⁻¹、A* 的特征向量全部不变，只有特征值变"
         }
       ],
       "examples": [
@@ -901,14 +901,14 @@
           "bodyMarkdown": "实对称 ⇒ λᵢ∈R"
         },
         {
-          "id": "te-zheng-xiang-liang-ke-qu-shi-xiang-0cr57h",
-          "title": "特征向量可取实向量",
-          "bodyMarkdown": "特征向量可取实向量"
+          "id": "shi-dui-chen-ju-zhen-de-te-zheng-xiang-0ifr24",
+          "title": "实对称矩阵的特征向量可取实向量",
+          "bodyMarkdown": "实对称矩阵的特征向量可取实向量，无需复数"
         },
         {
-          "id": "wei-zheng-jiao-dui-jiao-hua-pu-lu",
-          "title": "为正交对角化铺路",
-          "bodyMarkdown": "为正交对角化铺路"
+          "id": "quan-shi-te-zheng-zhi-wei-zheng-jiao-13gcd3",
+          "title": "全实特征值为正交对角化铺路",
+          "bodyMarkdown": "全实特征值为正交对角化铺路，全程实数运算"
         }
       ],
       "examples": [

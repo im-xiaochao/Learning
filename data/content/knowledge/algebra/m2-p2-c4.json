@@ -80,9 +80,9 @@
       },
       "keyPoints": [
         {
-          "id": "x-d-d",
-          "title": "xᵢ=Dᵢ/D",
-          "bodyMarkdown": "xᵢ=Dᵢ/D"
+          "id": "ke-la-mo-gong-shi-x-d-d-di-i-lie-huan-1izn5c",
+          "title": "克拉默公式 xᵢ=Dᵢ/D",
+          "bodyMarkdown": "克拉默公式 xᵢ=Dᵢ/D，第 i 列换成常数列"
         },
         {
           "id": "d-huan-de-shi-di-i-lie",
@@ -131,9 +131,9 @@
       },
       "keyPoints": [
         {
-          "id": "b-0-bi-you-ling-jie",
-          "title": "b=0，必有零解",
-          "bodyMarkdown": "b=0，必有零解"
+          "id": "qi-ci-fang-cheng-b-0-bi-you-ling-jie-16oayx",
+          "title": "齐次方程 b=0",
+          "bodyMarkdown": "齐次方程 b=0，必有零解，问的是非零解"
         },
         {
           "id": "you-fei-ling-jie-r-a-n",
@@ -493,9 +493,9 @@
           "bodyMarkdown": "唯一解 ⇔ r(A)=r(A,b)=n"
         },
         {
-          "id": "wu-zi-you-wei-zhi-liang",
-          "title": "无自由未知量",
-          "bodyMarkdown": "无自由未知量"
+          "id": "wei-yi-jie-yi-wei-zhe-wu-zi-you-wei-zhi-0svvfw",
+          "title": "唯一解意味着无自由未知量",
+          "bodyMarkdown": "唯一解意味着无自由未知量，秩等于 n"
         },
         {
           "id": "fang-zhen-shi-a-0-x-a-b",
@@ -641,9 +641,9 @@
       },
       "keyPoints": [
         {
-          "id": "jie-ji-dui-xian-xing-yun-suan-feng-bi",
-          "title": "解集对线性运算封闭",
-          "bodyMarkdown": "解集对线性运算封闭"
+          "id": "qi-ci-jie-ji-dui-xian-xing-yun-suan-0ac31z",
+          "title": "齐次解集对线性运算封闭",
+          "bodyMarkdown": "齐次解集对线性运算封闭，所以构成子空间"
         },
         {
           "id": "dim-jie-kong-jian-n-r-a",
@@ -702,9 +702,9 @@
           "bodyMarkdown": "快捷取法：自由变量全取 0"
         },
         {
-          "id": "te-jie-bu-dai-can-shu-k",
-          "title": "特解不带参数 k",
-          "bodyMarkdown": "特解不带参数 k"
+          "id": "te-jie-li-bu-dai-can-shu-k-dai-can-shu-070uph",
+          "title": "特解里不带参数 k",
+          "bodyMarkdown": "特解里不带参数 k，带参数的都属于齐次部分"
         }
       ],
       "examples": [
@@ -794,9 +794,9 @@
       },
       "keyPoints": [
         {
-          "id": "xing-bian-huan-tong-jie-bian-xing",
-          "title": "行变换：同解变形",
-          "bodyMarkdown": "行变换：同解变形"
+          "id": "gao-si-xiao-yuan-yong-xing-bian-huan-13nfh0",
+          "title": "高斯消元用行变换做同解变形",
+          "bodyMarkdown": "高斯消元用行变换做同解变形，解集不变"
         },
         {
           "id": "jie-ti-xing-ding-jie-de-zhuang-tai-wu-0m6ns8",
@@ -804,9 +804,9 @@
           "bodyMarkdown": "阶梯形定解的状态（无解/唯一/无穷）"
         },
         {
-          "id": "zui-jian-xing-zhi-jie-du-chu-tong-jie",
-          "title": "最简形直接读出通解",
-          "bodyMarkdown": "最简形直接读出通解"
+          "id": "hua-dao-xing-zui-jian-xing-ke-zhi-jie-1clq55",
+          "title": "化到行最简形可直接读出通解",
+          "bodyMarkdown": "化到行最简形可直接读出通解，主变量用参数表示"
         }
       ],
       "examples": [
@@ -901,9 +901,9 @@
           "bodyMarkdown": "自由变量 → 参数 k"
         },
         {
-          "id": "zhu-bian-liang-yong-k-biao-shi",
-          "title": "主变量用 k 表示",
-          "bodyMarkdown": "主变量用 k 表示"
+          "id": "hui-dai-shi-zhu-bian-liang-yong-k-biao-0bi3gb",
+          "title": "回代时主变量用 k 表示",
+          "bodyMarkdown": "回代时主变量用 k 表示，整理成向量形式"
         },
         {
           "id": "zheng-li-cheng-x-k",

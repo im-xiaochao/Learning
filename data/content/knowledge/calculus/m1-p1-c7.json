@@ -284,9 +284,9 @@
       },
       "keyPoints": [
         {
-          "id": "l-biao-shi-fan-xiang-qu-xian",
-          "title": "L⁻ 表示反向曲线",
-          "bodyMarkdown": "L⁻ 表示反向曲线"
+          "id": "l-biao-shi-yan-fan-fang-xiang-zou-de-qu-0vnnkf",
+          "title": "L⁻ 表示沿反方向走的曲线",
+          "bodyMarkdown": "L⁻ 表示沿反方向走的曲线，积分变号"
         },
         {
           "id": "l-p-dx-q-dy-l-p-dx-q-dy",
@@ -447,9 +447,9 @@
           "bodyMarkdown": "外边界逆时针，洞边界顺时针"
         },
         {
-          "id": "fan-xiang-shi-yong-shi-you-duan-bian-hao",
-          "title": "反向使用时右端变号",
-          "bodyMarkdown": "反向使用时右端变号"
+          "id": "bian-jie-rao-xiang-fan-xiang-shi-ge-lin-0bebks",
+          "title": "边界绕向反向时",
+          "bodyMarkdown": "边界绕向反向时，格林公式右端变号"
         }
       ],
       "examples": [
@@ -748,9 +748,9 @@
           "bodyMarkdown": "记号 ∬_Σ f dS"
         },
         {
-          "id": "yu-ce-wu-guan-liang-mian-tong-zhi",
-          "title": "与侧无关",
-          "bodyMarkdown": "与侧无关：两面同值"
+          "id": "di-yi-lei-qu-mian-ji-fen-yu-ce-wu-guan-1x5dzo",
+          "title": "第一类曲面积分与侧无关",
+          "bodyMarkdown": "第一类曲面积分与侧无关，两侧积分同值"
         },
         {
           "id": "f-1-shi-ji-fen-qu-mian-mian-ji",
@@ -850,9 +850,9 @@
           "bodyMarkdown": "三项各配一对坐标微元"
         },
         {
-          "id": "yu-ce-you-guan-huan-ce-bian-hao",
-          "title": "与侧有关",
-          "bodyMarkdown": "与侧有关：换侧变号"
+          "id": "di-er-lei-qu-mian-ji-fen-yu-ce-you-guan-1nliye",
+          "title": "第二类曲面积分与侧有关",
+          "bodyMarkdown": "第二类曲面积分与侧有关，换侧积分变号"
         },
         {
           "id": "wu-li-yuan-xing-xiang-liang-chang-chuan-1ul0jj",
@@ -901,14 +901,14 @@
           "bodyMarkdown": "双侧曲面指定「侧」才有积分"
         },
         {
-          "id": "huan-ce-ji-fen-bian-hao",
-          "title": "换侧 ⇒ 积分变号",
-          "bodyMarkdown": "换侧 ⇒ 积分变号"
+          "id": "qu-mian-huan-yi-ce-di-er-lei-ji-fen-199qsh",
+          "title": "曲面换一侧",
+          "bodyMarkdown": "曲面换一侧，第二类积分整体变号"
         },
         {
-          "id": "bi-qu-mian-mo-ren-tao-lun-wai-ce",
-          "title": "闭曲面默认讨论外侧",
-          "bodyMarkdown": "闭曲面默认讨论外侧"
+          "id": "bi-qu-mian-ji-fen-mo-ren-qu-wai-ce-nei-1exdbl",
+          "title": "闭曲面积分默认取外侧",
+          "bodyMarkdown": "闭曲面积分默认取外侧，内侧要添负号"
         }
       ],
       "examples": [
@@ -1003,9 +1003,9 @@
           "bodyMarkdown": "∬R dxdy=±∬_{D_xy}R(x,y,z(x,y))dxdy"
         },
         {
-          "id": "shang-ce-xia-ce",
-          "title": "上侧 +",
-          "bodyMarkdown": "上侧 +，下侧 −"
+          "id": "tou-ying-fu-hao-shang-ce-qu-zheng-xia-173u8h",
+          "title": "投影符号上侧取正、下侧取负",
+          "bodyMarkdown": "投影符号上侧取正、下侧取负"
         },
         {
           "id": "shu-zhi-zhu-mian-zai-xy-mian-tou-ying-0yp1q4",
@@ -1054,9 +1054,9 @@
           "bodyMarkdown": "外侧 = 法向量朝区域外"
         },
         {
-          "id": "gao-si-gong-shi-mo-ren-wai-ce",
-          "title": "高斯公式默认外侧",
-          "bodyMarkdown": "高斯公式默认外侧"
+          "id": "gao-si-gong-shi-mo-ren-bi-qu-mian-wai-0mvq9b",
+          "title": "高斯公式默认闭曲面外侧",
+          "bodyMarkdown": "高斯公式默认闭曲面外侧，开曲面先补面"
         },
         {
           "id": "kai-qu-mian-yong-bu-mian-fa-cou-bi",

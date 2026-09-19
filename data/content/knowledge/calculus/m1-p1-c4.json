@@ -493,9 +493,9 @@
           "bodyMarkdown": "Prjₐb=a·b/|a|=|b|cosθ"
         },
         {
-          "id": "tou-ying-shi-shu-ke-zheng-ke-fu",
-          "title": "投影是数",
-          "bodyMarkdown": "投影是数，可正可负"
+          "id": "tou-ying-shi-yi-ge-shu-ke-zheng-ke-fu-1x1q3i",
+          "title": "投影是一个数",
+          "bodyMarkdown": "投影是一个数，可正可负，钝角时为负"
         },
         {
           "id": "90-shi-tou-ying-wei-0",
@@ -804,9 +804,9 @@
           "bodyMarkdown": "平面上任意向量都与 n 垂直"
         },
         {
-          "id": "zheng-li-hou-jiu-shi-yi-ban-shi",
-          "title": "整理后就是一般式",
-          "bodyMarkdown": "整理后就是一般式"
+          "id": "dian-fa-shi-zheng-li-hou-jiu-shi-yi-ban-1v56r5",
+          "title": "点法式整理后就是一般式",
+          "bodyMarkdown": "点法式整理后就是一般式，两种写法等价"
         }
       ],
       "examples": [
@@ -1059,9 +1059,9 @@
           "bodyMarkdown": "t 是参数，每点对应唯一 t"
         },
         {
-          "id": "yu-dui-chen-shi-sui-shi-hu-hua",
-          "title": "与对称式随时互化",
-          "bodyMarkdown": "与对称式随时互化"
+          "id": "can-shu-shi-yu-dui-chen-shi-ke-sui-shi-139gp4",
+          "title": "参数式与对称式可随时互化",
+          "bodyMarkdown": "参数式与对称式可随时互化，t 就是那个比值"
         }
       ],
       "examples": [
@@ -1142,7 +1142,7 @@
         "平行于直线的向量"
       ],
       "sortOrder": 230,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -1151,9 +1151,9 @@
       },
       "keyPoints": [
         {
-          "id": "s-ping-xing-yu-zhi-xian-ben-shen",
-          "title": "s 平行于直线本身",
-          "bodyMarkdown": "s 平行于直线本身"
+          "id": "fang-xiang-xiang-liang-s-ping-xing-yu-03ia08",
+          "title": "方向向量 s 平行于直线本身",
+          "bodyMarkdown": "方向向量 s 平行于直线本身，差常数倍等价"
         },
         {
           "id": "ks-k-0-shi-deng-jia-fang-xiang-xiang-08zu6r",

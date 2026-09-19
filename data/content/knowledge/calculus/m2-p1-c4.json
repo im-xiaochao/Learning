@@ -437,9 +437,9 @@
       },
       "keyPoints": [
         {
-          "id": "san-yao-su-qi-cai-lian-xu",
-          "title": "三要素齐才连续",
-          "bodyMarkdown": "三要素齐才连续"
+          "id": "san-yao-su-qi-bei-cai-lian-xu-que-yi-ji-0yapfb",
+          "title": "三要素齐备才连续",
+          "bodyMarkdown": "三要素齐备才连续，缺一即是间断点"
         },
         {
           "id": "chu-deng-han-shu-zai-ding-yi-qu-yu-nei-16z2dg",
@@ -646,9 +646,9 @@
           "bodyMarkdown": "连续 ⇔ 可交换次序（充分条件）"
         },
         {
-          "id": "tiao-geng-jian-dan-de-yi-ce-ji-suan",
-          "title": "挑更简单的一侧计算",
-          "bodyMarkdown": "挑更简单的一侧计算"
+          "id": "hun-he-pian-dao-xiang-deng-shi-tiao-1bro7q",
+          "title": "混合偏导相等时",
+          "bodyMarkdown": "混合偏导相等时，挑更简单的一侧计算"
         },
         {
           "id": "chu-deng-han-shu-tong-chang-zhi-jie-0tvazu",
@@ -743,9 +743,9 @@
       },
       "keyPoints": [
         {
-          "id": "dz-f-x-dx-f-y-dy",
-          "title": "dz=f_x dx+f_y dy",
-          "bodyMarkdown": "dz=f_x dx+f_y dy"
+          "id": "quan-wei-fen-gong-shi-dz-f-x-dx-f-y-dy-0efaa1",
+          "title": "全微分公式 dz=f_x dx+f_y dy",
+          "bodyMarkdown": "全微分公式 dz=f_x dx+f_y dy，先求两个偏导"
         },
         {
           "id": "zi-bian-liang-wei-fen-dx-x-dy-y",
@@ -947,9 +947,9 @@
       },
       "keyPoints": [
         {
-          "id": "ceng-shu-fu-he-ceng-shu",
-          "title": "层数 = 复合层数",
-          "bodyMarkdown": "层数 = 复合层数"
+          "id": "shu-zhuang-tu-de-ceng-shu-deng-yu-fu-he-0jonus",
+          "title": "树状图的层数等于复合层数",
+          "bodyMarkdown": "树状图的层数等于复合层数，路径数等于项数"
         },
         {
           "id": "lu-jing-shu-cheng-ji-xiang-shu",
@@ -1142,7 +1142,7 @@
         "两个偏导同时为零"
       ],
       "sortOrder": 230,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -1161,9 +1161,9 @@
           "bodyMarkdown": "偏导不存在的点也进候选"
         },
         {
-          "id": "zhu-dian-ji-zhi-dian",
-          "title": "驻点 ⇏ 极值点",
-          "bodyMarkdown": "驻点 ⇏ 极值点"
+          "id": "zhu-dian-bu-yi-ding-shi-ji-zhi-dian-xu-0kfgx4",
+          "title": "驻点不一定是极值点",
+          "bodyMarkdown": "驻点不一定是极值点，需过二阶充分条件"
         }
       ],
       "examples": [
@@ -1207,9 +1207,9 @@
           "bodyMarkdown": "极值点 ⇒ f_x=f_y=0（可微时）"
         },
         {
-          "id": "ni-ming-ti-bu-cheng-li",
-          "title": "逆命题不成立",
-          "bodyMarkdown": "逆命题不成立"
+          "id": "ji-zhi-dian-bi-shi-zhu-dian-dan-ni-ming-0np57x",
+          "title": "极值点必是驻点",
+          "bodyMarkdown": "极值点必是驻点，但逆命题不成立"
         },
         {
           "id": "ying-yong-jie-fang-cheng-zu-lie-hou-1dg9m3",
@@ -1314,9 +1314,9 @@
           "bodyMarkdown": "局部冠军 ≠ 全局冠军"
         },
         {
-          "id": "ji-zhi-zhi-fa-sheng-zai-nei-dian",
-          "title": "极值只发生在内点",
-          "bodyMarkdown": "极值只发生在内点"
+          "id": "ji-zhi-zhi-fa-sheng-zai-ding-yi-yu-nei-11t3ll",
+          "title": "极值只发生在定义域内点",
+          "bodyMarkdown": "极值只发生在定义域内点，边界谈最值"
         }
       ],
       "examples": [

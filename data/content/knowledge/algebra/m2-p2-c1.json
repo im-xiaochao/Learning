@@ -131,14 +131,14 @@
       },
       "keyPoints": [
         {
-          "id": "a-a",
-          "title": "|Aᵀ|=|A|",
-          "bodyMarkdown": "|Aᵀ|=|A|"
+          "id": "zhuan-zhi-bu-bian-hao-a-a-xing-xing-zhi-0vjiq8",
+          "title": "转置不变号 |Aᵀ|=|A|",
+          "bodyMarkdown": "转置不变号 |Aᵀ|=|A|，行性质即列性质"
         },
         {
-          "id": "xing-xing-zhi-yu-lie-xing-zhi-deng-jia",
-          "title": "行性质与列性质等价",
-          "bodyMarkdown": "行性质与列性质等价"
+          "id": "you-zhuan-zhi-bu-bian-xing-xing-zhi-yu-0l2ehv",
+          "title": "由转置不变",
+          "bodyMarkdown": "由转置不变，行性质与列性质完全等价"
         },
         {
           "id": "yu-ju-zhen-zhuan-zhi-de-xin-ju-zhen-han-18rg38",
@@ -187,9 +187,9 @@
           "bodyMarkdown": "rᵢ↔rⱼ ⇒ D′=−D"
         },
         {
-          "id": "ou-shu-ci-jiao-huan-fu-hao-fu-yuan",
-          "title": "偶数次交换符号复原",
-          "bodyMarkdown": "偶数次交换符号复原"
+          "id": "ou-shu-ci-jiao-huan-hou-fu-hao-fu-yuan-03lhoh",
+          "title": "偶数次交换后符号复原",
+          "bodyMarkdown": "偶数次交换后符号复原，只用看奇偶"
         },
         {
           "id": "pei-he-bei-jia-ji-ke-wan-cheng-quan-bu-0un4qi",
@@ -284,9 +284,9 @@
       },
       "keyPoints": [
         {
-          "id": "cheng-bi-li-d-0",
-          "title": "成比例 ⇒ D=0",
-          "bodyMarkdown": "成比例 ⇒ D=0"
+          "id": "liang-hang-cheng-bi-li-tui-chu-d-0-ti-0dttul",
+          "title": "两行成比例推出 D=0",
+          "bodyMarkdown": "两行成比例推出 D=0，提公因子后两行相同"
         },
         {
           "id": "tui-dao-ti-gong-yin-zi-xiang-tong-xing-0f6598",
@@ -391,9 +391,9 @@
           "bodyMarkdown": "单行拆成两个行列式之和"
         },
         {
-          "id": "dan-hang-ke-ti-gong-yin-zi",
-          "title": "单行可提公因子",
-          "bodyMarkdown": "单行可提公因子"
+          "id": "hang-lie-shi-dan-hang-ke-ti-gong-yin-zi-08t5s1",
+          "title": "行列式单行可提公因子",
+          "bodyMarkdown": "行列式单行可提公因子，注意不是 kⁿ"
         },
         {
           "id": "dui-xing-xian-xing-dui-zheng-ge-hang-0u94pi",
@@ -493,9 +493,9 @@
           "bodyMarkdown": "Aᵢⱼ=(−1)^{i+j}Mᵢⱼ"
         },
         {
-          "id": "i-j-ou-zheng-qi-fu",
-          "title": "i+j 偶正奇负",
-          "bodyMarkdown": "i+j 偶正奇负"
+          "id": "dai-shu-yu-zi-shi-fu-hao-gui-ze-i-j-ou-00g3p3",
+          "title": "代数余子式符号规则",
+          "bodyMarkdown": "代数余子式符号规则：i+j 偶正奇负"
         },
         {
           "id": "a-a-d-tong-hang-lie-zhan-kai",
@@ -595,9 +595,9 @@
           "bodyMarkdown": "对角/三角：对角线乘积"
         },
         {
-          "id": "zhua-xing-bei-jia-xiao-xie-bian",
-          "title": "爪形：倍加消斜边",
-          "bodyMarkdown": "爪形：倍加消斜边"
+          "id": "zhua-xing-hang-lie-shi-yong-bei-jia-0yfoc1",
+          "title": "爪形行列式",
+          "bodyMarkdown": "爪形行列式：用倍加消去斜边化三角"
         },
         {
           "id": "mi-pai-lie-fan-de-meng-de-lian-cheng",
@@ -641,9 +641,9 @@
       },
       "keyPoints": [
         {
-          "id": "cong-zuo-dao-you-zhu-lie-xiao-ling",
-          "title": "从左到右逐列消零",
-          "bodyMarkdown": "从左到右逐列消零"
+          "id": "hua-san-jiao-xing-cong-zuo-dao-you-zhu-1skq3t",
+          "title": "化三角形从左到右逐列消零",
+          "bodyMarkdown": "化三角形从左到右逐列消零，步骤机械可靠"
         },
         {
           "id": "zhi-yong-bei-jia-ze-bu-xu-guan-fu-hao",
@@ -697,9 +697,9 @@
           "bodyMarkdown": "展开 = 降阶的反复使用"
         },
         {
-          "id": "mei-ci-xuan-ling-zui-duo-de-hang-lie",
-          "title": "每次选零最多的行列",
-          "bodyMarkdown": "每次选零最多的行列"
+          "id": "zhan-kai-shi-mei-ci-xuan-ling-zui-duo-0odk0p",
+          "title": "展开时每次选零最多的行列",
+          "bodyMarkdown": "展开时每次选零最多的行列，项数最少"
         },
         {
           "id": "gao-jie-hang-lie-shi-de-tong-yong-shou-1fj12u",
@@ -845,9 +845,9 @@
       },
       "keyPoints": [
         {
-          "id": "yi-ci-zhi-chai-yi-hang-lie",
-          "title": "一次只拆一行（列）",
-          "bodyMarkdown": "一次只拆一行（列）"
+          "id": "chai-fen-xing-zhi-yi-ci-zhi-chai-yi-0i5bm0",
+          "title": "拆分性质一次只拆一行（列）",
+          "bodyMarkdown": "拆分性质一次只拆一行（列），其余行照抄"
         },
         {
           "id": "chai-chu-yi-ge-hao-suan-de-hang-lie-shi",

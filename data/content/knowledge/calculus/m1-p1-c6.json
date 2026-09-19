@@ -141,9 +141,9 @@
           "bodyMarkdown": "内层限可以是外层变量的函数"
         },
         {
-          "id": "wai-ceng-xian-bi-xu-shi-chang-shu",
-          "title": "外层限必须是常数",
-          "bodyMarkdown": "外层限必须是常数"
+          "id": "er-ci-ji-fen-de-wai-ceng-xian-bi-xu-shi-0p0fci",
+          "title": "二次积分的外层限必须是常数",
+          "bodyMarkdown": "二次积分的外层限必须是常数，内层才含变量"
         }
       ],
       "examples": [
@@ -275,7 +275,7 @@
         "先画图再换序"
       ],
       "sortOrder": 60,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "latex",
@@ -284,9 +284,9 @@
       },
       "keyPoints": [
         {
-          "id": "you-xian-hua-tu-shi-guan-jian-yi-bu",
-          "title": "由限画图是关键一步",
-          "bodyMarkdown": "由限画图是关键一步"
+          "id": "jiao-huan-ci-xu-shi-you-xian-hua-tu-shi-1quzd6",
+          "title": "交换次序时由限画图是关键一步",
+          "bodyMarkdown": "交换次序时由限画图是关键一步，画错全错"
         },
         {
           "id": "huan-xu-hou-nei-wai-xian-quan-bu-zhong-0wfb87",
@@ -530,7 +530,7 @@
         "看区域与函数的形状"
       ],
       "sortOrder": 110,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -539,14 +539,14 @@
       },
       "keyPoints": [
         {
-          "id": "qu-yu-xing-zhuang-you-xian-kan",
-          "title": "区域形状优先看",
-          "bodyMarkdown": "区域形状优先看"
+          "id": "xuan-zuo-biao-xi-shi-qu-yu-xing-zhuang-08xswh",
+          "title": "选坐标系时区域形状优先看",
+          "bodyMarkdown": "选坐标系时区域形状优先看，函数结构其次"
         },
         {
-          "id": "bei-ji-han-shu-jie-gou-qi-ci-kan",
-          "title": "被积函数结构其次看",
-          "bodyMarkdown": "被积函数结构其次看"
+          "id": "qu-yu-kan-wan-zai-kan-bei-ji-han-shu-1jp2a0",
+          "title": "区域看完再看被积函数结构",
+          "bodyMarkdown": "区域看完再看被积函数结构，含 x²+y² 用极坐标"
         },
         {
           "id": "han-e-x-sin-x-x-shi-kao-huan-xu-cou-ke-1pkyny",
@@ -600,9 +600,9 @@
           "bodyMarkdown": "f≥0 时 ∬f dσ 本身就是体积"
         },
         {
-          "id": "dui-chen-qu-yu-xian-hua-jian-zai-suan",
-          "title": "对称区域先化简再算",
-          "bodyMarkdown": "对称区域先化简再算"
+          "id": "dui-chen-qu-yu-xian-yong-dui-chen-xing-0bikh6",
+          "title": "对称区域先用对称性化简",
+          "bodyMarkdown": "对称区域先用对称性化简，再动手积分"
         }
       ],
       "examples": [
@@ -697,9 +697,9 @@
           "bodyMarkdown": "m=∬_D ρ(x,y)dσ"
         },
         {
-          "id": "jun-yun-m-mian-ji",
-          "title": "均匀：m=ρ·面积",
-          "bodyMarkdown": "均匀：m=ρ·面积"
+          "id": "jun-yun-bao-pian-m-mian-ji-mi-du-zhi-0jmcn3",
+          "title": "均匀薄片 m=ρ×面积",
+          "bodyMarkdown": "均匀薄片 m=ρ×面积，密度直接约掉"
         },
         {
           "id": "tong-lei-tao-lu-dian-he-liang-re-liang-1tx8di",

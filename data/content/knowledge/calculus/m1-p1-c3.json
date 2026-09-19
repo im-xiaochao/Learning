@@ -753,9 +753,9 @@
           "bodyMarkdown": "u 按「反对幂三指」的优先级选"
         },
         {
-          "id": "bi-yao-shi-ke-yi-duo-ci-fen-bu",
-          "title": "必要时可以多次分部",
-          "bodyMarkdown": "必要时可以多次分部"
+          "id": "bi-yao-shi-ke-yi-lian-xu-duo-ci-fen-bu-17arnm",
+          "title": "必要时可以连续多次分部",
+          "bodyMarkdown": "必要时可以连续多次分部，直到积出或循环"
         }
       ],
       "examples": [
@@ -799,9 +799,9 @@
           "bodyMarkdown": "u=多项式，dv=指数 dx"
         },
         {
-          "id": "mei-fen-bu-yi-ci-ci-shu-jiang-yi",
-          "title": "每分部一次次数降一",
-          "bodyMarkdown": "每分部一次次数降一"
+          "id": "duo-xiang-shi-yin-zi-mei-fen-bu-yi-ci-1ipe0f",
+          "title": "多项式因子每分部一次次数降一",
+          "bodyMarkdown": "多项式因子每分部一次次数降一，最终耗尽"
         },
         {
           "id": "jiang-ci-dao-chang-shu-hou-ke-zhi-jie-1nrua1",
@@ -901,9 +901,9 @@
           "bodyMarkdown": "u=对数函数（求导后变成有理式）"
         },
         {
-          "id": "dv-qi-yu-bu-fen",
-          "title": "dv=其余部分",
-          "bodyMarkdown": "dv=其余部分"
+          "id": "qu-u-hou-qi-yu-bu-fen-zheng-ti-zuo-dv-0x9mry",
+          "title": "取 u 后其余部分整体作 dv",
+          "bodyMarkdown": "取 u 后其余部分整体作 dv，凑微分要顺手"
         },
         {
           "id": "yi-ci-fen-bu-ji-ke-qu-diao-dui-shu",
@@ -952,9 +952,9 @@
           "bodyMarkdown": "u=arcsin x / arctan x 等"
         },
         {
-          "id": "dv-qi-yu-bu-fen",
-          "title": "dv=其余部分",
-          "bodyMarkdown": "dv=其余部分"
+          "id": "qu-u-hou-qi-yu-bu-fen-zheng-ti-zuo-dv-0x9mry",
+          "title": "取 u 后其余部分整体作 dv",
+          "bodyMarkdown": "取 u 后其余部分整体作 dv，凑微分要顺手"
         },
         {
           "id": "fen-bu-hou-hua-cheng-you-li-shi-huo-gen-18m6wu",
@@ -1513,9 +1513,9 @@
           "bodyMarkdown": "先找出瑕点（函数无界的位置）"
         },
         {
-          "id": "zai-xia-dian-chu-qu-dan-ce-ji-xian",
-          "title": "在瑕点处取单侧极限",
-          "bodyMarkdown": "在瑕点处取单侧极限"
+          "id": "xia-ji-fen-zai-xia-dian-chu-qu-dan-ce-1nscor",
+          "title": "瑕积分在瑕点处取单侧极限",
+          "bodyMarkdown": "瑕积分在瑕点处取单侧极限，极限存在才收敛"
         },
         {
           "id": "p-ji-fen-dx-x-zai-p-1-shi-shou-lian",
@@ -1615,14 +1615,14 @@
           "bodyMarkdown": "内部瑕点必须拆开处理"
         },
         {
-          "id": "liang-duan-dou-shou-lian-cai-shou-lian",
-          "title": "两段都收敛才收敛",
-          "bodyMarkdown": "两段都收敛才收敛"
+          "id": "chai-chu-de-liang-duan-fan-chang-ji-fen-04orig",
+          "title": "拆出的两段反常积分都收敛",
+          "bodyMarkdown": "拆出的两段反常积分都收敛，原来才收敛"
         },
         {
-          "id": "chai-fen-dian-xuan-zai-xia-dian-chu",
-          "title": "拆分点选在瑕点处",
-          "bodyMarkdown": "拆分点选在瑕点处"
+          "id": "chai-fen-dian-bi-xu-xuan-zai-xia-dian-0j5wfh",
+          "title": "拆分点必须选在瑕点处",
+          "bodyMarkdown": "拆分点必须选在瑕点处，分段后逐段讨论"
         }
       ],
       "examples": [
@@ -1926,9 +1926,9 @@
           "bodyMarkdown": "关键是写出截面积函数"
         },
         {
-          "id": "xuan-zhuan-ti-shi-ta-de-te-li",
-          "title": "旋转体是它的特例",
-          "bodyMarkdown": "旋转体是它的特例"
+          "id": "xuan-zhuan-ti-shi-ping-xing-jie-mian-ti-1uoo54",
+          "title": "旋转体是平行截面体的特例",
+          "bodyMarkdown": "旋转体是平行截面体的特例，截面恰为圆"
         }
       ],
       "examples": [
@@ -2023,9 +2023,9 @@
           "bodyMarkdown": "S=2π∫|y|√(1+y′²)dx"
         },
         {
-          "id": "bi-xu-dai-hu-wei-fen-yin-zi",
-          "title": "必须带弧微分因子",
-          "bodyMarkdown": "必须带弧微分因子"
+          "id": "ce-mian-ji-wei-yuan-bi-xu-dai-hu-wei-0pxmrr",
+          "title": "侧面积微元必须带弧微分因子",
+          "bodyMarkdown": "侧面积微元必须带弧微分因子，不能只投 dxdy"
         },
         {
           "id": "yu-ti-ji-gong-shi-de-qu-bie-zhe-li-shi-0ef2kk",
@@ -2079,9 +2079,9 @@
           "bodyMarkdown": "抽水：微元重力 ρgA(x)dx × 提升距离"
         },
         {
-          "id": "xian-xie-wei-yuan-zai-ji-fen",
-          "title": "先写微元再积分",
-          "bodyMarkdown": "先写微元再积分"
+          "id": "wu-li-ying-yong-xian-xie-wei-yuan-zai-0shmf0",
+          "title": "物理应用先写微元再积分",
+          "bodyMarkdown": "物理应用先写微元再积分，微元是建模关键"
         }
       ],
       "examples": [

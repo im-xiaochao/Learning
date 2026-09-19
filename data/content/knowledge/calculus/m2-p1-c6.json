@@ -233,9 +233,9 @@
       },
       "keyPoints": [
         {
-          "id": "te-jie-bu-han-ren-yi-chang-shu",
+          "id": "te-jie-bu-han-ren-yi-chang-shu-you-chu-1iecmd",
           "title": "特解不含任意常数",
-          "bodyMarkdown": "特解不含任意常数"
+          "bodyMarkdown": "特解不含任意常数，由初始条件定下来"
         },
         {
           "id": "you-chu-shi-tiao-jian-ding-chu-tong-jie-1prq42",
@@ -345,9 +345,9 @@
           "bodyMarkdown": "乘积形式 dy/dx=f(x)g(y) 必可分离"
         },
         {
-          "id": "fen-li-hou-liang-duan-ge-zi-ji-fen",
-          "title": "分离后两端各自积分",
-          "bodyMarkdown": "分离后两端各自积分"
+          "id": "fen-li-bian-liang-hou-liang-duan-ge-zi-1wehf9",
+          "title": "分离变量后两端各自积分",
+          "bodyMarkdown": "分离变量后两端各自积分，常数只写一个"
         }
       ],
       "examples": [
@@ -1212,9 +1212,9 @@
           "bodyMarkdown": "解的总数必须等于阶数 n"
         },
         {
-          "id": "zui-hou-tong-yi-xian-xing-zu-he",
-          "title": "最后统一线性组合",
-          "bodyMarkdown": "最后统一线性组合"
+          "id": "an-gen-xing-xie-quan-jie-hou-zui-hou-03ahpr",
+          "title": "按根型写全解后",
+          "bodyMarkdown": "按根型写全解后，最后统一做线性组合"
         }
       ],
       "examples": [
@@ -1615,9 +1615,9 @@
           "bodyMarkdown": "第一步永远是「把条件翻译成 y′、y″」"
         },
         {
-          "id": "an-fang-cheng-lei-xing-xuan-jie-fa",
-          "title": "按方程类型选解法",
-          "bodyMarkdown": "按方程类型选解法"
+          "id": "xian-shi-bie-fang-cheng-lei-xing-zai-1wlk8y",
+          "title": "先识别方程类型再选解法",
+          "bodyMarkdown": "先识别方程类型再选解法，类型错方法全错"
         },
         {
           "id": "chang-shu-yong-ti-mu-gei-ding-de-chu-0cr40b",

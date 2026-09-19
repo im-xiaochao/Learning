@@ -131,9 +131,9 @@
       },
       "keyPoints": [
         {
-          "id": "shou-lian-u-0",
-          "title": "收敛 ⇒ uₙ→0",
-          "bodyMarkdown": "收敛 ⇒ uₙ→0"
+          "id": "shou-lian-tui-chu-u-0-ni-fou-yong-lai-165y7m",
+          "title": "收敛推出 uₙ→0",
+          "bodyMarkdown": "收敛推出 uₙ→0，逆否用来快速判发散"
         },
         {
           "id": "u-0-fa-san-di-yi-bu-jian-cha",
@@ -544,9 +544,9 @@
           "bodyMarkdown": "条件：uₙ 单调不增 且 uₙ→0"
         },
         {
-          "id": "jie-lun-jiao-cuo-ji-shu-shou-lian",
-          "title": "结论：交错级数收敛",
-          "bodyMarkdown": "结论：交错级数收敛"
+          "id": "lai-bu-ni-ci-de-jie-lun-shi-jiao-cuo-ji-00k951",
+          "title": "莱布尼茨的结论是交错级数收敛",
+          "bodyMarkdown": "莱布尼茨的结论是交错级数收敛，且误差可控"
         },
         {
           "id": "dan-diao-xing-zhi-yao-qiu-zui-zhong-15eicb",
@@ -896,9 +896,9 @@
       },
       "keyPoints": [
         {
-          "id": "duan-dian-shi-shu-xiang-ji-shu-wen-ti",
-          "title": "端点是数项级数问题",
-          "bodyMarkdown": "端点是数项级数问题"
+          "id": "duan-dian-dai-ru-hou-shi-shu-xiang-ji-1mv4nk",
+          "title": "端点代入后是数项级数问题",
+          "bodyMarkdown": "端点代入后是数项级数问题，逐个判敛"
         },
         {
           "id": "x-r-yu-x-r-fen-bie-pan",
@@ -906,9 +906,9 @@
           "bodyMarkdown": "x=R 与 x=−R 分别判"
         },
         {
-          "id": "duan-dian-shou-lian-shi-yu-xie-bi-duan",
-          "title": "端点收敛时域写闭端",
-          "bodyMarkdown": "端点收敛时域写闭端"
+          "id": "duan-dian-shou-lian-shi-shou-lian-yu-0ukk38",
+          "title": "端点收敛时收敛域写成闭端",
+          "bodyMarkdown": "端点收敛时收敛域写成闭端，区间仍开"
         }
       ],
       "examples": [
@@ -1040,7 +1040,7 @@
         "0 到 x 逐项积"
       ],
       "sortOrder": 210,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -1054,9 +1054,9 @@
           "bodyMarkdown": "∫₀ˣS=Σ aₙxⁿ⁺¹/(n+1)"
         },
         {
-          "id": "ji-fen-bu-gai-bian-shou-lian-ban-jing",
-          "title": "积分不改变收敛半径",
-          "bodyMarkdown": "积分不改变收敛半径"
+          "id": "zhu-xiang-ji-fen-bu-gai-bian-shou-lian-1btvsm",
+          "title": "逐项积分不改变收敛半径",
+          "bodyMarkdown": "逐项积分不改变收敛半径，端点可能变好"
         },
         {
           "id": "duan-dian-ke-neng-bian-de-geng-hao-fa-16vogb",
@@ -1207,9 +1207,9 @@
           "bodyMarkdown": "sin x=Σ(−1)ⁿx^{2n+1}/(2n+1)!"
         },
         {
-          "id": "r-qi-ci-mi",
-          "title": "R=∞，奇次幂",
-          "bodyMarkdown": "R=∞，奇次幂"
+          "id": "sin-x-de-r-zhan-kai-zhi-han-qi-ci-mi",
+          "title": "sin x 的 R=∞",
+          "bodyMarkdown": "sin x 的 R=∞，展开只含奇次幂"
         },
         {
           "id": "zhu-xiang-qiu-dao-de-cos-x-de-zhan-kai",
@@ -1258,9 +1258,9 @@
           "bodyMarkdown": "cos x=Σ(−1)ⁿx^{2n}/(2n)!"
         },
         {
-          "id": "r-ou-ci-mi",
-          "title": "R=∞，偶次幂",
-          "bodyMarkdown": "R=∞，偶次幂"
+          "id": "cos-x-de-r-zhan-kai-zhi-han-ou-ci-mi",
+          "title": "cos x 的 R=∞",
+          "bodyMarkdown": "cos x 的 R=∞，展开只含偶次幂"
         },
         {
           "id": "zhu-xiang-qiu-dao-de-sin-x",

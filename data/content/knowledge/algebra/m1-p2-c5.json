@@ -488,9 +488,9 @@
       },
       "keyPoints": [
         {
-          "id": "a",
-          "title": "|A|=∏λᵢ",
-          "bodyMarkdown": "|A|=∏λᵢ"
+          "id": "xing-lie-shi-deng-yu-te-zheng-zhi-lian-0korew",
+          "title": "行列式等于特征值连乘 |A|=∏λᵢ",
+          "bodyMarkdown": "行列式等于特征值连乘 |A|=∏λᵢ，判零即判可逆"
         },
         {
           "id": "0-shi-te-zheng-zhi-a-0-bu-ke-ni",
@@ -530,7 +530,7 @@
         "幂提升"
       ],
       "sortOrder": 110,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -544,9 +544,9 @@
           "bodyMarkdown": "Aᵏ 的特征值 = λᵏ（同一 α）"
         },
         {
-          "id": "te-zheng-xiang-liang-bu-bian",
-          "title": "特征向量不变",
-          "bodyMarkdown": "特征向量不变"
+          "id": "a-a-de-te-zheng-xiang-liang-bu-bian-zhi-0uk9o1",
+          "title": "Aᵏ、A⁻¹ 的特征向量不变",
+          "bodyMarkdown": "Aᵏ、A⁻¹ 的特征向量不变，只有值在变"
         },
         {
           "id": "chang-yong-yu-qiu-a-huo-pan-a-o-xing-ti",
@@ -743,9 +743,9 @@
       },
       "keyPoints": [
         {
-          "id": "zi-fan-dui-chen-chuan-di",
-          "title": "自反、对称、传递",
-          "bodyMarkdown": "自反、对称、传递"
+          "id": "xiang-si-guan-xi-man-zu-zi-fan-dui-chen-1yai08",
+          "title": "相似关系满足自反、对称、传递三条",
+          "bodyMarkdown": "相似关系满足自反、对称、传递三条"
         },
         {
           "id": "tong-lei-zhong-zui-jian-dai-biao-shi-069bdr",

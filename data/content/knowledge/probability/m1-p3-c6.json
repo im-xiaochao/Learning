@@ -855,9 +855,9 @@
           "bodyMarkdown": "t：对称，尾部厚于正态，n 大时近似标准正态"
         },
         {
-          "id": "f-zhi-qu-zheng-zhi-you-pian",
-          "title": "F：只取正值、右偏",
-          "bodyMarkdown": "F：只取正值、右偏"
+          "id": "f-fen-bu-zhi-qu-zheng-zhi-qie-you-pian-0aho8k",
+          "title": "F 分布只取正值且右偏",
+          "bodyMarkdown": "F 分布只取正值且右偏，常用于方差比检验"
         }
       ],
       "examples": [

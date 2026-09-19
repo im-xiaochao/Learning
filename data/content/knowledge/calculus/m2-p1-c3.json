@@ -799,9 +799,9 @@
           "bodyMarkdown": "u=多项式，dv=指数 dx"
         },
         {
-          "id": "mei-fen-bu-yi-ci-ci-shu-jiang-yi",
-          "title": "每分部一次次数降一",
-          "bodyMarkdown": "每分部一次次数降一"
+          "id": "duo-xiang-shi-yin-zi-mei-fen-bu-yi-ci-1ipe0f",
+          "title": "多项式因子每分部一次次数降一",
+          "bodyMarkdown": "多项式因子每分部一次次数降一，最终耗尽"
         },
         {
           "id": "jiang-ci-dao-chang-shu-hou-ke-zhi-jie-1nrua1",
@@ -952,9 +952,9 @@
           "bodyMarkdown": "u=arcsin x / arctan x 等"
         },
         {
-          "id": "dv-qi-yu-bu-fen",
-          "title": "dv=其余部分",
-          "bodyMarkdown": "dv=其余部分"
+          "id": "qu-u-hou-qi-yu-bu-fen-zheng-ti-zuo-dv-0x9mry",
+          "title": "取 u 后其余部分整体作 dv",
+          "bodyMarkdown": "取 u 后其余部分整体作 dv，凑微分要顺手"
         },
         {
           "id": "fen-bu-hou-hua-cheng-you-li-shi-huo-gen-18m6wu",
@@ -1003,9 +1003,9 @@
           "bodyMarkdown": "真分式才能直接拆部分分式"
         },
         {
-          "id": "fen-mu-yin-shi-fen-jie-shi-qian-ti",
-          "title": "分母因式分解是前提",
-          "bodyMarkdown": "分母因式分解是前提"
+          "id": "you-li-han-shu-ji-fen-xian-fen-jie-fen-1qoc6c",
+          "title": "有理函数积分先分解分母因式",
+          "bodyMarkdown": "有理函数积分先分解分母因式，再拆部分分式"
         },
         {
           "id": "jie-guo-tong-chang-han-ln-yu-arctan",
@@ -1054,14 +1054,14 @@
           "bodyMarkdown": "按分母因式逐项设待定系数"
         },
         {
-          "id": "zhong-gen-yao-xie-quan-k-xiang",
-          "title": "重根要写全 k 项",
-          "bodyMarkdown": "重根要写全 k 项"
+          "id": "k-zhong-yin-shi-yao-xie-quan-k-xiang-bu-1nscqs",
+          "title": "k 重因式要写全 k 项部分分式",
+          "bodyMarkdown": "k 重因式要写全 k 项部分分式，缺一不可"
         },
         {
-          "id": "dai-te-shu-zhi-qiu-xi-shu-zui-kuai",
-          "title": "代特殊值求系数最快",
-          "bodyMarkdown": "代特殊值求系数最快"
+          "id": "qiu-dai-ding-xi-shu-shi-dai-ru-te-shu-0gb30k",
+          "title": "求待定系数时代入特殊值最快",
+          "bodyMarkdown": "求待定系数时代入特殊值最快，如取 x=0"
         }
       ],
       "examples": [
@@ -1666,9 +1666,9 @@
           "bodyMarkdown": "面积 = ∫(上−下)dx，结果为正"
         },
         {
-          "id": "jiao-dian-jue-ding-ji-fen-xian",
-          "title": "交点决定积分限",
-          "bodyMarkdown": "交点决定积分限"
+          "id": "liang-qu-xian-de-jiao-dian-jue-ding-ji-093zw2",
+          "title": "两曲线的交点决定积分限",
+          "bodyMarkdown": "两曲线的交点决定积分限，先联立解交点"
         },
         {
           "id": "bi-yao-shi-gai-dui-y-ji-fen",
@@ -1875,9 +1875,9 @@
           "bodyMarkdown": "关键是写出截面积函数"
         },
         {
-          "id": "xuan-zhuan-ti-shi-ta-de-te-li",
-          "title": "旋转体是它的特例",
-          "bodyMarkdown": "旋转体是它的特例"
+          "id": "xuan-zhuan-ti-shi-ping-xing-jie-mian-ti-1uoo54",
+          "title": "旋转体是平行截面体的特例",
+          "bodyMarkdown": "旋转体是平行截面体的特例，截面恰为圆"
         }
       ],
       "examples": [
@@ -1926,9 +1926,9 @@
           "bodyMarkdown": "抽水：微元重力 ρgA(x)dx × 提升距离"
         },
         {
-          "id": "xian-xie-wei-yuan-zai-ji-fen",
-          "title": "先写微元再积分",
-          "bodyMarkdown": "先写微元再积分"
+          "id": "wu-li-ying-yong-xian-xie-wei-yuan-zai-0shmf0",
+          "title": "物理应用先写微元再积分",
+          "bodyMarkdown": "物理应用先写微元再积分，微元是建模关键"
         }
       ],
       "examples": [
@@ -2120,9 +2120,9 @@
       },
       "keyPoints": [
         {
-          "id": "xing-xin-zhi-yi-lai-xing-zhuang",
-          "title": "形心只依赖形状",
-          "bodyMarkdown": "形心只依赖形状"
+          "id": "jun-yun-wu-ti-de-xing-xin-zhi-yi-lai-ji-09xfie",
+          "title": "均匀物体的形心只依赖几何形状",
+          "bodyMarkdown": "均匀物体的形心只依赖几何形状，与密度无关"
         },
         {
           "id": "x-1-a-x-da",

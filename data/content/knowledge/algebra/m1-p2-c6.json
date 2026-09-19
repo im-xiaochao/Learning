@@ -340,9 +340,9 @@
           "bodyMarkdown": "合同：B=CᵀAC（对称矩阵间）"
         },
         {
-          "id": "zi-fan-dui-chen-chuan-di",
-          "title": "自反、对称、传递",
-          "bodyMarkdown": "自反、对称、传递"
+          "id": "xiang-si-guan-xi-man-zu-zi-fan-dui-chen-1yai08",
+          "title": "相似关系满足自反、对称、传递三条",
+          "bodyMarkdown": "相似关系满足自反、对称、传递三条"
         },
         {
           "id": "he-tong-zheng-fu-guan-xing-zhi-shu-dui-0ssblo",
@@ -386,14 +386,14 @@
       },
       "keyPoints": [
         {
-          "id": "r-f-r-a",
-          "title": "r(f)=r(A)",
-          "bodyMarkdown": "r(f)=r(A)"
+          "id": "er-ci-xing-de-zhi-r-f-r-a-ji-biao-zhun-0oayz6",
+          "title": "二次型的秩 r(f)=r(A)",
+          "bodyMarkdown": "二次型的秩 r(f)=r(A)，即标准形非零项个数"
         },
         {
-          "id": "he-tong-bian-huan-bao-zhi",
-          "title": "合同变换保秩",
-          "bodyMarkdown": "合同变换保秩"
+          "id": "he-tong-bian-huan-bao-chi-zhi-bu-bian-1dmps3",
+          "title": "合同变换保持秩不变",
+          "bodyMarkdown": "合同变换保持秩不变，规范形项数稳定"
         },
         {
           "id": "biao-zhun-xing-zhong-fei-ling-xiang-ge-1lne11",
@@ -595,9 +595,9 @@
           "bodyMarkdown": "q = 负平方项个数 = 负特征值个数"
         },
         {
-          "id": "zhi-r-p-q",
-          "title": "秩 r=p+q",
-          "bodyMarkdown": "秩 r=p+q"
+          "id": "er-ci-xing-de-zhi-r-p-q-zheng-fu-xiang-17gbvb",
+          "title": "二次型的秩 r=p+q",
+          "bodyMarkdown": "二次型的秩 r=p+q，正负项个数之和"
         },
         {
           "id": "fu-hao-cha-s-p-q-he-tong-bu-bian-liang",
@@ -646,9 +646,9 @@
           "bodyMarkdown": "零项数 = n−r(A)"
         },
         {
-          "id": "r-a-p-q",
-          "title": "r(A)=p+q",
-          "bodyMarkdown": "r(A)=p+q"
+          "id": "you-r-a-p-q-fan-tui-ling-xiang-shu-n-p-q",
+          "title": "由 r(A)=p+q 反推",
+          "bodyMarkdown": "由 r(A)=p+q 反推：零项数 =n−p−q"
         },
         {
           "id": "ling-xiang-shu-0-a-bu-ke-ni",
@@ -702,9 +702,9 @@
           "bodyMarkdown": "不同方法化出的标准形 p、q 相同"
         },
         {
-          "id": "gui-fan-xing-yin-ci-wei-yi",
-          "title": "规范形因此唯一",
-          "bodyMarkdown": "规范形因此唯一"
+          "id": "guan-xing-zhi-shu-bu-bian-suo-yi-gui-0cq2bh",
+          "title": "惯性指数不变",
+          "bodyMarkdown": "惯性指数不变，所以规范形因此唯一"
         }
       ],
       "examples": [
@@ -734,7 +734,7 @@
         "逐个消灭交叉项"
       ],
       "sortOrder": 150,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -743,9 +743,9 @@
       },
       "keyPoints": [
         {
-          "id": "zhu-bian-liang-pei-fang-xiao-jiao-cha-0hu0wi",
-          "title": "逐变量配方消交叉项",
-          "bodyMarkdown": "逐变量配方消交叉项"
+          "id": "pei-fang-fa-zhu-bian-liang-pei-fang-0jtchm",
+          "title": "配方法逐变量配方消交叉项",
+          "bodyMarkdown": "配方法逐变量配方消交叉项，每次少一项"
         },
         {
           "id": "wu-ping-fang-xiang-xian-zuo-cha-he-huan-0abzut",

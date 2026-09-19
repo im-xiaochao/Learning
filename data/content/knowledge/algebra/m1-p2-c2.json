@@ -141,9 +141,9 @@
           "bodyMarkdown": "AE=EA=A（左右乘都一样）"
         },
         {
-          "id": "e-1",
-          "title": "|E|=1",
-          "bodyMarkdown": "|E|=1"
+          "id": "dan-wei-ju-zhen-hang-lie-shi-e-1-cheng-0gx8ln",
+          "title": "单位矩阵行列式 |E|=1",
+          "bodyMarkdown": "单位矩阵行列式 |E|=1，乘法单位元的值"
         }
       ],
       "examples": [
@@ -850,9 +850,9 @@
           "bodyMarkdown": "|AB|=|A||B|（同阶方阵）"
         },
         {
-          "id": "a-a",
-          "title": "|Aᵏ|=|A|ᵏ",
-          "bodyMarkdown": "|Aᵏ|=|A|ᵏ"
+          "id": "mi-de-hang-lie-shi-a-a-zhi-shu-ban-dao-1j9ls7",
+          "title": "幂的行列式 |Aᵏ|=|A|ᵏ",
+          "bodyMarkdown": "幂的行列式 |Aᵏ|=|A|ᵏ，指数搬到行列式外"
         },
         {
           "id": "a-0-a-bu-ke-ni",
@@ -896,9 +896,9 @@
       },
       "keyPoints": [
         {
-          "id": "a-a",
-          "title": "|Aᵀ|=|A|",
-          "bodyMarkdown": "|Aᵀ|=|A|"
+          "id": "zhuan-zhi-bu-bian-hao-a-a-xing-xing-zhi-0vjiq8",
+          "title": "转置不变号 |Aᵀ|=|A|",
+          "bodyMarkdown": "转置不变号 |Aᵀ|=|A|，行性质即列性质"
         },
         {
           "id": "ab-b-a-a-b",
@@ -947,9 +947,9 @@
       },
       "keyPoints": [
         {
-          "id": "a-a",
-          "title": "|Aᵏ|=|A|ᵏ",
-          "bodyMarkdown": "|Aᵏ|=|A|ᵏ"
+          "id": "mi-de-hang-lie-shi-a-a-zhi-shu-ban-dao-1j9ls7",
+          "title": "幂的行列式 |Aᵏ|=|A|ᵏ",
+          "bodyMarkdown": "幂的行列式 |Aᵏ|=|A|ᵏ，指数搬到行列式外"
         },
         {
           "id": "a-a-ke-ni-shi",
@@ -1258,14 +1258,14 @@
           "bodyMarkdown": "①换行 ②非零倍乘 ③倍加"
         },
         {
-          "id": "san-zhong-bian-huan-dou-ke-ni",
-          "title": "三种变换都可逆",
-          "bodyMarkdown": "三种变换都可逆"
+          "id": "san-lei-chu-deng-bian-huan-dou-ke-ni-ni-12gtoe",
+          "title": "三类初等变换都可逆",
+          "bodyMarkdown": "三类初等变换都可逆，逆变换仍是初等变换"
         },
         {
-          "id": "chu-deng-xing-bian-huan-bu-gai-bian-zhi",
-          "title": "初等行变换不改变秩",
-          "bodyMarkdown": "初等行变换不改变秩"
+          "id": "chu-deng-xing-bian-huan-bu-gai-bian-ju-1ezf23",
+          "title": "初等行变换不改变矩阵的秩",
+          "bodyMarkdown": "初等行变换不改变矩阵的秩，求秩靠它"
         }
       ],
       "examples": [
@@ -1559,9 +1559,9 @@
       },
       "keyPoints": [
         {
-          "id": "ling-xing-chen-di",
-          "title": "零行沉底",
-          "bodyMarkdown": "零行沉底"
+          "id": "xing-jie-ti-xing-yao-qiu-ling-xing-chen-164u8a",
+          "title": "行阶梯形要求零行沉底",
+          "bodyMarkdown": "行阶梯形要求零行沉底，主元逐行右移"
         },
         {
           "id": "zhu-yuan-lie-hao-zi-shang-er-xia-yan-ge-0by3pr",
@@ -1569,9 +1569,9 @@
           "bodyMarkdown": "主元列号自上而下严格增大"
         },
         {
-          "id": "fei-ling-xing-shu-zhi",
-          "title": "非零行数 = 秩",
-          "bodyMarkdown": "非零行数 = 秩"
+          "id": "jie-ti-xing-de-fei-ling-xing-shu-jiu-06ntbm",
+          "title": "阶梯形的非零行数就是秩",
+          "bodyMarkdown": "阶梯形的非零行数就是秩，数一眼出"
         }
       ],
       "examples": [
@@ -1610,9 +1610,9 @@
       },
       "keyPoints": [
         {
-          "id": "zhu-yuan-quan-wei-1",
-          "title": "主元全为 1",
-          "bodyMarkdown": "主元全为 1"
+          "id": "xing-zui-jian-xing-yao-qiu-zhu-yuan-1ipg8e",
+          "title": "行最简形要求主元全为 1",
+          "bodyMarkdown": "行最简形要求主元全为 1，且列上其余清零"
         },
         {
           "id": "zhu-yuan-lie-qi-yu-yuan-su-quan-wei-0",
@@ -1865,14 +1865,14 @@
       },
       "keyPoints": [
         {
-          "id": "qie-fen-fang-shi-bi-xu-yi-zhi",
-          "title": "切分方式必须一致",
-          "bodyMarkdown": "切分方式必须一致"
+          "id": "fen-kuai-jia-jian-de-qie-fen-fang-shi-0w6mk1",
+          "title": "分块加减的切分方式必须一致",
+          "bodyMarkdown": "分块加减的切分方式必须一致，对应块运算"
         },
         {
-          "id": "dui-ying-kuai-xiang-jia-jian",
-          "title": "对应块相加减",
-          "bodyMarkdown": "对应块相加减"
+          "id": "fen-kuai-jia-jian-jiu-shi-dui-ying-kuai-1bf0r9",
+          "title": "分块加减就是对应块相加减",
+          "bodyMarkdown": "分块加减就是对应块相加减，块当元素"
         },
         {
           "id": "kuai-ke-yi-shi-ren-yi-chi-cun-dui-qi-ji-1ta2t9",
@@ -2018,9 +2018,9 @@
       },
       "keyPoints": [
         {
-          "id": "fei-dui-jiao-kuai-quan-o",
-          "title": "非对角块全 O",
-          "bodyMarkdown": "非对角块全 O"
+          "id": "fen-kuai-dui-jiao-ju-zhen-yao-qiu-fei-06t4js",
+          "title": "分块对角矩阵要求非对角块全 O",
+          "bodyMarkdown": "分块对角矩阵要求非对角块全 O，各块独立运算"
         },
         {
           "id": "diag-a-b-a-b",

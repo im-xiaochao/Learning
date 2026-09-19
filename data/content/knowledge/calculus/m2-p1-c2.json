@@ -1091,7 +1091,7 @@
         "极值点导数为零"
       ],
       "sortOrder": 220,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -1110,9 +1110,9 @@
           "bodyMarkdown": "逆命题不成立（f′(x₀)=0 不一定是极值，如 y=x³）"
         },
         {
-          "id": "duan-dian-ji-zhi-bu-shou-ci-yue-shu",
+          "id": "duan-dian-ji-zhi-bu-shou-ci-yue-shu-fei-15kvrf",
           "title": "端点极值不受此约束",
-          "bodyMarkdown": "端点极值不受此约束"
+          "bodyMarkdown": "端点极值不受此约束，费马定理只针对内点"
         }
       ],
       "examples": [
@@ -1314,9 +1314,9 @@
           "bodyMarkdown": "阶数越高逼近越好（在展开点附近）"
         },
         {
-          "id": "yu-xiang-heng-liang-bi-jin-wu-cha",
+          "id": "yu-xiang-heng-liang-bi-jin-wu-cha-zhan-1sgimc",
           "title": "余项衡量逼近误差",
-          "bodyMarkdown": "余项衡量逼近误差"
+          "bodyMarkdown": "余项衡量逼近误差，展开阶数越高误差越小"
         }
       ],
       "examples": [
@@ -1615,9 +1615,9 @@
           "bodyMarkdown": "cos x=1−x²/2!+x⁴/4!−…"
         },
         {
-          "id": "zhi-han-ou-ci-xiang",
-          "title": "只含偶次项",
-          "bodyMarkdown": "只含偶次项"
+          "id": "cos-x-de-zhan-kai-zhi-han-ou-ci-xiang-1y5h5l",
+          "title": "cos x 的展开只含偶次项",
+          "bodyMarkdown": "cos x 的展开只含偶次项，指数与阶乘同为 2n"
         },
         {
           "id": "1-cos-x-x-2-jiu-lai-zi-zhe-ge-zhan-kai",
@@ -1875,9 +1875,9 @@
           "bodyMarkdown": "误差由拉格朗日余项估计"
         },
         {
-          "id": "x-yue-xiao-jin-si-yue-hao",
-          "title": "x 越小近似越好",
-          "bodyMarkdown": "x 越小近似越好"
+          "id": "x-yue-xiao-tai-le-jin-si-yue-hao-wu-cha-0n0i7r",
+          "title": "x 越小泰勒近似越好",
+          "bodyMarkdown": "x 越小泰勒近似越好，误差是高阶无穷小"
         }
       ],
       "examples": [
@@ -2018,9 +2018,9 @@
       },
       "keyPoints": [
         {
-          "id": "que-ren-shi-xing",
-          "title": "确认是 ∞/∞ 型",
-          "bodyMarkdown": "确认是 ∞/∞ 型"
+          "id": "yong-luo-bi-da-qian-xian-que-ren-shi-0ye2a2",
+          "title": "用洛必达前先确认是 ∞/∞ 型",
+          "bodyMarkdown": "用洛必达前先确认是 ∞/∞ 型，型不对会算错"
         },
         {
           "id": "tiao-jian-ke-dao-qie-fen-mu-dao-shu-bu-1tay9m",

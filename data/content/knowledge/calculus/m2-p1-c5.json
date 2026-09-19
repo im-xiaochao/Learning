@@ -173,7 +173,7 @@
         "竖直穿线法"
       ],
       "sortOrder": 40,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "latex",
@@ -192,9 +192,9 @@
           "bodyMarkdown": "先对 y 积（内层），再对 x（外层）"
         },
         {
-          "id": "wai-ceng-xian-shi-chang-shu",
-          "title": "外层限是常数",
-          "bodyMarkdown": "外层限是常数"
+          "id": "x-xing-qu-yu-wai-ceng-xian-shi-chang-0ti89j",
+          "title": "X 型区域外层限是常数",
+          "bodyMarkdown": "X 型区域外层限是常数，内层限含 x"
         }
       ],
       "examples": [
@@ -224,7 +224,7 @@
         "水平穿线法"
       ],
       "sortOrder": 50,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "latex",
@@ -243,9 +243,9 @@
           "bodyMarkdown": "先对 x 积（内层），再对 y（外层）"
         },
         {
-          "id": "yu-x-xing-hu-wei-dui-ou",
-          "title": "与 X 型互为对偶",
-          "bodyMarkdown": "与 X 型互为对偶"
+          "id": "y-xing-qu-yu-yu-x-xing-hu-wei-dui-ou-0w9hun",
+          "title": "Y 型区域与 X 型互为对偶",
+          "bodyMarkdown": "Y 型区域与 X 型互为对偶，水平穿线定限"
         }
       ],
       "examples": [
@@ -345,9 +345,9 @@
           "bodyMarkdown": "外层 x 的限是常数"
         },
         {
-          "id": "chuan-xian-fang-xiang-shu-zhi",
-          "title": "穿线方向",
-          "bodyMarkdown": "穿线方向：竖直"
+          "id": "xian-y-hou-x-de-chuan-xian-fang-xiang-1ahpso",
+          "title": "先 y 后 x 的穿线方向是竖直",
+          "bodyMarkdown": "先 y 后 x 的穿线方向是竖直，从下边界穿到上边界"
         }
       ],
       "examples": [
@@ -391,9 +391,9 @@
           "bodyMarkdown": "反推区域 → 画图 → 重定限，三步走"
         },
         {
-          "id": "huan-xu-ke-neng-gai-bian-ke-ji-xing",
-          "title": "换序可能改变可积性",
-          "bodyMarkdown": "换序可能改变可积性"
+          "id": "jiao-huan-ci-xu-ke-neng-gai-bian-ke-ji-0olax3",
+          "title": "交换次序可能改变可积性",
+          "bodyMarkdown": "交换次序可能改变可积性，积不出就换序"
         },
         {
           "id": "qu-yu-miao-shu-fu-za-shi-nai-xin-fen-0x82dn",
@@ -447,9 +447,9 @@
           "bodyMarkdown": "分界线把 D 拆成几块"
         },
         {
-          "id": "zhu-kuai-ji-fen-zai-xiang-jia",
-          "title": "逐块积分再相加",
-          "bodyMarkdown": "逐块积分再相加"
+          "id": "fen-qu-yu-hou-zhu-kuai-ji-fen-zai-ba-0bfw81",
+          "title": "分区域后逐块积分",
+          "bodyMarkdown": "分区域后逐块积分，再把结果相加"
         }
       ],
       "examples": [
@@ -488,9 +488,9 @@
       },
       "keyPoints": [
         {
-          "id": "x-r-cos",
-          "title": "x=r cosθ",
-          "bodyMarkdown": "x=r cosθ"
+          "id": "heng-zuo-biao-ti-huan-wei-x-r-cos-yu-1afagf",
+          "title": "横坐标替换为 x=r cosθ",
+          "bodyMarkdown": "横坐标替换为 x=r cosθ，与纵坐标成对使用"
         },
         {
           "id": "de-xiang-xian-yao-yong-x-y-de-fu-hao-0rywqa",
@@ -539,9 +539,9 @@
       },
       "keyPoints": [
         {
-          "id": "y-r-sin",
-          "title": "y=r sinθ",
-          "bodyMarkdown": "y=r sinθ"
+          "id": "zong-zuo-biao-ti-huan-wei-y-r-sin-ping-0qvclw",
+          "title": "纵坐标替换为 y=r sinθ",
+          "bodyMarkdown": "纵坐标替换为 y=r sinθ，平方和给出 r²"
         },
         {
           "id": "x-y-r-ping-fang-he",
@@ -590,9 +590,9 @@
       },
       "keyPoints": [
         {
-          "id": "da-r-dr-d",
-          "title": "dA=r dr dθ",
-          "bodyMarkdown": "dA=r dr dθ"
+          "id": "mian-ji-wei-yuan-huan-cheng-da-r-dr-d-r-1i8ohm",
+          "title": "面积微元换成 dA=r dr dθ",
+          "bodyMarkdown": "面积微元换成 dA=r dr dθ，r 是雅可比"
         },
         {
           "id": "ji-he-kuan-dr-chang-r-d-de-xiao-ju-xing",
@@ -799,14 +799,14 @@
           "bodyMarkdown": "拆成 X 型或 Y 型之和"
         },
         {
-          "id": "ke-jia-xing-shi-li-lun-yi-ju",
-          "title": "可加性是理论依据",
-          "bodyMarkdown": "可加性是理论依据"
+          "id": "qu-yu-chai-fen-yi-ke-jia-xing-wei-li-0uyerq",
+          "title": "区域拆分以可加性为理论依据",
+          "bodyMarkdown": "区域拆分以可加性为理论依据，拆完逐块算"
         },
         {
-          "id": "chai-fen-xian-bu-ying-xiang-zui-zhong-09fz6b",
-          "title": "拆分线不影响最终值",
-          "bodyMarkdown": "拆分线不影响最终值"
+          "id": "chai-fen-xian-zen-me-hua-bu-ying-xiang-1gm65i",
+          "title": "拆分线怎么画不影响最终值",
+          "bodyMarkdown": "拆分线怎么画不影响最终值，选好画的方向"
         }
       ],
       "examples": [
@@ -845,14 +845,14 @@
       },
       "keyPoints": [
         {
-          "id": "qu-yu-xing-zhuang-di-yi-pan-ju",
-          "title": "区域形状第一判据",
-          "bodyMarkdown": "区域形状第一判据"
+          "id": "xuan-zuo-biao-xi-shi-qu-yu-xing-zhuang-18c4dh",
+          "title": "选坐标系时区域形状是第一判据",
+          "bodyMarkdown": "选坐标系时区域形状是第一判据，圆域用极坐标"
         },
         {
-          "id": "han-shu-jie-gou-di-er-pan-ju",
-          "title": "函数结构第二判据",
-          "bodyMarkdown": "函数结构第二判据"
+          "id": "bei-ji-han-shu-jie-gou-shi-di-er-pan-ju-00ir1o",
+          "title": "被积函数结构是第二判据",
+          "bodyMarkdown": "被积函数结构是第二判据，含 x²+y² 就想 r²"
         },
         {
           "id": "liang-zhong-zuo-biao-dou-bu-zhan-you-1u4pry",
@@ -1008,9 +1008,9 @@
           "bodyMarkdown": "均匀时 ρ 约掉（形心）"
         },
         {
-          "id": "dui-chen-xing-xian-ding-zhou-shang-zuo-1j17t3",
-          "title": "对称性先定轴上坐标",
-          "bodyMarkdown": "对称性先定轴上坐标"
+          "id": "zhi-xin-wen-ti-xian-yong-dui-chen-xing-03h93i",
+          "title": "质心问题先用对称性定轴上坐标",
+          "bodyMarkdown": "质心问题先用对称性定轴上坐标，少算一个积分"
         }
       ],
       "examples": [

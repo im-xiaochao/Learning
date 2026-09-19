@@ -391,9 +391,9 @@
           "bodyMarkdown": "r=s ⇔ 无关；r<s ⇔ 相关"
         },
         {
-          "id": "yong-xing-bian-huan-qiu-zhi-zui-zhi-jie",
-          "title": "用行变换求秩最直接",
-          "bodyMarkdown": "用行变换求秩最直接"
+          "id": "xiang-liang-zu-qiu-zhi-yong-xing-bian-0zv1gk",
+          "title": "向量组求秩用行变换最直接",
+          "bodyMarkdown": "向量组求秩用行变换最直接，拼矩阵化阶梯"
         },
         {
           "id": "bu-fen-zu-zhi-zheng-zu-zhi",
@@ -651,9 +651,9 @@
           "bodyMarkdown": "行秩 = 列秩 = 矩阵秩"
         },
         {
-          "id": "qiu-zhi-tong-yi-zou-xing-bian-huan",
-          "title": "求秩统一走行变换",
-          "bodyMarkdown": "求秩统一走行变换"
+          "id": "xing-zu-lie-zu-qiu-zhi-tong-yi-zou-xing-0gs9wd",
+          "title": "行组列组求秩统一走行变换",
+          "bodyMarkdown": "行组列组求秩统一走行变换，结果一样"
         }
       ],
       "examples": [
@@ -901,9 +901,9 @@
           "bodyMarkdown": "定义：(αᵢ,αⱼ)=δᵢⱼ"
         },
         {
-          "id": "biao-zhun-zheng-jiao-zu-xian-xing-wu-194wo4",
-          "title": "标准正交组线性无关",
-          "bodyMarkdown": "标准正交组线性无关"
+          "id": "biao-zhun-zheng-jiao-zu-bi-ding-xian-199neq",
+          "title": "标准正交组必定线性无关",
+          "bodyMarkdown": "标准正交组必定线性无关，正交保证独立"
         },
         {
           "id": "gou-zao-shi-mi-te-zheng-jiao-hua-zai-1lsfki",
@@ -1008,9 +1008,9 @@
           "bodyMarkdown": "它与 β₁ 内积必为 0"
         },
         {
-          "id": "zhu-ge-xiang-liang-chong-fu-gai-cao-zuo",
-          "title": "逐个向量重复该操作",
-          "bodyMarkdown": "逐个向量重复该操作"
+          "id": "dui-mei-ge-xin-xiang-liang-chong-fu-0sxvmz",
+          "title": "对每个新向量重复减投影操作",
+          "bodyMarkdown": "对每个新向量重复减投影操作，直到全部正交"
         }
       ],
       "examples": [
@@ -1059,9 +1059,9 @@
           "bodyMarkdown": "先施密特正交化，后单位化"
         },
         {
-          "id": "dan-wei-hua-bu-ying-xiang-zheng-jiao-0nafo0",
+          "id": "dan-wei-hua-bu-ying-xiang-zheng-jiao-0y8xzw",
           "title": "单位化不影响正交性",
-          "bodyMarkdown": "单位化不影响正交性"
+          "bodyMarkdown": "单位化不影响正交性，只把长度调到 1"
         }
       ],
       "examples": [

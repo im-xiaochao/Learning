@@ -493,9 +493,9 @@
           "bodyMarkdown": "枢轴量 T=(X̄−μ₀)/(S/√n) ~ t(n−1)"
         },
         {
-          "id": "zi-you-du-shi-n-1",
+          "id": "zi-you-du-shi-n-1-yang-ben-jun-zhi-yong-00uu2x",
           "title": "自由度是 n−1",
-          "bodyMarkdown": "自由度是 n−1"
+          "bodyMarkdown": "自由度是 n−1：样本均值用掉一个约束"
         },
         {
           "id": "wei-zhi-shi-bi-xu-yong-t-fen-bu-er-bu-15flfz",
@@ -530,7 +530,7 @@
         "检验方差用卡方"
       ],
       "sortOrder": 110,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -544,9 +544,9 @@
           "bodyMarkdown": "枢轴量 χ²=(n−1)S²/σ₀² ~ χ²(n−1)"
         },
         {
-          "id": "zi-you-du-shi-n-1",
+          "id": "zi-you-du-shi-n-1-yang-ben-jun-zhi-yong-00uu2x",
           "title": "自由度是 n−1",
-          "bodyMarkdown": "自由度是 n−1"
+          "bodyMarkdown": "自由度是 n−1：样本均值用掉一个约束"
         },
         {
           "id": "fen-bu-bu-dui-chen-zuo-you-lin-jie-zhi-0kdf7l",

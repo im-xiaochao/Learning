@@ -1110,9 +1110,9 @@
           "bodyMarkdown": "1−cos x∼x²/2，(1+x)^α−1∼αx"
         },
         {
-          "id": "zhi-zai-cheng-chu-jie-gou-zhong-shi-yong",
-          "title": "只在乘除结构中使用",
-          "bodyMarkdown": "只在乘除结构中使用"
+          "id": "deng-jia-wu-qiong-xiao-zhi-zai-cheng-1dciwb",
+          "title": "等价无穷小只在乘除结构中使用",
+          "bodyMarkdown": "等价无穷小只在乘除结构中使用，加减慎用"
         }
       ],
       "examples": [
@@ -1467,9 +1467,9 @@
           "bodyMarkdown": "提取主项也是常用手段"
         },
         {
-          "id": "mu-biao-shi-hua-cheng-shang-de-xing-shi",
-          "title": "目标是化成商的形式",
-          "bodyMarkdown": "目标是化成商的形式"
+          "id": "de-mu-biao-shi-hua-cheng-shang-de-xing-104tp7",
+          "title": "∞−∞ 的目标是化成商的形式",
+          "bodyMarkdown": "∞−∞ 的目标是化成商的形式，再通分求极限"
         }
       ],
       "examples": [
@@ -1569,9 +1569,9 @@
           "bodyMarkdown": "化成 0·∞ 后再化为商"
         },
         {
-          "id": "jie-guo-xing-ru-e-a",
-          "title": "结果形如 e^A",
-          "bodyMarkdown": "结果形如 e^A"
+          "id": "0-xing-de-jie-guo-xing-ru-e-a-zhi-shu-1k5hxs",
+          "title": "0⁰ 型的结果形如 e^A",
+          "bodyMarkdown": "0⁰ 型的结果形如 e^A，指数由取极限算出"
         }
       ],
       "examples": [
@@ -1722,9 +1722,9 @@
           "bodyMarkdown": "常用工具：提公因式、平方差、立方差、十字相乘"
         },
         {
-          "id": "yue-qu-hou-bi-xu-chong-xin-dai-ru",
-          "title": "约去后必须重新代入",
-          "bodyMarkdown": "约去后必须重新代入"
+          "id": "yue-qu-hou-bi-xu-ba-jie-guo-dai-hui-12ki7u",
+          "title": "约去后必须把结果代回原式检验",
+          "bodyMarkdown": "约去后必须把结果代回原式检验"
         }
       ],
       "examples": [
@@ -1763,9 +1763,9 @@
       },
       "keyPoints": [
         {
-          "id": "gen-shi-cha-cheng-yi-gong-e-shi",
+          "id": "gen-shi-cha-cheng-yi-gong-e-shi-yong-07kwdj",
           "title": "根式差乘以共轭式",
-          "bodyMarkdown": "根式差乘以共轭式"
+          "bodyMarkdown": "根式差乘以共轭式，用平方差消去根号"
         },
         {
           "id": "you-li-hua-hou-tong-chang-chu-xian-ke-15m5lx",
@@ -1814,9 +1814,9 @@
       },
       "keyPoints": [
         {
-          "id": "fen-shi-cha-xian-tong-fen-he-bing",
-          "title": "分式差先通分合并",
-          "bodyMarkdown": "分式差先通分合并"
+          "id": "fen-shi-cha-xian-tong-fen-he-bing-cheng-1utbtb",
+          "title": "分式差先通分合并成一项",
+          "bodyMarkdown": "分式差先通分合并成一项，再约去零因子"
         },
         {
           "id": "tong-fen-hou-tong-chang-bian-cheng-0-0-0mvwnj",
@@ -1916,9 +1916,9 @@
       },
       "keyPoints": [
         {
-          "id": "cheng-chu-jie-gou-ke-zhi-jie-ti-huan",
-          "title": "乘除结构可直接替换",
-          "bodyMarkdown": "乘除结构可直接替换"
+          "id": "cheng-chu-jie-gou-zhong-de-yin-zi-ke-0i9xai",
+          "title": "乘除结构中的因子可直接替换",
+          "bodyMarkdown": "乘除结构中的因子可直接替换，加减不能"
         },
         {
           "id": "jia-jian-jie-gou-yao-shen-yong-gai-yong-04k25p",
@@ -2018,9 +2018,9 @@
       },
       "keyPoints": [
         {
-          "id": "liang-ce-ji-xian-bi-xu-xiang-tong",
-          "title": "两侧极限必须相同",
-          "bodyMarkdown": "两侧极限必须相同"
+          "id": "jia-bi-de-liang-ce-ji-xian-bi-xu-xiang-13q6dr",
+          "title": "夹逼的两侧极限必须相同",
+          "bodyMarkdown": "夹逼的两侧极限必须相同，否则夹不出来"
         },
         {
           "id": "fang-suo-shi-bu-deng-hao-fang-xiang-yao-0h5k7o",

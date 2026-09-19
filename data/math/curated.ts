@@ -1461,7 +1461,7 @@ const PROBABILITY_MOMENTS: Record<string, LectureBody> = {
       'k 阶中心矩是 E{[X−E(X)]ᵏ}，二阶中心矩就是方差。中心矩刻画分布围绕均值的形状（偏斜、尖峭程度）。',
     keyPoints: [
       'k 阶中心矩 = E{[X−E(X)]ᵏ}，二阶就是方差',
-      '一阶中心矩恒为 0',
+      '一阶中心矩恒为 0，偏差正负抵消',
       '三阶反映偏斜、四阶反映尖峭程度',
     ],
     visual: 'distribution',
@@ -1721,7 +1721,7 @@ const STATISTICS_BASICS: Record<string, LectureBody> = {
     keyPoints: [
       'χ²：右偏，n 增大趋于对称，期望为 n',
       't：对称，尾部厚于正态，n 大时近似标准正态',
-      'F：只取正值、右偏',
+      'F 分布只取正值且右偏，常用于方差比检验',
     ],
     visual: 'distribution',
     steps: ['认出分布类型', '按自由度判断形状', '需要时用极限性质做近似'],
@@ -1949,7 +1949,7 @@ const STATISTICS_ESTIMATION: Record<string, LectureBody> = {
       '在两个无偏估计之间，方差更小的那个更有效，因为它的取值更集中、估计更稳定。比较有效性就是比较方差。',
     keyPoints: [
       '前提是两个估计量都无偏',
-      '方差越小越有效',
+      '方差越小的估计越有效，波动小才可靠',
       '所有无偏估计中方差最小的称为最小方差无偏估计',
     ],
     visual: 'distribution',
@@ -2193,7 +2193,7 @@ const STATISTICS_TESTING: Record<string, LectureBody> = {
       'σ² 未知时用样本标准差代替：T=(X̄−μ₀)/(S/√n)，H0 成立时服从 t(n−1)，按 t 分布查临界值。',
     keyPoints: [
       '枢轴量 T=(X̄−μ₀)/(S/√n) ~ t(n−1)',
-      '自由度是 n−1',
+      '自由度是 n−1：样本均值用掉一个约束',
       'σ 未知时必须用 t 分布而不是标准正态',
     ],
     visual: 'distribution',
@@ -2208,7 +2208,7 @@ const STATISTICS_TESTING: Record<string, LectureBody> = {
       '正态总体方差检验用 χ²=(n−1)S²/σ₀²，在 H0: σ²=σ₀² 成立时服从 χ²(n−1)，这是方差检验与均值检验最大的不同。',
     keyPoints: [
       '枢轴量 χ²=(n−1)S²/σ₀² ~ χ²(n−1)',
-      '自由度是 n−1',
+      '自由度是 n−1：样本均值用掉一个约束',
       'χ² 分布不对称，左右临界值不对称',
     ],
     visual: 'distribution',
@@ -2700,7 +2700,7 @@ const CALCULUS_FUNCTIONS_LIMITS: Record<string, LectureBody> = {
     keyPoints: [
       '基本组：sin x∼tan x∼arcsin x∼arctan x∼ln(1+x)∼eˣ−1∼x',
       '1−cos x∼x²/2，(1+x)^α−1∼αx',
-      '只在乘除结构中使用',
+      '等价无穷小只在乘除结构中使用，加减慎用',
     ],
     visual: 'equivalent',
     steps: ['确认变量趋于 0', '判断是乘除还是加减结构', '乘除结构直接替换'],
@@ -2863,7 +2863,7 @@ const CALCULUS_FUNCTIONS_LIMITS: Record<string, LectureBody> = {
     keyPoints: [
       '分式差通分，根式差有理化',
       '提取主项也是常用手段',
-      '目标是化成商的形式',
+      '∞−∞ 的目标是化成商的形式，再通分求极限',
     ],
     visual: 'limit',
     steps: ['判断结构（分式差 / 根式差）', '通分或有理化', '按新类型求极限'],
@@ -2893,7 +2893,7 @@ const CALCULUS_FUNCTIONS_LIMITS: Record<string, LectureBody> = {
     keyPoints: [
       '取对数：ln y=v ln u',
       '化成 0·∞ 后再化为商',
-      '结果形如 e^A',
+      '0⁰ 型的结果形如 e^A，指数由取极限算出',
     ],
     visual: 'limit',
     steps: ['设 y=u^v 并取对数', '求 lim v ln u', '结果取指数'],
@@ -2938,7 +2938,7 @@ const CALCULUS_FUNCTIONS_LIMITS: Record<string, LectureBody> = {
     keyPoints: [
       '目标是找出并约去公因子 (x−a)',
       '常用工具：提公因式、平方差、立方差、十字相乘',
-      '约去后必须重新代入'],
+      '约去后必须把结果代回原式检验'],
     visual: 'limit',
     steps: ['分解分子与分母', '约去公因子', '代入求值'],
     formula: 'a²−b²=(a−b)(a+b)；a³−b³=(a−b)(a²+ab+b²)',
@@ -2950,7 +2950,7 @@ const CALCULUS_FUNCTIONS_LIMITS: Record<string, LectureBody> = {
     explanation:
       '遇到根式相减或分母含根号时，用共轭式有理化，把根号差变成可约的形式，常用于 0/0 与 ∞−∞ 型。',
     keyPoints: [
-      '根式差乘以共轭式',
+      '根式差乘以共轭式，用平方差消去根号',
       '有理化后通常出现可约的公因子',
       '√a−√b 的共轭式是 √a+√b',
     ],
@@ -2965,7 +2965,7 @@ const CALCULUS_FUNCTIONS_LIMITS: Record<string, LectureBody> = {
     explanation:
       '∞−∞ 型的分式差用通分合并成一个分式，再看是 0/0 还是 ∞/∞，然后按相应方法处理。',
     keyPoints: [
-      '分式差先通分合并',
+      '分式差先通分合并成一项，再约去零因子',
       '通分后通常变成 0/0 或 ∞/∞',
       '合并后常用等价无穷小或洛必达',
     ],
@@ -2995,7 +2995,7 @@ const CALCULUS_FUNCTIONS_LIMITS: Record<string, LectureBody> = {
     explanation:
       '在乘除结构中可以用等价无穷小替换化简（如 x→0 时 sin x∼x）；加减结构不能随便替换，否则会丢失高阶项导致错误结论。',
     keyPoints: [
-      '乘除结构可直接替换',
+      '乘除结构中的因子可直接替换，加减不能',
       '加减结构要慎用，改用泰勒展开',
       '替换前先确认变量趋于 0',
     ],
@@ -3025,7 +3025,7 @@ const CALCULUS_FUNCTIONS_LIMITS: Record<string, LectureBody> = {
     explanation:
       '夹逼准则：若 gₙ≤aₙ≤hₙ 且两侧趋于同一极限，则中间数列也趋于该极限；它常用于含 n 项和或带 n 次方的极限。',
     keyPoints: [
-      '两侧极限必须相同',
+      '夹逼的两侧极限必须相同，否则夹不出来',
       '放缩时不等号方向要一致',
       '常用于数列与 n 项和'],
     visual: 'comparison',
@@ -3130,7 +3130,7 @@ const CALCULUS_FUNCTIONS_LIMITS: Record<string, LectureBody> = {
       '连续函数的和、差、积、商（分母不为 0）仍连续，连续函数的复合也连续。因此初等函数在定义区间内连续，求极限可以直接代入。',
     keyPoints: [
       '四则运算保持连续（分母不为 0）',
-      '复合函数也保持连续',
+      '连续函数的复合仍连续，链条上处处连续即可',
       '由此可对初等函数直接代入求极限',
     ],
     visual: 'continuity',
@@ -3650,7 +3650,7 @@ const CALCULUS_DERIVATIVES: Record<string, LectureBody> = {
     keyPoints: [
       '条件：内点 + 极值 + 可导 ⇒ f′(x₀)=0',
       '逆命题不成立（f′(x₀)=0 不一定是极值，如 y=x³）',
-      '端点极值不受此约束',
+      '端点极值不受此约束，费马定理只针对内点',
     ],
     visual: 'theorem',
     steps: ['确认是内点极值', '确认可导', '得出导数为 0'],
@@ -3725,7 +3725,7 @@ const CALCULUS_DERIVATIVES: Record<string, LectureBody> = {
     keyPoints: [
       'Pₙ 与 f 在 x₀ 处的值与前 n 阶导数都相同',
       '阶数越高逼近越好（在展开点附近）',
-      '余项衡量逼近误差',
+      '余项衡量逼近误差，展开阶数越高误差越小',
     ],
     visual: 'taylor',
     steps: ['求各阶导数在 x₀ 的值', '按 k! 作分母写出各项', '得到 Pₙ(x)'],
@@ -3814,7 +3814,7 @@ const CALCULUS_DERIVATIVES: Record<string, LectureBody> = {
       'cos x 的展开式只含偶次项且符号交替：cos x=1−x²/2!+x⁴/4!−…；它是偶函数，所以没有奇次项。',
     keyPoints: [
       'cos x=1−x²/2!+x⁴/4!−…',
-      '只含偶次项',
+      'cos x 的展开只含偶次项，指数与阶乘同为 2n',
       '1−cos x∼x²/2 就来自这个展开',
     ],
     visual: 'taylor',
@@ -3890,7 +3890,7 @@ const CALCULUS_DERIVATIVES: Record<string, LectureBody> = {
     keyPoints: [
       '常用近似：eˣ≈1+x，sin x≈x，ln(1+x)≈x',
       '误差由拉格朗日余项估计',
-      'x 越小近似越好',
+      'x 越小泰勒近似越好，误差是高阶无穷小',
     ],
     visual: 'taylor',
     steps: ['选取展开点与阶数', '截断得到近似式', '用余项估计误差'],
@@ -4143,7 +4143,7 @@ const CALCULUS_DERIVATIVES: Record<string, LectureBody> = {
     explanation:
       '∞/∞ 型同样可以用洛必达：lim f/g=lim f′/g′，条件与 0/0 型相同；求导后仍为 ∞/∞ 时继续使用。',
     keyPoints: [
-      '确认是 ∞/∞ 型',
+      '用洛必达前先确认是 ∞/∞ 型，型不对会算错',
       '条件：可导且分母导数不为 0',
       '也可以先比较增长阶（更快）',
     ],
@@ -4589,7 +4589,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
     keyPoints: [
       '∫u dv=uv−∫v du',
       'u 按「反对幂三指」的优先级选',
-      '必要时可以多次分部',
+      '必要时可以连续多次分部，直到积出或循环',
     ],
     visual: 'integral',
     steps: ['按优先级选 u 与 dv', '算 du 与 v', '代入公式处理新积分'],
@@ -4618,7 +4618,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
       '多项式乘指数时取多项式作 u、指数作 dv，一次分部就把多项式次数降一；n 次多项式最多分部 n 次即可积完。',
     keyPoints: [
       'u=多项式，dv=指数 dx',
-      '每分部一次次数降一',
+      '多项式因子每分部一次次数降一，最终耗尽',
       '降次到常数后可直接积分',
     ],
     visual: 'integral',
@@ -4648,7 +4648,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
       '对数求导后变成 1/x，所以含对数的积分取对数作 u、其余作 dv，一次分部就把对数消掉。',
     keyPoints: [
       'u=对数函数（求导后变成有理式）',
-      'dv=其余部分',
+      '取 u 后其余部分整体作 dv，凑微分要顺手',
       '一次分部即可去掉对数',
     ],
     visual: 'integral',
@@ -4678,7 +4678,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
       '反三角函数求导后变成有理式或根式，所以含反三角的积分取它作 u、其余作 dv，一次分部就能化简。',
     keyPoints: [
       'u=arcsin x / arctan x 等',
-      'dv=其余部分',
+      '取 u 后其余部分整体作 dv，凑微分要顺手',
       '分部后化成有理式或根式积分',
     ],
     visual: 'integral',
@@ -4708,7 +4708,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
       '有理函数积分的关键是化成部分分式：先保证是真分式（否则做除法），再按分母的因式类型拆开，最后逐项积分。',
     keyPoints: [
       '真分式才能直接拆部分分式',
-      '分母因式分解是前提',
+      '有理函数积分先分解分母因式，再拆部分分式',
       '结果通常含 ln 与 arctan',
     ],
     visual: 'integral',
@@ -4738,8 +4738,8 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
       '部分分式是把一个复杂分式拆成若干简单分式之和，使每一项都能直接积分；设系数时用待定系数法（代值法或比较系数法）。',
     keyPoints: [
       '按分母因式逐项设待定系数',
-      '重根要写全 k 项',
-      '代特殊值求系数最快',
+      'k 重因式要写全 k 项部分分式，缺一不可',
+      '求待定系数时代入特殊值最快，如取 x=0',
     ],
     visual: 'integral',
     steps: ['分解分母', '设部分分式形式', '待定系数求解'],
@@ -4933,7 +4933,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
       '被积函数在某点无界（瑕点）时，用极限定义积分：若瑕点在 b，则 ∫ₐᵇf=lim_{ε→0⁺}∫ₐ^{b−ε}f。',
     keyPoints: [
       '先找出瑕点（函数无界的位置）',
-      '在瑕点处取单侧极限',
+      '瑕积分在瑕点处取单侧极限，极限存在才收敛',
       'p 积分：∫₀¹dx/xᵖ 在 p<1 时收敛',
     ],
     visual: 'integral',
@@ -4993,8 +4993,8 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
       '区间内部有瑕点时，必须以瑕点为界把积分拆成两段分别判断；只要有一段发散，整体就发散。',
     keyPoints: [
       '内部瑕点必须拆开处理',
-      '两段都收敛才收敛',
-      '拆分点选在瑕点处',
+      '拆出的两段反常积分都收敛，原来才收敛',
+      '拆分点必须选在瑕点处，分段后逐段讨论',
     ],
     visual: 'integral',
     steps: ['找出所有瑕点', '以瑕点为界拆分', '分别判断敛散'],
@@ -5053,7 +5053,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
       '求平面面积先画图，确定上下（或左右）边界与交点，再按「上减下」积分；面积一定是正数，算出负值说明上下取反了。',
     keyPoints: [
       '面积 = ∫(上−下)dx，结果为正',
-      '交点决定积分限',
+      '两曲线的交点决定积分限，先联立解交点',
       '必要时改对 y 积分',
     ],
     visual: 'integral',
@@ -5114,7 +5114,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
     keyPoints: [
       'V=∫ₐᵇA(x)dx',
       '关键是写出截面积函数',
-      '旋转体是它的特例',
+      '旋转体是平行截面体的特例，截面恰为圆',
     ],
     visual: 'integral',
     steps: ['选切片方向', '写出 A(x)', '积分求体积'],
@@ -5143,7 +5143,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
       '绕 x 轴旋转的侧面积 S=2π∫ₐᵇ|y|√(1+y′²)dx：把弧微元旋转成圆环，周长 2π|y| 乘弧长 ds。',
     keyPoints: [
       'S=2π∫|y|√(1+y′²)dx',
-      '必须带弧微分因子',
+      '侧面积微元必须带弧微分因子，不能只投 dxdy',
       '与体积公式的区别：这里是一次方',
     ],
     visual: 'integral',
@@ -5174,7 +5174,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
     keyPoints: [
       'W=∫ₐᵇF(x)dx',
       '抽水：微元重力 ρgA(x)dx × 提升距离',
-      '先写微元再积分',
+      '物理应用先写微元再积分，微元是建模关键',
     ],
     visual: 'integral',
     steps: ['写出微元 dW', '确定积分限', '积分求总功'],
@@ -5247,7 +5247,7 @@ const CALCULUS_INTEGRALS: Record<string, LectureBody> = {
     explanation:
       '形心是几何图形的中心，只与形状有关：x̄=(1/A)∫x dA。均匀物体的形心就是质心。',
     keyPoints: [
-      '形心只依赖形状',
+      '均匀物体的形心只依赖几何形状，与密度无关',
       'x̄=(1/A)∫x dA',
       '有对称轴时形心在对称轴上',
     ],
@@ -5392,7 +5392,7 @@ const CALCULUS_ODE: Record<string, LectureBody> = {
     explanation:
       '特解是不含任意常数的解，通常由初始条件把通解中的常数确定后得到；题目问「满足某条件的解」就是要找特解。',
     keyPoints: [
-      '特解不含任意常数',
+      '特解不含任意常数，由初始条件定下来',
       '由初始条件定出通解的常数',
       '几何上是从通解曲线族中选出一条',
     ],
@@ -5499,7 +5499,7 @@ const CALCULUS_ODE: Record<string, LectureBody> = {
     keyPoints: [
       '含 y 的因子与含 x 的因子分到两端',
       '乘积形式 dy/dx=f(x)g(y) 必可分离',
-      '分离后两端各自积分',
+      '分离变量后两端各自积分，常数只写一个',
     ],
     visual: 'ode',
     steps: ['因式分解右端', '把 g(y) 除到左边', '写成两端微分形式'],
@@ -5829,7 +5829,7 @@ const CALCULUS_ODE: Record<string, LectureBody> = {
     keyPoints: [
       '单根出 e^{rx}，重根加幂，复根出振荡',
       '解的总数必须等于阶数 n',
-      '最后统一线性组合',
+      '按根型写全解后，最后统一做线性组合',
     ],
     visual: 'ode',
     steps: ['写特征方程并求全部根', '按根型逐个写解', '凑齐 n 个后线性组合'],
@@ -5993,7 +5993,7 @@ const CALCULUS_ODE: Record<string, LectureBody> = {
       '简单建模的套路一致：把条件写成导数等式，按类型选解法（可分离/齐次/线性/二阶常系数），最后用题目给定的状态定常数。',
     keyPoints: [
       '第一步永远是「把条件翻译成 y′、y″」',
-      '按方程类型选解法',
+      '先识别方程类型再选解法，类型错方法全错',
       '常数用题目给定的初始状态确定',
     ],
     visual: 'ode',
@@ -6257,7 +6257,7 @@ const CALCULUS_MULTIVARIABLE: Record<string, LectureBody> = {
     explanation:
       'f 可微时全微分 dz=f_x dx+f_y dy；系数 A、B 恰好是两个偏导，所以「先求偏导、再按公式拼装」就是求全微分的全部工作。',
     keyPoints: [
-      'dz=f_x dx+f_y dy',
+      '全微分公式 dz=f_x dx+f_y dy，先求两个偏导',
       'dx=Δx、dy=Δy（自变量增量）',
       '可微是公式成立的前提',
     ],
@@ -6513,7 +6513,7 @@ const CALCULUS_MULTIVARIABLE: Record<string, LectureBody> = {
       '可微函数在极值点处两个偏导都必须为 0（驻点）；但驻点未必是极值点——马鞍面 z=xy 在原点驻点却非极值，驻点只是候选。',
     keyPoints: [
       '极值点 ⇒ f_x=f_y=0（可微时）',
-      '驻点 ⇏ 极值点',
+      '驻点不一定是极值点，需过二阶充分条件',
       '偏导不存在的点也可能是极值点',
     ],
     visual: 'extremum',
@@ -6764,7 +6764,7 @@ const CALCULUS_VECTOR_GEOMETRY: Record<string, LectureBody> = {
       '向量 b 在 a 上的投影是一个数：Prjₐb=|b|cosθ=a·b/|a|；它可正可负（θ 为钝角时为负），是点积的几何解读之一。',
     keyPoints: [
       'Prjₐb=a·b/|a|=|b|cosθ',
-      '投影是数，可正可负',
+      '投影是一个数，可正可负，钝角时为负',
       'θ=90° 时投影为 0',
     ],
     visual: 'vector',
@@ -6855,7 +6855,7 @@ const CALCULUS_VECTOR_GEOMETRY: Record<string, LectureBody> = {
     keyPoints: [
       '代入点与法向量即得方程',
       '平面上任意向量都与 n 垂直',
-      '整理后就是一般式',
+      '点法式整理后就是一般式，两种写法等价',
     ],
     visual: 'plane',
     steps: ['找一点与法向量', '套点法式', '化简成一般式'],
@@ -6930,7 +6930,7 @@ const CALCULUS_VECTOR_GEOMETRY: Record<string, LectureBody> = {
     keyPoints: [
       'x=x₀+mt，y=y₀+nt，z=z₀+pt',
       't 是参数，每点对应唯一 t',
-      '与对称式随时互化',
+      '参数式与对称式可随时互化，t 就是那个比值',
     ],
     visual: 'plane',
     steps: ['从对称式设公共比值 t', '写三个分量方程', '按需消参或代值'],
@@ -6958,7 +6958,7 @@ const CALCULUS_VECTOR_GEOMETRY: Record<string, LectureBody> = {
     explanation:
       '与直线平行的非零向量 s=(m,n,p) 叫方向向量；同一直线的方向向量有无穷多个（相差常数倍），它决定直线的「走向」，对称式与参数式都由它生成。',
     keyPoints: [
-      's 平行于直线本身',
+      '方向向量 s 平行于直线本身，差常数倍等价',
       'ks（k≠0）是等价方向向量',
       '两直线方向向量叉积/点积判位置',
     ],
@@ -7208,7 +7208,7 @@ const CALCULUS_SERIES: Record<string, LectureBody> = {
     explanation:
       '级数收敛则通项必趋于零：uₙ=Sₙ−Sₙ₋₁→0；逆否命题是常用判断——uₙ 不趋于 0 立即断言发散，但 uₙ→0 不能保证收敛（调和级数就是反例）。',
     keyPoints: [
-      '收敛 ⇒ uₙ→0',
+      '收敛推出 uₙ→0，逆否用来快速判发散',
       'uₙ↛0 ⇒ 发散（第一步检查）',
       'uₙ→0 ⇏ 收敛：Σ1/n 发散',
     ],
@@ -7329,7 +7329,7 @@ const CALCULUS_SERIES: Record<string, LectureBody> = {
       '交错级数 Σ(−1)ⁿ⁻¹uₙ（uₙ>0）满足 uₙ 单调不增且趋于 0 时必收敛；三条要素里「趋零」是核心，「单调不增」保证部分和摆动幅度越来越小。',
     keyPoints: [
       '条件：uₙ 单调不增 且 uₙ→0',
-      '结论：交错级数收敛',
+      '莱布尼茨的结论是交错级数收敛，且误差可控',
       '单调性只要求「最终」成立',
     ],
     visual: 'series',
@@ -7433,9 +7433,9 @@ const CALCULUS_SERIES: Record<string, LectureBody> = {
     explanation:
       'x=±R 处幂级数退化为数项级数，收敛性要单独判别（常交错判别、p 级数比较）；同一级数两个端点可以一收一发，收敛域因此有开有闭。',
     keyPoints: [
-      '端点是数项级数问题',
+      '端点代入后是数项级数问题，逐个判敛',
       'x=R 与 x=−R 分别判',
-      '端点收敛时域写闭端',
+      '端点收敛时收敛域写成闭端，区间仍开',
     ],
     visual: 'series',
     steps: ['代 x=R 成数项级数', '选判别法下结论', '同法验 x=−R'],
@@ -7479,7 +7479,7 @@ const CALCULUS_SERIES: Record<string, LectureBody> = {
       '幂级数在收敛区间内可逐项积分：∫₀ˣS(t)dt=Σ aₙxⁿ⁺¹/(n+1)，收敛半径不变；积分只会让通项变小，端点反而可能由发散变收敛。',
     keyPoints: [
       '∫₀ˣS=Σ aₙxⁿ⁺¹/(n+1)',
-      '积分不改变收敛半径',
+      '逐项积分不改变收敛半径，端点可能变好',
       '端点可能变得更好（发散→收敛）',
     ],
     visual: 'series',
@@ -7524,7 +7524,7 @@ const CALCULUS_SERIES: Record<string, LectureBody> = {
       'sin x=Σₙ₌₀^∞ (−1)ⁿ x^{2n+1}/(2n+1)!，只有奇次幂、系数交错，对一切 x 收敛；它是「由 cos 逐项积分/求导」互相推的搭档。',
     keyPoints: [
       'sin x=Σ(−1)ⁿx^{2n+1}/(2n+1)!',
-      'R=∞，奇次幂',
+      'sin x 的 R=∞，展开只含奇次幂',
       '逐项求导得 cos x 的展开',
     ],
     visual: 'series',
@@ -7539,7 +7539,7 @@ const CALCULUS_SERIES: Record<string, LectureBody> = {
       'cos x=Σₙ₌₀^∞ (−1)ⁿ x^{2n}/(2n)!，只有偶次幂、系数交错，对一切 x 收敛；与 sin x 互为逐项求导关系，常用来算特殊极限与级数和。',
     keyPoints: [
       'cos x=Σ(−1)ⁿx^{2n}/(2n)!',
-      'R=∞，偶次幂',
+      'cos x 的 R=∞，展开只含偶次幂',
       '逐项求导得 −sin x',
     ],
     visual: 'series',
@@ -7804,7 +7804,7 @@ const CALCULUS_MULTIVARIABLE_M2: Record<string, LectureBody> = {
     explanation:
       'f 在点 P₀ 连续即：P₀ 处有定义、二重极限存在、且极限值等于 f(P₀)；三者缺一即为间断点，多元间断点可以连成曲线。',
     keyPoints: [
-      '三要素齐才连续',
+      '三要素齐备才连续，缺一即是间断点',
       '初等函数在定义区域内连续',
       '间断点判别按三要素逐条查',
     ],
@@ -7865,7 +7865,7 @@ const CALCULUS_MULTIVARIABLE_M2: Record<string, LectureBody> = {
       '混合偏导 f_xy 与 f_yx 先后次序不同；当二者在所论点连续时必相等，于是可以挑「好算的次序」——这条性质是简化高阶偏导计算的主要工具。',
     keyPoints: [
       '连续 ⇔ 可交换次序（充分条件）',
-      '挑更简单的一侧计算',
+      '混合偏导相等时，挑更简单的一侧计算',
       '初等函数通常直接交换',
     ],
     visual: 'mapping',
@@ -7894,7 +7894,7 @@ const CALCULUS_MULTIVARIABLE_M2: Record<string, LectureBody> = {
     explanation:
       '可微时全微分 dz=f_x dx+f_y dy：两个偏导就是线性主部的系数；求全微分的流程固定——先求两个偏导，再按公式装配。',
     keyPoints: [
-      'dz=f_x dx+f_y dy',
+      '全微分公式 dz=f_x dx+f_y dy，先求两个偏导',
       '自变量微分 dx=Δx、dy=Δy',
       '可微是公式可用的前提',
     ],
@@ -7954,7 +7954,7 @@ const CALCULUS_MULTIVARIABLE_M2: Record<string, LectureBody> = {
     explanation:
       '依赖关系图（树状图）把「因变量—中间变量—自变量」的复合层次画清楚：每条从根到叶的路径对应一个乘积项，全部路径相加——图是链式法则的操作说明书。',
     keyPoints: [
-      '层数 = 复合层数',
+      '树状图的层数等于复合层数，路径数等于项数',
       '路径数 = 乘积项数',
       '同名变量（f(u,x)、u 含 x）最容易漏路径',
     ],
@@ -8016,7 +8016,7 @@ const CALCULUS_MULTIVARIABLE_M2: Record<string, LectureBody> = {
     keyPoints: [
       '驻点：f_x(P₀)=0 且 f_y(P₀)=0',
       '偏导不存在的点也进候选',
-      '驻点 ⇏ 极值点',
+      '驻点不一定是极值点，需过二阶充分条件',
     ],
     visual: 'extremum',
     steps: ['解方程组 f_x=f_y=0', '补充不可导点', '逐点判别'],
@@ -8030,7 +8030,7 @@ const CALCULUS_MULTIVARIABLE_M2: Record<string, LectureBody> = {
       '可微函数在极值点处必有两个偏导为零（费马定理的多元版）；它给出的是「必要」条件——找极值先解驻点，再靠充分条件筛选。',
     keyPoints: [
       '极值点 ⇒ f_x=f_y=0（可微时）',
-      '逆命题不成立',
+      '极值点必是驻点，但逆命题不成立',
       '应用：解方程组列候选名单',
     ],
     visual: 'extremum',
@@ -8061,7 +8061,7 @@ const CALCULUS_MULTIVARIABLE_M2: Record<string, LectureBody> = {
     keyPoints: [
       '极大/极小按邻域定义',
       '局部冠军 ≠ 全局冠军',
-      '极值只发生在内点',
+      '极值只发生在定义域内点，边界谈最值',
     ],
     visual: 'extremum',
     steps: ['确认内点', '邻域内比较', '按充分条件定极大极小'],
@@ -8189,7 +8189,7 @@ const CALCULUS_LINE_SURFACE: Record<string, LectureBody> = {
     explanation:
       '第二类曲线积分的积分弧段必须指明起点与终点，称为有向曲线；同一条曲线反向走积分值变号——检验计算对不对时先看方向。',
     keyPoints: [
-      'L⁻ 表示反向曲线',
+      'L⁻ 表示沿反方向走的曲线，积分变号',
       '∫_{L⁻}P dx+Q dy=−∫_L P dx+Q dy',
       '起终点写反是最常见的错误',
     ],
@@ -8236,7 +8236,7 @@ const CALCULUS_LINE_SURFACE: Record<string, LectureBody> = {
     keyPoints: [
       '正向 = 区域在行进方向左侧',
       '外边界逆时针，洞边界顺时针',
-      '反向使用时右端变号',
+      '边界绕向反向时，格林公式右端变号',
     ],
     visual: 'integral',
     steps: ['画出区域与边界', '按「左手边」定绕向', '非正向先添负号'],
@@ -8325,7 +8325,7 @@ const CALCULUS_LINE_SURFACE: Record<string, LectureBody> = {
       '对面积的曲面积分 ∬_Σ f(x,y,z)dS 把曲面切成小面片按「f 乘面积」累加；与曲面朝哪一侧无关（dS 恒正），物理上是面密度求质量。',
     keyPoints: [
       '记号 ∬_Σ f dS',
-      '与侧无关：两面同值',
+      '第一类曲面积分与侧无关，两侧积分同值',
       'f≡1 时积分 = 曲面面积',
     ],
     visual: 'integral',
@@ -8355,7 +8355,7 @@ const CALCULUS_LINE_SURFACE: Record<string, LectureBody> = {
       '对坐标的曲面积分 ∬_Σ P dydz+Q dzdx+R dxdy 沿指定侧把「分量乘对应坐标微元」累加；它依赖曲面的侧，是流量（通量）问题的数学形式。',
     keyPoints: [
       '三项各配一对坐标微元',
-      '与侧有关：换侧变号',
+      '第二类曲面积分与侧有关，换侧积分变号',
       '物理原型：向量场穿面的流量',
     ],
     visual: 'integral',
@@ -8370,8 +8370,8 @@ const CALCULUS_LINE_SURFACE: Record<string, LectureBody> = {
       '第二类曲面积分要在「有向曲面」上进行：光滑曲面分上下（前后、左右）两侧，选定一侧就是指定了法向量的指向；换一侧，积分值变号。',
     keyPoints: [
       '双侧曲面指定「侧」才有积分',
-      '换侧 ⇒ 积分变号',
-      '闭曲面默认讨论外侧',
+      '曲面换一侧，第二类积分整体变号',
+      '闭曲面积分默认取外侧，内侧要添负号',
     ],
     visual: 'integral',
     steps: ['辨认曲面类型', '按题意选侧', '法向量与侧一致'],
@@ -8400,7 +8400,7 @@ const CALCULUS_LINE_SURFACE: Record<string, LectureBody> = {
       '计算 ∬_Σ R dxdy：把曲面写成 z=z(x,y) 后化为 ±∬_{D_xy}R(x,y,z(x,y))dxdy，上侧取正、下侧取负；dydz、dzdx 两项则分别投到 yz、zx 面。',
     keyPoints: [
       '∬R dxdy=±∬_{D_xy}R(x,y,z(x,y))dxdy',
-      '上侧 +，下侧 −',
+      '投影符号上侧取正、下侧取负',
       '竖直柱面在 xy 面投影为零，dxdy 项为零',
     ],
     visual: 'integral',
@@ -8415,7 +8415,7 @@ const CALCULUS_LINE_SURFACE: Record<string, LectureBody> = {
       '闭曲面（围成空间区域）的外侧指法向量指向区域外部；高斯公式正是在外侧成立——内侧用公式要添负号，开曲面要先补面凑闭。',
     keyPoints: [
       '外侧 = 法向量朝区域外',
-      '高斯公式默认外侧',
+      '高斯公式默认闭曲面外侧，开曲面先补面',
       '开曲面用「补面法」凑闭',
     ],
     visual: 'integral',
@@ -8532,7 +8532,7 @@ const CALCULUS_MULTIPLE_INT: Record<string, LectureBody> = {
     keyPoints: [
       '∬f dxdy=∫dx∫f dy（或反过来）',
       '内层限可以是外层变量的函数',
-      '外层限必须是常数',
+      '二次积分的外层限必须是常数，内层才含变量',
     ],
     visual: 'integral',
     steps: ['画区域', '选积分次序', '穿线法定内外限'],
@@ -8575,7 +8575,7 @@ const CALCULUS_MULTIPLE_INT: Record<string, LectureBody> = {
     explanation:
       '交换积分次序的流程：由给定二次积分反推区域 D（把限翻译成不等式）→ 画图 → 按另一次序重新定限；某些积分只有换序后才积得动。',
     keyPoints: [
-      '由限画图是关键一步',
+      '交换次序时由限画图是关键一步，画错全错',
       '换序后内外限全部重写',
       '含 e^{y²}、sin y/y 等必须换序',
     ],
@@ -8650,8 +8650,8 @@ const CALCULUS_MULTIPLE_INT: Record<string, LectureBody> = {
     explanation:
       '选坐标系的两个依据：区域是圆/环/扇 → 极坐标；被积函数含 x²+y²、y/x 等径向结构 → 极坐标；两者都不占优时用直角坐标，X 型/Y 型选次序看哪边好积。',
     keyPoints: [
-      '区域形状优先看',
-      '被积函数结构其次看',
+      '选坐标系时区域形状优先看，函数结构其次',
+      '区域看完再看被积函数结构，含 x²+y² 用极坐标',
       '含 e^{±x²}、sin x/x 时靠换序凑可积',
     ],
     visual: 'integral',
@@ -8667,7 +8667,7 @@ const CALCULUS_MULTIPLE_INT: Record<string, LectureBody> = {
     keyPoints: [
       'V=∬_D z_上(x,y)−z_下(x,y) dσ',
       'f≥0 时 ∬f dσ 本身就是体积',
-      '对称区域先化简再算',
+      '对称区域先用对称性化简，再动手积分',
     ],
     visual: 'integral',
     steps: ['找投影区域 D', '定上下曲面', '写「上减下」积分'],
@@ -8696,7 +8696,7 @@ const CALCULUS_MULTIPLE_INT: Record<string, LectureBody> = {
       '面密度为 ρ(x,y) 的平面薄片质量 m=∬_D ρ(x,y)dσ——密度乘面积微元再累加；均匀薄片（ρ 常数）时退化为密度乘面积。',
     keyPoints: [
       'm=∬_D ρ(x,y)dσ',
-      '均匀：m=ρ·面积',
+      '均匀薄片 m=ρ×面积，密度直接约掉',
       '同类套路：电荷量、热量都一样积',
     ],
     visual: 'integral',
@@ -8896,7 +8896,7 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
     keyPoints: [
       '上下边界是 x 的函数',
       '先对 y 积（内层），再对 x（外层）',
-      '外层限是常数',
+      'X 型区域外层限是常数，内层限含 x',
     ],
     visual: 'integral',
     steps: ['识别 X 型', '定 x 的常数范围', '穿线写 y 的限'],
@@ -8911,7 +8911,7 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
     keyPoints: [
       '左右边界是 y 的函数',
       '先对 x 积（内层），再对 y（外层）',
-      '与 X 型互为对偶',
+      'Y 型区域与 X 型互为对偶，水平穿线定限',
     ],
     visual: 'integral',
     steps: ['识别 Y 型', '定 y 的常数范围', '水平穿线写 x 限'],
@@ -8941,7 +8941,7 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
     keyPoints: [
       '内层限 y₁(x)、y₂(x) 允许含 x',
       '外层 x 的限是常数',
-      '穿线方向：竖直',
+      '先 y 后 x 的穿线方向是竖直，从下边界穿到上边界',
     ],
     visual: 'integral',
     steps: ['确认竖直穿线友好', '写内层 y 限', '先内后外积分'],
@@ -8955,7 +8955,7 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
       '内层积不出来（如 e^{y²}、sin y/y、1/ln y）时交换次序：先由限反推区域并画图，再按另一方向定限；换序后往往立即化为可积形式。',
     keyPoints: [
       '反推区域 → 画图 → 重定限，三步走',
-      '换序可能改变可积性',
+      '交换次序可能改变可积性，积不出就换序',
       '区域描述复杂时耐心分块',
     ],
     visual: 'integral',
@@ -8971,7 +8971,7 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
     keyPoints: [
       '找到表达式的分界线（如 y=x）',
       '分界线把 D 拆成几块',
-      '逐块积分再相加',
+      '分区域后逐块积分，再把结果相加',
     ],
     visual: 'integral',
     steps: ['找分界线', '拆区域', '逐块积分求和'],
@@ -8984,7 +8984,7 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
     explanation:
       '极坐标下 x=r cosθ：点到原点的距离 r 与 x 轴的夹角 θ 完全确定横坐标；θ 取 [0,2π)（或 [−π,π]），r≥0。',
     keyPoints: [
-      'x=r cosθ',
+      '横坐标替换为 x=r cosθ，与纵坐标成对使用',
       'θ 的象限要用 (x,y) 的符号定',
       '与 y=r sinθ 成对出现',
     ],
@@ -8999,7 +8999,7 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
     explanation:
       '极坐标下 y=r sinθ，与 x=r cosθ 搭配完成坐标替换；两式平方相加得 x²+y²=r²，相除得 tanθ=y/x——这两条是化简的钥匙。',
     keyPoints: [
-      'y=r sinθ',
+      '纵坐标替换为 y=r sinθ，平方和给出 r²',
       'x²+y²=r²（平方和）',
       'tanθ=y/x（象限修正）',
     ],
@@ -9014,7 +9014,7 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
     explanation:
       '极坐标面积微元 dA=r dr dθ：小扇环近似矩形「宽 dr × 弧长 r dθ」；这个 r 是坐标变换的雅可比，也是极坐标积分正确性的保障。',
     keyPoints: [
-      'dA=r dr dθ',
+      '面积微元换成 dA=r dr dθ，r 是雅可比',
       '几何：宽 dr、长 r dθ 的小矩形',
       '代换公式 ∬f dxdy=∬f·r dr dθ',
     ],
@@ -9075,8 +9075,8 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
       '区域既非 X 型也非 Y 型（或边界分段表达）时，用辅助线把它拆成若干简单区域，利用可加性分别积分；拆分线选「边界交点的连线」最自然。',
     keyPoints: [
       '拆成 X 型或 Y 型之和',
-      '可加性是理论依据',
-      '拆分线不影响最终值',
+      '区域拆分以可加性为理论依据，拆完逐块算',
+      '拆分线怎么画不影响最终值，选好画的方向',
     ],
     visual: 'integral',
     steps: ['找边界交点', '连线拆区域', '逐块定限积分'],
@@ -9089,8 +9089,8 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
     explanation:
       '坐标系选择的口诀：圆域、环域、扇形域，或被积函数含 x²+y²、y/x → 极坐标；矩形、直线边界 → 直角坐标；再按可积性决定次序。',
     keyPoints: [
-      '区域形状第一判据',
-      '函数结构第二判据',
+      '选坐标系时区域形状是第一判据，圆域用极坐标',
+      '被积函数结构是第二判据，含 x²+y² 就想 r²',
       '两种坐标都不占优时选限简单的',
     ],
     visual: 'integral',
@@ -9136,7 +9136,7 @@ const CALCULUS_DOUBLE_INT_M2: Record<string, LectureBody> = {
     keyPoints: [
       'x̄、ȳ 各是一次矩除以质量',
       '均匀时 ρ 约掉（形心）',
-      '对称性先定轴上坐标',
+      '质心问题先用对称性定轴上坐标，少算一个积分',
     ],
     visual: 'integral',
     steps: ['算质量', '算一次矩', '相除并利用对称'],
@@ -9234,7 +9234,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
     explanation:
       '行列式转置后值不变：D=Dᵀ；因此行列式「对行成立的性质对列全部自动成立」，记住了这一条，行、列两套话术只需记一套。',
     keyPoints: [
-      'Dᵀ=D',
+      '对称矩阵的定义式 Dᵀ=D，元素关于对角线镜像',
       '行的性质 ⇔ 列的性质',
       '转置不改变行列式的值',
     ],
@@ -9249,8 +9249,8 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
     explanation:
       '行列式交换任意两行（列）后变号：rᵢ↔rⱼ 乘 (−1)；连换两次不变号，这也解释了「两行相同则行列式为 0」。',
     keyPoints: [
-      '一次交换乘 −1',
-      '偶数次交换不变号',
+      '行列式一次行交换乘 −1，符号要记账',
+      '偶数次交换不变号，符号只看交换次数奇偶',
       '两行相同：交换后 D=−D ⇒ D=0',
     ],
     visual: 'matrix',
@@ -9310,7 +9310,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
       '行列式关于某一行（列）是线性的：该行各元素可以拆成两组分别计算再相加；注意「一次只能拆一行」，两行同时拆是错的。',
     keyPoints: [
       '单行内拆分：|a+b 行| = |a 行|+|b 行|',
-      '其余行保持不变',
+      '拆行时其余行保持不变，只拆选定的一行',
       '多行同时拆会指数爆炸且无意义',
     ],
     visual: 'matrix',
@@ -9385,7 +9385,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
       '用倍加把行列式化成上（下）三角形后，值 = 主对角线元素乘积；这是计算机与手算通用的主流方法，全程只允许「倍加」就不必管符号。',
     keyPoints: [
       '三角形行列式 = 对角线乘积',
-      '只用倍加，值不变',
+      '化三角形全程只用倍加，行列式值不变',
       '需要交换行时记得变号',
     ],
     visual: 'matrix',
@@ -9400,7 +9400,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
       '「展开」作为计算方法指：先把某行（列）化出尽量多的零，再按该行（列）展开定理降阶，反复直到二阶——与化三角形殊途同归。',
     keyPoints: [
       '展开 = 降阶的反复使用',
-      '每次选零最多的行列',
+      '展开时每次选零最多的行列，项数最少',
       '高阶行列式的通用手算路线',
     ],
     visual: 'matrix',
@@ -9444,7 +9444,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
     explanation:
       '利用单行线性性质把某个「含和式」的行拆成两个行列式，其中至少一个是简单（如对角、零多）行列式——拆分常与倍加配合使用。',
     keyPoints: [
-      '一次只拆一行（列）',
+      '拆分性质一次只拆一行（列），其余行照抄',
       '拆出一个「好算」的行列式',
       '常用于含 λ、x 的文字行列式',
     ],
@@ -9474,8 +9474,8 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
     explanation:
       '行列式的转置性质：|Aᵀ|=|A|，转置不改值；据此行列式的每条行性质自动获得列版本——「行列平权」是行列式性质体系的总纲。',
     keyPoints: [
-      '|Aᵀ|=|A|',
-      '行性质与列性质等价',
+      '转置不变号 |Aᵀ|=|A|，行性质即列性质',
+      '由转置不变，行性质与列性质完全等价',
       '与矩阵转置（得新矩阵）含义不同',
     ],
     visual: 'matrix',
@@ -9490,7 +9490,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
       '行列式任意两行（列）互换后变号——性质的总开关：由它可以解释「相同行为 0」，也把「化三角形」里需要的交换纳入符号管理。',
     keyPoints: [
       'rᵢ↔rⱼ ⇒ D′=−D',
-      '偶数次交换符号复原',
+      '偶数次交换后符号复原，只用看奇偶',
       '配合倍加即可完成全部消元',
     ],
     visual: 'matrix',
@@ -9519,7 +9519,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
     explanation:
       '两行（列）对应元素成比例 ⇒ 行列式为 0：把比例因子提出后两行相同，交换变号给出 D=−D；判断题专用结论。',
     keyPoints: [
-      '成比例 ⇒ D=0',
+      '两行成比例推出 D=0，提公因子后两行相同',
       '推导：提公因子 + 相同行为 0',
       '部分成比例（只有一列）不能下结论',
     ],
@@ -9550,7 +9550,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
       '行列式对某一行的每个元素是线性的：这一行可拆、可提公因子；「行内拆 + 行间倍加」组合起来能处理绝大多数文字行列式。',
     keyPoints: [
       '单行拆成两个行列式之和',
-      '单行可提公因子',
+      '行列式单行可提公因子，注意不是 kⁿ',
       '对「行」线性、对整个行列式不是线性',
     ],
     visual: 'matrix',
@@ -9580,7 +9580,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
       'Aᵢⱼ=(−1)^{i+j}Mᵢⱼ：符号由 (i+j) 奇偶决定，棋盘状排布；展开定理与伴随矩阵都以它为基本件。',
     keyPoints: [
       'Aᵢⱼ=(−1)^{i+j}Mᵢⱼ',
-      'i+j 偶正奇负',
+      '代数余子式符号规则：i+j 偶正奇负',
       'ΣaᵢⱼAᵢⱼ=D（同行/列展开）',
     ],
     visual: 'matrix',
@@ -9610,7 +9610,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
       '特殊行列式按形选法：三角形/对角形直接乘对角线；两行成比例直接判 0；爪形（三斜边+对角）用倍加化三角；范德蒙德套连乘公式。',
     keyPoints: [
       '对角/三角：对角线乘积',
-      '爪形：倍加消斜边',
+      '爪形行列式：用倍加消去斜边化三角',
       '幂排列：范德蒙德连乘',
     ],
     visual: 'matrix',
@@ -9624,7 +9624,7 @@ const LINEAR_DETERMINANT: Record<string, LectureBody> = {
     explanation:
       '化三角形法：用倍加（必要时交换并记号）把行列式化成上三角，值 = 对角线乘积；步骤机械、适合任何阶数，是行列式计算的兜底方法。',
     keyPoints: [
-      '从左到右逐列消零',
+      '化三角形从左到右逐列消零，步骤机械可靠',
       '只用倍加则不需管符号',
       '交换次数单独计数乘 (−1)ᵏ',
     ],
@@ -9696,7 +9696,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     keyPoints: [
       'E 的对角线全 1、其余全 0（方阵）',
       'AE=EA=A（左右乘都一样）',
-      '|E|=1',
+      '单位矩阵行列式 |E|=1，乘法单位元的值',
     ],
     visual: 'matrix',
     steps: ['确认阶数匹配', '识别 E 的作用', '利用消元简化表达式'],
@@ -9905,7 +9905,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
       '方阵乘积的行列式等于行列式的乘积：|AB|=|A||B|（要求 A、B 同阶方阵）；它把「乘积的行列式」化成「行列式的乘积」，是行列式计算与秩讨论的桥梁。',
     keyPoints: [
       '|AB|=|A||B|（同阶方阵）',
-      '|Aᵏ|=|A|ᵏ',
+      '幂的行列式 |Aᵏ|=|A|ᵏ，指数搬到行列式外',
       '|A|=0 ⇔ A 不可逆',
     ],
     visual: 'matrix',
@@ -9919,7 +9919,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     explanation:
       '方阵转置的行列式不变：|Aᵀ|=|A|；配合 (AB)ᵀ=BᵀAᵀ 可以在行列式层面自由「反向」乘积：(AB)ᵀ 的行列式仍是 |A||B|。',
     keyPoints: [
-      '|Aᵀ|=|A|',
+      '转置不变号 |Aᵀ|=|A|，行性质即列性质',
       '|(AB)ᵀ|=|Bᵀ||Aᵀ|=|A||B|',
       '转置是行列式性质的总开关',
     ],
@@ -9934,7 +9934,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     explanation:
       '方阵幂的行列式等于行列式的幂：|Aᵏ|=|A|ᵏ；若 A 可逆，|A⁻¹|=1/|A|——「取值」与「乘方」两种运算在行列式层面可以交换。',
     keyPoints: [
-      '|Aᵏ|=|A|ᵏ',
+      '幂的行列式 |Aᵏ|=|A|ᵏ，指数搬到行列式外',
       '|A⁻¹|=|A|⁻¹（可逆时）',
       '伴随矩阵：|A*|=|A|ⁿ⁻¹',
     ],
@@ -10025,8 +10025,8 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
       '三类初等行变换：①交换两行；②某行乘非零常数 k；③某行的 k 倍加到另一行；它们可逆、不改变矩阵的秩，是解方程组与求逆的全部操作。',
     keyPoints: [
       '①换行 ②非零倍乘 ③倍加',
-      '三种变换都可逆',
-      '初等行变换不改变秩',
+      '三类初等变换都可逆，逆变换仍是初等变换',
+      '初等行变换不改变矩阵的秩，求秩靠它',
     ],
     visual: 'linear-system',
     steps: ['认出变换类型', '记录交换（影响符号）', '按目标推进'],
@@ -10100,7 +10100,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
       '三角矩阵指上三角或下三角矩阵：对角线一侧全为零；同侧三角矩阵相乘仍同侧，且乘积的对角线元素是两者对角元素对应相乘。',
     keyPoints: [
       '上三角：对角线左下方全 0',
-      '同侧三角相乘保结构',
+      '同侧三角矩阵相乘保结构，对角元对应相乘',
       '积的对角元 = 对应对角元之积',
     ],
     visual: 'matrix',
@@ -10131,7 +10131,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     keyPoints: [
       '(Aᵀ)ᵢⱼ=aⱼᵢ',
       'm×n 转置成 n×m',
-      '(Aᵀ)ᵀ=A',
+      '转置是自逆运算：(Aᵀ)ᵀ=A',
     ],
     visual: 'matrix',
     steps: ['互换行列', '核对尺寸', '按性质继续运算'],
@@ -10144,9 +10144,9 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     explanation:
       '转置的运算规律：(A±B)ᵀ=Aᵀ±Bᵀ、(kA)ᵀ=kAᵀ、(AB)ᵀ=BᵀAᵀ（反序）、(Aᵀ)ᵀ=A；「反序」是四条中唯一容易错的一条。',
     keyPoints: [
-      '和差数乘直接过',
+      '转置的线性性：和差与数乘直接穿过',
       '(AB)ᵀ=BᵀAᵀ（反序）',
-      '多次转置还原',
+      '转置两次就还原，多次转置同理',
     ],
     visual: 'matrix',
     steps: ['拆运算', '乘积反序', '核对每条'],
@@ -10206,7 +10206,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     keyPoints: [
       '(AB)⁻¹=B⁻¹A⁻¹（反序）',
       '(Aᵀ)⁻¹=(A⁻¹)ᵀ',
-      '(A⁻¹)⁻¹=A',
+      '求逆是自逆运算：(A⁻¹)⁻¹=A',
     ],
     visual: 'matrix',
     steps: ['识别结构', '按反序化简', '抵消得结果'],
@@ -10220,7 +10220,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
       'A 可逆的充要条件（数二口径）：|A|≠0、r(A)=n、行阶梯非零行数=n、Ax=0 仅零解、A 的行/列向量组线性无关——多个身份同一件事。',
     keyPoints: [
       '|A|≠0 ⇔ r(A)=n',
-      '线性无关 ⇔ 满秩',
+      '列向量组线性无关等价于满秩，两种说法互通',
       '不可逆 ⇔ 退化为低秩',
     ],
     visual: 'linear-system',
@@ -10235,7 +10235,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
       '初等变换三类：交换两行（列）、某行（列）乘非零 k、某行（列）的 k 倍加到另一行（列）；行变换用于解方程组与求逆，列变换多用于求标准形。',
     keyPoints: [
       '三种变换对行、列都定义',
-      '行变换保方程组同解',
+      '初等行变换保证方程组同解，解集不变',
       '初等变换不改变矩阵的秩',
     ],
     visual: 'linear-system',
@@ -10339,9 +10339,9 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     explanation:
       '行阶梯形：若某行是零行则其下全是零行；非零行的首非零元（主元）列号随行号严格增大；它是消元的「中间站」，非零行数即秩。',
     keyPoints: [
-      '零行沉底',
+      '行阶梯形要求零行沉底，主元逐行右移',
       '主元列号自上而下严格增大',
-      '非零行数 = 秩',
+      '阶梯形的非零行数就是秩，数一眼出',
     ],
     visual: 'linear-system',
     steps: ['从第一列消起', '逐列推进', '核对阶梯结构'],
@@ -10354,7 +10354,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     explanation:
       '行最简形：在行阶梯形基础上再把主元化成 1，并把主元所在列的其余元素全部消成 0；它唯一（阶梯形不唯一），是读出解与极大无关组的形态。',
     keyPoints: [
-      '主元全为 1',
+      '行最简形要求主元全为 1，且列上其余清零',
       '主元列其余元素全为 0',
       '行最简形唯一（阶梯形不唯一）',
     ],
@@ -10429,8 +10429,8 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     explanation:
       '分块加减：把同型矩阵按相同方式切分，对应块相加减；小矩阵（块）之间的加法与普通矩阵一样按元素进行——「块」就是抽象化了的元素。',
     keyPoints: [
-      '切分方式必须一致',
-      '对应块相加减',
+      '分块加减的切分方式必须一致，对应块运算',
+      '分块加减就是对应块相加减，块当元素',
       '块可以是任意尺寸（对齐即可）',
     ],
     visual: 'matrix',
@@ -10474,7 +10474,7 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     explanation:
       '分块对角矩阵：非对角块全为零、对角块为小方阵；它的幂、行列式、逆都按对角块「各自处理」——大问题拆成小问题。',
     keyPoints: [
-      '非对角块全 O',
+      '分块对角矩阵要求非对角块全 O，各块独立运算',
       '|diag(A,B)|=|A|·|B|',
       'diag(A,B)ᵏ=diag(Aᵏ,Bᵏ)；逆 = 各块求逆',
     ],
@@ -10519,8 +10519,8 @@ const LINEAR_MATRIX: Record<string, LectureBody> = {
     explanation:
       '初等变换不改变矩阵的秩，因此等价矩阵秩相等；反过来同型的等秩矩阵必然等价——「秩不变」是等价关系的完整刻画。',
     keyPoints: [
-      '初等变换保秩',
-      '等价 ⇔ 同型同秩',
+      '初等变换保持秩不变，等价矩阵同秩',
+      '矩阵等价的充要条件：同型且秩相等',
       '求秩的过程就是找等价标准形',
     ],
     visual: 'matrix',
@@ -10680,7 +10680,7 @@ const LINEAR_VECTOR: Record<string, LectureBody> = {
       '一般情形的判定标准：向量组线性无关 ⇔ r(α₁,…,αₛ)=s（秩等于个数）；秩小于个数必相关——秩是相关性判定的「通用货币」。',
     keyPoints: [
       'r=s ⇔ 无关；r<s ⇔ 相关',
-      '用行变换求秩最直接',
+      '向量组求秩用行变换最直接，拼矩阵化阶梯',
       '部分组秩 ≤ 整组秩',
     ],
     visual: 'matrix',
@@ -10785,7 +10785,7 @@ const LINEAR_VECTOR: Record<string, LectureBody> = {
       '向量组的秩 = 极大线性无关组所含向量的个数，记 r(α₁,…,αₛ)；它是向量组「有效维数」的度量，也是判定两向量组能否互相表示的核心量。',
     keyPoints: [
       '秩 = 极大无关组的向量个数',
-      '零向量组的秩为 0',
+      '全由零向量组成的组秩为 0，没有独立方向',
       'r 组 ≤ 组内向量个数 s',
     ],
     visual: 'vector',
@@ -10829,7 +10829,7 @@ const LINEAR_VECTOR: Record<string, LectureBody> = {
     explanation:
       '等价向量组必有相等的秩；反之「秩相等」不足以等价（还要能互相表示）——秩相等是必要条件，合并组秩不变才是充要刻画。',
     keyPoints: [
-      '等价 ⇒ 秩相等',
+      '等价向量组秩必相等，反之还要看表示',
       '秩相等 ⇏ 等价（还要比表示能力）',
       '充要：r(Ⅰ)=r(Ⅱ)=r(Ⅰ,Ⅱ)',
     ],
@@ -10904,7 +10904,7 @@ const LINEAR_VECTOR: Record<string, LectureBody> = {
     explanation:
       '单位向量是长度为 1 的向量：非零向量 α 除以自身长度即得 α/|α|，方向不变；标准正交组就是「彼此正交的单位向量组」。',
     keyPoints: [
-      '|e|=1',
+      '单位向量的模 |e|=1，方向不变长度锁死',
       'e=α/|α|（α≠0）',
       '单位化保持方向、锁定长度',
     ],
@@ -10935,7 +10935,7 @@ const LINEAR_VECTOR: Record<string, LectureBody> = {
       '标准正交向量组：两两正交且各自为单位向量；由 n 个 n 维标准正交向量可拼出正交矩阵，把一般向量组变成标准正交组靠施密特正交化 + 单位化。',
     keyPoints: [
       '定义：(αᵢ,αⱼ)=δᵢⱼ',
-      '标准正交组线性无关',
+      '标准正交组必定线性无关，正交保证独立',
       '构造：施密特正交化再单位化',
     ],
     visual: 'vector',
@@ -10949,7 +10949,7 @@ const LINEAR_VECTOR: Record<string, LectureBody> = {
     explanation:
       '施密特正交化的核心动作：从新向量里减去它在已有正交组上的投影，剩下的部分自然与已有向量正交——β₂=α₂−[(α₂,β₁)/(β₁,β₁)]β₁。',
     keyPoints: [
-      'β₁=α₁ 起步',
+      '施密特正交化从 β₁=α₁ 起步，之后逐个减投影',
       'βₖ=αₖ−Σ(αₖ,βᵢ)/(βᵢ,βᵢ)·βᵢ',
       '正交化不改变张成的空间',
     ],
@@ -10966,7 +10966,7 @@ const LINEAR_VECTOR: Record<string, LectureBody> = {
     keyPoints: [
       'γᵢ=βᵢ/|βᵢ|',
       '先施密特正交化，后单位化',
-      '单位化不影响正交性',
+      '单位化不影响正交性，只把长度调到 1',
     ],
     visual: 'vector',
     steps: ['完成正交化', '逐个除模', '抽查内积为 0'],
@@ -10996,7 +10996,7 @@ const LINEAR_VECTOR: Record<string, LectureBody> = {
     keyPoints: [
       '垂直分量 = α₂−投影',
       '它与 β₁ 内积必为 0',
-      '逐个向量重复该操作',
+      '对每个新向量重复减投影操作，直到全部正交',
     ],
     visual: 'vector',
     steps: ['算投影', '相减', '内积验证正交'],
@@ -11071,7 +11071,7 @@ const LINEAR_VECTOR: Record<string, LectureBody> = {
     keyPoints: [
       '向量组的秩 = 拼成矩阵的秩',
       '行秩 = 列秩 = 矩阵秩',
-      '求秩统一走行变换',
+      '行组列组求秩统一走行变换，结果一样',
     ],
     visual: 'matrix',
     steps: ['按列拼矩阵', '化行阶梯', '读秩'],
@@ -11169,7 +11169,7 @@ const LINEAR_SYSTEM: Record<string, LectureBody> = {
     explanation:
       '齐次线性方程组 Ax=0：常数项全为零；它必有零解 x=0，所以问题从来不是「有没有解」，而是「有没有非零解」——由秩完全决定。',
     keyPoints: [
-      'b=0，必有零解',
+      '齐次方程 b=0，必有零解，问的是非零解',
       '有非零解 ⇔ r(A)<n',
       '解集是 n−r 维线性空间',
     ],
@@ -11275,7 +11275,7 @@ const LINEAR_SYSTEM: Record<string, LectureBody> = {
       'Ax=b 有唯一解 ⇔ r(A)=r(A,b)=n：未知数全部被约束住，没有自由未知量；方阵情形对应 |A|≠0（可用克拉默或求逆）。',
     keyPoints: [
       '唯一解 ⇔ r(A)=r(A,b)=n',
-      '无自由未知量',
+      '唯一解意味着无自由未知量，秩等于 n',
       '方阵时 ⇔ |A|≠0，x=A⁻¹b',
     ],
     visual: 'linear-system',
@@ -11319,7 +11319,7 @@ const LINEAR_SYSTEM: Record<string, LectureBody> = {
     explanation:
       'Ax=0 的任意两个解之和、解的数乘仍是解——齐次解集对线性运算封闭，构成（解空间的）线性空间，维数 n−r；这是「线性组合依然是解」的依据。',
     keyPoints: [
-      '解之和、数乘仍是解',
+      '齐次解之和、数乘仍是解，解集是子空间',
       '解集 = n−r 维线性空间',
       '基础解系就是这个空间的基',
     ],
@@ -11350,7 +11350,7 @@ const LINEAR_SYSTEM: Record<string, LectureBody> = {
       '非齐次线性方程组的通解 = 任意一个特解 η* + 对应齐次方程组的通解 k₁ξ₁+…+k_{n−r}ξ_{n−r}：特解决定「位置」，齐次部分提供全部「自由度」。',
     keyPoints: [
       'x=η*+k₁ξ₁+…+k_{n−r}ξ_{n−r}',
-      '特解任取一个即可',
+      '非齐次特解任取一个即可，常取自由变量为 0',
       '解集是 n−r 维「仿射子空间」（不过原点）',
     ],
     visual: 'linear-system',
@@ -11364,9 +11364,9 @@ const LINEAR_SYSTEM: Record<string, LectureBody> = {
     explanation:
       '高斯消元：对增广矩阵做初等行变换化行阶梯（判断解的情况），再继续化行最简形（直接读解）；全程只用三类行变换，方程组保持同解。',
     keyPoints: [
-      '行变换：同解变形',
+      '高斯消元用行变换做同解变形，解集不变',
       '阶梯形定解的状态（无解/唯一/无穷）',
-      '最简形直接读出通解',
+      '化到行最简形可直接读出通解，主变量用参数表示',
     ],
     visual: 'linear-system',
     steps: ['拼增广矩阵', '化行阶梯', '化最简形读解'],
@@ -11395,7 +11395,7 @@ const LINEAR_SYSTEM: Record<string, LectureBody> = {
       '设自由未知量为参数（k₁,…,k_{n−r}），把主变量用参数表出，整理成 x=k₁ξ₁+…+η* 的形式——通解的最终书写格式，参数个数必须等于 n−r。',
     keyPoints: [
       '自由变量改名参数 k',
-      '主变量用 k 表示',
+      '回代时主变量用 k 表示，整理成向量形式',
       '写成「特解 + 组合」标准形',
     ],
     visual: 'linear-system',
@@ -11424,7 +11424,7 @@ const LINEAR_SYSTEM: Record<string, LectureBody> = {
     explanation:
       '克拉默公式 xᵢ=Dᵢ/D：D 为系数行列式，Dᵢ 为把第 i 列换成常数列所得行列式；适用于唯一解情形（|A|≠0 的方阵方程组）。',
     keyPoints: [
-      'xᵢ=Dᵢ/D',
+      '克拉默公式 xᵢ=Dᵢ/D，第 i 列换成常数列',
       'Dᵢ 换的是第 i 列',
       '条件 |A|≠0 必须先验',
     ],
@@ -11454,7 +11454,7 @@ const LINEAR_SYSTEM: Record<string, LectureBody> = {
     explanation:
       'Ax=0 的全体解构成 Rⁿ 的子空间（解空间/零空间），维数为 n−r(A)；「空间」意味着对加法与数乘封闭——这正是齐次解可以任意线性组合的原因。',
     keyPoints: [
-      '解集对线性运算封闭',
+      '齐次解集对线性运算封闭，所以构成子空间',
       'dim(解空间)=n−r(A)',
       '基础解系是解空间的基',
     ],
@@ -11471,7 +11471,7 @@ const LINEAR_SYSTEM: Record<string, LectureBody> = {
     keyPoints: [
       '特解：Ax=b 的任一解',
       '快捷取法：自由变量全取 0',
-      '特解不带参数 k',
+      '特解里不带参数 k，带参数的都属于齐次部分',
     ],
     visual: 'linear-system',
     steps: ['化最简形', '令自由变量为 0', '读出特解'],
@@ -11500,7 +11500,7 @@ const LINEAR_SYSTEM: Record<string, LectureBody> = {
       '参数化解法：自由未知量设为参数，主变量用参数表示，整理成向量线性组合的形式；最终答案写成「特解 + 基础解系的组合」最规范。',
     keyPoints: [
       '自由变量 → 参数 k',
-      '主变量用 k 表示',
+      '回代时主变量用 k 表示，整理成向量形式',
       '整理成 x=η*+Σkᵢξᵢ',
     ],
     visual: 'linear-system',
@@ -11674,7 +11674,7 @@ const LINEAR_EIGEN: Record<string, LectureBody> = {
     explanation:
       '方阵的行列式等于全部特征值的乘积：|A|=λ₁λ₂…λₙ（计重数）；立即可得「|A|≠0 ⇔ 0 不是特征值 ⇔ A 可逆」。',
     keyPoints: [
-      '|A|=∏λᵢ',
+      '行列式等于特征值连乘 |A|=∏λᵢ，判零即判可逆',
       '0 是特征值 ⇔ |A|=0 ⇔ 不可逆',
       '与迹公式联用快速定特征值',
     ],
@@ -11690,7 +11690,7 @@ const LINEAR_EIGEN: Record<string, LectureBody> = {
       '若 Aα=λα，则 Aᵏα=λᵏα：A 的幂的特征值就是特征值的幂，特征向量不变；「f(A) 的特征值 = f(λ)」思想的特例。',
     keyPoints: [
       'Aᵏ 的特征值 = λᵏ（同一 α）',
-      '特征向量不变',
+      'Aᵏ、A⁻¹ 的特征向量不变，只有值在变',
       '常用于求 Aⁿ 或判 Aᵏ=O 型题',
     ],
     visual: 'matrix',
@@ -11749,7 +11749,7 @@ const LINEAR_EIGEN: Record<string, LectureBody> = {
     explanation:
       '相似关系是等价关系：自反（A∽A，取 P=E）、对称（B=P⁻¹AP ⇒ A=PBP⁻¹）、传递（A∽B、B∽C ⇒ A∽C）；据此可把同类的矩阵归到最简代表（对角阵）。',
     keyPoints: [
-      '自反、对称、传递',
+      '相似关系满足自反、对称、传递三条',
       '同类中最简代表是对角矩阵',
       'P 因题而异，不唯一',
     ],
@@ -11900,7 +11900,7 @@ const LINEAR_EIGEN: Record<string, LectureBody> = {
       '特征方程 |λE−A|=0：特征多项式是 λ 的 n 次首一多项式，n 个根（复数域计重数）就是全部特征值；展开时善用行（列）和相等的结构提取因式。',
     keyPoints: [
       '|λE−A|=0 给出全部特征值',
-      '首一 n 次多项式',
+      '特征多项式是首一 n 次多项式，常数项含 |A|',
       'Σλᵢ=tr(A)、∏λᵢ=|A| 验算',
     ],
     visual: 'matrix',
@@ -11931,7 +11931,7 @@ const LINEAR_EIGEN: Record<string, LectureBody> = {
     keyPoints: [
       '(A−λE)x=0 的非零解 = 特征向量',
       '基础解系含 n−r(A−λE) 个向量',
-      '几何重数由此读出',
+      '几何重数由基础解系个数读出，即 n−r(A−λE)',
     ],
     visual: 'linear-system',
     steps: ['代 λ', '行变换解齐次组', '取基础解系'],
@@ -11959,7 +11959,7 @@ const LINEAR_EIGEN: Record<string, LectureBody> = {
     explanation:
       '迹 tr(A)=Σaᵢᵢ=Σλᵢ（全部特征值之和，计重数）；迹还满足 tr(A+B)=tr(A)+tr(B)、tr(kA)=k·tr(A)，是「读出特征值总和」最快的窗口。',
     keyPoints: [
-      'tr(A)=Σλᵢ',
+      '迹等于特征值之和 tr(A)=Σλᵢ，最快的验算',
       'tr(AB)=tr(BA)（循环性质）',
       '常与 |A|=∏λᵢ 联用反求参数',
     ],
@@ -11974,7 +11974,7 @@ const LINEAR_EIGEN: Record<string, LectureBody> = {
     explanation:
       '|A|=λ₁λ₂…λₙ（全部特征值连乘，计重数）：由此 0 是否为特征值直接决定可逆性；也常与迹联立，用两条方程「反求」两个未知特征值。',
     keyPoints: [
-      '|A|=∏λᵢ',
+      '行列式等于特征值连乘 |A|=∏λᵢ，判零即判可逆',
       '0 特征值 ⇔ 不可逆',
       '与 tr 联用解参数题',
     ],
@@ -12006,7 +12006,7 @@ const LINEAR_EIGEN: Record<string, LectureBody> = {
     keyPoints: [
       'A⁻¹ 的谱 = {1/λᵢ}（需 |A|≠0）',
       'A* 的谱 = {|A|/λᵢ}',
-      '特征向量全部不变',
+      'A⁻¹、A* 的特征向量全部不变，只有特征值变',
     ],
     visual: 'matrix',
     steps: ['验证可逆', '取倒数', '沿用特征向量'],
@@ -12065,8 +12065,8 @@ const LINEAR_EIGEN: Record<string, LectureBody> = {
       '实对称矩阵的特征值全为实数（复根不会出现）：这是实对称矩阵三大性质之一（另两个：不同特征值特征向量正交、必可正交对角化），也保证全程可在实数域操作。',
     keyPoints: [
       '实对称 ⇒ λᵢ∈R',
-      '特征向量可取实向量',
-      '为正交对角化铺路',
+      '实对称矩阵的特征向量可取实向量，无需复数',
+      '全实特征值为正交对角化铺路，全程实数运算',
     ],
     visual: 'matrix',
     steps: ['验证对称', '断言全实', '继续实数运算'],
@@ -12211,7 +12211,7 @@ const LINEAR_QUADRATIC: Record<string, LectureBody> = {
       'A 与 B 合同：存在可逆 C 使 B=CᵀAC（要求 A、B 对称）；合同是等价关系，合同矩阵共享正负惯性指数——同一「符号结构」的对称矩阵归为一类。',
     keyPoints: [
       '合同：B=CᵀAC（对称矩阵间）',
-      '自反、对称、传递',
+      '相似关系满足自反、对称、传递三条',
       '合同 ⇔ 正负惯性指数对应相等',
     ],
     visual: 'matrix',
@@ -12225,8 +12225,8 @@ const LINEAR_QUADRATIC: Record<string, LectureBody> = {
     explanation:
       '二次型的秩定义为其对称矩阵的秩：合同变换不改变秩，所以无论怎么化简，秩是不变量——它等于标准形中「非零平方项」的个数。',
     keyPoints: [
-      'r(f)=r(A)',
-      '合同变换保秩',
+      '二次型的秩 r(f)=r(A)，即标准形非零项个数',
+      '合同变换保持秩不变，规范形项数稳定',
       '标准形中非零项个数 = r(f)',
     ],
     visual: 'matrix',
@@ -12286,7 +12286,7 @@ const LINEAR_QUADRATIC: Record<string, LectureBody> = {
       '负惯性指数 q：标准形中负系数平方项的个数；p−q 是符号差、p+q 是秩，三个数（p、q、n−p−q）共同给出规范形的全部信息。',
     keyPoints: [
       'q = 负平方项个数 = 负特征值个数',
-      '秩 r=p+q',
+      '二次型的秩 r=p+q，正负项个数之和',
       '符号差 s=p−q（合同不变量）',
     ],
     visual: 'matrix',
@@ -12301,7 +12301,7 @@ const LINEAR_QUADRATIC: Record<string, LectureBody> = {
       '规范形中系数为 0 的项数 = n−p−q，等于 n 减去矩阵的秩；它衡量二次型「退化」的程度——零项越多，二次型越「瘪」。',
     keyPoints: [
       '零项数 = n−r(A)',
-      'r(A)=p+q',
+      '由 r(A)=p+q 反推：零项数 =n−p−q',
       '零项数>0 ⇔ A 不可逆',
     ],
     visual: 'matrix',
@@ -12317,7 +12317,7 @@ const LINEAR_QUADRATIC: Record<string, LectureBody> = {
     keyPoints: [
       'p、q 是合同不变量',
       '不同方法化出的标准形 p、q 相同',
-      '规范形因此唯一',
+      '惯性指数不变，所以规范形因此唯一',
     ],
     visual: 'matrix',
     steps: ['任选方法化简', '读 p、q', '确认与特征值法一致'],
@@ -12330,7 +12330,7 @@ const LINEAR_QUADRATIC: Record<string, LectureBody> = {
     explanation:
       '配方法化标准形：每次围绕一个「有平方项」的变量把含它的项配成完全平方，换元后交叉项减少一个；无平方项时先造平方项（如 x₁=y₁+y₂、x₂=y₁−y₂）。',
     keyPoints: [
-      '逐变量配方消交叉项',
+      '配方法逐变量配方消交叉项，每次少一项',
       '无平方项先作差和换元造出平方项',
       '变换写成 x=Cy 便于验可逆',
     ],
@@ -12511,8 +12511,8 @@ const LINEAR_QUADRATIC: Record<string, LectureBody> = {
       '二次型的秩规定为对称矩阵 A 的秩：合同变换（可逆线性换元）不改秩，所以它等于标准形中非零平方项的个数——这一传递让秩成为最稳的不变量。',
     keyPoints: [
       'r(f)=r(A)=p+q',
-      '合同变换保秩',
-      '非零平方项个数即秩',
+      '合同变换保持秩不变，规范形项数稳定',
+      '标准形中非零平方项个数就是秩，可互验',
     ],
     visual: 'matrix',
     steps: ['写 A', '求 r(A)', '报为二次型的秩'],
@@ -12526,7 +12526,7 @@ const LINEAR_QUADRATIC: Record<string, LectureBody> = {
       '求二次型的秩两条路：对 A 做初等变换（合同变换对也行）化阶梯数非零行；或直接找 A 的最高阶非零子式——与矩阵秩的求法完全一致。',
     keyPoints: [
       'A 化行阶梯数非零行',
-      '或找最高阶非零子式',
+      '求秩也可以找最高阶非零子式，与阶梯法互验',
       '结果 = 标准形非零项数（互验）',
     ],
     visual: 'matrix',
@@ -12572,7 +12572,7 @@ const LINEAR_QUADRATIC: Record<string, LectureBody> = {
     keyPoints: [
       'p、q 是合同不变量',
       '不同换元结果系数不同、个数相同',
-      '规范形唯一的原因',
+      '三个不变量稳定，是规范形唯一的原因',
     ],
     visual: 'matrix',
     steps: ['任取可逆 C', '化标准形', '核对 p、q 不变'],

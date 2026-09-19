@@ -238,9 +238,9 @@
           "bodyMarkdown": "合同：B=CᵀAC（对称矩阵间）"
         },
         {
-          "id": "zi-fan-dui-chen-chuan-di",
-          "title": "自反、对称、传递",
-          "bodyMarkdown": "自反、对称、传递"
+          "id": "xiang-si-guan-xi-man-zu-zi-fan-dui-chen-1yai08",
+          "title": "相似关系满足自反、对称、传递三条",
+          "bodyMarkdown": "相似关系满足自反、对称、传递三条"
         },
         {
           "id": "he-tong-zheng-fu-guan-xing-zhi-shu-dui-0ssblo",
@@ -289,14 +289,14 @@
           "bodyMarkdown": "r(f)=r(A)=p+q"
         },
         {
-          "id": "he-tong-bian-huan-bao-zhi",
-          "title": "合同变换保秩",
-          "bodyMarkdown": "合同变换保秩"
+          "id": "he-tong-bian-huan-bao-chi-zhi-bu-bian-1dmps3",
+          "title": "合同变换保持秩不变",
+          "bodyMarkdown": "合同变换保持秩不变，规范形项数稳定"
         },
         {
-          "id": "fei-ling-ping-fang-xiang-ge-shu-ji-zhi",
-          "title": "非零平方项个数即秩",
-          "bodyMarkdown": "非零平方项个数即秩"
+          "id": "biao-zhun-xing-zhong-fei-ling-ping-fang-1rgir5",
+          "title": "标准形中非零平方项个数就是秩",
+          "bodyMarkdown": "标准形中非零平方项个数就是秩，可互验"
         }
       ],
       "examples": [
@@ -340,9 +340,9 @@
           "bodyMarkdown": "A 化行阶梯数非零行"
         },
         {
-          "id": "huo-zhao-zui-gao-jie-fei-ling-zi-shi",
-          "title": "或找最高阶非零子式",
-          "bodyMarkdown": "或找最高阶非零子式"
+          "id": "qiu-zhi-ye-ke-yi-zhao-zui-gao-jie-fei-04x3cd",
+          "title": "求秩也可以找最高阶非零子式",
+          "bodyMarkdown": "求秩也可以找最高阶非零子式，与阶梯法互验"
         },
         {
           "id": "jie-guo-biao-zhun-xing-fei-ling-xiang-0qx4ax",
@@ -600,9 +600,9 @@
           "bodyMarkdown": "不同换元结果系数不同、个数相同"
         },
         {
-          "id": "gui-fan-xing-wei-yi-de-yuan-yin",
-          "title": "规范形唯一的原因",
-          "bodyMarkdown": "规范形唯一的原因"
+          "id": "san-ge-bu-bian-liang-wen-ding-shi-gui-1b0exs",
+          "title": "三个不变量稳定",
+          "bodyMarkdown": "三个不变量稳定，是规范形唯一的原因"
         }
       ],
       "examples": [
@@ -734,7 +734,7 @@
         "逐个消灭交叉项"
       ],
       "sortOrder": 150,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -743,9 +743,9 @@
       },
       "keyPoints": [
         {
-          "id": "zhu-bian-liang-pei-fang-xiao-jiao-cha-0hu0wi",
-          "title": "逐变量配方消交叉项",
-          "bodyMarkdown": "逐变量配方消交叉项"
+          "id": "pei-fang-fa-zhu-bian-liang-pei-fang-0jtchm",
+          "title": "配方法逐变量配方消交叉项",
+          "bodyMarkdown": "配方法逐变量配方消交叉项，每次少一项"
         },
         {
           "id": "wu-ping-fang-xiang-xian-zuo-cha-he-huan-0abzut",

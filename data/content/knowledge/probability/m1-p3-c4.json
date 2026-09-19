@@ -1054,9 +1054,9 @@
           "bodyMarkdown": "k 阶中心矩 = E{[X−E(X)]ᵏ}，二阶就是方差"
         },
         {
-          "id": "yi-jie-zhong-xin-ju-heng-wei-0",
+          "id": "yi-jie-zhong-xin-ju-heng-wei-0-pian-cha-1jkoks",
           "title": "一阶中心矩恒为 0",
-          "bodyMarkdown": "一阶中心矩恒为 0"
+          "bodyMarkdown": "一阶中心矩恒为 0，偏差正负抵消"
         },
         {
           "id": "san-jie-fan-ying-pian-xie-si-jie-fan-0v0b4t",

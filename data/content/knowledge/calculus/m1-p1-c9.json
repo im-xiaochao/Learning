@@ -233,9 +233,9 @@
       },
       "keyPoints": [
         {
-          "id": "te-jie-bu-han-ren-yi-chang-shu",
+          "id": "te-jie-bu-han-ren-yi-chang-shu-you-chu-1iecmd",
           "title": "特解不含任意常数",
-          "bodyMarkdown": "特解不含任意常数"
+          "bodyMarkdown": "特解不含任意常数，由初始条件定下来"
         },
         {
           "id": "you-chu-shi-tiao-jian-ding-chu-tong-jie-1prq42",

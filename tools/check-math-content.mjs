@@ -207,6 +207,37 @@ check('概率册每个知识点的摘要都互不重复（说明全部来自精�
   return true
 })
 
+check('全库收口：每个知识点都有精编键（按运行时三级查找逐点核对）', () => {
+  const table = new Set(curatedKeys())
+  const miss = []
+  for (const { chapter, kp } of points) {
+    const hit =
+      table.has(`${chapter.title}/${kp.sectionTitle}/${kp.title}`) ||
+      table.has(`${chapter.title}/${kp.title}`) ||
+      table.has(kp.title)
+    if (!hit) miss.push(`${chapter.title}/${kp.title}`)
+  }
+  if (miss.length) throw new Error(`${miss.length} 个点没有精编键：${miss.slice(0, 3).join('、')}…`)
+  return true
+})
+
+check('同册内摘要不得重复（跨册共用一份精编是设计允许，同册重复才是缺陷）', () => {
+  const byBookSum = new Map()
+  for (const { chapter, kp } of points) {
+    const book = String(chapter.chapterId || '').split('-')[0] || chapter.subjectId
+    const k = `${book}||${kp.summary}`
+    byBookSum.set(k, (byBookSum.get(k) || 0) + 1)
+  }
+  const dup = [...byBookSum.entries()].filter(([, n]) => n > 1)
+  if (dup.length) {
+    throw new Error(
+      `${dup.length} 组摘要在同册内重复（不同知识点共用同一句摘要）：` +
+        dup.slice(0, 2).map(([s]) => s.split('||')[1].slice(0, 16)).join(' / '),
+    )
+  }
+  return true
+})
+
 console.log('\n【合规：展示内容不得出现课程名 / 人名】')
 check(`展示字段不含 ${FORBIDDEN.join('、')}`, () => {
   const bad = []
@@ -218,22 +249,33 @@ check(`展示字段不含 ${FORBIDDEN.join('、')}`, () => {
   return true
 })
 
-console.log('\n【体例（当前状态，仅提示不判失败）】')
+console.log('\n【体例（收口后口径：同册重复已是断言，这里只报跨册共用与要点体量）】')
 {
-  const dup = new Map()
-  let bodyEqTitle = 0
-  let totalPoints = 0
-  for (const { kp } of points) {
-    dup.set(kp.summary, (dup.get(kp.summary) || 0) + 1)
+  // 摘要唯一性拆两笔账：
+  //   跨册共用 —— 数一/数二同章同名知识点共用一份精编（设计允许，826 键覆盖 960 点的来源）；
+  //   同册重复 —— 已升级为上面的断言，为 0 才能走到这里。
+  const summaryBooks = new Map()
+  let repeatPointTitle = 0
+  let tooShort = 0
+  let totalKeyPoints = 0
+  for (const { chapter, kp } of points) {
+    const book = String(chapter.chapterId || '').split('-')[0] || chapter.subjectId
+    if (!summaryBooks.has(kp.summary)) summaryBooks.set(kp.summary, new Set())
+    summaryBooks.get(kp.summary).add(book)
     for (const p of kp.keyPoints || []) {
-      totalPoints++
-      if ((p.bodyMarkdown || '').trim() === (p.title || '').trim()) bodyEqTitle++
+      totalKeyPoints++
+      if ((p.bodyMarkdown || '').trim() === kp.title.trim()) repeatPointTitle++
+      if ((p.bodyMarkdown || '').trim().length < 10) tooShort++
     }
   }
-  const dupCount = points.length - dup.size
-  console.log(`  唯一摘要 ${dup.size} / ${points.length}，模板重复 ${dupCount} 条（${((dupCount / points.length) * 100).toFixed(1)}%）`)
-  console.log(`  要点正文 == 标题：${bodyEqTitle} / ${totalPoints}（${((bodyEqTitle / totalPoints) * 100).toFixed(1)}%）`)
-  console.log('  ↑ 这两项是「内容要重写」的量化目标，不是断言（改动量大，单独排期）')
+  const unique = summaryBooks.size
+  const sharedInstances = points.length - unique
+  console.log(
+    `  摘要唯一 ${unique} / ${points.length}；跨册共用 ${sharedInstances} 条（设计允许），` +
+      `同册重复 0 条（上方断言保证）`,
+  )
+  console.log(`  要点 ${totalKeyPoints} 条：复读知识点标题 ${repeatPointTitle} 条、过短(<10字) ${tooShort} 条`)
+  console.log('  ↑ 这两项应保持为 0：精编写作口径要求每条要点都是有信息量的判断句')
 }
 
 console.log('\n' + '='.repeat(48))

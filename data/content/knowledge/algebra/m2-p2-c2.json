@@ -90,9 +90,9 @@
           "bodyMarkdown": "AE=EA=A（左右乘都一样）"
         },
         {
-          "id": "e-1",
-          "title": "|E|=1",
-          "bodyMarkdown": "|E|=1"
+          "id": "dan-wei-ju-zhen-hang-lie-shi-e-1-cheng-0gx8ln",
+          "title": "单位矩阵行列式 |E|=1",
+          "bodyMarkdown": "单位矩阵行列式 |E|=1，乘法单位元的值"
         }
       ],
       "examples": [
@@ -238,9 +238,9 @@
           "bodyMarkdown": "上三角：对角线左下方全 0"
         },
         {
-          "id": "tong-ce-san-jiao-xiang-cheng-bao-jie-gou",
-          "title": "同侧三角相乘保结构",
-          "bodyMarkdown": "同侧三角相乘保结构"
+          "id": "tong-ce-san-jiao-ju-zhen-xiang-cheng-05jvc2",
+          "title": "同侧三角矩阵相乘保结构",
+          "bodyMarkdown": "同侧三角矩阵相乘保结构，对角元对应相乘"
         },
         {
           "id": "ji-de-dui-jiao-yuan-dui-ying-dui-jiao-074vth",
@@ -702,9 +702,9 @@
           "bodyMarkdown": "m×n 转置成 n×m"
         },
         {
-          "id": "a-a-2",
-          "title": "(Aᵀ)ᵀ=A",
-          "bodyMarkdown": "(Aᵀ)ᵀ=A"
+          "id": "zhuan-zhi-shi-zi-ni-yun-suan-a-a",
+          "title": "转置是自逆运算",
+          "bodyMarkdown": "转置是自逆运算：(Aᵀ)ᵀ=A"
         }
       ],
       "examples": [
@@ -743,9 +743,9 @@
       },
       "keyPoints": [
         {
-          "id": "he-cha-shu-cheng-zhi-jie-guo",
-          "title": "和差数乘直接过",
-          "bodyMarkdown": "和差数乘直接过"
+          "id": "zhuan-zhi-de-xian-xing-xing-he-cha-yu-0syfsb",
+          "title": "转置的线性性",
+          "bodyMarkdown": "转置的线性性：和差与数乘直接穿过"
         },
         {
           "id": "ab-b-a-fan-xu",
@@ -753,9 +753,9 @@
           "bodyMarkdown": "(AB)ᵀ=BᵀAᵀ（反序）"
         },
         {
-          "id": "duo-ci-zhuan-zhi-huan-yuan",
-          "title": "多次转置还原",
-          "bodyMarkdown": "多次转置还原"
+          "id": "zhuan-zhi-liang-ci-jiu-huan-yuan-duo-ci-1cmf4q",
+          "title": "转置两次就还原",
+          "bodyMarkdown": "转置两次就还原，多次转置同理"
         }
       ],
       "examples": [
@@ -850,9 +850,9 @@
           "bodyMarkdown": "|AB|=|A||B|（同阶方阵）"
         },
         {
-          "id": "a-a",
-          "title": "|Aᵏ|=|A|ᵏ",
-          "bodyMarkdown": "|Aᵏ|=|A|ᵏ"
+          "id": "mi-de-hang-lie-shi-a-a-zhi-shu-ban-dao-1j9ls7",
+          "title": "幂的行列式 |Aᵏ|=|A|ᵏ",
+          "bodyMarkdown": "幂的行列式 |Aᵏ|=|A|ᵏ，指数搬到行列式外"
         },
         {
           "id": "a-0-a-bu-ke-ni",
@@ -938,7 +938,7 @@
         "逆的四条运算律"
       ],
       "sortOrder": 190,
-      "estimatedMinutes": 3,
+      "estimatedMinutes": 4,
       "anchor": {
         "type": "formula",
         "format": "text",
@@ -957,9 +957,9 @@
           "bodyMarkdown": "(Aᵀ)⁻¹=(A⁻¹)ᵀ"
         },
         {
-          "id": "a-a-2",
-          "title": "(A⁻¹)⁻¹=A",
-          "bodyMarkdown": "(A⁻¹)⁻¹=A"
+          "id": "qiu-ni-shi-zi-ni-yun-suan-a-a",
+          "title": "求逆是自逆运算",
+          "bodyMarkdown": "求逆是自逆运算：(A⁻¹)⁻¹=A"
         }
       ],
       "examples": [
@@ -1003,9 +1003,9 @@
           "bodyMarkdown": "|A|≠0 ⇔ r(A)=n"
         },
         {
-          "id": "xian-xing-wu-guan-man-zhi",
-          "title": "线性无关 ⇔ 满秩",
-          "bodyMarkdown": "线性无关 ⇔ 满秩"
+          "id": "lie-xiang-liang-zu-xian-xing-wu-guan-0i83k0",
+          "title": "列向量组线性无关等价于满秩",
+          "bodyMarkdown": "列向量组线性无关等价于满秩，两种说法互通"
         },
         {
           "id": "bu-ke-ni-tui-hua-wei-di-zhi",
@@ -1105,9 +1105,9 @@
           "bodyMarkdown": "三种变换对行、列都定义"
         },
         {
-          "id": "xing-bian-huan-bao-fang-cheng-zu-tong-0t2nd5",
-          "title": "行变换保方程组同解",
-          "bodyMarkdown": "行变换保方程组同解"
+          "id": "chu-deng-xing-bian-huan-bao-zheng-fang-0z25av",
+          "title": "初等行变换保证方程组同解",
+          "bodyMarkdown": "初等行变换保证方程组同解，解集不变"
         },
         {
           "id": "chu-deng-bian-huan-bu-gai-bian-ju-zhen-0psb2v",
@@ -1610,14 +1610,14 @@
       },
       "keyPoints": [
         {
-          "id": "chu-deng-bian-huan-bao-zhi",
-          "title": "初等变换保秩",
-          "bodyMarkdown": "初等变换保秩"
+          "id": "chu-deng-bian-huan-bao-chi-zhi-bu-bian-1wklsz",
+          "title": "初等变换保持秩不变",
+          "bodyMarkdown": "初等变换保持秩不变，等价矩阵同秩"
         },
         {
-          "id": "deng-jia-tong-xing-tong-zhi",
-          "title": "等价 ⇔ 同型同秩",
-          "bodyMarkdown": "等价 ⇔ 同型同秩"
+          "id": "ju-zhen-deng-jia-de-chong-yao-tiao-jian-0tract",
+          "title": "矩阵等价的充要条件",
+          "bodyMarkdown": "矩阵等价的充要条件：同型且秩相等"
         },
         {
           "id": "qiu-zhi-de-guo-cheng-jiu-shi-zhao-deng-0hb5sf",
@@ -1712,9 +1712,9 @@
       },
       "keyPoints": [
         {
-          "id": "fei-dui-jiao-kuai-quan-o",
-          "title": "非对角块全 O",
-          "bodyMarkdown": "非对角块全 O"
+          "id": "fen-kuai-dui-jiao-ju-zhen-yao-qiu-fei-06t4js",
+          "title": "分块对角矩阵要求非对角块全 O",
+          "bodyMarkdown": "分块对角矩阵要求非对角块全 O，各块独立运算"
         },
         {
           "id": "diag-a-b-a-b",

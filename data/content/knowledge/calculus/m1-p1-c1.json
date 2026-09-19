@@ -1411,9 +1411,9 @@
           "bodyMarkdown": "四则运算保持连续（分母不为 0）"
         },
         {
-          "id": "fu-he-han-shu-ye-bao-chi-lian-xu",
-          "title": "复合函数也保持连续",
-          "bodyMarkdown": "复合函数也保持连续"
+          "id": "lian-xu-han-shu-de-fu-he-reng-lian-xu-0zk15j",
+          "title": "连续函数的复合仍连续",
+          "bodyMarkdown": "连续函数的复合仍连续，链条上处处连续即可"
         },
         {
           "id": "you-ci-ke-dui-chu-deng-han-shu-zhi-jie-1msbzq",

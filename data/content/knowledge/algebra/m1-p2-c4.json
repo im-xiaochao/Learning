@@ -233,9 +233,9 @@
       },
       "keyPoints": [
         {
-          "id": "b-0-bi-you-ling-jie",
-          "title": "b=0，必有零解",
-          "bodyMarkdown": "b=0，必有零解"
+          "id": "qi-ci-fang-cheng-b-0-bi-you-ling-jie-16oayx",
+          "title": "齐次方程 b=0",
+          "bodyMarkdown": "齐次方程 b=0，必有零解，问的是非零解"
         },
         {
           "id": "you-fei-ling-jie-r-a-n",
@@ -595,9 +595,9 @@
           "bodyMarkdown": "唯一解 ⇔ r(A)=r(A,b)=n"
         },
         {
-          "id": "wu-zi-you-wei-zhi-liang",
-          "title": "无自由未知量",
-          "bodyMarkdown": "无自由未知量"
+          "id": "wei-yi-jie-yi-wei-zhe-wu-zi-you-wei-zhi-0svvfw",
+          "title": "唯一解意味着无自由未知量",
+          "bodyMarkdown": "唯一解意味着无自由未知量，秩等于 n"
         },
         {
           "id": "fang-zhen-shi-a-0-x-a-b",
@@ -743,9 +743,9 @@
       },
       "keyPoints": [
         {
-          "id": "jie-zhi-he-shu-cheng-reng-shi-jie",
-          "title": "解之和、数乘仍是解",
-          "bodyMarkdown": "解之和、数乘仍是解"
+          "id": "qi-ci-jie-zhi-he-shu-cheng-reng-shi-jie-1w36lx",
+          "title": "齐次解之和、数乘仍是解",
+          "bodyMarkdown": "齐次解之和、数乘仍是解，解集是子空间"
         },
         {
           "id": "jie-ji-n-r-wei-xian-xing-kong-jian",
@@ -850,9 +850,9 @@
           "bodyMarkdown": "x=η*+k₁ξ₁+…+k_{n−r}ξ_{n−r}"
         },
         {
-          "id": "te-jie-ren-qu-yi-ge-ji-ke",
-          "title": "特解任取一个即可",
-          "bodyMarkdown": "特解任取一个即可"
+          "id": "fei-qi-ci-te-jie-ren-qu-yi-ge-ji-ke-1nhyps",
+          "title": "非齐次特解任取一个即可",
+          "bodyMarkdown": "非齐次特解任取一个即可，常取自由变量为 0"
         },
         {
           "id": "jie-ji-shi-n-r-wei-fang-she-zi-kong-1fz0c5",
@@ -896,9 +896,9 @@
       },
       "keyPoints": [
         {
-          "id": "xing-bian-huan-tong-jie-bian-xing",
-          "title": "行变换：同解变形",
-          "bodyMarkdown": "行变换：同解变形"
+          "id": "gao-si-xiao-yuan-yong-xing-bian-huan-13nfh0",
+          "title": "高斯消元用行变换做同解变形",
+          "bodyMarkdown": "高斯消元用行变换做同解变形，解集不变"
         },
         {
           "id": "jie-ti-xing-ding-jie-de-zhuang-tai-wu-0m6ns8",
@@ -906,9 +906,9 @@
           "bodyMarkdown": "阶梯形定解的状态（无解/唯一/无穷）"
         },
         {
-          "id": "zui-jian-xing-zhi-jie-du-chu-tong-jie",
-          "title": "最简形直接读出通解",
-          "bodyMarkdown": "最简形直接读出通解"
+          "id": "hua-dao-xing-zui-jian-xing-ke-zhi-jie-1clq55",
+          "title": "化到行最简形可直接读出通解",
+          "bodyMarkdown": "化到行最简形可直接读出通解，主变量用参数表示"
         }
       ],
       "examples": [
@@ -1003,9 +1003,9 @@
           "bodyMarkdown": "自由变量改名参数 k"
         },
         {
-          "id": "zhu-bian-liang-yong-k-biao-shi",
-          "title": "主变量用 k 表示",
-          "bodyMarkdown": "主变量用 k 表示"
+          "id": "hui-dai-shi-zhu-bian-liang-yong-k-biao-0bi3gb",
+          "title": "回代时主变量用 k 表示",
+          "bodyMarkdown": "回代时主变量用 k 表示，整理成向量形式"
         },
         {
           "id": "xie-cheng-te-jie-zu-he-biao-zhun-xing",

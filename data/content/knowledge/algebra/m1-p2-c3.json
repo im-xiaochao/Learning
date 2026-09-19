@@ -391,9 +391,9 @@
           "bodyMarkdown": "r=s ⇔ 无关；r<s ⇔ 相关"
         },
         {
-          "id": "yong-xing-bian-huan-qiu-zhi-zui-zhi-jie",
-          "title": "用行变换求秩最直接",
-          "bodyMarkdown": "用行变换求秩最直接"
+          "id": "xiang-liang-zu-qiu-zhi-yong-xing-bian-0zv1gk",
+          "title": "向量组求秩用行变换最直接",
+          "bodyMarkdown": "向量组求秩用行变换最直接，拼矩阵化阶梯"
         },
         {
           "id": "bu-fen-zu-zhi-zheng-zu-zhi",
@@ -748,9 +748,9 @@
           "bodyMarkdown": "秩 = 极大无关组的向量个数"
         },
         {
-          "id": "ling-xiang-liang-zu-de-zhi-wei-0",
-          "title": "零向量组的秩为 0",
-          "bodyMarkdown": "零向量组的秩为 0"
+          "id": "quan-you-ling-xiang-liang-zu-cheng-de-06daz6",
+          "title": "全由零向量组成的组秩为 0",
+          "bodyMarkdown": "全由零向量组成的组秩为 0，没有独立方向"
         },
         {
           "id": "r-zu-zu-nei-xiang-liang-ge-shu-s",
@@ -896,9 +896,9 @@
       },
       "keyPoints": [
         {
-          "id": "deng-jia-zhi-xiang-deng",
-          "title": "等价 ⇒ 秩相等",
-          "bodyMarkdown": "等价 ⇒ 秩相等"
+          "id": "deng-jia-xiang-liang-zu-zhi-bi-xiang-1osilf",
+          "title": "等价向量组秩必相等",
+          "bodyMarkdown": "等价向量组秩必相等，反之还要看表示"
         },
         {
           "id": "zhi-xiang-deng-deng-jia-hai-yao-bi-biao-0dxhy0",
@@ -1100,9 +1100,9 @@
       },
       "keyPoints": [
         {
-          "id": "e-1",
-          "title": "|e|=1",
-          "bodyMarkdown": "|e|=1"
+          "id": "dan-wei-xiang-liang-de-mo-e-1-fang-1i7spu",
+          "title": "单位向量的模 |e|=1",
+          "bodyMarkdown": "单位向量的模 |e|=1，方向不变长度锁死"
         },
         {
           "id": "e-0",
@@ -1202,9 +1202,9 @@
       },
       "keyPoints": [
         {
-          "id": "qi-bu",
-          "title": "β₁=α₁ 起步",
-          "bodyMarkdown": "β₁=α₁ 起步"
+          "id": "shi-mi-te-zheng-jiao-hua-cong-qi-bu-zhi-1h15yc",
+          "title": "施密特正交化从 β₁=α₁ 起步",
+          "bodyMarkdown": "施密特正交化从 β₁=α₁ 起步，之后逐个减投影"
         },
         {
           "id": "x-07dqsj",
@@ -1263,9 +1263,9 @@
           "bodyMarkdown": "先施密特正交化，后单位化"
         },
         {
-          "id": "dan-wei-hua-bu-ying-xiang-zheng-jiao-0nafo0",
+          "id": "dan-wei-hua-bu-ying-xiang-zheng-jiao-0y8xzw",
           "title": "单位化不影响正交性",
-          "bodyMarkdown": "单位化不影响正交性"
+          "bodyMarkdown": "单位化不影响正交性，只把长度调到 1"
         }
       ],
       "examples": [

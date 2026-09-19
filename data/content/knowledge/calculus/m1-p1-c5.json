@@ -743,9 +743,9 @@
       },
       "keyPoints": [
         {
-          "id": "dz-f-x-dx-f-y-dy",
-          "title": "dz=f_x dx+f_y dy",
-          "bodyMarkdown": "dz=f_x dx+f_y dy"
+          "id": "quan-wei-fen-gong-shi-dz-f-x-dx-f-y-dy-0efaa1",
+          "title": "全微分公式 dz=f_x dx+f_y dy",
+          "bodyMarkdown": "全微分公式 dz=f_x dx+f_y dy，先求两个偏导"
         },
         {
           "id": "dx-x-dy-y-zi-bian-liang-zeng-liang",
@@ -1615,9 +1615,9 @@
           "bodyMarkdown": "极值点 ⇒ f_x=f_y=0（可微时）"
         },
         {
-          "id": "zhu-dian-ji-zhi-dian",
-          "title": "驻点 ⇏ 极值点",
-          "bodyMarkdown": "驻点 ⇏ 极值点"
+          "id": "zhu-dian-bu-yi-ding-shi-ji-zhi-dian-xu-0kfgx4",
+          "title": "驻点不一定是极值点",
+          "bodyMarkdown": "驻点不一定是极值点，需过二阶充分条件"
         },
         {
           "id": "pian-dao-bu-cun-zai-de-dian-ye-ke-neng-08h5e3",
